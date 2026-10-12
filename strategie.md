@@ -20,6 +20,7 @@
 | Pilier signature « On ne possède plus rien » (Sony, streaming, Plex) | Pilier signature **« Le génie derrière l'app »** : l'ingénierie cachée des applis que tu utilises tous les jours | C'est le format qui surperforme le plus dans les données (tableau 1). Les récits « louer ou posséder » passent en réserve. |
 | Uber mis de côté (Jared a déjà raconté l'histoire business) | **Uber en premier**, sous l'angle ingénierie | Jared raconte comment Uber a tué les taxis. Toi, tu racontes comment la carte en direct fonctionne : ce n'est pas le même sujet. |
 | Défi « 30 jours avec une IA locale » | Série **« Claude ou mon PC ? »** : un épisode par modèle, avec la révélation au début | Un mois sur un seul modèle, c'est trop long quand un nouveau modèle sort toutes les deux semaines. |
+| Uber en premier le 26 oct. | **ArtCraft le 26 oct., Uber le 9 nov.** (décidé le 12/10) | ArtCraft est un sujet d'actu qui perd de la valeur chaque semaine, alors qu'Uber ne périme pas. |
 | Windows 10 en vidéo longue le 26 oct. | **Un Short cette semaine** | La date du 13 octobre est passée. Le sujet ne vaut plus une vidéo de 2 semaines de travail. |
 | Pixel gardé pour 5 K abonnés | **Pixel le 21 décembre**, recadré sur l'astuce cachée | C'est ta passion, et l'angle « astuce de génie » marche même sur une toute petite chaîne (Andy Geers, ci-dessous). |
 | Cible : 20-40 ans | Cible : **18-30 ans** | 94 % de ton audience actuelle a moins de 35 ans. |
@@ -147,7 +148,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 - **Trafic visé** : accueil pour les épisodes, recherche pour le guide.
 - **Exemples** :
   1. *Claude Opus 5.5 ou mon PC ? J'ai fait coder une app par une IA 100 % locale* (Qwen sur RTX 5080).
-  2. *J'ai fait cloner une app par une IA… qui tourne sur mon PC* (le repo viral du moment).
+  2. *Il a recréé 7 logiciels Adobe avec une IA. Je les ai testés.* (ArtCraft, le repo viral d'octobre).
   3. *IA en local en 2027 : ce qu'il faut VRAIMENT pour la faire tourner* (guide).
 
 ### Pilier 3 : « Les grandes histoires de la tech » (Hero)
@@ -192,7 +193,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 ### ⚠️ Garde-fous
 1. **Voix off clonée (ta propre voix)** : c'est viable. YouTube cite explicitement « cloner sa propre voix pour des voix off ou des doublages » parmi les cas qui **ne demandent pas d'étiquette IA**, et une étiquette ne coupe de toute façon ni l'audience ni les revenus. Le vrai risque de démonétisation vient de la **forme du contenu**, pas de la voix. Il vise les vidéos qui ressemblent à un modèle répété, les diaporamas avec peu de narration et les lectures de textes que tu n'as pas écrits. Donc : script original, vrai montage, et jamais un article lu tel quel.
 2. **Les chiffres d'ingénierie se vérifient à la source** : blogs d'ingénierie officiels (Uber Engineering, Meta Engineering), conférences, articles de presse datés. Une erreur technique dans les commentaires coûte cher en crédibilité auprès d'un public de devs.
-3. **Repos de rétro-ingénierie (REA et autres)** : en France, la décompilation n'est autorisée que dans des cas précis (interopérabilité, article L122-6-1 du Code de la propriété intellectuelle). À l'écran, utilise **ta propre app** (vorssaint-utils) ou un logiciel open source, et ne distribue jamais un clone.
+3. **Repos de rétro-ingénierie (REA et autres)** : en France, la décompilation n'est autorisée que dans des cas précis (interopérabilité, article L122-6-1 du Code de la propriété intellectuelle). À l'écran, utilise **une app à toi** ou un logiciel open source, et ne distribue jamais un clone.
 4. **Pas de copie de DVD ni de contournement de protection à l'écran** : c'est puni de 3 750 € d'amende (article L335-3-1 du Code de la propriété intellectuelle).
 5. **Images d'archives** : extraits courts et commentés. Privilégie tes propres captures et ton motion design.
 
@@ -219,7 +220,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | J10 (lundi) | Publication, puis réponses aux commentaires pendant 2 heures | |
 | J11-J14 | 2 Shorts + recherche du sujet suivant | `/youtube repurpose` |
 
-**En parallèle** : lance tes essais Qwen sur la 5080 dès maintenant, pour une publication le 9 novembre.
+**En parallèle** : lance tes essais Qwen sur la 5080 début novembre, pour une publication le 23 novembre.
 
 ---
 
@@ -228,7 +229,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 ### Jour 30 (~9 novembre)
 | Objectif | Cible | Action |
 |---|---|---|
-| Vidéos publiées | 2 longues + 4 Shorts | Uber (26/10), Claude ou mon PC ? (09/11), Short Windows 10 cette semaine |
+| Vidéos publiées | 2 longues + 4 Shorts | ArtCraft (26/10), Uber (09/11), Short Windows 10 cette semaine |
 | Vues moyennes par nouvelle vidéo (à 28 j) | 1 500 | Hook sur un geste banal + miniature avec un chiffre impossible |
 | CTR moyen | 6 % | Référence divertissement/commentaire ; 7-10 % = bon |
 | Part des vues venant de France | 40 % | Les sujets universels attirent aussi ton public africain, c'est normal |
@@ -237,7 +238,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 ### Jour 60 (~7 décembre)
 | Objectif | Cible | Action |
 |---|---|---|
-| Vidéos au total | 4 longues + 8 Shorts | + Waze (23/11), guide IA (07/12) |
+| Vidéos au total | 4 longues + 8 Shorts | + Claude ou mon PC ? (23/11), Waze (07/12) |
 | Abonnés | +150 (2 750) | Question en fin de vidéo : « Quelle appli je décortique ensuite ? » |
 | Meilleure vidéo | 5 000 vues | Refaire le format qui marche le mieux |
 | Rétention à 30 s | 55 % | Référence commentaire : 55-65 % |
@@ -246,7 +247,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 ### Jour 90 (~18 janvier)
 | Objectif | Cible | Action |
 |---|---|---|
-| Vidéos au total | 7 longues + 14 Shorts | Pixel (21/12), repo viral (04/01), WhatsApp (18/01) |
+| Vidéos au total | 7 longues + 14 Shorts | Pixel (21/12), guide IA (04/01), WhatsApp (18/01) |
 | Abonnés | +400 (3 000) | |
 | Vues mensuelles | 8 000 (×4) | Accueil + suggestions |
 | Part des vues venant de France | 50 % | |
@@ -265,7 +266,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 # 10 idées de vidéos classées
 
-**Sources** : vidIQ (vidéos qui dépassent la moyenne de leur chaîne), tes repérages, tes idées (`idea.md`), ton vécu.
+**Sources** : vidIQ (vidéos qui dépassent la moyenne de leur chaîne), tes repérages, tes idées, ton vécu.
 **Classement** : demande × potentiel de clic × facilité de production × cohérence avec la niche (chaque critère sur 10, total sur 40).
 
 ---
@@ -282,15 +283,14 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | **En hausse, +215 %** |
 | **Durée** | 10-12 min |
 | **Niveau de RPM** | Élevé (tech/logiciel) |
-| **Urgence** | Tendance : le modèle doit encore être récent à la sortie. Essais fin octobre, **publication le 9 novembre** |
+| **Urgence** | Tendance : le modèle doit encore être récent à la sortie. Essais début novembre, **publication le 23 novembre** |
 | **Score** | **36/40** (demande 9 · clic 9 · production 8 · niche 10) |
 
 **Hook** (ta structure) : « Cette app a été codée en quelques minutes par une IA. Claude Opus 5.5, tu penses ? … Non. Elle a été codée ici. [plan sur la 5080] Sans internet. Sans abonnement. »
 **Miniature** : deux écrans identiques côte à côte, logo Claude à gauche, RTX 5080 à droite, texte « LEQUEL ? ».
 **Pourquoi** : Red Stapler fait 588 K vues avec Qwen sur une carte de 8 Go, en 5 minutes. En français, Rudy IO (1,4 K abonnés) fait ×105 avec son setup d'IA. La révélation au début crée la curiosité, et la série se renouvelle à chaque nouveau modèle. **Montre aussi les ratés** : Red Stapler consacre un chapitre à ce qui n'a pas marché, et c'est ce qui le rend crédible.
-**Angle proposé (12 oct.)** : s'appuyer sur ArtCraft. « Un dev a recréé Photoshop avec Claude Opus 5.5. Mon PC peut-il faire pareil, sans internet ? » On fait coder à Qwen **une seule appli simple** (un mini-Lightroom : import, curseurs exposition/contraste/saturation, recadrage, export), puis révélation et comparaison honnête avec ArtCraft. Écrit de zéro, sans code ni logo Adobe.
-**À vérifier** : le nom exact et la version du modèle (« Qwen3.8 Flash ») au moment du tournage ; les faits ArtCraft directement sur son GitHub (licence MIT/Apache, part des fonctions de Photoshop couvertes).
-**Source** : ton idée + Red Stapler + FUTC (ArtCraft).
+**À vérifier** : le nom exact et la version du modèle (« Qwen3.8 Flash ») au moment du tournage.
+**Source** : ton idée + Red Stapler.
 
 ---
 
@@ -306,7 +306,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | Stable : sujet intemporel |
 | **Durée** | 10-12 min |
 | **Niveau de RPM** | Moyen à élevé |
-| **Urgence** | Evergreen. **Le 26 octobre** : ta première vidéo de la nouvelle ligne |
+| **Urgence** | Evergreen. **Le 9 novembre** : ArtCraft passe devant parce que c'est un sujet d'actu |
 | **Score** | **35/40** (demande 9 · clic 9 · production 7 · niche 10) |
 
 **Hook** : « Ouvre Uber. Ces petites voitures qui bougent autour de toi ? Pour les afficher, Uber a dû découper la planète entière en hexagones. »
@@ -362,26 +362,26 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 ---
 
-### Idée 5 : Le repo GitHub viral, testé en local
+### Idée 5 : Le repo viral, version ArtCraft (le dev qui a recréé Adobe avec une IA)
 
 | Attribut | Valeur |
 |---|---|
-| **Titre** | J'ai fait cloner une app par une IA… qui tourne sur mon PC |
-| **Stratégie de trafic** | Tendance |
-| **Mot-clé** | repo github ia / reverse engineering ia |
-| **Concurrence** | Moyenne |
+| **Titre** | Il a recréé 7 logiciels Adobe avec une IA. Je les ai testés. |
+| **Stratégie de trafic** | Recherche (« artcraft ») + accueil |
+| **Mot-clé** | artcraft / clone adobe gratuit |
+| **Concurrence** | Forte en anglais (~45 vidéos en 5 jours), **faible en français** (3 ou 4 vidéos au 12 oct., aucune en récit) |
 | **Volume** | Non mesuré |
-| **Tendance** | En hausse : les repos viraux font exploser les chaînes tech |
-| **Durée** | 10-12 min |
+| **Tendance** | En hausse : ArtCraft est sorti le 7 octobre |
+| **Durée** | 12-15 min (récit + tests) |
 | **Niveau de RPM** | Élevé |
-| **Urgence** | Tendance : **choisis le repo qui buzze la semaine du tournage** (REA aujourd'hui). Créneau le 4 janvier |
-| **Score** | **33/40** (demande 8 · clic 9 · production 7 · niche 9) |
+| **Urgence** | **Actu : le 26 octobre**, avant que la vague française arrive |
+| **Score** | **35/40** (demande 10 · clic 9 · production 8 · niche 8), rescorée le 12/10 : l'ancienne idée générique « repo viral » faisait 33/40 |
 
-**Hook** : « Ce repo GitHub promet de cloner n'importe quel logiciel en quelques minutes. Je l'ai branché sur une IA qui tourne chez moi. Et je lui ai donné ma propre app. »
-**Miniature** : icône d'app dédoublée, RTX 5080 au centre, texte « CLONÉ », fond noir.
-**Pourquoi** : REA fait 65 K vues en moins d'une journée chez Eric Tech, God's Eye 2,9 M chez Bilawal Sidhu, OpenClaw ×11 chez ByteMonk et 2 M chez Fireship. Ton angle (IA locale + ta propre app) n'existe pas.
-**Garde-fou** : uniquement sur ta propre app ou un logiciel open source (voir garde-fou 3).
-**Source** : tes repérages (God's Eye, REA) + vidIQ.
+**Hook** : « Adobe lui a fait payer sa résiliation. Alors il a recréé Adobe. Sept logiciels, avec une IA. Je les ai testés. » (l'histoire de la résiliation est à confirmer)
+**Miniature** : un vrai PSD ouvert dans PhotoCraft, une facture « frais de résiliation » à côté, texte « GRATUIT ? ». Pas de logo Adobe.
+**Pourquoi** : FUTC fait ×100 sa médiane avec ce sujet, Rough Cut Pete 292 K en un jour avec l'angle récit. REA (Eric Tech) avait déjà montré que « l'IA recrée un logiciel payant » surperforme. En français, personne ne raconte l'histoire.
+**Garde-fou** : tu testes un projet open source publié, tu ne décompiles rien. Les noms Photoshop et Premiere servent seulement à comparer, sans logos Adobe.
+**Source** : ton repérage (FUTC) + recherche YouTube du 12 oct.
 
 ---
 
@@ -397,7 +397,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | En hausse : la vidéo de Thibaut Dcode gagne encore environ 345 vues par heure |
 | **Durée** | 10-12 min |
 | **Niveau de RPM** | Moyen |
-| **Urgence** | **Le 23 novembre**, tant que sa vidéo circule encore en suggestion |
+| **Urgence** | **Le 7 décembre**, tant que sa vidéo circule encore en suggestion |
 | **Score** | **35/40** (demande 9 · clic 8 · production 8 · niche 10) |
 
 **Hook** : « Waze t'a fait tourner à droite. Trois minutes plus tard, tu passes devant un accident que personne n'avait encore signalé. »
@@ -419,7 +419,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | En hausse |
 | **Durée** | 12-15 min |
 | **Niveau de RPM** | Élevé |
-| **Urgence** | **Saisonnier : le 7 décembre** (achats de Noël, CPM du 4e trimestre plus élevés) |
+| **Urgence** | **Saisonnier : le 4 janvier**, juste avant les soldes d'hiver (au prix de CPM de janvier plus bas) |
 | **Score** | **32/40** (demande 8 · clic 7 · production 8 · niche 9) |
 
 **Hook** : « J'ai une RTX 5080. Et la moitié des IA que je voulais faire tourner ne rentrent pas dedans. »
@@ -447,7 +447,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 **Hook** : « J'ai acheté ces jeux. J'ouvre la console : plus rien. Et c'est parfaitement légal. »
 **Miniature** : manette PlayStation qui se désintègre en pixels, texte « PAS À TOI », fond bleu nuit.
 **Pourquoi** : ARTE Info fait 53 K vues sur Stop Killing Games, et Hiz0 (1,4 K abonnés) 93 K avec un essai sur le jeu vidéo. C'est le premier récit à sortir si un créneau se libère.
-**Source** : ton fichier `autohebergement.md`.
+**Source** : ton fichier `archive/autohebergement/notes.md`.
 
 ---
 
@@ -490,9 +490,9 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 **Hook** : « Zoome sur l'écran de ton téléphone. Il n'y a pas un seul point blanc. Pourtant, tu vois du blanc partout. »
 **Miniature** : macro d'un écran montrant des sous-pixels rouges, verts et bleus, texte « IL N'Y A PAS DE BLANC ».
-**Pourquoi** : Andy Geers (1,1 K abonnés) fait ×431 avec « The Genius Trick Behind Exile's Impossible Map », et Enrico Tartarotti ×6,8 avec « The LIES That Make Hardware ACTUALLY Work ». Recadrer ton histoire du pixel sur l'astuce cachée la rend beaucoup plus cliquable qu'un récit chronologique. Ton texte de `idea.md` devient le 2e acte.
+**Pourquoi** : Andy Geers (1,1 K abonnés) fait ×431 avec « The Genius Trick Behind Exile's Impossible Map », et Enrico Tartarotti ×6,8 avec « The LIES That Make Hardware ACTUALLY Work ». Recadrer ton histoire du pixel sur l'astuce cachée la rend beaucoup plus cliquable qu'un récit chronologique. Ton texte de `projets/pixel/brouillon.md` devient le 2e acte.
 **À vérifier** : la structure des sous-pixels selon les écrans (certaines dalles de TV ont un sous-pixel blanc).
-**Source** : ton idée `idea.md` + vidIQ.
+**Source** : ton idée + vidIQ.
 
 ---
 
@@ -501,7 +501,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 - **Windows 10** : un Short cette semaine, plus une vidéo longue.
 - **Streaming +71 %, Plex, maison pilotée par IA, l'IA dans ta carte graphique** : en réserve. Ils resservent si un créneau se libère ou à 10 K abonnés.
 - **Vieux PC → console, NAS** : pas ta passion. Des Shorts au besoin.
-- **App Mac (vorssaint-utils)** : elle sert de cobaye pour l'idée 5.
+- **App Mac (vorssaint-utils)** : devient le [Short du 22 octobre](projets/short-vorssaint/fiche.md). S'il marche, une vidéo longue sur l'outil reviendra dans les idées.
 
 ---
 
@@ -509,13 +509,13 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 | Rang | Titre | Stratégie | Score | Urgence |
 |---|---|---|---|---|
-| 1 | Claude Opus 5.5 ou mon PC ? J'ai fait coder une app par une IA 100 % locale | Accueil | 36/40 | 9 nov |
-| 2 | Le génie caché derrière la carte en temps réel d'Uber | Accueil | 35/40 | **26 oct** |
-| 3 | Comment Waze sait qu'il y a un bouchon avant que tu le voies | Accueil | 35/40 | 23 nov |
+| 1 | Claude Opus 5.5 ou mon PC ? J'ai fait coder une app par une IA 100 % locale | Accueil | 36/40 | 23 nov |
+| 2 | Le génie caché derrière la carte en temps réel d'Uber | Accueil | 35/40 | 9 nov |
+| 3 | Comment Waze sait qu'il y a un bouchon avant que tu le voies | Accueil | 35/40 | 7 déc |
 | 4 | Comment 50 ingénieurs faisaient tourner WhatsApp pour 900 millions de personnes | Accueil | 35/40 | 18 janv |
 | 5 | Comment Google sait en une milliseconde que ton pseudo est déjà pris | Accueil + recherche | 33/40 | Réserve (février) |
-| 6 | J'ai fait cloner une app par une IA… qui tourne sur mon PC | Tendance | 33/40 | 4 janv (repo du moment) |
-| 7 | IA en local en 2027 : ce qu'il faut VRAIMENT pour la faire tourner | Recherche | 32/40 | 7 déc |
+| 6 | Il a recréé 7 logiciels Adobe avec une IA. Je les ai testés. (idée 5, rescorée) | Recherche + accueil | 35/40 | **26 oct** |
+| 7 | IA en local en 2027 : ce qu'il faut VRAIMENT pour la faire tourner | Recherche | 32/40 | 4 janv |
 | 8 | Tu n'as jamais possédé tes jeux (et Sony vient de le prouver) | Accueil | 31/40 | Réserve |
 | 9 | Le dev qui a mis ChatGPT dans ton PC (llama.cpp) | Accueil | 29/40 | Réserve |
 | 10 | Le génie caché du pixel : comment ton écran trompe tes yeux | Accueil | 27/40 | 21 déc (passion) |
@@ -523,23 +523,22 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 ### Ordre de production
 
 **À faire cette semaine** :
-- script Uber (publication le 26 octobre) ;
-- Short Windows 10 ;
-- premiers essais Qwen sur la 5080.
+- recherche et tests ArtCraft, script le week-end (publication le 26 octobre) ;
+- Short Windows 10.
 
-**Ensuite** : idées 1, 6, 7, 10, 5 et 3, dans l'ordre du calendrier.
+**Ensuite** : idées 2, 1, 6, 10, 7 et 3, dans l'ordre du calendrier.
 **En réserve** : idées 4, 8 et 9.
 
 ### Calendrier (un lundi sur deux, 20 h à Paris)
 
 | Date | Vidéo | Pilier | Pourquoi ce créneau |
 |---|---|---|---|
-| Lun 26 oct | Le génie caché derrière la carte d'Uber | Génie (Hub) | Ton choix : on ouvre avec le format le mieux prouvé |
-| Lun 9 nov | Claude ou mon PC ? #1 (Qwen sur RTX 5080) | IA (Hub) | Alternance ; le modèle est encore récent |
-| Lun 23 nov | Comment Waze sait qu'il y a un bouchon | Génie (Hub) | Preuve française (1,09 M vues) ; animations de carte réutilisées |
-| Lun 7 déc | IA en local en 2027 : le guide | IA (Help) | Achats de Noël |
+| Lun 26 oct | ArtCraft : il a recréé 7 logiciels Adobe avec une IA | IA (Hero) | Sujet d'actu, presque rien en français ; chaque semaine compte |
+| Lun 9 nov | Le génie caché derrière la carte d'Uber | Génie (Hub) | Le format le mieux prouvé ; 2 semaines de plus pour les animations |
+| Lun 23 nov | Claude ou mon PC ? #1 (Qwen sur RTX 5080) | IA (Hub) | Alternance ; le modèle est encore récent |
+| Lun 7 déc | Comment Waze sait qu'il y a un bouchon | Génie (Hub) | Preuve française (1,09 M vues) ; animations de carte réutilisées |
 | Lun 21 déc | Le génie caché du pixel | Histoire (Hero) | Vacances ; ta vidéo passion, tôt comme tu le voulais |
-| Lun 4 janv | Le repo viral testé en local (sinon Claude ou mon PC ? #2) | IA (Hero) | Le repo qui buzze à ce moment-là |
+| Lun 4 janv | IA en local en 2027 : le guide | IA (Help) | Juste avant les soldes d'hiver |
 | Lun 18 janv | WhatsApp et ses 50 ingénieurs | Génie (Hub) | À bonne distance des vidéos WhatsApp d'octobre |
 
-**Le détail semaine par semaine (production + 16 Shorts jusqu'au 31 janvier) est dans `calendrier-production-technovore.md`.**
+**Le détail semaine par semaine (production + 16 Shorts jusqu'au 31 janvier) est dans `calendrier.md`.**

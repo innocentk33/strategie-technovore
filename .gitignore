@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+# Rushs, exports et prises de voix : trop lourds pour git
+*.mp4
+*.mov
+*.mkv
+*.wav
+# Skill /youtube : installé dans ~/.claude/skills, copie locale non suivie
+claude-youtube/
