@@ -30,7 +30,7 @@
 - le dépôt : [github.com/storytold](https://github.com/storytold). L'ArtCraft « à crédits » est la même entreprise, et c'est elle qui finance les applis (c'est le twist du bloc 4) ;
 - la réaction d'Adobe : aucune. La vidéo « Adobe Reacts » est une parodie.
 
-**Script** : [`script.md`](script.md) (v2 du 18/10, ~11 min 30, après le [grill](grill-v1.md)). **Voix off** : [`voix-off.txt`](voix-off.txt), annotée pour VoiceStudio (19 lots regroupés par ton, avec speed et class_temperature par lot). Reste à écrire : le résultat du PSD et la RAM (lots 10 et 18), et le test bonus facultatif (lot 13).
+**Script** : [`script.md`](script.md) (v2 du 18/10, ~11 min 30, après le [grill](grill-v1.md)). **Voix off** : [`voix-off.txt`](voix-off.txt), annotée pour VoiceStudio (19 lots regroupés par ton, avec speed et class_temperature par lot, sans pauses : elles se font au montage). **Téléprompteur** (lecture humaine) : [`teleprompteur.txt`](teleprompteur.txt). Reste à écrire : le résultat du PSD et la RAM (lots 10 et 18), et le test bonus facultatif (lot 13).
 
 ## Shorts
 
