@@ -147,9 +147,9 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 - **Fréquence** : 1 par mois, en alternance avec le pilier 1.
 - **Trafic visé** : accueil pour les épisodes, recherche pour le guide.
 - **Exemples** :
-  1. *Claude Opus 5.5 ou mon PC ? J'ai fait coder une app par une IA 100 % locale* (Qwen sur RTX 5080).
-  2. *Il a recréé 7 logiciels Adobe avec une IA. Je les ai testés.* (ArtCraft, le repo viral d'octobre).
-  3. *IA en local en 2027 : ce qu'il faut VRAIMENT pour la faire tourner* (guide).
+  1. *16 Go de VRAM suffisent-ils pour remplacer Claude ?* (Qwen sur RTX 5080, épisode 1 de « Claude ou mon PC ? »).
+  2. *Il a recréé 7 logiciels Adobe avec une IA. J'ai testé son Photoshop.* (ArtCraft, le repo viral d'octobre).
+  3. *Combien coûte Claude Opus 5.5 en local ? (j'ai fait le calcul)*.
 
 ### Pilier 3 : « Les grandes histoires de la tech » (Hero)
 - **But** : vidéos passion et partageables, qui élargissent le public.
@@ -247,7 +247,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 ### Jour 90 (~18 janvier)
 | Objectif | Cible | Action |
 |---|---|---|
-| Vidéos au total | 7 longues + 14 Shorts | Pixel (21/12), guide IA (04/01), WhatsApp (18/01) |
+| Vidéos au total | 7 longues + 14 Shorts | Pixel (21/12), coût de Claude en local (04/01), WhatsApp (18/01) |
 | Abonnés | +400 (3 000) | |
 | Vues mensuelles | 8 000 (×4) | Accueil + suggestions |
 | Part des vues venant de France | 50 % | |
@@ -275,7 +275,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 | Attribut | Valeur |
 |---|---|
-| **Titre** | Claude Opus 5.5 ou mon PC ? J'ai fait coder une app par une IA 100 % locale |
+| **Titre** | 16 Go de VRAM suffisent-ils pour remplacer Claude ? (depuis le 18/10 ; avant : *Claude Opus 5.5 ou mon PC ? J'ai fait coder une app par une IA 100 % locale*) |
 | **Stratégie de trafic** | Accueil d'abord (+ recherche) |
 | **Mot-clé** | ia en local / qwen |
 | **Concurrence** | Moyenne |
@@ -283,14 +283,15 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | **En hausse, +215 %** |
 | **Durée** | 10-12 min |
 | **Niveau de RPM** | Élevé (tech/logiciel) |
-| **Urgence** | Tendance : le modèle doit encore être récent à la sortie. Essais début novembre, **publication le 23 novembre** |
+| **Urgence** | Tendance : le modèle doit encore être récent à la sortie. Essais début novembre, **publication le 23 novembre**, 4 jours avant le Black Friday |
 | **Score** | **36/40** (demande 9 · clic 9 · production 8 · niche 10) |
 
 **Hook** (ta structure) : « Cette app a été codée en quelques minutes par une IA. Claude Opus 5.5, tu penses ? … Non. Elle a été codée ici. [plan sur la 5080] Sans internet. Sans abonnement. »
-**Miniature** : deux écrans identiques côte à côte, logo Claude à gauche, RTX 5080 à droite, texte « LEQUEL ? ».
+**Miniature** : la RTX 5080 au centre avec une étiquette « 16 Go », le logo Claude, et en très gros « ÇA SUFFIT ? » (style Kai, sans visage).
 **Pourquoi** : Red Stapler fait 588 K vues avec Qwen sur une carte de 8 Go, en 5 minutes. En français, Rudy IO (1,4 K abonnés) fait ×105 avec son setup d'IA. La révélation au début crée la curiosité, et la série se renouvelle à chaque nouveau modèle. **Montre aussi les ratés** : Red Stapler consacre un chapitre à ce qui n'a pas marché, et c'est ce qui le rend crédible.
 **À vérifier** : le nom exact et la version du modèle (« Qwen3.8 Flash ») au moment du tournage.
 **Source** : ton idée + Red Stapler.
+**Mise à jour du 18/10** : le titre met en avant la carte de 16 Go, et la vidéo absorbe le guide (idée 7) pour sortir avant le Black Friday. Chez Kai, les vidéos sur le matériel et le coût font environ 2 fois plus de vues que les tests de modèles ([`etudes/kai.md`](etudes/kai.md)).
 
 ---
 
@@ -366,18 +367,18 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 | Attribut | Valeur |
 |---|---|
-| **Titre** | Il a recréé 7 logiciels Adobe avec une IA. Je les ai testés. |
+| **Titre** | Il a recréé 7 logiciels Adobe avec une IA. J'ai testé son Photoshop. |
 | **Stratégie de trafic** | Recherche (« artcraft ») + accueil |
 | **Mot-clé** | artcraft / clone adobe gratuit |
 | **Concurrence** | Forte en anglais (~45 vidéos en 5 jours), **faible en français** (3 ou 4 vidéos au 12 oct., aucune en récit) |
 | **Volume** | Non mesuré |
 | **Tendance** | En hausse : ArtCraft est sorti le 7 octobre |
-| **Durée** | 12-15 min (récit + tests) |
+| **Durée** | ~11 min (récit + un seul test : PhotoCraft) |
 | **Niveau de RPM** | Élevé |
 | **Urgence** | **Actu : le 26 octobre**, avant que la vague française arrive |
 | **Score** | **35/40** (demande 10 · clic 9 · production 8 · niche 8), rescorée le 12/10 : l'ancienne idée générique « repo viral » faisait 33/40 |
 
-**Hook** : « Adobe lui a fait payer sa résiliation. Alors il a recréé Adobe. Sept logiciels, avec une IA. Je les ai testés. » (l'histoire de la résiliation est à confirmer)
+**Hook** : « Adobe lui a fait payer sa résiliation. Alors il a recréé Adobe. Sept logiciels, avec une IA. J'ai testé son Photoshop. » (l'histoire de la résiliation est à confirmer)
 **Miniature** : un vrai PSD ouvert dans PhotoCraft, une facture « frais de résiliation » à côté, texte « GRATUIT ? ». Pas de logo Adobe.
 **Pourquoi** : FUTC fait ×100 sa médiane avec ce sujet, Rough Cut Pete 292 K en un jour avec l'angle récit. REA (Eric Tech) avait déjà montré que « l'IA recrée un logiciel payant » surperforme. En français, personne ne raconte l'histoire.
 **Garde-fou** : tu testes un projet open source publié, tu ne décompiles rien. Les noms Photoshop et Premiere servent seulement à comparer, sans logos Adobe.
@@ -407,7 +408,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 ---
 
-### Idée 7 : Le guide IA en local 2027
+### Idée 7 : Le guide IA en local 2027 (fusionnée dans l'idée 1)
 
 | Attribut | Valeur |
 |---|---|
@@ -419,7 +420,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | En hausse |
 | **Durée** | 12-15 min |
 | **Niveau de RPM** | Élevé |
-| **Urgence** | **Saisonnier : le 4 janvier**, juste avant les soldes d'hiver (au prix de CPM de janvier plus bas) |
+| **Urgence** | **Fusionnée le 18/10 dans l'idée 1** (23 nov., avant le Black Friday). Fiche archivée dans `archive/guide-ia-local-2027/` |
 | **Score** | **32/40** (demande 8 · clic 7 · production 8 · niche 9) |
 
 **Hook** : « J'ai une RTX 5080. Et la moitié des IA que je voulais faire tourner ne rentrent pas dedans. »
@@ -509,16 +510,17 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 | Rang | Titre | Stratégie | Score | Urgence |
 |---|---|---|---|---|
-| 1 | Claude Opus 5.5 ou mon PC ? J'ai fait coder une app par une IA 100 % locale | Accueil | 36/40 | 23 nov |
+| 1 | 16 Go de VRAM suffisent-ils pour remplacer Claude ? | Accueil + recherche | 36/40 | 23 nov |
 | 2 | Le génie caché derrière la carte en temps réel d'Uber | Accueil | 35/40 | 9 nov |
 | 3 | Comment Waze sait qu'il y a un bouchon avant que tu le voies | Accueil | 35/40 | 7 déc |
 | 4 | Comment 50 ingénieurs faisaient tourner WhatsApp pour 900 millions de personnes | Accueil | 35/40 | 18 janv |
 | 5 | Comment Google sait en une milliseconde que ton pseudo est déjà pris | Accueil + recherche | 33/40 | Réserve (février) |
-| 6 | Il a recréé 7 logiciels Adobe avec une IA. Je les ai testés. (idée 5, rescorée) | Recherche + accueil | 35/40 | **26 oct** |
-| 7 | IA en local en 2027 : ce qu'il faut VRAIMENT pour la faire tourner | Recherche | 32/40 | 4 janv |
+| 6 | Il a recréé 7 logiciels Adobe avec une IA. J'ai testé son Photoshop. (idée 5, rescorée) | Recherche + accueil | 35/40 | **26 oct** |
+| 7 | ~~IA en local en 2027 : ce qu'il faut VRAIMENT pour la faire tourner~~ | — | — | Fusionnée dans le n° 1 |
 | 8 | Tu n'as jamais possédé tes jeux (et Sony vient de le prouver) | Accueil | 31/40 | Réserve |
 | 9 | Le dev qui a mis ChatGPT dans ton PC (llama.cpp) | Accueil | 29/40 | Réserve |
 | 10 | Le génie caché du pixel : comment ton écran trompe tes yeux | Accueil | 27/40 | 21 déc (passion) |
+| 11 | Combien coûte Claude Opus 5.5 en local ? (ajoutée le 18/10, [fiche](projets/cout-claude-local/fiche.md)) | Accueil + recherche | 34/40 (demande 9 · clic 9 · production 7 · niche 9) | 4 janv |
 
 ### Ordre de production
 
@@ -526,7 +528,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 - recherche et tests ArtCraft, script le week-end (publication le 26 octobre) ;
 - Short Windows 10.
 
-**Ensuite** : idées 2, 1, 6, 10, 7 et 3, dans l'ordre du calendrier.
+**Ensuite** : idées 2, 1, 6, 10, 11 et 3, dans l'ordre du calendrier.
 **En réserve** : idées 4, 8 et 9.
 
 ### Calendrier (un lundi sur deux, 20 h à Paris)
@@ -535,10 +537,10 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 |---|---|---|---|
 | Lun 26 oct | ArtCraft : il a recréé 7 logiciels Adobe avec une IA | IA (Hero) | Sujet d'actu, presque rien en français ; chaque semaine compte |
 | Lun 9 nov | Le génie caché derrière la carte d'Uber | Génie (Hub) | Le format le mieux prouvé ; 2 semaines de plus pour les animations |
-| Lun 23 nov | Claude ou mon PC ? #1 (Qwen sur RTX 5080) | IA (Hub) | Alternance ; le modèle est encore récent |
+| Lun 23 nov | Claude ou mon PC ? #1 : 16 Go de VRAM suffisent-ils ? | IA (Hub + Help) | Alternance ; 4 jours avant le Black Friday |
 | Lun 7 déc | Comment Waze sait qu'il y a un bouchon | Génie (Hub) | Preuve française (1,09 M vues) ; animations de carte réutilisées |
 | Lun 21 déc | Le génie caché du pixel | Histoire (Hero) | Vacances ; ta vidéo passion, tôt comme tu le voulais |
-| Lun 4 janv | IA en local en 2027 : le guide | IA (Help) | Juste avant les soldes d'hiver |
+| Lun 4 janv | Combien coûte Claude en local ? | IA (Hub) | Alternance ; le format phare de Kai, absent en français |
 | Lun 18 janv | WhatsApp et ses 50 ingénieurs | Génie (Hub) | À bonne distance des vidéos WhatsApp d'octobre |
 
 **Le détail semaine par semaine (production + 16 Shorts jusqu'au 31 janvier) est dans `calendrier.md`.**

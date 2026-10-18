@@ -1,0 +1,251 @@
+LOT 1 — accroche, sec et posé (moment clé)
+Adobe lui a fait payer pour partir. [pause 400ms] Alors il a recréé Adobe.
+
+LOT 2 — promesse, rythme vif
+Sept logiciels : Photoshop, Première, Lightroom... Gratuits, open source, codés avec une IA, et sortis en trois jours.
+
+LOT 3 — promesse personnelle
+Et la miniature de cette vidéo, [pause 200ms] j'ai essayé de la faire avec son clone de Photoshop.
+
+LOT 4 — enjeu, malicieux (moment clé)
+Si ça marche, adieu l'abonnement Adobe. Sinon, c'est le buzz vide de l'année. [pause 300ms] Et dans cette histoire, le Robin des Bois a lui aussi... [pause 500ms] un abonnement à vous vendre.
+
+LOT 5 — intro, énergique
+On vit une époque de dingue. Depuis Claude Opus cinq point cinq, des gens sortent des trucs de plus en plus fous.
+
+LOT 6 — récit, posé
+Le trente septembre, un développeur d'Atlanta, Brandon Thomas, ouvre un nouveau projet sur GitHub : PhotoCraft. Le lendemain soir, il poste ça sur Hacker News, le forum préféré des développeurs.
+
+LOT 7 — citation, lente et appuyée
+« Le logiciel, c'est fini. [pause 250ms] Mais pour de vrai. Je viens de faire Photoshop d'un seul coup. [pause 200ms] En entier. » [pause 400ms] Et il ajoute : « Notre métier ne vaudra bientôt plus rien. »
+
+LOT 8 — pince-sans-rire (moment clé, seul)
+[pause 1s] Ambiance.
+
+LOT 9 — personnel
+Moi, je suis développeur. Et ma première pensée a été pour les petits SaaS : ces services en ligne qui font une seule chose, comme générer un QR code.
+
+LOT 10 — question ouverte
+Si une IA recrée Photoshop en trois jours, est-ce que tout ça va disparaître ? [pause 300ms] Adobe compris ? [pause 300ms] On y revient à la fin.
+
+LOT 11 — chiffre
+En moins de trois semaines, son projet a récolté près de soixante-sept mille étoiles sur GitHub, les likes des développeurs.
+
+LOT 12 — transition
+Alors, est-ce qu'on peut vraiment s'en servir, ou est-ce que c'est une coquille vide ? [pause 400ms] Pour répondre, il faut remonter à une facture.
+
+LOT 13 — complice, explicatif
+Si vous avez déjà eu un abonnement Adobe, vous connaissez peut-être le piège. Vous prenez l'offre annuelle, payée tous les mois. Ça a l'air souple.
+
+LOT 14 — le piège
+Sauf que si vous partez pendant la première année, Adobe vous facture des frais de résiliation : [pause 300ms] la moitié de tout ce qu'il vous reste à payer.
+
+LOT 15 — faits, neutre
+En deux mille vingt-quatre, la justice américaine attaque Adobe pour ces pratiques. En mars deux mille vingt-six, Adobe accepte de payer cent cinquante millions de dollars, sans reconnaître de faute.
+
+LOT 16 — citation de Brandon
+Brandon Thomas fait partie de ceux qui ont payé. Il l'a écrit sur Reddit : « Ils m'ont fait payer les frais de résiliation à plusieurs reprises... [pause 200ms] et je les déteste depuis. »
+
+LOT 17 — insistance, puis la vanne
+À plusieurs reprises. [pause 400ms] Alors il a décidé de farmer l'aura sur le dos d'Adobe, en reconstruisant toute la boîte.
+
+LOT 18 — autodérision
+On a tous voulu se venger d'un abonnement un jour. [sigh] Moi, je paie trente-trois euros par mois à Adobe, juste pour faire mes miniatures. [pause 400ms] Lui, il a cloné Photoshop.
+
+LOT 19 — appel à l'abonnement, chaleureux
+Petite pause. Sur Technovore, on décortique le génie caché derrière les applis que vous utilisez tous les jours. Si c'est votre truc, abonnez-vous.
+
+LOT 20 — la chute de l'appel
+C'est gratuit, et contrairement à Adobe... [pause 300ms] vous pouvez partir quand vous voulez.
+
+LOT 21 — la promesse sur Reddit
+Sur Reddit, où ses posts s'enflamment, il promet : « On atteindra cent pour cent de parité d'ici un mois. » [pause 300ms] Traduction : tout Photoshop, dans un mois.
+
+LOT 22 — bascule vers le test
+Sept logiciels en trois jours, tout Photoshop promis en un mois : sur le papier, c'est impressionnant. Mais le papier, [pause 200ms] ça ne fait pas des miniatures. [pause 300ms] Alors j'ai fait le test.
+
+LOT 23 — le défi
+Un seul : le plus connu. Le défi : faire la miniature de cette vidéo avec PhotoCraft. Mon vrai travail, celui que je fais pour chaque vidéo.
+
+LOT 24 — le gag (moment clé)
+Même mieux : je décris le style, je donne les images, et je laisse mon agent IA la faire tout seul... [pause 700ms] Non, je rigole. [laughter] Faut pas abuser.
+
+LOT 25 — Linux, énergique
+L'installation, déjà : Windows, Mac, et Linux. [pause 200ms] Linux, frère ! Même Adobe n'y est pas.
+
+LOT 26 — la vanne Linux
+Normal : eux, ce qui les intéresse, c'est l'argent. Et avec dix personnes sous Linux, le marché n'est pas rentable.
+
+LOT 27 — installation
+Le fichier fait moins de cent mégas, et le logiciel démarre en deux secondes.
+
+LOT 28 — l'interface
+La force d'Adobe, c'est son interface. Les gens y sont habitués, et changer ses habitudes, c'est terriblement difficile.
+
+LOT 29 — le contre-pied
+Sauf que là, le mec débarque avec quasiment la même interface, les mêmes raccourcis, et il ouvre les fichiers Photoshop. [pause 300ms] Mais que demande le peuple ?
+
+LOT 30 — la miniature
+Pour mes miniatures, je n'utilise pas d'effets artistiques compliqués : des calques, un détourage, du texte. [pause 300ms] Et là, tout y est.
+
+LOT 31 — juge de paix, suspense
+Maintenant, le vrai juge de paix : j'ouvre une ancienne miniature de la chaîne, un fichier PSD fait sur Photoshop.
+
+LOT 32 — pronostic
+Le projet le reconnaît lui-même : sur les fichiers créés par Photoshop, il n'en affiche correctement qu'environ la moitié. [pause 400ms] Alors, le mien ? [pause 300ms] Faites vos pronostics.
+
+LOT 33 — ⚠️ À ÉCRIRE APRÈS LE TEST, NE RIEN GÉNÉRER
+(Le résultat du PSD en une ou deux phrases : il s'ouvre ? Mêmes polices, mêmes effets ?)
+
+LOT 34 — la mémoire
+Et comme tout est écrit en Rust, un langage réputé ultra-rapide, je surveille la mémoire. Chez OMG Ubuntu, PhotoCraft est monté à environ cinq gigas de ram pour un seul PSD.
+
+LOT 35 — ⚠️ À ÉCRIRE APRÈS LE TEST, NE RIEN GÉNÉRER
+(La ram que tu as mesurée. Si c'est beaucoup : « À ce prix-là, je préfère la garder pour Monster Hunter. »)
+
+LOT 36 — bilan
+Bilan : pour mes miniatures, il fait largement le job. Et pour un logiciel sorti il y a trois semaines, [pause 200ms] c'est bluffant.
+
+LOT 37 — question vers l'usine
+Mais comment un seul développeur sort sept logiciels de cette taille... [pause 300ms] en trois jours ?
+
+LOT 38 — portrait
+Brandon a quinze ans de métier, dont une dizaine sur Rust. Mais en février, il a fait un choix radical. Je le cite : « J'ai complètement arrêté d'écrire du code en février. »
+
+LOT 39 — l'IA écrit
+Depuis, c'est l'IA qui écrit : Claude Code, tel quel, avec Claude Opus cinq point cinq. Plus de la moitié des modifications de PhotoCraft sont cosignées par Claude.
+
+LOT 40 — chiffre choc
+Et sur les sept applis, ça fait presque deux millions neuf cent mille lignes de code.
+
+LOT 41 — chef de chantier
+Lui, il joue le chef de chantier : il découpe le travail, lance des agents en parallèle, relit, redresse la barre. Avec une règle répétée dans chaque projet : on ne regarde jamais le code d'Adobe.
+
+LOT 42 — métaphore, posé
+On appelle ça une réimplémentation en « salle blanche ». Imaginez un chef qui goûte un plat au restaurant, puis qui le refait chez lui.
+
+LOT 43 — chute de la métaphore
+Il a le droit de goûter. [pause 300ms] Il n'a pas le droit de voler le cahier de recettes, ici le code d'Adobe.
+
+LOT 44 — documentations publiques
+Le projet interdit même la décompilation, et s'appuie sur des documentations publiques, comme celles des formats PSD et PDF.
+
+LOT 45 — le PDF, un peu piquant
+Le PDF, d'ailleurs, c'est Adobe qui l'a inventé. Et avec Acrobat, il l'a presque privatisé. [pause 300ms] Pourtant, c'est une norme ouverte depuis deux mille huit : même votre navigateur sait lire un PDF.
+
+LOT 46 — PDF Craft
+ArtCraft en a profité pour sortir son PDF Craft.
+
+LOT 47 — l'IA aux commandes
+Autre détail : chaque action de ces logiciels est une commande. Du coup, une IA peut les piloter. Vous dites à Claude « détoure ce personnage », et c'est lui qui clique dans PhotoCraft.
+
+LOT 48 — ⚠️ FACULTATIF, À ÉCRIRE APRÈS LE TEST BONUS, NE RIEN GÉNÉRER
+(« Bon... tout à l'heure, je rigolais. Mais j'ai quand même essayé. » puis le résultat. Sans test bonus, saute ce lot.)
+
+LOT 49 — relance, nouvelle énergie (moment clé)
+Sauf que des agents IA qui codent jour et nuit, ça coûte cher. Alors j'ai cherché qui paie tout ça. [pause 400ms] Et je suis tombé sur une page de tarifs.
+
+LOT 50 — la révélation, 1
+Les applis sont gratuites pour de vrai : sans pub, et sans compte à créer. Mais elles sont publiées par une entreprise qui s'appelle... [pause 400ms] ArtCraft.
+
+LOT 51 — la révélation, 2
+Et ArtCraft, à la base, c'est un studio de création d'images et de vidéos par IA. [pause 200ms] Payant. [pause 200ms] Avec des crédits. Et des formules entre huit et soixante dollars par mois.
+
+LOT 52 — la chute (moment clé)
+Oui. [pause 300ms] L'homme qui a cloné Adobe par haine des abonnements finance ses logiciels gratuits... [pause 500ms] avec un abonnement.
+
+LOT 53 — pour être juste
+Bon, pour être juste : son abonnement à lui est « résiliable à tout moment ». Pas de frais de sortie. Le piège, au moins, il l'a évité.
+
+LOT 54 — Thanos
+Et ArtCraft ne s'arrête pas à Adobe : treize applis, avec des clones de Word, Excel, PowerPoint... et même Figma. Comme Thanos avec les pierres d'infinité : il les veut toutes.
+
+LOT 55 — la légende
+Derrière, un cofondateur, une petite équipe et plus de trois cents contributeurs. On est loin de la légende du mec seul dans sa chambre.
+
+LOT 56 — citation de 2020
+En deux mille vingt, Brandon disait déjà : « Je ne suis pas avocat, mais je pense qu'on entre dans une zone grise juridique. »
+
+LOT 57 — FakeYou, factuel et neutre
+C'était à propos de Vocodes, son site qui faisait parler des voix de célébrités avec l'IA, devenu FakeYou. En deux mille vingt-deux, le gendarme italien de la vie privée a ouvert une enquête sur FakeYou.
+
+LOT 58 — la question juridique
+Aujourd'hui, la même question revient avec Photoshop : [pause 300ms] cloner un logiciel avec une IA, c'est légal ?
+
+LOT 59 — le code, l'interface
+Côté code, la salle blanche le protège. Mais les menus et les raccourcis sont volontairement les mêmes, et c'est justement ce qui fait sa force.
+
+LOT 60 — Adobe se tait
+Au moment où j'enregistre, Adobe n'a fait aucune déclaration publique. Aucune plainte connue.
+
+LOT 61 — ton avis, complice
+Moi non plus, je ne suis pas avocat. [pause 300ms] Mais à mon avis, ces copies restent open source et gratuites, sans rien à vendre dedans. Et ça les protège à peu près des attaques juridiques.
+
+LOT 62 — la parodie
+D'ailleurs, si vous avez vu passer une vidéo « Adobe réagit », méfiez-vous : c'est une parodie, jouée par un acteur. [pause 400ms] Reste à savoir si la promesse de Brandon tient.
+
+LOT 63 — la promesse rétrécit
+Cent pour cent de Photoshop en un mois. [pause 300ms] Deux jours plus tard, sur Hacker News, la promesse avait déjà rétréci : « Ça se comptera en mois, pas en années. »
+
+LOT 64 — l'évaluation
+Et le projet publie sa propre évaluation, plutôt honnête d'ailleurs. Environ soixante-seize pour cent des fonctions de Photoshop existent dans PhotoCraft.
+
+LOT 65 — le chiffre qui pique
+Mais prêt pour un vrai travail de pro ? [pause 400ms] Environ quarante-cinq pour cent.
+
+LOT 66 — le chemin restant
+Et pour aller au bout, ils estiment qu'il faut encore entre deux mille trois cents et quatre mille cent heures de travail d'agents IA.
+
+LOT 67 — les détails, posé
+La première moitié, l'IA l'a écrite en quelques jours. La seconde, ce sont les détails : un fichier qui s'ouvre exactement pareil, une couleur qui ne bouge pas à l'impression, un pinceau qui réagit comme votre main l'attend.
+
+LOT 68 — verdict, ralentir (moment clé)
+[pause 500ms] Alors, coquille vide ? [pause 300ms] Non. Pour un usage comme le mien, ça suffit largement.
+
+LOT 69 — pour un pro
+Pour un pro, il manque encore des fonctions : sur Reddit et Hacker News, des utilisateurs les listent une par une. Mais plus de trois cents contributeurs en trois semaines, ça montre que le projet intéresse vraiment.
+
+LOT 70 — mon métier, sincère
+Et mon métier, alors ? Je reviens à mes petits SaaS. Un service qui fait une seule chose, comme générer un QR code, je pense qu'il va disparaître : une IA le recrée trop facilement.
+
+LOT 71 — les grosses boîtes
+Mais une grosse boîte comme Adobe vend aussi du support, et la compatibilité avec des années de projets.
+
+LOT 72 — ⚠️ À ÉCRIRE APRÈS LE TEST, NE RIEN GÉNÉRER
+(« Mon vieux fichier PSD l'a montré : » puis ce qui s'est passé à l'ouverture.)
+
+LOT 73 — chute finale (moment clé)
+[pause 300ms] Ça, aucune IA ne l'a encore écrit en trois jours.
+
+LOT 74 — ton verdict perso, énergique
+En tout cas, moi, je vais l'utiliser pour mes miniatures. Un logiciel de moins de cent mégas qui démarre en deux secondes, juste pour gérer mes minias... [pause 200ms] c'est le must have.
+
+LOT 75 — question en commentaire
+Pour vous, tout dépend de ce qu'il vous faut. Alors dites-le en commentaire : il vous manquerait quoi pour lâcher Adobe ? Ou « j'utilise déjà Gimp »... [pause 200ms] on ne juge personne. [laughter]
+
+LOT 76 — abonnement et écran de fin
+Et si vous voulez la suite, abonnez-vous. Si vous aimez comprendre comment les applis marchent sous le capot, cette vidéo-là devrait vous plaire.
+
+LOT 77 — teaser Uber
+Et lundi neuf novembre, on part chez Uber : comment votre téléphone affiche des voitures qui bougent en direct, sans ramer. Petit indice : [pause 300ms] ils ont découpé la planète entière en hexagones.
+
+Notes
+- Mode : page Voice de VoiceStudio, lot par lot. Aucune balise longform ([slow], [emphasis]...) n'est utilisée.
+- Ne colle que le texte sous chaque en-tête « LOT ». L'en-tête lui-même serait prononcé.
+- Les lots 33, 35, 48 et 72 sont à écrire après ton test : ne les génère pas tels quels (les parenthèses seraient lues).
+- Moments clés à générer 3 ou 4 fois, puis à monter avec la meilleure prise : lots 1, 4, 8, 24, 49, 52, 68, 73.
+- Profils de voix : si tu as un clip de référence énergique et un posé, prends l'énergique pour les lots 1 à 5, 24 à 26, 49 et 74 à 77, et le posé pour 13 à 16, 42 à 45, 56 à 61 et 67 à 73.
+- Sons : 2 [laughter] (lots 24 et 75) et 1 [sigh] (lot 18). Si le rire sort mal avec ton clip, supprime la balise, la phrase tient seule.
+- Sigles épelés exprès : IA, PSD, PDF, QR, OMG.
+- Mots à tester (prononciation) et graphies de secours :
+  - SaaS : si lu « sa-a-s », écris « sasse » ;
+  - GitHub : « guitt-heub » ou [[guithub]] ;
+  - Hacker News : « hackeur niouz » ;
+  - must have : « meust av » ;
+  - FakeYou : « feïk you » ;
+  - Uber : « oubeur » ;
+  - Lightroom : « laïtroum » ;
+  - Rust : « reust ».
+- Nombres déjà écrits en toutes lettres : 2024, 2026, 150 millions, 33 euros, 67 000, 100 %, 2,9 millions, 2008, 300, 76 %, 45 %, 2 300 et 4 100, 8 et 60 dollars, 100 Mo (« cent mégas »), 5 Go (« cinq gigas »), Claude Opus 5.5 (« cinq point cinq »).
+- Graphies propres à la voix (script.md garde l'orthographe normale) : « Première » avec accent (le logiciel s'écrit Premiere), « PDF Craft » (s'écrit PdfCraft), « ram » et « Gimp » en minuscules pour ne pas être épelés.
+- Reformulation pour l'oral, reportée aussi dans script.md : la phrase sur le droit est coupée en deux (lot 61).
