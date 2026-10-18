@@ -5,6 +5,7 @@
 > - le test passe avant l'usine ;
 > - les 15 tics d'IA sont corrigés ;
 > - le passage FakeYou part de la citation de Brandon ;
+> - **nouveau hook (18/10)** : « Ce mec en avait tellement marre de payer Adobe… qu'il l'a recréé. » (ta formule, avec le mot fort en fin de phrase) ;
 > - **ajouts du 18/10** : tes 33 €/mois, le PDF « presque privatisé », ton avis juridique (« je ne suis pas avocat non plus »), ton verdict (suffisant pour tes miniatures, pas encore pour un pro), et ta conclusion « must have » (moins de 100 Mo, 2 s) ;
 > - tes ajouts du brouillon sont intégrés (époque de dingue, Thanos, Linux frère, farmer l'aura, l'interface, le gag de l'agent) ;
 > - **un seul test, PhotoCraft** (18/10, ta décision : éviter l'effet tutoriel). FilmCraft et le tour express sont retirés ;
@@ -18,7 +19,7 @@
 - **Type de chaîne** : récit + test (commentaire / essai)
 - **Public** : 18-30 ans, francophones, curieux de tech, dont beaucoup apprennent à coder. Ils ont cliqué pour savoir si c'est « vraiment gratuit et vraiment utilisable ».
 - **Ton** : conversationnel, vouvoiement, ton humour
-- **Mots** : 1 698 mots de voix off écrits (comptés). Avec ~30 mots de résultats de test, on arrive à ~1 728 mots, soit **environ 11 min 31 s**.
+- **Mots** : 1 697 mots de voix off écrits (comptés). Avec ~30 mots de résultats de test, on arrive à ~1 727 mots, soit **environ 11 min 30 s**.
 
 **Légende** : les lignes `>` sont lues en voix off. Les crochets sont des indications de montage. Les blocs **[À REMPLIR]** attendent tes résultats de test (~30 mots au total : le PSD et la RAM). Pour chacun, il y a une phrase type si ça marche (✅) et si ça casse (❌).
 
@@ -28,18 +29,18 @@
 
 ### Accroche (0:00 — 0:05)
 
-[B-ROLL CUE: écran noir, puis une facture Adobe avec la ligne « frais de résiliation » surlignée en rouge]
+[B-ROLL CUE: sa photo de profil GitHub (publique) sur « Ce mec », puis une facture Adobe qui défile, ligne « frais de résiliation » surlignée en rouge]
 
-> Adobe lui a fait payer pour partir. Alors il a recréé Adobe.
+> Ce mec en avait tellement marre de payer Adobe… qu'il l'a recréé.
 
-[SOUND EFFECT: tampon sec sur la facture]
-[PACING: aucune intro, aucun logo. La première phrase tombe sur la première image.]
+[SOUND EFFECT: tampon sec sur la facture, pile sur « recréé »]
+[PACING: aucune intro, aucun logo. La première phrase tombe sur la première image. Le mot fort est le dernier : « recréé ».]
 
 ### Promesse (0:05 — 0:15)
 
 [B-ROLL CUE: les 7 icônes en rafale, puis 1 seconde de ta miniature en cours dans PhotoCraft]
 
-> Sept logiciels : Photoshop, Premiere, Lightroom… Gratuits, open source, codés avec une IA et sortis en trois jours. Et la miniature de cette vidéo, j'ai essayé de la faire avec son clone de Photoshop.
+> Photoshop, Premiere, Lightroom : sept logiciels gratuits, sortis en trois jours, et c'est une IA qui a écrit le code. Moi, j'ai essayé de faire la miniature de cette vidéo avec son Photoshop.
 
 ### Enjeu (0:15 — 0:30)
 
@@ -49,7 +50,7 @@
 
 ---
 
-## INTRO (0:29 — 1:39) | Contexte
+## INTRO (0:29 — 1:38) | Contexte
 
 > On vit une époque de dingue. Depuis Claude Opus 5.5, des gens sortent des trucs de plus en plus fous.
 
@@ -77,7 +78,7 @@
 
 ---
 
-## BLOC 1 : La vengeance (1:39 — 2:41)
+## BLOC 1 : La vengeance (1:38 — 2:40)
 
 [GRAPHIC: titre de chapitre « 1. La vengeance »]
 
@@ -99,7 +100,7 @@
 
 ---
 
-## MID-CTA (~2:41, 23 % de la vidéo)
+## MID-CTA (~2:40, 23 % de la vidéo)
 
 [GRAPHIC: bouton « S'abonner » animé, en bas à droite]
 
@@ -109,7 +110,7 @@
 
 ---
 
-## BLOC 2 : Le test (2:55 — 5:13)
+## BLOC 2 : Le test (2:55 — 5:12)
 
 [GRAPHIC: le post Reddit, compteur de votes (3 445)]
 
@@ -150,7 +151,7 @@
 
 ---
 
-## BLOC 3 : L'usine (5:13 — 6:52)
+## BLOC 3 : L'usine (5:12 — 6:51)
 
 [GRAPHIC: titre de chapitre « 3. L'usine »]
 [SOUND EFFECT: transition]
@@ -182,7 +183,7 @@
 
 ---
 
-## RELANCE (~6:52, 60 % de la vidéo)
+## RELANCE (~6:51, 60 % de la vidéo)
 
 [CAMERA CHANGE: coupure nette, musique coupée, écran noir d'une demi-seconde]
 
@@ -192,7 +193,7 @@
 
 ---
 
-## BLOC 4 : Qui paie ? (7:03 — 9:10)
+## BLOC 4 : Qui paie ? (7:03 — 9:09)
 
 [GRAPHIC: titre de chapitre « 4. Qui paie ? »]
 
@@ -222,7 +223,7 @@
 
 ---
 
-## BLOC 5 : La promesse (9:10 — 10:45)
+## BLOC 5 : La promesse (9:09 — 10:44)
 
 [GRAPHIC: titre de chapitre « 5. La promesse »]
 
@@ -248,7 +249,7 @@
 
 ---
 
-## OUTRO (10:45 — 11:31)
+## OUTRO (10:44 — 11:30)
 
 ### Appel à l'action (15 s)
 
@@ -272,41 +273,41 @@
 
 | Moment | Type | Description |
 |---|---|---|
-| 0:00 | [B-ROLL CUE] | Écran noir, puis une facture Adobe avec la ligne « frais de résiliation » surlignée en rou |
-| 0:04 | [SOUND EFFECT] | Tampon sec sur la facture |
+| 0:00 | [B-ROLL CUE] | Sa photo de profil GitHub (publique) sur « Ce mec », puis une facture Adobe qui défile, li |
+| 0:04 | [SOUND EFFECT] | Tampon sec sur la facture, pile sur « recréé » |
 | 0:04 | [B-ROLL CUE] | Les 7 icônes en rafale, puis 1 seconde de ta miniature en cours dans PhotoCraft |
-| 0:38 | [GRAPHIC] | « 30 septembre 2026 », un terminal GitHub avec le commit « init repo » |
+| 0:37 | [GRAPHIC] | « 30 septembre 2026 », un terminal GitHub avec le commit « init repo » |
 | 0:49 | [GRAPHIC] | La citation en anglais, traduite en sous-titre, avec la date |
 | 1:00 | [SOUND EFFECT] | Une seconde de silence |
 | 1:21 | [B-ROLL CUE] | Un générateur de QR code en ligne, puis zoom arrière sur l'interface de Photoshop |
 | 1:21 | [UNEXPECTED STAT] | Compteur d'étoiles GitHub qui monte jusqu'à « 66 940 » |
-| 1:39 | [GRAPHIC] | Titre de chapitre « 1 |
-| 2:00 | [B-ROLL CUE] | Une barre de 12 mois |
-| 2:10 | [UNEXPECTED STAT] | « 150 000 000 $ » en plein écran, puis « 75 M$ d'amende + 75 M$ de services gratuits » en  |
-| 2:22 | [CAMERA CHANGE] | Zoom lent sur « à plusieurs reprises » |
-| 2:41 | [GRAPHIC] | Bouton « S'abonner » animé, en bas à droite |
+| 1:38 | [GRAPHIC] | Titre de chapitre « 1 |
+| 1:59 | [B-ROLL CUE] | Une barre de 12 mois |
+| 2:09 | [UNEXPECTED STAT] | « 150 000 000 $ » en plein écran, puis « 75 M$ d'amende + 75 M$ de services gratuits » en  |
+| 2:21 | [CAMERA CHANGE] | Zoom lent sur « à plusieurs reprises » |
+| 2:40 | [GRAPHIC] | Bouton « S'abonner » animé, en bas à droite |
 | 2:55 | [GRAPHIC] | Le post Reddit, compteur de votes (3 445) |
 | 3:16 | [GRAPHIC] | Titre de chapitre « 2 |
 | 3:16 | [CAMERA CHANGE] | Passage en capture d'écran plein cadre |
 | 4:20 | [UNEXPECTED STAT] | « 133 fichiers sur 256 » |
-| 5:13 | [GRAPHIC] | Titre de chapitre « 3 |
-| 5:13 | [SOUND EFFECT] | Transition |
+| 5:12 | [GRAPHIC] | Titre de chapitre « 3 |
+| 5:12 | [SOUND EFFECT] | Transition |
 | 5:25 | [B-ROLL CUE] | Un terminal Claude Code qui défile en accéléré |
-| 5:42 | [UNEXPECTED STAT] | « 56 % des commits cosignés par Claude », puis un compteur qui monte jusqu'à « 2 876 028 l |
+| 5:41 | [UNEXPECTED STAT] | « 56 % des commits cosignés par Claude », puis un compteur qui monte jusqu'à « 2 876 028 l |
 | 5:55 | [GRAPHIC] | Extrait du fichier AGENTS.md, « behaviour and look only » surligné |
 | 6:35 | [SOUND EFFECT] | « ding » de validation |
 | 6:35 | [B-ROLL CUE] | Un PDF ouvert dans un navigateur, puis dans PdfCraft |
-| 6:52 | [B-ROLL CUE] | Ta démo MCP, sinon la capture du README |
-| 6:52 | [CAMERA CHANGE] | Coupure nette, musique coupée, écran noir d'une demi-seconde |
+| 6:51 | [B-ROLL CUE] | Ta démo MCP, sinon la capture du README |
+| 6:51 | [CAMERA CHANGE] | Coupure nette, musique coupée, écran noir d'une demi-seconde |
 | 7:03 | [GRAPHIC] | Titre de chapitre « 4 |
-| 7:25 | [SOUND EFFECT] | Disque rayé |
+| 7:24 | [SOUND EFFECT] | Disque rayé |
 | 8:02 | [B-ROLL CUE] | La page de tarifs d'ArtCraft, « Cancel anytime » entouré |
-| 8:30 | [GRAPHIC] | La citation de 2020 (TNW), puis le communiqué du Garante, sources et dates en petit |
+| 8:29 | [GRAPHIC] | La citation de 2020 (TNW), puis le communiqué du Garante, sources et dates en petit |
 | 8:58 | [B-ROLL CUE] | La vignette de la vidéo « Adobe Reacts », floutée, avec un tampon « PARODIE » |
-| 9:10 | [GRAPHIC] | Titre de chapitre « 5 |
-| 9:21 | [GRAPHIC] | Les deux citations côte à côte, avec leur date |
-| 9:42 | [UNEXPECTED STAT] | Deux jauges, 76 % et 45 % |
-| 10:16 | [CAMERA CHANGE] | Retour sur le générateur de QR code du début |
+| 9:09 | [GRAPHIC] | Titre de chapitre « 5 |
+| 9:20 | [GRAPHIC] | Les deux citations côte à côte, avec leur date |
+| 9:41 | [UNEXPECTED STAT] | Deux jauges, 76 % et 45 % |
+| 10:15 | [CAMERA CHANGE] | Retour sur le générateur de QR code du début |
 | 11:12 | [GRAPHIC] | Écran de fin, avec ta meilleure vidéo actuelle à gauche et le bouton d'abonnement à droite |
 
 **Total** : 36 relances, une toutes les 19 secondes en moyenne. Horaires calculés à 150 mots/min, avec ~30 mots de résultats de test répartis dans les blocs [À REMPLIR]. Le plus long trou (64 s, de 3:16 à 4:20) tombe dans le test, où le chronomètre et les captures relancent l'attention.
