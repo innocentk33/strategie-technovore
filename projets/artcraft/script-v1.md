@@ -203,7 +203,6 @@
 
 > Les applis sont gratuites, pour de vrai : pas de pub, pas de compte, pas de pistage. Mais elles sont publiées par une entreprise qui s'appelle… ArtCraft. Et ArtCraft, à la base, c'est un studio de création d'images et de vidéos par IA. Payant. Avec des crédits. Et des formules entre 8 et 60 dollars par mois.
 
-[SOUND EFFECT: disque rayé]
 
 > Oui. L'homme qui a cloné Adobe par haine des abonnements finance ses logiciels gratuits… avec un abonnement.
 
@@ -303,7 +302,6 @@
 | 7:01 | [B-ROLL CUE] | Le tour express avec les tampons ✅ / ❌ |
 | 7:43 | [CAMERA CHANGE] | Coupure nette, musique coupée (relance) |
 | 7:57 | [GRAPHIC] | Chapitre 4 |
-| 8:19 | [SOUND EFFECT] | Disque rayé sur « un abonnement » |
 | 8:36 | [B-ROLL CUE] | La page de tarifs d'ArtCraft |
 | 9:01 | [UNEXPECTED STAT] | « 2020 : voix de célébrités. 2026 : Photoshop. » |
 | 9:25 | [B-ROLL CUE] | La vidéo parodie, floutée |

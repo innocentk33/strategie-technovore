@@ -21,7 +21,7 @@ Planification et suivi de la chaîne YouTube Technovore : stratégie, calendrier
 |---|---|---|---|
 | [Windows 10](projets/short-windows-10/fiche.md) | Short | jeu. 15 oct., 18 h | À faire |
 | [Vorssaint, l'app qui répare macOS](projets/short-vorssaint/fiche.md) | Short | jeu. 22 oct., 18 h | Fiche |
-| [ArtCraft](projets/artcraft/fiche.md) | Longue | lun. 26 oct., 20 h | Script |
+| [ArtCraft](projets/artcraft/fiche.md) | Longue | lun. 26 oct., 20 h | Montage |
 | [Uber](projets/uber/fiche.md) | Longue | lun. 9 nov., 20 h | Brouillon |
 | [Claude ou mon PC ? #1 : 16 Go de VRAM](projets/claude-ou-mon-pc-1/fiche.md) | Longue | lun. 23 nov., 20 h | Brouillon |
 | [Waze](projets/waze/fiche.md) | Longue | lun. 7 déc., 20 h | Fiche |

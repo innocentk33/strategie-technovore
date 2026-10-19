@@ -1,0 +1,1003 @@
+1
+00:00:00,000 --> 00:00:04,483
+Ce mec en avait tellement marre de payer
+des frais de résiliation chez Adobe…
+
+2
+00:00:04,550 --> 00:00:06,550
+qu'il a complètement recréé.
+
+3
+00:00:06,617 --> 00:00:09,636
+Photoshop, Premiere Pro,
+Lightroom : sept logiciels gratuits,
+
+4
+00:00:09,702 --> 00:00:14,323
+sortis en même pas trois jours,
+et c'est une IA qui a écrit le code.
+
+5
+00:00:14,390 --> 00:00:18,500
+Moi, j'ai essayé de faire la miniature
+de cette vidéo avec son Photoshop.
+
+6
+00:00:18,640 --> 00:00:22,200
+Si ça marche, franchement,
+adieu l'abonnement Adobe.
+
+7
+00:00:22,267 --> 00:00:25,033
+Sinon, ça sera le buzz vide de l'année.
+
+8
+00:00:25,100 --> 00:00:29,833
+Et dans cette histoire, le Robin des Bois
+a lui aussi un abonnement à nous vendre.
+
+9
+00:00:29,900 --> 00:00:32,073
+On vit quand même une époque de dingue.
+
+10
+00:00:32,140 --> 00:00:35,033
+Depuis l'arrivée de Claude Opus 5.5,
+
+11
+00:00:35,100 --> 00:00:37,993
+des gens sortent des trucs
+de plus en plus fous.
+
+12
+00:00:38,060 --> 00:00:41,913
+Le 30 septembre, un développeur
+d'Atlanta, Brandon Thomas,
+
+13
+00:00:41,980 --> 00:00:44,650
+ouvre un nouveau projet
+sur GitHub : PhotoCraft.
+
+14
+00:00:44,717 --> 00:00:47,293
+Le lendemain soir,
+il poste ça sur Hacker News,
+
+15
+00:00:47,360 --> 00:00:48,823
+le forum préféré des développeurs.
+
+16
+00:00:48,890 --> 00:00:51,293
+Il dit, je cite :
+« Le logiciel, c'est fini.
+
+17
+00:00:51,360 --> 00:00:56,263
+Mais pour de vrai. Je viens de faire
+Photoshop d'un seul coup, et en entier. »
+
+18
+00:00:56,330 --> 00:01:01,000
+Et il ajoute à cela : « Notre métier
+ne vaudra bientôt plus rien. »
+
+19
+00:01:02,210 --> 00:01:04,873
+Franchement, moi, je suis un développeur,
+
+20
+00:01:04,940 --> 00:01:09,033
+et ma première pensée a été
+pour les petits SaaS :
+
+21
+00:01:09,100 --> 00:01:11,833
+ces services en ligne qui font
+une seule chose à la fois,
+
+22
+00:01:11,900 --> 00:01:15,033
+comme générer un QR code
+par exemple, ou je sais pas…
+
+23
+00:01:15,100 --> 00:01:18,090
+peut-être iLovePDF.
+
+24
+00:01:18,157 --> 00:01:22,433
+Si une IA recrée Photoshop en trois jours,
+est-ce que tout ça va disparaître ?
+
+25
+00:01:22,500 --> 00:01:25,890
+Adobe compris. On y revient à la fin.
+
+26
+00:01:25,957 --> 00:01:30,683
+En moins de trois semaines, son projet a
+récolté près de 67 000 étoiles sur GitHub.
+
+27
+00:01:30,750 --> 00:01:33,483
+Les étoiles,
+c'est les likes des développeurs.
+
+28
+00:01:33,550 --> 00:01:35,883
+Alors, est-ce qu'on peut
+vraiment s'en servir,
+
+29
+00:01:35,950 --> 00:01:38,523
+ou est-ce que c'est une coquille vide ?
+
+30
+00:01:38,590 --> 00:01:41,180
+Pour répondre à ça,
+il faut remonter à une facture.
+
+31
+00:01:41,760 --> 00:01:45,783
+Si vous avez déjà un abonnement Adobe,
+vous connaissez peut-être le piège.
+
+32
+00:01:45,850 --> 00:01:50,173
+Vous prenez l'offre annuelle,
+payée tous les mois : ça a l'air souple.
+
+33
+00:01:50,240 --> 00:01:52,893
+Sauf que si vous partez
+pendant la première année,
+
+34
+00:01:52,960 --> 00:01:58,333
+Adobe facture des frais de résiliation :
+la moitié de ce qu'il vous reste à payer.
+
+35
+00:01:58,400 --> 00:02:03,133
+En 2024, la justice américaine
+attaque Adobe pour ces pratiques.
+
+36
+00:02:03,200 --> 00:02:08,013
+En mars 2026, Adobe accepte
+de payer 150 millions de dollars,
+
+37
+00:02:08,080 --> 00:02:10,003
+sans reconnaître de faute.
+
+38
+00:02:10,070 --> 00:02:13,363
+Brandon Thomas fait partie
+de ceux qui ont payé.
+
+39
+00:02:13,430 --> 00:02:16,803
+Il l'a écrit sur Reddit, je cite :
+« Ils m'ont fait payer des frais
+
+40
+00:02:16,870 --> 00:02:21,140
+de résiliation à plusieurs reprises,
+et je les déteste depuis. »
+
+41
+00:02:21,240 --> 00:02:23,103
+À plusieurs reprises, il a dit.
+
+42
+00:02:23,170 --> 00:02:26,543
+Alors il a décidé de farmer
+de l'aura sur le dos d'Adobe,
+
+43
+00:02:26,610 --> 00:02:28,863
+en construisant toute la boîte.
+
+44
+00:02:28,930 --> 00:02:31,823
+On a tous voulu se venger d'Adobe.
+
+45
+00:02:31,890 --> 00:02:36,463
+Moi, je paie 33 euros juste
+pour créer des miniatures.
+
+46
+00:02:36,530 --> 00:02:40,050
+Lui, il a cloné carrément Photoshop.
+
+47
+00:02:40,280 --> 00:02:42,612
+Mais bon, petite pause : sur Technovore,
+
+48
+00:02:42,679 --> 00:02:45,743
+on décortique le génie caché
+derrière certaines applications
+
+49
+00:02:45,810 --> 00:02:47,263
+que vous utilisez tous les jours.
+
+50
+00:02:47,330 --> 00:02:50,463
+Si c'est un truc qui vous intéresse,
+alors abonnez-vous, c'est gratuit.
+
+51
+00:02:50,530 --> 00:02:52,240
+Et contrairement à Adobe…
+
+52
+00:02:52,470 --> 00:02:54,750
+vous pouvez partir quand vous voulez.
+
+53
+00:02:55,120 --> 00:02:58,823
+Sur Reddit, où ses posts
+s'enflamment, il promet :
+
+54
+00:02:58,890 --> 00:03:02,663
+« On atteindra 100 %
+de parité d'ici un mois. »
+
+55
+00:03:02,730 --> 00:03:05,223
+Traduction : tout Photoshop dans un mois.
+
+56
+00:03:05,290 --> 00:03:08,263
+Franchement,
+sept logiciels en trois jours,
+
+57
+00:03:08,330 --> 00:03:12,490
+tout Photoshop promis en un mois :
+sur le papier, c'est intéressant.
+
+58
+00:03:12,557 --> 00:03:16,533
+Mais le papier, ça ne fait pas des
+miniatures, et ça ne fait pas tout.
+
+59
+00:03:16,600 --> 00:03:18,920
+Alors j'ai fait un test.
+
+60
+00:03:19,610 --> 00:03:21,613
+Un seul, un tout petit test.
+
+61
+00:03:21,680 --> 00:03:26,620
+Le défi pour moi, c'était de faire la
+miniature de cette vidéo avec PhotoCraft.
+
+62
+00:03:26,687 --> 00:03:31,060
+En gros, mon vrai travail,
+celui que je fais pour chaque vidéo.
+
+63
+00:03:31,160 --> 00:03:36,203
+Mais je voudrais faire aussi mieux :
+vu que ce logiciel a été fait pour les IA,
+
+64
+00:03:36,270 --> 00:03:37,643
+je peux décrire le style
+de ce que je veux,
+
+65
+00:03:37,710 --> 00:03:42,090
+donner des références, et laisser
+mon IA faire le tout tout seul.
+
+66
+00:03:42,450 --> 00:03:44,810
+Mais bon, là, faut pas abuser.
+
+67
+00:03:45,080 --> 00:03:49,583
+Déjà, au niveau de l'installation, il y a
+une version pour Windows, Mac et Linux.
+
+68
+00:03:49,650 --> 00:03:54,703
+Linux, frère ! Franchement, quel
+logiciel a une compatibilité pour Linux ?
+
+69
+00:03:54,770 --> 00:03:57,473
+C'est super rare. Même Adobe n'y est pas.
+
+70
+00:03:57,540 --> 00:04:00,353
+Normal pour eux, parce que ce qui
+intéresse Adobe, c'est l'argent.
+
+71
+00:04:00,420 --> 00:04:04,413
+Et quand tu regardes Linux, pour dix
+personnes seulement qui sont sous Linux,
+
+72
+00:04:04,480 --> 00:04:07,133
+le marché n'est pas du tout
+rentable pour eux.
+
+73
+00:04:07,200 --> 00:04:12,123
+Mais imaginez si vous avez une Steam Deck
+que vous utilisez comme PC principal,
+
+74
+00:04:12,190 --> 00:04:14,003
+vu qu'elle tourne sous Linux.
+
+75
+00:04:14,070 --> 00:04:17,603
+Avec ce PhotoCraft,
+vous pouvez utiliser littéralement
+
+76
+00:04:17,670 --> 00:04:21,690
+votre console de jeu comme
+un vrai PC de bureau.
+
+77
+00:04:21,830 --> 00:04:24,683
+En plus de ça, le fichier
+fait moins de 100 mégas,
+
+78
+00:04:24,750 --> 00:04:27,990
+et le logiciel démarre
+franchement en deux secondes.
+
+79
+00:04:28,310 --> 00:04:30,873
+La force d'Adobe aussi,
+c'est son interface.
+
+80
+00:04:30,940 --> 00:04:34,840
+Les gens y sont habitués, et changer ses
+habitudes, c'est terriblement difficile.
+
+81
+00:04:34,907 --> 00:04:39,013
+Sauf que là, le mec débarque
+avec quasiment la même interface,
+
+82
+00:04:39,080 --> 00:04:42,793
+les mêmes raccourcis,
+et il ouvre des fichiers PSD en plus.
+
+83
+00:04:42,860 --> 00:04:45,753
+Des fichiers Photoshop.
+Des fichiers Photoshop !
+
+84
+00:04:45,820 --> 00:04:47,740
+Mais en fait,
+que demande le peuple de plus ?
+
+85
+00:04:48,050 --> 00:04:49,793
+Franchement, pour ma miniature,
+
+86
+00:04:49,860 --> 00:04:52,693
+je n'utilise pas d'effets
+artistiques compliqués :
+
+87
+00:04:52,760 --> 00:04:57,780
+des calques, un détourage, du texte,
+et pour moi tout y est, en fait.
+
+88
+00:04:58,200 --> 00:05:00,543
+Maintenant, le vrai juge de paix :
+
+89
+00:05:00,610 --> 00:05:05,263
+si j'ouvre un ancien fichier Photoshop
+d'une miniature de la chaîne,
+
+90
+00:05:05,330 --> 00:05:06,543
+un fichier PSD…
+
+91
+00:05:06,610 --> 00:05:10,143
+le projet le reconnaît lui-même :
+sur les fichiers créés par Photoshop,
+
+92
+00:05:10,210 --> 00:05:13,503
+il n'en affiche correctement
+qu'environ la moitié.
+
+93
+00:05:13,570 --> 00:05:15,423
+Alors, le mien ? Qu'en pensez-vous ?
+
+94
+00:05:15,490 --> 00:05:17,040
+Franchement, faites vos pronostics.
+
+95
+00:05:18,380 --> 00:05:22,163
+Pour moi, il a ouvert
+parfaitement mon fichier PSD.
+
+96
+00:05:22,230 --> 00:05:24,323
+J'ai même pu faire
+quelques modifications :
+
+97
+00:05:24,390 --> 00:05:30,323
+j'ai ajouté le logo de Claude
+pour faire la miniature de cette vidéo.
+
+98
+00:05:30,390 --> 00:05:36,340
+Et honnêtement, même au lancement
+du logiciel, c'était super rapide.
+
+99
+00:05:36,570 --> 00:05:39,153
+En fait, comme tout est écrit en Rust,
+
+100
+00:05:39,220 --> 00:05:42,553
+Rust qui est un langage
+réputé pour être ultra rapide
+
+101
+00:05:42,620 --> 00:05:45,340
+et ne pas consommer beaucoup de choses,
+
+102
+00:05:45,930 --> 00:05:51,240
+PhotoCraft est super super rapide,
+et démarre en un quart de tour.
+
+103
+00:05:51,520 --> 00:05:55,223
+Et franchement, pour mes miniatures,
+ça fait largement le job.
+
+104
+00:05:55,290 --> 00:05:59,720
+Et pour un logiciel qui est sorti il y a
+moins de trois semaines, c'est bluffant.
+
+105
+00:05:59,910 --> 00:06:03,623
+Mais comment est-ce qu'un seul
+développeur sort sept logiciels
+
+106
+00:06:03,690 --> 00:06:05,880
+de cette taille en trois jours ?
+
+107
+00:06:05,990 --> 00:06:10,813
+En réalité, Brandon, il a quinze ans
+de métier, dont une dizaine sur Rust.
+
+108
+00:06:10,880 --> 00:06:13,293
+Mais en février,
+il a fait le choix radical.
+
+109
+00:06:13,360 --> 00:06:16,813
+Je cite : « J'ai complètement arrêté
+d'écrire du code en février. »
+
+110
+00:06:16,880 --> 00:06:21,933
+Depuis, c'est l'IA qui écrit :
+Claude Code tel quel, avec Opus 5.5.
+
+111
+00:06:22,000 --> 00:06:26,333
+Et sur les sept applis, ça fait
+presque 2,9 millions de lignes de code.
+
+112
+00:06:26,400 --> 00:06:30,253
+Lui, il joue au chef de chantier :
+il découpe le travail,
+
+113
+00:06:30,320 --> 00:06:32,813
+lance des agents en parallèle, relit,
+
+114
+00:06:32,880 --> 00:06:36,093
+redresse la barre, avec une règle
+répétée dans chaque projet :
+
+115
+00:06:36,160 --> 00:06:38,590
+on ne regarde jamais le code d'Adobe.
+
+116
+00:06:39,100 --> 00:06:43,023
+On appelle ça une réimplémentation
+en salle blanche.
+
+117
+00:06:43,090 --> 00:06:47,103
+En gros, imaginez un chef
+qui goûte un plat au restaurant,
+
+118
+00:06:47,170 --> 00:06:48,883
+puis qui le refait chez lui.
+
+119
+00:06:48,950 --> 00:06:50,623
+Il a le droit de goûter le plat ;
+
+120
+00:06:50,690 --> 00:06:53,123
+il n'a pas le droit de voler
+le cahier de recettes.
+
+121
+00:06:53,190 --> 00:06:55,930
+Ici, le cahier de recettes,
+c'est le code d'Adobe.
+
+122
+00:06:55,997 --> 00:06:58,163
+Le projet interdit même la décompilation,
+
+123
+00:06:58,230 --> 00:07:03,750
+et s'appuie sur la documentation publique,
+comme celle des formats PSD et PDF.
+
+124
+00:07:04,320 --> 00:07:06,583
+Le PDF, d'ailleurs,
+il faut qu'on en parle :
+
+125
+00:07:06,650 --> 00:07:11,243
+c'est Adobe qui l'a inventé,
+et avec Acrobat, il l'a presque privatisé.
+
+126
+00:07:11,310 --> 00:07:13,763
+Pourtant, c'est une norme
+ouverte depuis 2008 :
+
+127
+00:07:13,830 --> 00:07:16,830
+même votre navigateur sait lire un PDF.
+
+128
+00:07:17,900 --> 00:07:21,150
+ArtCraft en a profité
+pour faire sortir son PdfCraft.
+
+129
+00:07:21,360 --> 00:07:24,603
+Autre détail : chaque action
+de ces logiciels est une commande.
+
+130
+00:07:24,670 --> 00:07:27,143
+Du coup, une IA peut les piloter.
+
+131
+00:07:27,210 --> 00:07:30,363
+Vous dites à votre Claude, ou à votre GPT,
+
+132
+00:07:30,430 --> 00:07:35,050
+« détoure ce personnage »,
+et c'est lui qui clique dans PhotoCraft.
+
+133
+00:07:35,117 --> 00:07:38,603
+Je l'ai essayé personnellement
+pour monter ma miniature,
+
+134
+00:07:38,670 --> 00:07:42,510
+et il a réussi à faire tout
+ce que je lui ai demandé.
+
+135
+00:07:43,220 --> 00:07:48,043
+Sauf que des agents IA qui codent jour
+et nuit, ça coûte quand même cher.
+
+136
+00:07:48,110 --> 00:07:51,243
+Alors j'ai cherché qui paie
+tout ça, en réalité.
+
+137
+00:07:51,310 --> 00:07:53,900
+Et je suis tombé sur la page des tarifs.
+
+138
+00:07:54,280 --> 00:07:58,783
+Les applications sont gratuites
+pour de vrai, et sans compte à créer.
+
+139
+00:07:58,850 --> 00:08:01,983
+Mais elles sont publiées
+par une entreprise qui s'appelle…
+
+140
+00:08:02,050 --> 00:08:04,623
+ArtCraft. Et ArtCraft, à la base,
+
+141
+00:08:04,690 --> 00:08:08,170
+c'est un studio de création d'images
+et de vidéos générées par IA.
+
+142
+00:08:08,237 --> 00:08:09,170
+Payant.
+
+143
+00:08:09,400 --> 00:08:13,920
+Avec des crédits, et des formules
+entre 8 et 60 dollars par mois.
+
+144
+00:08:14,100 --> 00:08:18,403
+Eh bien oui : l'homme qui a cloné
+Adobe par haine des abonnements
+
+145
+00:08:18,470 --> 00:08:20,323
+finance ses logiciels gratuits…
+
+146
+00:08:20,390 --> 00:08:22,310
+avec des abonnements.
+
+147
+00:08:22,830 --> 00:08:26,613
+Bon, pour être juste : son abonnement
+à lui est résiliable à tout moment.
+
+148
+00:08:26,680 --> 00:08:29,653
+Pas de frais de sortie, pas de piège.
+
+149
+00:08:29,720 --> 00:08:33,653
+Et ArtCraft ne s'arrête pas à Adobe :
+treize applications,
+
+150
+00:08:33,720 --> 00:08:37,670
+avec des clones de Word, d'Excel,
+de PowerPoint, et même de Figma.
+
+151
+00:08:37,737 --> 00:08:43,240
+Franchement, comme Thanos avec les pierres
+d'infinité : il les veut toutes.
+
+152
+00:08:43,510 --> 00:08:47,133
+Derrière ça, on a un cofondateur
+et une petite équipe,
+
+153
+00:08:47,200 --> 00:08:48,733
+de plus de 300 contributeurs.
+
+154
+00:08:48,800 --> 00:08:51,513
+On est loin de la légende
+du mec seul dans sa chambre,
+
+155
+00:08:51,580 --> 00:08:52,713
+qui est en train de développer,
+
+156
+00:08:52,780 --> 00:08:57,580
+ou en train de combattre Adobe à lui seul,
+genre un David contre Goliath.
+
+157
+00:08:58,010 --> 00:09:01,513
+En 2020, Brandon disait déjà :
+« Je ne suis pas avocat,
+
+158
+00:09:01,580 --> 00:09:05,131
+mais je pense qu'on entre
+dans une zone grise juridique. »
+
+159
+00:09:05,198 --> 00:09:08,913
+C'était à propos de Vocodes,
+son site qui faisait parler
+
+160
+00:09:08,980 --> 00:09:13,400
+des voix de célébrités avec l'IA,
+devenu aujourd'hui FakeYou.
+
+161
+00:09:13,467 --> 00:09:17,003
+En 2022, le gendarme
+italien de la vie privée
+
+162
+00:09:17,070 --> 00:09:19,243
+a ouvert une enquête sur FakeYou.
+
+163
+00:09:19,310 --> 00:09:22,830
+Aujourd'hui, la même question
+revient avec Photoshop :
+
+164
+00:09:23,300 --> 00:09:27,710
+cloner un logiciel avec une IA,
+est-ce que c'est légal ?
+
+165
+00:09:28,000 --> 00:09:30,423
+Côté code, la salle blanche le protège.
+
+166
+00:09:30,490 --> 00:09:33,943
+Mais les menus, les raccourcis
+sont volontairement les mêmes,
+
+167
+00:09:34,010 --> 00:09:36,023
+et c'est justement ce qui fait sa force.
+
+168
+00:09:36,090 --> 00:09:37,143
+Au moment où j'enregistre,
+
+169
+00:09:37,210 --> 00:09:41,640
+Adobe n'a fait aucune déclaration
+publique, aucune plainte connue.
+
+170
+00:09:42,270 --> 00:09:43,613
+Moi non plus, je suis pas avocat.
+
+171
+00:09:43,680 --> 00:09:46,833
+Mais à mon avis, ces copies
+restent open source et gratuites,
+
+172
+00:09:46,900 --> 00:09:48,673
+sans rien à revendre dedans.
+
+173
+00:09:48,740 --> 00:09:52,660
+Et ça, ça les protège à peu près
+de toutes les attaques juridiques.
+
+174
+00:09:52,727 --> 00:09:55,813
+D'ailleurs, si vous avez vu
+passer une vidéo « Adobe réagit »,
+
+175
+00:09:55,880 --> 00:09:58,913
+méfiez-vous : c'est une parodie,
+jouée par un acteur.
+
+176
+00:09:58,980 --> 00:10:02,480
+Reste à savoir si
+la promesse de Brandon tient.
+
+177
+00:10:03,000 --> 00:10:04,883
+100 % de Photoshop en un mois.
+
+178
+00:10:04,950 --> 00:10:09,423
+Deux jours plus tard, sur Hacker News,
+la promesse avait déjà rétréci :
+
+179
+00:10:09,490 --> 00:10:12,063
+« Ça se comptera en mois, pas en années. »
+
+180
+00:10:12,130 --> 00:10:15,823
+Et le projet publie sa propre évaluation,
+plutôt honnête d'ailleurs :
+
+181
+00:10:15,890 --> 00:10:20,510
+environ 76 % des fonctions
+de Photoshop existent dans PhotoCraft.
+
+182
+00:10:20,610 --> 00:10:23,133
+Mais prêt pour un vrai travail de pro ?
+
+183
+00:10:23,200 --> 00:10:25,240
+Environ 45 %.
+
+184
+00:10:25,330 --> 00:10:27,293
+Et pour aller au bout du Photoshop,
+
+185
+00:10:27,360 --> 00:10:33,460
+il estime qu'il faut encore entre 2 300
+et 4 100 heures de travail d'agents IA.
+
+186
+00:10:33,527 --> 00:10:37,343
+La première moitié de ces applications,
+l'IA l'a écrite en quelques jours.
+
+187
+00:10:37,410 --> 00:10:41,103
+La seconde, ce sont des détails :
+un fichier qui s'ouvre exactement pareil,
+
+188
+00:10:41,170 --> 00:10:43,103
+une couleur qui ne bouge
+pas à l'impression,
+
+189
+00:10:43,170 --> 00:10:46,320
+un pinceau qui réagit
+comme votre main l'attend.
+
+190
+00:10:46,530 --> 00:10:48,793
+Alors, coquille vide ou pas ?
+
+191
+00:10:48,860 --> 00:10:52,713
+Franchement, non. Pour un usage
+comme le mien, ça suffit largement.
+
+192
+00:10:52,780 --> 00:10:56,393
+Ou pour quelqu'un qui utilisait
+par exemple Photopea en ligne, ça suffit.
+
+193
+00:10:56,460 --> 00:10:59,113
+Mais pour un professionnel,
+il manque encore des fonctions :
+
+194
+00:10:59,180 --> 00:11:04,473
+sur Reddit et Hacker News,
+des utilisateurs les listent une par une.
+
+195
+00:11:04,540 --> 00:11:07,353
+Mais plus de 300 contributeurs
+en trois semaines,
+
+196
+00:11:07,420 --> 00:11:10,540
+ça montre que le projet
+intéresse vraiment.
+
+197
+00:11:10,607 --> 00:11:12,553
+Bon, et mon métier, alors ?
+
+198
+00:11:12,620 --> 00:11:14,793
+Je reviens à mes petits SaaS.
+
+199
+00:11:14,860 --> 00:11:18,473
+Un service qui fait une seule chose,
+comme générer un code QR,
+
+200
+00:11:18,540 --> 00:11:23,370
+je pense qu'il va disparaître :
+une IA peut recréer cela trop facilement.
+
+201
+00:11:23,437 --> 00:11:27,063
+Mais une grosse boîte comme Adobe
+ne vend pas que le produit :
+
+202
+00:11:27,130 --> 00:11:31,640
+elle vend aussi du support, et la
+compatibilité avec des années de projets.
+
+203
+00:11:32,400 --> 00:11:36,103
+En tout cas, moi, je vais continuer
+d'utiliser pour mes miniatures.
+
+204
+00:11:36,170 --> 00:11:40,183
+Un logiciel de moins de 100 mégas
+qui démarre en deux secondes…
+
+205
+00:11:40,250 --> 00:11:41,863
+franchement, c'est pas cher payé.
+
+206
+00:11:41,930 --> 00:11:46,103
+Juste pour gérer des minias,
+ça va : c'est le must have pour moi.
+
+207
+00:11:46,170 --> 00:11:48,223
+Pour vous, tout dépend
+de ce qu'il vous faut.
+
+208
+00:11:48,290 --> 00:11:51,983
+Alors dites-moi en commentaire : il vous
+manquerait quoi pour lâcher Adobe ?
+
+209
+00:11:52,050 --> 00:11:53,603
+Ou « j'utilise déjà GIMP » ?
+
+210
+00:11:53,670 --> 00:11:56,743
+À vous de voir, on ne juge personne ici.
+
+211
+00:11:56,810 --> 00:11:59,210
+Et si vous voulez la suite, abonnez-vous.
+
+212
+00:11:59,277 --> 00:12:02,623
+Si vous aimez comprendre comment
+les applications marchent sous le capot,
+
+213
+00:12:02,690 --> 00:12:06,903
+je vous redonne rendez-vous pour une
+grosse vidéo qui arrive sur la chaîne.
+
+214
+00:12:06,970 --> 00:12:09,150
+Allez, salut, c'était Inno.
+
