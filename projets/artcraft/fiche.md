@@ -38,6 +38,6 @@
 
 ## Shorts
 
-1. 29 oct : « Adobe lui a fait payer sa résiliation. Il a recréé Adobe. » (confirmé)
-2. 5 nov : « J'ai ouvert un vrai fichier Photoshop dans le clone gratuit. »
+1. 22 oct : « Adobe lui a fait payer sa résiliation. Il a recréé Adobe. » (confirmé)
+2. Réserve : « J'ai ouvert un vrai fichier Photoshop dans le clone gratuit. »
 3. Réserve : « Il a cloné Adobe par haine des abonnements… et il vend des abonnements. »

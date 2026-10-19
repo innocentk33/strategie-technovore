@@ -22,5 +22,5 @@
 ## Shorts
 
 1. 10 déc : « Le bouchon que personne n'avait signalé. »
-2. 17 déc : « Ton téléphone est un capteur de trafic. »
+2. Réserve : « Ton téléphone est un capteur de trafic. »
 3. Réserve : « Pourquoi Waze te fait passer par des petites rues. »

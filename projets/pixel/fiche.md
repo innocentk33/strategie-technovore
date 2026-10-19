@@ -22,5 +22,5 @@
 ## Shorts
 
 1. 24 déc (programmé) : « Il n'y a pas de blanc sur ton écran. »
-2. 31 déc (programmé) : « Le pixel est né avant l'écran. »
+2. Réserve : « Le pixel est né avant l'écran. »
 3. Réserve : « Pourquoi 3 couleurs suffisent à tout afficher. »

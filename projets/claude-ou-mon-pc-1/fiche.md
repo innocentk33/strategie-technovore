@@ -37,5 +37,5 @@
 ## Shorts
 
 1. 26 nov (veille du Black Friday) : « La carte graphique à ne pas acheter pour l'IA ».
-2. 3 déc : la révélation (« Claude ou mon PC ? »).
+2. Réserve : la révélation (« Claude ou mon PC ? »).
 3. Réserve : « 16 Go de VRAM : ce qui rentre, ce qui ne rentre pas », le raté le plus parlant, ce que consomme ta 5080 pendant qu'elle code.

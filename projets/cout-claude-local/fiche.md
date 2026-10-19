@@ -37,5 +37,5 @@
 ## Shorts
 
 1. 7 janv : « Pour faire tourner Claude chez toi, il te faudrait… » (le chiffre final).
-2. 14 janv : « Ce que consomme une IA de pointe en électricité » (au tarif français).
+2. Réserve : « Ce que consomme une IA de pointe en électricité » (au tarif français).
 3. Réserve : « Ta carte graphique contre un serveur à 8 GPU ».

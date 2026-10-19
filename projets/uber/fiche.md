@@ -24,5 +24,5 @@
 ## Shorts
 
 1. 12 nov : « Uber a découpé la planète en hexagones. »
-2. 19 nov : « Pourquoi des hexagones et pas des carrés ? » (chaque voisin est à la même distance).
+2. Réserve : « Pourquoi des hexagones et pas des carrés ? » (chaque voisin est à la même distance).
 3. Réserve : « La voiture sur ta carte n'est pas exactement là où tu crois. »

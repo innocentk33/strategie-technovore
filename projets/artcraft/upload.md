@@ -1,7 +1,7 @@
 # ArtCraft : kit d'upload YouTube
 
 > Vidéo : `artcraft_premium 1080p.mp4` (12:24, 1920×1080, 30 i/s, −15,9 LUFS). Chapitres calés sur la vidéo finale (retranscrite le 19/10), pas sur le script.
-> Publication : **lundi 26 octobre 2026, 20 h (Paris)**, voir [`calendrier.md`](../../calendrier.md).
+> Publication : **lundi 19 octobre 2026, 18 h (Paris)**, une semaine plus tôt que prévu, voir [`calendrier.md`](../../calendrier.md).
 
 ## Titre
 
@@ -84,10 +84,10 @@ Il vous manquerait quoi pour lâcher Adobe ? Ou vous êtes déjà sur GIMP ? On 
 | Remix Shorts | Autoriser la vidéo et l'audio |
 | Catégorie | Science et technologie |
 | Commentaires | Activés, modération « Standard » |
-| Visibilité | **Programmée : lundi 26/10/2026, 20:00, fuseau Paris**. La France passe à l'heure d'hiver le 25/10 : 20 h Paris = 19 h à Abidjan et Dakar, 20 h à Douala et Kinshasa. Vérifie avant dans Studio > Audience > « Quand vos spectateurs sont sur YouTube » |
+| Visibilité | **Programmée : lundi 19/10/2026, 18:00, fuseau Paris** (relevé dans Studio le 19/10 ; le créneau habituel est 20 h). 18 h Paris = 16 h à Abidjan et Dakar, 17 h à Douala et Kinshasa. Vérifie avant dans Studio > Audience > « Quand vos spectateurs sont sur YouTube » |
 | Première | Non |
 
-Mets la vidéo en ligne **dimanche 25** pour que le traitement HD soit fini avant lundi 20 h.
+Vidéo mise en ligne le 19/10, traitement terminé avant la sortie.
 
 ## Écran de fin et fiches
 
@@ -113,5 +113,5 @@ Mets la vidéo en ligne **dimanche 25** pour que le traitement HD soit fini avan
 - [ ] Sous-titres FR et EN importés
 - [ ] Écran de fin (12:04) et fiche 1 (6:20)
 - [ ] Commentaire épinglé, à poster dès la sortie
-- [ ] Programmée le 26/10 à 20:00 (Paris)
+- [x] Programmée le 19/10 à 18:00 (Paris)
 - [ ] Le 9/11 : vidéo Uber dans l'écran de fin et en fiche 2

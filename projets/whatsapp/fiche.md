@@ -22,5 +22,5 @@
 ## Shorts
 
 1. 21 janv : « 1 ingénieur pour 18 millions de personnes. »
-2. 28 janv : « Le langage des centraux téléphoniques qui fait tourner WhatsApp » (Erlang, créé chez Ericsson).
+2. Réserve : « Le langage des centraux téléphoniques qui fait tourner WhatsApp » (Erlang, créé chez Ericsson).
 3. Réserve : « Pas de pubs, pas de jeux, pas de gadgets : la règle de WhatsApp. »

@@ -21,7 +21,9 @@
 | Uber mis de côté (Jared a déjà raconté l'histoire business) | **Uber en premier**, sous l'angle ingénierie | Jared raconte comment Uber a tué les taxis. Toi, tu racontes comment la carte en direct fonctionne : ce n'est pas le même sujet. |
 | Défi « 30 jours avec une IA locale » | Série **« Claude ou mon PC ? »** : un épisode par modèle, avec la révélation au début | Un mois sur un seul modèle, c'est trop long quand un nouveau modèle sort toutes les deux semaines. |
 | Uber en premier le 26 oct. | **ArtCraft le 26 oct., Uber le 9 nov.** (décidé le 12/10) | ArtCraft est un sujet d'actu qui perd de la valeur chaque semaine, alors qu'Uber ne périme pas. |
-| Windows 10 en vidéo longue le 26 oct. | **Un Short cette semaine** | La date du 13 octobre est passée. Le sujet ne vaut plus une vidéo de 2 semaines de travail. |
+| Windows 10 en vidéo longue le 26 oct. | **Un Short cette semaine** (pas sorti, archivé le 19/10) | La date du 13 octobre est passée. Le sujet ne vaut plus une vidéo de 2 semaines de travail. |
+| ArtCraft le 26 oct. | **ArtCraft le 19 oct.** (terminé en avance) ; les autres dates ne bougent pas | La semaine gagnée accueille les essais Qwen et les tests de VRAM, qui surchargeaient début novembre. |
+| 1 Short par semaine (16 jusqu'au 31 janv.) | **1 Short par vidéo longue** (7), en test jusqu'au J60 (décidé le 19/10) | Sur un an, les Shorts t'ont rapporté 2 abonnés, contre 772 pour les vidéos longues. Chez Thibaut Dcode, ils font 2,5 % des vues. Détail dans `calendrier.md`, « Plan des Shorts ». |
 | Pixel gardé pour 5 K abonnés | **Pixel le 21 décembre**, recadré sur l'astuce cachée | C'est ta passion, et l'angle « astuce de génie » marche même sur une toute petite chaîne (Andy Geers, ci-dessous). |
 | Cible : 20-40 ans | Cible : **18-30 ans** | 94 % de ton audience actuelle a moins de 35 ans. |
 
@@ -161,7 +163,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
   2. *Le dev qui a mis ChatGPT dans ton PC* : l'histoire de llama.cpp.
   3. *Tu n'as jamais possédé tes jeux (et Sony vient de le prouver)*.
 
-### Équilibre des piliers (7 vidéos du 26 oct. au 18 janv.)
+### Équilibre des piliers (7 vidéos du 19 oct. au 18 janv.)
 
 | Pilier | Type | Vidéos | Part |
 |---|---|---|---|
@@ -201,12 +203,12 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 ## 5. Rythme de publication
 
-**Recommandé : 2 vidéos longues par mois (une tous les 15 jours) + 1 Short par semaine.**
+**Recommandé : 2 vidéos longues par mois (une tous les 15 jours) + 1 Short par vidéo longue** (en test jusqu'au 7 déc.).
 
 - **Taille de la chaîne et étude vidIQ (5,08 M de chaînes)** : 12 vidéos et plus par mois font grandir les vues 8 fois plus vite, mais **la régularité compte plus que le volume**. À 2 par mois, ton levier est la **régularité absolue**.
 - **Montée en rythme** : après 6 vidéos, si ton circuit de production est rodé, passe à 3 par mois. Les épisodes « Claude ou mon PC ? » sont les plus rapides à produire, ce sont eux qui serviront à accélérer.
 - **Créneau** : le lundi à 20 h (heure de Paris). On le réévaluera dans 60 jours avec Studio.
-- **Shorts** : 1 par semaine, découpé dans la vidéo longue (l'astuce de génie en 45 secondes). Avec un public de 18-24 ans, les Shorts sont ta porte d'entrée. **Cette semaine** : un Short Windows 10 (« depuis le 13 octobre, Microsoft considère ton PC comme mort »).
+- **Shorts** : 1 par vidéo longue, découpé dans ses animations (l'astuce de génie en 45 secondes, 2 h de travail maximum). Décision du 19/10 : sur ta chaîne, chez Thibaut Dcode et chez Kai, la croissance vient de la vidéo longue. Chiffres et règle du verdict au J60 : `calendrier.md`, « Plan des Shorts ».
 - **Exigence minimale** : plus de 8 minutes (pubs en milieu de vidéo possibles), chapitres, hook dans les 5 premières secondes.
 
 ### Cycle de production sur 2 semaines
@@ -218,7 +220,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | J4-J8 | Montage : schémas animés, captures | `coach-montage-video`, Remotion |
 | J9 | Miniature, titre, description, chapitres | `/youtube thumbnail`, `/youtube metadata` |
 | J10 (lundi) | Publication, puis réponses aux commentaires pendant 2 heures | |
-| J11-J14 | 2 Shorts + recherche du sujet suivant | `/youtube repurpose` |
+| J11-J14 | 1 Short (2 h maximum) + recherche du sujet suivant | `/youtube repurpose` |
 
 **En parallèle** : lance tes essais Qwen sur la 5080 début novembre, pour une publication le 23 novembre.
 
@@ -229,7 +231,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 ### Jour 30 (~9 novembre)
 | Objectif | Cible | Action |
 |---|---|---|
-| Vidéos publiées | 2 longues + 4 Shorts | ArtCraft (26/10), Uber (09/11), Short Windows 10 cette semaine |
+| Vidéos publiées | 2 longues + 2 Shorts | ArtCraft (19/10), Uber (09/11) |
 | Vues moyennes par nouvelle vidéo (à 28 j) | 1 500 | Hook sur un geste banal + miniature avec un chiffre impossible |
 | CTR moyen | 6 % | Référence divertissement/commentaire ; 7-10 % = bon |
 | Part des vues venant de France | 40 % | Les sujets universels attirent aussi ton public africain, c'est normal |
@@ -238,7 +240,8 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 ### Jour 60 (~7 décembre)
 | Objectif | Cible | Action |
 |---|---|---|
-| Vidéos au total | 4 longues + 8 Shorts | + Claude ou mon PC ? (23/11), Waze (07/12) |
+| Vidéos au total | 4 longues + 3 Shorts | + Claude ou mon PC ? (23/11), Waze (07/12) |
+| Verdict des Shorts | Autant d'abonnés par heure de travail qu'une vidéo longue | Sinon, on arrête les Shorts (sauf l'actu). Voir `calendrier.md`, « Plan des Shorts » |
 | Abonnés | +150 (2 750) | Question en fin de vidéo : « Quelle appli je décortique ensuite ? » |
 | Meilleure vidéo | 5 000 vues | Refaire le format qui marche le mieux |
 | Rétention à 30 s | 55 % | Référence commentaire : 55-65 % |
@@ -247,7 +250,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 ### Jour 90 (~18 janvier)
 | Objectif | Cible | Action |
 |---|---|---|
-| Vidéos au total | 7 longues + 14 Shorts | Pixel (21/12), coût de Claude en local (04/01), WhatsApp (18/01) |
+| Vidéos au total | 7 longues + 6 Shorts (si le test du J60 les garde) | Pixel (21/12), coût de Claude en local (04/01), WhatsApp (18/01) |
 | Abonnés | +400 (3 000) | |
 | Vues mensuelles | 8 000 (×4) | Accueil + suggestions |
 | Part des vues venant de France | 50 % | |
@@ -375,7 +378,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | En hausse : ArtCraft est sorti le 7 octobre |
 | **Durée** | ~11 min (récit + un seul test : PhotoCraft) |
 | **Niveau de RPM** | Élevé |
-| **Urgence** | **Actu : le 26 octobre**, avant que la vague française arrive |
+| **Urgence** | **Actu : sortie le 19 octobre** (prévue le 26, terminée en avance), avant que la vague française arrive |
 | **Score** | **35/40** (demande 10 · clic 9 · production 8 · niche 8), rescorée le 12/10 : l'ancienne idée générique « repo viral » faisait 33/40 |
 
 **Hook** : « Adobe lui a fait payer sa résiliation. Alors il a recréé Adobe. Sept logiciels, avec une IA. J'ai testé son Photoshop. » (l'histoire de la résiliation est à confirmer)
@@ -499,10 +502,10 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 ### Mises de côté
 - **30 jours avec une IA locale** : trop lent face au rythme des sorties. Remplacé par la série « Claude ou mon PC ? ».
-- **Windows 10** : un Short cette semaine, plus une vidéo longue.
+- **Windows 10** : ni vidéo longue ni Short (le Short n'est pas sorti ; archivé le 19/10).
 - **Streaming +71 %, Plex, maison pilotée par IA, l'IA dans ta carte graphique** : en réserve. Ils resservent si un créneau se libère ou à 10 K abonnés.
 - **Vieux PC → console, NAS** : pas ta passion. Des Shorts au besoin.
-- **App Mac (vorssaint-utils)** : devient le [Short du 22 octobre](projets/short-vorssaint/fiche.md). S'il marche, une vidéo longue sur l'outil reviendra dans les idées.
+- **App Mac (vorssaint-utils)** : Short prévu le 22 octobre, [archivé le 19/10](archive/short-vorssaint/fiche.md) : ce créneau revient au Short d'ArtCraft. Il peut revenir si les Shorts passent le test du J60.
 
 ---
 
@@ -515,7 +518,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | 3 | Comment Waze sait qu'il y a un bouchon avant que tu le voies | Accueil | 35/40 | 7 déc |
 | 4 | Comment 50 ingénieurs faisaient tourner WhatsApp pour 900 millions de personnes | Accueil | 35/40 | 18 janv |
 | 5 | Comment Google sait en une milliseconde que ton pseudo est déjà pris | Accueil + recherche | 33/40 | Réserve (février) |
-| 6 | Il a recréé 7 logiciels Adobe avec une IA. J'ai testé son Photoshop. (idée 5, rescorée) | Recherche + accueil | 35/40 | **26 oct** |
+| 6 | Il a recréé 7 logiciels Adobe avec une IA. J'ai testé son Photoshop. (idée 5, rescorée) | Recherche + accueil | 35/40 | **19 oct** |
 | 7 | ~~IA en local en 2027 : ce qu'il faut VRAIMENT pour la faire tourner~~ | — | — | Fusionnée dans le n° 1 |
 | 8 | Tu n'as jamais possédé tes jeux (et Sony vient de le prouver) | Accueil | 31/40 | Réserve |
 | 9 | Le dev qui a mis ChatGPT dans ton PC (llama.cpp) | Accueil | 29/40 | Réserve |
@@ -524,9 +527,10 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 ### Ordre de production
 
-**À faire cette semaine** :
-- recherche et tests ArtCraft, script le week-end (publication le 26 octobre) ;
-- Short Windows 10.
+**À faire cette semaine (19-25 oct.)** :
+- ArtCraft sort le lundi 19 : répondre aux commentaires pendant les 2 premières heures ;
+- Short ArtCraft le jeudi 22 (2 h maximum) ;
+- recherche Uber, avancée d'une semaine.
 
 **Ensuite** : idées 2, 1, 6, 10, 11 et 3, dans l'ordre du calendrier.
 **En réserve** : idées 4, 8 et 9.
@@ -535,7 +539,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 | Date | Vidéo | Pilier | Pourquoi ce créneau |
 |---|---|---|---|
-| Lun 26 oct | ArtCraft : il a recréé 7 logiciels Adobe avec une IA | IA (Hero) | Sujet d'actu, presque rien en français ; chaque semaine compte |
+| Lun 19 oct | ArtCraft : il a recréé 7 logiciels Adobe avec une IA | IA (Hero) | Sujet d'actu, presque rien en français ; terminé une semaine en avance |
 | Lun 9 nov | Le génie caché derrière la carte d'Uber | Génie (Hub) | Le format le mieux prouvé ; 2 semaines de plus pour les animations |
 | Lun 23 nov | Claude ou mon PC ? #1 : 16 Go de VRAM suffisent-ils ? | IA (Hub + Help) | Alternance ; 4 jours avant le Black Friday |
 | Lun 7 déc | Comment Waze sait qu'il y a un bouchon | Génie (Hub) | Preuve française (1,09 M vues) ; animations de carte réutilisées |
@@ -543,4 +547,4 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | Lun 4 janv | Combien coûte Claude en local ? | IA (Hub) | Alternance ; le format phare de Kai, absent en français |
 | Lun 18 janv | WhatsApp et ses 50 ingénieurs | Génie (Hub) | À bonne distance des vidéos WhatsApp d'octobre |
 
-**Le détail semaine par semaine (production + 16 Shorts jusqu'au 31 janvier) est dans `calendrier.md`.**
+**Le détail semaine par semaine (production + 7 Shorts jusqu'au 31 janvier) est dans `calendrier.md`.**
