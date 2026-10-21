@@ -15,7 +15,7 @@
     background-size:64px 64px; background-position:-14px -26px;
     -webkit-mask-image:radial-gradient(ellipse 70% 80% at 30% 50%, #000 20%, transparent 75%); }
   .glow { position:absolute; left:-130px; top:-70px; width:870px; height:870px; border-radius:50%;
-    background:radial-gradient(circle, color-mix(in srgb, var(--accent) 28%, transparent) 0%, transparent 60%); }
+    background:radial-gradient(circle, color-mix(in srgb, var(--accent) var(--glow, 28%), transparent) 0%, transparent 60%); }
   .t { position:absolute; white-space:nowrap; font-weight:800; letter-spacing:-.04em; line-height:.92; }
   .ghost { color:var(--mid); font-weight:700; letter-spacing:-.02em; }
   .r { color:var(--red); } .m { color:var(--mint); }
@@ -44,18 +44,20 @@
   const stage = document.getElementById('stage');
   const ico = (k, fill = '#fff') => `<svg viewBox="0 0 24 24"><path d="${LOGO[k]}" fill="${fill}"/></svg>`;
   const app = (k, x, y, size, bg) => `<div class="app" style="left:${x}px;top:${y}px;width:${size}px;height:${size}px;background:${bg}">${ico(k)}</div>`;
-  // Place le halo centré sur (x, y), dans la couleur d'accent donnée
-  const halo = (x, y, color) => {
+  // Place le halo centré sur (x, y), dans la couleur d'accent donnée (k : intensité, 28 % par défaut ; d : diamètre, 870 px)
+  const halo = (x, y, color, k, d = 870) => {
     const g = document.querySelector('.glow');
-    g.style.left = x - 435 + 'px'; g.style.top = y - 435 + 'px';
+    g.style.width = g.style.height = d + 'px';
+    g.style.left = x - d / 2 + 'px'; g.style.top = y - d / 2 + 'px';
     document.body.style.setProperty('--accent', color);
+    if (k) document.body.style.setProperty('--glow', k);
   };
 
   // Voiture vue de dessus (miniatures Uber), centrée sur (x, y)
   const car = (x, y, rot, { ghost = false, s = 1 } = {}) => `
     <g transform="translate(${x} ${y}) rotate(${rot}) scale(${s}) translate(-33 -60)">
-      <g ${ghost ? 'opacity=".28"' : ''} filter="url(#shadow)"><rect x="2" y="0" width="62" height="120" rx="26" fill="#f5f5f7"/>
-        <path d="M10 32 Q33 22 56 32 L51 52 Q33 47 15 52 Z" fill="#1c1c1e"/><rect x="15" y="55" width="36" height="32" rx="7" fill="#d1d1d6"/>
+      <g ${ghost ? 'opacity=".5"' : ''} filter="url(#shadow)"><rect x="2" y="0" width="62" height="120" rx="26" fill="${ghost ? '#ff6b61' : '#f5f5f7'}"/>
+        <path d="M10 32 Q33 22 56 32 L51 52 Q33 47 15 52 Z" fill="#1c1c1e"/><rect x="15" y="55" width="36" height="32" rx="7" fill="${ghost ? '#ff9a93' : '#d1d1d6'}"/>
         <path d="M15 90 Q33 95 51 90 L54 106 Q33 111 12 106 Z" fill="#1c1c1e"/></g>
       ${ghost ? `<rect x="-10" y="-12" width="86" height="144" rx="34" fill="none" stroke="#ff453a" stroke-width="9" stroke-dasharray="18 12" filter="url(#redglow)"/>` : ''}
     </g>`;
@@ -74,12 +76,15 @@
       <div class="screen"><svg viewBox="0 0 608 1268">${svg}</svg></div><div class="island"></div></div>`;
   const tile = (inner, bg) => `<div class="app" style="left:427px;top:43px;width:167px;height:167px;background:${bg};transform:rotate(6deg)">${inner}</div>`;
   const me = (x, y) => `<circle cx="${x}" cy="${y}" r="64" fill="#0a84ff" opacity=".18"/><circle cx="${x}" cy="${y}" r="18" fill="#0a84ff" stroke="#fff" stroke-width="6"/>`;
+  // Uber (corrigée le 21/10) : voiture fantôme agrandie et teintée de rouge comme dans la vidéo (ch. 5), vrai logo,
+  // halo plus fort et plus large (il touche les bords gauche, haut et bas) et grille jusqu'aux bords, pour que la tuile se détache du mode sombre
   const uber = () => {
-    halo(240, 360, '#ff453a');
-    return phone(city(car(154, 450, 35) + car(184, 840, 110) + car(474, 870, -20) + car(454, 490, -60, { ghost: true, s: 1.3 }) + me(304, 640))) +
-      tile('<span style="font:500 61px Inter;letter-spacing:-.03em">Uber</span>', '#000;border:2px solid #48484a') +
+    halo(380, 380, '#ff453a', '44%', 1500);
+    document.querySelector('.grid').style.webkitMaskImage = 'radial-gradient(ellipse 100% 120% at 35% 50%, #000 35%, rgba(0,0,0,.5) 100%)';
+    return phone(city(car(150, 470, 35, { s: .9 }) + car(184, 860, 110, { s: .9 }) + car(480, 890, -20, { s: .9 }) + car(430, 500, -60, { ghost: true, s: 1.9 }) + me(304, 680))) +
+      tile(`<svg viewBox="0 0 24 24" style="width:80%;height:80%"><path d="${LOGO.uber}" fill="#fff"/></svg>`, '#000;border:2px solid #48484a') +
       `<svg class="arrow" viewBox="0 0 1920 1080"><g fill="none" stroke="#f5f5f7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M970 470 Q 840 440 740 550"/><path d="M792 545 L740 550 L750 500"/></g></svg>`;
+        <path d="M965 470 Q 850 440 765 560"/><path d="M817 542 L765 560 L765 505"/></g></svg>`;
   };
 
   const V = {

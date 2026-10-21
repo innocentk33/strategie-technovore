@@ -1,522 +1,803 @@
-# Storyboard : Uber
+# Storyboard : Le génie caché derrière la carte en temps réel d'Uber
 
-> **Voix off montée** : [`voix-off-montee.wav`](voix-off-montee.wav). Elle dure **9 min 40 s** (48 kHz, 24 bits, mono). Elle est masterisée avec la chaîne de la recette Premium noir : **-16 LUFS, crête à -2 dBFS**. Elle est tirée de `uber_voix_off.m4a` (25 min 01 s de prises) et compte 119 morceaux.
-> Script d'origine : [`script.md`](script.md). Téléprompteur : [`teleprompteur.md`](teleprompteur.md). Fiche : [`fiche.md`](fiche.md).
->
-> Les timecodes (TC) de ce document sont ceux de `voix-off-montee.wav`, posé à 0:00. En HyperFrames, `data-start` = le TC en secondes. Si tu insères un mème avec son propre son, la suite se décale d'autant (recette, brique « pub »).
->
-> **Durée finale estimée** : 9:40 de voix, environ 15 s de pauses et de mèmes sonores, puis 20 s d'écran de fin, soit **environ 10 min 15 s**.
+> Montage HyperFrames, recette « Premium noir » 16:9. **Durée : 9:59,6** (599,58 s), 1920 × 1080. Les temps de ce document sont ceux de la vidéo finale.
+> La page visuelle (une image par plan) est `boards/storyboard.html`, dans l'onglet Storyboard.
 
-## Comment la voix off a été montée
+## 1. La vidéo
 
-- **Les prises** : 25 min 01 s de rushes deviennent 9 min 40 s de voix. Pour chaque phrase, je garde la dernière prise complète, sauf quand une prise plus ancienne est meilleure.
-- **Ce qui est retiré** :
-  - les « Yeah », « Okay », « What », « Uh » entre les prises ;
-  - les faux départs : « Sur ces trajets… », « C'est comme chercher… », « L'astuce… », « Ta case à quatre carrés voisines… », « Donc la case d'à côté, ça peut vouloir… », « Ajoutez un anneau autour. » ;
-  - les doublons :
-    - « Non, pas les nouilles, mais excusez-moi… » (trois fois) ;
-    - « Officiellement, Uber dé… » ;
-    - « Sur les forums » (trois fois) ;
-    - « Ce décalage, tu sais maintenant d'où il peut venir » (cinq fois) ;
-    - « En 2018, des ingénieurs ont… » ;
-    - « en plein, en plein » ;
-    - « Le téléphone… le téléphone » ;
-    - « avec le temps… avec le temps ».
-- **La redite du début** : « Là, on va se mettre dans la peau de quelqu'un » faisait doublon avec « On se met dans la peau d'un chauffeur » quelques secondes plus loin. Je l'ai coupée.
-- **Les blancs** :
-  - dans une phrase, tout silence de plus de 0,45 s est ramené à 0,3 s ;
-  - entre deux phrases d'une même idée, je laisse 0,15 à 0,4 s ;
-  - en fin de partie, 0,6 à 1 s ;
-  - les respirations sont gardées.
-- **Les pauses longues sont à poser au montage**, comme tu l'as demandé. Elles sont listées juste en dessous.
-
-### Tes improvisations, gardées
-
-- « C'est comme chercher **Mewtwo en 2016** dans Pokémon Go » (1:29.0) : elle remplace le stade du script, et je la garde. Voir la note dans les erreurs.
-- « Sept cases, ça suffit pour trouver **notre dresseur rare ou notre Pokémon shiny** » (2:38.4) : la suite de la même vanne.
-- « Mais **excusez-moi pour mon accent anglais** » (4:36.6).
-- « Le serveur RAMEN, **bien sûr pas celui d'Ichiraku** » (5:06.4).
-- « C'est quand qu'on arrive ? » ×3 (3:44.5) : la 2e prise. Elle sonne plus naturelle que « On est arrivés ? ».
-- « Alors **en vrai**, mon pote, il avait raison » (9:17.5).
-
-### Pauses à poser au montage 🟫
-
-| TC | Où | Proposition |
-|---|---|---|
-| 0:25.1 | après « existent vraiment ? » | 1 s, musique coupée (0,8 s sont déjà dans la voix) |
-| 1:33.0 | après « Pokémon Go » | le temps du mème (2 s) |
-| 1:48.4 | après « Tu vois le défaut ? » | **2 s de devinette**, musique coupée |
-| 3:31.6 | après « ne passera jamais » | 0,5 s pour la voiture à bouée |
-| 3:49.6 | après le 3e « C'est quand qu'on arrive ? » | le temps du mème de l'âne (2 s, avec son son) |
-| 4:35.2 | entre « un RAMEN. » et « Non, pas les nouilles » | **0,6 s** pour le slurp et le bol |
-| 5:26.6 | après « …elle était juste. » | **1 s de silence total**, c'est la relance (0,9 s sont déjà dans la voix) |
-| 5:52.1 | après « 180 à l'heure » | 0,8 s pour le carton « C'est la famille. » |
-| 9:33.9 | après « c'est des génies » | 0,8 s avant le mot de fin |
-
-## Erreurs relevées dans l'enregistrement
-
-| TC | Passage enregistré | Problème | Ce que j'ai fait |
-|---|---|---|---|
-| (hook) | « Une grille qui peut descendre jusqu'à **500 milliards** de cases » | Le niveau le plus fin de H3 compte **569 707 381 193 162** cellules, soit 570 000 milliards : ton chiffre est mille fois trop petit | **Coupé**. Le hook enchaîne sans trou, et le compteur exact s'affiche sur le globe (#2). Ligne à réenregistrer : voir plus bas |
-| (3:06) | « Il en faut près de **570 milliards** pour couvrir la Terre » | Même erreur : c'est 570 000 milliards | **Coupé**. Le compteur exact s'affiche sans voix (#25) |
-| (5:18) | « En 2020, ça tenait plus d'un million et demi de **requêtes** ouvertes » | La source parle de plus de 1,5 M de **connexions** ouvertes en même temps, pas de requêtes | **Coupé**. Le chiffre juste est affiché à l'écran (#38) |
-| (0:59) | « **Toutes les secondes**, son téléphone envoie sa position » | Uber ne publie aucune fréquence, d'où le « toutes les quelques secondes » du script | **Coupé** proprement. La phrase devient « On se met dans la peau d'un chauffeur de Paris : son téléphone envoie sa position… » |
-| 1:29.0 | « Chercher Mewtwo **en 2016** dans Pokémon Go » | Mewtwo n'est arrivé dans le jeu qu'en **août 2017** ([Bulbanews](https://bulbanews.bulbagarden.net/wiki/Mewtwo_to_be_available_in_Pok%C3%A9mon_GO_via_Exclusive_Raid_Battles)) | **Gardé** : c'est une blague, et elle marche encore mieux. Le carton « Spoiler : Mewtwo n'est arrivé qu'en août 2017 » en fait une double vanne (#14) |
-| 5:39.9 | « Si l'appli faisait glisser les voitures **d'une position à l'autre** » | Il manque « fausse ». Or, à 7:31, glisser d'une position à l'autre, c'est justement **la solution**. Sans « fausse », les deux passages se contredisent | **Gardé**, et **corrigé à l'écran** : les deux points portent l'étiquette « position fausse » (#41). Réenregistrement possible, voir plus bas |
-| 5:23.4 | « Je fais comme si **cette méthode**, elle était juste » | Le script disait « comme si **elle** [la position] était juste ». Avec « cette méthode », le « elle » de la phrase suivante (« elle peut être fausse de 50 mètres ») devient flou | Gardé. L'écran lève le doute : « position GPS » sur le point, puis « juste ? » (#39) |
-| 8:09.3 | « Un **économisateur** d'écran » | Le mot est « économiseur ». Les deux modèles de transcription entendent « économisateur » | Gardé. La citation affichée en jaune écrit « économiseur d'écran » (#53) |
-| 9:34.7 | « Si **vous** avez aimé cette vidéo, n'hésitez pas à **vous** abonner… » | Tout le reste de la vidéo tutoie | Gardé. Réenregistrement possible en « tu » |
-| 9:17.5 | « Je l'ai fait moi-même dans mes applications » | « Flutter » est tombé. Ce n'est pas une erreur | L'écran le remet : le logo Flutter sur la maquette du #8, reprise au #59 |
-
-**Pas enregistré** (le storyboard compense) :
-- les trois lignes de Python sur H3 : le passage pratique saute, mais tu peux mettre le snippet en commentaire épinglé ;
-- « Laquelle tu veux que j'ouvre ensuite ? Dis-le en commentaire » : à **épingler en commentaire** ;
-- le renvoi vers la vidéo ArtCraft : c'est l'écran de fin qui le fait (#60) ;
-- le prénom **Karim** : tu dis « le chauffeur » et « notre chauffeur ». À l'écran, on écrit donc « chauffeur », pas « Karim ».
-
-### 🎙️ À réenregistrer si tu veux (5 min, même micro, même distance)
-
-1. « Une grille qui peut descendre jusqu'à cinq cent soixante-dix mille milliards de cases. » À insérer à **0:07.1**, après « en hexagones ». C'est la seule qui manque vraiment au hook.
-2. « Si l'appli faisait glisser la voiture d'une position fausse à l'autre, » À mettre à la place du début de #41 (5:39.9 – 5:42.6).
-3. *(facultatif)* « Mieux vaudrait voir ça comme un économiseur d'écran. »
-4. *(facultatif)* « Si t'as aimé cette vidéo, abonne-toi, laisse un like et un commentaire. Allez, salut ! »
-5. *(facultatif)* « Laquelle tu veux que j'ouvre ensuite ? Dis-le en commentaire. »
-
-Envoie-les-moi : je les insère et je recale les TC.
-
-### 🟨 Collures à vérifier à l'oreille
-
-Ces collures sont validées par retranscription, pas par écoute :
-- 1:03.6 : « …chauffeur de Paris : son téléphone » (« toutes les secondes » est retiré juste avant) ;
-- 6:11.3 : « En 2018 » (le premier essai est coupé) ;
-- 7:23.4 : « plus loin… en plein dans les pattes » (coupé au milieu d'un bégaiement) ;
-- 4:50.5 : « Fireball, c'est le **gérant** » (Whisper entend « géant ») ;
-- 8:05.7 : « Le support d'Uber **lui répond que** » (dit très vite).
-
-## Rythme et rétention
-
-| Repère | TC | Part de la vidéo |
-|---|---|---|
-| Fin du hook | 0:25 | 4 % |
-| Bascule des carrés aux hexagones | 2:05 | 22 % |
-| Appel à l'abonnement | 2:30 | 26 % |
-| Gag du RAMEN | 4:35 | 47 % |
-| **Relance (« …elle était juste »)** | 5:26 | 56 % |
-| Fast and Furious | 5:40 | 59 % |
-| Voitures fantômes | 7:48 | 81 % |
-| Verdict sur le pote | 9:17 | 96 % |
-| Fin de la voix | 9:40 | 100 % |
-
-Le passage le plus fragile va de **5:52 à 7:06** : une minute de GPS, puis Kalman. La parade, c'est la scène 3D de la rue filmée sous trois angles (ANI-08) et un changement de plan toutes les 4 à 6 s. Si ça traîne encore, coupe la parenthèse Kalman (#47, 16,7 s).
-
-
-## Fiche d'identité
-
-| Axe | Position |
+| Champ | Détail |
 |---|---|
-| Cible | Curieux de tech de 18 à 30 ans, débutants à intermédiaires, avec quelques devs |
-| But | Théorique : comprendre ce qui se cache derrière une carte qu'on regarde tous les jours |
-| Ambiance | Éducatif d'abord, une keynote calme, ponctuée de mèmes courts qui portent ton humour |
-| Complexité | Plutôt élevée (H3, polling contre push, GPS en ville, filtre à particules). Ce sont les schémas qui portent cette complexité : **une idée par plan** |
-| Outil | HyperFrames, recette « Premium noir » en 16:9 ([`RECETTE-premium.md`](/Users/innocent/.hyperframes-studio/Short%20premium/assets/recette/RECETTE-premium.md)) |
+| Pilier | Le génie derrière l'app |
+| Format | Vidéo longue YouTube, 9:59 |
+| Mot-clé principal | comment fonctionne uber |
+| Type d'accroche | Curiosité : « Est-ce que toutes ces voitures existent vraiment ? » |
+| Promesse | Suivre une seule position GPS, du téléphone d'un chauffeur parisien jusqu'au tien |
+| Héros | Le point blanc : la position du chauffeur |
+| Structure | Accroche → un pote, un article → Trouver → Envoyer → Afficher → les voitures fantômes → le verdict |
 
-## Le récit (voyage du héros)
+### Titres possibles
 
-Le héros, c'est **la position du chauffeur** : un petit point blanc qu'on suit d'un bout à l'autre, du téléphone du chauffeur jusqu'au tien. Toi, tu joues le guide.
+1. **Le génie caché derrière la carte en temps réel d'Uber** (recommandé : recherche + curiosité)
+2. Uber a dû découper la planète en hexagones
+3. Comment fonctionne la carte en temps réel d'Uber ?
 
-| Étape | Passage | Statut |
+### Miniature
+
+Retenue le 21/10 : [`noir-01.png`](../../ressources/miniatures/rendus/noir-01.png) (« elle existe ? »), en test A/B contre [`noir-01b.png`](../../ressources/miniatures/rendus/noir-01b.png). L'idée « COMMENT ?! » est abandonnée (voir la [fiche](fiche.md)).
+
+## 2. Description YouTube (à copier)
+
+> **Version finale : [`upload.md`](upload.md)** (21/10), avec le mot-clé en 1re phrase, le lien des résultats d'Uber et les hashtags. Ce bloc reste le premier jet.
+
+```text
+Ouvre Uber : tu vois ces petites voitures qui glissent autour de toi ? Pour qu'elles arrivent sur ta carte, il a fallu découper la planète en hexagones, réinventer la façon dont ton téléphone parle au serveur, et corriger un GPS qui se trompe de 50 mètres en ville.
+
+Dans cette vidéo, on suit une seule position GPS, du téléphone d'un chauffeur parisien jusqu'au tien : la grille hexagonale H3, le passage du polling au push (RAMEN), l'ombre des immeubles, le filtre à particules… et l'enquête de 2015 sur les « voitures fantômes ».
+
+Quelle appli j'ouvre ensuite ? Dis-le en commentaire.
+
+⏱️ Chapitres
+0:00 Intro
+0:25 Un pote, un article
+1:11 Trouver les chauffeurs autour de toi
+1:48 Carrés contre hexagones
+2:14 H3, la grille d'Uber
+2:47 Le prix fixé hexagone par hexagone
+3:00 Les 16 niveaux de H3
+3:12 Les 12 pentagones cachés
+3:44 Envoyer la position en direct
+3:58 Le polling
+4:32 Le push
+4:43 RAMEN : Fireball, l'API gateway et le livreur
+5:36 Afficher la voiture au bon endroit
+6:03 Pourquoi le GPS se trompe en ville
+6:28 L'ombre des immeubles
+6:47 Le filtre à particules
+6:59 Pour les devs : pourquoi pas Kalman
+7:31 Glisser et deviner
+7:53 Les voitures fantômes
+9:02 Le verdict
+
+📚 Sources
+• Uber Engineering, « Uber's Real-Time Push Platform » (18 déc. 2020) : https://www.uber.com/blog/real-time-push-platform/
+• Uber Engineering, « H3: Uber's Hexagonal Hierarchical Spatial Index » (27 juin 2018) : https://www.uber.com/blog/h3/
+• Uber Engineering, « Rethinking GPS: Engineering Next-Gen Location at Uber » (19 avr. 2018) : https://www.uber.com/blog/rethinking-gps/
+• H3, dépôt open source : https://github.com/uber/h3 · documentation et table des résolutions : https://h3geo.org/docs/core-library/restable/
+• A. Rosenblat et L. Stark, « Uber's Phantom Cabs », Motherboard / VICE (27 juil. 2015) : https://www.vice.com/en/article/ubers-phantom-cabs/
+• B. Snyder, « Uber denies there are 'phantom' cars in its app », Fortune (30 juil. 2015) : https://fortune.com/2015/07/30/uber-phantom-cars/
+• Uber, résultats du 2e trimestre 2026 (3 867 M de courses et livraisons) : [lien à ajouter]
+• Mewtwo dans Pokémon GO (2017), Bulbanews : https://bulbanews.bulbagarden.net/wiki/Mewtwo_to_be_available_in_Pok%C3%A9mon_GO_via_Exclusive_Raid_Battles
+
+🗺️ Cartes
+Données cartographiques © les contributeurs d'OpenStreetMap (licence ODbL) · Natural Earth (domaine public) · cellules H3 générées avec la bibliothèque H3 (Apache 2.0). La carte d'Uber est recréée : aucune vraie interface de l'application n'est montrée.
+
+🎵 Musiques
+• « Future Minimal », kissan4 (Pixabay)
+• « Dark Ambient for Crime and Tension », megalix (Pixabay)
+• Track: MokkaMusic - Singularity https://youtu.be/FRACg2wCY9M · Music provided by MokkaMusic Youtube channel and https://inaudio.org
+• « INTRIGUE », Savfk (CC BY 4.0) · https://www.youtube.com/c/SavfkMusic · promoted by Epic Music Waves
+
+🔊 Bruitages
+• « Sonar ping (sine wave) » par marb7e, CC BY 4.0 : https://freesound.org/people/marb7e/sounds/620321
+• « E-type Jaguar, car engine, rev-twice » par Dan_AudioFile, CC BY 4.0 : https://freesound.org/people/Dan_AudioFile/sounds/614695
+• Autres bruitages : CC0 (Openverse) et banque personnelle
+
+🖼️ Images et extraits
+• Carte portulan de l'Atlantique, Library of Congress (domaine public)
+• Bol de ramen : « Shoyu ramen - Goemon Ramen Bar », Wikimedia Commons (CC0)
+• Extraits courts cités et commentés : Pokémon GO à Central Park (2016), Shrek 2 (DreamWorks), Senhora do Destino (« Math Lady », Globo), Boruto (Crunchyroll), Monster Hunter Wilds (Capcom), le sorcier de Clash Royale (Supercell), le mème « Galaxy brain »
+```
+
+### Chapitres courts (si tu préfères n'en garder que 7)
+
+```text
+0:00 Intro
+0:25 Un pote, un article
+1:11 Trouver les chauffeurs autour de toi
+3:44 Envoyer la position en direct
+5:36 Afficher la voiture au bon endroit
+7:53 Les voitures fantômes
+9:02 Le verdict
+```
+
+Chaque chapitre principal a son écran dédié dans la vidéo, aux mêmes temps.
+
+## 3. Commentaire épinglé
+
+```text
+Quelle appli tu veux que j'ouvre ensuite ? Dis-le en commentaire 👇
+
+Pour les devs, la recherche de la vidéo en 3 lignes (H3 v4, Python) :
+import h3
+cell = h3.latlng_to_cell(48.8443, 2.3744, 9)  # la gare de Lyon
+voisins = h3.grid_disk(cell, 2)                # 19 cases (kRing → grid_disk dans H3 v4)
+```
+
+## 4. Mots-clés (tags)
+
+comment fonctionne uber, carte uber temps réel, uber H3, grille hexagonale, hexagones uber, polling vs push, RAMEN uber, uber fireball, GPS en ville, urban canyon, filtre à particules, dead reckoning, voitures fantômes uber, uber engineering, system design, architecture temps réel, géospatial
+
+## 5. Shorts à extraire
+
+> Plus de Shorts depuis le 21/10 (stratégie v4). Ces passages restent une liste des moments forts.
+
+| Short | Passage de la vidéo | Idée |
 |---|---|---|
-| Statu quo | « Ouvre Uber. Tu vois ces petites voitures ? » | ✅ présente |
-| Appel | Ton pote et l'article sur le polling ; « est-ce que toutes ces voitures existent vraiment ? » | ✅ présente (deux boucles ouvertes) |
-| Mentor | Les ingénieurs d'Uber, à travers leur blog | ✅ présente |
-| Épreuves | Trouver (hexagones), envoyer (polling, puis RAMEN), afficher (GPS) | ✅ présente : c'est le cœur de la vidéo |
-| Crise | « Je fais comme si elle était juste », puis « 50 mètres » | ✅ présente, à 55 % de la vidéo |
-| Trésor | L'ombre des immeubles, le filtre à particules, la voiture qu'on fait glisser | ✅ présente |
-| Retour | Les voitures fantômes de 2015, expliquées avec ce qu'on vient d'apprendre | ✅ présente |
-| Résolution | Le récap, puis « mon pote avait raison » | ✅ présente |
+| « Uber a découpé la planète en hexagones » | 0:00 à 0:07 puis 2:08 à 2:14 | Le dézoom jusqu'au globe, puis la bascule de la grille |
+| « Pourquoi des hexagones et pas des carrés ? » | 1:48 à 2:14 | La devinette, 1,41, Math Lady, les 6 voisins |
+| « La voiture sur ta carte n'est pas là où tu crois » | 5:36 à 6:03 | 50 m d'erreur, Fast and Furious, « C'est la famille. » |
+| (bonus) « Le serveur qui pète un câble » | 3:46 à 4:09 | L'âne de Shrek, puis la dispute du polling jusqu'au « NON ! » |
 
-## Direction artistique : mes propositions au monteur
+## 6. Écran de fin YouTube
 
-Il connaît le style, donc ce sont des propositions. Ce qui suit vient de la recette Premium noir, adaptée au sujet.
+- De **9:39,5 à 9:59,6** (20 s) : cadre « Vidéo suivante » à gauche (y placer l'élément vidéo, la vidéo ArtCraft), bouton « S'abonner » à droite.
+- Rien d'important sous les éléments YouTube ; la musique « maison » continue environ 15 s après la voix.
 
-1. **Le décor raconte l'histoire.**
-   - Le fond est noir pur, avec une grille fine de **carrés**. Proposition de réglage : traits de 1 px en `#3a3a3c` à 35 %, pas de 96 px, fondue vers les bords par un masque radial.
-   - Sur « lui, il a six voisins », toute la grille du fond se change en **hexagones**, et elle le reste jusqu'à la fin.
-   - Le spectateur vit donc dans H3 sans qu'on le lui dise. C'est la proposition la plus forte, et elle ne coûte qu'un composant.
-2. **Un seul héros à l'écran : le point.**
-   - C'est la position du chauffeur : un point blanc de 20 px avec un anneau fin.
-   - Les transitions naissent de lui :
-     - il quitte le téléphone ;
-     - il tombe dans un hexagone ;
-     - il entre dans le tuyau RAMEN ;
-     - il ressort sur ton écran.
-   - Cela donne très peu de coupes franches.
-3. **Trois couleurs qui ont un sens.** Jamais plus de deux accents par plan.
-   - Rouge `#ff453a` : **l'erreur et le gâchis** (les calculs inutiles, les 80 % de polling, les 50 m d'erreur, les voitures fantômes).
-   - Vert `#30d158` : **la bonne réponse** (les cases voisines, le push, la vraie position).
-   - Jaune `#ffd60a` : **les voix extérieures** (l'article du pote, l'e-mail du support, le démenti d'Uber).
-4. **La carte du trajet** : une barre de trois étapes, Trouver · Envoyer · Afficher, posée sur la grille.
-   - Elle revient au début de chaque acte, et l'étape en cours s'allume.
-   - C'est le repère du spectateur, et le chapitrage YouTube suit les mêmes actes.
-5. **Cinq passages en 3D, et pas plus.**
-   - ① Le dézoom du hook : du téléphone jusqu'à la Terre couverte d'hexagones.
-   - ② Le globe et ses 12 pentagones dans l'océan.
-   - ③ La rue entre deux tours, quand le signal rebondit.
-   - ④ La même rue vue de haut, avec les « ombres radio ».
-   - ⑤ La même rue, avec le nuage de particules.
-   - Les passages ③ à ⑤ forment **une seule scène 3D** filmée sous trois angles, donc un seul décor à construire.
-   - Pour l'outil : Three.js dans HyperFrames, ou à défaut de la 3D en CSS (`perspective`).
-6. **La caméra** : une seule caméra virtuelle qui glisse sur la grille.
-   - Pendant les explications, poussées lentes `sine.inOut` de 3 à 6 s.
-   - D'un état à l'autre, `power3.inOut` en 0,7 s.
-   - Le point d'attention reste au **centre** pour le point et sur le **tiers gauche** pour les chiffres. Un chiffre réapparaît donc toujours au même endroit.
-7. **Typographie** : SF Pro, et SF Mono pour tout ce que « la machine calcule » : compteurs, 41 %, 80 %, 50 m, 180 km/h, coordonnées GPS.
-8. **Les mèmes coupent franchement**, comme la brique `pub-leboeuf.html`.
-   - Plein écran pendant 1 à 2 s, avec leur son d'origine.
-   - La musique se tait pendant le mème, puis tout reprend.
-   - C'est la seule exception au « pas de coupe franche ».
+## 7. Musique
 
-### Les mèmes
+| Passage | Morceau | Ruptures |
+|---|---|---|
+| Accroche | Future Minimal (kissan4) | Drop sur « hexagones » (0:06), coupe sèche après « vraiment ? » |
+| Un pote → Trouver | Future Minimal, boucle « maison » | 0:25–1:35, coupée pour le mème Pokémon GO ; 1:38–1:53 ; silence pendant la devinette et les carrés ; repart sur le « clac » des hexagones (2:11–3:45) |
+| Envoyer | Singularity (MokkaMusic) | 3:46–3:55, coupée pour l'âne de Shrek ; 3:58–4:43, coupée pour le slurp ; 4:44–5:35, coupée net sur « juste » |
+| Afficher | Intrigue (Savfk) | 5:38–6:02, accent sur « 180 », coupée pour « C'est la famille. » ; 6:04–7:53 |
+| Les voitures fantômes | Dark Ambient (megalix) | 7:57–9:02 ; la pulsation entre sur « Officiellement » |
+| Le verdict, fin | Future Minimal, « maison » | 9:04–9:59, revient sur « on récapitule » |
 
-| Où | Mème | Pourquoi | Risque |
-|---|---|---|---|
-| Ton pote, « c'est des génies » | « Galaxy brain » (le cerveau qui s'illumine par paliers) | Il pose la promesse en 1 s | Faible (image libre de droits ou recréée) |
-| « chercher Mewtwo en 2016 dans Pokémon Go » | La ruée de joueurs de Pokémon Go à Central Park (été 2016), puis un carton « Mewtwo n'est arrivé qu'en août 2017 » | Ta vanne devient double : en 2016, tu pouvais chercher longtemps | ⚠️ extrait de reportage : 2 s maximum |
-| « 41 % plus loin » | « Math lady » (la dame entourée d'équations) | La géométrie fait peur, le mème désamorce | Faible |
-| « fois 1,8 un samedi à deux heures du mat » | « Not stonks » (côté passager) | Tout le monde a vécu ce tarif | Faible |
-| « où aucun Uber ne passera jamais » | Une voiture Uber avec une bouée, qui flotte au milieu de l'océan (motion design maison) | La chute de l'acte | Aucun |
-| « c'est quand qu'on arrive ? » | L'âne de *Shrek 2*, « Are we there yet? » | Le mème parfait du polling | ⚠️ extrait de film : 2 s, son d'origine |
-| « Non, pas les nouilles » | **Ton idée : un bol de ramen fumant** qui glisse dans le cadre, puis un trait rouge le barre | Ta blague, littéralement | Aucun (photo libre de droits, ou bol en motion design) |
-| « excusez-moi pour mon accent anglais » | Une jauge « Accent anglais » qui plafonne à 2 étoiles sur 5 | L'autodérision | Aucun |
-| « pas ceux d'Ichiraku » | Naruto qui dévore un bol chez Ichiraku | Ton clin d'œil, 18-30 ans le reconnaissent tout de suite | ⚠️ extrait d'anime : 1,5 s. Sinon, la lanterne rouge « 一楽 » recréée |
-| Fast and Furious | Un dérapage en motion design, puis un carton « C'est la famille. » en blanc sur noir | Le gag sans une seule image du film | Aucun (pas d'extrait, pas de musique, pas de logo) |
-| « coéquipier qui lag sur Monster Hunter » | 2 s d'un **trailer officiel** où le Rathalos apparaît (*Monster Hunter Wilds*), avec un **faux lag ajouté au montage** : image figée, saut, chasseur « téléporté », badge rouge « 999 ms » | Ton univers ; le lag rend l'extrait drôle | ⚠️ extrait de trailer : 2 s, **sans le son** |
-| « un économiseur d'écran » | Le logo DVD qui rebondit, **remplacé par une voiture Uber** qui rebondit dans les coins de l'écran | Le mème le plus parlant de la vidéo, recréé de zéro | Aucun |
-| « c'est des génies » (fin) | Le galaxy brain du début revient, cette fois au dernier palier | La boucle est bouclée | Faible |
+Mixage complet mesuré à la dernière vérification : -16 LUFS intégrés, crête -4 dBFS (cible de la recette : -16 à -14 LUFS, crête < -1 dBFS).
 
-Il y a 14 mèmes en 10 min (la silhouette de Pokémon shiny du #23 comprise), soit environ un par minute. Il n'en faut pas plus : la vidéo reste une keynote. Si le monteur doit en retirer, il commence par « Stonks » et la jauge d'accent.
+## 8. La voix
 
-> ⚠️ **Content ID** : les quatre extraits (*Shrek 2*, Naruto, Central Park, Monster Hunter) peuvent être repérés. Garde-les courts (2 s au plus) et commentés par ta voix. Prévois la version recréée de chacun au cas où YouTube bloque.
+- Voix montée d'origine gardée : `assets/audio/voix-off-montee.flac`. La vidéo joue `assets/audio/voix-off-montee-v2.flac`, d'où ces reprises sont coupées :
+  - 1:55 : le faux départ « Ta carte, euh… » ;
+  - 3:00 : le premier des deux « donc » ;
+  - 6:51 : la reprise « À chaque mesure, celles qui co… » ;
+  - 6:55 : le premier des deux « C'est » ;
+  - 7:08 : la reprise « Kalman suppose… Kal… » ;
+  - 7:25 : un murmure et un « en » isolé avant « Un peu comme un coéquipier » ;
+  - 8:16 : les reprises « Et même mieux vaudrait voir. Et même mieux. » ;
+  - 9:29 : la reprise « Tout ce qu'on vient, » ;
+- Liste des coupes dans `assets/lib/kit.js` (EDITS) : toutes les animations suivent la voix.
 
-## Musique
+### À réenregistrer si tu veux (je les insère et je recale tout)
 
-| Acte | TC | Ambiance | Coupes |
-|---|---|---|---|
-| Hook | 0:00 – 0:25 | Nappe tendue et lente | **Drop sur « hexagones » (0:06.2)** au moment du dézoom ; coupe sèche après « existent vraiment ? » (0:25.1) |
-| Mon pote | 0:25 – 1:10 | Morceau « maison », minimal et curieux (type *Future Minimal*, kissan4) | Baisse sous « je te dirai si mon pote avait raison » |
-| Trouver | 1:10 – 2:30 | Même morceau, plus présent | Coupée pendant le mème Pokémon (1:33) puis pendant la devinette (1:48.4), le temps que le monteur laisse au spectateur ; elle repart sur le « clac » de la grille hexagonale (2:05.6) |
-| Abonnement | 2:30 – 2:38 | Même morceau, baissé | — |
-| Prix et grille | 2:38 – 3:40 | Même morceau | Remonte sur le globe aux pentagones (3:06) |
-| Envoyer | 3:40 – 5:27 | Plus rythmé, électronique et ludique | Se tait pendant l'âne de *Shrek* (3:49.6) et le slurp (4:35.2) |
-| **Relance à 56 %** | 5:26.6 | **Coupure nette** sur « …elle était juste » | 1 s de silence total (pause posée au montage) |
-| Afficher | 5:27 – 7:48 | Électronique, plus technique, sur une pulsation | Accent sur « 180 à l'heure » (5:51.0) ; s'arrête après « la question du début » (7:47) |
-| Voitures fantômes | 7:48 – 8:58 | Nappe sombre (type *Dark Ambient for Crime and Tension*, megalix) | La pulsation entre sur « Officiellement » (8:15.2) |
-| Fin | 8:59 – fin | Retour du morceau maison sur un premier temps, à « on récapitule » | **Garder environ 15 s de musique après la voix** pour l'écran de fin |
+- 5:00 : « Fireball, c'est le **géant** » (le gérant)
+- 6:52 : « celles qui **cognent** avec les signaux » (collent)
+- 8:12 : « Le support d'Uber lui répond que… », dit trop vite
+- 8:18 : « un **économisateur** d'écran » (économiseur ; l'écran affiche le bon mot)
+- 9:39 : « Si **vous** avez aimé… » : tout le reste tutoie
 
-Volumes (recette) : musique à -19 dB sous la voix, -17 dB pour la nappe sombre, -15 dB sur un temps fort.
+## 9. Avant de publier
 
-## Bruitages
+- **Content ID** : les extraits de Pokémon GO, Shrek 2, Math Lady, Boruto et Monster Hunter Wilds durent 1 à 2,6 s et sont commentés. YouTube peut quand même les repérer : en cas de blocage, remplace l'extrait par un écran recréé.
+- **Singularity (MokkaMusic)** : avec l'offre gratuite d'inaudio, la réclamation se retire depuis https://inaudio.org (rubrique « Remove Claim ») en collant le lien de la vidéo ; le crédit en description est obligatoire.
+- **Chiffre de 40 millions par jour** : ajouter le lien des résultats Uber du 2e trimestre 2026 dans les sources.
+- **Le sorcier de Clash Royale** : image de Supercell ; vérifie que ton usage respecte leur politique de contenu de fans (Fan Content Policy).
 
-Ce sont ceux de la recette (`assets/sfx/`), à 0 à 2 par plan, entre -20 et -24 dB :
-- `air` pour une entrée ou un mouvement de caméra ;
-- `slide` pour une carte qui glisse ;
-- `tick` pour un surlignage ou un compteur ;
-- `bubble` pour une notification ;
-- `dissolve` pour un effacement.
+## 10. Le plan, image par image
 
-Ce que le sujet ajoute, puisque tu as demandé des mèmes (la recette ne les autorise que sur demande) :
-- un crissement de pneus (dérapage) ;
-- un « slurp » de nouilles (ramen) ;
-- un « clac » quand la grille d'hexagones se met en place ;
-- un ping sonar (le polling) ;
-- un bip satellite (GPS).
+Une entrée par plan, dans l'ordre du film (temps en secondes). Les images sont dans `boards/stills/`.
 
-## Légende
+## Frame 1: Le téléphone en contre-plongée (0-3.45s)
+- act: Accroche
+- still: boards/stills/at-2.6s.png
+- status: animated
+- 0:00,0 : La caméra monte du bas du téléphone : carte sombre de la gare de Lyon, 5 voitures qui glissent sur de vraies rues autour de toi. Sous-titres karaoké.
 
-🟦 VID vidéo, B-roll · 🟩 IMG image · 🟪 ECR capture d'écran · 🟧 ANI animation · ⬜ TXT texte sur fond noir · 🩷 MEM mème, blague visuelle · 🟫 pause à poser · 🟥 élément à collecter · 🟨 à vérifier à l'oreille · ⚠️ risque Content ID
+## Frame 2: Dézoom : Paris puis la France (3.45-5.9s)
+- act: Accroche
+- still: boards/stills/at-5.5s.png
+- status: animated
+- 0:03,5 : On plonge dans l'écran, puis on recule sans coupe : la rue, Paris, la France sous de vraies cellules H3.
 
-**Règles fixes** :
-- pas de vraie interface Uber : la carte côté passager est toujours recréée en motion design (`strategie.md`, partie juridique) ;
-- le blog Uber Engineering, la doc H3 et les articles de presse sont de vraies captures ;
-- chaque chiffre affiché porte sa source en micro (24 px, gris).
+## Frame 3: La Terre en hexagones (5.9-7.5s)
+- act: Accroche
+- still: boards/stills/at-6.9s.png
+- status: animated
+- 0:05,9 : Le globe couvert d'hexagones H3 tombe sur « hexagones » (drop de la musique) ; compteur « 569 707 381 193 162 cases ».
 
----
+## Frame 4: Du chauffeur jusqu'à toi (7.5-12.15s)
+- act: Accroche
+- still: boards/stills/at-11.9s.png
+- status: animated
+- 0:07,5 : Retour sur la gare de Lyon : la voiture s'allume, le point blanc quitte son toit, « chauffeur » → « toi ».
 
-## HOOK (0:00 – 0:25)
+## Frame 5: Un serveur bombardé (12.15-15.9s)
+- act: Accroche
+- still: boards/stills/at-15.4s.png
+- status: animated
+- 0:12,2 : Un serveur en traits sous une pluie de bulles « ? » ; ses voyants passent au rouge.
 
-| # | TC | Voix off (telle que dite) | Visuel | Texte · Son |
-|---|---|---|---|---|
-| 1 | 0:00.0 | « Ouvre Uber. Tu vois ces petites voitures autour de toi ? » | 🟧 **ANI-01**, début : téléphone en contre-plongée (brique `abonnement.html` : départ sur le bas du téléphone, montée jusqu'au téléphone entier). Carte sombre, 5 voitures blanches qui glissent autour de ton point. Pas de titre ni de logo | Grille carrée du fond déjà là. Karaoké incrusté permis sur l'accroche (recette § 4). `air` sur la montée |
-| 2 | 0:03.5 | « Pour te trouver un chauffeur, Uber a découpé la planète en hexagones. » | 🟧 **ANI-01** en 3D : dézoom de la rue vers Paris, la France, puis la Terre couverte de vrais hexagones H3 | **Drop de la musique sur « hexagones » (0:06.2)**. Un `tick` par palier. ⬜ compteur SF Mono « 569 707 381 193 162 cases » sous le globe, sans voix. 🎙️ ligne à insérer ici si tu la réenregistres |
-| 3 | 0:07.4 | « Aujourd'hui, on suit une de ces petites voitures, du téléphone d'un chauffeur jusqu'au tien. » | 🟧 la caméra replonge sur Paris. Une voiture s'allume, et **le point blanc** (le héros) quitte son toit | Libellés intégrés « chauffeur » → « toi » |
-| 4 | 0:12.1 | « Sur ce trajet, sa position passe par un serveur bombardé de questions, et par un GPS qui se trompe de 50 mètres. » | 🟧 deux vignettes éclair : un serveur bombardé de bulles « ? » (0:14.4), puis le point qui saute de 50 m (0:16.6). 🩷 **teaser de 0,8 s du dérapage** (ANI-07) sur « 50 mètres » (0:17.7), puis arrêt sur image | Crissement de pneus coupé net |
-| 5 | 0:18.9 | « Et en 2015, deux chercheurs ont posé une question gênante. Est-ce que toutes ces voitures existent vraiment ? » | 🟧 retour au téléphone : une voiture devient translucide, clignote, disparaît (ANI-10 en version courte) | ⬜ « 2015 » en SF Mono. Musique coupée sèche après « vraiment ? » 🟫 |
+## Frame 6: Le GPS se trompe de 50 m (15.9-17.66s)
+- act: Accroche
+- still: boards/stills/at-17.3s.png
+- status: animated
+- 0:15,9 : Le point saute de travers ; règle rouge « 50 m ».
 
-## MON POTE ET SES BLOGS (0:25 – 1:10)
+## Frame 7: Teaser du dérapage (17.66-18.9s)
+- act: Accroche
+- still: boards/stills/at-18.2s.png
+- status: animated
+- 0:17,7 : 0,8 s de dérapage avec traces de pneus, arrêt sur image, crissement coupé net.
 
-| # | TC | Voix off | Visuel | Texte · Son |
-|---|---|---|---|---|
-| 6 | 0:25.9 | « J'ai un pote qui lit les blogs tech des grosses boîtes, pour voir comment elles construisent des produits utilisés par des millions de personnes. Un jour, il m'envoie un article d'Uber, sur un truc qu'on appelle le polling. » | 🟪 défilement lent du blog Uber Engineering (brique « Preuve par capture »), puis la carte de l'article *Uber's Real-Time Push Platform* (18 déc. 2020). « polling » se surligne **en jaune** quand tu le dis (0:35.9) | Musique « maison » qui entre. `slide` sur la carte, `tick` sur le surlignage |
-| 7 | 0:37.1 | « Pour lui, les ingés d'Uber, c'est des génies. » | 🩷 **Galaxy brain**, paliers 1 à 3. On garde le 4e pour la fin (#59) | Petit « ding » par palier |
-| 8 | 0:40.1 | « Pour moi, des cartes avec des éléments dessus, j'en ai affiché dans mes applications Flutter, mais jamais avec des millions de personnes en même temps, et en temps réel. Alors j'ai lu son article, puis les autres. » | 🟧 **une maquette générique**, et non ton appli : tes applis Flutter sont du travail, donc rien de réel n'est montré. Elle est faite en motion design : un téléphone, une carte simple avec quelques rues, 3 ou 4 marqueurs, et le logo Flutter dans un coin. Sur « des millions de personnes », les marqueurs se multiplient par milliers (recul). Sur « puis les autres », les autres articles du blog s'empilent en éventail, dates nettes et reste flou | ⬜ micro « Toutes les sources en description » |
-| 9 | 0:50.6 | « À la fin, je te dirai si mon pote avait raison ou pas. » | ⬜ texte central « Mon pote avait raison ? », puis fondu | La musique baisse |
-| 10 | 0:54.1 | « Donc, Uber, c'est plus de 40 millions de courses et de livraisons par jour. » | ⬜ chiffre héros SF Mono qui compte jusqu'à « 40 000 000 / jour », sur le **tiers gauche** (tous les compteurs reviendront à cet endroit) | Micro « Source : Uber, résultats du T2 2026 (3 867 M au trimestre) ». `tick` |
-| 11 | 0:59.0 | « On va prendre une seule course. On se met dans la peau d'un chauffeur de Paris : son téléphone envoie sa position, et elle doit arriver sur ton écran, deux rues plus loin. Suivons cette position. » | 🟧 sur la grille : une voiture près de la gare de Lyon, ton téléphone deux rues plus loin, et le point blanc qui part de chez le chauffeur. Sur « Suivons », **la carte du trajet** se dessine : Trouver · Envoyer · Afficher | 🟨 collure à 1:03.6. `air` |
+## Frame 8: La voiture qui n'existe pas (18.9-25.45s)
+- act: Accroche
+- still: boards/stills/at-24.7s.png
+- status: animated
+- 0:18,9 : Le téléphone revient ; « 2015 » ; sur « vraiment », une voiture devient translucide et disparaît. Musique coupée sèche.
 
-## ÉTAPE 1 : TROUVER (1:10 – 2:30)
+## Frame 9: Écran de chapitre 1 (25.55-27.5s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-26.6s.png
+- status: animated
+- 0:25,6 : « Un pote, un article » ; la musique « maison » entre sur l'écran.
 
-| # | TC | Voix off | Visuel | Texte · Son |
-|---|---|---|---|---|
-| 12 | 1:10.4 | « Uber reçoit les positions de millions de chauffeurs. Toi, tu en veux une poignée : ceux qui sont autour de toi. » | 🟧 la carte du trajet, « Trouver » s'allume. Recul : 300 voitures sur la grille carrée, et toi au centre (un anneau blanc) | Ding de chapitre |
-| 13 | 1:16.4 | « La solution naïve, c'est de calculer la distance entre toi et chaque chauffeur. Ce qui fait qu'un million de chauffeurs, ça donne un million de calculs pour une seule personne. Et des gens qui ouvrent l'appli Uber au même moment, il y en a des millions. » | 🟧 **ANI-02** : 300 traits rouges, compteur « 1 000 000 » qui s'emballe et rougit (tiers gauche). Sur « des millions », l'écran se démultiplie en mosaïque de téléphones (×4, ×16, ×64) | `tick` de plus en plus serrés |
-| 14 | 1:29.0 | « C'est comme chercher Mewtwo en 2016 dans Pokémon Go. » | 🩷 2 s : la ruée de joueurs de Pokémon Go à Central Park (été 2016) ⚠️. Puis le carton ⬜ « Spoiler : Mewtwo n'est arrivé dans le jeu qu'en août 2017 » | Musique coupée pendant le mème. 🟫 |
-| 15 | 1:33.5 | « L'astuce, c'est de ranger. On découpe la carte en cases, et chaque chauffeur va dans la sienne. Quand tu ouvres l'appli, Uber regarde ta case et celles d'à côté. » | 🟧 **ANI-02**, fin : les traits s'effacent, les voitures glissent dans leurs cases carrées. Ta case s'allume, puis ses 8 voisines | `dissolve`, puis `slide` |
-| 16 | 1:43.8 | « Le réflexe, c'est de prendre des carrés. Regarde la grille deux secondes. Tu vois le défaut ? » | 🟧 **ANI-03**, état initial : grille carrée, case centrale allumée, **aucune flèche**. Poussée lente (`sine.inOut`) | 🟫 **2 s de devinette** après « défaut ? » (1:48.4) : musique coupée, tic-tac discret |
-| 17 | 1:49.0 | « Ta case a quatre voisines collées par un côté, et quatre collées par un coin. Celles du coin sont 41 % plus loin. Donc la case d'à côté, ça peut vouloir dire tout près… ou nettement plus loin. » | 🟧 **ANI-03** : 4 flèches vertes (1:52.3), 4 flèches rouges en diagonale (1:54.3), « 1,41 » en pop (1:56.8). 🩷 **Math lady** 1 s sur « 41 % » | Pop |
-| 18 | 2:02.9 | « Par contre, si on prend l'hexagone, lui, il a six voisins. Tous ses voisins sont à la même distance. » | 🟧 **ANI-03, la bascule** : toute la grille du fond devient hexagonale sur « six » (2:05.6), et le restera jusqu'à la fin. 6 flèches vertes identiques | **« Clac »** quand la grille se fige, et la musique repart |
-| 19 | 2:08.9 | « En 2018, Uber publie sa grille hexagonale en open source. Elle s'appelle H3. » | 🟪 l'article *H3: Uber's Hexagonal Hierarchical Spatial Index* (juin 2018), puis le dépôt GitHub `uber/h3`. ⬜ « H3 » en héros | `slide` |
-| 20 | 2:14.0 | « Tu donnes une position GPS à H3, et il te renvoie ton hexagone. Ajoute un anneau autour : sept cases. Deux anneaux : dix-neuf. Les devs appellent ça un k-ring. » | 🟧 **ANI-04**, anneaux : les coordonnées SF Mono « 48.8443, 2.3744 » tombent dans un hexagone. Anneau 1 (7 cases), puis anneau 2 (19 cases) | Micro pour les devs : « kRing → grid_disk dans H3 v4 » |
-| 21 | 2:24.0 | « Du coup, au lieu d'un million de chauffeurs, Uber n'en parcourt plus qu'une centaine : ceux de ces dix-neuf cases. » | 🟧 le compteur du #13 revient **au même endroit** et descend de « 1 000 000 » à « ~100 », puis passe au vert | Impact doux sur « centaine » |
+## Frame 10: Le blog Uber (27.25-34.6s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-29.5s.png
+- status: animated
+- 0:27,2 : La vraie page Ingénierie du blog Uber défile dans une carte arrondie.
 
-## APPEL À L'ABONNEMENT (2:30 – 2:38)
+## Frame 11: L'article du pote (34.6-37.4s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-35s.png
+- status: animated
+- 0:34,6 : « Uber's Real-Time Push Platform » (18 déc. 2020) passe devant la page.
 
-| # | TC | Voix off | Visuel | Texte · Son |
-|---|---|---|---|---|
-| 22 | 2:29.9 | « Si tu aimes comprendre ce qui se cache derrière les applis que tu as dans la poche, alors abonne-toi sur ma chaîne : on les ouvre une par une. » | 🟧 bouton S'abonner en bas à droite (3 s), les hexagones restent à l'écran | `toggle` au clic. Musique baissée |
+## Frame 12: « polling » surligné (37-38.5s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-38.4s.png
+- status: animated
+- 0:37,0 : Poussée sur l'intro de l'article, « polling » se surligne en jaune quand il est dit.
 
-## ÉTAPE 1 (SUITE) : LE PRIX ET LA GRILLE (2:38 – 3:40)
+## Frame 13: Galaxy brain, paliers 1 à 3 (38.55-41.45s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-41.1s.png
+- status: animated
+- 0:38,5 : Coupe franche : trois cerveaux de plus en plus lumineux, avec nos légendes.
 
-| # | TC | Voix off | Visuel | Texte · Son |
-|---|---|---|---|---|
-| 23 | 2:38.4 | « Sept cases, ça suffit pour trouver notre dresseur rare ou notre Pokémon shiny. » | 🩷 une silhouette de Pokémon chromatique (des étincelles, pas d'image officielle) au centre de l'anneau de 7 cases. Rappel du #14 | Son d'étincelle. 🟨 « Sept cases » est dit vite |
-| 24 | 2:42.8 | « Mais pour fixer un prix, Uber compare, hexagone par hexagone, les demandes de courses et les chauffeurs libres de toute la ville. Le fameux “fois 1,8” un samedi à deux heures du mat' ? C'est ton hexagone qui a décidé. » | 🟧 **ANI-04**, prix : recul sur Paris, carte de chaleur en hexagones. « ×1,8 » en pop sur ton hexagone (2:50.5). 🩷 **« Not stonks »** 1 s sur « C'est ton hexagone qui a décidé » | Horloge SF Mono « sam. 02:00 ». Micro « Source : Uber Engineering, H3, 2018 » |
-| 25 | 2:55.1 | « Donc H3 a 16 niveaux de zoom, et à chaque niveau, les hexagones sont sept fois plus petits. Au plus large, un hexagone fait à peu près huit fois la France. Au plus fin, moins d'un mètre carré. » | 🟧 **ANI-04**, seize niveaux : divisions par 7, niveau 0 → 15 à droite. Au niveau 0, la silhouette de la France posée 8 fois dans l'hexagone ; au niveau 15, un hexagone de la taille d'une table basse | ⬜ « 0,9 m² », puis le compteur « 569 707 381 193 162 cases » (**il remplace la phrase coupée**). Micro « Source : h3geo.org » |
-| 26 | 3:06.8 | « Enfin, on dit hexagones, mais c'est presque des hexagones. On ne peut pas recouvrir une boule entièrement avec des hexagones : il faut tricher quelque part. Alors H3 cache douze pentagones à chaque niveau. Et pour qu'ils ne tombent pas au milieu d'une ville, la grille est orientée pour les placer tous dans l'océan. » | 🟧 3D ② : le globe tourne, et les **12 pentagones rouges** clignotent, tous en mer | 12 `tick` très bas |
-| 27 | 3:26.8 | « Quelque part au milieu de l'eau, il y a douze cases à cinq côtés où aucun Uber ne passera jamais. » | 🩷 la caméra plonge sur un pentagone en plein océan, où **une petite voiture flotte avec une bouée** | Vagues, une mouette. 🟫 0,5 s |
-| 28 | 3:32.1 | « Uber sait maintenant quels chauffeurs sont autour de toi. Reste à te les envoyer, en direct. Et ça, pendant des années, Uber l'a mal fait. » | 🟧 retour à la carte du trajet : « Trouver » passe au vert ✓, « Envoyer » clignote. Le point blanc file vers « Envoyer » (transition née de l'action) | Musique qui retombe |
+## Frame 14: Maquette Flutter générique (41.45-46.4s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-43s.png
+- status: animated
+- 0:41,5 : Un téléphone avec une carte simple, le logo Flutter et quatre marqueurs (pas ton appli).
 
-## ÉTAPE 2 : ENVOYER (3:40 – 5:27)
+## Frame 15: Des millions de positions (46.4-50.1s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-48.2s.png
+- status: animated
+- 0:46,4 : Recul : des milliers de points autour du téléphone devenu minuscule.
 
-| # | TC | Voix off | Visuel | Texte · Son |
-|---|---|---|---|---|
-| 29 | 3:40.2 | « Parce qu'au début, l'appli Uber se comportait comme un gamin à l'arrière de la voiture. À chaque fois, il demandait : “C'est quand qu'on arrive ? C'est quand qu'on arrive ? C'est quand qu'on arrive ?” » | 🟧 un téléphone sur la banquette arrière (picto). Puis 🩷 **l'âne de *Shrek 2*, « Are we there yet? »**, 2 s avec son son, juste après la 3e question (3:49.6) ⚠️ | Musique plus rythmée qui entre sur « Parce qu'au début ». Coupée pendant le mème |
-| 30 | 3:50.0 | « Toutes les quelques secondes, ton téléphone demandait au serveur : “Il y a du nouveau ?” Et la plupart du temps, il répondait non. Ça s'appelle le polling, et c'est de ça que parlait l'article de mon pote. » | 🟧 **ANI-05**, polling : bulles « Du nouveau ? » / « Non. » en rouge. Sur « l'article de mon pote », la carte du #6 revient, « polling » surligné en jaune | Un ping sonar par bulle |
-| 31 | 4:00.7 | « Par contre, chaque non coûte de la batterie et du travail pour le serveur. Dans cet article de 2020, Uber donne les chiffres : à un moment, huit requêtes sur dix reçues par la porte d'entrée, c'est-à-dire l'API gateway, étaient du polling. » | 🟧 la batterie qui baisse. Puis ⬜ **« 80 % »** héros en rouge sur le tiers gauche, et une porte « API gateway » où 8 bulles sur 10 sont rouges | Micro « Source : Uber Engineering, 18 déc. 2020 » |
-| 32 | 4:14.0 | « Et sur un réseau 2G ou 3G qui coupe, chaque échec relançait des requêtes. Si tu as déjà fixé une appli qui mouline avec une seule barre de réseau, tu vois déjà le tableau. » | 🟧 le trait se coupe, les bulles se dédoublent. Puis un indicateur de chargement qui tourne, avec 1 barre de réseau sur 4 | `bubble` |
-| 33 | 4:24.4 | « La solution ? Retourner la conversation. Le téléphone arrête de demander, et c'est le serveur qui prévient quand il y a du nouveau. Cette fois, ça s'appelle du push. Pour ça, Uber a construit un RAMEN. » | 🟧 **ANI-05**, push : le schéma pivote de 180° (4:25.1), et seul le serveur envoie, en vert. « RAMEN » en héros sur 4:34.8 | 🟫 **0,6 s** après « RAMEN. » (4:35.2) |
-| 34 | 4:35.4 | « Non, pas les nouilles. Mais excusez-moi pour mon accent anglais : c'est Realtime Asynchronous Messaging Network. Un réseau de messagerie en temps réel. » | 🩷 **ton bol de ramen** fumant glisse dans le cadre pendant la pause, puis un trait rouge le barre sur « Non, pas les nouilles ». 🩷 jauge « Accent anglais ★★☆☆☆ » sur « accent anglais ». ⬜ « **R**ealtime **A**synchronous **ME**ssaging **N**etwork » : les initiales en blanc, le reste en gris | **Slurp** sur le bol |
-| 35 | 4:43.4 | « Franchement, je pense qu'ils ont clairement trouvé le nom avant. RAMEN, c'est trois pièces. Pour les comprendre, prends Uber Eats. » | 🟧 les lettres R-A-M-E-N se rangent en haut, et trois silhouettes grises apparaissent (gérant, cuisine, livreur) | — |
-| 36 | 4:50.3 | « Fireball, c'est le gérant. Il voit passer chaque événement : un passager commande, un chauffeur accepte, une voiture bouge. Et pour chacun, il décide qui doit être prévenu, et quand. » | 🟧 **ANI-06** : le gérant se dessine, et les trois événements défilent sur sa tablette | 🟨 « gérant » (Whisper entend « géant ») |
-| 37 | 4:59.8 | « L'API gateway, c'est la cuisine. Elle prépare la commande : toutes les données dont l'application a besoin, au bon format. » | 🟧 **ANI-06** : la cuisine, le point se fait emballer | — |
-| 38 | 5:06.4 | « Et le serveur RAMEN, bien sûr, pas celui d'Ichiraku, c'est le livreur. Il garde une connexion ouverte avec ton téléphone, et livre les messages avec une promesse : chaque message arrive au moins une fois. » | 🩷 **Naruto chez Ichiraku**, 1,5 s sur « Ichiraku » (5:08.4), sans le son ⚠️ (version sans risque : la lanterne rouge « 一楽 » recréée). Puis 🟧 **ANI-06** : le livreur apporte le point, ✓ vert | ⬜ **« +1,5 M de connexions ouvertes en même temps (2020) »** : il remplace la phrase coupée. Micro source |
-| 39 | 5:18.7 | « La position de notre chauffeur arrive donc jusqu'à toi en direct, sans vider ta batterie. Mais depuis le début, je fais comme si cette méthode, elle était juste. » | 🟧 la carte du trajet, « Envoyer » ✓. Le point est arrivé, avec l'étiquette « position GPS ». Sur « juste », **tout s'éteint** (brique « Mot choc sur noir ») et ⬜ « juste ? » | **Relance à 56 %** : musique coupée net à 5:26.6, puis 🟫 1 s de silence total |
+## Frame 16: Les autres articles (50.15-52.15s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-51.4s.png
+- status: animated
+- 0:50,1 : Trois vrais articles en éventail (Push Platform, H3, Rethinking GPS), « Toutes les sources en description ».
 
-## ÉTAPE 3 : AFFICHER (5:27 – 7:48)
+## Frame 17: Mon pote avait raison ? (53.1-54.9s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-54.1s.png
+- status: animated
+- 0:53,1 : La question au centre, mot à mot ; la musique baisse.
 
-| # | TC | Voix off | Visuel | Texte · Son |
-|---|---|---|---|---|
-| 40 | 5:27.5 | « En ville, elle peut être fausse de 50 mètres. Ce sont les ingénieurs d'Uber qui le disent, et parfois c'est pire. 50 mètres, c'est l'autre côté du boulevard. Sur ta carte, le chauffeur t'attend devant la gare. En vrai, il est garé en face de toi. » | 🟧 la voiture saute d'un trottoir à l'autre, avec une règle rouge « 50 m » en travers du boulevard. La gare en libellé | Nouveau morceau (électronique, sur une pulsation) sur « En ville ». ⬜ « 50 m » en SF Mono. Micro « Source : Uber Engineering, *Rethinking GPS*, 2018 » |
-| 41 | 5:39.9 | « Si l'appli faisait glisser les voitures d'une position à l'autre, le chauffeur arriverait comme dans Fast and Furious, à fond. En dérapage, à travers les immeubles. Un saut de 50 mètres en une seconde, à l'écran, c'est du 180 à l'heure. » | 🟧 **ANI-07** en entier : départ sur « glisser » (5:40.6), dérapage sur « dérapage » (5:46.2), compteur « 180 km/h » sur « 180 » (5:51.0). Puis le carton ⬜ « C'est la famille. » (0,8 s) | ⬜ **les étiquettes « position fausse ① » et « ② »** sur les deux points : elles rendent le « fausse » qui manque à la voix. Crissement, puis moteur. 🟫 0,8 s |
-| 42 | 5:52.7 | « Mais alors, pourquoi le GPS se trompe autant ? Le téléphone du chauffeur calcule sa position avec le temps que mettent les signaux des satellites à lui arriver. » | 🟧 début de la 3D ③ : 4 satellites, un trait jusqu'au téléphone pour chacun, et un chrono SF Mono sur chaque trait | Bip satellite |
-| 43 | 6:01.0 | « Mais en ville, il y a des immeubles. Un signal tape contre une façade, rebondit, et arrive en retard. Le téléphone croit que le satellite est plus loin qu'en réalité, et il se place au mauvais endroit. » | 🟧 **ANI-08, angle A** : la rue entre les tours, le rebond en rouge, et le point fantôme sur le mauvais trottoir | `air-long` sur l'orbite |
-| 44 | 6:11.3 | « En 2018, des ingénieurs d'Uber ont eu une idée tordue : se servir du problème comme d'un indice. » | 🟪 la carte de l'article *Rethinking GPS* (19 avr. 2018) | `slide`. 🟨 collure « En 2018 » |
-| 45 | 6:17.2 | « Sur Android, le téléphone connaît la force du signal de chaque satellite. Signal faible ? Il y a sûrement un immeuble entre lui et le satellite. Signal fort ? La voie est libre. On compare ça à une carte 3D de la ville, et on en déduit de quel côté de la rue se trouve le chauffeur. Ils se repèrent grâce à l'ombre des immeubles. » | 🟧 **ANI-08, angle B** : la caméra monte en plongée. Ombres radio au sol, signaux faibles en rouge et forts en vert, et le point qui se cale **en vert** du bon côté | — |
-| 46 | 6:36.1 | « Et pour suivre la voiture, ils éparpillent dans les rues des milliers de voitures possibles. À chaque mesure, celles qui collent avec les signaux restent, les autres disparaissent. C'est un filtre à particules, testé à San Francisco. » | 🟧 **ANI-08, angle C** : 2 000 particules, 4 « tics », et le nuage se resserre | Un `tick` par mesure. Libellé « filtre à particules » |
-| 47 | 6:49.8 | « Petite parenthèse pour les devs : on lit souvent qu'Uber utilise un filtre de Kalman. Dans cet article, les ingénieurs expliquent pourquoi ils ne l'ont pas pris pour ce problème-là. Kalman suppose une erreur en forme de cloche, avec un seul pic. En ville, la position possible en a plusieurs. » | 🟧 bandeau « Pour les devs ». Une courbe en cloche barrée, puis une carte de chaleur à plusieurs bosses | ✂️ **Coupable au montage** (16,7 s, de 6:49.8 à 7:06.5) |
-| 48 | 7:07.2 | « Même juste, la position arrive par à-coups. Le réseau coupe sous un pont, le message arrive en retard. Si l'appli affichait juste la dernière position reçue, la voiture se téléporterait à n'importe quel moment. » | 🟧 **ANI-09**, avant : un pont en picto, et la voiture qui saute de point en point, en saccades | — |
-| 49 | 7:18.1 | « Un peu comme un coéquipier qui lag en plein Monster Hunter, et qui réapparaît trois mètres plus loin… en plein dans les pattes du Rathalos. » | 🩷 **2 s d'un trailer officiel de *Monster Hunter Wilds*** où un chasseur affronte le Rathalos ⚠️. Le lag est ajouté au montage : 3 images figées, puis un saut de 3 m du chasseur, un léger glitch et un badge SF Mono rouge « 999 ms ». Le saut tombe sur « réapparaît » (7:21.9) | 🟨 collure à 7:23.4 |
-| 50 | 7:25.8 | « Uber n'a pas détaillé comment l'appli anime ses voitures. Mais les jeux vidéo en ligne utilisent un vieux principe : entre deux positions, on fait glisser la voiture. Et si la suivante tarde, on devine où elle devrait être, avec sa dernière vitesse et sa direction. » | 🟧 **ANI-09**, après : la voiture glisse, continue en pointillés, puis se recale | — |
-| 51 | 7:39.0 | « C'est la navigation à l'estime, *dead reckoning* en anglais. Les marins faisaient déjà ça avant le GPS. Et ça nous ramène à la question du début. » | 🟩 une carte marine ancienne avec son compas (gravure du domaine public), puis retour au téléphone du hook | 🟫 1 s, et la musique s'arrête |
+## Frame 18: 40 millions par jour (55.6-61.4s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-59.5s.png
+- status: animated
+- 0:55,6 : Compteur SF Mono jusqu'à « 40 000 000 / jour » sur le tiers gauche, source en petit.
 
-## LES VOITURES FANTÔMES (7:48 – 8:58)
+## Frame 19: Une seule course (61.3-63s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-62.2s.png
+- status: animated
+- 1:01,3 : Il reste un point blanc qui file vers le chauffeur ; la vraie carte apparaît.
 
-| # | TC | Voix off | Visuel | Texte · Son |
-|---|---|---|---|---|
-| 52 | 7:48.1 | « En juillet 2015, deux chercheurs, Alex Rosenblat et Luke Stark, publient une enquête sur les chauffeurs Uber. Ils racontent l'histoire d'une chauffeuse qui ouvre l'application côté passager. Sur la carte, quatre voitures juste à côté de son point de départ… et dix-sept minutes d'attente pour la plus proche. » | 🟪 la carte de l'article de Motherboard, *Uber's Phantom Cabs* (juillet 2015). Puis 🟧 **ANI-10** : 4 voitures, et « 17 min » | **Nappe sombre**. ⬜ « 17 min » en rouge |
-| 53 | 8:05.7 | « Le support d'Uber lui répond que la carte, c'est “plutôt un effet visuel”. Et même : “mieux vaudrait voir ça comme un économiseur d'écran”. » | 🟧 la citation **en jaune** (voix extérieure), et les voitures qui deviennent translucides. Puis 🩷 **le logo DVD qui rebondit, remplacé par une voiture Uber** qui touche enfin le coin de l'écran | ⬜ la citation affichée dit « économiseur d'écran ». 🟨 « lui répond que » |
-| 54 | 8:15.2 | « Officiellement, Uber dément cette histoire. D'après eux, le but, c'est des voitures aussi précises que possible, et la latence peut les décaler. Et l'appli n'afficherait que les huit plus proches : donc en réalité, il y en aurait plutôt plus que ce que tu vois. » | 🟪 l'article de Fortune (30 juil. 2015), avec le démenti surligné en jaune. Puis 🟧 8 voitures autour du point, et d'autres en dehors du cadre | **La pulsation de la nappe entre sur « Officiellement »** |
-| 55 | 8:28.6 | « Sur les forums, certains chauffeurs avaient leur explication : un décalage de 30 à 60 secondes. Ce décalage, tu sais maintenant d'où il peut venir. Il vient des messages en retard, et d'une appli qui fait glisser les voitures en les devinant. » | 🟧 un chrono « 30-60 s ». Deux rappels éclair : la bulle en retard (ANI-05), puis la voiture en pointillés (ANI-09) | — |
-| 56 | 8:40.5 | « Mais d'autres chauffeurs voyaient des fantômes partout où le passager posait son épingle. Ça, par contre, aucun décalage ne l'explique. Cette enquête date de 2015, et l'appli a beaucoup changé depuis. Mais la voiture qui glisse sur la carte, maintenant, tu sais ce que c'est. » | 🟧 **ANI-10** : l'épingle se pose 3 fois, et des fantômes apparaissent à chaque fois | ⬜ « 2015 » en SF Mono |
-| 57 | 8:54.1 | « Au mieux, c'est la position d'un chauffeur il y a quelques secondes, en partie devinée. » | 🟧 retour au téléphone du hook : la voiture se dédouble, avec sa position réelle en gris derrière et la position affichée devant | 🟫 1 s |
+## Frame 20: Le chauffeur, gare de Lyon (63-67.2s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-66.9s.png
+- status: animated
+- 1:03,0 : La voiture du chauffeur porte le point, qui quitte son toit sur « position ».
 
-## FIN (8:59 – 9:40, puis écran de fin)
+## Frame 21: Deux rues plus loin (66.75-69.8s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-69.4s.png
+- status: animated
+- 1:06,8 : Recul : l'anneau « toi » et le trajet en pointillés.
 
-| # | TC | Voix off | Visuel | Texte · Son |
-|---|---|---|---|---|
-| 58 | 8:59.0 | « Bon, on récapitule le trajet. Le téléphone de notre chauffeur envoie une position qui peut être fausse de 50 mètres. Uber la range dans un hexagone. Fireball décide qu'elle mérite de te déranger. RAMEN te la livre, et ton appli la fait glisser pour que tu ne voies jamais les trous. Tout ça pour un geste que tu fais en deux secondes. » | 🟧 la carte du trajet en entier. Le point la parcourt en accéléré, et chaque étape s'allume sur son mot | La musique « maison » revient sur un premier temps, à « on récapitule » |
-| 59 | 9:17.5 | « Alors, en vrai, mon pote, il avait raison. Afficher des éléments sur une carte, je l'ai fait moi-même dans mes applications. Tout ce que tu viens de voir, c'est ce qu'il faut en plus quand des millions de personnes regardent en même temps. Donc oui, les ingés d'Uber, c'est des génies. » | 🟧 écran partagé : la maquette Flutter du #8 à gauche (4 marqueurs), la carte recréée d'Uber à droite (des milliers de voitures qui glissent). 🩷 le **dernier palier du Galaxy brain** sur « génies » (9:33.3) | ⬜ « Flutter » en libellé sous la maquette. 🟫 0,8 s |
-| 60 | 9:34.7 | « Si vous avez aimé cette vidéo, n'hésitez pas à vous abonner, et à laisser un like et un commentaire. Allez, salut ! » | **Écran de fin** (20 s) : la vidéo ArtCraft à gauche, le bouton S'abonner à droite. **Environ 15 s de musique après la voix** | 🟨 « vous » (voir les erreurs). Commentaire à épingler : « Laquelle j'ouvre ensuite ? » |
+## Frame 22: La carte du trajet (69.8-71s)
+- act: Chapitre 1 · Un pote, un article
+- still: boards/stills/at-70.9s.png
+- status: animated
+- 1:09,8 : Trouver · Envoyer · Afficher se dessine, à la place exacte de l'écran de chapitre suivant.
 
----
+## Frame 23: Écran de chapitre 2 (71-73.35s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-72.4s.png
+- status: animated
+- 1:11,0 : « Trouver », étape 1 allumée.
 
-## Fiches d'animation (HyperFrames, 1920×1080, 60 i/s)
+## Frame 24: 300 voitures (73.05-79.6s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-78.6s.png
+- status: animated
+- 1:13,0 : Recul sur 300 voitures posées sur la grille carrée, toi au centre.
 
-Les temps « t » sont relatifs au début du plan. Les courbes suivent la recette : entrées `power3.out`, sorties `power2.in`, changements d'état `power3.inOut`, dérives lentes `sine.inOut`. Chaque élément arrive 0,03 s avant son mot.
+## Frame 25: Un million de calculs (79.6-88.5s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-87.3s.png
+- status: animated
+- 1:19,6 : 300 traits rouges, compteur « 1 000 000 » qui s'emballe sur le tiers gauche.
 
-**ANI-00 · Le décor : la grille (toute la vidéo)**
-- **Éléments** :
-  - un plan de grille en SVG, 3 fois plus grand que l'écran pour que la caméra puisse s'y promener ;
-  - traits de 1 px en `#3a3a3c` à 35 %, pas de 96 px ;
-  - un masque radial qui fond la grille vers les bords.
-- **Deux états** : carrés, puis hexagones de même surface (la bascule est décrite dans ANI-03).
-- **Caméra** : un seul conteneur `#camera` déplacé et zoomé. Les autres scènes se posent « sur » la grille, ce qui donne l'impression d'un seul plateau infini.
-- **Variante 3D** : la grille couchée en sol (`rotationX: 62`) pour les plans de rue (ANI-08).
+## Frame 26: La mosaïque de téléphones (88.5-95.9s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-92.6s.png
+- status: animated
+- 1:28,5 : L'écran se démultiplie (×4, ×16, ×64).
 
-**ANI-01 · Le dézoom du hook (3D)**
-- **Éléments** :
-  - un téléphone posé (brique `abonnement.html`) avec une carte sombre et 5 petites voitures blanches autour d'un point ;
-  - la Terre en Three.js (sphère noire, côtes en traits `#3a3a3c`) ;
-  - une couche d'hexagones H3 (résolution 2 ou 3, fil blanc à 25 %).
-- **Déroulé** :
-  - t = 0 : plan serré sur l'écran du téléphone, les voitures glissent ;
-  - sur « découpé la planète », la caméra recule en 2,4 s (`power2.inOut`) : la rue, Paris, la France, puis la Terre ;
-  - à chaque palier, les hexagones de la couche suivante apparaissent (fondu de 0,2 s) ;
-  - sur « hexagones », la Terre entière est quadrillée et tourne lentement (`sine.inOut`).
-- **Son** : `air-long` sur le recul, un `tick` par palier, puis le drop de la musique sur « hexagones ».
-- **Données** : les vraies cellules H3, générées en Python (`h3.latlng_to_cell` / `h3.cell_to_boundary`) puis exportées en GeoJSON. Elles sont vraies, comme le veut la recette.
+## Frame 27: Mème : Pokémon GO (95.9-98.1s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-97.6s.png
+- status: animated
+- 1:35,9 : Coupe franche sur la ruée de Central Park avec son son, puis « Spoiler : Mewtwo n'est arrivé qu'en 2017 ».
 
-**ANI-02 · La recherche naïve, puis les cases (Trouver)**
-- **Éléments** :
-  - le point bleu (toi) au centre ;
-  - 300 voitures blanches dispersées sur la grille carrée ;
-  - un compteur en SF Mono, sur le tiers gauche.
-- **Déroulé** :
-  - sur « calculer la distance », un trait rouge part du point vers chaque voiture : 300 traits en 1,2 s, avec un léger décalage entre eux ;
-  - le compteur s'emballe jusqu'à « 1 000 000 » et passe au rouge ;
-  - sur « l'astuce, c'est de ranger », tous les traits s'effacent (`dissolve`), et chaque voiture glisse dans sa case (0,6 s, `power3.inOut`) ;
-  - la case du point s'allume en blanc à 12 %, puis ses voisines.
-- **Point d'attention** : le centre.
+## Frame 28: Chaque chauffeur dans sa case (98.1-108.75s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-107.9s.png
+- status: animated
+- 1:38,1 : Les traits s'effacent, les voitures glissent dans leur case ; ta case puis ses 8 voisines.
 
-**ANI-03 · Carrés contre hexagones (le cœur visuel de la vidéo)**
-- **État initial** : grille carrée, case centrale allumée, **aucune flèche** pendant « Regarde la grille deux secondes ».
-- **Déroulé** :
-  - sur « collées par un côté », 4 flèches vertes de longueur 1 ;
-  - sur « par un coin », 4 flèches rouges en diagonale ;
-  - sur « 41 % », l'étiquette « 1,41 » sort en pop (70 → 110 → 100 %, 0,12 + 0,08 s) ;
-  - sur « six voisins », **toute la grille du fond se change en hexagones**. Chaque carré se déforme vers son hexagone en 0,9 s (`power3.inOut`), avec un léger décalage depuis le centre vers les bords ;
-  - 6 flèches vertes identiques partent du centre.
-- **Son** : silence pendant la devinette, puis un « clac » quand la grille hexagonale se fige.
-- **Technique** : interpoler les 6 sommets de chaque cellule. Un carré, c'est un hexagone dont 2 sommets sont confondus avec leurs voisins, ce qui donne un morphing propre sans plugin.
+## Frame 29: La devinette (108.75-115.4s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-114.5s.png
+- status: animated
+- 1:48,8 : Deux secondes de silence sur la grille, tic-tac discret, musique coupée.
 
-**ANI-04 · Les anneaux, le prix, les seize niveaux et les pentagones**
-- **Anneaux** :
-  - sur « Ajoute un anneau », les 7 cases s'allument (centre, puis anneau, en 0,4 s) ;
-  - sur « deux anneaux », les 19 cases ;
-  - le compteur d'ANI-02 descend de « 1 000 000 » à « ~100 » (tiers gauche, au même endroit qu'avant).
-- **Prix** :
-  - recul sur tout Paris ;
-  - les hexagones se colorent en carte de chaleur (gris, puis orange, puis rouge `#ff453a`) ;
-  - « ×1,8 » sort en pop sur l'hexagone du point.
-  - Ici, le rouge, c'est « ce qu'on te prend » : il garde son sens.
-- **Seize niveaux** :
-  - un hexagone géant se divise en 7, puis 7, puis 7, la caméra plongeant à chaque division (0,5 s par niveau, en accélérant) ;
-  - à droite, le numéro du niveau en SF Mono, de 0 à 15 ;
-  - en bas, le compteur « 569 707 381 193 162 cases ».
-- **Pentagones** :
-  - retour au globe d'ANI-01 ;
-  - 12 pentagones rouges clignotent, tous en mer ;
-  - la caméra finit sur l'un d'eux, au milieu de l'eau, où arrive le mème de la voiture à bouée.
+## Frame 30: Côté contre coin (115.4-122.77s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-120.37s.png
+- status: animated
+- 1:55,4 : 4 flèches vertes, 4 flèches rouges en diagonale.
 
-**ANI-05 · Polling contre push (Envoyer)**
-- **Polling** :
-  - le téléphone à gauche, le serveur à droite ;
-  - toutes les 0,6 s, une bulle « Du nouveau ? » part du téléphone et un « Non. » rouge revient ;
-  - la cadence accélère, la batterie du téléphone descend ;
-  - sur « 80 % », le chiffre héros (280 px, rouge) sur le tiers gauche.
-- **2G / 3G** : le trait entre les deux se coupe, et les bulles s'empilent et se dédoublent (les relances).
-- **Push** : sur « Retourner la conversation », tout le schéma pivote de 180° en 0,8 s (`power3.inOut`). Le téléphone se tait, et seul le serveur envoie, en vert, quand il y a du nouveau.
+## Frame 31: « 1,41 » et Math Lady (121.77-128.17s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-122.37s.png
+- status: animated
+- 2:01,8 : « 1,41 » en pop ; Math Lady 1 s en carte (le texte incrusté est rogné).
 
-**ANI-06 · RAMEN, la brigade Uber Eats**
-- **Éléments** : trois personnages en traits (pictos de la recette, traits constants et bouts ronds), alignés de gauche à droite :
-  - le gérant **Fireball** (une tablette à la main) ;
-  - la cuisine **API gateway** (une casserole) ;
-  - le livreur **serveur RAMEN** (un vélo) ;
-  - puis le téléphone.
-- **Déroulé** :
-  - chaque personnage se dessine sur son nom (`stroke-dashoffset`, 0,5 s) ;
-  - le point blanc (la position) passe de l'un à l'autre : le gérant le tamponne « à prévenir », la cuisine l'emballe, le livreur l'apporte ;
-  - sur « au moins une fois », un petit « ✓ » vert sur le téléphone.
-- **Texte** : un nom sous chaque personnage en libellé gris (32 px), et le rôle en blanc (44 px).
+## Frame 32: La bascule en hexagones (128.17-131.77s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-130.57s.png
+- status: animated
+- 2:08,2 : Toute la grille se déforme du centre vers les bords et se fige en hexagones (« clac », la musique repart).
 
-**ANI-07 · Le dérapage Fast and Furious**
-- **Éléments** :
-  - la carte de quartier (grille hexagonale du fond, plus des rues en traits blancs) ;
-  - la voiture du chauffeur ;
-  - deux positions GPS fausses, à 50 m l'une de l'autre, de part et d'autre d'un pâté d'immeubles.
-- **Déroulé** :
-  - sur « faisait glisser », la voiture part en ligne droite vers la position suivante, **à travers l'immeuble** ;
-  - elle dérape (rotation de 35° puis contre-braquage), avec des traces de pneus en traits noirs sur la carte et un léger flou de bougé ;
-  - sur « 180 à l'heure », le compteur SF Mono « 180 km/h » sort en pop sur le tiers gauche.
-- **Son** : crissement de pneus, puis moteur qui monte.
-- **Chute** : un carton « C'est la famille. » de 0,8 s (texte seul), puis retour au calme.
-- **Teaser** : le même dérapage, coupé à 0,8 s, sert dans le hook.
+## Frame 33: Six voisins à égale distance (131.77-134.27s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-132.97s.png
+- status: animated
+- 2:11,8 : 6 flèches vertes identiques. Le décor reste hexagonal jusqu'à la fin.
 
-**ANI-08 · La rue en 3D (GPS, ombres, particules)** : une scène, trois angles
-- **Décor** :
-  - deux rangées de tours en volumes gris `#1c1c1e`, arêtes `#3a3a3c` ;
-  - au sol, la grille hexagonale couchée ;
-  - 4 satellites en haut, en pictos.
-- **Angle A, le rebond** (caméra au niveau de la rue, orbite lente de 15°) :
-  - un signal direct (trait blanc) est bloqué par une tour ;
-  - un autre rebondit sur la façade d'en face et arrive en retard, en rouge ;
-  - un point rouge « fantôme » apparaît sur le mauvais trottoir.
-- **Angle B, les ombres radio** (caméra qui monte en plongée) :
-  - chaque tour projette au sol une « ombre radio » en gris foncé ;
-  - les signaux faibles sont barrés en rouge, les forts en vert ;
-  - le point se cale du bon côté de la rue, en vert.
-- **Angle C, les particules** (même plongée) :
-  - 2 000 points blancs à 40 % éparpillés dans la rue (graine fixe pour rester déterministe) ;
-  - à chaque « tic » (toutes les 0,8 s, 4 fois), ceux qui ne collent pas s'éteignent et le nuage se resserre sur la vraie position.
-- **Parenthèse Kalman** : en surimpression 2D, une courbe en cloche barrée, et à côté une carte de chaleur à plusieurs bosses. Bandeau « Pour les devs ».
+## Frame 34: L'article H3 (2018) (134.27-136.97s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-135.97s.png
+- status: animated
+- 2:14,3 : La vraie capture de l'article du 27 juin 2018.
 
-**ANI-09 · Glisser et deviner (interpolation, puis navigation à l'estime)**
-- **Avant** : la voiture saute de point en point (4 positions, sans transition), comme le coéquipier qui lag.
-- **Après** :
-  - la même voiture glisse entre les points (interpolation `sine.inOut`) ;
-  - quand le point suivant tarde, elle continue en pointillés selon sa vitesse et sa direction, puis se recale doucement quand la vraie position arrive ;
-  - une flèche « vitesse + direction » en SF Mono.
+## Frame 35: GitHub et « H3 » (136.97-139.27s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-138.47s.png
+- status: animated
+- 2:17,0 : Le dépôt uber/h3 et « H3 » en héros.
 
-**ANI-10 · Les voitures fantômes**
-- **Éléments** : la carte vue côté passager, recréée sans l'interface d'Uber, avec 4 voitures et l'étiquette « 17 min ».
-- **Déroulé** :
-  - sur « effet visuel », les 4 voitures deviennent translucides ;
-  - sur « économiseur d'écran », le mème du logo DVD (une voiture qui rebondit) ;
-  - sur « partout où le passager posait son épingle », l'épingle se pose à 3 endroits, et à chaque fois des voitures translucides apparaissent autour.
-- **Couleur** : les fantômes en blanc à 25 % avec un contour rouge.
+## Frame 36: Position GPS → hexagone (139.27-142.87s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-140.77s.png
+- status: animated
+- 2:19,3 : « 48.8443, 2.3744 » tombe dans ta case.
 
-## Éléments à collecter 🟥
+## Frame 37: 7 puis 19 cases (142.87-149.17s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-147.57s.png
+- status: animated
+- 2:22,9 : Anneau 1, anneau 2 ; « un k-ring » ; mention pour les devs « kRing → grid_disk ».
 
-1. **Le logo Flutter** (simple-icons, ou le logo officiel sur Wikimedia Commons) pour la maquette des #8 et #59. **Aucune capture de tes applis** : elles relèvent de ton travail.
-2. **Les captures du blog Uber Engineering** :
-   - la liste des articles ;
-   - *Uber's Real-Time Push Platform* (2020) ;
-   - *H3: Uber's Hexagonal Hierarchical Spatial Index* (2018) ;
-   - *Rethinking GPS* (2018).
+## Frame 38: 1 000 000 → ~100 (149.17-154.67s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-152.77s.png
+- status: animated
+- 2:29,2 : Le compteur revient au même endroit et descend à « ~100 », en vert.
 
-   Fais-les avec `capture-blog.mjs` de la recette (§ 9), en refusant les cookies (#6, #19, #30, #44).
-3. **Le dépôt GitHub `uber/h3`** (#19).
-4. **Les articles de presse** : *Uber's Phantom Cabs* (Motherboard, juillet 2015) et Fortune du 30/07/2015 (#52, #54).
-5. **Les vraies cellules H3** en GeoJSON. Pour les générer, je peux écrire le script Python si tu veux :
-   - Paris aux niveaux 7 à 9, avec la gare de Lyon (#3, #11, #20) ;
-   - le globe au niveau 1 ou 2 (#2) ;
-   - les 12 pentagones (`h3.get_pentagons`) (#26).
-6. **2 s d'un trailer officiel de *Monster Hunter Wilds*** (#49) : un chasseur face au Rathalos. Le trailer de lancement (février 2025) et le teaser des Game Awards 2023 en montrent un. Prends-le sur la chaîne YouTube officielle de Capcom et utilise-le **sans le son**. Le lag se fabrique au montage.
-7. **Les mèmes** :
-   - Galaxy brain, Math lady, Not stonks ;
-   - ⚠️ *Shrek 2* « Are we there yet? », Naruto chez Ichiraku, la ruée Pokémon Go de Central Park, le trailer de Monster Hunter.
-8. **Un bol de ramen** sur fond sombre (photo libre de droits sur Pexels ou Unsplash) (#34).
-9. **Une carte marine ancienne** du domaine public, par exemple sur Wikimedia Commons (#51).
-10. **Les bruitages hors recette** : crissement de pneus, slurp, « clac », ping sonar, bip satellite, vagues.
+## Frame 39: Abonne-toi (154.67-162.37s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-158.97s.png
+- status: animated
+- 2:34,7 : Bouton « S'abonner » cliqué en bas à droite, la musique baisse.
 
-## Une chose nouvelle à essayer : le décor qui se transforme
+## Frame 40: Le Pokémon shiny (162.37-168.27s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-166.67s.png
+- status: animated
+- 2:42,4 : Une silhouette d'étincelles au centre des 7 cases (aucune image officielle).
 
-La technique de cette vidéo, c'est **la bascule de la grille du fond, des carrés aux hexagones** (#18, 2:05.6, ANI-03). Le décor change sous les yeux du spectateur au moment où l'idée change, et il reste changé.
-- **Pourquoi elle sert la vidéo** : tu n'as pas besoin de dire « à partir de maintenant, on est dans H3 ». Le décor le dit pendant 7 min.
-- **Le principe** : chaque cellule a toujours 6 sommets. Un carré, c'est un hexagone dont 2 sommets sont doublés. On interpole les 6 sommets de chaque cellule vers leur position hexagonale.
-- **En HyperFrames** :
-  - les cellules sont des `<polygon>` SVG, et chaque point est stocké dans un objet `{x, y}` ;
-  - GSAP anime ces objets ;
-  - un `onUpdate` réécrit l'attribut `points` ;
-  - le décalage se fait avec `stagger: { from: "center", amount: 0.6 }` et l'easing `power3.inOut` sur 0,9 s ;
-  - tout est déterministe : aucune valeur aléatoire évaluée au rendu.
-- **Une fois faite**, la grille resservira pour Waze le 7 décembre (`calendrier.md`).
+## Frame 41: Chaque hexagone comparé (167.97-174.37s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-171.17s.png
+- status: animated
+- 2:48,0 : Recul sur tout Paris (données OSM), carte de chaleur H3, l'article H3 surligné.
+
+## Frame 42: ×1,8 : ton hexagone décide (174.37-180.27s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-178.67s.png
+- status: animated
+- 2:54,4 : « ×1,8 » rouge sur le tiers gauche, « sam. 02:00 », relié à ton hexagone.
+
+## Frame 43: Niveau 0 : huit France (180.27-188.93s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-188.63s.png
+- status: animated
+- 3:00,3 : L'hexagone du niveau 0 se divise en 7 ; 8 silhouettes de France à l'échelle.
+
+## Frame 44: Niveau 15 : 0,9 m² (188.93-192.63s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-191.33s.png
+- status: animated
+- 3:08,9 : Plongée jusqu'au niveau 15, « 0,9 m² » et « 569 707 381 193 162 cases ».
+
+## Frame 45: Douze pentagones en mer (192.63-211.33s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-210.13s.png
+- status: animated
+- 3:12,6 : Le globe tourne, 12 pentagones rouges clignotent, tous en mer ; la musique remonte.
+
+## Frame 46: La voiture à bouée (211.33-217.23s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-215.03s.png
+- status: animated
+- 3:31,3 : Plongée sur le pentagone du Pacifique : une voiture flotte dans une bouée. Vagues, mouette.
+
+## Frame 47: Trouver ✓, Envoyer clignote (217.23-224.53s)
+- act: Chapitre 2 · Trouver
+- still: boards/stills/at-221.63s.png
+- status: animated
+- 3:37,2 : « Trouver » passe au vert, le point file vers « Envoyer ».
+
+## Frame 48: Écran de chapitre 3 (224.53-226.53s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-225.63s.png
+- status: animated
+- 3:44,5 : « Envoyer », étape 2.
+
+## Frame 49: Le gamin à l'arrière (226.23-235.53s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-234.73s.png
+- status: animated
+- 3:46,2 : Le téléphone sur la banquette demande trois fois « C'est quand qu'on arrive ? ».
+
+## Frame 50: Mème : l'âne de Shrek 2 (235.53-238.13s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-236.73s.png
+- status: animated
+- 3:55,5 : Coupe franche sur l'extrait VF « On est presque arrivés ? », avec son son, musique coupée.
+
+## Frame 51: Le polling (238.13-249.03s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-243.6s.png
+- status: animated
+- 3:58,1 : La dispute en trois temps : le téléphone crie « Du nouveau ? », le serveur répond « non… » tout bas ; « Encore du nouveau ? », « Non. », le serveur grossit ; puis « NON ! » hurlé, le serveur enfle et le téléphone rapetisse pour se cacher.
+
+## Frame 52: L'article du pote, encore (246.53-249.13s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-248.03s.png
+- status: animated
+- 4:06,5 : La carte de l'article revient, « polling » surligné.
+
+## Frame 53: 80 % des requêtes (249.13-262.13s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-259.63s.png
+- status: animated
+- 4:09,1 : La batterie se vide ; « 80 % » rouge, la phrase de l'article surlignée, 8 pastilles sur 10 à la porte d'entrée.
+
+## Frame 54: Le réseau qui coupe (262.13-266.73s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-265.73s.png
+- status: animated
+- 4:22,1 : Le fil se rompt (2G · 3G), les requêtes s'empilent et se dédoublent.
+
+## Frame 55: L'appli qui mouline (266.73-272.43s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-269.93s.png
+- status: animated
+- 4:26,7 : Dans le téléphone : roue de chargement, une barre de réseau sur quatre.
+
+## Frame 56: Le push (272.43-283.13s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-281.13s.png
+- status: animated
+- 4:32,4 : Le schéma pivote de 180°, seul le serveur envoie, en vert.
+
+## Frame 57: RAMEN (283.13-283.93s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-283.53s.png
+- status: animated
+- 4:43,1 : « RAMEN » en héros.
+
+## Frame 58: Non, pas les nouilles (283.73-286.43s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-285.13s.png
+- status: animated
+- 4:43,7 : Le vrai bol glisse pendant la pause, slurp, puis un trait rouge le barre.
+
+## Frame 59: Accent anglais ★★☆☆☆ (286.43-287.33s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-286.83s.png
+- status: animated
+- 4:46,4 : La jauge d'autodérision, 2 étoiles sur 5.
+
+## Frame 60: L'acronyme (287.13-292.23s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-290.13s.png
+- status: animated
+- 4:47,1 : « Realtime Asynchronous MEssaging Network », initiales en blanc.
+
+## Frame 61: Trois pièces (292.23-299.23s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-298.13s.png
+- status: animated
+- 4:52,2 : La brigade Uber Eats en retrait : le sorcier Fireball, la cuisine, le livreur, le téléphone.
+
+## Frame 62: Fireball, le gérant (299.23-308.53s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-304.93s.png
+- status: animated
+- 4:59,2 : Le sorcier à la boule de feu (Fireball) s'allume, trois événements défilent, le point est tamponné « À PRÉVENIR ».
+
+## Frame 63: L'API gateway, la cuisine (308.53-315.33s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-312.73s.png
+- status: animated
+- 5:08,5 : Le point est emballé dans une boîte.
+
+## Frame 64: Mème : Ichiraku (317.38-318.83s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-317.93s.png
+- status: animated
+- 5:17,4 : Coupe franche muette : Naruto qui mange chez Ichiraku (extrait Boruto, Crunchyroll).
+
+## Frame 65: Le livreur, 1,5 M (315.33-324.93s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-321.13s.png
+- status: animated
+- 5:15,3 : Le livreur porte le colis sur un fil toujours ouvert ; « 1,5 M connexions ouvertes en même temps » (chiffre de l'article).
+
+## Frame 66: Au moins une fois (324.93-327.43s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-326.53s.png
+- status: animated
+- 5:24,9 : ✓ vert sur le téléphone.
+
+## Frame 67: Envoyer ✓ (327.43-334.93s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-331.13s.png
+- status: animated
+- 5:27,4 : Vue d'ensemble, « Envoyer » au vert, le point arrivé « position GPS ».
+
+## Frame 68: juste ? (334.93-336.23s)
+- act: Chapitre 3 · Envoyer
+- still: boards/stills/at-335.93s.png
+- status: animated
+- 5:34,9 : Tout s'éteint, la musique se coupe net : « juste ? » seul dans le silence (relance à 56 %).
+
+## Frame 69: Écran de chapitre 4 (336.23-338.18s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-337.33s.png
+- status: animated
+- 5:36,2 : « Afficher », étape 3.
+
+## Frame 70: Le GPS se trompe de 50 m (337.73-350.53s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-348.93s.png
+- status: animated
+- 5:37,7 : Vraie carte du boulevard Diderot : la voiture saute d'un trottoir à l'autre, règle rouge « 50 m ».
+
+## Frame 71: Fast and Furious (350.53-361.53s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-357.53s.png
+- status: animated
+- 5:50,5 : « position fausse ① » et « ② » ; la voiture traverse la gare et dérape, traces de pneus.
+
+## Frame 72: 180 km/h (361.53-362.98s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-362.03s.png
+- status: animated
+- 6:01,5 : « 180 km/h » en héros sur le tiers gauche, accent de la musique.
+
+## Frame 73: C'est la famille. (362.98-363.78s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-363.33s.png
+- status: animated
+- 6:03,0 : Carton blanc sur noir, coupe franche.
+
+## Frame 74: Quatre satellites (363.78-372.53s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-371.73s.png
+- status: animated
+- 6:03,8 : Rue en 3D : 4 satellites, une ligne et un chrono vers le téléphone du chauffeur.
+
+## Frame 75: Le signal rebondit (372.53-382.68s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-378.73s.png
+- status: animated
+- 6:12,5 : Au niveau de la rue : signal direct bloqué, rebond rouge en retard, point fantôme sur le mauvais trottoir.
+
+## Frame 76: L'article Rethinking GPS (382.68-388.38s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-384.93s.png
+- status: animated
+- 6:22,7 : La vraie capture de l'article (19 avril 2018).
+
+## Frame 77: L'ombre des immeubles (388.63-407.53s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-403.73s.png
+- status: animated
+- 6:28,6 : Plongée : ombres radio au sol, signaux faibles rouges, forts verts, le point se cale en vert.
+
+## Frame 78: Le filtre à particules (407.53-419.11s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-416.91s.png
+- status: animated
+- 6:47,5 : 2 000 particules, 4 mesures, le nuage se resserre sur la vraie position.
+
+## Frame 79: Pour les devs : Kalman (419.11-434.41s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-433.11s.png
+- status: animated
+- 6:59,1 : Cloche barrée, carte de chaleur à plusieurs bosses. Bloc autonome, coupable si besoin.
+
+## Frame 80: Les à-coups (434.41-446.87s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-438.11s.png
+- status: animated
+- 7:14,4 : Sous un pont, la voiture saute de point en point.
+
+## Frame 81: Le coéquipier qui lag (446.87-451.27s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-448.27s.png
+- status: animated
+- 7:26,9 : Trailer officiel de Monster Hunter Wilds sans le son, faux lag ajouté, badge « 999 ms ».
+
+## Frame 82: Glisser, puis deviner (451.27-464.62s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-462.97s.png
+- status: animated
+- 7:31,3 : La voiture glisse, continue en pointillés « vitesse + direction », puis se recale.
+
+## Frame 83: Navigation à l'estime (464.62-471.57s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-468.17s.png
+- status: animated
+- 7:44,6 : Une carte portulan du domaine public, « dead reckoning ».
+
+## Frame 84: Retour à la question du début (471.57-473.57s)
+- act: Chapitre 4 · Afficher
+- still: boards/stills/at-473.27s.png
+- status: animated
+- 7:51,6 : Le téléphone de l'accroche revient ; la musique s'arrête.
+
+## Frame 85: Écran de chapitre 5 (473.57-475.47s)
+- act: Chapitre 5 · Les voitures fantômes
+- still: boards/stills/at-474.57s.png
+- status: animated
+- 7:53,6 : « Les voitures fantômes ».
+
+## Frame 86: L'enquête de Motherboard (475.22-487.67s)
+- act: Chapitre 5 · Les voitures fantômes
+- still: boards/stills/at-479.72s.png
+- status: animated
+- 7:55,2 : La vraie page VICE « Uber's Phantom Cabs » (27 juillet 2015), surlignée.
+
+## Frame 87: Quatre voitures, 17 minutes (487.17-492.97s)
+- act: Chapitre 5 · Les voitures fantômes
+- still: boards/stills/at-491.72s.png
+- status: animated
+- 8:07,2 : Carte passager recréée : 4 voitures autour de l'épingle, « 17 min » en rouge.
+
+## Frame 88: « Plutôt un effet visuel » (492.97-496.77s)
+- act: Chapitre 5 · Les voitures fantômes
+- still: boards/stills/at-496.22s.png
+- status: animated
+- 8:13,0 : La citation du support en jaune ; les voitures deviennent des fantômes.
+
+## Frame 89: L'économiseur d'écran (496.77-499.88s)
+- act: Chapitre 5 · Les voitures fantômes
+- still: boards/stills/at-499.08s.png
+- status: animated
+- 8:16,8 : Façon DVD : la voiture Uber rebondit et touche enfin le coin ; citation corrigée « économiseur d'écran ».
+
+## Frame 90: Fortune : le démenti (499.58-508.78s)
+- act: Chapitre 5 · Les voitures fantômes
+- still: boards/stills/at-501.68s.png
+- status: animated
+- 8:19,6 : La vraie page de Fortune (30 juillet 2015), sans les pubs, le démenti surligné ; la pulsation entre sur « Officiellement ».
+
+## Frame 91: Les 8 plus proches (508.78-513.18s)
+- act: Chapitre 5 · Les voitures fantômes
+- still: boards/stills/at-511.83s.png
+- status: animated
+- 8:28,8 : 8 voitures autour de l'épingle, d'autres hors du cadre.
+
+## Frame 92: Un décalage de 30 à 60 s (513.08-525.38s)
+- act: Chapitre 5 · Les voitures fantômes
+- still: boards/stills/at-518.33s.png
+- status: animated
+- 8:33,1 : Chrono « 30–60 s », rappels du message en retard et de la voiture en pointillés.
+
+## Frame 93: Des fantômes à chaque épingle (525.18-534.68s)
+- act: Chapitre 5 · Les voitures fantômes
+- still: boards/stills/at-530.18s.png
+- status: animated
+- 8:45,2 : Trois épingles, des fantômes autour de chacune ; « Cette enquête date de 2015 ».
+
+## Frame 94: Une position d'il y a quelques secondes (534.68-542.28s)
+- act: Chapitre 5 · Les voitures fantômes
+- still: boards/stills/at-541.53s.png
+- status: animated
+- 8:54,7 : Dans le téléphone, la voiture affichée devant sa position réelle en gris.
+
+## Frame 95: Écran de chapitre 6 (542.28-544.73s)
+- act: Chapitre 6 · Le verdict
+- still: boards/stills/at-543.48s.png
+- status: animated
+- 9:02,3 : « Le verdict », les trois étapes au vert.
+
+## Frame 96: Récap : 50 m (544.13-552.18s)
+- act: Chapitre 6 · Le verdict
+- still: boards/stills/at-550.38s.png
+- status: animated
+- 9:04,1 : Le trajet récapitulé ; le point sort du téléphone du chauffeur, « ± 50 m » ; le morceau « maison » revient.
+
+## Frame 97: Récap : Fireball et RAMEN (552.18-556.18s)
+- act: Chapitre 6 · Le verdict
+- still: boards/stills/at-554.43s.png
+- status: animated
+- 9:12,2 : « Trouver » au vert, l'hexagone, le sorcier Fireball puis RAMEN.
+
+## Frame 98: Récap : l'appli fait glisser (556.18-560.08s)
+- act: Chapitre 6 · Le verdict
+- still: boards/stills/at-558.13s.png
+- status: animated
+- 9:16,2 : « Afficher » s'allume, la voiture glisse jusqu'à « toi ».
+
+## Frame 99: Un geste de deux secondes (560.08-564.38s)
+- act: Chapitre 6 · Le verdict
+- still: boards/stills/at-562.88s.png
+- status: animated
+- 9:20,1 : Ton téléphone grandit, sa carte s'allume, chrono 0 → 2 s.
+
+## Frame 100: Flutter contre Uber (564.38-572.98s)
+- act: Chapitre 6 · Le verdict
+- still: boards/stills/at-569.18s.png
+- status: animated
+- 9:24,4 : La maquette Flutter générique à gauche, la carte recréée d'Uber à droite.
+
+## Frame 101: Des millions en même temps (572.98-577.78s)
+- act: Chapitre 6 · Le verdict
+- still: boards/stills/at-574.43s.png
+- status: animated
+- 9:33,0 : La carte d'Uber se remplit de milliers de points.
+
+## Frame 102: C'est des génies (577.78-579.48s)
+- act: Chapitre 6 · Le verdict
+- still: boards/stills/at-578.53s.png
+- status: animated
+- 9:37,8 : Le dernier palier du galaxy brain, tenu dans la pause.
+
+## Frame 103: Écran de fin (579.48-588.98s)
+- act: Chapitre 6 · Le verdict
+- still: boards/stills/at-584.43s.png
+- status: animated
+- 9:39,5 : Cadre « Vidéo suivante » (élément YouTube ArtCraft) et « S'abonner » qui s'allume sur le mot.
+
+## Frame 104: Écran de fin tenu (588.98-599.58s)
+- act: Chapitre 6 · Le verdict
+- still: boards/stills/at-594.93s.png
+- status: animated
+- 9:49,0 : Le même écran, presque immobile, environ 14 s de musique après la voix.

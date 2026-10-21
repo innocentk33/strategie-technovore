@@ -59,7 +59,7 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 
 | Fichier | Vidéo | Ce qu'on voit | Corrigé par rapport à la v1 |
 |---|---|---|---|
-| [`noir-01`](rendus/noir-01.png) | Uber, 26 oct. | `uber-b` : téléphone, voiture fantôme désignée par une flèche, « **elle existe ?** » | Reprise telle quelle, en Inter |
+| [`noir-01`](rendus/noir-01.png) | Uber, 26 oct. | `uber-b` : téléphone, voiture fantôme désignée par une flèche, « **elle existe ?** » | Reprise en Inter, puis corrigée le 21/10 : voiture fantôme agrandie et teintée de rouge, vrai logo Uber, halo élargi jusqu'aux bords (pourtour quasi noir : 97 % → 66 %) |
 | [`noir-01b`](rendus/noir-01b.png) | Uber, variante A/B | Même décor, « sa position est / **devinée.** » | Variante de texte pour le test |
 | [`vert-02`](rendus/vert-02.png) | Claude ou mon PC ? #1, 16 nov. | Gabarit de série, « 16 Go » dans la baie du PC | Plus de composition Kai, ni de cédille flottante, ni d'établi |
 | [`noir-03`](rendus/noir-03.png) | Waze, 9 nov. | Bouchon rouge, détour bleu, icône Waze, « personne ne l'a signalé, / **il savait.** » | « avant toi » répétait le titre ; rivière retirée |
@@ -81,7 +81,7 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 2. **2 variantes, pas 3** : à ta taille, chaque variante supplémentaire divise les impressions et rend le résultat « non concluant » plus probable.
 3. **Un test ne décide pas d'un format.** Compte les victoires sur 4 à 6 vidéos par pilier avant de changer la règle.
 4. **Ordre proposé** :
-   - **Uber (9/11)** : test de **texte** (`noir-01` contre `noir-01b`). La vidéo sort dans 3 semaines, et ses miniatures noires sont prêtes.
+   - **Uber (26/10)** : test de **texte** (`noir-01` contre `noir-01b`), voir [`projets/uber/upload.md`](../../projets/uber/upload.md).
    - **À partir de Claude ou mon PC ? #1 (23/11)** : test de **charte** sur chaque vidéo (`vert-02` contre la même scène en noir), puis Waze, pixel, coût de Claude, WhatsApp. La jumelle de chaque miniature, dans l'autre charte, se fait à partir de l'HTML (compter environ 30 à 60 min, estimation).
 5. **Ne touche ni au titre ni à la miniature pendant le test** : ça l'arrête.
 
@@ -96,7 +96,7 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 
 ## 5. À vérifier avant de publier
 
-- **Uber** (`noir-01b`) : « devinée » simplifie le script (« en partie devinée »). La vidéo doit le dire.
+- **Uber** (`noir-01b`) : « devinée » simplifie le script (« en partie devinée »). Vérifié le 21/10 : la vidéo le dit et l'affiche à 9:00.
 - **Coût de Claude** : « ?? ??? € » est un emplacement pour le prix calculé. L'étiquette tient jusqu'à « 999 999 € » (la taille du texte s'ajuste). Anthropic ne publie pas les poids de Claude : dire dans la première minute que le calcul utilise le plus gros modèle ouvert du même niveau.
 - **Pseudo pris** (`noir-07`) : **aucune source ne montre que Google utilise un filtre de Bloom** pour les pseudos (recherche du 21/10). Sans preuve, retirer le « G » et Google du titre (voir `strategie.md`, idée 4).
 - **Jeux** (`noir-08`) : le cas Sony de décembre 2023 concernait des **séries** Discovery, et Sony a fait marche arrière. La vidéo doit le dire ainsi, ou s'appuyer sur un cas de **jeu** (voir `strategie.md`, idée 8).

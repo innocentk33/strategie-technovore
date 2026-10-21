@@ -681,7 +681,7 @@ Python et le pixel passent devant des idées mieux notées pour des raisons de c
 - **Uber**, en ligne en privé :
   - remplacer le titre « L'hisoire du temps réel derriere uber » par celui de la fiche ;
   - remplacer les tags Flutter par défaut ;
-  - écrire le kit d'upload (`projets/uber/upload.md`) ;
+  - appliquer le kit d'upload ([`projets/uber/upload.md`](projets/uber/upload.md), prêt le 21/10) ;
   - programmer la vidéo lun. 26 à 18 h.
 - **Premiers essais sur la 5080** pour Claude #1.
 - Recherche et script de **Combien coûte Claude en local ?** (2 nov.).

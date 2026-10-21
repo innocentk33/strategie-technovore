@@ -63,7 +63,7 @@ Règle : en semaine N, **voix et montage** de la vidéo de N+1, **écriture** de
 
 | Semaine | Écriture (vidéo de N+2) | Voix, essais, montage (vidéo de N+1) | En ligne |
 |---|---|---|---|
-| **S1** · 19-25 oct | Recherche et script de **Coût Claude** | **Uber** : vrai titre, tags, description, chapitres et sous-titres (`upload.md` à créer). **Premiers essais sur la 5080** : quels modèles tiennent en 16 Go, et à quelle vitesse | ArtCraft (lun. 19), OpenCode (mer. 21) |
+| **S1** · 19-25 oct | Recherche et script de **Coût Claude** | **Uber** : appliquer le [kit d'upload](projets/uber/upload.md) (titre, tags, description, chapitres, sous-titres) et programmer. **Premiers essais sur la 5080** : quels modèles tiennent en 16 Go, et à quelle vitesse | ArtCraft (lun. 19), OpenCode (mer. 21) |
 | **S2** · 26 oct-1er nov | Recherche et script de **Waze** (pages d'aide Waze) | Voix et montage de **Coût Claude** ; essais sur la 5080 (suite) | **Uber** lun. 26 |
 | **S3** · 2-8 nov | Script de **Claude #1** ; relevé des prix en euros (cartes, RAM) | Voix et montage de **Waze**, en réutilisant les cartes d'Uber ; derniers essais et consommation de la 5080 | **Coût Claude** lun. 2 |
 | **S4** · 9-15 nov | Recherche et script du **pseudo** (filtre de Bloom) | Voix et montage de **Claude #1** ; 2-3 h d'animations pour le pixel | **Waze** lun. 9 |
