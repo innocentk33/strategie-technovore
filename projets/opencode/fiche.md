@@ -9,7 +9,7 @@
 | **Trafic visé** | Recherche (« opencode piraté », « opencode hack ») : aucune vidéo longue en français au 20/10, seulement des Shorts à moins de 40 vues |
 | **Référence** | Code Bear, *OpenCode Got Hacked BADLY*, 170 K vues en 2 jours (9 min 33) ; Kai, 19 min |
 | **Différence** | Le code public : la base référencée au lieu d'être supprimée, la colonne `credentials` en clair, et pourquoi on ne peut pas hasher une clé API |
-| **Publication** | À fixer. Recommandé : jeu. 22/10 à 18 h, après les 48 premières heures d'ArtCraft. Le Short ArtCraft passe alors au dim. 25/10 |
+| **Publication** | **Publiée le mer. 21/10 à 13 h** : [youtube.com/watch?v=LeZ9hgwvXy0](https://www.youtube.com/watch?v=LeZ9hgwvXy0) |
 
 **Titres** :
 1. *OpenCode s'est fait pirater : pourquoi tes clés API valent de l'or*
@@ -21,5 +21,7 @@
 **Écran de fin** : vers ArtCraft (même public Claude et code).
 
 **Script** : [`script-v1.md`](script-v1.md) → grill [`grill-v1.md`](grill-v1.md) → [`script.md`](script.md) (v2).
+
+**Montage** : [`STORYBOARD.md`](STORYBOARD.md) (8:35,9). **Upload** : [`upload.md`](upload.md) (titres à tester, description, tags, chapitres, réglages), sous-titres [`opencode.fr.srt`](opencode.fr.srt) et [`opencode.en.srt`](opencode.en.srt).
 
 **À recontrôler juste avant la voix** : y a-t-il un post-mortem d'OpenCode (point d'entrée, nombre de clés) ? Si oui, mettre à jour la section 4 (« on ne sait pas »).

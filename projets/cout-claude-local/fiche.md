@@ -1,6 +1,6 @@
 # Combien coûte Claude en local ?
 
-> Remplace le guide IA en local 2027 le 4 janvier (le guide a été fusionné dans [Claude ou mon PC ? #1](../claude-ou-mon-pc-1/fiche.md)). Planning : [`calendrier.md`](../../calendrier.md), S9-S13. Étude source : [`etudes/kai.md`](../../etudes/kai.md), idée 2.
+> **Publication : lun. 2 nov. à 18 h**, avancée du 4 janv. le 21/10. Format **calculé** : les règles sont dans [`strategie.md`](../../strategie.md), pilier 2. Planning : [`calendrier.md`](../../calendrier.md), S1-S3. Études : [`etudes/kai.md`](../../etudes/kai.md) (idée 2) et [`etudes/morganscode.md`](../../etudes/morganscode.md).
 
 **Origine** : la série de Kai « What Would It Cost to Run [modèle] Locally? », qui compte 4 de ses 7 plus gros succès. Par exemple [Claude Fable 5](https://www.youtube.com/watch?v=fXWFSTSvnVM) (105 K vues, x38), [Claude Opus 5](https://www.youtube.com/watch?v=yJCHNdQ8sLs) (166 K vues, x23,5) et [DeepSeek V4.1 Flash](https://www.youtube.com/watch?v=04ePeOyRN0k) (529 K vues, x20,9). Personne ne fait ce format en français.
 
@@ -18,14 +18,14 @@
 2. Curiosité : *J'ai calculé le PC qu'il faut pour faire tourner Claude chez moi*
 3. Mixte (recommandé) : *Combien coûte Claude Opus 5.5 en local ? (j'ai fait le calcul)*
 
-**Miniature** (style Kai, sans visage) : fond noir, le logo Claude à gauche, une flèche, une baie de serveurs à droite, et le prix final en très gros (à calculer).
+**Miniature** (21/10, charte verte) : [`vert-05.png`](../../ressources/miniatures/rendus/vert-05.png). Ta 5080 minuscule au pied d'une baie de serveurs géante, « Claude chez moi, » et le prix calculé dans l'étiquette (« ?? ??? € » pour l'instant). L'ancienne idée (logo Claude, flèche, serveurs) était la mise en page de la série de Kai.
 
 **Contenu** (la structure de Kai, avec les différences de Technovore) :
 1. **Hook** : « On peut remplacer Claude par une IA locale », puis une vraie question trouvée sur Reddit ou X, avec des réponses qui se contredisent.
-2. **La transparence d'abord** : Anthropic ne publie ni la taille de Claude ni ses poids. On calcule donc avec le plus gros modèle ouvert de même niveau, et on le dit tout de suite.
+2. **La transparence d'abord** : Anthropic ne publie ni la taille de Claude ni ses poids. On calcule donc avec le plus gros modèle ouvert de même niveau, et on le dit tout de suite. Candidat au 21/10 : **DeepSeek V4.1 Flash** (552 milliards de paramètres, ~16 milliards actifs par token), que DeepSeek place au niveau d'Opus 5 en code. Ces chiffres viennent de Morgans Code : à revérifier dans la fiche du modèle et le tableau de DeepSeek.
 3. **Le calcul de mémoire** (paramètres × bits), **du moins cher au plus cher** : ta 5080 (16 Go), un Mac Studio, un serveur à 8 GPU, puis plusieurs serveurs.
 4. **Ce qui te démarque de Kai** : les prix en euros et l'électricité au tarif français. Kai raisonne à 15 cents le kWh, et les Européens le lui reprochent en commentaire.
-5. **Le retournement** : ce qui tient vraiment sur ta 5080 (rappel de l'épisode #1). En pratique, on fait le quotidien en local et les tâches les plus dures dans le cloud.
+5. **Le retournement** : ce qui tient vraiment sur ta 5080, avec tes premiers essais. La réponse complète arrive dans l'épisode #1, le 16 nov. : annonce-le dans l'écran de fin. En pratique, on fait le quotidien en local et les tâches les plus dures dans le cloud.
 6. **Le verdict selon ton profil.**
 
 **Points à vérifier** :
@@ -33,9 +33,3 @@
 - le plus gros modèle ouvert du moment et sa taille officielle ;
 - les prix de location de serveurs, en euros ;
 - le tarif réglementé de l'électricité en vigueur.
-
-## Shorts
-
-1. 7 janv : « Pour faire tourner Claude chez toi, il te faudrait… » (le chiffre final).
-2. Réserve : « Ce que consomme une IA de pointe en électricité » (au tarif français).
-3. Réserve : « Ta carte graphique contre un serveur à 8 GPU ».

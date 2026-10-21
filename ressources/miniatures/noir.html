@@ -1,0 +1,149 @@
+<!doctype html>
+<!-- Miniatures « noir premium », pilier « Le génie derrière l'app » (RECETTE-premium.md + corrections de coach.md). Variante via ?n=1, 1b, 3, 4, 6, 7, 8 ; rendu : voir propositions.md -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:"Inter"; src:url(fonts/inter-latin-wght.woff2) format("woff2"); font-weight:100 900; }
+  :root { --ink:#f5f5f7; --mid:#8e8e93; --p1:#1c1c1e; --red:#ff453a; --mint:#07c095; --accent:var(--red); }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1280px; height:720px; overflow:hidden; background:#000; }
+  body { position:relative; font-family:Inter, sans-serif; color:var(--ink); }
+  /* Fond : grille sombre + halo de la couleur d'accent derrière l'objet (comme uber-b), pour que la tuile se détache du mode sombre */
+  .grid { position:absolute; inset:0;
+    background-image:linear-gradient(rgba(58,58,60,.55) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(58,58,60,.55) 1.5px, transparent 1.5px);
+    background-size:64px 64px; background-position:-14px -26px;
+    -webkit-mask-image:radial-gradient(ellipse 70% 80% at 30% 50%, #000 20%, transparent 75%); }
+  .glow { position:absolute; left:-130px; top:-70px; width:870px; height:870px; border-radius:50%;
+    background:radial-gradient(circle, color-mix(in srgb, var(--accent) 28%, transparent) 0%, transparent 60%); }
+  .t { position:absolute; white-space:nowrap; font-weight:800; letter-spacing:-.04em; line-height:.92; }
+  .ghost { color:var(--mid); font-weight:700; letter-spacing:-.02em; }
+  .r { color:var(--red); } .m { color:var(--mint); }
+  .app { position:absolute; border-radius:22.5%; display:flex; align-items:center; justify-content:center;
+    box-shadow:inset 0 0 0 2px rgba(255,255,255,.12), 0 30px 60px rgba(0,0,0,.8); }
+  .app svg { width:54%; height:54%; fill:#fff; }
+  .phone { position:absolute; border-radius:69px; padding:11px; background:linear-gradient(135deg, #3a3a3c, #1c1c1e 30%, #1c1c1e 70%, #2c2c2e);
+    box-shadow:0 0 0 2px #48484a, 0 40px 90px rgba(0,0,0,.9), 0 0 80px color-mix(in srgb, var(--accent) 25%, transparent); }
+  .phone .screen { width:100%; height:100%; border-radius:59px; overflow:hidden; }
+  .phone svg { display:block; width:100%; height:100%; }
+  .phone .island { position:absolute; top:25px; left:50%; width:127px; height:37px; margin-left:-63px; border-radius:20px; background:#000; }
+  .card { position:absolute; border-radius:32px; background:var(--p1); box-shadow:0 0 0 1px rgba(255,255,255,.1), 0 40px 90px rgba(0,0,0,.9); }
+  .brand { position:absolute; left:34px; bottom:26px; display:flex; align-items:center; gap:10px; font-weight:600; font-size:19px; color:var(--mid); letter-spacing:-.01em; }
+  .brand i { width:11px; height:11px; border-radius:50%; background:var(--mint); box-shadow:0 0 10px var(--mint); }
+  svg.arrow { position:absolute; inset:0; width:1280px; height:720px; }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="grid"></div>
+<div id="stage"></div>
+<div class="brand"><i></i>technovore</div>
+<script src="logos/logos.js"></script>
+<script>
+  const q = new URLSearchParams(location.search), n = q.get('n') || '1';
+  const stage = document.getElementById('stage');
+  const ico = (k, fill = '#fff') => `<svg viewBox="0 0 24 24"><path d="${LOGO[k]}" fill="${fill}"/></svg>`;
+  const app = (k, x, y, size, bg) => `<div class="app" style="left:${x}px;top:${y}px;width:${size}px;height:${size}px;background:${bg}">${ico(k)}</div>`;
+  // Place le halo centré sur (x, y), dans la couleur d'accent donnée
+  const halo = (x, y, color) => {
+    const g = document.querySelector('.glow');
+    g.style.left = x - 435 + 'px'; g.style.top = y - 435 + 'px';
+    document.body.style.setProperty('--accent', color);
+  };
+
+  // Voiture vue de dessus (miniatures Uber), centrée sur (x, y)
+  const car = (x, y, rot, { ghost = false, s = 1 } = {}) => `
+    <g transform="translate(${x} ${y}) rotate(${rot}) scale(${s}) translate(-33 -60)">
+      <g ${ghost ? 'opacity=".28"' : ''} filter="url(#shadow)"><rect x="2" y="0" width="62" height="120" rx="26" fill="#f5f5f7"/>
+        <path d="M10 32 Q33 22 56 32 L51 52 Q33 47 15 52 Z" fill="#1c1c1e"/><rect x="15" y="55" width="36" height="32" rx="7" fill="#d1d1d6"/>
+        <path d="M15 90 Q33 95 51 90 L54 106 Q33 111 12 106 Z" fill="#1c1c1e"/></g>
+      ${ghost ? `<rect x="-10" y="-12" width="86" height="144" rx="34" fill="none" stroke="#ff453a" stroke-width="9" stroke-dasharray="18 12" filter="url(#redglow)"/>` : ''}
+    </g>`;
+  // Carte sombre de ville (viewBox 0 0 608 1268), avec ou sans la rivière
+  const city = (extra, river = true) => {
+    let s = `<defs><filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".7"/></filter>
+      <filter id="redglow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#ff453a" flood-opacity=".9"/></filter></defs>
+      <rect width="608" height="1268" fill="#0e1114"/><g transform="rotate(16 304 640)" stroke="#1e2229" stroke-width="10">`;
+    for (let i = -8; i <= 14; i++) s += `<line x1="${i * 96}" y1="-400" x2="${i * 96}" y2="1700"/>`;
+    for (let j = -6; j <= 20; j++) s += `<line x1="-400" y1="${j * 104}" x2="1100" y2="${j * 104}"/>`;
+    return s + `</g>${river ? '<path d="M-40 250 C 160 330, 300 200, 460 290 S 640 410, 700 370" stroke="#0d1a2b" stroke-width="56" fill="none"/>' : ''}
+      <g stroke="#2c313a" stroke-width="24" fill="none" stroke-linecap="round"><path d="M-40 990 L 700 530"/><path d="M118 -40 L 468 1320"/></g>${extra}`;
+  };
+  // Téléphone incliné en 3D, cadré serré et coupé en bas (comme uber-b), et son icône d'appli qui chevauche le coin
+  const phone = svg => `<div class="phone" style="left:113px;top:64px;width:427px;height:867px;transform:perspective(1600px) rotateY(16deg) rotateX(5deg) rotateZ(-5deg);transform-origin:50% 35%">
+      <div class="screen"><svg viewBox="0 0 608 1268">${svg}</svg></div><div class="island"></div></div>`;
+  const tile = (inner, bg) => `<div class="app" style="left:427px;top:43px;width:167px;height:167px;background:${bg};transform:rotate(6deg)">${inner}</div>`;
+  const me = (x, y) => `<circle cx="${x}" cy="${y}" r="64" fill="#0a84ff" opacity=".18"/><circle cx="${x}" cy="${y}" r="18" fill="#0a84ff" stroke="#fff" stroke-width="6"/>`;
+  const uber = () => {
+    halo(240, 360, '#ff453a');
+    return phone(city(car(154, 450, 35) + car(184, 840, 110) + car(474, 870, -20) + car(454, 490, -60, { ghost: true, s: 1.3 }) + me(304, 640))) +
+      tile('<span style="font:500 61px Inter;letter-spacing:-.03em">Uber</span>', '#000;border:2px solid #48484a') +
+      `<svg class="arrow" viewBox="0 0 1920 1080"><g fill="none" stroke="#f5f5f7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M970 470 Q 840 440 740 550"/><path d="M792 545 L740 550 L750 500"/></g></svg>`;
+  };
+
+  const V = {
+    '1': () => { // Uber : uber-b reprise telle quelle (« elle existe ? »)
+      stage.innerHTML = uber() + `<div class="t" style="left:665px;top:236px;font-size:170px">elle</div>
+        <div class="t" style="left:665px;top:388px;font-size:146px">existe<span class="r">&#8239;?</span></div>`;
+    },
+    '1b': () => { // Uber, variante de texte pour le test A/B (même décor)
+      stage.innerHTML = uber() + `<div class="t ghost" style="left:668px;top:250px;font-size:58px">sa position est</div>
+        <div class="t" style="left:662px;top:318px;font-size:150px">devinée<span class="r">.</span></div>`;
+    },
+    '3': () => { // Waze : personne ne l'a signalé, il savait.
+      halo(240, 360, '#ff453a');
+      const route = 'M304 1300 L 304 900 C 304 800, 380 760, 430 700 L 470 560 C 480 500, 430 470, 380 440 L 300 380 L 300 -40';
+      const svg = city(`<path d="M304 900 L 304 380" stroke="#ff453a" stroke-width="34" stroke-linecap="round"/>
+        <path d="${route}" stroke="#0a84ff" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>` +
+        car(304, 560, 0, { s: .85 }) + car(304, 690, 0, { s: .85 }) + car(304, 820, 0, { s: .85 }) + me(304, 1080), false);
+      stage.innerHTML = phone(svg) + tile(ico('waze'), 'linear-gradient(160deg, #5fdcff, #1fb6ee)') +
+        `<div class="t ghost" style="left:668px;top:258px;font-size:52px">personne ne l'a signalé,</div>
+        <div class="t" style="left:662px;top:322px;font-size:150px">il savait<span class="r">.</span></div>`;
+    },
+    '4': () => { // Pixel : un écran blanc, et la loupe sur ses sous-pixels
+      halo(330, 360, '#f5f5f7');
+      let s = '';
+      const cols = ['#ff3b30', '#30d158', '#0a84ff'];
+      for (let j = 0; j < 8; j++) for (let i = 0; i < 14; i++) for (let c = 0; c < 3; c++)
+        s += `<rect x="${i * 54 + c * 17}" y="${j * 92}" width="12" height="78" rx="5" fill="${cols[c]}"/>`;
+      stage.innerHTML = `<div style="position:absolute;left:40px;top:96px;width:290px;height:528px;border-radius:44px;background:#fff;box-shadow:0 0 0 10px #1c1c1e, 0 0 0 12px #48484a, 0 40px 90px rgba(0,0,0,.9)"></div>
+        <div style="position:absolute;left:170px;top:150px;width:420px;height:420px;border-radius:50%;overflow:hidden;background:#000;box-shadow:0 0 0 10px #2c2c2e, 0 0 0 13px #636366, 0 40px 100px rgba(0,0,0,.95)">
+          <div style="position:absolute;inset:0;-webkit-mask-image:radial-gradient(circle at 50% 50%, #000 45%, transparent 72%);filter:drop-shadow(0 0 8px rgba(255,255,255,.25))">
+          <svg viewBox="0 0 756 736" width="560" height="545" style="margin:-60px 0 0 -70px;transform:rotate(-8deg)">${s}</svg></div></div>
+        <div class="t ghost" style="left:668px;top:258px;font-size:62px">il n'y a pas</div>
+        <div class="t" style="left:662px;top:330px;font-size:150px">de blanc<span class="r">.</span></div>`;
+    },
+    '6': () => { // WhatsApp : l'image garde les chiffres, c'est le titre qui change
+      halo(310, 330, '#25d366');
+      stage.innerHTML = app('whatsapp', 120, 140, 380, 'linear-gradient(160deg, #5ae27f, #1fae4b)') +
+        `<div class="t ghost" style="left:640px;top:166px;font-size:73px">900 millions,</div>
+        <div class="t" style="left:634px;top:262px;font-size:220px">50</div>
+        <div class="t" style="left:640px;top:470px;font-size:100px">ingénieurs<span class="m">.</span></div>`;
+    },
+    '7': () => { // Google : il triche.
+      halo(330, 360, '#ff453a');
+      const G = `<svg viewBox="0 0 48 48" width="70" height="70"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>`;
+      stage.innerHTML = `<div class="card" style="left:50px;top:150px;width:600px;height:420px;padding:44px">${G}
+          <div style="margin-top:40px;height:110px;border-radius:20px;background:#2c2c2e;box-shadow:inset 0 0 0 4px #ff453a;display:flex;align-items:center;padding:0 30px;font-size:54px;font-weight:700;letter-spacing:-.03em">technovore
+            <span style="margin-left:auto;width:54px;height:54px;border-radius:50%;background:#ff453a;color:#000;font-size:40px;font-weight:900;display:flex;align-items:center;justify-content:center">!</span></div>
+          <div style="margin-top:26px;font-size:40px;color:#ff453a;font-weight:700;letter-spacing:-.02em">Ce nom est déjà pris.</div></div>
+        <div class="t" style="left:700px;top:290px;font-size:150px">il triche<span class="r">.</span></div>`;
+    },
+    '8': () => { // Sony : acheté. pas à toi.
+      halo(300, 370, '#ff453a');
+      stage.innerHTML = `<img src="images/ps5.png" style="position:absolute;left:150px;top:100px;height:540px;filter:grayscale(1) brightness(.62)">
+        <div class="t ghost" style="left:640px;top:236px;font-size:72px">acheté.</div>
+        <div class="t" style="left:634px;top:318px;font-size:150px">pas à toi<span class="r">.</span></div>`;
+    },
+  };
+  (V[n] || V['1'])();
+  // Chaque texte doit tenir avant la marge droite de 48 px : réduit sa police sinon
+  document.fonts.ready.then(() => document.querySelectorAll('.t').forEach(e => {
+    let fs = parseFloat(e.style.fontSize);
+    while (e.getBoundingClientRect().right > 1232 && fs > 20) e.style.fontSize = (fs -= 2) + 'px';
+  }));
+</script>
+<script src="export.js"></script>
+</body>
+</html>

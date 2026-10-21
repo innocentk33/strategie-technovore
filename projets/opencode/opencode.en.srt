@@ -1,0 +1,784 @@
+1
+00:00:00,760 --> 00:00:04,050
+35 million tokens.
+Basically, enough to write
+
+2
+00:00:04,100 --> 00:00:09,050
+the whole Harry Potter saga more than
+20 times, burned in less than a day,
+
+3
+00:00:09,100 --> 00:00:12,620
+with Max Weinbach's keys,
+stolen from OpenCode.
+
+4
+00:00:12,840 --> 00:00:14,930
+And yet he didn't run anything.
+
+5
+00:00:14,980 --> 00:00:19,090
+Almost 9,000 requests, his
+OpenAI credit at −$2.15
+
+6
+00:00:19,140 --> 00:00:22,170
+and $264 gone on his Anthropic key.
+
+7
+00:00:22,220 --> 00:00:25,370
+And in his logs, a request
+in Chinese: "Reply ok."
+
+8
+00:00:25,420 --> 00:00:26,620
+The AI replies…
+
+9
+00:00:27,920 --> 00:00:31,110
+Someone paid, with someone else's
+money, to make an AI say "ok".
+
+10
+00:00:31,160 --> 00:00:32,130
+But why?
+
+11
+00:00:32,180 --> 00:00:36,190
+OpenCode's code is public, so
+we'll see where these keys were
+
+12
+00:00:36,240 --> 00:00:39,600
+stored and why they couldn't
+be hashed like a password.
+
+13
+00:00:39,860 --> 00:00:42,190
+And if you've ever pasted
+an API key somewhere,
+
+14
+00:00:42,240 --> 00:00:45,000
+stay until the end, because that's
+your checklist for tonight.
+
+15
+00:00:48,400 --> 00:00:49,630
+So, what is OpenCode?
+
+16
+00:00:49,680 --> 00:00:52,830
+OpenCode is an open-source coding
+agent that runs in your terminal,
+
+17
+00:00:52,880 --> 00:00:56,940
+a bit like Claude Code or Codex, but
+you plug it into any model you want.
+
+18
+00:00:57,340 --> 00:00:59,790
+Except there are actually two OpenCodes.
+
+19
+00:00:59,840 --> 00:01:02,620
+The desktop app and the Console.
+
+20
+00:01:02,700 --> 00:01:05,470
+The Console is a web
+dashboard where you can
+
+21
+00:01:05,520 --> 00:01:08,640
+save your own OpenAI,
+Anthropic or Google keys.
+
+22
+00:01:08,880 --> 00:01:10,980
+It's called "bring your own key".
+
+23
+00:01:11,500 --> 00:01:14,210
+Personally, I've never pasted an
+API key into a tool like that.
+
+24
+00:01:14,260 --> 00:01:16,280
+I tend to be very careful.
+
+25
+00:01:16,920 --> 00:01:18,430
+So it's the Console that got hit.
+
+26
+00:01:18,480 --> 00:01:21,910
+That same evening, Dax Raad
+from OpenCode clarified
+
+27
+00:01:21,960 --> 00:01:24,180
+that it's the Console,
+not OpenCode itself.
+
+28
+00:01:24,440 --> 00:01:26,050
+"Those keys never come to us."
+
+29
+00:01:26,100 --> 00:01:29,210
+So basically, if you only
+use the app, you can relax.
+
+30
+00:01:29,260 --> 00:01:30,860
+The others... we're not so sure.
+
+31
+00:01:34,460 --> 00:01:37,670
+The night of October 17, 2
+a.m., according to OpenCode,
+
+32
+00:01:37,720 --> 00:01:40,070
+the keys may have been
+exposed from that time on.
+
+33
+00:01:40,120 --> 00:01:42,010
+During the day, the bills climb.
+
+34
+00:01:42,060 --> 00:01:43,770
+Max gets an email from Google.
+
+35
+00:01:43,820 --> 00:01:45,850
+His limits have been
+"temporarily lowered".
+
+36
+00:01:45,900 --> 00:01:47,380
+Google nerfed his account.
+
+37
+00:01:48,060 --> 00:01:51,400
+5:30 p.m., Matt Johansen posts
+the email customers received.
+
+38
+00:01:51,480 --> 00:01:53,720
+"Confirmed. OpenCode hacked. Keys stolen."
+
+39
+00:01:53,880 --> 00:01:56,810
+8 p.m., OpenCode confirms a "large scale
+
+40
+00:01:56,860 --> 00:02:01,160
+distillation attack", with 1.4%
+of Console users affected.
+
+41
+00:02:01,240 --> 00:02:03,140
+Remember that word: distillation.
+
+42
+00:02:03,900 --> 00:02:05,750
+Anthropic and Google block the keys.
+
+43
+00:02:05,800 --> 00:02:08,480
+OpenAI refunds, according to TechCrunch.
+
+44
+00:02:08,660 --> 00:02:10,890
+Also according to TechCrunch,
+while analyzing the attack,
+
+45
+00:02:10,940 --> 00:02:13,910
+Dax found it "a bit frustrating"
+that the AIs refused to help him.
+
+46
+00:02:13,960 --> 00:02:17,630
+The guardrails meant to block hackers
+were actually blocking the victim.
+
+47
+00:02:17,680 --> 00:02:20,650
+But how do keys end up out in the wild?
+
+48
+00:02:20,700 --> 00:02:21,840
+Let's open the code.
+
+49
+00:02:24,940 --> 00:02:28,870
+The Console's code is on
+GitHub, with its full history.
+
+50
+00:02:28,920 --> 00:02:31,370
+Until October 12, there's
+a "provider" table
+
+51
+00:02:31,420 --> 00:02:34,610
+with a "credentials" column, of type text.
+
+52
+00:02:34,660 --> 00:02:37,010
+When you save your key, it lands
+
+53
+00:02:37,060 --> 00:02:39,520
+in that column, exactly as you pasted it.
+
+54
+00:02:39,660 --> 00:02:41,650
+The proof is the settings page.
+
+55
+00:02:41,700 --> 00:02:44,750
+It shows your key masked:
+the first 8 characters,
+
+56
+00:02:44,800 --> 00:02:47,230
+3 dots and the last 8 characters.
+
+57
+00:02:47,280 --> 00:02:50,530
+And that mask is computed
+from the stored value.
+
+58
+00:02:50,580 --> 00:02:53,840
+To show you the end of your
+key, they need your key.
+
+59
+00:02:55,140 --> 00:02:57,170
+So it's fair to ask: why
+
+60
+00:02:57,220 --> 00:02:58,930
+didn't they hash it like a password?
+
+61
+00:02:58,980 --> 00:03:00,780
+Take two seconds to think about it.
+
+62
+00:03:02,460 --> 00:03:05,490
+A password, if the site
+never needs to read it back,
+
+63
+00:03:05,540 --> 00:03:07,680
+it hashes what you type
+
+64
+00:03:07,740 --> 00:03:09,450
+and compares the two fingerprints.
+
+65
+00:03:09,500 --> 00:03:12,570
+An API key has to be sent in full
+to the provider with every request.
+
+66
+00:03:12,620 --> 00:03:14,470
+A fingerprint is useless to OpenAI.
+
+67
+00:03:14,520 --> 00:03:18,250
+The only one who can make do with a
+fingerprint is whoever makes the key.
+
+68
+00:03:18,300 --> 00:03:20,030
+They just check the one you show them.
+
+69
+00:03:20,080 --> 00:03:23,660
+A tool that uses it on your behalf
+has to be able to read it back.
+
+70
+00:03:23,880 --> 00:03:25,930
+So an API key gets encrypted, with a
+
+71
+00:03:25,980 --> 00:03:27,930
+second key stored somewhere
+else, in a vault.
+
+72
+00:03:27,980 --> 00:03:31,310
+To read it, the hacker has to
+steal two things instead of one.
+
+73
+00:03:31,360 --> 00:03:33,580
+In this code, there's no vault.
+
+74
+00:03:34,160 --> 00:03:36,590
+To be fair, the host
+may encrypt its disks.
+
+75
+00:03:36,640 --> 00:03:39,310
+That protects you if someone
+walks off with the disk,
+
+76
+00:03:39,360 --> 00:03:42,320
+not against someone who can
+query the database directly.
+
+77
+00:03:42,680 --> 00:03:45,830
+If you like seeing this kind of thing
+under the hood of the tools you
+
+78
+00:03:45,880 --> 00:03:48,870
+use every day, subscribe
+to my channel, Technovore.
+
+79
+00:03:48,920 --> 00:03:52,640
+We open them up one by one, and it's the only
+subscription that will never charge you anything.
+
+80
+00:03:55,940 --> 00:03:59,150
+In the email sent to victims,
+OpenCode mentions access
+
+81
+00:03:59,200 --> 00:04:02,180
+to a "legacy system that we were in
+the process of decommissioning".
+
+82
+00:04:02,280 --> 00:04:04,560
+Nothing links what follows to that system.
+
+83
+00:04:04,880 --> 00:04:06,770
+OpenCode hasn't said
+where the hacker got in.
+
+84
+00:04:06,820 --> 00:04:09,570
+But honestly, it's a trap
+every dev should know about.
+
+85
+00:04:09,620 --> 00:04:14,000
+On October 12, a commit removes the
+old database from the Console's code.
+
+86
+00:04:15,660 --> 00:04:17,790
+In their infrastructure
+code, this production
+
+87
+00:04:17,840 --> 00:04:20,190
+database was never created by the code.
+
+88
+00:04:20,240 --> 00:04:21,650
+It's only referenced.
+
+89
+00:04:21,700 --> 00:04:23,370
+Basically: it exists.
+
+90
+00:04:23,420 --> 00:04:24,420
+It's there.
+
+91
+00:04:24,900 --> 00:04:28,350
+Its password, created by the code,
+is deleted on the next deploy.
+
+92
+00:04:28,400 --> 00:04:29,600
+The database stays.
+
+93
+00:04:30,020 --> 00:04:33,370
+Basically, it's like removing a
+character from your party in a game.
+
+94
+00:04:33,420 --> 00:04:35,130
+They disappear from your screen,
+but they're still waiting
+
+95
+00:04:35,180 --> 00:04:37,680
+at the tavern with their whole inventory.
+
+96
+00:04:41,100 --> 00:04:42,470
+I still have my question from the start.
+
+97
+00:04:42,520 --> 00:04:45,080
+Why pay, with someone
+else's money, for an "ok"?
+
+98
+00:04:45,260 --> 00:04:48,740
+To answer that, you need to know
+what an API key is worth in 2026.
+
+99
+00:04:49,160 --> 00:04:52,570
+The word in the announcement, distillation,
+means copying off the top student.
+
+100
+00:04:52,620 --> 00:04:55,530
+You ask a big model millions
+of questions and you train
+
+101
+00:04:55,580 --> 00:04:59,010
+a small model on the answers,
+for much less money.
+
+102
+00:04:59,060 --> 00:05:01,930
+In February 2026, Anthropic
+accused DeepSeek,
+
+103
+00:05:01,980 --> 00:05:06,170
+Moonshot and MiniMax of doing this
+with about 24,000 fake accounts.
+
+104
+00:05:06,220 --> 00:05:08,830
+On October 12, they
+announce new defenses, with
+
+105
+00:05:08,880 --> 00:05:11,940
+fake accounts often banned
+in under two hours.
+
+106
+00:05:12,340 --> 00:05:16,360
+And one of those protections only
+covers accounts created from August 31.
+
+107
+00:05:16,600 --> 00:05:18,670
+This part is a hypothesis,
+nobody has confirmed it.
+
+108
+00:05:18,720 --> 00:05:22,350
+For a hacker, a real developer's
+account opened before
+
+109
+00:05:22,400 --> 00:05:25,680
+that date is probably worth much
+more than a brand-new fake account.
+
+110
+00:05:25,900 --> 00:05:27,790
+And stolen keys get resold.
+
+111
+00:05:27,840 --> 00:05:31,410
+In its September report, Anthropic
+writes that stealing API keys
+
+112
+00:05:31,460 --> 00:05:34,450
+has become the sole objective
+of several criminal groups.
+
+113
+00:05:34,500 --> 00:05:38,200
+Resale networks rotate stolen
+keys until they're drained.
+
+114
+00:05:38,400 --> 00:05:41,460
+It's a bit like farming,
+but with your credit card.
+
+115
+00:05:41,840 --> 00:05:45,490
+In July, with no link to
+the leak, Dax said he had
+
+116
+00:05:45,540 --> 00:05:49,440
+banned a single person who ran
+8,000 fake OpenCode accounts.
+
+117
+00:05:49,680 --> 00:05:52,190
+$480,000 of tokens resold every month.
+
+118
+00:05:52,240 --> 00:05:53,440
+Come on, that's too much.
+
+119
+00:05:53,580 --> 00:05:57,900
+In the end, an API key is a credit
+card already plugged into an AI.
+
+120
+00:05:58,320 --> 00:05:59,310
+So, that "ok"?
+
+121
+00:05:59,360 --> 00:06:01,110
+Max posted it as an example.
+
+122
+00:06:01,160 --> 00:06:02,870
+One request out of almost 9,000.
+
+123
+00:06:02,920 --> 00:06:04,520
+Not necessarily the first one.
+
+124
+00:06:04,760 --> 00:06:06,010
+On its own, it proves nothing.
+
+125
+00:06:06,060 --> 00:06:08,550
+But you don't train a
+model with "reply ok".
+
+126
+00:06:08,600 --> 00:06:09,890
+It looks more like a test.
+
+127
+00:06:09,940 --> 00:06:11,590
+Does this key work?
+
+128
+00:06:11,640 --> 00:06:14,770
+Filing a key theft under
+the word distillation:
+
+129
+00:06:14,820 --> 00:06:17,190
+Nathan Lambert finds that very odd.
+
+130
+00:06:17,240 --> 00:06:19,770
+And a request in Chinese
+doesn't tell you who sent it.
+
+131
+00:06:19,820 --> 00:06:23,050
+To date, OpenCode has published neither
+the entry point nor the number of keys.
+
+132
+00:06:23,100 --> 00:06:24,940
+We don't know who, or why.
+
+133
+00:06:28,740 --> 00:06:30,130
+Now, your own key.
+
+134
+00:06:30,180 --> 00:06:34,480
+The day it leaks, how much you lose
+depends mostly on one setting: your cap.
+
+135
+00:06:34,840 --> 00:06:37,170
+Look at Max's −$2.15.
+
+136
+00:06:37,220 --> 00:06:38,830
+His credit went below zero.
+
+137
+00:06:38,880 --> 00:06:41,400
+The meter doesn't stop exactly at zero.
+
+138
+00:06:41,600 --> 00:06:44,350
+At OpenAI, a spend alert blocks nothing.
+
+139
+00:06:44,400 --> 00:06:45,780
+It's in their docs.
+
+140
+00:06:45,940 --> 00:06:47,990
+So you need a real limit, separately.
+
+141
+00:06:48,040 --> 00:06:50,720
+And even that limit isn't
+enforced instantly.
+
+142
+00:06:50,940 --> 00:06:52,630
+At Anthropic, it's prepaid.
+
+143
+00:06:52,680 --> 00:06:54,260
+When it's empty, it stops.
+
+144
+00:06:54,760 --> 00:06:57,120
+Unless you turned on auto-reload.
+
+145
+00:06:57,200 --> 00:07:00,400
+Then your balance tops up with
+your card, for the hacker.
+
+146
+00:07:00,720 --> 00:07:03,080
+Honestly, the worst
+subscription of your life.
+
+147
+00:07:05,140 --> 00:07:07,850
+With no setting, your
+cap is your tier's cap.
+
+148
+00:07:07,900 --> 00:07:12,000
+$500 a month on the first tier,
+$200,000 at the very top.
+
+149
+00:07:12,100 --> 00:07:14,310
+At Google, the Gemini bill can lag
+
+150
+00:07:14,360 --> 00:07:16,630
+by up to about ten minutes.
+
+151
+00:07:16,680 --> 00:07:18,980
+For a script running flat
+out, that's a long time.
+
+152
+00:07:21,000 --> 00:07:21,890
+So, tonight:
+
+153
+00:07:21,940 --> 00:07:25,890
+1. If you got the email, revoke your
+key at the provider right away.
+
+154
+00:07:25,940 --> 00:07:28,320
+Deleting it from the
+Console doesn't disable it.
+
+155
+00:07:28,440 --> 00:07:31,510
+2. No email, but a Claude key in OpenCode?
+
+156
+00:07:31,560 --> 00:07:34,140
+Anthropic recommends creating
+a new one, to be safe.
+
+157
+00:07:34,340 --> 00:07:35,770
+3. One key per tool.
+
+158
+00:07:35,820 --> 00:07:36,910
+If it leaks, you know where from.
+
+159
+00:07:36,960 --> 00:07:38,540
+And you only cut that one.
+
+160
+00:07:39,020 --> 00:07:42,060
+4. A real limit, and no auto-reload.
+
+161
+00:07:42,280 --> 00:07:43,850
+5. Delete forgotten keys.
+
+162
+00:07:43,900 --> 00:07:46,520
+We all have some lying
+around from an old tutorial.
+
+163
+00:07:46,820 --> 00:07:48,370
+As for me, I told you from the start,
+
+164
+00:07:48,420 --> 00:07:51,290
+I've never pasted a key
+into this kind of tool.
+
+165
+00:07:51,340 --> 00:07:53,230
+That said, I do plan to use OpenCode.
+
+166
+00:07:53,280 --> 00:07:55,990
+And after reading this code, I'm not about
+
+167
+00:07:56,040 --> 00:07:58,580
+to start pasting API keys everywhere.
+
+168
+00:07:58,860 --> 00:08:04,030
+On my RTX 5080, I can run
+local models with no API key.
+
+169
+00:08:04,080 --> 00:08:05,750
+The only bill is electricity.
+
+170
+00:08:05,800 --> 00:08:08,810
+Can that really replace
+a Claude subscription?
+
+171
+00:08:08,860 --> 00:08:12,790
+In the meantime, if you want to see
+Claude in good hands, it's right here:
+
+172
+00:08:12,840 --> 00:08:15,690
+a single developer
+recreated Adobe's 7 apps.
+
+173
+00:08:15,740 --> 00:08:20,660
+And the only key nobody can steal
+from you is the one you don't have.

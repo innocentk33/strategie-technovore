@@ -14,13 +14,8 @@
 **Titres** :
 1. Recherche : *Comment fonctionne WhatsApp ?*
 2. Curiosité : *900 millions d'utilisateurs. 50 ingénieurs.*
-3. Mixte (recommandé) : *Comment 50 ingénieurs faisaient tourner WhatsApp pour 900 millions de personnes*
+3. Mixte : *Comment 50 ingénieurs faisaient tourner WhatsApp pour 900 millions de personnes*
+4. Avec la miniature `noir-06` (recommandé depuis le 21/10, proposé par le coach) : *Le génie caché de WhatsApp : une équipe minuscule*
 
-**Miniature** : logo WhatsApp géant, minuscule groupe de silhouettes en dessous, texte « 50 ? ».
+**Miniature** (21/10, charte noire) : [`noir-06.png`](../../ressources/miniatures/rendus/noir-06.png). Icône WhatsApp, « 900 millions, 50 ingénieurs. ». Elle porte déjà les deux chiffres : le titre n'a plus besoin de les répéter (titre 4 ci-dessus).
 **Contenu** : Erlang, des serveurs très optimisés, la règle « faire peu, mais très bien ». L'angle reste distinct de la vidéo business de Thibaut Dcode (4 octobre).
-
-## Shorts
-
-1. 21 janv : « 1 ingénieur pour 18 millions de personnes. »
-2. Réserve : « Le langage des centraux téléphoniques qui fait tourner WhatsApp » (Erlang, créé chez Ericsson).
-3. Réserve : « Pas de pubs, pas de jeux, pas de gadgets : la règle de WhatsApp. »

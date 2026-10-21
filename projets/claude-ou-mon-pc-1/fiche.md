@@ -4,7 +4,7 @@
 
 **Origine** : « Le second pouvoir de votre carte graphique : héberger une IA en local sur une 5080 ». Inspiration : [Red Stapler, I ran Qwen3.8 27B on single 8GB Card!](https://www.youtube.com/watch?v=ye50BbXEczo).
 
-**Mis à jour le 18/10** : le titre met en avant ta carte de 16 Go, et la vidéo reprend le contenu du guide IA en local 2027 (voir [`archive/`](../../archive/README.md)). Elle sort 4 jours avant le Black Friday. Preuve : chez Kai, [Is 16GB All You Need for Serious Local LLM?](https://www.youtube.com/watch?v=i9mRnbdDYxk) fait 359 K vues en 10 jours, et ses vidéos sur le matériel et le coût font environ 2 fois plus de vues que ses tests de modèles (voir [`etudes/kai.md`](../../etudes/kai.md)).
+**Mis à jour le 18/10** : le titre met en avant ta carte de 16 Go, et la vidéo reprend le contenu du guide IA en local 2027 (voir [`archive/`](../../archive/README.md)). Elle sort le **16 nov. à 18 h**, 11 jours avant le Black Friday (avancée d'une semaine le 21/10). Preuve : chez Kai, [Is 16GB All You Need for Serious Local LLM?](https://www.youtube.com/watch?v=i9mRnbdDYxk) fait 359 K vues en 10 jours, et ses vidéos sur le matériel et le coût font environ 2 fois plus de vues que ses tests de modèles (voir [`etudes/kai.md`](../../etudes/kai.md)).
 
 | Champ | Détail |
 |---|---|
@@ -20,7 +20,7 @@
 2. Curiosité : *Ma carte graphique peut-elle remplacer mon abonnement Claude ?*
 3. Mixte (recommandé) : *16 Go de VRAM suffisent-ils pour remplacer Claude ?*
 
-**Miniature** (style Kai, sans visage) : fond sombre, la RTX 5080 au centre avec une étiquette « 16 Go », le logo Claude à côté, et en très gros « ÇA SUFFIT ? ».
+**Miniature** (21/10, pilier « IA chez moi » = charte verte) : [`vert-02.png`](../../ressources/miniatures/rendus/vert-02.png). Gabarit de la série : bandeau « CLAUDE OU MON PC », Claude à gauche, ta 5080 à droite avec « 16 Go » dans la baie du haut, « ? » au centre. L'ancienne idée (5080 + « ÇA SUFFIT ? ») reprenait la mise en page de Kai.
 
 **Contenu** :
 1. **La révélation (hook)** : on montre le résultat, « Claude Opus 5.5 ? Non, ma carte de 16 Go. »
@@ -32,10 +32,6 @@
    - tu as déjà une carte de 12 ou 16 Go ;
    - tu pars de zéro ;
    - tu n'en as pas besoin, reste sur l'abonnement.
-   Prix en euros relevés juste avant le script (14-15 nov.).
+   Prix en euros relevés juste avant le script (7-8 nov.).
 
-## Shorts
-
-1. 26 nov (veille du Black Friday) : « La carte graphique à ne pas acheter pour l'IA ».
-2. Réserve : la révélation (« Claude ou mon PC ? »).
-3. Réserve : « 16 Go de VRAM : ce qui rentre, ce qui ne rentre pas », le raté le plus parlant, ce que consomme ta 5080 pendant qu'elle code.
+**Le fil de la série** : ouvre sur la vidéo du 2 nov. (« la dernière fois, j'ai calculé ce qu'il faudrait pour faire tourner Claude chez moi… »), comme Morgans Code relie ses vidéos entre elles.

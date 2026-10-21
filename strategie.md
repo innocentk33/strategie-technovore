@@ -1,19 +1,34 @@
-# Stratégie Technovore v3 : le génie caché de la tech
+# Stratégie Technovore v4 : le génie caché de la tech
 
-> Version 3 du 11/10/2026. Elle remplace la v2 du 10/10, qui misait sur le fil rouge « louer ou posséder ».
-> Sources : vidIQ (vidéos qui dépassent la moyenne de leur chaîne, en anglais et en français), tes repérages (Uber, God's Eye, REA, Red Stapler, Waze, WhatsApp), et les âges de ton audience.
+> Version 4 du 21/10/2026. Elle garde le positionnement de la v3 (11/10) et change le rythme : une vidéo longue chaque lundi, plus de Shorts, un plan sur 6 mois, et un radar à chaque sortie.
+> Sources : vidIQ (vidéos qui dépassent la moyenne de leur chaîne, en anglais et en français), tes repérages (Uber, God's Eye, REA, Red Stapler, Waze, WhatsApp), les âges de ton audience, et les études [Kai](etudes/kai.md) et [Morgans Code](etudes/morganscode.md).
 
 **Tes choix :**
-- **Public** : France, Belgique et Suisse. **Âge** : 61 % de 18-24 ans, 33 % de 25-34 ans, 4 % de 35-44 ans. **94 % ont moins de 35 ans.**
+- **Public visé** : France, Belgique et Suisse. **Public réel** (avril-oct. 2026) : 63 % d'Afrique francophone, 36 % de France. **Âge** : 61 % de 18-24 ans, 33 % de 25-34 ans, 4 % de 35-44 ans. **94 % ont moins de 35 ans.**
 - **Envies** : l'IA en local et raconter la tech.
-- **Style** : voix off (ta voix clonée) et montage, sans visage.
-- **Rythme** : 2 vidéos longues par mois, en solo. **Objectif** : croissance.
-- **Ordre** : on commence par Uber, puis une vidéo d'IA locale, et on alterne. Le pixel peut venir tôt.
+- **Style** : ta voix (enregistrée au téléprompteur depuis ArtCraft, ou clonée) et du motion design, sans visage.
+- **Rythme** : **une vidéo longue par semaine, le lundi à 18 h, aucun Short** (décidé le 21/10), en solo. **Objectif** : croissance.
+- **IA sans tester** : pour les modèles trop gros pour ta 5080, tu fais le calcul à partir des sources, comme Kai et Morgans Code (décidé le 21/10).
 - **Flutter** : plus de nouvelles vidéos. **Chaîne** : on fait évoluer Technovore.
 
 ---
 
-## 0. Ce qui change depuis la v2
+## 0. Ce qui change
+
+### De la v3 à la v4 (21/10)
+
+| v3 | v4 | Pourquoi |
+|---|---|---|
+| 2 vidéos longues par mois, le lundi à 20 h | **1 vidéo longue par semaine, le lundi à 18 h** | Ta décision. Le guide de l'algorithme dit que la régularité compte plus que le volume : un rythme fixe de 4 par mois bat 12 vidéos irrégulières |
+| 1 Short par vidéo longue, en test jusqu'au 7/12 | **Plus aucun Short** | Ta décision. Sur un an, tes Shorts ont rapporté 2 abonnés, contre 772 pour les vidéos longues ; Kai les a abandonnés, et Morgans Code n'en fait pas |
+| Vidéos IA : tests sur ta 5080 | **Deux formats : testé** (ce qui tient dans 16 Go) **et calculé** (le reste) | Kai et Morgans Code ne testent presque rien. Ils calculent à partir des notes de version et des mesures des autres, et ça marche ([`etudes/morganscode.md`](etudes/morganscode.md)) |
+| Calendrier jusqu'au 31 janvier | **Plan sur 6 mois, jusqu'au 26 avril** ; fermé jusqu'au 25 janv., puis provisoire | Au-delà de 3 mois, l'actu de l'IA rend un plan figé faux |
+| Choix des sujets une fois pour toutes | **Un radar à chaque sortie** : ta vidéo à J+7, les concurrents, le public français, puis le choix du créneau libre | Procédure dans `CLAUDE.md`, journal dans [`etudes/radar.md`](etudes/radar.md) |
+| Objectifs J30/J60/J90 | **Objectifs à 1, 3 et 6 mois** (section 6) | Le rythme double |
+| Coût Claude le 4 janv., Claude #1 le 23 nov. | **Coût Claude le 2 nov., Claude #1 le 16 nov.** | Le format « combien ça coûte » est le plus sûr chez Kai, et Claude #1 sort 11 jours avant le Black Friday au lieu de 4 |
+| OpenCode hors calendrier | **Sortie le mer. 21/10** | Vidéo d'actu, publiée avant le passage au rythme hebdomadaire |
+
+### De la v2 à la v3 (11/10)
 
 | v2 | v3 | Pourquoi |
 |---|---|---|
@@ -23,7 +38,7 @@
 | Uber en premier le 26 oct. | **ArtCraft le 26 oct., Uber le 9 nov.** (décidé le 12/10) | ArtCraft est un sujet d'actu qui perd de la valeur chaque semaine, alors qu'Uber ne périme pas. |
 | Windows 10 en vidéo longue le 26 oct. | **Un Short cette semaine** (pas sorti, archivé le 19/10) | La date du 13 octobre est passée. Le sujet ne vaut plus une vidéo de 2 semaines de travail. |
 | ArtCraft le 26 oct. | **ArtCraft le 19 oct.** (terminé en avance) ; les autres dates ne bougent pas | La semaine gagnée accueille les essais Qwen et les tests de VRAM, qui surchargeaient début novembre. |
-| 1 Short par semaine (16 jusqu'au 31 janv.) | **1 Short par vidéo longue** (7), en test jusqu'au J60 (décidé le 19/10) | Sur un an, les Shorts t'ont rapporté 2 abonnés, contre 772 pour les vidéos longues. Chez Thibaut Dcode, ils font 2,5 % des vues. Détail dans `calendrier.md`, « Plan des Shorts ». |
+| 1 Short par semaine (16 jusqu'au 31 janv.) | **1 Short par vidéo longue** (7), en test jusqu'au J60 (décidé le 19/10) ; **arrêtés le 21/10** (v4) | Sur un an, les Shorts t'ont rapporté 2 abonnés, contre 772 pour les vidéos longues. Chez Thibaut Dcode, ils font 2,5 % des vues. |
 | Pixel gardé pour 5 K abonnés | **Pixel le 21 décembre**, recadré sur l'astuce cachée | C'est ta passion, et l'angle « astuce de génie » marche même sur une toute petite chaîne (Andy Geers, ci-dessous). |
 | Cible : 20-40 ans | Cible : **18-30 ans** | 94 % de ton audience actuelle a moins de 35 ans. |
 
@@ -72,6 +87,10 @@
 | **FUTC (58,8 K), chaîne photo** | [Somebody Vibe Coded EVERY SINGLE ADOBE App](https://www.youtube.com/watch?v=eFB79TYI-Vw) (7 oct. 2026, 20 min) | **2,24 M en 5 jours** | **≈ ×100** (médiane de ses 30 dernières vidéos : 22 K, calcul manuel) |
 | FUTC | [I Tried The Vibe Coded After Effects Clone.](https://www.youtube.com/watch?v=5mi_tYSdkWQ) (suite, 3 jours après) | 444 K | ≈ ×20 |
 | Jay E \| RoboNuggets | [Quelqu'un vient de recréer Adobe gratuitement… (7 applis)](https://www.youtube.com/watch?v=Fuo1i_-9Frc) | 557 K en 4 jours | non mesuré |
+| **Morgans Code (2 K)**, calculé sans test | [6× Faster Than llama.cpp — The New Way to Run 125B Models](https://www.youtube.com/watch?v=i7nSjm5tTRw) | 62,9 K | ×16,4 |
+| Morgans Code | [Is $1,500 All You Need to Run DeepSeek V4.1 Flash?](https://www.youtube.com/watch?v=mat0oOXVCcU) (20 oct. 2026) | 17,7 K en un jour | ×2,4 |
+| **Le Lab IA (18,6 K), en français** | [Adieu le cloud pour les LLM ! Vive le local](https://www.youtube.com/watch?v=C0Q6cO9nTAs) | 47,8 K | ×24 |
+| **Bricolo2.0 (6 K), en français** | [Gérer HomeAssistant avec une IA 100 % gratuite](https://www.youtube.com/watch?v=PYeJ6nhGCDY) | 25,9 K | ×31 |
 
 **La vague ArtCraft (octobre 2026).** Le 7 octobre, le développeur Brandon Thomas publie ArtCraft : 7 clones open source des logiciels Adobe (Photoshop, Illustrator, Premiere, Lightroom, Acrobat, After Effects, InDesign), écrits en Rust avec Claude Opus 5.5. Ils sont encore en alpha. Pourquoi FUTC fait ×100 :
 1. **L'ennemi commun** : son public de photographes déteste l'abonnement Adobe, et lui en parle depuis un an (« I Made 5 Photography Apps Because Adobe Wouldn't », 116 K).
@@ -121,6 +140,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
   - Makertronic fait de l'actu hardware ;
   - Rudy IO et Nathan Inline montrent leurs configurations IA ;
   - en anglais, ByteMonk et Enrico Tartarotti font des explications d'ingénierie. **En français, personne ne raconte l'ingénierie des applis du quotidien.**
+  - en anglais, Kai et Morgans Code calculent le coût de l'IA locale, en dollars et sans tester. **Toi, tu comptes en euros, tu testes ce qui tient dans ta 5080 et tu calcules le reste à la source.** En français, personne ne fait ni l'un ni l'autre (radar du 21/10).
 - **Micro-niche de départ** : « Le génie derrière l'app » + « Claude ou mon PC ? ».
 - **Élargissement prévu** :
   - **10 K abonnés** : les grandes histoires de la tech (Sony, llama.cpp, Plex, le streaming) ;
@@ -136,7 +156,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 ### Pilier 1 : « Le génie derrière l'app » (Hub)
 - **But** : la série signature. Elle doit faire tes plus gros pics de vues.
 - **Format** : 10 à 14 min. Hook sur un geste banal (« ouvre Uber »), puis le problème impossible, puis l'astuce de génie, en motion design (Remotion). Fin : ce que ça change pour toi.
-- **Fréquence** : 1 par mois.
+- **Fréquence** : environ 1 semaine sur 3 (9 vidéos sur 27 d'ici fin avril).
 - **Trafic visé** : accueil et suggestions (il se place à côté des vidéos ByteMonk et Enrico Tartarotti).
 - **Exemples** :
   1. *Le génie caché derrière la carte en temps réel d'Uber*.
@@ -145,9 +165,17 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 ### Pilier 2 : « IA chez moi » (Hub + Help)
 - **But** : la tendance la plus forte (« ia en local » +215 %), avec tes vraies expériences.
-- **Format** : la série **« Claude ou mon PC ? »**. On montre d'abord le résultat, on demande au public s'il vient de Claude Opus 5.5, on révèle que non, puis on explique comment c'est fait. Un épisode par nouveau modèle. Une fois par an, un guide.
-- **Fréquence** : 1 par mois, en alternance avec le pilier 1.
-- **Trafic visé** : accueil pour les épisodes, recherche pour le guide.
+- **Deux formats, selon que le modèle tient ou non dans ta 5080** (décidé le 21/10) :
+  - **Testé**, la série **« Claude ou mon PC ? »**. Pour ce qui tient dans 16 Go. On montre d'abord le résultat, on demande au public s'il vient de Claude Opus 5.5, on révèle que non, puis on explique comment c'est fait. Un épisode par nouveau modèle. Le thème « même carte, plus rapide » (le meilleur de Morgans Code, idée 16) se teste aussi chez toi.
+  - **Calculé**, pour ce qui ne tient pas (DeepSeek, Kimi, Claude). Le calcul part des sources, comme chez Kai et Morgans Code (« combien ça coûte ? », « N Go, ça suffit ? », « louer ou acheter ? »). C'est le format léger qui rend le rythme hebdomadaire tenable.
+- **Règles du calculé** :
+  1. Dis-le dans les 30 premières secondes : « je n'ai pas cette machine, alors j'ai fait le calcul, et voici d'où viennent les chiffres ».
+  2. Chaque chiffre a sa source, datée dans `sources.md` : note de version, ticket GitHub, benchmark, prix relevé dans une boutique française. Ne recopie jamais un chiffre de Kai ou de Morgans : remonte à leur source.
+  3. Le calcul s'affiche à l'écran, puis on le confronte à une mesure : la tienne pour la partie qui tient dans 16 Go, sinon celle d'un tiers, citée.
+  4. Une estimation n'est jamais présentée comme une mesure. Écris « environ », « au mieux », « d'après X ».
+  5. Des prix en euros et l'électricité au tarif français : c'est ce que les Européens reprochent à Kai.
+- **Fréquence** : **une semaine sur deux**, en alternance avec les deux autres piliers.
+- **Trafic visé** : accueil pour les épisodes, recherche pour les « combien ça coûte ».
 - **Exemples** :
   1. *16 Go de VRAM suffisent-ils pour remplacer Claude ?* (Qwen sur RTX 5080, épisode 1 de « Claude ou mon PC ? »).
   2. *Il a recréé 7 logiciels Adobe avec une IA. J'ai testé son Photoshop.* (ArtCraft, le repo viral d'octobre).
@@ -156,23 +184,23 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 ### Pilier 3 : « Les grandes histoires de la tech » (Hero)
 - **But** : vidéos passion et partageables, qui élargissent le public.
 - **Format** : documentaire de 12 à 18 min.
-- **Fréquence** : 1 par trimestre.
+- **Fréquence** : un peu moins d'une par mois (5 sur 27 d'ici fin avril : pixel, Python, Windows Phone, jeux, llama.cpp).
 - **Trafic visé** : accueil.
 - **Exemples** :
   1. *Le génie caché du pixel* (ton idée, recadrée sur l'astuce).
-  2. *Le dev qui a mis ChatGPT dans ton PC* : l'histoire de llama.cpp.
-  3. *Tu n'as jamais possédé tes jeux (et Sony vient de le prouver)*.
+  2. *Le dev qui a mis un ChatGPT dans ton PC* : l'histoire de llama.cpp.
+  3. *Tu n'as jamais possédé tes jeux*.
 
-### Équilibre des piliers (7 vidéos du 19 oct. au 18 janv.)
+### Équilibre des piliers (27 vidéos du 26 oct. au 26 avr.)
 
 | Pilier | Type | Vidéos | Part |
 |---|---|---|---|
-| Le génie derrière l'app | Hub | 3 | 43 % |
-| IA chez moi | Hub (1), Hero (1), Help (1) | 3 | 43 % |
-| Grandes histoires | Hero | 1 | 14 % |
-| **Total** | Hub 57 % · Hero 29 % · Help 14 % | **7** | **100 %** |
+| Le génie derrière l'app | Hub | 9 | 33 % |
+| IA chez moi | Hub (testé) et Help (calculé : « combien ça coûte », « louer ou acheter ») | 13 | 48 % |
+| Grandes histoires | Hero | 5 | 19 % |
+| **Total** | Hub ~60 % · Help ~20 % · Hero ~20 % | **27** | **100 %** |
 
-**Lecture :** le modèle commentaire/essai recommande Hero 25-30 %, Hub 45-50 %, Help 20-25 %. Le skill stratégie recommande 70/15/15 pour une chaîne en croissance. Tu es entre les deux. Le Help est un peu faible : si une vidéo d'IA marche bien, transforme-la en guide.
+**Lecture :** le modèle commentaire/essai recommande Hero 25-30 %, Hub 45-50 %, Help 20-25 %. Le skill stratégie recommande 70/15/15 pour une chaîne en croissance. Tu es entre les deux. Les vidéos calculées donnent enfin au Help sa place : elles répondent à des recherches (« combien coûte… en local »).
 
 ---
 
@@ -189,7 +217,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Autres revenus** | Newsletter, abonnements à la chaîne | |
 
 **Verdict : bon.**
-- **Le plus gros risque** : la production. Une vidéo « génie » demande beaucoup de schémas animés. Tes animations Remotion doivent devenir réutilisables (carte, serveurs, flux de données).
+- **Le plus gros risque** : la production. Une vidéo « génie » demande beaucoup de schémas animés. Tes animations Remotion doivent devenir réutilisables (carte, serveurs, flux de données). C'est encore plus vrai au rythme hebdomadaire, d'où l'alternance avec les vidéos calculées.
 - **La plus grosse opportunité** : le format qui a fait la plus grosse vidéo d'une chaîne de tutos Android n'a aucun équivalent en français.
 
 ### ⚠️ Garde-fous
@@ -198,63 +226,68 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 3. **Repos de rétro-ingénierie (REA et autres)** : en France, la décompilation n'est autorisée que dans des cas précis (interopérabilité, article L122-6-1 du Code de la propriété intellectuelle). À l'écran, utilise **une app à toi** ou un logiciel open source, et ne distribue jamais un clone.
 4. **Pas de copie de DVD ni de contournement de protection à l'écran** : c'est puni de 3 750 € d'amende (article L335-3-1 du Code de la propriété intellectuelle).
 5. **Images d'archives** : extraits courts et commentés. Privilégie tes propres captures et ton motion design.
+6. **Vidéos calculées** : les 5 règles du pilier 2. Le risque ici, c'est la crédibilité : sous les vidéos de Kai, les commentaires les plus likés corrigent ses chiffres.
 
 ---
 
 ## 5. Rythme de publication
 
-**Recommandé : 2 vidéos longues par mois (une tous les 15 jours) + 1 Short par vidéo longue** (en test jusqu'au 7 déc.).
+**Décidé le 21/10 : 1 vidéo longue par semaine, le lundi à 18 h (heure de Paris). Aucun Short.**
 
-- **Taille de la chaîne et étude vidIQ (5,08 M de chaînes)** : 12 vidéos et plus par mois font grandir les vues 8 fois plus vite, mais **la régularité compte plus que le volume**. À 2 par mois, ton levier est la **régularité absolue**.
-- **Montée en rythme** : après 6 vidéos, si ton circuit de production est rodé, passe à 3 par mois. Les épisodes « Claude ou mon PC ? » sont les plus rapides à produire, ce sont eux qui serviront à accélérer.
-- **Créneau** : le lundi à 20 h (heure de Paris). On le réévaluera dans 60 jours avec Studio.
-- **Shorts** : 1 par vidéo longue, découpé dans ses animations (l'astuce de génie en 45 secondes, 2 h de travail maximum). Décision du 19/10 : sur ta chaîne, chez Thibaut Dcode et chez Kai, la croissance vient de la vidéo longue. Chiffres et règle du verdict au J60 : `calendrier.md`, « Plan des Shorts ».
-- **Exigence minimale** : plus de 8 minutes (pubs en milieu de vidéo possibles), chapitres, hook dans les 5 premières secondes.
+- **Étude vidIQ (5,08 M de chaînes)** : 12 vidéos et plus par mois font grandir les vues 8 fois plus vite, mais **la régularité compte plus que le volume** : un rythme régulier de 4 vidéos par mois vaut mieux que 12 vidéos irrégulières. Ton levier, c'est de **ne jamais rater un lundi**.
+- **Pourquoi c'est tenable** :
+  - une vidéo lourde (génie, histoire) alterne avec une vidéo légère (IA calculée) ;
+  - chaque semaine, tu montes la vidéo suivante et tu écris celle d'après ;
+  - le pseudo sert de joker si une semaine déraille.
+  - Compte 20 à 30 h par semaine (estimation, à vérifier au bilan du 23/11).
+- **Pas de Shorts** : sur un an, ils t'ont rapporté 2 abonnés, contre 772 pour les vidéos longues. Chez Thibaut Dcode, ils font 2,5 % des vues, et Kai les a abandonnés avant de décoller. Le guide Shorts du skill va dans le même sens : ~10 % de public en commun avec la vidéo longue, et un lien « vidéo associée » qui convertit à moins de 1 %.
+- **Créneau** : 18 h au lieu de 20 h. Vérifie dans Studio > Audience que ça tombe un peu avant le pic de ton public, et refais le point au bilan du 23/11.
+- **Exigence minimale** : plus de 8 minutes (pubs en milieu de vidéo possibles), chapitres, hook dans les 5 premières secondes. Réponds à tous les commentaires des 2 premières heures : le guide de l'algorithme les compte comme décisives.
 
-### Cycle de production sur 2 semaines
+### La semaine type
 
-| Jour | Activité | Outil ou skill |
-|---|---|---|
-| J1-J2 | Recherche à la source + script | `youtube-script-grill` pour critiquer le script |
-| J3 | Voix off | Ta voix clonée (`voix-off-ia` ou `voix-off-voicestudio`) |
-| J4-J8 | Montage : schémas animés, captures | `coach-montage-video`, Remotion |
-| J9 | Miniature, titre, description, chapitres | `/youtube thumbnail`, `/youtube metadata` |
-| J10 (lundi) | Publication, puis réponses aux commentaires pendant 2 heures | |
-| J11-J14 | 1 Short (2 h maximum) + recherche du sujet suivant | `/youtube repurpose` |
-
-**En parallèle** : lance tes essais Qwen sur la 5080 début novembre, pour une publication le 23 novembre.
+| Jour | Vidéo de la semaine suivante | Vidéo d'après | Outil ou skill |
+|---|---|---|---|
+| Lundi | 18 h : publication, puis réponses aux commentaires pendant 2 h. Voix | **Radar**, puis choix du sujet | `CLAUDE.md`, « Radar » ; `ressources/voix/sm7b.sh` ou ta voix clonée (`voix-off-voicestudio`) |
+| Mardi-samedi | Montage : schémas animés, captures | Recherche à la source, script, grill | `coach-montage-video`, Remotion ou HyperFrames ; `youtube-script-grill` |
+| Dimanche | Miniature, titre, description, chapitres, sous-titres, puis programmation | — | `coach-miniature-youtube`, `/youtube metadata` |
 
 ---
 
-## 6. Objectifs à 30, 60 et 90 jours (point de départ : 2 600 abonnés, ~2 100 vues/mois, 36 % des vues en France)
+## 6. Objectifs à 1, 3 et 6 mois (point de départ le 21/10 : 2 610 abonnés, ~3 200 vues sur 30 jours, 36 % des vues en France)
 
-### Jour 30 (~9 novembre)
+Les cibles d'abonnés et de vues sont des estimations : les références du skill n'ont aucune donnée de croissance pour une chaîne tech française de cette taille. On les recale à chaque bilan. Les seuils de CTR, de vision moyenne et de rétention viennent des guides du skill.
+
+### À 1 mois (~23 novembre)
 | Objectif | Cible | Action |
 |---|---|---|
-| Vidéos publiées | 2 longues + 2 Shorts | ArtCraft (19/10), Uber (09/11) |
-| Vues moyennes par nouvelle vidéo (à 28 j) | 1 500 | Hook sur un geste banal + miniature avec un chiffre impossible |
-| CTR moyen | 6 % | Référence divertissement/commentaire ; 7-10 % = bon |
-| Part des vues venant de France | 40 % | Les sujets universels attirent aussi ton public africain, c'est normal |
+| Vidéos publiées depuis le 19/10 | 7 | ArtCraft, OpenCode, Uber, Coût Claude, Waze, Claude #1, pseudo : pas un lundi raté |
+| Vues moyennes par nouvelle vidéo (à 28 j) | 1 500 | Hook sur un geste banal, miniature avec un chiffre impossible |
+| CTR moyen | 6 % (4-6 % = moyen, 7-10 % = bon) | Sous 3 %, change la miniature dès J+2 (ArtCraft était à 0,9 %) |
+| Vision moyenne | ≥ 40 % | En dessous, YouTube pousse moins la vidéo |
+| Rétention à 30 s | 55 % | Référence commentaire : 55-65 % |
+| Abonnés | 2 750 (+140) | Question en fin de vidéo : « Quelle appli je décortique ensuite ? » |
+| Heures de travail | 30 h par semaine au plus | Au-delà, plus de vidéos calculées, moins de vidéos lourdes |
 | Identité | Mise à jour | Bannière et description « le génie caché de la tech » ; playlist Flutter archivée |
 
-### Jour 60 (~7 décembre)
+### À 3 mois (~25 janvier)
 | Objectif | Cible | Action |
 |---|---|---|
-| Vidéos au total | 4 longues + 3 Shorts | + Claude ou mon PC ? (23/11), Waze (07/12) |
-| Verdict des Shorts | Autant d'abonnés par heure de travail qu'une vidéo longue | Sinon, on arrête les Shorts (sauf l'actu). Voir `calendrier.md`, « Plan des Shorts » |
-| Abonnés | +150 (2 750) | Question en fin de vidéo : « Quelle appli je décortique ensuite ? » |
-| Meilleure vidéo | 5 000 vues | Refaire le format qui marche le mieux |
-| Rétention à 30 s | 55 % | Référence commentaire : 55-65 % |
-| Vision moyenne | ≥ 40 % | En dessous de 40 %, YouTube pousse moins la vidéo |
+| Vidéos publiées depuis le 19/10 | 16 | |
+| Abonnés | 3 200 (+590) | |
+| Vues mensuelles | 8 000 (×2,5) | Accueil et suggestions |
+| Meilleure vidéo | 10 000 vues | Le radar refait le format qui marche le mieux |
+| Part des vues venant de France | 45 % | |
+| Système | Documenté | Bibliothèque d'animations réutilisée d'une vidéo à l'autre ; radar tenu à chaque sortie |
 
-### Jour 90 (~18 janvier)
+### À 6 mois (~26 avril)
 | Objectif | Cible | Action |
 |---|---|---|
-| Vidéos au total | 7 longues + 6 Shorts (si le test du J60 les garde) | Pixel (21/12), coût de Claude en local (04/01), WhatsApp (18/01) |
-| Abonnés | +400 (3 000) | |
-| Vues mensuelles | 8 000 (×4) | Accueil + suggestions |
-| Part des vues venant de France | 50 % | |
-| Système | Documenté | Bibliothèque d'animations Remotion (carte, serveurs, flux de données) réutilisée d'une vidéo à l'autre |
+| Vidéos publiées depuis le 19/10 | 29 | |
+| Abonnés | 4 500 | |
+| Vues mensuelles | 20 000 | |
+| Série reconnue | « Claude ou mon PC ? » et les vidéos calculées forment une série que les commentaires réclament | Chaque épisode cite le précédent et annonce le suivant (la recette de Morgans Code) |
+| Monétisation | Heures de visionnage vérifiées | Si la chaîne n'est pas encore monétisée, viser les 4 000 heures sur 12 mois |
 
 ---
 
@@ -267,9 +300,9 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 ---
 
-# 10 idées de vidéos classées
+# Idées de vidéos classées
 
-**Sources** : vidIQ (vidéos qui dépassent la moyenne de leur chaîne), tes repérages, tes idées, ton vécu.
+**Sources** : vidIQ (vidéos qui dépassent la moyenne de leur chaîne), tes repérages, tes idées, ton vécu. Les idées 1 à 11 datent de la v3 ; les idées 12 à 19 ont été ajoutées le 21/10 (tes idées d'`idees.md` et le radar).
 **Classement** : demande × potentiel de clic × facilité de production × cohérence avec la niche (chaque critère sur 10, total sur 40).
 
 ---
@@ -286,7 +319,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | **En hausse, +215 %** |
 | **Durée** | 10-12 min |
 | **Niveau de RPM** | Élevé (tech/logiciel) |
-| **Urgence** | Tendance : le modèle doit encore être récent à la sortie. Essais début novembre, **publication le 23 novembre**, 4 jours avant le Black Friday |
+| **Urgence** | Tendance : le modèle doit encore être récent à la sortie. Essais du 19/10 au 8/11, **publication le 16 novembre**, 11 jours avant le Black Friday (avancée d'une semaine le 21/10) |
 | **Score** | **36/40** (demande 9 · clic 9 · production 8 · niche 10) |
 
 **Hook** (ta structure) : « Cette app a été codée en quelques minutes par une IA. Claude Opus 5.5, tu penses ? … Non. Elle a été codée ici. [plan sur la 5080] Sans internet. Sans abonnement. »
@@ -310,7 +343,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | Stable : sujet intemporel |
 | **Durée** | 10-12 min |
 | **Niveau de RPM** | Moyen à élevé |
-| **Urgence** | Evergreen. **Le 9 novembre** : ArtCraft passe devant parce que c'est un sujet d'actu |
+| **Urgence** | Evergreen. **Le 26 octobre** : montée en avance, en ligne en privé depuis le 21/10 |
 | **Score** | **35/40** (demande 9 · clic 9 · production 7 · niche 10) |
 
 **Hook** : « Ouvre Uber. Ces petites voitures qui bougent autour de toi ? Pour les afficher, Uber a dû découper la planète entière en hexagones. »
@@ -333,7 +366,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | En hausse : Enrico Tartarotti vient de faire 1,5 M vues sur la messagerie (2 oct.) |
 | **Durée** | 12-14 min |
 | **Niveau de RPM** | Moyen |
-| **Urgence** | Evergreen. **Le 18 janvier**, à bonne distance de la vidéo de Thibaut Dcode |
+| **Urgence** | Evergreen. **Le 11 janvier**, à bonne distance de la vidéo de Thibaut Dcode |
 | **Score** | **35/40** (demande 9 · clic 9 · production 7 · niche 10) |
 
 **Hook** : « 900 millions d'utilisateurs. 50 ingénieurs. Un ingénieur pour 18 millions de personnes. Comment c'est possible ? »
@@ -356,10 +389,11 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | Stable |
 | **Durée** | 8-10 min |
 | **Niveau de RPM** | Élevé |
-| **Urgence** | Evergreen. En réserve : premier sujet « génie » de février |
+| **Urgence** | Evergreen. **Le 23 novembre**, et joker du calendrier (il sort à la place d'une vidéo en retard) |
 | **Score** | **33/40** (demande 7 · clic 9 · production 8 · niche 9) |
 
-**Hook** : « Tape un pseudo. "Déjà pris." Réponse en une fraction de seconde, parmi des milliards de comptes. Google ne les a pas tous vérifiés. Il a triché. »
+**Hook** : « Tape un pseudo. "Déjà pris." Réponse en une fraction de seconde, parmi des milliards de comptes. Le site ne les a pas tous vérifiés. Il a triché. »
+**⚠️ À vérifier (21/10)** : aucune source ne montre que Google vérifie les pseudos avec un filtre de Bloom. C'est une technique classique (un tri rapide avant la base de données, qui décide toujours), mais les articles qui citent Google, Amazon ou Facebook ne donnent pas de source. Sans preuve, retirer Google du titre : *Comment un site sait en une milliseconde que ton pseudo est déjà pris*, et présenter le filtre de Bloom comme « la technique classique », pas comme celle de Google. Miniature retenue : `ressources/miniatures/rendus/noir-07.png` (« il triche. »), dont le « G » de Google suit la même règle.
 **Miniature** : champ « pseudo » avec une croix rouge, chronomètre « 0,001 s », texte « IMPOSSIBLE ? ».
 **Pourquoi** : ByteMonk fait 706 K vues (×22) sur ce sujet. C'est une seule astuce (le filtre de Bloom), donc des animations simples et une production légère.
 **Source** : vidIQ (ByteMonk).
@@ -378,7 +412,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | En hausse : ArtCraft est sorti le 7 octobre |
 | **Durée** | ~11 min (récit + un seul test : PhotoCraft) |
 | **Niveau de RPM** | Élevé |
-| **Urgence** | **Actu : sortie le 19 octobre** (prévue le 26, terminée en avance), avant que la vague française arrive |
+| **Urgence** | **Publiée le 19 octobre** sous le titre *Il a cloné TOUTES les applications ADOBE et c'est gratuit* |
 | **Score** | **35/40** (demande 10 · clic 9 · production 8 · niche 8), rescorée le 12/10 : l'ancienne idée générique « repo viral » faisait 33/40 |
 
 **Hook** : « Adobe lui a fait payer sa résiliation. Alors il a recréé Adobe. Sept logiciels, avec une IA. J'ai testé son Photoshop. » (l'histoire de la résiliation est à confirmer)
@@ -401,7 +435,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | En hausse : la vidéo de Thibaut Dcode gagne encore environ 345 vues par heure |
 | **Durée** | 10-12 min |
 | **Niveau de RPM** | Moyen |
-| **Urgence** | **Le 7 décembre**, tant que sa vidéo circule encore en suggestion |
+| **Urgence** | **Le 9 novembre** (avancée le 21/10), pendant que sa vidéo circule encore en suggestion |
 | **Score** | **35/40** (demande 9 · clic 8 · production 8 · niche 10) |
 
 **Hook** : « Waze t'a fait tourner à droite. Trois minutes plus tard, tu passes devant un accident que personne n'avait encore signalé. »
@@ -423,7 +457,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | En hausse |
 | **Durée** | 12-15 min |
 | **Niveau de RPM** | Élevé |
-| **Urgence** | **Fusionnée le 18/10 dans l'idée 1** (23 nov., avant le Black Friday). Fiche archivée dans `archive/guide-ia-local-2027/` |
+| **Urgence** | **Fusionnée le 18/10 dans l'idée 1** (16 nov., avant le Black Friday). Fiche archivée dans `archive/guide-ia-local-2027/` |
 | **Score** | **32/40** (demande 8 · clic 7 · production 8 · niche 9) |
 
 **Hook** : « J'ai une RTX 5080. Et la moitié des IA que je voulais faire tourner ne rentrent pas dedans. »
@@ -437,7 +471,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 | Attribut | Valeur |
 |---|---|
-| **Titre** | Tu n'as jamais possédé tes jeux (et Sony vient de le prouver) |
+| **Titre** | Tu n'as jamais possédé tes jeux |
 | **Stratégie de trafic** | Accueil d'abord |
 | **Mot-clé** | Sony PlayStation Store / Stop Killing Games |
 | **Concurrence** | Moyenne |
@@ -445,21 +479,27 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | Stable : sujet récurrent |
 | **Durée** | 14-18 min |
 | **Niveau de RPM** | Moyen |
-| **Urgence** | Evergreen. En réserve |
+| **Urgence** | Evergreen. Provisoire : le 22 février |
 | **Score** | **31/40** (demande 7 · clic 9 · production 7 · niche 8) |
 
 **Hook** : « J'ai acheté ces jeux. J'ouvre la console : plus rien. Et c'est parfaitement légal. »
+**⚠️ Corrigé (21/10)** : l'ancien titre disait « (et Sony vient de le prouver) ». C'est faux sur trois points :
+- l'affaire date de décembre 2023, elle n'est pas récente ;
+- elle concernait des **séries** Discovery achetées sur le PlayStation Store, pas des jeux ;
+- Sony a fait marche arrière : un nouvel accord avec Warner Bros. garantissait l'accès « pendant au moins 30 mois », soit jusqu'à mi-2026 environ. Vérifier ce qui s'est passé depuis.
+
+Pour prouver le titre avec un **jeu**, chercher un cas récent. Piste à sourcer : *The Crew* d'Ubisoft, rendu injouable en 2024, à l'origine de Stop Killing Games. Sony reste un bon exemple, à condition de dire « des séries » et « a failli », comme dans tes notes.
 **Miniature** : manette PlayStation qui se désintègre en pixels, texte « PAS À TOI », fond bleu nuit.
 **Pourquoi** : ARTE Info fait 53 K vues sur Stop Killing Games, et Hiz0 (1,4 K abonnés) 93 K avec un essai sur le jeu vidéo. C'est le premier récit à sortir si un créneau se libère.
 **Source** : ton fichier `archive/autohebergement/notes.md`.
 
 ---
 
-### Idée 9 : Le dev qui a mis ChatGPT dans ton PC
+### Idée 9 : Le dev qui a mis un ChatGPT dans ton PC
 
 | Attribut | Valeur |
 |---|---|
-| **Titre** | Le dev qui a mis ChatGPT dans ton PC (l'histoire de llama.cpp) |
+| **Titre** | Le dev qui a mis un ChatGPT dans ton PC (l'histoire de llama.cpp) |
 | **Stratégie de trafic** | Accueil d'abord |
 | **Mot-clé** | ollama / lm studio |
 | **Concurrence** | Faible (aucun récit français repéré) |
@@ -467,11 +507,12 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | Stable |
 | **Durée** | 15-18 min |
 | **Niveau de RPM** | Élevé |
-| **Urgence** | Evergreen. En réserve |
+| **Urgence** | Evergreen. Provisoire : le 8 mars, pour les 4 ans de llama.cpp (mars 2023, date exacte à vérifier) |
 | **Score** | **29/40** (demande 6 · clic 7 · production 6 · niche 10) |
 
 **Hook** : « Mars 2023. Un développeur bulgare publie un petit programme. Six mois plus tard, l'IA ne vit plus seulement dans les data centers. »
 **Miniature** : silhouette devant un écran de code, cerveau d'IA qui sort d'un PC, texte « IL A TOUT CHANGÉ ».
+**⚠️ Corrigé (21/10)** : le titre disait « mis ChatGPT dans ton PC ». llama.cpp faisait tourner LLaMA, le modèle de Meta, pas ChatGPT ; « un ChatGPT » garde l'idée sans l'erreur. Vérifié : le README d'origine (mars 2023) dit « hacked in an evening ».
 **Pourquoi** : il réunit tes deux piliers, et c'est un angle inédit en français.
 **Source** : tes passions et l'écosystème Ollama.
 
@@ -489,7 +530,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | **Tendance** | Stable |
 | **Durée** | 12-15 min (au lieu de 18-20 : plus court, plus vendable) |
 | **Niveau de RPM** | Moyen |
-| **Urgence** | Evergreen. **Le 21 décembre** : sujet passion, et 2 mois pour construire les animations |
+| **Urgence** | Evergreen. **Le 14 décembre** (avancé d'une semaine le 21/10) : sujet passion ; animations à commencer en novembre |
 | **Score** | **27/40** (demande 7 · clic 8 · production 4 · niche 8) |
 
 **Hook** : « Zoome sur l'écran de ton téléphone. Il n'y a pas un seul point blanc. Pourtant, tu vois du blanc partout. »
@@ -500,51 +541,149 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 ---
 
+### Idée 12 : Pourquoi tout paraît plus fluide sur un iPhone
+
+| Attribut | Valeur |
+|---|---|
+| **Pilier** | Le génie derrière l'app (Hub) |
+| **Stratégie de trafic** | Accueil + recherche |
+| **Mot-clé** | iphone fluide / android qui rame (volume non mesuré) |
+| **Urgence** | Evergreen. **Le 7 décembre** ([fiche](projets/iphone-fluide/fiche.md)) |
+| **Score** | **32/40** (demande 8 · clic 8 · production 7 · niche 9) |
+
+**Hook** : « Pose ton doigt sur l'écran et fais défiler. La page colle à ton doigt. Ça n'a rien d'évident : Android a mis des années à y arriver. » (« des années » est à vérifier)
+**Angle** : le génie du système, pas la guerre des marques : pourquoi l'affichage passe avant tout le reste quand ton doigt bouge, et ce qu'Android a changé pour rattraper son retard. Ton public africain est surtout sur Android : finis sur ce que son téléphone sait faire aujourd'hui.
+**Pourquoi** : en français, les vidéos sur l'iPhone font des scores énormes (Nightech, « J'ai tenté d'utiliser le plus vieil iPhone encore à jour », 166,9 K en 3 jours). Le radar du 21/10 n'a trouvé aucune vidéo française sur la fluidité.
+**À vérifier** : le rendu de l'interface sur iOS (Core Animation, priorité au rendu), le « Project Butter » d'Android 4.1 (2012), les écrans à 120 Hz des deux côtés.
+**Source** : ton idée (`idees.md`).
+
+---
+
+### Idée 13 : Python, ou l'ennui d'un dev à Noël
+
+| Attribut | Valeur |
+|---|---|
+| **Pilier** | Les grandes histoires de la tech (Hero) |
+| **Stratégie de trafic** | Accueil |
+| **Mot-clé** | python / histoire de python |
+| **Urgence** | Saisonnier. **Le 28 décembre**, la semaine de Noël ([fiche](projets/python/fiche.md)) |
+| **Score** | **31/40** (demande 7 · clic 8 · production 8 · niche 8) |
+
+**Hook** (ta phrase) : « À quel moment tu t'ennuies assez pour avoir envie de créer un langage de programmation ? »
+**Pourquoi** : en anglais, l'entretien de Guido van Rossum sur la chaîne GitHub fait 253 K vues (×40). Le récit se raconte sans essais, avec des animations simples, et la date de sortie colle à l'histoire.
+**À vérifier** : la citation de Guido van Rossum sur le projet de loisir commencé pendant la semaine de Noël 1989 (préface de *Programming Python*, 1996) ; le nom tiré des Monty Python ; la date de la première version publique.
+**Source** : ton idée (`idees.md`).
+
+---
+
+### Idée 14 : Windows Phone, il lui manquait les applis
+
+| Attribut | Valeur |
+|---|---|
+| **Pilier** | Les grandes histoires de la tech (Hero) |
+| **Stratégie de trafic** | Accueil |
+| **Mot-clé** | windows phone / nokia lumia |
+| **Urgence** | Evergreen. **Le 25 janvier** ([fiche](projets/windows-phone/fiche.md), ton texte dans le [brouillon](projets/windows-phone/brouillon.md)) |
+| **Score** | **30/40** (demande 6 · clic 8 · production 7 · niche 9) |
+
+**Hook** (ta phrase) : « Ton téléphone, quand tu le sors de la boîte, c'est une brique qui ne sert à rien. »
+**Angle** : Microsoft avait l'interface, Nokia avait les photos, et il manquait les applis que tout le monde utilise. Le génie, c'est l'effet de réseau : sans applis, pas d'utilisateurs, et sans utilisateurs, pas d'applis. **Garde la partie « les applis étudient ton cerveau et vivent de tes données » courte** : c'est l'angle business de Thibaut Dcode. Elle peut faire une autre vidéo.
+**Pourquoi** : c'est ton texte et ta passion. Pas de preuve française mesurée (le radar ne trouve que Windows 11), d'où le score de demande bas.
+**À vérifier** (tes affirmations) : la date d'arrivée de WhatsApp sur Windows Phone (« des années ») ; l'absence d'appli Snapchat officielle ; le client Snapchat non officiel et son développeur (piste : 6snap, de Rudy Huyn, développeur français) ; l'anecdote « pour que sa copine puisse l'utiliser », à sourcer ou à retirer ; les ruptures entre Windows Phone 7, 8 et Windows 10 Mobile.
+**Source** : ton idée (`idees.md`).
+
+---
+
+### Idée 15 : Louer, acheter ou s'abonner ?
+
+| Attribut | Valeur |
+|---|---|
+| **Pilier** | IA chez moi, format **calculé** (Help) |
+| **Stratégie de trafic** | Recherche + accueil |
+| **Mot-clé** | ia en local rentable / abonnement claude prix |
+| **Urgence** | Evergreen. **Le 4 janvier**, pour les bonnes résolutions (« je coupe mes abonnements ») ([fiche](projets/louer-acheter-ia/fiche.md)) |
+| **Score** | **33/40** (demande 8 · clic 8 · production 8 · niche 9) |
+
+**Hook** : « Un abonnement Claude, tous les mois. Ou une carte graphique, une seule fois. Au bout de combien de mois l'achat devient rentable ? » (les prix en euros se relèvent au moment du script)
+**Pourquoi** : chez Kai, « Can a Mac Mini Replace your $200 AI Subscription? » fait 316 K vues (×8), et un fil de 52 likes demande « au bout de combien de temps ça devient rentable ? » ([`etudes/kai.md`](etudes/kai.md)). La partie testée, c'est la consommation réelle de ta 5080, mesurée pour Claude #1.
+**Source** : étude Kai, idée 4.
+
+---
+
+### Idée 16 : Même carte, 2 fois plus rapide
+
+| Attribut | Valeur |
+|---|---|
+| **Pilier** | IA chez moi, format **testé** (Hub) |
+| **Stratégie de trafic** | Accueil + recherche |
+| **Mot-clé** | ia en local plus rapide / llama.cpp |
+| **Urgence** | Créneau radar (30/11 ou 21/12), quand un nouveau moteur ou une nouvelle compression fait parler |
+| **Score** | **34/40** (demande 8 · clic 8 · production 8 · niche 10) |
+
+**Hook** : « Même carte. Même modèle. Deux fois plus vite. Je n'ai rien acheté. »
+**Pourquoi** : c'est le meilleur thème de Morgans Code (26,8 K vues médianes sur 7 vidéos ; « 6× Faster Than llama.cpp », 62,9 K). Lui le calcule, toi tu le mesures sur ta 5080 : moteur, compression, cache.
+**Source** : [`etudes/morganscode.md`](etudes/morganscode.md).
+
+---
+
+### Idées 17 à 19 : génie, provisoires (février-avril)
+
+| # | Idée | Preuve | Score | Créneau |
+|---|---|---|---|---|
+| 17 | **Mobile Money : comment ton argent passe sans internet** (USSD) | ByteMonk, « How UPI Works: Real-Time Payments in India » : 773 K, ×44. Le sujet parle aux 63 % de ton public en Afrique (Côte d'Ivoire, RDC, Cameroun) | 31/40 (7 · 8 · 7 · 9) | 8 févr. |
+| 18 | **SQLite, le fichier de 300 Ko qui a battu Oracle** | ByteMonk : 220 K, ×12,6 | 32/40 (7 · 8 · 8 · 9) | 22 mars |
+| 19 | **Le génie caché du paiement sans contact** | ByteMonk, « The Hidden Security Magic Behind Mobile Payments » : 195 K, ×4,5 | 30/40 (7 · 7 · 7 · 9) | 5 avr. |
+
+Chaque créneau se confirme au radar, deux semaines avant. Les faits (USSD et opérateurs, la page « Most Widely Deployed » de sqlite.org, la tokenisation des cartes) se vérifient à la source pendant l'écriture.
+
+---
+
 ### Mises de côté
 - **30 jours avec une IA locale** : trop lent face au rythme des sorties. Remplacé par la série « Claude ou mon PC ? ».
 - **Windows 10** : ni vidéo longue ni Short (le Short n'est pas sorti ; archivé le 19/10).
 - **Streaming +71 %, Plex, maison pilotée par IA, l'IA dans ta carte graphique** : en réserve. Ils resservent si un créneau se libère ou à 10 K abonnés.
-- **Vieux PC → console, NAS** : pas ta passion. Des Shorts au besoin.
-- **App Mac (vorssaint-utils)** : Short prévu le 22 octobre, [archivé le 19/10](archive/short-vorssaint/fiche.md) : ce créneau revient au Short d'ArtCraft. Il peut revenir si les Shorts passent le test du J60.
+- **Vieux PC → console, NAS** : pas ta passion.
+- **Les Shorts** : arrêtés le 21/10, avant la fin du test (voir section 0). Le Short Vorssaint reste [archivé](archive/short-vorssaint/fiche.md).
 
 ---
 
 ### Classement
 
-| Rang | Titre | Stratégie | Score | Urgence |
-|---|---|---|---|---|
-| 1 | 16 Go de VRAM suffisent-ils pour remplacer Claude ? | Accueil + recherche | 36/40 | 23 nov |
-| 2 | Le génie caché derrière la carte en temps réel d'Uber | Accueil | 35/40 | 9 nov |
-| 3 | Comment Waze sait qu'il y a un bouchon avant que tu le voies | Accueil | 35/40 | 7 déc |
-| 4 | Comment 50 ingénieurs faisaient tourner WhatsApp pour 900 millions de personnes | Accueil | 35/40 | 18 janv |
-| 5 | Comment Google sait en une milliseconde que ton pseudo est déjà pris | Accueil + recherche | 33/40 | Réserve (février) |
-| 6 | Il a recréé 7 logiciels Adobe avec une IA. J'ai testé son Photoshop. (idée 5, rescorée) | Recherche + accueil | 35/40 | **19 oct** |
-| 7 | ~~IA en local en 2027 : ce qu'il faut VRAIMENT pour la faire tourner~~ | — | — | Fusionnée dans le n° 1 |
-| 8 | Tu n'as jamais possédé tes jeux (et Sony vient de le prouver) | Accueil | 31/40 | Réserve |
-| 9 | Le dev qui a mis ChatGPT dans ton PC (llama.cpp) | Accueil | 29/40 | Réserve |
-| 10 | Le génie caché du pixel : comment ton écran trompe tes yeux | Accueil | 27/40 | 21 déc (passion) |
-| 11 | Combien coûte Claude Opus 5.5 en local ? (ajoutée le 18/10, [fiche](projets/cout-claude-local/fiche.md)) | Accueil + recherche | 34/40 (demande 9 · clic 9 · production 7 · niche 9) | 4 janv |
+| Rang | Idée | Titre | Format | Score | Créneau |
+|---|---|---|---|---|---|
+| 1 | 1 | 16 Go de VRAM suffisent-ils pour remplacer Claude ? | IA testé | 36/40 | 16 nov |
+| 2 | 2 | Le génie caché derrière la carte en temps réel d'Uber | Génie | 35/40 | 26 oct |
+| 3 | 6 | Comment Waze sait qu'il y a un bouchon avant que tu le voies | Génie | 35/40 | 9 nov |
+| 4 | 3 | Comment 50 ingénieurs faisaient tourner WhatsApp pour 900 millions de personnes | Génie | 35/40 | 11 janv |
+| 5 | 5 | ArtCraft : il a recréé 7 logiciels Adobe avec une IA | IA récit | 35/40 | Publiée le 19 oct |
+| 6 | 11 | Combien coûte Claude en local ? ([fiche](projets/cout-claude-local/fiche.md)) | IA calculé | 34/40 (9 · 9 · 7 · 9) | 2 nov |
+| 7 | 16 | Même carte, 2 fois plus rapide | IA testé | 34/40 | Radar |
+| 8 | 4 | Comment un site sait en une milliseconde que ton pseudo est déjà pris | Génie | 33/40 | 23 nov (joker) |
+| 9 | 15 | Louer, acheter ou s'abonner ? | IA calculé | 33/40 | 4 janv |
+| 10 | 12 | Pourquoi tout paraît plus fluide sur un iPhone | Génie | 32/40 | 7 déc |
+| 11 | 18 | SQLite, le fichier de 300 Ko qui a battu Oracle | Génie | 32/40 | 22 mars (provisoire) |
+| 12 | 8 | Tu n'as jamais possédé tes jeux | Histoire | 31/40 | 22 févr (provisoire) |
+| 13 | 13 | Python, ou l'ennui d'un dev à Noël | Histoire | 31/40 | 28 déc |
+| 14 | 17 | Mobile Money : comment ton argent passe sans internet | Génie | 31/40 | 8 févr (provisoire) |
+| 15 | 14 | Windows Phone, il lui manquait les applis | Histoire | 30/40 | 25 janv |
+| 16 | 19 | Le génie caché du paiement sans contact | Génie | 30/40 | 5 avr (provisoire) |
+| 17 | 9 | Le dev qui a mis un ChatGPT dans ton PC (llama.cpp) | Histoire | 29/40 | 8 mars (provisoire) |
+| 18 | 10 | Le génie caché du pixel : comment ton écran trompe tes yeux | Histoire | 27/40 | 14 déc (passion) |
+| — | 7 | ~~IA en local en 2027 : ce qu'il faut VRAIMENT pour la faire tourner~~ | — | — | Fusionnée dans l'idée 1 |
+| — | — | Claude ou mon PC ? #2 (suite de l'idée 1, dernier modèle sorti) | IA testé | — | 18 janv |
+| — | — | OpenCode piraté (actu, hors classement) | IA récit | — | Publiée le 21 oct |
+
+Python et le pixel passent devant des idées mieux notées pour des raisons de calendrier (Noël) et de passion.
 
 ### Ordre de production
 
-**À faire cette semaine (19-25 oct.)** :
-- ArtCraft sort le lundi 19 : répondre aux commentaires pendant les 2 premières heures ;
-- Short ArtCraft le jeudi 22 (2 h maximum) ;
-- recherche Uber, avancée d'une semaine.
+**Cette semaine (21-25 oct.)** :
+- **Uber**, en ligne en privé :
+  - remplacer le titre « L'hisoire du temps réel derriere uber » par celui de la fiche ;
+  - remplacer les tags Flutter par défaut ;
+  - écrire le kit d'upload (`projets/uber/upload.md`) ;
+  - programmer la vidéo lun. 26 à 18 h.
+- **Premiers essais sur la 5080** pour Claude #1.
+- Recherche et script de **Combien coûte Claude en local ?** (2 nov.).
 
-**Ensuite** : idées 2, 1, 6, 10, 11 et 3, dans l'ordre du calendrier.
-**En réserve** : idées 4, 8 et 9.
-
-### Calendrier (un lundi sur deux, 20 h à Paris)
-
-| Date | Vidéo | Pilier | Pourquoi ce créneau |
-|---|---|---|---|
-| Lun 19 oct | ArtCraft : il a recréé 7 logiciels Adobe avec une IA | IA (Hero) | Sujet d'actu, presque rien en français ; terminé une semaine en avance |
-| Lun 9 nov | Le génie caché derrière la carte d'Uber | Génie (Hub) | Le format le mieux prouvé ; 2 semaines de plus pour les animations |
-| Lun 23 nov | Claude ou mon PC ? #1 : 16 Go de VRAM suffisent-ils ? | IA (Hub + Help) | Alternance ; 4 jours avant le Black Friday |
-| Lun 7 déc | Comment Waze sait qu'il y a un bouchon | Génie (Hub) | Preuve française (1,09 M vues) ; animations de carte réutilisées |
-| Lun 21 déc | Le génie caché du pixel | Histoire (Hero) | Vacances ; ta vidéo passion, tôt comme tu le voulais |
-| Lun 4 janv | Combien coûte Claude en local ? | IA (Hub) | Alternance ; le format phare de Kai, absent en français |
-| Lun 18 janv | WhatsApp et ses 50 ingénieurs | Génie (Hub) | À bonne distance des vidéos WhatsApp d'octobre |
-
-**Le détail semaine par semaine (production + 7 Shorts jusqu'au 31 janvier) est dans `calendrier.md`.**
+**Ensuite** : l'ordre du [calendrier](calendrier.md), qui donne aussi le détail semaine par semaine jusqu'au 31 janvier. Les créneaux radar se remplissent à chaque sortie ([`etudes/radar.md`](etudes/radar.md)).

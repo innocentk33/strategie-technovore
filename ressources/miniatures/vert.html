@@ -1,0 +1,120 @@
+<!doctype html>
+<!-- Miniatures « vert explainer », pilier « IA chez moi » (charte du template technovore-explainer + corrections de coach.md). Variante via ?n=2, 5, 9, 10 ; rendu : voir propositions.md -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:"Archivo Black"; src:url(fonts/archivo-black-latin-400.woff2) format("woff2"); }
+  @font-face { font-family:"Inter"; src:url(fonts/inter-latin-wght.woff2) format("woff2"); font-weight:100 900; }
+  @font-face { font-family:"JetBrains Mono"; src:url(fonts/jetbrains-mono-latin-700.woff2) format("woff2"); font-weight:700; }
+  @font-face { font-family:"JetBrains Mono"; src:url(fonts/jetbrains-mono-latin-500.woff2) format("woff2"); font-weight:500; }
+  :root { --stage:#34495e; --grid:#41576d; --glow:#42586e; --line:#e0e8f0; --text:#eff4f8; --muted:#b4c1cf; --axis:#899aac;
+    --panel:#2b3e51; --raised:#4c637a; --body:#354a5f; --mint:#07c095; --mint-dark:#007358; --ink:#2f2e41; --screen:#f4f9fc; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1280px; height:720px; overflow:hidden; background:var(--stage); }
+  body { position:relative; font-family:Inter, sans-serif; color:var(--text); }
+  .bg { position:absolute; inset:0;
+    background:linear-gradient(var(--glow), transparent 260px),
+      linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 32px 32px,
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 32px 32px; }
+  svg.art { position:absolute; inset:0; width:1280px; height:720px; overflow:visible; }
+  .t { position:absolute; white-space:nowrap; }
+  .hero { font-family:"Archivo Black"; text-transform:uppercase; line-height:.88; letter-spacing:-.01em; transform-origin:0 0; transform:scaleX(.93); }
+  .lab { font-weight:800; letter-spacing:-.015em; line-height:1; }
+  .mint { color:var(--mint); }
+  /* Signature 1 : le badge menthe, droit (incliné, c'est un tic de Kai et Codacus) */
+  .badge { position:absolute; background:var(--mint); color:var(--ink); font-weight:900; border-radius:14px; padding:.08em .32em .1em;
+    line-height:1; letter-spacing:-.01em; white-space:nowrap; }
+  /* Signature 2 : la marque en bas à gauche */
+  .brand { position:absolute; left:34px; bottom:26px; display:flex; align-items:center; gap:10px;
+    font:500 19px "JetBrains Mono"; color:var(--axis); letter-spacing:.02em; }
+  .brand i { width:14px; height:14px; background:var(--mint); border-radius:3px; }
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<svg class="art" id="art" viewBox="0 0 1280 720"></svg>
+<div id="txt"></div>
+<div class="brand"><i></i>technovore</div>
+<script src="logos/logos.js"></script>
+<script>
+  const n = new URLSearchParams(location.search).get('n') || '2';
+  const L = '#e0e8f0', M = '#07c095', P = '#2b3e51', R = '#4c637a', B = '#354a5f', MU = '#b4c1cf', SC = '#f4f9fc';
+  const logo = (k, x, y, s, fill) => `<path transform="translate(${x} ${y}) scale(${s / 24})" d="${LOGO[k]}" fill="${fill}"/>`;
+
+  // Ventilateur au trait (tv-shelf-object)
+  const fan = (cx, cy, r) => {
+    let s = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${R}" stroke="${L}" stroke-width="${r * .055}"/>`;
+    for (let k = 0; k < 9; k++) s += `<path transform="translate(${cx} ${cy}) rotate(${k * 40}) scale(${r / 131})" d="M32 6 C70 10 100 30 112 61 C90 66 70 62 58 48 C48 36 40 22 32 6Z" fill="${L}"/>`;
+    return s + `<circle cx="${cx}" cy="${cy}" r="${r * .26}" fill="${B}" stroke="${L}" stroke-width="${r * .045}"/>`;
+  };
+  // Carte graphique au trait, 3 ventilateurs ; (x, y) = coin haut gauche, w = largeur du corps
+  const gpu = (x, y, w) => {
+    const k = w / 1250, h = 398 * k;
+    let s = `<g stroke-linejoin="round">`;
+    for (let i = 0; i < 30; i++) s += `<rect x="${x + 46 * k + i * 30.5 * k}" y="${y - 37 * k}" width="${12.5 * k}" height="${40 * k}" rx="2" fill="${R}" stroke="${L}" stroke-width="2"/>`;
+    s += `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${36 * k}" fill="${B}" stroke="${L}" stroke-width="4"/>
+      <rect x="${x + 37 * k}" y="${y + 28 * k}" width="${1177 * k}" height="${79 * k}" rx="${16 * k}" fill="${R}" stroke="${L}" stroke-width="3"/>`;
+    [233, 625, 1018].forEach(c => s += fan(x + c * k, y + 257 * k, 131 * k));
+    s += `<rect x="${x + w + 3 * k}" y="${y - 18 * k}" width="${65 * k}" height="${421 * k}" rx="3" fill="${R}" stroke="${L}" stroke-width="3"/>`;
+    return s + `</g>`;
+  };
+  // Carte « écran » au trait (ombre plate décalée), avec un contenu SVG
+  const card = (x, y, w, h, inner) => `<rect x="${x + 8}" y="${y + 10}" width="${w}" height="${h}" rx="18" fill="#1d2a37"/>
+      <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="18" fill="${P}" stroke="${L}" stroke-width="5"/>${inner}`;
+
+  // Gabarit de la série « Claude ou mon PC ? » : bandeau fixe, Claude à gauche, ton PC à droite,
+  // l'élément propre à l'épisode toujours dans la baie du haut du PC (bay = HTML placé dans la baie 804..1076 × 214..354)
+  const serie = (bay, baySvg = '') => {
+    let s = card(70, 230, 400, 300, `<rect x="94" y="254" width="352" height="252" rx="8" fill="${SC}"/>` + logo('claude', 195, 305, 150, '#d97757'));
+    s += `<rect x="788" y="198" width="320" height="440" rx="18" fill="#1d2a37"/><rect x="780" y="190" width="320" height="440" rx="18" fill="${P}" stroke="${L}" stroke-width="6"/>
+      <rect x="804" y="214" width="272" height="140" rx="10" fill="${R}" stroke="${L}" stroke-width="4"/>` + baySvg + fan(940, 495, 100);
+    art.innerHTML = s;
+    txt.innerHTML = `<div class="t hero" data-w="1150" style="left:66px;top:56px;font-size:130px">CLAUDE <span style="color:var(--muted)">OU</span> MON PC</div>
+      <div class="badge" style="left:540px;top:300px;font-size:200px;padding:.02em .24em .06em">?</div>` + bay;
+  };
+
+  const V = {
+    '2': () => serie( // #1 : ta 5080 et ses 16 Go
+      `<div class="t hero mint" data-w="236" style="left:826px;top:250px;font-size:88px;text-transform:none">16 Go</div>`),
+    '5': () => { // Combien coûte Claude en local : ta 5080 minuscule au pied de la baie géante
+      let s = `<rect x="98" y="70" width="340" height="572" rx="16" fill="#1d2a37"/><rect x="90" y="60" width="340" height="572" rx="16" fill="${P}" stroke="${L}" stroke-width="6"/>`;
+      for (let i = 0; i < 8; i++) {
+        const y = 80 + i * 68;
+        s += `<rect x="110" y="${y}" width="300" height="56" rx="7" fill="${R}" stroke="${L}" stroke-width="4"/>
+          <circle cx="134" cy="${y + 28}" r="8" fill="${M}" stroke="${L}" stroke-width="2"/>`;
+        for (let k = 0; k < 10; k++) s += `<rect x="${158 + k * 23}" y="${y + 15}" width="11" height="26" rx="3" fill="${B}" stroke="${L}" stroke-width="2"/>`;
+      }
+      s += `<line x1="60" y1="642" x2="690" y2="642" stroke="${L}" stroke-width="5" stroke-linecap="round"/>` + gpu(452, 572, 200);
+      // étiquette de prix, droite
+      s += `<path d="M700 410 l40 -80 h500 v160 h-500Z" fill="${M}" stroke="${L}" stroke-width="5" stroke-linejoin="round"/><circle cx="738" cy="410" r="11" fill="#34495e" stroke="${L}" stroke-width="4"/>`;
+      art.innerHTML = s;
+      txt.innerHTML = `<div class="t lab mint" style="left:452px;top:510px;font-size:44px">ma 5080</div>
+        <div class="t lab" style="left:704px;top:254px;font-size:56px;color:var(--muted)">Claude chez moi,</div>
+        <div class="t hero" data-w="440" style="left:772px;top:358px;font-size:110px;color:var(--ink)">?? ??? €</div>`;
+    },
+    '9': () => { // llama.cpp : codé en 1 soirée
+      art.innerHTML = `<rect x="58" y="60" width="720" height="400" rx="22" fill="#1d2a37"/><rect x="50" y="50" width="720" height="400" rx="22" fill="${P}" stroke="${L}" stroke-width="7"/>
+        <rect x="76" y="76" width="668" height="348" rx="8" fill="${SC}"/>
+        <path d="M0 450 h820 l-46 54 h-728Z" fill="${R}" stroke="${L}" stroke-width="7" stroke-linejoin="round"/>
+        <rect x="350" y="450" width="120" height="14" rx="4" fill="${L}"/>`;
+      txt.innerHTML = `<div class="t" style="left:110px;top:130px;font:700 32px 'JetBrains Mono';color:var(--ink)">$ ./main -m ./models/7B/…</div>
+        <div class="t" style="left:106px;top:220px;font:800 90px Inter;letter-spacing:-.02em;color:var(--mint-dark)">llama.cpp</div>
+        <div class="t lab" style="left:66px;top:588px;font-size:52px;color:var(--muted)">codé en</div>
+        <div class="t hero" data-w="900" style="left:290px;top:540px;font-size:140px"><span class="mint">1</span> SOIRÉE.</div>`;
+    },
+    '10': () => serie( // #2 : le logo du modèle de l'épisode, à placer dans la baie
+      `<div class="t" style="left:862px;top:268px;font:500 22px 'JetBrains Mono';color:var(--muted)">logo du modèle</div>`,
+      `<rect x="826" y="226" width="228" height="116" rx="8" fill="none" stroke="${MU}" stroke-width="3" stroke-dasharray="12 9"/>`),
+  };
+  const art = document.getElementById('art'), txt = document.getElementById('txt');
+  (V[n] || V['2'])();
+  // Réduit la police des textes marqués data-w jusqu'à tenir dans cette largeur (px)
+  document.fonts.ready.then(() => document.querySelectorAll('[data-w]').forEach(e => {
+    let fs = parseFloat(e.style.fontSize);
+    while (e.getBoundingClientRect().width > +e.dataset.w && fs > 20) e.style.fontSize = (fs -= 2) + 'px';
+  }));
+</script>
+<script src="export.js"></script>
+</body>
+</html>

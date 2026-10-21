@@ -1,160 +1,114 @@
-# Calendrier de production Technovore : 12 oct. 2026 → 31 janv. 2027
+# Calendrier de production Technovore : 26 oct. 2026 → 26 avr. 2027
 
-> Complète `strategie.md` (v3). Créé le 11/10/2026. **Mis à jour le 12/10 : ArtCraft passe en premier (26 oct.), Uber recule au 9 nov.** **Mis à jour le 18/10 : Claude #1 prend l'angle « 16 Go de VRAM » et absorbe le guide pour sortir avant le Black Friday ; le 4 janv. accueille « Combien coûte Claude en local ? » (voir `etudes/kai.md`).** **Mis à jour le 19/10 : ArtCraft sort le 19 oct., une semaine en avance, et les autres dates ne bougent pas. Un seul Short par vidéo longue, en test jusqu'au bilan J60 (voir « Plan des Shorts »).**
+> Complète `strategie.md` (v4). Créé le 11/10/2026 ; les versions des 12, 18 et 19/10 sont dans l'historique git. **Mis à jour le 21/10 : une vidéo longue chaque lundi à 18 h, plus aucun Short, plan sur 6 mois. « Combien coûte Claude en local ? » passe au 2 nov., Waze au 9 nov., Claude #1 au 16 nov., le pixel au 14 déc. et WhatsApp au 11 janv. Le radar choisit les créneaux libres (voir `CLAUDE.md`, « Radar », et `etudes/radar.md`).**
 
 ## Vue d'ensemble
 
-- **Période** : 16 semaines, de la semaine du 12 octobre à celle du 25 janvier.
-- **Publications** : 7 vidéos longues + 7 Shorts = 14. La 8e vidéo longue (publiée le 1er février) est produite fin janvier.
-- **Créneaux** :
-  - vidéos longues : **le lundi à 20 h** (heure de Paris) ;
-  - Shorts : **le jeudi à 18 h**, 3 jours après chaque vidéo longue.
-- **Rythme de production** : un cycle de 14 jours par vidéo. Script le week-end, voix le lundi, montage du mardi au samedi, miniature le dimanche. Compte **environ 15 à 20 h par semaine** (estimation, à recaler après ArtCraft).
-- **Saisonnalité** : revenus publicitaires plus élevés d'octobre à décembre, creux en janvier. Black Friday le 27 novembre, vacances de Noël à partir du 19 décembre, soldes d'hiver début janvier.
-
-**À propos des horaires** : le skill calendrier propose par défaut du mardi au jeudi, entre 14 h et 16 h. Ce réglage vient d'habitudes américaines, et les références n'ont aucune donnée sur un public français. Thibaut Dcode publie le dimanche à 13 h. On garde lundi 20 h, mais **avant Uber (9 novembre), regarde dans Studio > Audience > « Quand vos spectateurs sont sur YouTube »** et cale-toi un peu avant le pic.
-
-**Pourquoi ArtCraft d'abord** : c'est un sujet d'actu (sorti le 7 octobre). Chaque semaine d'attente lui fait perdre de la valeur, alors qu'Uber ne périme pas. Le 12 octobre, on compte environ 45 vidéos en anglais et seulement 3 ou 4 en français, dont aucune en format récit.
+- **Période** : 27 lundis, du 26 octobre 2026 au 26 avril 2027.
+- **Créneau unique** : **le lundi à 18 h** (heure de Paris). Pas de Shorts.
+  - Après le changement d'heure du 25/10, 18 h à Paris = 17 h à Abidjan, 18 h à Kinshasa et Douala.
+  - À partir du 28/03 : 16 h à Abidjan, 17 h à Kinshasa et Douala.
+  - Avant le 26/10, vérifie dans Studio > Audience « Quand vos spectateurs sont sur YouTube » que 18 h tombe un peu avant leur pic.
+- **La chaîne de production** : chaque semaine, tu montes la vidéo de la semaine suivante et tu écris celle d'après. Concrètement : la voix le lundi, le montage du mardi au samedi, la miniature le dimanche, et le script dans les trous.
+- **Deux charges qui alternent** :
+  - lourde ou moyenne, pour le génie et les histoires : 20 à 35 h ;
+  - légère, pour l'IA calculée : 12 à 18 h.
+  - Compte **20 à 30 h par semaine** (estimation, à recaler au bilan du 23/11). C'est à peu près le double du rythme de la v3.
+- **Le joker** : le pseudo (23/11) est léger et ne vieillit pas. Si une semaine déraille, il sort à la place, et la vidéo en retard glisse d'une semaine.
+- **Créneaux fermes** jusqu'au 25 janvier (chaque vidéo a sa fiche). Ensuite, les créneaux sont **provisoires** ou marqués **radar** : le radar les remplit à chaque sortie, deux semaines à l'avance.
 
 ---
 
 ## Grille des publications
 
-| Semaine | Lundi 20 h (vidéo longue) | Jeudi 18 h (Short) |
+| # | Lundi 18 h | Vidéo | Pilier | Format | Charge | Statut |
+|---|---|---|---|---|---|---|
+| — | 19 oct | [ArtCraft](projets/artcraft/fiche.md) | IA | Récit + test | — | Publiée |
+| — | mer. 21 oct | [OpenCode piraté](projets/opencode/fiche.md) | IA (actu) | Récit | — | Publiée (13 h) |
+| 1 | **26 oct** | [Uber : le génie caché derrière la carte en temps réel](projets/uber/fiche.md) | Génie | — | Faite | En ligne en privé : titre et tags à corriger |
+| 2 | **2 nov** | [Combien coûte Claude en local ?](projets/cout-claude-local/fiche.md) | IA | **Calculé** | Moyenne | Fiche (avancée du 4 janv.) |
+| 3 | **9 nov** | [Comment Waze sait qu'il y a un bouchon](projets/waze/fiche.md) | Génie | — | Moyenne (cartes d'Uber) | Fiche (avancée du 7 déc.) |
+| 4 | **16 nov** | [Claude ou mon PC ? #1 : 16 Go de VRAM](projets/claude-ou-mon-pc-1/fiche.md) | IA | **Testé** + conseils d'achat | Lourde (essais) | Brouillon (avancée du 23 nov.) |
+| 5 | **23 nov** | [Ton pseudo est déjà pris](projets/pseudo/fiche.md) | Génie | — | Légère | Fiche · joker |
+| 6 | 30 nov | *Radar* | IA | Calculé ou testé | Légère | Choisi au radar du 16/11 |
+| 7 | 7 déc | [Pourquoi tout paraît plus fluide sur un iPhone](projets/iphone-fluide/fiche.md) | Génie | — | Moyenne | Fiche |
+| 8 | 14 déc | [Le génie caché du pixel](projets/pixel/fiche.md) | Histoires | — | Lourde | Brouillon (avancé du 21 déc.) |
+| 9 | 21 déc | *Radar* | IA | Calculé ou testé | Légère | Choisi au radar du 7/12 |
+| 10 | 28 déc | [Python : il s'ennuyait à Noël](projets/python/fiche.md) | Histoires | — | Moyenne | Brouillon · programmée avant le 24 |
+| 11 | 4 janv | [Louer, acheter ou s'abonner ?](projets/louer-acheter-ia/fiche.md) | IA | **Calculé** (ne vieillit pas) | Légère | Fiche · produite pendant les fêtes |
+| 12 | 11 janv | [WhatsApp et ses 50 ingénieurs](projets/whatsapp/fiche.md) | Génie | — | Lourde | Fiche (avancée du 18 janv.) |
+| 13 | 18 janv | [Claude ou mon PC ? #2](projets/claude-ou-mon-pc-2/fiche.md) | IA | **Testé** | Moyenne | Fiche (avancée du 1er févr.) |
+| 14 | 25 janv | [Windows Phone : il lui manquait les applis](projets/windows-phone/fiche.md) | Histoires | — | Moyenne | Brouillon (ton texte) |
+| 15 | 1er févr | *Radar* | IA | | | Radar du 18/01 |
+| 16 | 8 févr | *Provisoire* : Mobile Money, comment ton argent passe sans internet (idée 17) | Génie | | | À confirmer au radar du 25/01 |
+| 17 | 15 févr | *Radar* | IA | | | |
+| 18 | 22 févr | *Provisoire* : Tu n'as jamais possédé tes jeux (idée 8) | Histoires | | | |
+| 19 | 1er mars | *Radar* | IA | | | |
+| 20 | 8 mars | *Provisoire* : le dev qui a mis un ChatGPT dans ton PC (llama.cpp, idée 9), pour les 4 ans de sa sortie (mars 2023, date exacte à vérifier) | Histoires | | | |
+| 21 | 15 mars | *Radar* | IA | | | Conférence GTC de NVIDIA vers la mi-mars (date à vérifier) |
+| 22 | 22 mars | *Provisoire* : SQLite, le fichier de 300 Ko qui a battu Oracle (idée 18) | Génie | | | |
+| 23 | 29 mars | *Radar* | IA | | | |
+| 24 | 5 avr | *Provisoire* : le paiement sans contact (idée 19) | Génie | | | |
+| 25 | 12 avr | *Radar* | IA | | | |
+| 26 | 19 avr | *Radar* | Génie ou histoires | | | |
+| 27 | 26 avr | *Radar* | IA | | | **Bilan à 6 mois** |
+
+**Pourquoi l'IA une semaine sur deux** : c'est le pilier qui permet le format léger. Une vidéo calculée se fait en grande partie avec de la recherche, presque sans essais, pendant que la vidéo lourde de la semaine suivante est au montage. Le bilan à 1 mois (23/11) dira si l'équilibre change : on comparera Uber et Waze à « Combien coûte Claude » et à Claude #1.
+
+---
+
+## Production semaine par semaine (jusqu'au 31 janvier)
+
+Règle : en semaine N, **voix et montage** de la vidéo de N+1, **écriture** de celle de N+2.
+
+| Semaine | Écriture (vidéo de N+2) | Voix, essais, montage (vidéo de N+1) | En ligne |
+|---|---|---|---|
+| **S1** · 19-25 oct | Recherche et script de **Coût Claude** | **Uber** : vrai titre, tags, description, chapitres et sous-titres (`upload.md` à créer). **Premiers essais sur la 5080** : quels modèles tiennent en 16 Go, et à quelle vitesse | ArtCraft (lun. 19), OpenCode (mer. 21) |
+| **S2** · 26 oct-1er nov | Recherche et script de **Waze** (pages d'aide Waze) | Voix et montage de **Coût Claude** ; essais sur la 5080 (suite) | **Uber** lun. 26 |
+| **S3** · 2-8 nov | Script de **Claude #1** ; relevé des prix en euros (cartes, RAM) | Voix et montage de **Waze**, en réutilisant les cartes d'Uber ; derniers essais et consommation de la 5080 | **Coût Claude** lun. 2 |
+| **S4** · 9-15 nov | Recherche et script du **pseudo** (filtre de Bloom) | Voix et montage de **Claude #1** ; 2-3 h d'animations pour le pixel | **Waze** lun. 9 |
+| **S5** · 16-22 nov | **Radar** → choix du 30/11, puis son script | Voix et montage du **pseudo** ; 2-3 h pour le pixel | **Claude #1** lun. 16 |
+| **S6** · 23-29 nov | Recherche et script de l'**iPhone** | Voix et montage de la vidéo IA du 30/11 ; **ven. 27 : épingler les prix du Black Friday** sous Claude #1 | **Pseudo** lun. 23 · **bilan à 1 mois** |
+| **S7** · 30 nov-6 déc | Script du **pixel** (ton brouillon devient le 2e acte) | Voix et montage de l'**iPhone** | **IA (radar)** lun. 30 |
+| **S8** · 7-13 déc | **Radar** → choix du 21/12, puis son script. **Prends de l'avance** : écris aussi Python | Voix et montage du **pixel** | **iPhone** lun. 7 |
+| **S9** · 14-20 déc | Script de **Louer, acheter ou s'abonner** (en avance : elle sort le 4 janv.) | Voix et montage de la vidéo IA du 21/12 | **Pixel** lun. 14 |
+| **S10** · 21-27 déc ⚠️ | Recherche de **WhatsApp** (Wired 2015, Erlang), s'il reste du temps | Voix et montage de **Python**, **programmée mer. 23** | **IA (radar)** lun. 21 · repos 24-25 |
+| **S11** · 28 déc-3 janv ⚠️ | Script de **WhatsApp** | Voix et montage de **Louer, acheter**, programmée | **Python** lun. 28 · repos 31-1er |
+| **S12** · 4-10 janv | Script de **Claude #2** ; **essais du dernier modèle sorti** | Voix et montage de **WhatsApp** | **Louer, acheter** lun. 4 |
+| **S13** · 11-17 janv | Script de **Windows Phone** (à partir de ton [brouillon](projets/windows-phone/brouillon.md)) | Voix et montage de **Claude #2** | **WhatsApp** lun. 11 |
+| **S14** · 18-24 janv | **Radar** → choix du 1er févr., puis son script | Voix et montage de **Windows Phone** | **Claude #2** lun. 18 |
+| **S15** · 25-31 janv | Radar du 25/01 : confirmer le 8 févr. | Voix et montage de la vidéo IA du 1er févr. | **Windows Phone** lun. 25 · **bilan à 3 mois** |
+
+**⚠️ Les fêtes (S10 et S11)** sont les semaines les plus tendues. Python et « Louer, acheter » ne dépendent pas de l'actu : écris-les en avance (S8 et S9), et programme-les avant le 24.
+
+**S1 est chargée** : le kit d'upload d'Uber, le script de « Coût Claude » et les premiers essais sur la 5080 tombent la même semaine. Les essais passent en premier : ils nourrissent Claude #1 (16/11), et rien n'a encore tourné sur ta carte.
+
+---
+
+## Équilibre
+
+| Pilier | Vidéos (sur 27) | Part |
 |---|---|---|
-| S1 · 12-18 oct | — | ~~15 oct : Windows 10~~ (pas sorti, archivé) |
-| S2 · 19-25 oct | **19 oct : ArtCraft** | 22 oct : ArtCraft, « il a recréé Adobe » |
-| S3 · 26 oct-1er nov | — | — |
-| S4 · 2-8 nov | — | — |
-| S5 · 9-15 nov | **9 nov : Uber** | 12 nov : Uber, les hexagones |
-| S6 · 16-22 nov | — | — |
-| S7 · 23-29 nov | **23 nov : Claude ou mon PC ? #1 (16 Go de VRAM)** | 26 nov : « la carte à ne pas acheter » (veille du Black Friday) |
-| S8 · 30 nov-6 déc | — | — |
-| S9 · 7-13 déc | **7 déc : Waze** | 10 déc : Waze, le bouchon que personne n'avait signalé |
-| S10 · 14-20 déc | — | — |
-| S11 · 21-27 déc | **21 déc : pixel** | 24 déc : pixel, « il n'y a pas de blanc » (programmé) |
-| S12 · 28 déc-3 janv | — | — |
-| S13 · 4-10 janv | **4 janv : combien coûte Claude en local ?** | 7 janv : coût Claude, le chiffre final |
-| S14 · 11-17 janv | — | — |
-| S15 · 18-24 janv | **18 janv : WhatsApp** | 21 janv : WhatsApp, 1 ingénieur pour 18 millions |
-| S16 · 25-31 janv | — | — |
+| IA chez moi (testé ou calculé) | 13 | 48 % |
+| Le génie derrière l'app | 9 | 33 % |
+| Les grandes histoires de la tech | 5 | 19 % |
 
----
-
-## Production semaine par semaine
-
-| Semaine | Recherche et script | Tournage (voix, tests) | Montage | En ligne |
-|---|---|---|---|---|
-| **S1** · 12-18 oct | Recherche ArtCraft (articles, GitHub, histoire de Brandon Thomas) ; script sam. 17-dim. 18 | **Test de PhotoCraft** (la miniature de la vidéo + un vrai PSD ; filmer les ratés). Un seul logiciel testé (décision du 18/10) | Montage ArtCraft, terminé en avance | — |
-| **S2** · 19-25 oct | Recherche Uber (blog Uber Engineering, grille H3), avancée d'une semaine | — | Short ArtCraft (mar. 20-mer. 21) ; **nouvelle bannière et description**, si pas encore faites | **ArtCraft lun. 19** ; Short jeu. 22 |
-| **S3** · 26 oct-1er nov | Script Uber (sam. 31-dim. 1er) | **Premiers essais Qwen** sur la 5080 (noter prompts, temps, ratés) ; **tests de VRAM** (quels modèles rentrent en 16 Go) | Bibliothèque Remotion (carte, hexagones) | — |
-| **S4** · 2-8 nov | — | Voix Uber (lun. 2) | Montage Uber (mar. 3-sam. 7) ; miniature (dim. 8) | — |
-| **S5** · 9-15 nov | Relever les prix en euros (cartes, RAM) ; script Claude #1 avec la partie « quoi acheter avant le Black Friday » (sam. 14-dim. 15) | Derniers essais Qwen, captures de l'app générée, consommation de la 5080 (avant ven. 13) | Short Uber ; **bilan J30 dans Studio** | **Uber lun. 9** ; Short jeu. 12 |
-| **S6** · 16-22 nov | — | Voix Claude #1 (lun. 16) | Montage (mar. 17-sam. 21) ; miniature (dim. 22) ; **2-3 h : premières animations du pixel** | — |
-| **S7** · 23-29 nov | Recherche Waze (pages d'aide Waze) ; script sam. 28-dim. 29 ; épingler sous Claude #1 un commentaire avec les prix du Black Friday (ven. 27) | — | Short « la carte à ne pas acheter » | **Claude #1 lun. 23** ; Short jeu. 26 |
-| **S8** · 30 nov-6 déc | — | Voix Waze (lun. 30) | Montage Waze (mar. 1er-sam. 5), carte d'Uber réutilisée ; miniature (dim. 6) | — |
-| **S9** · 7-13 déc | Script pixel (sam. 12-dim. 13), ton texte de `projets/pixel/brouillon.md` en 2e acte ; recherche « coût Claude » (taille des modèles ouverts, prix des serveurs) | — | Short Waze ; animations pixel (suite) ; **bilan J60 et verdict des Shorts** | **Waze lun. 7** ; Short jeu. 10 |
-| **S10** · 14-20 déc | Script « coût Claude », si possible avant le 20 déc | Voix pixel (lun. 14) | Montage pixel (mar. 15-sam. 19) ; miniature (dim. 20) | — |
-| **S11** · 21-27 déc | Script « coût Claude » (fin, sam. 26-dim. 27) | — | **Mar. 22 : programmer le Short du 24** | **Pixel lun. 21** ; Short jeu. 24 · repos le 24 et le 25 |
-| **S12** · 28 déc-3 janv ⚠️ | — | Voix « coût Claude » (lun. 28) | Montage (mar. 29-mer. 30, puis sam. 2) ; miniature (dim. 3) | Repos le 31 et le 1er |
-| **S13** · 4-10 janv | Recherche WhatsApp (Wired 2015, Erlang) ; script sam. 9-dim. 10 | — | Short « coût Claude » | **Coût Claude lun. 4** ; Short jeu. 7 |
-| **S14** · 11-17 janv | — | Voix WhatsApp (lun. 11) | Montage (mar. 12-sam. 16) ; miniature (dim. 17) | — |
-| **S15** · 18-24 janv | Script Claude #2 (sam. 23-dim. 24) | Essais du dernier modèle sorti (mar. 19-ven. 22) | Short WhatsApp ; **bilan J90** | **WhatsApp lun. 18** ; Short jeu. 21 |
-| **S16** · 25-31 janv | — | Voix Claude #2 (lun. 25) | Montage (mar. 26-sam. 30) ; miniature (dim. 31) | → Claude #2 le lun. 1er février |
-
-**S3 accueille les essais** : la semaine gagnée sur ArtCraft reçoit les premiers essais Qwen et les tests de VRAM, qui surchargeaient S4 et S5. Garde-les courts : quels modèles rentrent en 16 Go et à quelle vitesse, pas un banc d'essai complet.
-
-**⚠️ S12 est la semaine la plus tendue** : le montage de « Combien coûte Claude en local ? » tombe entre Noël et le Nouvel An. Pour souffler, écris le script en S10 : cette vidéo n'a presque pas d'essais, seulement de la recherche (faite en S9).
-
----
-
-## Fiches des vidéos
-
-Chaque fiche (titres, miniature, contenu, points à vérifier, Shorts) est dans le dossier du projet :
-
-| Date | Projet |
-|---|---|
-| 19 oct | [ArtCraft](projets/artcraft/fiche.md) |
-| 9 nov | [Uber](projets/uber/fiche.md) |
-| 23 nov | [Claude ou mon PC ? #1](projets/claude-ou-mon-pc-1/fiche.md) |
-| 7 déc | [Waze](projets/waze/fiche.md) |
-| 21 déc | [Pixel](projets/pixel/fiche.md) |
-| 4 janv | [Combien coûte Claude en local ?](projets/cout-claude-local/fiche.md) |
-| 18 janv | [WhatsApp](projets/whatsapp/fiche.md) |
-| 1er févr | [Claude ou mon PC ? #2](projets/claude-ou-mon-pc-2/fiche.md) |
-
----
-
-## Équilibre evergreen / tendance
-
-| Vidéo | Pilier | Classement |
-|---|---|---|
-| ArtCraft | IA | Tendance |
-| Uber | Génie | Evergreen |
-| Claude ou mon PC ? #1 (16 Go) | IA | Hybride (la question des 16 Go dure, les modèles changent) |
-| Waze | Génie | Hybride (sujet durable, date choisie pour profiter des suggestions) |
-| Pixel | Histoire | Evergreen |
-| Combien coûte Claude en local ? | IA | Tendance (liée au dernier modèle sorti) |
-| WhatsApp | Génie | Evergreen |
-
-- **Evergreen** : 43 %
-- **Hybride** : 29 %
-- **Tendance** : 29 %
-
-**Verdict : OK.** Le seuil d'alerte est à 30 % de vidéos de tendance, et on est juste en dessous. Aucun pilier ne revient deux fois de suite : IA, génie, IA, génie, histoire, IA, génie.
-
----
-
-## Plan des Shorts
-
-**Décision du 19/10 : la vidéo longue d'abord.** Un seul Short par vidéo longue, le jeudi qui suit (3 jours après), au lieu de deux. C'est un test, avec un verdict au bilan J60 (7 déc.).
-
-**Ce que disent les chiffres** (vidIQ, relevés le 19/10) :
-
-| Chaîne | Vidéos longues | Shorts |
-|---|---|---|
-| **Technovore** (oct. 2025-oct. 2026) | 772 abonnés gagnés | 2 abonnés gagnés. Le Short du 11 oct. (« Ce PC à 70 € ») : 775 vues, 1 abonné |
-| **Thibaut Dcode** (84,5 K abonnés, sur 1 an) | 34 vidéos, 10,2 M de vues (~300 K chacune) | 29 Shorts, 259 K vues (~9 K chacun), soit 2,5 % de ses vues |
-| **Kai** (voir `etudes/kai.md`) | La croissance démarre avec la vidéo longue | 66 Shorts en juin-juillet, ~1 000 vues chacun, puis abandon |
-| **Parlons IA & Tech** (17,5 K, sans visage, 30 derniers jours) | 32 vidéos, 230 K vues | 57 Shorts, 27 K vues |
-| **Nerdy Kings** (31,9 K, IA, 30 derniers jours) | 10 vidéos, 232 K vues | 9 Shorts, 610 K vues : le contre-exemple |
-
-Thibaut Dcode est le modèle le plus proche du pilier « génie derrière l'app », et ses Shorts ne pèsent presque rien. Le guide Shorts du skill (`shorts-playbook.md`) va dans le même sens : un Short touche surtout un autre public (~10 % en commun avec la vidéo longue), le lien « vidéo associée » convertit à moins de 1 %, et les Shorts rapportent de 0,01 à 0,07 $ pour 1 000 vues.
-
-**Pourquoi en garder un quand même** :
-- il coûte peu s'il reprend des animations déjà faites ;
-- il teste un hook ou un sujet sans 35 h de travail (le guide conseille de transformer les Shorts qui marchent en vidéos longues) ;
-- un Short d'actu peut décoller : « la carte à ne pas acheter », la veille du Black Friday ;
-- Nerdy Kings montre que des Shorts d'IA en français peuvent marcher.
-
-**Les règles** :
-- **2 h maximum** par Short. Il reprend le moment le plus fort de la vidéo longue (déjà écrit, déjà animé), recadré en 9:16. S'il faut refaire les animations, on saute.
-- On prend la 1re idée de la section « Shorts » de chaque fiche. Les autres restent en réserve.
-- Hook dans les 3 premières secondes, entre 15 et 60 s. Si la part de « regardées » face aux « balayées » (*Viewed vs Swiped Away*) passe sous 60 % dans Studio, le début ne tient pas : change l'ouverture du Short suivant.
-- Plus de Short autonome pendant le test : Windows 10 et Vorssaint sont archivés (voir [`archive/README.md`](archive/README.md)).
-
-**Le verdict au J60 (7 déc.)**, après 3 Shorts (ArtCraft, Uber, Black Friday) : compare les **abonnés gagnés par heure de travail**. Exemple : si une vidéo longue de 30 h rapporte 60 abonnés, ça fait 2 abonnés par heure, et un Short de 2 h doit en rapporter au moins 4.
-- **Shorts en dessous** : on arrête, sauf pour l'actu. Le temps gagné va à la 3e vidéo longue par mois (prévue après 6 vidéos, section 5 de la stratégie).
-- **Shorts au-dessus** : on garde le rythme, et le sujet du meilleur Short devient candidat pour une vidéo longue.
-
-*Tous les chiffres et anecdotes des Shorts se vérifient à la source pendant l'écriture du script de la vidéo longue.*
+- **Pas deux fois le même pilier de suite.**
+- **Tendance** : parmi les créneaux fermes, une seule vidéo vit de l'actu (Claude #2), et deux sont hybrides (Coût Claude, Claude #1 : le modèle vieillit, la question reste). Les 9 créneaux radar peuvent faire monter la part de tendance au-delà du seuil d'alerte de 30 % (référence du skill calendrier). D'où la règle du radar : **au plus 1 vidéo de tendance sur 3**.
 
 ---
 
 ## Saisonnalité et timing
 
-### Revenus publicitaires
-- **Octobre à décembre (4e trimestre)** : la période la mieux payée. 5 vidéos sur 7 y tombent (ArtCraft, Uber, Claude #1, Waze, pixel).
-- **Janvier** : creux saisonnier. « Combien coûte Claude en local ? » et WhatsApp y servent la **croissance** (vues, abonnés) plutôt que les revenus. Le sujet le plus « achat » (Claude #1 et ses conseils) sort désormais le 23 novembre, en pleine période bien payée.
-
-### Fêtes et délais (calculés à rebours)
-
 | Événement | Date | Délai utile | Action |
 |---|---|---|---|
-| Black Friday | ven. 27 nov | Un guide d'achat devrait sortir ~1 semaine avant | Claude #1 et ses conseils d'achat le **23 nov** ; Short « carte à ne pas acheter » le 26 ; prix du Black Friday épinglés en commentaire le 27 |
-| Vacances de Noël | dès le sam. 19 déc | Publier au début des vacances | Pixel le **21 déc** : le public a le temps pour un documentaire |
-| Nouvel An | jeu. 31 déc | À préparer avant le 24 déc | Short du 24 **programmé le 22 déc** ; pas de Short le 31 |
-| Soldes d'hiver | début janvier 2027 (date officielle à vérifier) | — | Plus de guide d'achat à cette date (il sort avant le Black Friday). « Combien coûte Claude en local ? » le **4 janv** reste un sujet de coût |
+| Revenus pub du 4e trimestre | oct.-déc. | — | 10 vidéos dans la période la mieux payée, dont les deux plus « achat » (Coût Claude, Claude #1) |
+| Black Friday | ven. 27 nov | Un guide d'achat ~1 semaine avant | Claude #1 le **16 nov** (11 jours avant) ; prix épinglés en commentaire le 27 |
+| Noël | ven. 25 déc | À programmer avant le 24 | Python le **28 déc** : il a créé Python pendant la semaine de Noël 1989 (citation à vérifier) |
+| Creux de janvier | janv. | — | Vidéos de croissance (Louer, acheter ; WhatsApp ; Claude #2) plutôt que de revenus |
+| Soldes d'hiver | mi-janvier (date officielle à vérifier) | — | Rien de prévu : le guide d'achat sort avant le Black Friday |
+| GTC de NVIDIA | mi-mars (à vérifier) | La semaine qui suit | Créneau radar du 15 mars : nouvelles cartes, nouveaux prix |
+| Changements d'heure | 25 oct, 28 mars | — | L'heure de Paris reste 18 h ; l'heure africaine bouge (voir plus haut) |
 
 ---
 
@@ -162,7 +116,8 @@ Thibaut Dcode est le modèle le plus proche du pilier « génie derrière l'app 
 
 | Date | Quoi | Où |
 |---|---|---|
-| Avant le 9 nov | Heures où ton public est en ligne | Studio > Audience |
-| ~9 nov (J30) | ArtCraft à 3 semaines : vues, CTR, part du trafic recherche, part France, **abonnés gagnés** (la base du verdict des Shorts) | `strategie.md`, section 6 |
-| ~7 déc (J60) | Rétention à 30 s, vision moyenne, meilleure vidéo ; **verdict des Shorts** | idem + « Plan des Shorts » ci-dessus |
-| ~18 janv (J90) | Abonnés, vues mensuelles, système de production | idem |
+| À chaque sortie | **Le radar** : la vidéo précédente à J+7, les concurrents, le public français, le choix du prochain créneau | `CLAUDE.md`, « Radar » → `etudes/radar.md` |
+| Avant le 26 oct | Heures où ton public est en ligne | Studio > Audience |
+| ~23 nov (1 mois) | Vues à 28 j, CTR, abonnés gagnés par vidéo, part France ; **heures de travail réelles par semaine** (le rythme tient-il ?) ; IA contre génie | `strategie.md`, section 6 |
+| ~25 janv (3 mois) | Abonnés, vues mensuelles, meilleure vidéo, bibliothèque d'animations | idem |
+| ~26 avr (6 mois) | Bilan complet, puis plan des 6 mois suivants | idem |

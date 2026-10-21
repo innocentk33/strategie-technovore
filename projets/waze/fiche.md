@@ -16,11 +16,5 @@
 2. Curiosité : *Waze savait pour le bouchon avant toi*
 3. Mixte (recommandé) : *Comment Waze sait qu'il y a un bouchon avant que tu le voies*
 
-**Miniature** : écran Waze avec une route rouge, flèche qui l'évite, texte « IL SAVAIT ».
+**Miniature** (21/10, charte noire) : [`noir-03.png`](../../ressources/miniatures/rendus/noir-03.png). Téléphone avec le bouchon en rouge et le détour en bleu, icône Waze, « personne ne l'a signalé, il savait. ». « avant toi » répétait le titre.
 **Contenu** : chaque téléphone qui roule avec Waze sert de capteur de vitesse, les signalements complètent, et Waze en tire un itinéraire. Laisse l'angle « gratuité et données » à Thibaut Dcode : toi, tu montres la machine.
-
-## Shorts
-
-1. 10 déc : « Le bouchon que personne n'avait signalé. »
-2. Réserve : « Ton téléphone est un capteur de trafic. »
-3. Réserve : « Pourquoi Waze te fait passer par des petites rues. »

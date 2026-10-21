@@ -35,9 +35,3 @@
 **Montage** : voix enregistrée (`artcraft.m4a`, 21 min 25 de prises) → voix montée [`voix-off-montee.wav`](voix-off-montee.wav) (12 min 14, −16 LUFS). Storyboard plan par plan, avec le rush `Test photocraft.mp4` : [`storyboard.md`](storyboard.md). Le test a réussi : le PSD s'ouvre parfaitement et la miniature est faite avec PhotoCraft.
 
 **Upload** : titre, description, chapitres calés sur la vidéo finale (12:24), tags, réglages Studio, écran de fin : [`upload.md`](upload.md).
-
-## Shorts
-
-1. 22 oct : « Adobe lui a fait payer sa résiliation. Il a recréé Adobe. » (confirmé)
-2. Réserve : « J'ai ouvert un vrai fichier Photoshop dans le clone gratuit. »
-3. Réserve : « Il a cloné Adobe par haine des abonnements… et il vend des abonnements. »
