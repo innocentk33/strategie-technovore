@@ -1,0 +1,121 @@
+<!doctype html>
+<!-- Maquettes de miniature Uber. Variante via ?v=a|b|c ; rendu : voir ../propositions.md -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  :root { --ink:#f5f5f7; --mid:#86868b; --low:#3a3a3c; --red:#ff453a; --green:#30d158; --accent:var(--green); }
+  [data-v="b"] { --accent:var(--red); }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1920px; height:1080px; overflow:hidden; background:#000; }
+  body { position:relative; font-family:"SF Pro Display", -apple-system, system-ui, sans-serif; color:var(--ink); }
+  .grid { position:absolute; inset:0;
+    background-image:linear-gradient(rgba(58,58,60,.55) 2px, transparent 2px), linear-gradient(90deg, rgba(58,58,60,.55) 2px, transparent 2px);
+    background-size:96px 96px; background-position:-20px -40px;
+    -webkit-mask-image:radial-gradient(ellipse 70% 80% at 30% 50%, #000 20%, transparent 75%); }
+  .glow { position:absolute; left:-200px; top:-100px; width:1300px; height:1300px; border-radius:50%;
+    background:radial-gradient(circle, color-mix(in srgb, var(--accent) 28%, transparent) 0%, transparent 60%); }
+  .phone { position:absolute; left:170px; top:96px; width:640px; height:1300px; border-radius:104px; padding:16px;
+    background:linear-gradient(135deg, #3a3a3c, #1c1c1e 30%, #1c1c1e 70%, #2c2c2e);
+    box-shadow:0 0 0 2px #48484a, 0 60px 140px rgba(0,0,0,.9), 0 0 120px color-mix(in srgb, var(--accent) 25%, transparent);
+    transform:perspective(2400px) rotateY(16deg) rotateX(5deg) rotateZ(-5deg); transform-origin:50% 35%; }
+  .screen { width:100%; height:100%; border-radius:88px; overflow:hidden; }
+  .screen svg { display:block; width:100%; height:100%; }
+  .island { position:absolute; top:38px; left:50%; width:190px; height:56px; margin-left:-95px; border-radius:30px; background:#000; }
+  .uber { position:absolute; left:640px; top:64px; width:250px; height:250px; border-radius:64px; background:#000;
+    border:3px solid #48484a; display:flex; align-items:center; justify-content:center;
+    font-weight:500; font-size:92px; letter-spacing:-.03em; color:#fff; transform:rotate(6deg);
+    box-shadow:0 40px 90px rgba(0,0,0,.95), 0 0 70px rgba(255,255,255,.12); }
+  .txt { position:absolute; left:1010px; right:50px; top:50%; transform:translateY(-50%);
+    font-weight:800; letter-spacing:-.04em; line-height:.9; }
+  .mono { font-family:ui-monospace, "SF Mono", monospace; font-weight:700; letter-spacing:-.06em; }
+  .green { color:var(--green); } .red { color:var(--red); }
+  .arrow { position:absolute; inset:0; width:1920px; height:1080px; pointer-events:none; }
+  [data-v] .only { display:none; }
+  [data-v="a"] .a, [data-v="b"] .b, [data-v="c"] .c { display:block; }
+  /* ?layer=decor : sans texte ni flèche ; ?layer=fleche : la flèche seule, fond transparent (calques PhotoCraft) */
+  [data-layer="decor"] .txt, [data-layer="decor"] .arrow { display:none !important; }
+  [data-layer="fleche"] > :not(.arrow) { display:none !important; }
+  html[data-layer="fleche"], [data-layer="fleche"] { background:transparent; }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="grid"></div>
+<div class="phone"><div class="screen"><svg id="map" viewBox="0 0 608 1268"></svg></div><div class="island"></div></div>
+<div class="uber">Uber</div>
+
+<div class="txt only a"><div class="mono green" style="font-size:200px">570&#8239;000</div><div style="font-size:150px">milliards</div><div style="font-size:112px;margin-top:14px">d'hexagones.</div></div>
+<div class="txt only b"><div style="font-size:250px">elle</div><div style="font-size:212px">existe<span class="red">&#8239;?</span></div></div>
+<div class="txt only c"><div style="font-size:300px">zéro</div><div style="font-size:300px">lag.</div></div>
+
+<svg class="arrow only b" viewBox="0 0 1920 1080"><g fill="none" stroke="#f5f5f7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M990 470 Q 860 440 735 560"/><path d="M789 552 L735 560 L746 506"/></g></svg>
+
+<script>
+  const v = new URLSearchParams(location.search).get('v') || 'a';
+  document.body.dataset.v = v;
+  const layer = new URLSearchParams(location.search).get('layer');
+  if (layer) document.documentElement.dataset.layer = document.body.dataset.layer = layer;
+  const W = 608, H = 1268, dot = { x: 304, y: 640 };
+
+  // Voiture vue de dessus, avant vers le haut, centrée sur (x, y)
+  const car = (x, y, rot, { op = 1, ghost = false, trail = false, scale = 1 } = {}) => `
+    <g transform="translate(${x} ${y}) rotate(${rot}) scale(${scale}) translate(-33 -60)" opacity="${op}">
+      ${trail ? `<rect x="10" y="100" width="46" height="230" rx="23" fill="url(#trail)"/>` : ''}
+      <g filter="url(#shadow)" ${ghost ? 'opacity=".28"' : ''}>
+        <rect x="2" y="0" width="62" height="120" rx="26" fill="#f5f5f7"/>
+        <path d="M10 32 Q33 22 56 32 L51 52 Q33 47 15 52 Z" fill="#1c1c1e"/>
+        <rect x="15" y="55" width="36" height="32" rx="7" fill="#d1d1d6"/>
+        <path d="M15 90 Q33 95 51 90 L54 106 Q33 111 12 106 Z" fill="#1c1c1e"/>
+      </g>
+      ${ghost ? `<rect x="-10" y="-12" width="86" height="144" rx="34" fill="none" stroke="#ff453a" stroke-width="9" stroke-dasharray="18 12" filter="url(#redglow)"/>` : ''}
+    </g>`;
+
+  const hex = (cx, cy, R) => [...Array(6)].map((_, k) => {
+    const a = Math.PI / 180 * (60 * k - 90);
+    return `${(cx + R * Math.cos(a)).toFixed(1)},${(cy + R * Math.sin(a)).toFixed(1)}`;
+  }).join(' ');
+
+  let s = `<defs>
+      <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".7"/></filter>
+      <filter id="redglow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#ff453a" flood-opacity=".9"/></filter>
+      <linearGradient id="trail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#30d158" stop-opacity=".75"/><stop offset="1" stop-color="#30d158" stop-opacity="0"/></linearGradient>
+    </defs>
+    <rect width="${W}" height="${H}" fill="#0e1114"/>
+    <g transform="rotate(16 ${dot.x} ${dot.y})" stroke="#1e2229" stroke-width="10">`;
+  for (let i = -8; i <= 14; i++) s += `<line x1="${i * 96}" y1="-400" x2="${i * 96}" y2="1700"/>`;
+  for (let j = -6; j <= 20; j++) s += `<line x1="-400" y1="${j * 104}" x2="1100" y2="${j * 104}"/>`;
+  s += `</g>
+    <path d="M380 980 L560 940 L608 1100 L608 1180 L420 1200 Z" fill="#102019"/>
+    <path d="M-40 250 C 160 330, 300 200, 460 290 S 640 410, 700 370" stroke="#0d1a2b" stroke-width="56" fill="none"/>
+    <g stroke="#2c313a" stroke-width="24" fill="none" stroke-linecap="round"><path d="M-40 990 L 700 530"/><path d="M118 -40 L 468 1320"/></g>`;
+
+  if (v === 'a') {
+    // Grille H3 : la case du point (verte), ses 6 voisines, le reste ignoré
+    const R = 74, n = [];
+    for (let r = -8; r <= 8; r++) for (let q = -8; q <= 8; q++) {
+      const x = dot.x + R * Math.sqrt(3) * (q + r / 2), y = dot.y + R * 1.5 * r;
+      if (x < -R || x > W + R || y < -R || y > H + R) continue;
+      const d = Math.max(Math.abs(q), Math.abs(r), Math.abs(q + r));
+      const fill = d === 0 ? 'rgba(48,209,88,.55)' : d === 1 ? 'rgba(48,209,88,.2)' : 'none';
+      const stroke = d <= 1 ? 'rgba(48,209,88,.95)' : 'rgba(48,209,88,.3)';
+      n.push(`<polygon points="${hex(x, y, R - 2)}" fill="${fill}" stroke="${stroke}" stroke-width="${d <= 1 ? 4 : 2.5}"/>`);
+    }
+    s += n.join('');
+    s += car(dot.x + 64, dot.y - 111, 28) + car(dot.x - 128, dot.y + 4, -70);
+    s += car(dot.x + 210, dot.y + 300, 15, { op: .3 }) + car(dot.x - 190, dot.y - 330, 120, { op: .3 }) + car(dot.x + 160, dot.y - 420, -40, { op: .3 });
+  } else if (v === 'b') {
+    s += car(dot.x - 150, dot.y - 190, 35) + car(dot.x - 120, dot.y + 200, 110) + car(dot.x + 170, dot.y + 230, -20);
+    s += car(dot.x + 150, dot.y - 150, -60, { ghost: true, scale: 1.3 });
+  } else {
+    // Voitures qui glissent le long des avenues
+    s += car(dot.x - 70, dot.y - 270, 165, { trail: true }) + car(dot.x + 210, dot.y - 15, 58, { trail: true });
+    s += car(dot.x - 220, dot.y + 160, 238, { trail: true });
+  }
+  s += `<circle cx="${dot.x}" cy="${dot.y}" r="64" fill="#0a84ff" opacity=".18"/>
+    <circle cx="${dot.x}" cy="${dot.y}" r="18" fill="#0a84ff" stroke="#fff" stroke-width="6"/>`;
+  document.getElementById('map').innerHTML = s;
+</script>
+</body>
+</html>

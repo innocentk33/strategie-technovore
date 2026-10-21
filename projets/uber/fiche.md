@@ -18,7 +18,7 @@
 2. Curiosité : *Uber a dû découper la planète en hexagones*
 3. Mixte (recommandé) : *Le génie caché derrière la carte en temps réel d'Uber*
 
-**Miniature** : carte sombre couverte d'hexagones lumineux, voitures en points blancs, texte « COMMENT ?! ».
+**Miniature** : 3 propositions à tester (A « 570 000 milliards d'hexagones. », B « elle existe ? » recommandée, C « zéro lag. ») dans [`miniature/propositions.md`](miniature/propositions.md). L'idée « COMMENT ?! » est abandonnée.
 **Contenu** : comment Uber affiche en direct des voitures qui bougent sans faire ramer ton téléphone : positions GPS, grille hexagonale H3, mises à jour en continu, animation entre deux positions. Ce que le spectateur retient : le travail invisible derrière un geste banal.
 
 ## Shorts

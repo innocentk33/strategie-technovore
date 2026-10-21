@@ -1,0 +1,136 @@
+<!doctype html>
+<!-- Décors des miniatures OpenCode. Variante via ?v=a|b|c. Le gros texte est ajouté en calques de texte dans PhotoCraft (../photocraft/) -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  :root { --ink:#f5f5f7; --low:#3a3a3c; --red:#ff453a; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1920px; height:1080px; overflow:hidden; background:#000; }
+  body { position:relative; font-family:"SF Pro Display", -apple-system, system-ui, sans-serif; color:var(--ink); }
+  .grid { position:absolute; inset:0;
+    background-image:linear-gradient(rgba(58,58,60,.55) 2px, transparent 2px), linear-gradient(90deg, rgba(58,58,60,.55) 2px, transparent 2px);
+    background-size:96px 96px; background-position:-20px -40px;
+    -webkit-mask-image:radial-gradient(ellipse 70% 80% at 30% 50%, #000 20%, transparent 75%); }
+  .glow { position:absolute; width:1300px; height:1300px; border-radius:50%;
+    background:radial-gradient(circle, rgba(255,69,58,.26) 0%, transparent 60%); }
+  /* Logo OpenCode : mot-symbole de la bannière officielle, fond rendu transparent (../photocraft/opencode-wordmark.png, 900×174) */
+  .wordmark { position:absolute; width:calc(900px * var(--s)); height:calc(174px * var(--s));
+    background:url(../photocraft/opencode-wordmark.png) no-repeat 0 0 / 100% 100%; }
+  .only { display:none; }
+  [data-v="a"] .a, [data-v="b"] .b, [data-v="c"] .c, [data-v="d"] .d, [data-v="e"] .e, [data-v="f"] .f, [data-v="g"] .g, [data-v="h"] .h { display:block; }
+  .mono { font-family:"JetBrains Mono", ui-monospace, Menlo, monospace; }
+
+  /* A · la bulle « ok » et la facture */
+  .ask { position:absolute; left:560px; top:150px; padding:26px 46px; border-radius:56px 56px 14px 56px; background:#0a84ff;
+    font:500 72px "Hiragino Sans GB", "PingFang SC", sans-serif; box-shadow:0 30px 70px rgba(0,0,0,.8); }
+  .ok { position:absolute; left:110px; top:350px; width:700px; height:520px; border-radius:150px 150px 150px 30px; background:#2c2c2e;
+    border:3px solid #48484a; box-shadow:0 60px 140px rgba(0,0,0,.95), 0 0 90px rgba(255,255,255,.08); }
+  .ok-label { position:absolute; left:130px; top:890px; font-size:34px; color:#86868b; }
+  .receipt { position:absolute; left:1110px; top:170px; width:700px; height:720px; padding:56px 60px; background:#f5f5f7; color:#1c1c1e;
+    transform:rotate(4deg); box-shadow:0 60px 140px rgba(0,0,0,.95), 0 0 120px rgba(255,69,58,.35);
+    -webkit-mask:conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 48px 100%; }
+  .receipt h3 { font-size:44px; font-weight:800; letter-spacing:-.02em; }
+  .receipt .row { display:flex; justify-content:space-between; font-size:34px; margin-top:24px; color:#48484a; }
+  .receipt hr { border:none; border-top:5px dashed #c7c7cc; margin:40px 0; }
+
+  /* B · logo cassé */
+  .glitch { position:absolute; left:100px; top:150px; --s:1.9; }
+  .glitch .wordmark { left:0; top:0; filter:drop-shadow(-12px 5px 0 rgba(255,69,58,.85)) drop-shadow(12px -5px 0 rgba(10,200,255,.55)); }
+  .glitch .s1 { clip-path:inset(52% 0 30% 0); transform:translateX(44px); filter:drop-shadow(-12px 0 0 rgba(255,69,58,.9)); }
+  .bar { position:absolute; left:0; right:0; height:10px; background:var(--red); opacity:.85; box-shadow:0 0 30px var(--red); }
+
+  /* C · la table en clair */
+  .db { position:absolute; left:120px; top:150px; width:1000px; height:780px; border-radius:36px; background:#111214; border:3px solid #3a3a3c;
+    box-shadow:0 60px 140px rgba(0,0,0,.95), 0 0 120px rgba(255,69,58,.25);
+    transform:perspective(2400px) rotateY(14deg) rotateZ(-3deg); transform-origin:50% 40%; overflow:hidden; }
+  .db .top { height:96px; display:flex; align-items:center; gap:18px; padding:0 40px; background:#1c1c1e; border-bottom:2px solid #2c2c2e; font-size:34px; color:#86868b; }
+  .db .dot { width:22px; height:22px; border-radius:50%; background:#3a3a3c; }
+  .db table { width:100%; border-collapse:collapse; font-size:40px; }
+  .db th { text-align:left; padding:30px 40px; color:#86868b; font-weight:500; border-bottom:2px solid #2c2c2e; }
+  .db td { padding:42px 40px; border-bottom:2px solid #1c1c1e; color:#636366; }
+  .db tr.hot td { color:var(--ink); background:rgba(255,69,58,.14); }
+  .db tr.hot td:last-child { color:var(--red); font-weight:700; text-shadow:0 0 20px rgba(255,69,58,.7); }
+  .db tr.hot { outline:6px solid var(--red); outline-offset:-6px; }
+
+  /* D · Elliot détouré (ajouté dans PhotoCraft) : seulement le halo et une ligne de scan */
+  /* E · This is fine (KC Green, 800×450) recadré à gauche, fondu vers le noir */
+  .meme { position:absolute; left:0; top:0; width:1344px; height:1080px;
+    background:url(../sources/this-is-fine-kc-green.jpg) no-repeat -300px 0 / auto 100%;
+    -webkit-mask-image:linear-gradient(90deg, #000 58%, transparent 86%); }
+
+  /* F, G, H · façon Code Bear (G : chien This is fine, H : Michael Scott, placés dans PhotoCraft) : code façon Matrix, Anonymous fondu à droite, icône OpenCode (le texte est dans PhotoCraft) */
+  [data-v="f"] .grid, [data-v="f"] .glow, [data-v="g"] .grid, [data-v="h"] .grid, [data-v="h"] .glow { display:none; }
+  .matrix { position:absolute; inset:0; font:600 26px/30px "JetBrains Mono", monospace; color:#2ecc71; white-space:pre;
+    -webkit-mask-image:radial-gradient(ellipse 560px 700px at 1480px 640px, transparent 45%, #000 85%); }
+  .anon { position:absolute; left:517px; top:-194px; width:1920px; height:1280px;
+    background:url(../anonymous-1536x1024.jpeg) 0 0 / 100% 100%; filter:contrast(1.25) brightness(.95);
+    -webkit-mask-image:radial-gradient(ellipse 620px 820px at 963px 820px, #000 55%, transparent 80%); }
+  .vignette { position:absolute; inset:0; background:radial-gradient(ellipse at 40% 50%, transparent 40%, rgba(0,0,0,.75) 100%); }
+</style>
+</head>
+<body>
+<div class="glow a only" style="left:900px;top:-150px"></div>
+<div class="glow b only" style="left:-300px;top:-80px"></div>
+<div class="glow c only" style="left:-250px;top:-150px"></div>
+<div class="grid"></div>
+
+<div class="glow d only" style="left:-350px;top:-200px;width:1500px;height:1500px"></div>
+<div class="bar d only" style="top:0;left:1000px;width:6px;height:1080px;opacity:.5"></div>
+<div class="meme e only"></div>
+
+<div class="matrix f g h only" id="matrix"></div>
+<div class="glow g only" style="left:930px;top:-120px;width:1200px;height:1300px;background:radial-gradient(circle, rgba(255,140,30,.38) 0%, rgba(255,69,58,.18) 35%, transparent 62%)"></div>
+<div class="anon f only"></div>
+<div class="vignette f g h only"></div>
+<svg class="f g h only" style="position:absolute;left:549px;top:130px" width="168" height="210" viewBox="0 0 400 500">
+  <path fill="#f1eeec" fill-rule="evenodd" d="M0 0H400V500H0Z M100 100V400H300V100Z"/><rect x="100" y="100" width="200" height="100" fill="#000"/><rect x="100" y="200" width="200" height="200" fill="#4b4848"/></svg>
+
+<!-- A -->
+<div class="wordmark a only" style="--s:.42;left:60px;top:46px;opacity:.9"></div>
+<div class="ask a only">请回复ok</div>
+<div class="ok a only"></div>
+<div class="receipt a only">
+  <h3>Clé API Anthropic</h3>
+  <div class="row"><span>Requêtes</span><span class="mono">8 966</span></div>
+  <div class="row"><span>Tokens</span><span class="mono">35 026 055</span></div>
+  <hr>
+  <div class="row" style="font-weight:700;color:#1c1c1e"><span>Total</span><span></span></div>
+</div>
+
+<!-- B -->
+
+
+<div class="glitch b only">
+  <div class="wordmark"></div>
+  <div class="wordmark s1"></div>
+</div>
+<div class="bar b only" style="top:500px;left:0;width:1920px;height:6px"></div>
+
+<!-- C -->
+<div class="db c only">
+  <div class="top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mono" style="margin-left:14px">console · table provider</span></div>
+  <table class="mono">
+    <tr><th>provider</th><th>credentials</th></tr>
+    <tr><td>google</td><td>AIzaSyF4k3Qw…</td></tr>
+    <tr class="hot"><td>openai</td><td>sk-proj-Ab12Cd34…</td></tr>
+    <tr><td>anthropic</td><td>sk-ant-F4k3Zz…</td></tr>
+    <tr><td>openai</td><td>sk-proj-F4k3Mn…</td></tr>
+  </table>
+</div>
+<div class="wordmark c only" style="--s:.42;left:1500px;top:60px;opacity:.9"></div>
+
+<script>
+  // Pluie de code déterministe pour F
+  if ('fgh'.includes(new URLSearchParams(location.search).get('v') || 'x')) {
+    let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    const chars = '01{}<>=;/$()[]sk_proj01010110AbCdEf';
+    let rows = [];
+    for (let r = 0; r < 36; r++) { let line = ''; for (let c = 0; c < 120; c++) line += rnd() < .45 ? chars[Math.floor(rnd() * chars.length)] : ' '; rows.push(line); }
+    const m = document.getElementById('matrix');
+    m.innerHTML = rows.map(l => [...l].map(ch => ch === ' ' ? ' ' : `<span style="opacity:${(.04 + rnd() * .2).toFixed(2)}">${ch}</span>`).join('')).join('\n');
+  }
+</script>
+<script>document.body.dataset.v = new URLSearchParams(location.search).get('v') || 'a';</script>
+</body>
+</html>

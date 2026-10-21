@@ -20,7 +20,8 @@ Planification et suivi de la chaîne YouTube Technovore : stratégie, calendrier
 | Projet | Format | Publication | Statut |
 |---|---|---|---|
 | [ArtCraft](projets/artcraft/fiche.md) | Longue | lun. 19 oct., 18 h | Programmé |
-| [Uber](projets/uber/fiche.md) | Longue | lun. 9 nov., 20 h | Script v2 ([`script.md`](projets/uber/script.md)), grillé |
+| [OpenCode piraté](projets/opencode/fiche.md) | Longue (actu) | cette semaine (recommandé jeu. 22 oct., 18 h) | Script v2 ([`script.md`](projets/opencode/script.md), ~8 min 45) après le [grill](projets/opencode/grill-v1.md) ; [téléprompteur](projets/opencode/teleprompteur.txt) prêt pour la voix |
+| [Uber](projets/uber/fiche.md) | Longue | lun. 9 nov., 20 h | Voix enregistrée et montée ([`voix-off-montee.wav`](projets/uber/voix-off-montee.wav), 9:40) ; [`storyboard.md`](projets/uber/storyboard.md) prêt pour le montage |
 | [Claude ou mon PC ? #1 : 16 Go de VRAM](projets/claude-ou-mon-pc-1/fiche.md) | Longue | lun. 23 nov., 20 h | Brouillon |
 | [Waze](projets/waze/fiche.md) | Longue | lun. 7 déc., 20 h | Fiche |
 | [Pixel](projets/pixel/fiche.md) | Longue | lun. 21 déc., 20 h | Brouillon |

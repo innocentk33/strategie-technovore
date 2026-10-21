@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "photocraft": {
+      "type": "stdio",
+      "command": "/Users/innocent/.local/bin/photocraft-cli",
+      "args": [
+        "mcp",
+        "--automation-read-root",
+        "/Users/innocent/Dev/youtubeSkill",
+        "--automation-write-root",
+        "/Users/innocent/Dev/youtubeSkill"
+      ],
+      "env": {}
+    }
+  }
+}
