@@ -1,0 +1,103 @@
+<!doctype html>
+<!-- Décors des miniatures ArtCraft. Variante via ?v=a|b|c. Le gros texte est ajouté en calques de texte dans PhotoCraft (../photocraft/) -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1920px; height:1080px; overflow:hidden; background:#000; }
+  body { position:relative; font-family:"SF Pro Display", -apple-system, system-ui, sans-serif; }
+  .only { display:none; }
+  [data-v="a"] .a, [data-v="b"] .b, [data-v="c"] .c { display:block; }
+  .abs { position:absolute; }
+
+  /* Icône d'appli Adobe (style 2020) : carré sombre, deux lettres de couleur */
+  .app { position:absolute; width:var(--w); height:var(--w); border-radius:calc(var(--w) * .2); background:var(--bg);
+    text-align:center; line-height:var(--w); font-weight:700; font-size:calc(var(--w) * .5); letter-spacing:-.02em;
+    color:var(--fg); box-shadow:0 0 0 calc(var(--w) * .035) var(--fg) inset, 0 calc(var(--w) * .08) calc(var(--w) * .2) rgba(0,0,0,.7); }
+  .ps { --bg:#001e36; --fg:#31a8ff; } .lr { --bg:#001e36; --fg:#31a8ff; }
+  .ai { --bg:#330000; --fg:#ff9a00; } .pr { --bg:#00005b; --fg:#9999ff; } .ae { --bg:#00005b; --fg:#9999ff; }
+  .id { --bg:#49021f; --fg:#ff3366; } .ac { --bg:#2b0000; --fg:#ff4b3a; }
+
+  /* A · Toy Story : Andy jette Woody-Photoshop, PhotoCraft en arrière-plan */
+  .toy { position:absolute; inset:0; background:url(../toy-story-andy-dropping-woody-1957-blank-template.png) 0 0 / 1920px 1080px; }
+  .pc { position:absolute; background:url(../photocraft/logo-photocraft.png) 0 0 / 100% 100%; }
+  .halo { position:absolute; border-radius:50%; }
+
+  /* B · Clawd détruit Adobe */
+  .grid { position:absolute; inset:0;
+    background-image:linear-gradient(rgba(58,58,60,.5) 2px, transparent 2px), linear-gradient(90deg, rgba(58,58,60,.5) 2px, transparent 2px);
+    background-size:96px 96px; -webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 60%, #000 20%, transparent 75%); }
+  .clawd { position:absolute; background:url(../photocraft/clawd.png) 0 0 / 100% 100%; image-rendering:pixelated; }
+  .shard { position:absolute; left:110px; top:430px; width:640px; height:567px;
+    background:url("../adobe vs artcraft/assets/adobe-a.png") 0 0 / 100% 100%; filter:drop-shadow(0 0 40px rgba(236,16,0,.55)); }
+  .beam { position:absolute; height:26px; border-radius:13px; transform-origin:0 50%;
+    background:linear-gradient(90deg, #fff 0%, #ffd2b8 30%, #ff6a2b 100%);
+    box-shadow:0 0 20px #ff6a2b, 0 0 60px #ff3b1f, 0 0 120px rgba(255,59,31,.6); }
+  .bit { position:absolute; background:#ec1000; }
+
+  /* C · Solo Leveling : le dieu ArtCraft, les applis Adobe à genoux */
+  .sl-bg { position:absolute; inset:-60px; background:url("../solo leveling statue.jpg") 50% 34% / cover; filter:blur(28px) brightness(.45) saturate(1.2); }
+  .sl { position:absolute; left:1103px; top:-145px; width:714px; height:1271px; background:url("../solo leveling statue.jpg") 0 0 / 100% 100%;
+    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%); }
+  .mark { position:absolute; background:url("../adobe vs artcraft/assets/artcraft-mark.png") 0 0 / 100% 100%; }
+</style>
+</head>
+<body>
+
+<!-- A -->
+<div class="toy a only"></div>
+<div class="halo a only" style="left:1290px;top:-120px;width:680px;height:680px;background:radial-gradient(circle, rgba(70,150,255,.75) 0%, rgba(50,128,240,.35) 35%, transparent 68%)"></div>
+<div class="pc a only" style="left:1440px;top:60px;width:380px;height:380px;transform:rotate(7deg);filter:drop-shadow(0 0 30px rgba(120,180,255,.9)) drop-shadow(0 20px 40px rgba(0,0,0,.6))"></div>
+<div class="app ps a only" style="--w:300px;left:470px;top:50px;transform:rotate(-9deg)">Ps</div>
+
+<!-- B -->
+<div class="grid b only"></div>
+<div class="halo b only" style="left:-200px;top:200px;width:1300px;height:1300px;background:radial-gradient(circle, rgba(236,16,0,.32) 0%, transparent 60%)"></div>
+<div class="halo b only" style="left:950px;top:-100px;width:1100px;height:1100px;background:radial-gradient(circle, rgba(217,119,87,.30) 0%, transparent 60%)"></div>
+<!-- A d'Adobe fendu en 2 -->
+<div class="shard b only" style="clip-path:polygon(0 100%, 37% 0, 50% 0, 46% 22%, 52% 40%, 44% 58%, 50% 78%, 46% 100%);transform:translate(-45px,25px) rotate(-6deg)"></div>
+<div class="shard b only" style="clip-path:polygon(50% 0, 63% 0, 100% 100%, 46% 100%, 50% 78%, 44% 58%, 52% 40%, 46% 22%);transform:translate(45px,10px) rotate(5deg)"></div>
+<div class="bit b only" style="left:440px;top:390px;width:34px;height:34px;transform:rotate(20deg)"></div>
+<div class="bit b only" style="left:560px;top:350px;width:22px;height:22px;transform:rotate(50deg)"></div>
+<div class="bit b only" style="left:640px;top:450px;width:16px;height:16px"></div>
+<div class="bit b only" style="left:380px;top:470px;width:18px;height:18px;transform:rotate(30deg)"></div>
+<div class="bit b only" style="left:700px;top:400px;width:26px;height:26px;transform:rotate(12deg)"></div>
+<!-- point d'impact -->
+<div class="halo b only" style="left:320px;top:540px;width:360px;height:360px;background:radial-gradient(circle, #fff 0%, rgba(255,200,150,.9) 12%, rgba(255,106,43,.5) 30%, transparent 62%)"></div>
+<div class="clawd b only" style="left:1060px;top:110px;width:820px;height:820px"></div>
+<div id="beams"></div>
+
+<!-- C -->
+<div class="sl-bg c only"></div>
+<div class="sl c only"></div>
+<div class="halo c only" style="left:1280px;top:-60px;width:360px;height:360px;background:radial-gradient(circle, rgba(110,150,255,.85) 0%, rgba(79,125,255,.35) 35%, transparent 68%)"></div>
+<div class="mark c only" style="left:1350px;top:30px;width:230px;height:230px;filter:drop-shadow(0 0 18px rgba(140,170,255,.9))"></div>
+<!-- les 7 applis clonées, sur le dos des personnages à genoux -->
+<div class="app ps c only" style="--w:124px;left:1162px;top:835px;transform:rotate(-6deg)">Ps</div>
+<div class="app pr c only" style="--w:116px;left:1605px;top:820px;transform:rotate(5deg)">Pr</div>
+<div class="app ai c only" style="--w:78px;left:1366px;top:745px">Ai</div>
+<div class="app lr c only" style="--w:74px;left:1448px;top:735px">Lr</div>
+<div class="app ae c only" style="--w:64px;left:1300px;top:715px">Ae</div>
+<div class="app id c only" style="--w:58px;left:1192px;top:740px">Id</div>
+<div class="app ac c only" style="--w:56px;left:1676px;top:700px">Ac</div>
+
+<script>
+  const v = new URLSearchParams(location.search).get('v') || 'a';
+  document.body.dataset.v = v;
+  // B : rayons laser des yeux de Clawd (yeux à 125/447 et 321/447, hauteur 176/447) vers le point d'impact
+  if (v === 'b') {
+    const L = 1060, T = 110, S = 820 / 447, hit = [500, 720];
+    for (const ex of [125, 321]) {
+      const x = L + ex * S, y = T + 176 * S, dx = hit[0] - x, dy = hit[1] - y;
+      const b = document.createElement('div'); b.className = 'beam';
+      Object.assign(b.style, { left: x + 'px', top: (y - 13) + 'px', width: Math.hypot(dx, dy) + 'px', transform: `rotate(${Math.atan2(dy, dx)}rad)` });
+      document.getElementById('beams').append(b);
+      const eye = document.createElement('div'); eye.className = 'halo';
+      Object.assign(eye.style, { left: (x - 70) + 'px', top: (y - 70) + 'px', width: '140px', height: '140px', background: 'radial-gradient(circle, #fff 0%, rgba(255,106,43,.8) 30%, transparent 70%)' });
+      document.getElementById('beams').append(eye);
+    }
+  }
+</script>
+</body>
+</html>

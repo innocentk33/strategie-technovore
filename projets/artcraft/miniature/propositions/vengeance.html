@@ -1,0 +1,106 @@
+<!doctype html>
+<!-- Miniatures « La vengeance » : ?v=p (principale, John Wick), a (facture déchirée, PhotoCraft dans la déchirure), b (la preuve) -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1920px; height:1080px; overflow:hidden; background:#c8102e; }
+  body { position:relative; font-family:"SF Pro Display", -apple-system, system-ui, sans-serif; }
+  .only { display:none; }
+  [data-v="p"] .p, [data-v="a"] .a, [data-v="b"] .b { display:block; }
+
+  /* La facture froissée : papier + texte, déformés et éclairés par le même bruit (filtre #froisse) */
+  .paper { position:absolute; inset:0; background:#fbfaf7; padding:70px 56px; filter:url(#froisse); }
+  .paper .head { display:flex; justify-content:space-between; }
+  .bar { height:16px; border-radius:8px; background:#cfccc6; margin-bottom:14px; }
+  .big { font:400 184px/0.92 Impact, "Arial Black", sans-serif; color:#111; letter-spacing:-1px; text-transform:uppercase; }
+  .total { position:absolute; left:64px; right:64px; bottom:70px; border-top:5px dashed #cfccc6; padding-top:26px; display:flex; justify-content:space-between; }
+  .plis { position:absolute; inset:0; width:100%; height:100%; mix-blend-mode:multiply; pointer-events:none; }
+  .sheet { position:absolute; box-shadow:0 40px 90px rgba(0,0,0,.45); }
+
+  .wick { position:absolute; background:url(../photocraft/john-wick-detoure.png) 0 0 / 100% 100%; filter:drop-shadow(0 30px 50px rgba(0,0,0,.4)); }
+  .ui { position:absolute; background:url(../photocraft/rush-psd-ouvert.png) no-repeat; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <filter id="froisse" x="-3%" y="-3%" width="106%" height="106%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.004 0.007" numOctaves="6" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feDiffuseLighting in="n" surfaceScale="11" lighting-color="#fff" result="l"><feDistantLight azimuth="235" elevation="58"/></feDiffuseLighting>
+    <feComponentTransfer in="l" result="l2"><feFuncR type="linear" slope="1.45"/><feFuncG type="linear" slope="1.45"/><feFuncB type="linear" slope="1.42"/></feComponentTransfer>
+    <feComposite in="l2" in2="d" operator="in" result="lc"/>
+    <feBlend in="d" in2="lc" mode="multiply"/>
+  </filter>
+</svg>
+
+<template id="facture">
+  <div class="paper">
+    <div class="head"><div style="width:300px"><div class="bar" style="width:220px;background:#9d9a94"></div><div class="bar" style="width:300px"></div><div class="bar" style="width:180px"></div></div>
+      <div style="width:200px"><div class="bar"></div><div class="bar" style="width:140px;margin-left:auto"></div></div></div>
+    <div class="big" style="margin-top:80px"><div class="l1">Frais de</div><div class="gap"></div><div class="l2">résiliation</div></div>
+    <svg class="plis" preserveAspectRatio="none"></svg>
+    <div class="total"><div class="bar" style="width:200px;height:22px;background:#9d9a94"></div><div class="bar" style="width:160px;height:22px;background:#9d9a94"></div></div>
+  </div>
+</template>
+
+<!-- P · John Wick à droite, facture à gauche -->
+<div class="sheet p only" id="sheetP" style="left:60px;top:160px;width:990px;height:780px;transform:rotate(-8deg)"></div>
+<div class="wick p only" style="left:1010px;top:76px;width:1128px;height:1000px"></div>
+
+<!-- A · la facture déchirée en deux, PhotoCraft dans la déchirure -->
+<div class="a only" style="position:absolute;left:150px;top:215px;width:1620px;height:650px;transform:rotate(-4deg);box-shadow:0 30px 80px rgba(0,0,0,.6)">
+  <div class="ui" style="position:absolute;inset:0;background-size:1980px auto;background-position:-230px -200px"></div>
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 60px rgba(0,0,0,.7)"></div>
+</div>
+<div id="tear" class="a only"></div>
+
+<!-- B · la preuve : capture serrée du PSD ouvert dans PhotoCraft -->
+<div class="ui b only" style="left:0;top:0;width:1920px;height:1080px;background-size:2749px auto;background-position:-620px -289px"></div>
+<div class="b only" style="position:absolute;inset:0;background:linear-gradient(0deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.6) 22%, transparent 40%)"></div>
+
+<svg class="b only" style="position:absolute;left:0;top:0" width="1920" height="1080"><defs><marker id="pointe" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ffd60a"/></marker></defs>
+  <path d="M1050 950 C 1250 960, 1390 900, 1480 800" fill="none" stroke="#ffd60a" stroke-width="22" stroke-linecap="round" marker-end="url(#pointe)" style="filter:drop-shadow(0 6px 12px rgba(0,0,0,.7))"/></svg>
+<script>
+  const v = new URLSearchParams(location.search).get('v') || 'p';
+  document.body.dataset.v = v;
+  if (new URLSearchParams(location.search).has('nojw')) document.querySelector('.wick').remove();
+  const tpl = document.getElementById('facture').innerHTML;
+  // Plis du papier : grille de points décalés au hasard, chaque triangle reçoit une ombre différente (facettes de papier froissé)
+  const plier = (root, seed) => {
+    const r = () => (seed = (seed * 16807) % 2147483647) / 2147483647, NX = 7, NY = 5, P = [];
+    for (let j = 0; j <= NY; j++) for (let i = 0; i <= NX; i++)
+      P.push([i / NX * 100 + (i % NX ? (r() - .5) * 11 : 0), j / NY * 100 + (j % NY ? (r() - .5) * 14 : 0)]);
+    let tri = '';
+    for (let j = 0; j < NY; j++) for (let i = 0; i < NX; i++) {
+      const a = P[j * (NX + 1) + i], b = P[j * (NX + 1) + i + 1], c = P[(j + 1) * (NX + 1) + i], d = P[(j + 1) * (NX + 1) + i + 1];
+      for (const t of (r() < .5 ? [[a, b, d], [a, d, c]] : [[a, b, c], [b, d, c]])) {
+        const g = Math.round(255 - r() * 34);
+        tri += `<polygon points="${t.map(p => p.join(',')).join(' ')}" fill="rgb(${g},${g},${g - 2})"/>`;
+      }
+    }
+    root.querySelectorAll('.plis').forEach(svg => { svg.setAttribute('viewBox', '0 0 100 100'); svg.innerHTML = tri; });
+  };
+  if (v === 'p') { document.getElementById('sheetP').innerHTML = tpl; plier(document.getElementById('sheetP'), 9); }
+  if (v === 'a') {
+    // Deux moitiés de la même facture, découpées par un bord en dents de scie (pseudo-aléatoire fixe)
+    let seed = 5; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    const W = 1500, H = 900, mid = 455, pts = [];
+    for (let x = 0; x <= W; x += 30) pts.push([x, mid + (rnd() - .5) * 46 + (x / W - .5) * 40]);
+    const edge = pts.map(([x, y]) => `${x}px ${y}px`).join(',');
+    const top = `polygon(0 0, ${W}px 0, ${[...pts].reverse().map(([x, y]) => `${x}px ${y}px`).join(',')})`;
+    const bot = `polygon(${edge}, ${W}px ${H}px, 0 ${H}px)`;
+    const half = (clip, dx, dy, rot) => {
+      const el = document.createElement('div'); el.className = 'sheet';
+      Object.assign(el.style, { left: 210 + dx + 'px', top: 90 + dy + 'px', width: W + 'px', height: H + 'px', clipPath: clip, transform: `rotate(${rot}deg)`, boxShadow: 'none', filter: 'drop-shadow(0 20px 30px rgba(0,0,0,.55))' });
+      el.innerHTML = tpl; el.querySelector('.big').style.cssText = 'margin-top:70px;font-size:230px;text-align:center'; el.querySelector('.gap').style.height = '130px';
+      return el;
+    };
+    const wrap = document.getElementById('tear');
+    wrap.append(half(top, -40, -150, -7), half(bot, 40, 150, -3));
+    plier(wrap, 9);
+  }
+</script>
+</body>
+</html>

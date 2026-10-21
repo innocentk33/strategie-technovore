@@ -16,7 +16,7 @@
 2. Curiosité : *Adobe lui a fait payer sa résiliation. Alors il a recréé Adobe.*
 3. Mixte (recommandé) : *Il a recréé 7 logiciels Adobe avec une IA. J'ai testé son Photoshop.* Si la miniature est réussie : *…J'ai fait ma miniature avec.*
 
-**Miniature** : un vrai fichier PSD ouvert dans PhotoCraft, une facture « frais de résiliation » à côté, texte « GRATUIT ? ». Pas de logo Adobe.
+**Miniature** : un vrai fichier PSD ouvert dans PhotoCraft, une facture « frais de résiliation » à côté, texte « GRATUIT ? ». Pas de logo Adobe. 3 propositions de memes (21/10) : Toy Story, Clawd et Solo Leveling, dans [`miniature/propositions.md`](miniature/propositions.md).
 **Contenu** :
 - **Acte 1, l'histoire** : la résiliation facturée, le contexte (procès du ministère américain de la Justice, accord à 150 M$), puis Brandon Thomas et ses 7 applis écrites en Rust avec Claude Opus 5.5.
 - **Acte 2, le test** : la miniature de la vidéo et un vrai PSD dans PhotoCraft, ratés compris. Un seul logiciel testé, pour ne pas virer au tutoriel (décision du 18/10).
