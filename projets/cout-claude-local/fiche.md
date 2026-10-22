@@ -1,6 +1,6 @@
 # Combien coûte Claude en local ?
 
-> **Publication : lun. 2 nov. à 18 h**, avancée du 4 janv. le 21/10. Format **calculé** : les règles sont dans [`strategie.md`](../../strategie.md), pilier 2. Planning : [`calendrier.md`](../../calendrier.md), S1-S3. Études : [`etudes/kai.md`](../../etudes/kai.md) (idée 2) et [`etudes/morganscode.md`](../../etudes/morganscode.md).
+> **Publication : lun. 16 nov. à 18 h** (avancée du 4 janv. au 2 nov. le 21/10, puis reculée au 16 nov. le 22/10 pour réutiliser les essais de [Claude #1](../claude-ou-mon-pc-1/fiche.md)). Format **calculé** : les règles sont dans [`strategie.md`](../../strategie.md), pilier 2. Planning : [`calendrier.md`](../../calendrier.md), S1-S3. Études : [`etudes/kai.md`](../../etudes/kai.md) (idée 2) et [`etudes/morganscode.md`](../../etudes/morganscode.md).
 
 **Origine** : la série de Kai « What Would It Cost to Run [modèle] Locally? », qui compte 4 de ses 7 plus gros succès. Par exemple [Claude Fable 5](https://www.youtube.com/watch?v=fXWFSTSvnVM) (105 K vues, x38), [Claude Opus 5](https://www.youtube.com/watch?v=yJCHNdQ8sLs) (166 K vues, x23,5) et [DeepSeek V4.1 Flash](https://www.youtube.com/watch?v=04ePeOyRN0k) (529 K vues, x20,9). Personne ne fait ce format en français.
 
@@ -22,10 +22,11 @@
 
 **Contenu** (la structure de Kai, avec les différences de Technovore) :
 1. **Hook** : « On peut remplacer Claude par une IA locale », puis une vraie question trouvée sur Reddit ou X, avec des réponses qui se contredisent.
+   - ⚠️ **Règle des 15 premières secondes** (22/10, `strategie.md`, section 5) : ce sont les secondes les plus fortes de la vidéo. Ouvre sur le prix final calculé (celui de la miniature) ou sur l'image de ta 5080 à côté de la baie de serveurs, puis l'idée reçue. La question Reddit vient juste après.
 2. **La transparence d'abord** : Anthropic ne publie ni la taille de Claude ni ses poids. On calcule donc avec le plus gros modèle ouvert de même niveau, et on le dit tout de suite. Candidat au 21/10 : **DeepSeek V4.1 Flash** (552 milliards de paramètres, ~16 milliards actifs par token), que DeepSeek place au niveau d'Opus 5 en code. Ces chiffres viennent de Morgans Code : à revérifier dans la fiche du modèle et le tableau de DeepSeek.
 3. **Le calcul de mémoire** (paramètres × bits), **du moins cher au plus cher** : ta 5080 (16 Go), un Mac Studio, un serveur à 8 GPU, puis plusieurs serveurs.
 4. **Ce qui te démarque de Kai** : les prix en euros et l'électricité au tarif français. Kai raisonne à 15 cents le kWh, et les Européens le lui reprochent en commentaire.
-5. **Le retournement** : ce qui tient vraiment sur ta 5080, avec tes premiers essais. La réponse complète arrive dans l'épisode #1, le 16 nov. : annonce-le dans l'écran de fin. En pratique, on fait le quotidien en local et les tâches les plus dures dans le cloud.
+5. **Le retournement** : ce qui tient vraiment sur ta 5080, avec tes premiers essais. Reprends les mesures de l'épisode #1 (sorti le 2 nov.) et mets-le en écran de fin. En pratique, on fait le quotidien en local et les tâches les plus dures dans le cloud.
 6. **Le verdict selon ton profil.**
 
 **Points à vérifier** :

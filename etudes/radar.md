@@ -10,6 +10,7 @@
 |---|---|---|---|
 | Kai | EN | IA locale : coût et matériel ([étude](kai.md)) | `UCgUfJoPtkt7-RiiuYh4vmGA` |
 | Morgans Code | EN | IA locale : calculs sans tests ([étude](morganscode.md)) | `UCetGP9xk9LYIxzYO9Id3o6g` |
+| Code Unpacked | EN | IA locale : « même carte, plus rapide » ([étude](outliers-2026-10-22.md)) | `UCuXX9B1kSwRTQE2BIhK7Khw` |
 | ByteMonk | EN | Le génie derrière l'app | `UCzCsyvyrq38R6TnztEzOmgg` |
 | Thibaut Dcode | FR | Applis et marques, angle business | `UCNew6vrycRR0QnlYmLoMRZg` |
 | Makertronic Tech | FR | Matériel, IA, histoire de la tech | `UCjBWE9WaXEtkqad7F68W5OQ` |
@@ -52,3 +53,4 @@
   - la sortie de **Qwen 4 27B** : si elle tient dans 16 Go, c'est un épisode testé pour un créneau IA ;
   - le thème **« même carte, plus rapide »** (idée 16), le meilleur de Morgans, testable sur ta 5080 ;
   - le CTR d'ArtCraft après le changement de miniature.
+- **Modifié le 22/10 au soir, par l'auteur** : les deux vidéos IA sont inversées. Claude #1 sort le 2/11 (essais sur la 5080 les 23-24/10) et Coût Claude le 16/11, pour réutiliser ces mesures.

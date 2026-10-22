@@ -15,7 +15,7 @@ Une décision touche souvent plusieurs fichiers à la fois. Quand une date, un t
 - `strategie.md` (v4) : positionnement, les 3 piliers (« Le génie derrière l'app », « IA chez moi », « Les grandes histoires de la tech »), objectifs à 1, 3 et 6 mois, les idées classées. Les fiches renvoient à ses numéros d'idée.
 - `calendrier.md` : grille de publication jusqu'au 26/04/2027. **Une vidéo longue chaque lundi à 18 h, aucun Short** (décidé le 21/10). Ses changements sont notés en tête (« Mis à jour le … »).
 - `README.md` : tableau de suivi des projets. Statuts : Fiche → Brouillon → Recherche → Script → Voix → Montage → Programmé → Publié (avec le lien YouTube).
-- `idees.md` (réserve), `archive/README.md` (abandons, avec date et raison), `etudes/` (chaînes concurrentes, données vidIQ datées, et `radar.md`, le journal du radar).
+- `idees.md` (réserve), `archive/README.md` (abandons, avec date et raison), `etudes/` (chaînes concurrentes, données vidIQ datées, audits de la chaîne `audit-AAAA-MM-JJ.md`, et `radar.md`, le journal du radar).
 
 Cycle de vie : idée dans `idees.md` → dossier `projets/<nom>/` (copier une fiche existante) + ligne dans le README et le calendrier → à l'abandon, `git mv` vers `archive/` et une ligne dans `archive/README.md`.
 
@@ -25,6 +25,7 @@ Quand une vidéo sort (l'auteur le dit, ou une vidéo publique apparaît dans `v
 
 1. **Notre chaîne** (`vidiq_channel_stats`, `vidiq_channel_analytics` avec `filters: video==ID`) :
    - la vidéo précédente à J+7 : `engagedViews`, durée moyenne, % regardé, abonnés gagnés, sources de trafic, part de la France ;
+   - sa courbe de rétention (`report: audience_retention`) : % de spectateurs à 0:15 (cible 75 %) et à 1:00 (cible 50 %) ;
    - le CTR et les impressions ne passent pas par l'API : demande une capture de Studio.
 2. **Concurrents** : la liste de surveillance de `etudes/radar.md`, avec un appel `vidiq_outliers` par langue (`channelIds`, `thisMonth`). Note ce qui fait ×2 ou plus.
 3. **Public français** : `vidiq_outliers` en `language: fr` sur les mots-clés listés dans `etudes/radar.md`.
@@ -58,6 +59,12 @@ Fichiers par ordre de production :
 9. `miniature/` : `propositions.md`, maquettes HTML (`propositions/miniature.html?v=a|b|c`), PSD dans `photocraft/`.
 
 Le montage se fait hors de ce dépôt (projets HyperFrames ou Remotion). `.gitignore` exclut les vidéos et les `.wav` : les fichiers audio versionnés sont les `.m4a`.
+
+**Les 15 premières secondes sont les plus fortes de la vidéo** (règle du 22/10, section 5 de `strategie.md`) :
+- on y met le meilleur moment : le résultat, le chiffre le plus fou ou l'image promise par la miniature ;
+- on n'y met ni contexte, ni présentation, ni « dans cette vidéo » ;
+- à vérifier à chaque brouillon, script, grill et storyboard ;
+- origine : ArtCraft perdait 34 % de ses spectateurs en 15 s (`etudes/audit-2026-10-22.md`).
 
 Les faits comptent : chaque affirmation d'une miniature ou d'un script doit être tenue par la vidéo et sourcée (voir `ressources/miniatures/propositions.md`, section 5, pour les pièges déjà repérés).
 

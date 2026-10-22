@@ -15,6 +15,17 @@
 
 ## 0. Ce qui change
 
+### Après l'audit du 22/10
+
+L'audit complet, chiffres compris, est dans [`etudes/audit-2026-10-22.md`](etudes/audit-2026-10-22.md). Le plan v4 ne change pas. Ce qui change :
+
+| Avant | Après | Pourquoi |
+|---|---|---|
+| Hook dans les 5 premières secondes | **Les 15 premières secondes sont les plus fortes de la vidéo** (section 5) | ArtCraft perd 34 % de ses spectateurs en 15 s et 53 % en 1 min. Ceux qui passent 3:20 restent jusqu'au bout, et le test de PhotoCraft est au-dessus de la médiane : le fond tient, c'est l'entrée qui fuit |
+| Playlist Flutter archivée | **Les tutos restent publics**, la playlist Flutter passe en bas de la page de chaîne | La formation et la vidéo d'installation font 86 % des heures publiques et 615 des 755 abonnés gagnés en 12 mois |
+| Coût Claude le 2 nov., Claude #1 le 16 nov. | **Claude #1 le 2 nov., Coût Claude le 16 nov.** (ta décision du 22/10 au soir) | Coût Claude a besoin d'une mesure sur ta 5080 : les essais de Claude #1 (23-24/10) la lui donnent |
+| Monétisation regardée à 6 mois | **Regarder le premier palier du Programme Partenaire tout de suite** | 3 260 h publiques sur 12 mois, en baisse : sous 3 000 h vers décembre (estimation) |
+
 ### De la v3 à la v4 (21/10)
 
 | v3 | v4 | Pourquoi |
@@ -242,7 +253,30 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
   - Compte 20 à 30 h par semaine (estimation, à vérifier au bilan du 23/11).
 - **Pas de Shorts** : sur un an, ils t'ont rapporté 2 abonnés, contre 772 pour les vidéos longues. Chez Thibaut Dcode, ils font 2,5 % des vues, et Kai les a abandonnés avant de décoller. Le guide Shorts du skill va dans le même sens : ~10 % de public en commun avec la vidéo longue, et un lien « vidéo associée » qui convertit à moins de 1 %.
 - **Créneau** : 18 h au lieu de 20 h. Vérifie dans Studio > Audience que ça tombe un peu avant le pic de ton public, et refais le point au bilan du 23/11.
-- **Exigence minimale** : plus de 8 minutes (pubs en milieu de vidéo possibles), chapitres, hook dans les 5 premières secondes. Réponds à tous les commentaires des 2 premières heures : le guide de l'algorithme les compte comme décisives.
+- **Exigence minimale** :
+  - plus de 8 minutes (pubs en milieu de vidéo possibles) ;
+  - des chapitres ;
+  - les 15 premières secondes les plus fortes de la vidéo (règle ci-dessous) ;
+  - une réponse à tous les commentaires des 2 premières heures : le guide de l'algorithme les compte comme décisives.
+
+### La règle des 15 premières secondes (22/10)
+
+**Les 15 premières secondes doivent être les plus impactantes de toute la vidéo.**
+
+- **Pourquoi** :
+  - ArtCraft perd 34 % de ses spectateurs en 15 s et 53 % en une minute ;
+  - son intro est dans le bas du classement des vidéos de même durée (indice 0,31), alors que le test de PhotoCraft, au milieu, est au-dessus de la médiane (0,55 à 0,60) ;
+  - les spectateurs qui passent 3:20 restent jusqu'au bout ;
+  - le guide de l'algorithme fixe à 40 % la rétention sous laquelle une vidéo est moins poussée : ArtCraft est à 28 %.
+- **Comment** :
+  - le moment le plus fort de la vidéo passe au début : le résultat, le chiffre le plus fou, la révélation, ou l'image que promet la miniature ;
+  - le contexte et les explications viennent après ;
+  - c'est déjà la structure de « Claude ou mon PC ? » (le résultat d'abord) ; on l'applique à tous les piliers.
+- **Ce qu'on ne met pas** : présentation, logo, « dans cette vidéo… », ni contexte avant la promesse.
+- **Contrôle** :
+  - à chaque grill et à chaque storyboard, relis les 15 premières secondes seules : doivent-elles donner envie de rester ?
+  - à chaque radar, relève le % de spectateurs à 0:15 (cible 75 %) et à 1:00 (cible 50 %). Ces cibles sont des estimations, à recaler au bilan du 23/11.
+- **Attention** : la promesse doit être tenue plus loin dans la vidéo. Le guide de référencement rappelle que YouTube compare le contenu à la miniature et au titre.
 
 ### La semaine type
 
@@ -261,14 +295,16 @@ Les cibles d'abonnés et de vues sont des estimations : les références du skil
 ### À 1 mois (~23 novembre)
 | Objectif | Cible | Action |
 |---|---|---|
-| Vidéos publiées depuis le 19/10 | 7 | ArtCraft, OpenCode, Uber, Coût Claude, Waze, Claude #1, pseudo : pas un lundi raté |
+| Vidéos publiées depuis le 19/10 | 7 | ArtCraft, OpenCode, Uber, Claude #1, Waze, Coût Claude, pseudo : pas un lundi raté |
 | Vues moyennes par nouvelle vidéo (à 28 j) | 1 500 | Hook sur un geste banal, miniature avec un chiffre impossible |
 | CTR moyen | 6 % (4-6 % = moyen, 7-10 % = bon) | Sous 3 %, change la miniature dès J+2 (ArtCraft était à 0,9 %) |
 | Vision moyenne | ≥ 40 % | En dessous, YouTube pousse moins la vidéo |
+| Rétention à 15 s | 75 % (ArtCraft : 66 %) | La règle des 15 premières secondes (section 5) ; cible estimée |
 | Rétention à 30 s | 55 % | Référence commentaire : 55-65 % |
 | Abonnés | 2 750 (+140) | Question en fin de vidéo : « Quelle appli je décortique ensuite ? » |
 | Heures de travail | 30 h par semaine au plus | Au-delà, plus de vidéos calculées, moins de vidéos lourdes |
-| Identité | Mise à jour | Bannière et description « le génie caché de la tech » ; playlist Flutter archivée |
+| Identité | Mise à jour | Bannière et description « le génie caché de la tech » ; Uber en vidéo à la une pour les non-abonnés ; playlists Génie et IA en haut, Flutter en bas. **Les tutos utiles restent publics** (86 % des heures) ; ceux à moins de 5 h par an seront masqués après la 10e vidéo des nouveaux thèmes (calendrier, S9) |
+| Programme Partenaire | Premier palier vérifié | Studio > Gagner de l'argent, avant que les heures passent sous 3 000 (vers décembre) |
 
 ### À 3 mois (~25 janvier)
 | Objectif | Cible | Action |
@@ -287,7 +323,7 @@ Les cibles d'abonnés et de vues sont des estimations : les références du skil
 | Abonnés | 4 500 | |
 | Vues mensuelles | 20 000 | |
 | Série reconnue | « Claude ou mon PC ? » et les vidéos calculées forment une série que les commentaires réclament | Chaque épisode cite le précédent et annonce le suivant (la recette de Morgans Code) |
-| Monétisation | Heures de visionnage vérifiées | Si la chaîne n'est pas encore monétisée, viser les 4 000 heures sur 12 mois |
+| Monétisation | Heures de visionnage vérifiées | Si la chaîne n'est pas encore monétisée, viser les 4 000 heures sur 12 mois, soit environ 330 h par mois (110 h par mois au 22/10) |
 
 ---
 
@@ -319,7 +355,7 @@ Les cibles d'abonnés et de vues sont des estimations : les références du skil
 | **Tendance** | **En hausse, +215 %** |
 | **Durée** | 10-12 min |
 | **Niveau de RPM** | Élevé (tech/logiciel) |
-| **Urgence** | Tendance : le modèle doit encore être récent à la sortie. Essais du 19/10 au 8/11, **publication le 16 novembre**, 11 jours avant le Black Friday (avancée d'une semaine le 21/10) |
+| **Urgence** | Tendance : le modèle doit encore être récent à la sortie. Essais les 23 et 24/10, **publication le 2 novembre** (avancée du 16 nov. le 22/10, pour que Coût Claude réutilise ses mesures) |
 | **Score** | **36/40** (demande 9 · clic 9 · production 8 · niche 10) |
 
 **Hook** (ta structure) : « Cette app a été codée en quelques minutes par une IA. Claude Opus 5.5, tu penses ? … Non. Elle a été codée ici. [plan sur la 5080] Sans internet. Sans abonnement. »
@@ -651,12 +687,12 @@ Chaque créneau se confirme au radar, deux semaines avant. Les faits (USSD et op
 
 | Rang | Idée | Titre | Format | Score | Créneau |
 |---|---|---|---|---|---|
-| 1 | 1 | 16 Go de VRAM suffisent-ils pour remplacer Claude ? | IA testé | 36/40 | 16 nov |
+| 1 | 1 | 16 Go de VRAM suffisent-ils pour remplacer Claude ? | IA testé | 36/40 | 2 nov |
 | 2 | 2 | Le génie caché derrière la carte en temps réel d'Uber | Génie | 35/40 | 26 oct |
 | 3 | 6 | Comment Waze sait qu'il y a un bouchon avant que tu le voies | Génie | 35/40 | 9 nov |
 | 4 | 3 | Comment 50 ingénieurs faisaient tourner WhatsApp pour 900 millions de personnes | Génie | 35/40 | 11 janv |
 | 5 | 5 | ArtCraft : il a recréé 7 logiciels Adobe avec une IA | IA récit | 35/40 | Publiée le 19 oct |
-| 6 | 11 | Combien coûte Claude en local ? ([fiche](projets/cout-claude-local/fiche.md)) | IA calculé | 34/40 (9 · 9 · 7 · 9) | 2 nov |
+| 6 | 11 | Combien coûte Claude en local ? ([fiche](projets/cout-claude-local/fiche.md)) | IA calculé | 34/40 (9 · 9 · 7 · 9) | 16 nov |
 | 7 | 16 | Même carte, 2 fois plus rapide | IA testé | 34/40 | Radar |
 | 8 | 4 | Comment un site sait en une milliseconde que ton pseudo est déjà pris | Génie | 33/40 | 23 nov (joker) |
 | 9 | 15 | Louer, acheter ou s'abonner ? | IA calculé | 33/40 | 4 janv |
@@ -683,7 +719,7 @@ Python et le pixel passent devant des idées mieux notées pour des raisons de c
   - remplacer les tags Flutter par défaut ;
   - appliquer le kit d'upload ([`projets/uber/upload.md`](projets/uber/upload.md), prêt le 21/10) ;
   - programmer la vidéo lun. 26 à 18 h.
-- **Premiers essais sur la 5080** pour Claude #1.
-- Recherche et script de **Combien coûte Claude en local ?** (2 nov.).
+- **Essais sur la 5080 (ven. 23 et sam. 24)**, puis script de **Claude #1** (2 nov.).
+- Script v2 de **Combien coûte Claude en local ?** (16 nov.) : fait le 22/10, à compléter avec les essais.
 
 **Ensuite** : l'ordre du [calendrier](calendrier.md), qui donne aussi le détail semaine par semaine jusqu'au 31 janvier. Les créneaux radar se remplissent à chaque sortie ([`etudes/radar.md`](etudes/radar.md)).

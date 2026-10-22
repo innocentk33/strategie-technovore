@@ -61,10 +61,10 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 |---|---|---|---|
 | [`noir-01`](rendus/noir-01.png) | Uber, 26 oct. | `uber-b` : téléphone, voiture fantôme désignée par une flèche, « **elle existe ?** » | Reprise en Inter, puis corrigée le 21/10 : voiture fantôme agrandie et teintée de rouge, vrai logo Uber, halo élargi jusqu'aux bords (pourtour quasi noir : 97 % → 66 %) |
 | [`noir-01b`](rendus/noir-01b.png) | Uber, variante A/B | Même décor, « sa position est / **devinée.** » | Variante de texte pour le test |
-| [`vert-02`](rendus/vert-02.png) | Claude ou mon PC ? #1, 16 nov. | Gabarit de série, « 16 Go » dans la baie du PC | Plus de composition Kai, ni de cédille flottante, ni d'établi |
+| [`vert-02`](rendus/vert-02.png) | Claude ou mon PC ? #1, 2 nov. | Gabarit de série, « 16 Go » dans la baie du PC | Plus de composition Kai, ni de cédille flottante, ni d'établi |
 | [`noir-03`](rendus/noir-03.png) | Waze, 9 nov. | Bouchon rouge, détour bleu, icône Waze, « personne ne l'a signalé, / **il savait.** » | « avant toi » répétait le titre ; rivière retirée |
 | [`noir-04`](rendus/noir-04.png) | Pixel, 14 déc. | Un écran blanc, une loupe sur ses sous-pixels, « il n'y a pas / **de blanc.** » | L'écran blanc montre la contradiction sans lire |
-| [`vert-05`](rendus/vert-05.png) | Coût de Claude en local, 2 nov. | Ta 5080 minuscule au pied d'une baie géante, « Claude chez moi, » + étiquette de prix | Nouveau concept (l'ancien copiait la série de Kai) |
+| [`vert-05`](rendus/vert-05.png) | Coût de Claude en local, 16 nov. | Ta 5080 minuscule au pied d'une baie géante, « Claude chez moi, » + étiquette de prix | Nouveau concept (l'ancien copiait la série de Kai) |
 | [`noir-06`](rendus/noir-06.png) | WhatsApp, 11 janv. | Icône WhatsApp, « 900 millions, / **50** / ingénieurs. » | Pas de reflet ; **c'est le titre qui change** (fiche WhatsApp, titre 4) |
 | [`noir-07`](rendus/noir-07.png) | Pseudo pris, 23 nov. | Formulaire, « technovore » en erreur, « Ce nom est déjà pris. », « **il triche.** » | Ligne grise et petits textes retirés ; « G » de Google ajouté (voir § 5) |
 | [`noir-08`](rendus/noir-08.png) | Jeux, 22 févr. (provisoire) | PS5 éteinte en gris, « acheté. / **pas à toi.** » | Les trois cartes illisibles retirées |
@@ -82,7 +82,7 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 3. **Un test ne décide pas d'un format.** Compte les victoires sur 4 à 6 vidéos par pilier avant de changer la règle.
 4. **Ordre proposé** :
    - **Uber (26/10)** : test de **texte** (`noir-01` contre `noir-01b`), voir [`projets/uber/upload.md`](../../projets/uber/upload.md).
-   - **À partir de Claude ou mon PC ? #1 (23/11)** : test de **charte** sur chaque vidéo (`vert-02` contre la même scène en noir), puis Waze, pixel, coût de Claude, WhatsApp. La jumelle de chaque miniature, dans l'autre charte, se fait à partir de l'HTML (compter environ 30 à 60 min, estimation).
+   - **À partir de Claude ou mon PC ? #1 (2/11)** : test de **charte** sur chaque vidéo (`vert-02` contre la même scène en noir), puis Waze, pixel, coût de Claude, WhatsApp. La jumelle de chaque miniature, dans l'autre charte, se fait à partir de l'HTML (compter environ 30 à 60 min, estimation).
 5. **Ne touche ni au titre ni à la miniature pendant le test** : ça l'arrête.
 
 ### La DA de la vidéo doit-elle correspondre à la miniature ?
@@ -91,7 +91,7 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 
 **Garder le noir ou passer au vert ? Ni l'un ni l'autre pour toute la chaîne : une DA par pilier, comme les miniatures.**
 - **Génie derrière l'app → noir premium.** Uber est déjà enregistré et découpé en noir, et Waze et WhatsApp réutiliseront ses animations de carte.
-- **IA chez moi → vert explainer.** Le template a été construit pour ça : axe gradué, carte graphique, étiquette de prix, mesure de VRAM. Il entre en service avec Claude ou mon PC ? #1 (23/11).
+- **IA chez moi → vert explainer.** Le template a été construit pour ça : axe gradué, carte graphique, étiquette de prix, mesure de VRAM. Il entre en service avec Claude ou mon PC ? #1 (2/11).
 - **Pendant les tests de charte**, la miniature perdante n'a pas de premier plan assorti. C'est un handicap réel : si elle gagne malgré tout, le signal est d'autant plus fort.
 
 ## 5. À vérifier avant de publier

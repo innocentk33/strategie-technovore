@@ -12,7 +12,8 @@ Pour les idées qui portent un numéro, le hook, la miniature et le score sont d
 
 | Idée | Pilier | Score | Quand | Détail |
 |---|---|---|---|---|
-| Même carte, 2 fois plus rapide (testé sur ta 5080) | IA | 34/40 | Créneau radar (30/11 ou 21/12) | Idée 16 |
+| Même carte, 2 fois plus rapide (testé sur ta 5080) | IA | 34/40 | Créneau radar (30/11 ou 21/12) | Idée 16. Signal du 22/10 : Code Unpacked (506 abonnés) fait 11,2 K en un jour avec « llama.cpp… 4× Faster » ([étude](etudes/outliers-2026-10-22.md)) |
+| Ton IA locale est-elle vraiment privée ? (sécurité : modèles piégés, Ollama ouvert sur le réseau) | IA | — | Créneau radar | Signal du 22/10 : Kai, « Your Local AI Is Not as Private as You Think », 208 K en 27 h ([étude](etudes/outliers-2026-10-22.md)). Ne pas reprendre son angle : trouver la croyance du public français à renverser, et tester sur ta machine |
 | SQLite, le fichier de 300 Ko qui a battu Oracle | Génie | 32/40 | Provisoire : 22 mars | Idée 18 |
 | Tu n'as jamais possédé tes jeux | Histoires | 31/40 | Provisoire : 22 févr. | Idée 8. Matière dans [`archive/autohebergement/`](archive/autohebergement/) |
 | Mobile Money : comment ton argent passe sans internet | Génie | 31/40 | Provisoire : 8 févr. | Idée 17 |

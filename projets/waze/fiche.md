@@ -17,4 +17,6 @@
 3. Mixte (recommandé) : *Comment Waze sait qu'il y a un bouchon avant que tu le voies*
 
 **Miniature** (21/10, charte noire) : [`noir-03.png`](../../ressources/miniatures/rendus/noir-03.png). Téléphone avec le bouchon en rouge et le détour en bleu, icône Waze, « personne ne l'a signalé, il savait. ». « avant toi » répétait le titre.
+**Les 15 premières secondes** (règle du 22/10, `strategie.md`, section 5) : ce sont les secondes les plus fortes de la vidéo. Le hook de l'idée 6 (« Waze t'a fait tourner à droite… ») va dans ce sens : montre-le tout de suite sur la carte animée (le détour bleu, puis l'accident), sans contexte avant.
+
 **Contenu** : chaque téléphone qui roule avec Waze sert de capteur de vitesse, les signalements complètent, et Waze en tire un itinéraire. Laisse l'angle « gratuité et données » à Thibaut Dcode : toi, tu montres la machine.

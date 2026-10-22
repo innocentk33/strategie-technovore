@@ -10,7 +10,7 @@ Planification et suivi de la chaîne YouTube Technovore : stratégie, calendrier
 | [`calendrier.md`](calendrier.md) | Une vidéo longue chaque lundi à 18 h, jusqu'au 26 avril 2027 ; production semaine par semaine jusqu'au 31 janvier |
 | [`idees.md`](idees.md) | Boîte à idées : sujets en réserve, pas encore planifiés |
 | [`projets/`](projets/) | Un dossier par vidéo |
-| [`etudes/`](etudes/) | Études de chaînes concurrentes (données vidIQ) et [`radar.md`](etudes/radar.md), le journal du radar fait à chaque sortie |
+| [`etudes/`](etudes/) | Études de chaînes concurrentes (données vidIQ), audits de la chaîne (le dernier : [22/10](etudes/audit-2026-10-22.md)) et [`radar.md`](etudes/radar.md), le journal du radar fait à chaque sortie |
 | [`ressources/`](ressources/) | Ce qui sert à plusieurs vidéos : animations Remotion, miniatures, audio, voix |
 | [`archive/`](archive/) | Projets et idées abandonnés, avec la raison |
 | `claude-youtube/` | Copie locale du skill `/youtube`, non suivie par git. Le skill utilisé est celui de `~/.claude/skills/` (installation : `git clone https://github.com/AgriciDaniel/claude-youtube && ./claude-youtube/install.sh`) |
@@ -21,10 +21,10 @@ Planification et suivi de la chaîne YouTube Technovore : stratégie, calendrier
 |---|---|---|---|
 | [ArtCraft](projets/artcraft/fiche.md) | Longue | lun. 19 oct., 18 h | **Publié** : [*Il a cloné TOUTES les applications ADOBE et c'est gratuit*](https://www.youtube.com/watch?v=FVFb4dnUmLA) |
 | [OpenCode piraté](projets/opencode/fiche.md) | Longue (actu) | mer. 21 oct., 13 h | **Publié** : [*OpenCode a été gravement piraté (explication !)*](https://www.youtube.com/watch?v=LeZ9hgwvXy0) |
-| [Uber](projets/uber/fiche.md) | Longue | lun. 26 oct., 18 h | Montage fini (9:59,6), en ligne en privé : titre et tags à corriger ; [kit d'upload](projets/uber/upload.md), sous-titres FR/EN et miniatures corrigées prêts |
-| [Combien coûte Claude en local ?](projets/cout-claude-local/fiche.md) | Longue (calculé) | lun. 2 nov., 18 h | Fiche |
+| [Uber](projets/uber/fiche.md) | Longue | lun. 26 oct., 18 h | **Programmé** (lun. 26 oct., 18 h) : titre et tags corrigés (vérifié dans vidIQ le 22/10) ; [kit d'upload](projets/uber/upload.md) |
+| [Claude ou mon PC ? #1 : 16 Go de VRAM](projets/claude-ou-mon-pc-1/fiche.md) | Longue (testé) | lun. 2 nov., 18 h | Brouillon · essais sur la 5080 les 23-24/10 |
 | [Waze](projets/waze/fiche.md) | Longue | lun. 9 nov., 18 h | Fiche |
-| [Claude ou mon PC ? #1 : 16 Go de VRAM](projets/claude-ou-mon-pc-1/fiche.md) | Longue (testé) | lun. 16 nov., 18 h | Brouillon |
+| [Combien coûte Claude en local ?](projets/cout-claude-local/fiche.md) | Longue (calculé) | lun. 16 nov., 18 h | Script : [v2](projets/cout-claude-local/script.md) à compléter (résultats de Claude #1, tes ⟦à écrire⟧) ; [grill](projets/cout-claude-local/grill-v1.md) du 22/10 |
 | [Pseudo déjà pris](projets/pseudo/fiche.md) | Longue | lun. 23 nov., 18 h (joker) | Fiche |
 | [iPhone plus fluide](projets/iphone-fluide/fiche.md) | Longue | lun. 7 déc., 18 h | Fiche |
 | [Pixel](projets/pixel/fiche.md) | Longue | lun. 14 déc., 18 h | Brouillon |

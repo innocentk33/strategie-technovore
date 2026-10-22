@@ -4,7 +4,16 @@
 
 **Origine** : « Le second pouvoir de votre carte graphique : héberger une IA en local sur une 5080 ». Inspiration : [Red Stapler, I ran Qwen3.8 27B on single 8GB Card!](https://www.youtube.com/watch?v=ye50BbXEczo).
 
-**Mis à jour le 18/10** : le titre met en avant ta carte de 16 Go, et la vidéo reprend le contenu du guide IA en local 2027 (voir [`archive/`](../../archive/README.md)). Elle sort le **16 nov. à 18 h**, 11 jours avant le Black Friday (avancée d'une semaine le 21/10). Preuve : chez Kai, [Is 16GB All You Need for Serious Local LLM?](https://www.youtube.com/watch?v=i9mRnbdDYxk) fait 359 K vues en 10 jours, et ses vidéos sur le matériel et le coût font environ 2 fois plus de vues que ses tests de modèles (voir [`etudes/kai.md`](../../etudes/kai.md)).
+**Mis à jour le 18/10** : le titre met en avant ta carte de 16 Go, et la vidéo reprend le contenu du guide IA en local 2027 (voir [`archive/`](../../archive/README.md)). Elle sort le **2 nov. à 18 h** (avancée du 16 nov. le 22/10 : ses essais sur la 5080, les 23-24/10, servent ensuite à « Combien coûte Claude en local ? », le 16 nov.). Preuve : chez Kai, [Is 16GB All You Need for Serious Local LLM?](https://www.youtube.com/watch?v=i9mRnbdDYxk) fait 359 K vues en 10 jours, et ses vidéos sur le matériel et le coût font environ 2 fois plus de vues que ses tests de modèles (voir [`etudes/kai.md`](../../etudes/kai.md)).
+
+**Machine de test** (config donnée le 22/10) :
+- CPU Ryzen 7 9700X (8 cœurs), carte mère Gigabyte B850M AORUS ELITE WIFI6E ICE (4 slots DDR5) ;
+- **RTX 5080 16 Go** (Inno3D X3 OC) ;
+- **32 Go de DDR5-6000** (2 × 16 Go, EXPO activé), payés **99 € en 2025**. Le même kit est affiché à 491,99 $ en octobre 2026 ;
+- SSD Samsung 990 EVO Plus 2 To et Crucial P3 Plus 1 To ;
+- alimentation Corsair RM1000e (1000 W).
+
+Avec 32 Go de RAM, les modèles à experts géants (Qwen3.8-Flash-Next, DeepSeek) sont exclus. Plan d'essais : [`modeles-5080.md`](modeles-5080.md) ; vidéos de référence : [`references.md`](references.md).
 
 | Champ | Détail |
 |---|---|
@@ -32,6 +41,6 @@
    - tu as déjà une carte de 12 ou 16 Go ;
    - tu pars de zéro ;
    - tu n'en as pas besoin, reste sur l'abonnement.
-   Prix en euros relevés juste avant le script (7-8 nov.).
+   Prix en euros relevés juste avant le script (24-25 oct.), puis épinglés en commentaire le 27 nov. (Black Friday).
 
-**Le fil de la série** : ouvre sur la vidéo du 2 nov. (« la dernière fois, j'ai calculé ce qu'il faudrait pour faire tourner Claude chez moi… »), comme Morgans Code relie ses vidéos entre elles.
+**Le fil de la série** : c'est le premier épisode. Termine sur la suite : « ce qui ne tient pas dans 16 Go, je l'ai calculé, et ça sort le 16 nov. » (Coût Claude), comme Morgans Code relie ses vidéos entre elles.

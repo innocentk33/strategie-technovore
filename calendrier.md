@@ -1,6 +1,6 @@
 # Calendrier de production Technovore : 26 oct. 2026 → 26 avr. 2027
 
-> Complète `strategie.md` (v4). Créé le 11/10/2026 ; les versions des 12, 18 et 19/10 sont dans l'historique git. **Mis à jour le 21/10 : une vidéo longue chaque lundi à 18 h, plus aucun Short, plan sur 6 mois. « Combien coûte Claude en local ? » passe au 2 nov., Waze au 9 nov., Claude #1 au 16 nov., le pixel au 14 déc. et WhatsApp au 11 janv. Le radar choisit les créneaux libres (voir `CLAUDE.md`, « Radar », et `etudes/radar.md`).**
+> Complète `strategie.md` (v4). Créé le 11/10/2026 ; les versions des 12, 18 et 19/10 sont dans l'historique git. **Mis à jour le 21/10 : une vidéo longue chaque lundi à 18 h, plus aucun Short, plan sur 6 mois. « Combien coûte Claude en local ? » passe au 2 nov., Waze au 9 nov., Claude #1 au 16 nov., le pixel au 14 déc. et WhatsApp au 11 janv. Le radar choisit les créneaux libres (voir `CLAUDE.md`, « Radar », et `etudes/radar.md`).** **Mis à jour le 22/10 après l'[audit](etudes/audit-2026-10-22.md) : Uber programmé ; tâches de chaîne ajoutées en S1 et S2 (miniatures en test, page de chaîne, Programme Partenaire) ; règle des 15 premières secondes pour chaque vidéo à partir de Coût Claude (`strategie.md`, section 5) ; ménage des tutos Flutter inutiles en S9, après la 10e vidéo des nouveaux thèmes.** **Mis à jour le 22/10 (soir), à ta demande : Claude #1 passe au 2 nov. et « Combien coûte Claude en local ? » au 16 nov. Tes essais sur la 5080 (23-24/10) servent d'abord à Claude #1, puis Coût Claude les réutilise.**
 
 ## Vue d'ensemble
 
@@ -25,10 +25,10 @@
 |---|---|---|---|---|---|---|
 | — | 19 oct | [ArtCraft](projets/artcraft/fiche.md) | IA | Récit + test | — | Publiée |
 | — | mer. 21 oct | [OpenCode piraté](projets/opencode/fiche.md) | IA (actu) | Récit | — | Publiée (13 h) |
-| 1 | **26 oct** | [Uber : le génie caché derrière la carte en temps réel](projets/uber/fiche.md) | Génie | — | Faite | En ligne en privé : titre et tags à corriger |
-| 2 | **2 nov** | [Combien coûte Claude en local ?](projets/cout-claude-local/fiche.md) | IA | **Calculé** | Moyenne | Fiche (avancée du 4 janv.) |
+| 1 | **26 oct** | [Uber : le génie caché derrière la carte en temps réel](projets/uber/fiche.md) | Génie | — | Faite | Programmé : titre et tags corrigés (vérifié le 22/10) |
+| 2 | **2 nov** | [Claude ou mon PC ? #1 : 16 Go de VRAM](projets/claude-ou-mon-pc-1/fiche.md) | IA | **Testé** + conseils d'achat | Lourde (essais) | Brouillon · essais les 23-24/10 (avancée du 16 nov. le 22/10) |
 | 3 | **9 nov** | [Comment Waze sait qu'il y a un bouchon](projets/waze/fiche.md) | Génie | — | Moyenne (cartes d'Uber) | Fiche (avancée du 7 déc.) |
-| 4 | **16 nov** | [Claude ou mon PC ? #1 : 16 Go de VRAM](projets/claude-ou-mon-pc-1/fiche.md) | IA | **Testé** + conseils d'achat | Lourde (essais) | Brouillon (avancée du 23 nov.) |
+| 4 | **16 nov** | [Combien coûte Claude en local ?](projets/cout-claude-local/fiche.md) | IA | **Calculé** | Moyenne | Script v2 à compléter avec les essais de Claude #1 (reculée du 2 nov. le 22/10) |
 | 5 | **23 nov** | [Ton pseudo est déjà pris](projets/pseudo/fiche.md) | Génie | — | Légère | Fiche · joker |
 | 6 | 30 nov | *Radar* | IA | Calculé ou testé | Légère | Choisi au radar du 16/11 |
 | 7 | 7 déc | [Pourquoi tout paraît plus fluide sur un iPhone](projets/iphone-fluide/fiche.md) | Génie | — | Moyenne | Fiche |
@@ -63,15 +63,15 @@ Règle : en semaine N, **voix et montage** de la vidéo de N+1, **écriture** de
 
 | Semaine | Écriture (vidéo de N+2) | Voix, essais, montage (vidéo de N+1) | En ligne |
 |---|---|---|---|
-| **S1** · 19-25 oct | Recherche et script de **Coût Claude** | **Uber** : appliquer le [kit d'upload](projets/uber/upload.md) (titre, tags, description, chapitres, sous-titres) et programmer. **Premiers essais sur la 5080** : quels modèles tiennent en 16 Go, et à quelle vitesse | ArtCraft (lun. 19), OpenCode (mer. 21) |
-| **S2** · 26 oct-1er nov | Recherche et script de **Waze** (pages d'aide Waze) | Voix et montage de **Coût Claude** ; essais sur la 5080 (suite) | **Uber** lun. 26 |
-| **S3** · 2-8 nov | Script de **Claude #1** ; relevé des prix en euros (cartes, RAM) | Voix et montage de **Waze**, en réutilisant les cartes d'Uber ; derniers essais et consommation de la 5080 | **Coût Claude** lun. 2 |
-| **S4** · 9-15 nov | Recherche et script du **pseudo** (filtre de Bloom) | Voix et montage de **Claude #1** ; 2-3 h d'animations pour le pixel | **Waze** lun. 9 |
-| **S5** · 16-22 nov | **Radar** → choix du 30/11, puis son script | Voix et montage du **pseudo** ; 2-3 h pour le pixel | **Claude #1** lun. 16 |
+| **S1** · 19-25 oct | Script v2 de **Coût Claude** (fait le 22/10). **Script de Claude #1** après les essais ; relevé des prix en euros (cartes, RAM) | **Uber** : appliquer le [kit d'upload](projets/uber/upload.md) (titre, tags, description, chapitres, sous-titres) et programmer (fait le 22/10). **Essais sur la 5080, ven. 23 et sam. 24** : quels modèles tiennent en 16 Go, à quelle vitesse, et la consommation. **Audit** : « Tester et comparer » sur ArtCraft avec les 3 miniatures memes ; description d'ArtCraft (Uber le 26 oct., pas le 9 nov.) ; lien de la formation Flutter corrigé ; Programme Partenaire vérifié dans Studio | ArtCraft (lun. 19), OpenCode (mer. 21) |
+| **S2** · 26 oct-1er nov | Recherche et script de **Waze** (pages d'aide Waze) | Voix et montage de **Claude #1** (les 15 premières secondes d'abord). C'est la semaine la plus lourde : si le montage déborde, le pseudo (joker) prend le 2 nov. **Audit** : 2 ou 3 miniatures d'Uber en test dès la sortie ; écran de fin vers Uber sur la formation et la vidéo d'installation ; page de chaîne (vidéo à la une, ordre des playlists, bannière) | **Uber** lun. 26 |
+| **S3** · 2-8 nov | **Coût Claude** : intégrer les résultats de Claude #1 et finir le script | Voix et montage de **Waze**, en réutilisant les cartes d'Uber | **Claude #1** lun. 2 |
+| **S4** · 9-15 nov | Recherche et script du **pseudo** (filtre de Bloom) | Voix et montage de **Coût Claude** ; 2-3 h d'animations pour le pixel | **Waze** lun. 9 |
+| **S5** · 16-22 nov | **Radar** → choix du 30/11, puis son script | Voix et montage du **pseudo** ; 2-3 h pour le pixel | **Coût Claude** lun. 16 |
 | **S6** · 23-29 nov | Recherche et script de l'**iPhone** | Voix et montage de la vidéo IA du 30/11 ; **ven. 27 : épingler les prix du Black Friday** sous Claude #1 | **Pseudo** lun. 23 · **bilan à 1 mois** |
 | **S7** · 30 nov-6 déc | Script du **pixel** (ton brouillon devient le 2e acte) | Voix et montage de l'**iPhone** | **IA (radar)** lun. 30 |
 | **S8** · 7-13 déc | **Radar** → choix du 21/12, puis son script. **Prends de l'avance** : écris aussi Python | Voix et montage du **pixel** | **iPhone** lun. 7 |
-| **S9** · 14-20 déc | Script de **Louer, acheter ou s'abonner** (en avance : elle sort le 4 janv.) | Voix et montage de la vidéo IA du 21/12 | **Pixel** lun. 14 |
+| **S9** · 14-20 déc | Script de **Louer, acheter ou s'abonner** (en avance : elle sort le 4 janv.) | Voix et montage de la vidéo IA du 21/12. **Ménage de la chaîne** (le pixel est la 10e vidéo des nouveaux thèmes) : masquer les tutos Flutter et Kotlin qui ne servent à rien, c'est-à-dire moins de 5 h de visionnage sur 12 mois (au 22/10 : 30 vidéos, 34 h, 19 abonnés). Refais le relevé avec vidIQ avant de cocher. **Restent publics** : la formation, « Installer Flutter » (2025 et 2021), la série « Formation Flutter 2025 », « Découvre Dart en 10 min » et « ChatGPT vs Gemini vs Claude » | **Pixel** lun. 14 |
 | **S10** · 21-27 déc ⚠️ | Recherche de **WhatsApp** (Wired 2015, Erlang), s'il reste du temps | Voix et montage de **Python**, **programmée mer. 23** | **IA (radar)** lun. 21 · repos 24-25 |
 | **S11** · 28 déc-3 janv ⚠️ | Script de **WhatsApp** | Voix et montage de **Louer, acheter**, programmée | **Python** lun. 28 · repos 31-1er |
 | **S12** · 4-10 janv | Script de **Claude #2** ; **essais du dernier modèle sorti** | Voix et montage de **WhatsApp** | **Louer, acheter** lun. 4 |
@@ -81,7 +81,7 @@ Règle : en semaine N, **voix et montage** de la vidéo de N+1, **écriture** de
 
 **⚠️ Les fêtes (S10 et S11)** sont les semaines les plus tendues. Python et « Louer, acheter » ne dépendent pas de l'actu : écris-les en avance (S8 et S9), et programme-les avant le 24.
 
-**S1 est chargée** : le kit d'upload d'Uber, le script de « Coût Claude » et les premiers essais sur la 5080 tombent la même semaine. Les essais passent en premier : ils nourrissent Claude #1 (16/11), et rien n'a encore tourné sur ta carte.
+**S1 et S2 sont chargées** : les essais sur la 5080 (23-24/10), le script de Claude #1, puis sa voix et son montage avant le 2 nov. Les essais passent en premier : ils nourrissent Claude #1, puis Coût Claude (16/11).
 
 ---
 
@@ -103,7 +103,7 @@ Règle : en semaine N, **voix et montage** de la vidéo de N+1, **écriture** de
 | Événement | Date | Délai utile | Action |
 |---|---|---|---|
 | Revenus pub du 4e trimestre | oct.-déc. | — | 10 vidéos dans la période la mieux payée, dont les deux plus « achat » (Coût Claude, Claude #1) |
-| Black Friday | ven. 27 nov | Un guide d'achat ~1 semaine avant | Claude #1 le **16 nov** (11 jours avant) ; prix épinglés en commentaire le 27 |
+| Black Friday | ven. 27 nov | Un guide d'achat ~1 semaine avant Claude #1 le **2 nov** (25 jours avant) et Coût Claude le **16 nov** (11 jours avant) ; prix épinglés sous Claude #1 le 27 |
 | Noël | ven. 25 déc | À programmer avant le 24 | Python le **28 déc** : il a créé Python pendant la semaine de Noël 1989 (citation à vérifier) |
 | Creux de janvier | janv. | — | Vidéos de croissance (Louer, acheter ; WhatsApp ; Claude #2) plutôt que de revenus |
 | Soldes d'hiver | mi-janvier (date officielle à vérifier) | — | Rien de prévu : le guide d'achat sort avant le Black Friday |
