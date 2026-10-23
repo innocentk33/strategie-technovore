@@ -1,10 +1,10 @@
 #!/bin/sh
-# Rend les miniatures en PNG 1280×720 : ./rendre.sh [vert|noir] [n…]  (sans argument : toutes)
+# Rend les miniatures en PNG 3840×2160 (page de 1280×720 rendue à ×3) : ./rendre.sh [vert|noir] [n…]  (sans argument : toutes)
 cd "$(dirname "$0")"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 render() { # style n
   out="$PWD/rendus/$1-$(printf %02d "${2%b}")${2#"${2%b}"}.png"
-  "$CHROME" --headless=new --hide-scrollbars --allow-file-access-from-files --window-size=1280,720 \
+  "$CHROME" --headless=new --hide-scrollbars --allow-file-access-from-files --window-size=1280,720 --force-device-scale-factor=3 \
     --virtual-time-budget=3000 --screenshot="$out" "file://$PWD/$1.html?n=$2" 2>/dev/null
 }
 if [ -n "$1" ]; then

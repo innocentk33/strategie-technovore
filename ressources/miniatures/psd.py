@@ -8,11 +8,12 @@ HERE = pathlib.Path(__file__).resolve().parent
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 PCLI = pathlib.Path.home() / ".local/bin/photocraft-cli"
 OUT = HERE / "photocraft"
+S = 3  # page de 1280×720 rendue en 3840×2160 ; les positions lues dans la page sont multipliées par S
 
 
 def chrome(url, *args):
     return subprocess.run([CHROME, "--headless=new", "--hide-scrollbars", "--allow-file-access-from-files",
-                           "--window-size=1280,720", "--virtual-time-budget=3000", *args, url],
+                           "--window-size=1280,720", f"--force-device-scale-factor={S}", "--virtual-time-budget=3000", *args, url],
                           capture_output=True, text=True, check=True).stdout
 
 
@@ -24,14 +25,14 @@ def build(style, n, tmp):
     dump = re.search(r'<pre id="dump">(.*?)</pre>', chrome(url + "&dump=1", "--dump-dom"), re.S)
     items = json.loads(html.unescape(dump.group(1)))
 
-    cmd = [str(PCLI), "run", "--new", json.dumps({"width": 1280, "height": 720, "resolution": 72}),
-           "--cmd", "file.placeEmbedded", "--params", json.dumps({"path": str(decor), "scale": 100, "center": [640, 360], "smartObject": False}),
+    cmd = [str(PCLI), "run", "--new", json.dumps({"width": 1280 * S, "height": 720 * S, "resolution": 72}),
+           "--cmd", "file.placeEmbedded", "--params", json.dumps({"path": str(decor), "scale": 100, "center": [640 * S, 360 * S], "smartObject": False}),
            "--cmd", "layer.setProps", "--params", json.dumps({"name": "décor"})]
     for it in items:
         text = "".join(r["t"] for r in it["runs"])
         first = it["runs"][0]
         cmd += ["--cmd", "type.create", "--params", json.dumps({
-            "x": it["x"], "y": it["y"], "text": text, "name": text.strip()[:30], "font": it["font"], "size": it["size"],
+            "x": it["x"] * S, "y": it["y"] * S, "text": text, "name": text.strip()[:30], "font": it["font"], "size": it["size"] * S,
             "weight": first["weight"], "color": first["color"], "tracking": it["tracking"], "horizontalScale": it["hscale"]})]
         if first["weight"] != 400:
             cmd += ["--cmd", "type.setStyle", "--params", json.dumps({"weight": first["weight"], "variations": {"wght": first["weight"]}})]

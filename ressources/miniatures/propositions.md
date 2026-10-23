@@ -1,7 +1,7 @@
 # Miniatures Technovore : une charte par pilier
 
 > **v2 du 21/10/2026**, après la critique du coach ([`coach.md`](coach.md)) : **noir** pour « Le génie derrière l'app » et les grandes histoires de la tech, **vert** pour « IA chez moi ».
-> - **Images** : [`rendus/`](rendus/), 11 miniatures 1280×720. La v1 (20 propositions, deux chartes par sujet) est dans [`rendus/v1/`](rendus/v1/).
+> - **Images** : [`rendus/`](rendus/), 11 miniatures en 4K (3840×2160, depuis le 23/10). La v1 (20 propositions, deux chartes par sujet) est dans [`rendus/v1/`](rendus/v1/).
 > - **PhotoCraft** : [`photocraft/`](photocraft/), un PSD par miniature : le décor en calque d'image, chaque texte droit en calque de texte modifiable.
 > - **Tests de lisibilité** : [`planches/`](planches/). `flux-vert.png` et `flux-noir.png` placent 4 des nôtres parmi 8 miniatures concurrentes, sur le fond sombre de YouTube ; `168.png` les montre à la taille des suggestions.
 
@@ -36,6 +36,7 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 - **Jamais la même information que le titre.**
 - **Logos dans leurs vraies couleurs** : Uber noir, Waze cyan, WhatsApp vert, Claude orange.
 - **Rien d'important sous 50 px de haut**, ni dans le coin de la durée (x > 1100, y > 610).
+- **Export en 4K** (décidé le 23/10, nos vidéos étant longues) : 3840×2160 en 16:9. On dessine toujours dans une page de 1280×720, et `rendre.sh` et `psd.py` la rendent à ×3 ; toutes les cotes de ce document restent en 1280×720. YouTube accepte 50 Mo depuis un ordinateur, mais seulement 2 Mo depuis l'appli mobile : importe la miniature depuis l'ordinateur (aide YouTube « Ajouter des miniatures de vidéo », lue le 23/10).
 - **La menthe `#07c095` dans les deux chartes** : c'est le fil qui relie les piliers (ponctuation « gagnée » et voyant de la marque en noir).
 - **Polices libres** : Inter, Archivo Black, JetBrains Mono (OFL). SF Pro n'est plus utilisée (voir § 5).
 
@@ -111,6 +112,7 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 | Changer un texte ou un dessin | Éditer `noir.html` (`?n=1`, `1b`, `3`, `4`, `6`, `7`, `8`) ou `vert.html` (`?n=2`, `5`, `9`, `10`), puis `./rendre.sh noir 3` (ou `./rendre.sh` pour toutes) |
 | Retoucher dans PhotoCraft | Ouvrir `photocraft/noir-03.psd`. Les textes inclinés ou dans un badge font partie du décor : les changer dans le HTML |
 | Refaire les PSD après une modification du HTML | `python3 -I psd.py noir 3` (ou sans argument pour toutes) |
+| Comparer une miniature aux vidéos où elle sera suggérée | Mettre leurs `.jpg` dans `projets/<nom>/miniature/hotes/`, puis `python3 -I planches.py --suggestions <notre miniature> projets/<nom>/miniature/hotes` → `planches/suggestions-<nom>.png` (colonne de 168 px). Pourquoi : `etudes/suggestions-2026-10-23.md` |
 | Refaire les planches de test | `python3 -I planches.py <dossier>`, avec un sous-dossier de miniatures `.jpg` par chaîne concurrente (téléchargées avec `yt-dlp --flat-playlist` puis `i.ytimg.com/vi/<id>/maxresdefault.jpg`) |
 
 Polices : Archivo Black, Inter et JetBrains Mono sont dans [`fonts/`](fonts/) pour le HTML. Pour PhotoCraft, elles sont installées dans `~/Library/Fonts` (Archivo Black, Inter Bold, ExtraBold et Black, JetBrains Mono variable ; toutes sous licence OFL). La version d'Inter fournie avec PhotoCraft s'arrête à SemiBold.

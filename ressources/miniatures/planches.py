@@ -2,6 +2,8 @@
 Usage : python3 -I planches.py <dossier des miniatures concurrentes (un sous-dossier par chaîne)>
   planches/flux-vert.png, flux-noir.png : 4 des nôtres parmi 8 concurrentes, à 300 px (accueil mobile)
   planches/168.png : les nôtres à 168 px (colonne des suggestions)
+Ou : python3 -I planches.py --suggestions <notre miniature> <dossier des vidéos hôtes (.jpg)>
+  planches/suggestions-<nom>.png : la nôtre au milieu des vidéos où YouTube risque de la suggérer, à 168 px
 """
 import pathlib, random, sys
 from PIL import Image, ImageDraw
@@ -28,6 +30,12 @@ def grid(paths, w, cols, out, gap=16):
 
 
 if __name__ == "__main__":
+    if sys.argv[1] == "--suggestions":
+        ours, hosts = pathlib.Path(sys.argv[2]), sorted(pathlib.Path(sys.argv[3]).glob("*.jpg"))[:5]
+        hosts.insert(len(hosts) // 2, ours)
+        (HERE / "planches").mkdir(exist_ok=True)
+        grid(hosts, 168, 1, HERE / f"planches/suggestions-{ours.stem}.png", gap=10)
+        sys.exit()
     comp = sorted(pathlib.Path(sys.argv[1]).glob("*/*.jpg"))
     out = HERE / "planches"
     out.mkdir(exist_ok=True)

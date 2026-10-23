@@ -15,7 +15,7 @@ Une décision touche souvent plusieurs fichiers à la fois. Quand une date, un t
 - `strategie.md` (v4) : positionnement, les 3 piliers (« Le génie derrière l'app », « IA chez moi », « Les grandes histoires de la tech »), objectifs à 1, 3 et 6 mois, les idées classées. Les fiches renvoient à ses numéros d'idée.
 - `calendrier.md` : grille de publication jusqu'au 26/04/2027. **Une vidéo longue chaque lundi à 18 h, aucun Short** (décidé le 21/10). Ses changements sont notés en tête (« Mis à jour le … »).
 - `README.md` : tableau de suivi des projets. Statuts : Fiche → Brouillon → Recherche → Script → Voix → Montage → Programmé → Publié (avec le lien YouTube).
-- `idees.md` (réserve), `archive/README.md` (abandons, avec date et raison), `etudes/` (chaînes concurrentes, données vidIQ datées, audits de la chaîne `audit-AAAA-MM-JJ.md`, et `radar.md`, le journal du radar).
+- `idees.md` (réserve), `archive/README.md` (abandons, avec date et raison), `etudes/` (chaînes concurrentes, données vidIQ datées, audits de la chaîne `audit-AAAA-MM-JJ.md`, `suggestions-2026-10-23.md` (où YouTube suggère nos vidéos et pourquoi), et `radar.md`, le journal du radar).
 
 Cycle de vie : idée dans `idees.md` → dossier `projets/<nom>/` (copier une fiche existante) + ligne dans le README et le calendrier → à l'abandon, `git mv` vers `archive/` et une ligne dans `archive/README.md`.
 
@@ -26,12 +26,14 @@ Quand une vidéo sort (l'auteur le dit, ou une vidéo publique apparaît dans `v
 1. **Notre chaîne** (`vidiq_channel_stats`, `vidiq_channel_analytics` avec `filters: video==ID`) :
    - la vidéo précédente à J+7 : `engagedViews`, durée moyenne, % regardé, abonnés gagnés, sources de trafic, part de la France ;
    - sa courbe de rétention (`report: audience_retention`) : % de spectateurs à 0:15 (cible 75 %) et à 1:00 (cible 50 %) ;
+   - ses 5 premières sources dans les suggestions (`dimensions: insightTrafficSourceDetail`, `filters: insightTrafficSourceType==RELATED_VIDEO;video==ID`, 5 crédits) : qui nous suggère, et combien de temps ces spectateurs restent ;
    - le CTR et les impressions ne passent pas par l'API : demande une capture de Studio.
 2. **Concurrents** : la liste de surveillance de `etudes/radar.md`, avec un appel `vidiq_outliers` par langue (`channelIds`, `thisMonth`). Note ce qui fait ×2 ou plus.
 3. **Public français** : `vidiq_outliers` en `language: fr` sur les mots-clés listés dans `etudes/radar.md`.
 4. **Choix** :
    - candidats : la réserve d'`idees.md`, les idées de `strategie.md` et les signaux du radar ;
    - note sur 40 avec la grille de `strategie.md` (demande × clic × production × niche) ;
+   - à note proche, préfère le sujet qui a une grosse vidéo française récente (100 K vues ou plus dans le mois) : sortir dans sa semaine nous place à côté d'elle dans les suggestions ;
    - règles :
      - pas deux fois le même pilier de suite ;
      - au plus 1 vidéo de tendance sur 3 ;
@@ -55,7 +57,11 @@ Fichiers par ordre de production :
 5. `sources.md` : les faits vérifiés.
 6. `teleprompteur.md` et `.txt` : une ligne = un souffle ; les `[MARQUEURS]`, `⟦à écrire⟧` et `(indications)` ne se lisent pas.
 7. `storyboard.md` : timecodes calés sur `voix-off-montee.wav` ; en HyperFrames, `data-start` = le timecode en secondes.
-8. `upload.md` : kit d'upload (mots-clés vidIQ, chapitres, description) ; `*.fr.srt` / `*.en.srt` pour les sous-titres.
+8. `upload.md` : kit d'upload (mots-clés vidIQ, chapitres, description) ; `*.fr.srt` / `*.en.srt` pour les sous-titres. Une fois le kit écrit, ajoute-lui une section « Suggestions » (le pourquoi est dans `etudes/suggestions-2026-10-23.md`) :
+   - **les vidéos hôtes** : 4 ou 5 grosses vidéos françaises du même sujet, sorties ce mois-ci (`vidiq_outliers` en `language: fr`, ou `vidiq_youtube_search`) ; note leurs titres et les mots qu'on peut partager dans le nôtre, sans copier leur angle ni leur miniature ;
+   - **la planche** : leurs miniatures dans `projets/<nom>/miniature/hotes/` (`curl -o <id>.jpg https://i.ytimg.com/vi/<id>/maxresdefault.jpg`), puis `python3 -I ressources/miniatures/planches.py --suggestions <notre miniature> projets/<nom>/miniature/hotes` ;
+   - **la comparaison** : à 168 px, la nôtre se repère-t-elle, et promet-elle autre chose que les leurs ? Sinon, retouche avant de publier ;
+   - **l'enchaînement** : l'écran de fin pointe la vidéo suivante de la playlist du pilier, et une fiche tombe pendant le plateau de rétention.
 9. `miniature/` : `propositions.md`, maquettes HTML (`propositions/miniature.html?v=a|b|c`), PSD dans `photocraft/`.
 
 Le montage se fait hors de ce dépôt (projets HyperFrames ou Remotion). `.gitignore` exclut les vidéos et les `.wav` : les fichiers audio versionnés sont les `.m4a`.
@@ -72,6 +78,7 @@ Les faits comptent : chaque affirmation d'une miniature ou d'un script doit êtr
 
 Miniatures (`ressources/miniatures/`, détails dans la section 6 de `propositions.md`) :
 
+- Miniatures en 4K (3840×2160) : on dessine en 1280×720 et `rendre.sh` et `psd.py` rendent à ×3 (`--force-device-scale-factor=3`). Import depuis l'ordinateur (50 Mo max ; l'appli mobile plafonne à 2 Mo).
 - Deux chartes HTML de 1280×720 : `noir.html` pour « génie derrière l'app » et grandes histoires (`?n=1`, `1b`, `3`, `4`, `6`, `7`, `8`), et `vert.html` pour « IA chez moi » (`?n=2`, `5`, `9`, `10`). Les règles figées des chartes sont dans la section 2 de `propositions.md`, à respecter pendant au moins 5 vidéos.
 - Rendu PNG avec Chrome headless : `./ressources/miniatures/rendre.sh noir 3` (sans argument : toutes) → `rendus/`.
 - PSD à calques pour PhotoCraft : `python3 -I ressources/miniatures/psd.py noir 3` → `photocraft/`.
