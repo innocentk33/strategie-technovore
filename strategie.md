@@ -256,7 +256,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 - **Exigence minimale** :
   - plus de 8 minutes (pubs en milieu de vidéo possibles) ;
   - des chapitres ;
-  - les 15 premières secondes les plus fortes de la vidéo (règle ci-dessous) ;
+  - les 15 premières secondes les plus fortes de la vidéo, et aucune phrase de remplissage jusqu'à 30 s (règles ci-dessous) ;
   - une réponse à tous les commentaires des 2 premières heures : le guide de l'algorithme les compte comme décisives.
 
 ### La règle des 15 premières secondes (22/10)
@@ -277,6 +277,20 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
   - à chaque grill et à chaque storyboard, relis les 15 premières secondes seules : doivent-elles donner envie de rester ?
   - à chaque radar, relève le % de spectateurs à 0:15 (cible 75 %) et à 1:00 (cible 50 %). Ces cibles sont des estimations, à recaler au bilan du 23/11.
 - **Attention** : la promesse doit être tenue plus loin dans la vidéo. Le guide de référencement rappelle que YouTube compare le contenu à la miniature et au titre.
+
+### Les 30 premières secondes et le ton (23/10)
+
+Cette règle prolonge celle des 15 s. Elle vient de l'étude de 9 vidéos de Cam, V2F et Dis Cyril (`etudes/storytelling-2026-10-23.md`).
+
+- **0-15 s** : le meilleur moment (règle ci-dessus).
+- **15-30 s** : la question centrale, une seule, puis le pont : le récit repart d'un endroit inattendu, ou le défi pose sa contrainte. Ça ouvre une deuxième question avant que la première soit résolue.
+- **Chaque phrase des 30 s** confirme le clic, ouvre une question ou fait monter l'enjeu. Sinon, elle saute.
+- **Le budget** : à ton débit (145 à 180 mots/min), 30 s font 75 à 90 mots.
+- **Le ton** : tu parles à un ami. Chaque fait arrive avec une liaison orale (« donc », « du coup », « en fait », « sauf que », « en effet », « voilà comment… »), puis une réaction ou une traduction pour le spectateur.
+  - Cam et V2F mettent 1,5 à 2,7 liaisons pour 100 mots.
+  - Nos téléprompteurs ArtCraft, OpenCode et Uber en mettent 0,7 à 0,9.
+  - Vise 1,5 ou plus.
+- **Contrôle** : la variante storytelling du skill `youtube-script-grill`. Elle fait passer le test des 30 secondes et compte les liaisons (axe 10) à chaque grill.
 
 ### La semaine type
 

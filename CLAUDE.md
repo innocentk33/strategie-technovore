@@ -15,7 +15,7 @@ Une décision touche souvent plusieurs fichiers à la fois. Quand une date, un t
 - `strategie.md` (v4) : positionnement, les 3 piliers (« Le génie derrière l'app », « IA chez moi », « Les grandes histoires de la tech »), objectifs à 1, 3 et 6 mois, les idées classées. Les fiches renvoient à ses numéros d'idée.
 - `calendrier.md` : grille de publication jusqu'au 26/04/2027. **Une vidéo longue chaque lundi à 18 h, aucun Short** (décidé le 21/10). Ses changements sont notés en tête (« Mis à jour le … »).
 - `README.md` : tableau de suivi des projets. Statuts : Fiche → Brouillon → Recherche → Script → Voix → Montage → Programmé → Publié (avec le lien YouTube).
-- `idees.md` (réserve), `archive/README.md` (abandons, avec date et raison), `etudes/` (chaînes concurrentes, données vidIQ datées, audits de la chaîne `audit-AAAA-MM-JJ.md`, `suggestions-2026-10-23.md` (où YouTube suggère nos vidéos et pourquoi), et `radar.md`, le journal du radar).
+- `idees.md` (réserve), `archive/README.md` (abandons, avec date et raison), `etudes/` (chaînes concurrentes, données vidIQ datées, audits de la chaîne `audit-AAAA-MM-JJ.md`, `suggestions-2026-10-23.md` (où YouTube suggère nos vidéos et pourquoi), `storytelling-2026-10-23.md` (les 30 premières secondes et les liaisons de Cam, V2F et Dis Cyril, transcriptions dans `transcriptions/`), et `radar.md`, le journal du radar).
 
 Cycle de vie : idée dans `idees.md` → dossier `projets/<nom>/` (copier une fiche existante) + ligne dans le README et le calendrier → à l'abandon, `git mv` vers `archive/` et une ligne dans `archive/README.md`.
 
@@ -71,6 +71,12 @@ Le montage se fait hors de ce dépôt (projets HyperFrames ou Remotion). `.gitig
 - on n'y met ni contexte, ni présentation, ni « dans cette vidéo » ;
 - à vérifier à chaque brouillon, script, grill et storyboard ;
 - origine : ArtCraft perdait 34 % de ses spectateurs en 15 s (`etudes/audit-2026-10-22.md`).
+
+**Les 30 premières secondes n'ont aucune phrase de remplissage, et le script se dit comme à un ami** (23/10, section 5 de `strategie.md`) :
+- chaque phrase des 30 s confirme le clic, ouvre une question ou fait monter l'enjeu ; la question centrale est posée avant 30 s, puis un pont ouvre la boucle suivante ;
+- les faits arrivent avec des liaisons orales (« donc », « du coup », « en fait », « sauf que », « en effet », « voilà comment… ») et une réaction ; on ne les empile pas comme une fiche. Repère : 1,5 liaison ou plus pour 100 mots (nos téléprompteurs : 0,7 à 0,9) ;
+- le contrôle est la variante storytelling du skill `youtube-script-grill` (test des 30 secondes et axe 10) ;
+- origine : `etudes/storytelling-2026-10-23.md`.
 
 Les faits comptent : chaque affirmation d'une miniature ou d'un script doit être tenue par la vidéo et sourcée (voir `ressources/miniatures/propositions.md`, section 5, pour les pièges déjà repérés).
 
