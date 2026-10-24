@@ -1,4 +1,4 @@
-Brouillon : histoire du pixel (devient le 2e acte de la vidéo, voir fiche.md)
+Brouillon : ton hommage au jeu vidéo, d'un pixel à des milliards de joueurs (voir fiche.md)
 
 C'est l'histoire d'un pixel.
 Cette vidéo

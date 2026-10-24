@@ -19,6 +19,7 @@ Les projets et les idées abandonnés. On note pourquoi, pour ne pas rouvrir le 
 
 | Idée | Inspiration | Raison |
 |---|---|---|
+| Mobile Money : comment ton argent passe sans internet (idée 17, provisoire au 8 févr.) | ByteMonk, [How UPI Works](https://www.youtube.com/watch?v=iI2NaN_QVTI) (773 K, ×44) | Ne te plaît pas (23/10/2026). Son créneau du 8 févr. passe à llama.cpp, et le 8 mars au [lag des jeux en ligne](../projets/lag/fiche.md), choisi au radar du 23/10 |
 | Créer un serveur NAS à partir de rien | — | Pas ta passion (v3) |
 | Une console avec un vieux PC (Dell OptiPlex + Batocera) | [Ce PC à 0 € fait-il tourner des jeux Switch ?](https://www.youtube.com/watch?v=Zyke7HIXjg4) | Pas ta passion (v3) |
 | Un Galaxy Note 10 transformé en console rétro premium, façon PS Vita | — | Même raison que la console |

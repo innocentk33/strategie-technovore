@@ -24,6 +24,43 @@
 
 ---
 
+## 23/10/2026 : radar des idées (le 8 mars, à la place de Mobile Money)
+
+Pas une sortie de vidéo : l'auteur a abandonné Mobile Money (« je n'aime pas l'idée ») et llama.cpp a pris son créneau du 8 févr. Il fallait une vidéo pour le 8 mars, entre deux créneaux IA, donc **génie ou histoire**. Environ 15 appels vidIQ.
+
+### Signaux
+- **Génie, en anglais** (chaînes de la liste et voisines, 6 mois) :
+  - Enrico Tartarotti : *The Insane Design Of Messaging* (1,7 M, ×17), *The LIES That Make Hardware ACTUALLY Work* (793 K, ×7,1), *The Ridiculous Engineering Of Animations* (288 K en 5 jours, pour l'iPhone du 7 déc.) et *…Of Text* (302 K) ;
+  - ByteMonk : SQLite (221 K, ×12) ;
+  - Hussein Nasser : Postgres (235 K, ×14) ;
+  - Low Level : *I Tested The Viral Reverse Engineering Repo* (3,1 M, ×9,1).
+- **Objets du quotidien** :
+  - PawelCodeStuff, *The Most Overengineered Part of Your iPhone* (Face ID, 713 K, ×32, 15/10) ;
+  - History of Simple Things, *How Do QR Codes Work?* (1,35 M, ×113) ;
+  - Factron Process, câbles sous-marins (509 K, ×162).
+- **Jeux en ligne** :
+  - DeadInSperanza, *Hidden Players: Why Don't Servers Just Hide Enemies?* (52 K, ×108, 13/10) ;
+  - Outscal, lag (38 K, ×35) ;
+  - Tariq10x (297 K) ;
+  - Surnex, *Once you see this, You'll see Competitive Games Differently* (2,5 M, ×356).
+  - **Aucune vidéo française** sur le netcode.
+- **En français** :
+  - V2F (overfl0w), *Ce que tes yeux ne voient pas dans un QR Code* (214 K, sept. 2026) : l'angle du QR code est pris ;
+  - Face ID : seulement Micode (2017, 428 K) et des tutos de dépannage.
+- **Mots-clés** :
+  - « how qr codes work » : 19,6 K par mois, +129 % ;
+  - « lag jeux en ligne » et « câble sous-marin internet » : moins de 750 par mois en France ;
+  - « shazam » est pollué par le film.
+
+### Décision
+- **Lun. 8/03 : *Pourquoi tu meurs derrière un mur : le génie caché des jeux en ligne*** ([fiche](../projets/lag/fiche.md)), choisie par l'auteur. 32/40 (demande 7 · clic 9 · production 7 · niche 9). C'est un sujet d'accueil, pour un public de 18-24 ans joueurs, et il n'existe pas en français.
+- **En réserve** (`idees.md`) :
+  - Face ID (32/40), à garder loin de l'iPhone du 7 déc. ;
+  - le QR code (30/40), seulement quand la vidéo de V2F ne circulera plus ;
+  - le jour où l'Afrique de l'Ouest a perdu internet (29/40), à envisager pour le 14 mars 2027 (3 ans).
+
+---
+
 ## 21/10/2026 : sortie d'OpenCode (radar n° 1)
 
 ### Notre chaîne

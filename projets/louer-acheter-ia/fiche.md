@@ -18,11 +18,16 @@
 
 **Miniature** : à concevoir dans la charte verte (`vert.html`).
 **Contenu** :
-1. L'abonnement (Claude, en euros), la location d'un GPU à l'heure, et l'achat d'une carte avec l'électricité au tarif français.
-2. Le seuil de rentabilité, en mois, selon ton usage.
-3. La partie testée : ce que consomme vraiment ta 5080, déjà mesuré pour [Claude #1](../claude-ou-mon-pc-1/fiche.md).
-4. Le verdict selon ton profil.
+1. L'abonnement (Claude, en euros), la location d'un GPU à l'heure, et l'achat d'une carte (le prix d'achat seulement : pas d'électricité, décidé le 23/10).
+2. Le seuil de rentabilité, en mois : prix de la carte ÷ abonnement (ou ÷ location).
+3. Le verdict selon ton profil.
 
 Les règles du format calculé sont dans `strategie.md`, pilier 2.
 
-**À vérifier** : tous les prix au moment du script (abonnements, location de GPU, cartes), et le tarif réglementé de l'électricité en vigueur au 1er janvier 2027.
+**À vérifier** : tous les prix au moment du script (abonnements, location de GPU, cartes).
+
+## Corrections de la 2e vérification (23/10)
+
+Les titres tiennent. Deux points à changer (détail dans [`sources.md`](sources.md)) :
+- **Contenu, point 3** : « ce que consomme vraiment ta 5080, déjà mesuré pour Claude #1 » : il n'y aura pas de mesure, et l'électricité sort de la vidéo (décidé le 23/10).
+- **Le hook et le titre de curiosité** (« au bout de combien de mois… ») : la réponse doit tomber dans les 30 s et dire les deux cas : jamais contre un abonnement à 20 €, environ 19 mois contre un Max à 100 $, et seulement pour ce qu'un modèle de 16 Go sait faire (faits 20, 23).

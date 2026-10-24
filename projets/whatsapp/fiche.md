@@ -19,3 +19,8 @@
 
 **Miniature** (21/10, charte noire) : [`noir-06.png`](../../ressources/miniatures/rendus/noir-06.png). Icône WhatsApp, « 900 millions, 50 ingénieurs. ». Elle porte déjà les deux chiffres : le titre n'a plus besoin de les répéter (titre 4 ci-dessus).
 **Contenu** : Erlang, des serveurs très optimisés, la règle « faire peu, mais très bien ». L'angle reste distinct de la vidéo business de Thibaut Dcode (4 octobre).
+
+## Corrections de la 2e vérification (23/10)
+
+- **Titres et miniature** : justes, mais ce sont des chiffres de **2015**. Le titre 2 et le hook ne le disent pas : la vidéo doit dater dès la première phrase (« en 2015 ») et dire « environ 50 ». Au rachat (2014), dis « une trentaine d'ingénieurs » (32 selon Sequoia, 35 selon Wired).
+- **« Faire peu, mais très bien »** n'est pas une citation. Mahdavi parle d'une approche minimaliste : « résoudre seulement les problèmes qu'il fallait résoudre » (Wired). Voir `sources.md`, faits 1, 3 et lignes 24 à 26.
