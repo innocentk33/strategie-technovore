@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-10-24T15:29:47.347Z",
+        "reason": "charte Technovore : Inter est la police locale des miniatures (ressources/miniatures/fonts, CLAUDE.md, section Outils)"
+      }
+    ]
+  }
+}
