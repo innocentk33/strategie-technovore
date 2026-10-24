@@ -63,14 +63,14 @@
   const card = (x, y, w, h, inner) => `<rect x="${x + 8}" y="${y + 10}" width="${w}" height="${h}" rx="18" fill="#1d2a37"/>
       <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="18" fill="${P}" stroke="${L}" stroke-width="5"/>${inner}`;
 
-  // Gabarit de la série « Claude ou mon PC ? » : bandeau fixe, Claude à gauche, ton PC à droite,
+  // Gabarit de la série « Abonnement ou IA locale ? » (la playlist, 24/10) : bandeau fixe, l'abonnement (Claude) à gauche, ton PC à droite,
   // l'élément propre à l'épisode toujours dans la baie du haut du PC (bay = HTML placé dans la baie 804..1076 × 214..354)
   const serie = (bay, baySvg = '') => {
     let s = card(70, 230, 400, 300, `<rect x="94" y="254" width="352" height="252" rx="8" fill="${SC}"/>` + logo('claude', 195, 305, 150, '#d97757'));
     s += `<rect x="788" y="198" width="320" height="440" rx="18" fill="#1d2a37"/><rect x="780" y="190" width="320" height="440" rx="18" fill="${P}" stroke="${L}" stroke-width="6"/>
       <rect x="804" y="214" width="272" height="140" rx="10" fill="${R}" stroke="${L}" stroke-width="4"/>` + baySvg + fan(940, 495, 100);
     art.innerHTML = s;
-    txt.innerHTML = `<div class="t hero" data-w="1150" style="left:66px;top:56px;font-size:130px">CLAUDE <span style="color:var(--muted)">OU</span> MON PC</div>
+    txt.innerHTML = `<div class="t hero" data-w="1150" style="left:66px;top:56px;font-size:130px">ABONNEMENT <span style="color:var(--muted)">OU</span> IA LOCALE</div>
       <div class="badge" style="left:540px;top:300px;font-size:200px;padding:.02em .24em .06em">?</div>` + bay;
   };
 
@@ -87,21 +87,21 @@
       }
       s += `<line x1="60" y1="642" x2="690" y2="642" stroke="${L}" stroke-width="5" stroke-linecap="round"/>` + gpu(452, 572, 200);
       // étiquette de prix, droite
-      s += `<path d="M700 410 l40 -80 h500 v160 h-500Z" fill="${M}" stroke="${L}" stroke-width="5" stroke-linejoin="round"/><circle cx="738" cy="410" r="11" fill="#34495e" stroke="${L}" stroke-width="4"/>`;
+      s += `<path d="M700 240 l40 -80 h500 v160 h-500Z" fill="${M}" stroke="${L}" stroke-width="5" stroke-linejoin="round"/><circle cx="738" cy="240" r="11" fill="#34495e" stroke="${L}" stroke-width="4"/>`;
       art.innerHTML = s;
       txt.innerHTML = `<div class="t lab mint" style="left:452px;top:510px;font-size:44px">ma 5080</div>
-        <div class="t lab" style="left:704px;top:254px;font-size:56px;color:var(--muted)">Claude chez moi,</div>
-        <div class="t hero" data-w="440" style="left:772px;top:358px;font-size:110px;color:var(--ink)">?? ??? €</div>`;
+        <div class="t lab" style="left:704px;top:84px;font-size:56px;color:var(--muted)">Claude chez moi,</div>
+        <div class="t hero" data-w="440" style="left:772px;top:188px;font-size:110px;color:var(--ink)">?? ??? €</div>`;
     },
     '9': () => { // llama.cpp : codé en 1 soirée
-      art.innerHTML = `<rect x="58" y="60" width="720" height="400" rx="22" fill="#1d2a37"/><rect x="50" y="50" width="720" height="400" rx="22" fill="${P}" stroke="${L}" stroke-width="7"/>
+      art.innerHTML = `<g transform="translate(0 160)"><rect x="58" y="60" width="720" height="400" rx="22" fill="#1d2a37"/><rect x="50" y="50" width="720" height="400" rx="22" fill="${P}" stroke="${L}" stroke-width="7"/>
         <rect x="76" y="76" width="668" height="348" rx="8" fill="${SC}"/>
         <path d="M0 450 h820 l-46 54 h-728Z" fill="${R}" stroke="${L}" stroke-width="7" stroke-linejoin="round"/>
-        <rect x="350" y="450" width="120" height="14" rx="4" fill="${L}"/>`;
-      txt.innerHTML = `<div class="t" style="left:110px;top:130px;font:700 32px 'JetBrains Mono';color:var(--ink)">$ ./main -m ./models/7B/…</div>
-        <div class="t" style="left:106px;top:220px;font:800 90px Inter;letter-spacing:-.02em;color:var(--mint-dark)">llama.cpp</div>
-        <div class="t lab" style="left:66px;top:588px;font-size:52px;color:var(--muted)">codé en</div>
-        <div class="t hero" data-w="900" style="left:290px;top:540px;font-size:140px"><span class="mint">1</span> SOIRÉE.</div>`;
+        <rect x="350" y="450" width="120" height="14" rx="4" fill="${L}"/></g>`;
+      txt.innerHTML = `<div class="t" style="left:110px;top:290px;font:700 32px 'JetBrains Mono';color:var(--ink)">$ ./main -m ./models/7B/…</div>
+        <div class="t" style="left:106px;top:380px;font:800 90px Inter;letter-spacing:-.02em;color:var(--mint-dark)">llama.cpp</div>
+        <div class="t lab" style="left:66px;top:92px;font-size:52px;color:var(--muted)">codé en</div>
+        <div class="t hero" data-w="900" style="left:290px;top:44px;font-size:140px"><span class="mint">1</span> SOIRÉE.</div>`;
     },
     '10': () => serie( // #2 : le logo du modèle de l'épisode, à placer dans la baie
       `<div class="t" style="left:862px;top:268px;font:500 22px 'JetBrains Mono';color:var(--muted)">logo du modèle</div>`,

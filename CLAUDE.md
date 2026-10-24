@@ -64,6 +64,27 @@ Fichiers par ordre de production :
    - **l'enchaînement** : l'écran de fin pointe la vidéo suivante de la playlist du pilier, et une fiche tombe pendant le plateau de rétention.
 9. `miniature/` : `propositions.md`, maquettes HTML (`propositions/miniature.html?v=a|b|c`), PSD dans `photocraft/`.
 
+**Trois miniatures par vidéo, pour « Tester et comparer »** (décidé le 24/10) :
+- **a, noir premium** : la charte `noir.html`, avec le sujet en gros au premier plan, en couleur, sur un décor désaturé ;
+- **b, couleurs de Technovore** : ardoise `#34495e` et menthe `#07c095`, la charte `vert.html` ;
+- **c, hors niche** : une miniature qui s'inspire d'une autre niche, là où les miniatures ressortent le plus (gaming, vlog, finance, true crime…). Note la chaîne et la vidéo d'origine dans `propositions.md`, et n'en copie pas la miniature.
+
+Pour chacune, dans cet ordre :
+0. 10 à 15 références dans `miniature/refs/` : nos vidéos qui ont marché, les concurrents, d'autres niches, des affiches de films, des pochettes d'albums, des publicités ; on ne part jamais d'une page blanche ;
+1. le concept et le brief avec `/youtube thumbnail` : la miniature pose une question et fait ressentir une émotion, même sans le titre ;
+2. la maquette HTML (`?v=a|b|c`), rendue en PNG ;
+3. la critique avec `/coach-miniature-youtube`, puis les corrections, et le test des 50 % (moitié basse cachée, section 5 de `propositions.md`) ;
+4. le rendu final et le PSD.
+
+Les trois gardent les règles communes de la section 2 de `ressources/miniatures/propositions.md` (texte, logos, zones interdites, 4K) et la même promesse que le titre, sans répéter son texte.
+
+Règles du test (24/10) :
+- **Chaque série garde sa charte** : noir pour « Le génie derrière l'app » et les grandes histoires, vert pour « IA chez moi ». C'est elle qui sert de miniature par défaut, et la vidéo commence sur sa scène.
+- **a et b ont exactement la même scène** (objet, texte, cadrage) : seules les couleurs changent. Ainsi, a contre b dit quelle charte gagne.
+- **c est le joker** : une autre idée. Si c gagne souvent, on reprend son idée dans la charte de la série.
+- **On compte les victoires par série** dans `propositions.md`. Un test « non concluant » ne compte pas, et la charte de la série reste.
+- **Après 4 à 6 vidéos par série, on fige** : on arrête les trois miniatures systématiques et on ne teste plus qu'une chose à la fois, avec 2 variantes.
+
 Le montage se fait hors de ce dépôt (projets HyperFrames ou Remotion). `.gitignore` exclut les vidéos et les `.wav` : les fichiers audio versionnés sont les `.m4a`.
 
 **Les 15 premières secondes sont les plus fortes de la vidéo** (règle du 22/10, section 5 de `strategie.md`) :

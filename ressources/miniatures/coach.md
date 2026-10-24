@@ -29,7 +29,7 @@ Chaque paire vert/noir est passée dans le script d'aperçu du skill : tiers, re
   Vert redessine tout au trait et recolore les logos en menthe : Uber, Waze, Google et WhatsApp y perdent leur reconnaissance immédiate.
 - **Le partage par pilier est l'inverse de l'intuition :**
   - **noir pour « Le génie derrière l'app »**, et pour les histoires grand public (pixel, Sony) ;
-  - **vert pour « IA chez moi »** : 16 Go, coût de Claude, Claude ou mon PC, llama.cpp.
+  - **vert pour « IA chez moi »** : 16 Go, coût de Claude, Abonnement ou IA locale, llama.cpp.
 
   Chaque charte devient ainsi le contre-pied de sa niche :
   - la niche IA locale est entièrement sombre (Kai, The Stack et RepoChad en noir, Codacus en marine foncé) ;
@@ -71,7 +71,7 @@ Notes sur 10. « Duo » : est-ce que la miniature ajoute quelque chose au titre 
 
 **À garder : noir**, sous la forme `uber-b`. La vidéo sort le 9/11 : c'est la priorité.
 
-### 02 · 16 Go de VRAM suffisent-ils pour remplacer Claude ? (Claude ou mon PC ? #1)
+### 02 · 16 Go de VRAM suffisent-ils pour remplacer Claude ? (Abonnement ou IA locale ? #1)
 
 | | Note | À 168 px | Duo |
 |---|---|---|---|
@@ -85,7 +85,7 @@ Notes sur 10. « Duo » : est-ce que la miniature ajoute quelque chose au titre 
   - le pied de l'établi coupe la marque « techn|ovore » ;
   - la composition (logo Claude dans un cadre, pointillé vers la carte, étiquette inclinée) est celle de Kai (« HERE WE GO. LOL »), sur le même sujet.
 - **Correction :** passe au gabarit de la série, celui de vert-10 (voir le sujet 10) :
-  - « CLAUDE OU MON PC ? » en bandeau ;
+  - « ABONNEMENT OU IA LOCALE ? » en bandeau ;
   - Claude à gauche, ta 5080 à droite ;
   - « 16 Go » en annotation droite (non inclinée) de 90 px sur la carte ;
   - plus d'établi.
@@ -286,7 +286,7 @@ Anthropic ne publie pas les poids de Claude. La miniature « Claude chez moi » 
 
 Le titre contient une erreur factuelle : llama.cpp faisait tourner LLaMA, le modèle de Meta, pas ChatGPT. « Le dev qui a mis un ChatGPT dans ton PC » garde l'idée sans l'erreur.
 
-### 10 · Claude ou mon PC ? #2
+### 10 · Abonnement ou IA locale ? #2
 
 | | Note | À 168 px | Duo |
 |---|---|---|---|
@@ -299,7 +299,7 @@ Le titre contient une erreur factuelle : llama.cpp faisait tourner LLaMA, le mod
 - **Correction :** place le logo du modèle local choisi (vraies couleurs, environ 170 px) dans la baie supérieure du PC, à la place de la barre vide, et supprime les deux libellés mono. Vérifie aussi que « Claude Opus 5.5 » sera encore le dernier modèle fin janvier.
 
 **noir-10**
-- **Point fort :** « Claude ou mon PC ? » en grand et l'icône orange sont lisibles à toutes les tailles.
+- **Point fort :** « Abonnement ou IA locale ? » en grand et l'icône orange sont lisibles à toutes les tailles.
 - **Défauts :**
   - le libellé « RTX 5080 · 16 GO » sort en police à empattements, alors que noir-02 l'affiche en mono avec le même code : c'est un repli de police ;
   - la carte graphique est trop sombre.
@@ -375,7 +375,7 @@ Juste derrière : noir-03. Les plus faibles : vert-08 (3), puis noir-02, noir-05
 | 07 | Google | Noir | Supprimer la ligne grise et le texte de la carte, ajouter le G de Google |
 | 08 | Sony | Noir | Supprimer les trois cartes |
 | 09 | llama.cpp | Vert | Supprimer le calendrier ; « un ChatGPT » dans le titre |
-| 10 | Claude ou mon PC ? #2 | Vert | Le logo du modèle de l'épisode sur le PC |
+| 10 | Abonnement ou IA locale ? #2 | Vert | Le logo du modèle de l'épisode sur le PC |
 
 ---
 
@@ -386,7 +386,7 @@ Juste derrière : noir-03. Les plus faibles : vert-08 (3), puis noir-02, noir-05
 1. **Mise en page :**
    - un seul objet héros dans la moitié gauche, sur au moins 40 % de la largeur ;
    - le texte aligné à gauche à partir de x ≈ 700, centré en hauteur ;
-   - seule exception, la série « Claude ou mon PC ? » : bandeau en haut et duel gauche/droite.
+   - seule exception, la série « Abonnement ou IA locale ? » : bandeau en haut et duel gauche/droite.
 2. **Texte, deux lignes au maximum :**
    - une ligne de contexte de 4 mots au plus, en gris, à environ 45 % de la taille ;
    - une ligne principale de 3 mots au plus, de 110 px de haut minimum, terminée par « . » ou « ? » ;
@@ -411,8 +411,8 @@ Juste derrière : noir-03. Les plus faibles : vert-08 (3), puis noir-02, noir-05
 - **Couleur :** la menthe est le seul accent, hors logos.
 - **Badges :** droits, jamais inclinés.
 - **À proscrire :** la composition « logo dans un cadre, flèche, machine ».
-- **Série « Claude ou mon PC ? » :**
-  - « CLAUDE OU MON PC ? » en bandeau, à hauteur fixe ;
+- **Série « Abonnement ou IA locale ? » :**
+  - « ABONNEMENT OU IA LOCALE ? » en bandeau, à hauteur fixe ;
   - Claude à gauche, la machine à droite ;
   - l'élément propre à l'épisode (« 16 Go », logo du modèle) toujours au même endroit sur la machine.
 

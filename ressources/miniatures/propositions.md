@@ -1,6 +1,7 @@
 # Miniatures Technovore : une charte par pilier
 
 > **v2 du 21/10/2026**, après la critique du coach ([`coach.md`](coach.md)) : **noir** pour « Le génie derrière l'app » et les grandes histoires de la tech, **vert** pour « IA chez moi ».
+> - **24/10** : texte remonté dans la moitié haute sur les 11 miniatures (test des 50 %, § 5), rendus et PSD refaits.
 > - **Images** : [`rendus/`](rendus/), 11 miniatures en 4K (3840×2160, depuis le 23/10). La v1 (20 propositions, deux chartes par sujet) est dans [`rendus/v1/`](rendus/v1/).
 > - **PhotoCraft** : [`photocraft/`](photocraft/), un PSD par miniature : le décor en calque d'image, chaque texte droit en calque de texte modifiable.
 > - **Tests de lisibilité** : [`planches/`](planches/). `flux-vert.png` et `flux-noir.png` placent 4 des nôtres parmi 8 miniatures concurrentes, sur le fond sombre de YouTube ; `168.png` les montre à la taille des suggestions.
@@ -29,7 +30,7 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 
 ### Communes aux deux chartes
 
-- **Mise en page** : un objet héros à gauche (au moins 40 % de la largeur), le texte aligné à gauche vers x = 640-700, centré en hauteur. Exception : la série « Claude ou mon PC ? ».
+- **Mise en page** : un objet héros à gauche (au moins 40 % de la largeur), le texte aligné à gauche vers x = 640-700, **dans la moitié haute** : la ligne principale finit au-dessus de y = 360 (règle du 24/10, voir le test des 50 % au § 5). Exception : la série « Abonnement ou IA locale ? ».
 - **Texte, 2 lignes au plus** :
   - une ligne de contexte grise de 4 mots au plus, seulement si elle dit ce que le titre ne dit pas ;
   - une ligne principale de 3 mots au plus, d'au moins 110 px, terminée par « . » ou « ? ».
@@ -54,7 +55,7 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 - Dessin au trait de la vidéo, **un grand objet plutôt que trois petits**, pas d'établi décoratif.
 - Archivo Black en capitales pour la ligne principale, Inter 800 gris pour le contexte. La menthe est le seul accent, hors logos.
 - **Badges droits** (inclinés, c'est le tic de Kai et Codacus). **Jamais la composition « logo dans un cadre → flèche → machine »** (celle de Kai).
-- **Série « Claude ou mon PC ? »** : bandeau « CLAUDE OU MON PC » à hauteur fixe, Claude à gauche, ton PC à droite, « ? » au centre. Ce qui change à chaque épisode est toujours **dans la baie du haut du PC** (« 16 Go », puis le logo du modèle).
+- **Série « Abonnement ou IA locale ? »** (« Claude ou mon PC ? » jusqu'au 24/10 ; c'est aussi la playlist) : bandeau « ABONNEMENT OU IA LOCALE » à hauteur fixe, l'abonnement à gauche (Claude dans l'épisode 1), ton PC à droite, « ? » au centre. Ce qui change à chaque épisode est toujours **dans la baie du haut du PC** (« 16 Go », puis le logo du modèle).
 
 ## 3. Les 11 miniatures retenues
 
@@ -62,15 +63,15 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 |---|---|---|---|
 | [`noir-01`](rendus/noir-01.png) | Uber, 26 oct. | `uber-b` : téléphone, voiture fantôme désignée par une flèche, « **elle existe ?** » | Reprise en Inter, puis corrigée le 21/10 : voiture fantôme agrandie et teintée de rouge, vrai logo Uber, halo élargi jusqu'aux bords (pourtour quasi noir : 97 % → 66 %) |
 | [`noir-01b`](rendus/noir-01b.png) | Uber, variante A/B | Même décor, « sa position est / **devinée.** » | Variante de texte pour le test |
-| [`vert-02`](rendus/vert-02.png) | Claude ou mon PC ? #1, 2 nov. | Gabarit de série, « 16 Go » dans la baie du PC | Plus de composition Kai, ni de cédille flottante, ni d'établi |
+| [`vert-02`](rendus/vert-02.png) | Abonnement ou IA locale ? #1, 16 nov. | Gabarit de série, « 16 Go » dans la baie du PC | Plus de composition Kai, ni de cédille flottante, ni d'établi |
 | [`noir-03`](rendus/noir-03.png) | Waze, 9 nov. | Bouchon rouge, détour bleu, icône Waze, « personne ne l'a signalé, / **il savait.** » | « avant toi » répétait le titre ; rivière retirée |
-| [`noir-04`](rendus/noir-04.png) | Pixel, 14 déc. | Un écran blanc, une loupe sur ses sous-pixels, « il n'y a pas / **de blanc.** » | L'écran blanc montre la contradiction sans lire |
-| [`vert-05`](rendus/vert-05.png) | Coût de Claude en local, 16 nov. | Ta 5080 minuscule au pied d'une baie géante, « Claude chez moi, » + étiquette de prix | Nouveau concept (l'ancien copiait la série de Kai) |
+| [`noir-04`](rendus/noir-04.png) | Écran sans blanc, 19 avr. (provisoire) | Un écran blanc, une loupe sur ses sous-pixels, « il n'y a pas / **de blanc.** » | L'écran blanc montre la contradiction sans lire |
+| [`vert-05`](rendus/vert-05.png) | Coût de Claude en local, 23 nov. | Ta 5080 minuscule au pied d'une baie géante, « Claude chez moi, » + étiquette de prix | Nouveau concept (l'ancien copiait la série de Kai) |
 | [`noir-06`](rendus/noir-06.png) | WhatsApp, 11 janv. | Icône WhatsApp, « 900 millions, / **50** / ingénieurs. » | Pas de reflet ; **c'est le titre qui change** (fiche WhatsApp, titre 4) |
-| [`noir-07`](rendus/noir-07.png) | Pseudo pris, 23 nov. | Formulaire, « technovore » en erreur, « Ce nom est déjà pris. », « **il triche.** » | Ligne grise et petits textes retirés ; « G » de Google ajouté (voir § 5) |
+| [`noir-07`](rendus/noir-07.png) | Pseudo pris, 30 nov. | Formulaire, « technovore » en erreur, « Ce nom est déjà pris. », « **il triche.** » | Ligne grise et petits textes retirés ; « G » de Google ajouté (voir § 5) |
 | [`noir-08`](rendus/noir-08.png) | Jeux, 22 févr. (provisoire) | PS5 éteinte en gris, « acheté. / **pas à toi.** » | Les trois cartes illisibles retirées |
 | [`vert-09`](rendus/vert-09.png) | llama.cpp, 8 mars (provisoire) | Grand portable, une ligne de commande, « llama.cpp », « codé en **1 SOIRÉE.** » | Calendrier retiré, ordinateur agrandi |
-| [`vert-10`](rendus/vert-10.png) | Claude ou mon PC ? #2, 18 janv. | Gabarit de série, emplacement du logo du modèle dans la baie | Mettre le logo réel (en couleurs) quand le modèle sera choisi |
+| [`vert-10`](rendus/vert-10.png) | Abonnement ou IA locale ? #2, 18 janv. | Gabarit de série, emplacement du logo du modèle dans la baie | Mettre le logo réel (en couleurs) quand le modèle sera choisi |
 
 ## 4. Tester les deux chartes et le lien avec la DA de la vidéo
 
@@ -78,12 +79,14 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 
 « Tester et comparer » (YouTube Studio, sur ordinateur) : jusqu'à 3 miniatures, gagnant choisi sur la **part de durée de visionnage** (pas le taux de clic), test de 2 semaines au plus, résultat « gagnante », « équivalentes » ou « non concluant ».
 
+> **24/10 : remplacé par trois miniatures par vidéo** (noir premium, couleurs de Technovore, hors niche), voir la section « Trois miniatures par vidéo » de `CLAUDE.md`. Les points 1 et 2 ci-dessous ne s'appliquent plus ; les points 3 et 5 restent valables.
+
 1. **Une seule variable par test.** Pour savoir quelle **charte** gagne, les deux miniatures ont le même objet, la même idée et le même texte : seule la charte change. Si l'idée change aussi, tu sauras quelle idée a gagné, pas quelle charte.
 2. **2 variantes, pas 3** : à ta taille, chaque variante supplémentaire divise les impressions et rend le résultat « non concluant » plus probable.
 3. **Un test ne décide pas d'un format.** Compte les victoires sur 4 à 6 vidéos par pilier avant de changer la règle.
 4. **Ordre proposé** :
    - **Uber (26/10)** : test de **texte** (`noir-01` contre `noir-01b`), voir [`projets/uber/upload.md`](../../projets/uber/upload.md).
-   - **À partir de Claude ou mon PC ? #1 (2/11)** : test de **charte** sur chaque vidéo (`vert-02` contre la même scène en noir), puis Waze, pixel, coût de Claude, WhatsApp. La jumelle de chaque miniature, dans l'autre charte, se fait à partir de l'HTML (compter environ 30 à 60 min, estimation).
+   - **À partir d'Abonnement ou IA locale ? #1 (16/11 depuis le 23/10)** : test de **charte** sur chaque vidéo (`vert-02` contre la même scène en noir), puis coût de Claude (23/11), pixel, WhatsApp. *IA en local* (2/11) et Waze (9/11) sortent avant : test possible aussi, si leurs jumelles sont prêtes. La jumelle de chaque miniature, dans l'autre charte, se fait à partir de l'HTML (compter environ 30 à 60 min, estimation).
 5. **Ne touche ni au titre ni à la miniature pendant le test** : ça l'arrête.
 
 ### La DA de la vidéo doit-elle correspondre à la miniature ?
@@ -92,10 +95,12 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 
 **Garder le noir ou passer au vert ? Ni l'un ni l'autre pour toute la chaîne : une DA par pilier, comme les miniatures.**
 - **Génie derrière l'app → noir premium.** Uber est déjà enregistré et découpé en noir, et Waze et WhatsApp réutiliseront ses animations de carte.
-- **IA chez moi → vert explainer.** Le template a été construit pour ça : axe gradué, carte graphique, étiquette de prix, mesure de VRAM. Il entre en service avec Claude ou mon PC ? #1 (2/11).
+- **IA chez moi → vert explainer.** Le template a été construit pour ça : axe gradué, carte graphique, étiquette de prix, mesure de VRAM. Il entre en service avec *IA en local* (2/11, miniature à dessiner), puis Claude ou mon PC ? #1 (16/11).
 - **Pendant les tests de charte**, la miniature perdante n'a pas de premier plan assorti. C'est un handicap réel : si elle gagne malgré tout, le signal est d'autant plus fort.
 
 ## 5. À vérifier avant de publier
+
+- **Test des 50 %** (24/10, d'après une vidéo de Nico P du 12/10, non vérifié) : sur l'interface TV, l'accueil et les suggestions n'afficheraient que la moitié haute de la miniature. Cache la moitié basse : la ligne principale doit rester lisible et donner envie à elle seule. Chez nous, la télé ne fait que 2,2 % des vues engagées (vidIQ, 24/07-23/10 ; l'ordinateur 62 %, le mobile 35 %), mais la correction ne coûte rien ailleurs. Le 24/10, 9 miniatures sur 11 échouaient ; leur texte est remonté (`vert-09` : le portable descend, « codé en 1 SOIRÉE. » passe en haut). Reste en bas : la voiture fantôme de `noir-01` et `noir-01b`, et « ingénieurs » de `noir-06`.
 
 - **Uber** (`noir-01b`) : « devinée » simplifie le script (« en partie devinée »). Vérifié le 21/10 : la vidéo le dit et l'affiche à 9:00.
 - **Coût de Claude** : « ?? ??? € » est un emplacement pour le prix calculé. L'étiquette tient jusqu'à « 999 999 € » (la taille du texte s'ajuste). Anthropic ne publie pas les poids de Claude : dire dans la première minute que le calcul utilise le plus gros modèle ouvert du même niveau.
