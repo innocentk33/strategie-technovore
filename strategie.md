@@ -43,6 +43,7 @@ La synthèse est dans [`etudes/calendrier-vidiq-2026-10-23.md`](etudes/calendrie
 | Le coût, vidéo par vidéo | **Le calcul en quatre cas** : matériel déjà là ou pas, contre un abonnement à 20 $ et à 100 $ ; puis le pour et le contre ; puis ton choix | Ta demande du 24/10. En entier dans Claude #1 (16 nov.) et dans Louer, acheter (4 janv.) ; une phrase et un renvoi dans Coût Claude. Les conseils d'achat parlent aussi de l'occasion |
 | — | **Nouvelle vidéo : deux cartes d'occasion pour le max de VRAM** (idée 23), le 21 déc., **calculée** | Ta demande du 24/10 : pas d'achat de cartes, on en parle en théorie. Recherche et double vérification faites le jour même (`projets/deux-cartes-occasion/`). Les prix d'occasion, tu les relèves toi-même au moment de la vidéo |
 | — | **Nouvelle vidéo : Mac mini ou PC gamer pour l'IA en local ?** (idée 24), provisoire au 1er févr., calculée | Ta demande du 24/10, inspirée de Locally (40 K vues, ×21,9). Notre angle : le duel en euros avec ta machine, puis le calcul en quatre cas de la série |
+| *IA en local : comment lire le nom d'un modèle* le 2 nov., l'iPhone le 7 déc. | **Nouvelle vidéo : *Pourquoi avoir ta propre IA, et comment l'installer*** (idée 25, LM Studio) **le 2 nov. ; *IA en local* le 7 déc. ; l'iPhone le 15 févr.** (créneau radar IA) | Ta décision du 24/10 (nuit) : une progression douce, d'abord la base (pourquoi le local, installer, discuter), ensuite les noms, pour que chaque vidéo renvoie aux anciennes. Le hook : Fable 5 coupé pour tout le monde puis revenu, donc ça peut arriver n'importe quand, chez n'importe quel fournisseur. LM Studio parce que c'est le plus simple, et gratuit au travail. L'équilibre des piliers ne change pas |
 
 ### Le 23/10 : deux sujets mal compris
 
@@ -347,7 +348,7 @@ Les cibles d'abonnés et de vues sont des estimations : les références du skil
 ### À 1 mois (~23 novembre)
 | Objectif | Cible | Action |
 |---|---|---|
-| Vidéos publiées depuis le 19/10 | 7 | ArtCraft, OpenCode, Uber, IA en local, Waze, Claude #1, Coût Claude : pas un lundi raté |
+| Vidéos publiées depuis le 19/10 | 7 | ArtCraft, OpenCode, Uber, la vidéo d'installation, Waze, Claude #1, Coût Claude : pas un lundi raté |
 | Vues moyennes par nouvelle vidéo (à 28 j) | 1 500 | Hook sur un geste banal, miniature avec un chiffre impossible |
 | CTR moyen | 6 % (4-6 % = moyen, 7-10 % = bon) | Sous 3 %, change la miniature dès J+2 (ArtCraft était à 0,9 %) |
 | Vision moyenne | ≥ 40 % | En dessous, YouTube pousse moins la vidéo |
@@ -407,7 +408,7 @@ Les cibles d'abonnés et de vues sont des estimations : les références du skil
 | **Tendance** | **En hausse, +215 %** |
 | **Durée** | 10-12 min |
 | **Niveau de RPM** | Élevé (tech/logiciel) |
-| **Urgence** | Tendance : le modèle doit encore être récent à la sortie. Essais les 23 et 24/10, **publication le 16 novembre** (avancée au 2 nov. le 22/10, revenue au 16 nov. le 23/10 derrière *IA en local*, qui pose les bases ; Coût Claude, le 23 nov., réutilise ses mesures) |
+| **Urgence** | Tendance : le modèle doit encore être récent à la sortie. Essais les 23 et 24/10, **publication le 16 novembre** (avancée au 2 nov. le 22/10, revenue au 16 nov. le 23/10 derrière la vidéo qui pose les bases, aujourd'hui celle de l'installation (24/10) ; Coût Claude, le 23 nov., réutilise ses mesures) |
 | **Score** | **36/40** (demande 9 · clic 9 · production 8 · niche 10) |
 
 **Hook** (ta structure) : « Cette app a été codée en quelques minutes par une IA. Claude Opus 5.5, tu penses ? … Non. Elle a été codée ici. [plan sur la 5080] Sans internet. Sans abonnement. »
@@ -640,7 +641,7 @@ Pour prouver le titre avec un **jeu**, chercher un cas récent. Piste à sourcer
 | **Pilier** | Le génie derrière l'app (Hub) |
 | **Stratégie de trafic** | Accueil + recherche |
 | **Mot-clé** | iphone fluide / android qui rame (volume non mesuré) |
-| **Urgence** | Evergreen. **Le 7 décembre** ([fiche](projets/iphone-fluide/fiche.md)) |
+| **Urgence** | Evergreen. **Le 15 février**, provisoire (reculée du 7 déc. le 24/10, pour laisser la place à *IA en local*) ([fiche](projets/iphone-fluide/fiche.md)) |
 | **Score** | **32/40** (demande 8 · clic 8 · production 7 · niche 9) |
 
 **Hook** : « Pose ton doigt sur l'écran et fais défiler. La page colle à ton doigt. Ça n'a rien d'évident : Android a mis des années à y arriver. » (« des années » est à vérifier)
@@ -778,7 +779,7 @@ Chaque créneau se confirme au radar, deux semaines avant. Les faits (USSD et op
 | **Pilier** | IA chez moi (Help) : la vulgarisation, le guide de lecture de la série |
 | **Stratégie de trafic** | Recherche (« ia en local ») + suggestions à côté des vidéos « IA locale pour débutants » |
 | **Mot-clé** | ia en local (21 403 par mois, +91 % sur 30 jours ; « gguf » et « c'est quoi un llm » moins de 750 par mois en France, vidIQ 23/10) |
-| **Urgence** | Evergreen. **Le 2 nov.**, avant Claude #1, puisqu'elle pose les bases (ta décision du 23/10 ; d'abord placée au 30 nov., à la place du créneau radar IA) ([fiche](projets/bases-ia-locale/fiche.md)) |
+| **Urgence** | Evergreen. **Le 7 déc.**, la deuxième marche après la vidéo d'installation (idée 25) : ta décision du 24/10 (nuit). D'abord placée au 30 nov., puis au 2 nov. le 23/10 ([fiche](projets/bases-ia-locale/fiche.md)) |
 | **Score** | **31/40** (demande 7 · clic 7 · production 8 · niche 9) |
 
 **Hook** : « Qwen trois point six, trente-cinq B, A trois B, UD, IQ quatre XS, point gguf. On dirait un mot de passe Wi-Fi. En fait, c'est une IA, en local. Dix-huit gigas. Sauf que ma carte graphique en a seize. »
@@ -834,6 +835,28 @@ Chaque créneau se confirme au radar, deux semaines avant. Les faits (USSD et op
 
 ---
 
+### Idée 25 : Pourquoi avoir ta propre IA, et comment l'installer (LM Studio)
+
+| Attribut | Valeur |
+|---|---|
+| **Pilier** | IA chez moi (Help), testé : la toute première marche de la série « Abonnement ou IA locale ? » |
+| **Stratégie de trafic** | Recherche (« ia en local », « lm studio », « ollama ») + suggestions à côté des vidéos « IA locale pour débutants » du mois |
+| **Mot-clé** | ia en local (18 376 à 21 403 par mois selon l'appel, vidIQ 24/10) ; installer ia en local (4 531, concurrence 28, vidIQ 24/10) ; ollama (9 849 en France) et lm studio (2 581 en France), vidIQ 23/10 |
+| **Urgence** | Evergreen, mais c'est la base de tout le pilier : **le 2 nov.** (ta décision du 24/10, nuit) ([fiche](projets/installer-ia-locale/fiche.md)) |
+| **Score** | **34/40, estimation** (demande 9 · clic 7 · production 9 · niche 9) |
+
+**Hook** : « Je coupe le wifi. Et mon IA me répond quand même. Le 12 juin, Anthropic a coupé Fable 5, le modèle le plus puissant qu'il ait jamais ouvert au public. Pour tout le monde. Trois jours après sa sortie. » (vérifié deux fois le 24/10 : directive du gouvernement américain, retour 19 jours plus tard)
+**Texte** : une IA en local, c'est un fichier chez toi et une appli qui le fait tourner ; avec LM Studio, ça s'installe comme un jeu.
+**Sous-texte** : ce que tu ne possèdes pas, on peut te le retirer.
+**Pourquoi** :
+- un débutant n'a pas besoin des noms (« Q4_K_M ») avant d'avoir lancé un modèle : la vidéo des noms devient la deuxième marche (7 déc.) ;
+- Claude #1, Coût Claude et les deux cartes peuvent renvoyer à « installe d'abord avec cette vidéo » ;
+- Fable 5 coupé puis revenu : la preuve que ni toi ni même le fournisseur ne décidez toujours ;
+- LM Studio est gratuit au travail : l'argument des données privées en entreprise tient sans licence.
+**Source** : `projets/installer-ia-locale/sources.md` (recherche et double vérification du 24/10).
+
+---
+
 ### Mises de côté
 - **30 jours avec une IA locale** : trop lent face au rythme des sorties. Remplacé par la série « Claude ou mon PC ? ».
 - **Windows 10** : ni vidéo longue ni Short (le Short n'est pas sorti ; archivé le 19/10).
@@ -856,7 +879,7 @@ Chaque créneau se confirme au radar, deux semaines avant. Les faits (USSD et op
 | 7 | 16 | Même carte, 2 fois plus rapide | IA testé | 34/40 | Radar |
 | 8 | 4 | Comment un site sait en une milliseconde que ton pseudo est déjà pris (« en une milliseconde » gardé le 23/10 : tenu côté serveur, doc de Redis) | Génie | 33/40 | 30 nov (joker) |
 | 9 | 15 | Louer, acheter ou s'abonner ? | IA calculé | 33/40 | 4 janv |
-| 10 | 12 | Pourquoi tout paraît plus fluide sur un iPhone | Génie | 32/40 | 7 déc |
+| 10 | 12 | Pourquoi tout paraît plus fluide sur un iPhone | Génie | 32/40 | 15 févr (provisoire, reculée le 24/10) |
 | 11 | 18 | SQLite : *Sans cette base de données, ton téléphone ne marche pas* (titre du 23/10 ; « 300 Ko » et « battu Oracle » sont faux) | Génie | 32/40 | 22 mars (provisoire) |
 | 12 | 8 | Tu n'as jamais possédé tes jeux | Histoire | 31/40 | 22 févr (provisoire) |
 | 13 | 13 | *Python, le langage de l'IA, est un cadeau de Noël* (titre du 23/10 ; Guido ne dit jamais qu'il s'ennuyait, et Codabee a pris « Il s'ennuyait à Noël ») | Histoire | 31/40 | 28 déc |
@@ -865,7 +888,8 @@ Chaque créneau se confirme au radar, deux semaines avant. Les faits (USSD et op
 | 16 | 19 | Le génie caché du paiement sans contact | Génie | 30/40 | 5 avr (provisoire) |
 | 17 | 9 | Le dev qui a mis un ChatGPT dans ton PC (llama.cpp) | Histoire | 29/40 | 8 févr (provisoire, avancée le 23/10) |
 | — | 21 | Pourquoi tu meurs derrière un mur : le génie caché des jeux en ligne | Génie | 32/40 | 8 mars (provisoire, radar du 23/10) |
-| — | 22 | IA en local : comment lire le nom d'un modèle (35B, A3B, Q4_K_M…) | IA calculé (vulgarisation) | 31/40 | 2 nov (ta demande du 23/10, avant Claude #1) |
+| — | 25 | Pourquoi avoir ta propre IA, et comment l'installer (LM Studio) | IA testé (vulgarisation) | 34/40 (estimation) | 2 nov (ta demande du 24/10 : la base d'abord) |
+| — | 22 | IA en local : comment lire le nom d'un modèle (35B, A3B, Q4_K_M…) | IA calculé (vulgarisation) | 31/40 | 7 déc (après la vidéo d'installation, 24/10) |
 | — | 23 | Deux cartes d'occasion pour le max de VRAM | IA calculé | 29/40 (estimation) | 21 déc (ta demande du 24/10) |
 | — | 24 | Mac mini ou PC gamer pour l'IA en local ? | IA calculé | 30/40 (estimation) | 1er févr (provisoire, ta demande du 24/10) |
 | 18 | 20 | D'un pixel à 3,7 milliards de joueurs | Histoire | 27/40 | 14 déc (passion) |
@@ -884,7 +908,7 @@ Python et l'hommage au jeu vidéo passent devant des idées mieux notées pour d
   - remplacer les tags Flutter par défaut ;
   - appliquer le kit d'upload ([`projets/uber/upload.md`](projets/uber/upload.md), prêt le 21/10) ;
   - programmer la vidéo lun. 26 à 18 h.
-- **Essais sur la 5080 (ven. 23 et sam. 24)**, puis tes crochets d'**IA en local** (2 nov.) et le script de **Claude #1** (16 nov.).
+- **Essais sur la 5080 (ven. 23 et sam. 24)**, puis la **vidéo d'installation** (2 nov. : recherche, script et capture) et le script de **Claude #1** (16 nov.).
 - Script v2 de **Combien coûte Claude en local ?** (23 nov.) : fait le 22/10, à compléter avec les essais.
 
 **Ensuite** : l'ordre du [calendrier](calendrier.md), qui donne aussi le détail semaine par semaine jusqu'au 31 janvier. Les créneaux radar se remplissent à chaque sortie ([`etudes/radar.md`](etudes/radar.md)).

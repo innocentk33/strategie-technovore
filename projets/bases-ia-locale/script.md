@@ -2,7 +2,7 @@
 
 **Titre** : *IA en local : comment lire le nom d'un modèle (35B, A3B, Q4_K_M…)* (titre 3 de la fiche, recommandé).
 
-**Version finale du 23/10/2026** (phase 4, après le [grill](grill-v1.md)). L'ancienne version reste dans [`script-v1.md`](script-v1.md). Faits : [`sources.md`](sources.md), colonne « 2e vérif », plus les lignes 55 à 60 ajoutées au grill. Sortie : **lun. 30 nov. 2026, 18 h**.
+**Version finale du 23/10/2026** (phase 4, après le [grill](grill-v1.md)). L'ancienne version reste dans [`script-v1.md`](script-v1.md). Faits : [`sources.md`](sources.md), colonne « 2e vérif », plus les lignes 55 à 60 ajoutées au grill. Sortie : **lun. 7 déc. 2026, 18 h** (d'abord le 30 nov., puis le 2 nov. ; passée au 7 déc. le 24/10, derrière la vidéo d'installation).
 
 ## Changements depuis la V1
 
@@ -18,7 +18,7 @@
 10. **Coupés pour la durée** (1 995 → 1 890 mots) : LiteLLM, le renvoi aux « vidéos de novembre », « Aucune doc ne définit ces lettres mieux que ça », safetensors, les modèles gratuits d'OpenRouter (à mettre en description : « openrouter free models » monte), « LM Studio n'est pas open source », « le mot juste, c'est poids ouverts », le récapitulatif « bout à bout » (la carte mentale le fait à l'image), le port `11434` (celui d'Ollama, pas de llama-server).
 11. **Petits faits** : « le même Qwen que mon fichier » dans le cloud devient « le même modèle » (le fournisseur ne fait pas tourner ton fichier quantifié) ; la définition de l'OSI dit « un système équivalent », pas « refaire le modèle » ; « l'autre fichier que je télécharge » devient « que j'ai choisi pour ma carte » (`modeles-5080.md`), sans dire que tu l'as lancé.
 
-**Durée** : 1 895 mots de voix off (mesure de `controle.py` en bas, refaite le 24/10 après la dernière phrase sans « épisode un »), contre 1 995 au V1. À ton débit (145 mots/min) : 13 min, plus tes crochets. Timecodes calculés à 145 mots/min, à recaler sur la vraie prise.
+**Durée** : 1 931 mots de voix off (mesure de `controle.py`, refaite le 24/10, nuit, après le renvoi vers la vidéo d'installation), contre 1 995 au V1. À ton débit (145 mots/min) : 13 min, plus tes crochets. Timecodes calculés à 145 mots/min, à recaler sur la vraie prise.
 
 **Texte et sous-texte** :
 - **Texte** : un nom de fichier se lit morceau par morceau, et avec une règle de trois (paramètres × bits ÷ 8) tu sais s'il rentre dans ton PC avant de le télécharger.
@@ -32,7 +32,7 @@
 3. « Il manque deux gigas, ils sont passés où ? » (4:40) → refermée 30 s plus tard (l'en-tête).
 4. « L'une de ces pièces peut envoyer tes textes ailleurs » (relance à 58 %, 7:10) → refermée dans la section 7 (le routeur).
 
-**Place dans la série** (ta décision du 23/10, nuit) : la vidéo sort le 2 nov., **avant** Claude #1 (16 nov., testé) et Coût Claude (23 nov., calculé). C'est la porte d'entrée de la série ; l'écran de fin pointe Claude #1 (question 3, réglée).
+**Place dans la série** (ta décision du 24/10, nuit : une progression douce) : la vidéo sort le 7 déc., la deuxième marche **après** [la vidéo d'installation](../installer-ia-locale/fiche.md) (2 nov.), et après Claude #1 (16 nov., testé) et Coût Claude (23 nov., calculé). Elle renvoie à la vidéo d'installation à 0:40 (carte YouTube) ; l'écran de fin pointe Claude #1, déjà en ligne.
 
 **Format** : vulgarisation, **calculé** (règle 1 dite à 0:30). Aucune vitesse, aucun benchmark à toi. Tant que tes essais sur la 5080 ne sont pas faits, tout ce qui tourne ou s'affiche chez toi est entre crochets.
 
@@ -78,7 +78,11 @@ Ici, pas de mesure : je fais des calculs, et chaque chiffre a sa source en descr
 
 [VISUEL : capture de Hugging Face, la liste des fichiers du dépôt Unsloth de Qwen3.6, des dizaines de noms du même genre qui défilent.]
 
-Des noms comme ça, tu en vois des listes entières sur Hugging Face. Et personne ne t'explique comment ça se lit. Alors on le découpe ensemble, de gauche à droite.
+Des noms comme ça, tu en vois des listes entières sur Hugging Face. Et dans LM Studio aussi, dès que tu cherches un modèle. D'ailleurs, si t'as jamais installé d'IA chez toi, commence par ma vidéo où on le fait pas à pas, je te la mets là.
+
+[VISUEL : carte YouTube vers *Pourquoi avoir ta propre IA, et comment l'installer*.]
+
+Et personne ne t'explique comment ça se lit. Alors on le découpe ensemble, de gauche à droite.
 
 [CROCHET : TA PREMIÈRE FOIS DEVANT UN NOM COMME ÇA, CE QUE TU AS PENSÉ OU FAIT, EN UNE OU DEUX PHRASES. SINON, RIEN.]
 
@@ -318,15 +322,15 @@ Il reste ma question du début : dix-huit gigas, sur une carte de seize. Tu te r
 
 [VISUEL : le terrain revient : la carte graphique = le terrain principal, la RAM = un terrain annexe à côté. Une partie de l'effectif y passe ; quand un joueur de l'annexe est appelé, il s'allume sur place, avec une étiquette « processeur ». La barre « 18,2 Go » repasse sous la jauge « 16 Go ». Légende : « plan, d'après mon calcul ».]
 
-[CROCHET : CE QUE ÇA A DONNÉ À L'ESSAI : COMBIEN DE COUCHES SUR LA CARTE, COMBIEN D'EXPERTS EN RAM (JOURNAL DE LLAMA-SERVER), CE QU'AFFICHENT NVIDIA-SMI ET WINDOWS. SANS ESSAI : « LE RÉSULTAT, TU LE VERRAS DANS MA VIDÉO SUR LES SEIZE GIGAS. »]
+[CROCHET : CE QUE ÇA A DONNÉ À L'ESSAI : COMBIEN DE COUCHES SUR LA CARTE, COMBIEN D'EXPERTS EN RAM (JOURNAL DE LLAMA-SERVER), CE QU'AFFICHENT NVIDIA-SMI ET WINDOWS. SANS ESSAI : « LE RÉSULTAT, IL EST DANS MA VIDÉO SUR LES SEIZE GIGAS, JE TE LA METS LÀ. »]
 
 Et la prochaine fois que tu tombes sur un nom comme ça, tu fais le calcul avant de télécharger.
 
 [CROCHET : CE QUE TU UTILISES, TOI : UN MODÈLE, UN MOTEUR, UN HARNAIS. UNE PHRASE.]
 
-Écris en commentaire un nom de fichier à décoder, avec la mémoire de ton PC. Et si tu veux voir ces fichiers tourner pour de vrai, c'est ma prochaine vidéo IA : je les teste sur ma carte.
+Écris en commentaire un nom de fichier à décoder, avec la mémoire de ton PC. Et si tu veux voir ces fichiers tourner pour de vrai, je les ai testés sur ma carte : la vidéo est juste là.
 
-[VISUEL : écran de fin, 20 s : « 16 Go de VRAM suffisent-ils pour remplacer Claude ? » à gauche dès sa sortie le 16/11 (d'ici là, la vidéo IA la plus récente), bouton « S'abonner » à droite.]
+[VISUEL : écran de fin, 20 s : « 16 Go de VRAM suffisent-ils pour remplacer Claude ? » à gauche (en ligne depuis le 16/11), bouton « S'abonner » à droite.]
 
 ---
 
@@ -448,7 +452,7 @@ Non utilisés, volontairement (durée) : safetensors, les modèles gratuits d'Op
 
 1. **Le crochet du hook** : tes essais (23-24/10) seront faits avant ta voix (S2). Si le Qwen tourne, « et pourtant, il tourne » est le meilleur moment des 15 s. Une phrase, sans vitesse (la vidéo est calculée). Ça te va ?
 2. **« Dix-huit contre seize »** : je l'ai gardé dans le hook (le chiffre de la page qu'on télécharge, et celui de la boîte), et la section 3 rétablit « dix-sept contre seize dans la même unité ». L'autre option : dire « dix-sept » dès le hook (ce que tu verras dans Windows), mais le « dix-huit virgule deux, au chiffre près » de la règle perd son écho. Lequel ?
-3. **L'écran de fin** : **réglé le 23/10** (la vidéo passe avant Claude #1). Claude #1 dès sa sortie le 16/11 ; du 2 au 16, la vidéo IA la plus récente. La dernière phrase dit « la vidéo qui vient juste après celle-ci » : elle reste vraie avant comme après le 16.
+3. **L'écran de fin** : **réglé le 24/10** (la vidéo sort le 7 déc., après Claude #1). Il pointe Claude #1, déjà en ligne. La dernière phrase dit « la vidéo qui vient juste après celle-ci » : elle reste vraie avant comme après le 16.
 4. **Le foot** : la fin dépend maintenant du bus et du terrain annexe. Si tu préfères rappeler le boss de Monster Hunter de Coût Claude pour la continuité, il faut refaire la fin avec lui.
 5. **Le menu graphique** : un jeu précis dont le menu parle à ton public (en motion design, sans capture) ?
 6. **Les réglages d'OpenRouter** : sur un compte neuf, l'interrupteur « entraînement » est-il ouvert ou fermé au départ ? Aucune page ne le dit. Si tu le regardes sur un compte jetable (sans créer de clé), on peut dire « par défaut, il est… » au lieu de « regarde ce réglage ».

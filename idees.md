@@ -14,9 +14,9 @@ Pour les idées qui portent un numéro, le hook, la miniature et le score sont d
 - SQLite (22 mars) ;
 - le sans contact (5 avr.) ;
 - le lag des jeux en ligne (8 mars), choisi au radar du 23/10 ;
-- *IA en local : comment lire le nom d'un modèle* (2 nov., avant Claude #1), ta demande du soir.
+- *IA en local : comment lire le nom d'un modèle* (2 nov., avant Claude #1), ta demande du soir ; passée au 7 déc. le 24/10, derrière la vidéo d'installation.
 
-**Passées en production le 24/10**, tes demandes : deux cartes d'occasion pour le max de VRAM (21 déc., calculée) ; Mac mini ou PC gamer pour l'IA en local (1er févr., provisoire).
+**Passées en production le 24/10**, tes demandes : deux cartes d'occasion pour le max de VRAM (21 déc., calculée) ; Mac mini ou PC gamer pour l'IA en local (1er févr., provisoire) ; et, le soir, *Pourquoi avoir ta propre IA, et comment l'installer* (LM Studio, 2 nov.).
 
 **Abandonnée le même jour** : Mobile Money, qui ne te plaît pas (voir [`archive/README.md`](archive/README.md)).
 

@@ -6,7 +6,7 @@
 
 **Origine** : « Le second pouvoir de votre carte graphique : héberger une IA en local sur une 5080 ». Inspiration : [Red Stapler, I ran Qwen3.8 27B on single 8GB Card!](https://www.youtube.com/watch?v=ye50BbXEczo).
 
-**Mis à jour le 18/10** : le titre met en avant ta carte de 16 Go, et la vidéo reprend le contenu du guide IA en local 2027 (voir [`archive/`](../../archive/README.md)). Elle sort le **16 nov. à 18 h** (avancée au 2 nov. le 22/10, revenue au 16 nov. le 23/10 : *IA en local*, qui pose les bases, sort avant elle le 2 nov. ; ses essais sur la 5080, les 23-24/10, servent ensuite à « Combien coûte Claude en local ? », le 23 nov. depuis le 24/10). Preuve : chez Kai, [Is 16GB All You Need for Serious Local LLM?](https://www.youtube.com/watch?v=i9mRnbdDYxk) fait 359 K vues en 10 jours, et ses vidéos sur le matériel et le coût font environ 2 fois plus de vues que ses tests de modèles (voir [`etudes/kai.md`](../../etudes/kai.md)).
+**Mis à jour le 18/10** : le titre met en avant ta carte de 16 Go, et la vidéo reprend le contenu du guide IA en local 2027 (voir [`archive/`](../../archive/README.md)). Elle sort le **16 nov. à 18 h** (avancée au 2 nov. le 22/10, revenue au 16 nov. le 23/10 : la vidéo qui pose les bases sort avant elle le 2 nov., aujourd'hui [celle de l'installation](../installer-ia-locale/fiche.md) depuis le 24/10 ; ses essais sur la 5080, les 23-24/10, servent ensuite à « Combien coûte Claude en local ? », le 23 nov. depuis le 24/10). Preuve : chez Kai, [Is 16GB All You Need for Serious Local LLM?](https://www.youtube.com/watch?v=i9mRnbdDYxk) fait 359 K vues en 10 jours, et ses vidéos sur le matériel et le coût font environ 2 fois plus de vues que ses tests de modèles (voir [`etudes/kai.md`](../../etudes/kai.md)).
 
 **Machine de test** (config donnée le 22/10) :
 - CPU Ryzen 7 9700X (8 cœurs), carte mère Gigabyte B850M AORUS ELITE WIFI6E ICE (4 slots DDR5) ;
@@ -37,7 +37,7 @@ Avec 32 Go de RAM, les modèles à experts géants (Qwen3.8-Flash-Next, DeepSeek
 **Contenu** :
 1. **La révélation (hook)** : on montre le résultat, « Claude Opus 5.5 ? Non, ma carte de 16 Go. »
 2. **Ce qui rentre et ce qui ne rentre pas dans 16 Go** (repris du guide) : 3 ou 4 modèles, avec la vitesse mesurée chez toi. Mesure toi-même, ne cite pas Reddit : c'est le point faible de Kai.
-3. **La quantization**, en deux phrases, puis le renvoi : « si t'as pas tout suivi, j'ai une vidéo qui décode le nom de ces fichiers, je te la mets là » (carte YouTube vers *IA en local*, 2 nov.).
+3. **La quantization**, en deux phrases qui se suffisent (le JPEG de l'IA : moins de bits, un fichier plus léger, un peu moins de qualité). Les noms des fichiers se décodent dans [*IA en local*](../bases-ia-locale/fiche.md), qui sort après, le 7 déc. : une phrase (« je leur consacre une vidéo entière ») et une carte YouTube à ajouter le 7 déc.
 4. **Les ratés** des essais.
 5. **Le calcul en quatre cas** (ta demande du 24/10) : le prix d'achat seulement, pas d'électricité (décidé le 23/10). Mêmes prix que [Louer, acheter](../louer-acheter-ia/script.md), section « Le calcul » (relevé du 23/10, à refaire avant la voix) :
    | | Contre Pro (20 $ ≈ 21,42 € TTC) | Contre Max (100 $ ≈ 107,10 € TTC) |
@@ -62,4 +62,4 @@ Avec 32 Go de RAM, les modèles à experts géants (Qwen3.8-Flash-Next, DeepSeek
    - tu n'en as pas besoin, reste sur l'abonnement.
    Prix en euros (neuf et occasion) relevés juste avant le script, puis épinglés en commentaire le 27 nov. (Black Friday).
 
-**Les renvois** (ta règle du 24/10 : pas de « épisode un », on renvoie par le contenu) : en amont, [*IA en local*](../bases-ia-locale/fiche.md) (2 nov.) a déjà expliqué B, A3B et Q4_K_M ; une phrase (« si t'as pas tout suivi… ») et une carte YouTube suffisent, pas besoin de tout réexpliquer. À la fin, la suite : « ce qui ne tient pas dans seize gigas, je l'ai calculé » (Coût Claude, une semaine plus tard, le 23 nov.), comme Morgans Code relie ses vidéos entre elles.
+**Les renvois** (ta règle du 24/10 : pas de « épisode un », on renvoie par le contenu) : en amont, [la vidéo d'installation](../installer-ia-locale/fiche.md) (2 nov.) a montré LM Studio : une phrase (« si t'as jamais installé d'IA chez toi, j'ai une vidéo qui le fait pas à pas, je te la mets là ») et une carte YouTube suffisent. Les noms (B, A3B, Q4_K_M) sont expliqués après, dans *IA en local* (7 déc., ta décision du 24/10) : ici, juste ce qu'il faut pour suivre. À la fin, la suite : « ce qui ne tient pas dans seize gigas, je l'ai calculé » (Coût Claude, une semaine plus tard, le 23 nov.), comme Morgans Code relie ses vidéos entre elles.

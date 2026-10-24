@@ -86,7 +86,7 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 3. **Un test ne décide pas d'un format.** Compte les victoires sur 4 à 6 vidéos par pilier avant de changer la règle.
 4. **Ordre proposé** :
    - **Uber (26/10)** : test de **texte** (`noir-01` contre `noir-01b`), voir [`projets/uber/upload.md`](../../projets/uber/upload.md).
-   - **À partir d'Abonnement ou IA locale ? #1 (16/11 depuis le 23/10)** : test de **charte** sur chaque vidéo (`vert-02` contre la même scène en noir), puis coût de Claude (23/11), pixel, WhatsApp. *IA en local* (2/11) et Waze (9/11) sortent avant : test possible aussi, si leurs jumelles sont prêtes. La jumelle de chaque miniature, dans l'autre charte, se fait à partir de l'HTML (compter environ 30 à 60 min, estimation).
+   - **À partir d'Abonnement ou IA locale ? #1 (16/11 depuis le 23/10)** : test de **charte** sur chaque vidéo (`vert-02` contre la même scène en noir), puis coût de Claude (23/11), pixel, WhatsApp. La vidéo d'installation (2/11) et Waze (9/11) sortent avant : test possible aussi, si leurs jumelles sont prêtes. La jumelle de chaque miniature, dans l'autre charte, se fait à partir de l'HTML (compter environ 30 à 60 min, estimation).
 5. **Ne touche ni au titre ni à la miniature pendant le test** : ça l'arrête.
 
 ### La DA de la vidéo doit-elle correspondre à la miniature ?
@@ -95,7 +95,7 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 
 **Garder le noir ou passer au vert ? Ni l'un ni l'autre pour toute la chaîne : une DA par pilier, comme les miniatures.**
 - **Génie derrière l'app → noir premium.** Uber est déjà enregistré et découpé en noir, et Waze et WhatsApp réutiliseront ses animations de carte.
-- **IA chez moi → vert explainer.** Le template a été construit pour ça : axe gradué, carte graphique, étiquette de prix, mesure de VRAM. Il entre en service avec *IA en local* (2/11, miniature à dessiner), puis Claude ou mon PC ? #1 (16/11).
+- **IA chez moi → vert explainer.** Le template a été construit pour ça : axe gradué, carte graphique, étiquette de prix, mesure de VRAM. Il entre en service avec la vidéo d'installation (2/11, miniature à dessiner), puis Abonnement ou IA locale ? #1 (16/11) et *IA en local* (7/12).
 - **Pendant les tests de charte**, la miniature perdante n'a pas de premier plan assorti. C'est un handicap réel : si elle gagne malgré tout, le signal est d'autant plus fort.
 
 ## 5. À vérifier avant de publier
