@@ -245,7 +245,7 @@
 | OVHcloud 8 × H200 | 42 €/h HT ; 1 128 Go | S12 |
 | Kimi K3 | 2,8 T de paramètres ; 1 561 Go ; Scaleway 8 × B300 : 60 €/h, 43 800 €/mois | S13, S14 |
 | Électricité | 0,2001 €/kWh TTC (Base) | S15 |
-| Abonnements | Pro 20 $ (≈ 17,85 €), Max 100 $ (≈ 89 €) | S18, S19 |
+| Abonnements | Pro 20 $ (≈ 17,85 € HT, ≈ 21 € TTC), Max 100 $ (≈ 89 € HT ; **107 € TTC**, ce que tu paies en France, 23/10) | S18, S19, toi |
 | Seuil API | 1,7 milliard de tokens de sortie par mois, 654 tokens/s | S2, S19, calcul |
 
 ## 8. Liste des `⚠️ à vérifier` (à trancher avant le tournage)

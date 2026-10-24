@@ -1,4 +1,6 @@
-# Claude ou mon PC ? #2
+# Abonnement ou IA locale ? #2 : le dernier modèle sorti
+
+> **24/10** : la série s'appelle « Abonnement ou IA locale ? » (c'est aussi la playlist) au lieu de « Claude ou mon PC ? », voir [`strategie.md`](../../strategie.md), section 0.
 
 > Même format que l'[épisode 1](../claude-ou-mon-pc-1/fiche.md) (série décrite dans [`strategie.md`](../../strategie.md), pilier 2). Planning : [`calendrier.md`](../../calendrier.md), S12-S13. **Publication : lun. 18 janv. à 18 h** (avancée du 1er févr. le 21/10).
 

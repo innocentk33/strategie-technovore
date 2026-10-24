@@ -1,6 +1,6 @@
 # Modèles à tester sur ta 5080 (essais des 23 et 24 oct.)
 
-> Pour la vidéo [« 16 Go de VRAM suffisent-ils pour remplacer Claude ? »](fiche.md) (sortie le 2 nov.). Recherche du 22/10/2026. Les chiffres sans source sont des **estimations** et sont marqués comme tels. `⚠️ à vérifier` = je n'ai pas pu le confirmer à la source.
+> Pour la vidéo [« 16 Go de VRAM suffisent-ils pour remplacer Claude ? »](fiche.md) (sortie le 16 nov. depuis le 23/10). Recherche du 22/10/2026. Les chiffres sans source sont des **estimations** et sont marqués comme tels. `⚠️ à vérifier` = je n'ai pas pu le confirmer à la source.
 
 **Ta machine** : Ryzen 7 9700X (8 cœurs), B850M AORUS ELITE WIFI6E ICE, **32 Go** de DDR5-6000 (2 × 16 Go, EXPO déjà activé), RTX 5080 16 Go (Inno3D X3 OC), SSD 990 EVO Plus 2 To + P3 Plus 1 To, alimentation RM1000e. Tout ce document est calé sur cette machine.
 
@@ -11,7 +11,7 @@
 ## 0. À retenir avant tout
 
 1. **Le titre de la vidéo tient sur Qwen3.8-27B**, le modèle dense de Qwen sorti en août 2026, en quantification ISTA IQ3_S (11,77 Go). Son Q4 par défaut (16,46 Go) ne tient pas : d'après Hardware IA, le Q4 tombe à **13 tokens/s** sur une 5080 seule parce qu'il déborde en RAM. C'est ta scène « raté puis solution ».
-2. **Le brouillon doit changer** : Qwen3.8-Flash-Next via Strata ne tourne pas avec 32 Go de RAM (voir 1.3). Il passe en modèle « calculé » pour « Combien coûte Claude en local ? » (16 nov.).
+2. **Le brouillon doit changer** : Qwen3.8-Flash-Next via Strata ne tourne pas avec 32 Go de RAM (voir 1.3). Il passe en modèle « calculé » pour « Combien coûte Claude en local ? » (23 nov.).
 3. **Qwen 4 27B n'est pas sorti** au 22/10 : il a été annoncé (à l'Apsara du 22/09, d'après des sources secondaires), mais aucun poids n'est publié. Revérifie samedi matin.
 4. **Ollama** : la version actuelle est la **0.40.8** (21/10), pas la 0.40.6. La faille Bleeding Llama (CVE-2026-7482) est corrigée depuis la 0.17.1. Ollama n'a pas de clé d'API intégrée : ne l'expose pas sur le réseau.
 5. **Claude Code sur un modèle local fonctionne, mais Anthropic ne le prend pas en charge** : sa documentation dit qu'elle « ne prend pas en charge le routage de Claude Code vers des modèles autres que Claude ». Dis-le dans la vidéo : c'est du bricolage, et pi ou OpenCode sont prévus pour ça.
@@ -115,6 +115,7 @@ La vitesse de ta RAM limite celle des modèles MoE.
 - Tu gagnes 1 à 2 Go sur la 5080 : c'est la différence entre 32 K et 64 K de contexte sur Qwen3.8-27B.
 - Comme tu pilotes depuis le Mac, l'affichage du PC compte peu.
 - Vérification : Gestionnaire des tâches → Performances → GPU 1 (la 5080) → « Mémoire GPU dédiée » doit rester presque à 0 avant de lancer un modèle.
+- Tes deux écrans sont sur la 5080 (23/10) : un sur le HDMI de la carte mère, l'autre sur son DisplayPort. **Avant** de les débrancher, note `memory.used` au repos avec les deux écrans sur la 5080 : c'est ce que perd un spectateur dont les écrans sont sur sa carte, un chiffre à donner dans la vidéo. `⚠️` HDMI 1.4 et DisplayPort 1.4 d'après une fiche revendeur : un écran 4K en HDMI 1.4 plafonne à 30 Hz, préfère le DisplayPort pour lui.
 
 **d. Outils**
 - **llama.cpp** : sur https://github.com/ggml-org/llama.cpp/releases, prends la dernière version qui n'est **pas** marquée « pre-release ». Au 22/10, b11827 est une pre-release.
@@ -123,7 +124,7 @@ La vitesse de ta RAM limite celle des modèles MoE.
   - Vérifie avec `C:\llama\llama-server.exe --version`, puis `--help | findstr moe-cache` : la ligne `--moe-cache-mib` doit apparaître (fusionnée le 7/10).
 - **CLI Hugging Face** : `pip install -U huggingface_hub` → commande `hf`. Si Python n'est pas installé : `winget install Python.Python.3.12`.
 - **Tailscale** : https://tailscale.com/download (Windows et Mac), avec le même compte sur les deux machines.
-- **HWiNFO64** pour la puissance CPU et GPU, et un **wattmètre de prise** pour la consommation au mur.
+- **Pas de mesure électrique** (décidé le 23/10) : ni wattmètre ni HWiNFO. Le seul coût de la vidéo est l'achat du matériel.
 - **LM Studio** (facultatif, pour les plans de chat) : https://lmstudio.ai. L'API compatible Anthropic existe depuis la version 0.4.1.
 
 **e. Dossier des modèles** sur le 990 EVO Plus (le plus rapide pour le chargement), par exemple `D:\models`.
@@ -370,10 +371,8 @@ Avant de lancer `opencode`, exporte la clé avec `export LLAMA_5080_KEY="$(secur
 - [ ] GPU-Z : bus PCIe de la carte (5.0 x16 ?) et débit de la mémoire.
 - [ ] Journal GPU lancé avant chaque essai (PowerShell) :
   ```powershell
-  nvidia-smi --query-gpu=timestamp,memory.used,power.draw,utilization.gpu,temperature.gpu,clocks.mem --format=csv -l 1 > D:\mesures\gpu-<modele>-<essai>.csv
+  nvidia-smi --query-gpu=timestamp,memory.used,utilization.gpu,temperature.gpu,clocks.mem --format=csv -l 1 > D:\mesures\gpu-<modele>-<essai>.csv
   ```
-- [ ] Journal HWiNFO64 (CPU Package Power, GPU Power, RAM utilisée) au format CSV.
-- [ ] Wattmètre branché sur la prise du PC seul (pas d'écran sur la même prise), lisible par la caméra.
 - [ ] Clé et nom du tailnet hors du champ, ou flous au montage.
 - [ ] Capture d'écran du Mac (le terminal de l'agent) et du PC (Gestionnaire des tâches → GPU) en même temps.
 
@@ -382,11 +381,7 @@ Avant de lancer `opencode`, exporte la clé avec `export LLAMA_5080_KEY="$(secur
 1. **Vitesse brute** : `llama-bench.exe -m <fichier> -ngl 999 -fa 1 -p 512,4096 -n 128 -r 3` (ajoute `-ncmoe N` pour les MoE). Note `pp512`, `pp4096` (lecture) et `tg128` (écriture), moyenne de 3 passes.
 2. **En situation réelle** : chaque réponse de llama-server contient un bloc `timings`, avec `prompt_per_second` (lecture) et `predicted_per_second` (écriture). Le journal du serveur les affiche aussi. Note-les pour la tâche 1 à contexte court, puis à environ 30 K tokens de contexte (la tâche 3) : la vitesse baisse quand le contexte grandit.
 3. **VRAM** : le maximum de `memory.used` dans le CSV. **RAM** : le Gestionnaire des tâches.
-4. **Watts** :
-   - lis le wattmètre à 4 moments : repos sans modèle, modèle chargé au repos, lecture du prompt (pic) et écriture (plateau) ;
-   - garde `power.draw` (la carte seule) et la puissance du CPU (HWiNFO) pour le détail ;
-   - énergie d'une tâche = puissance moyenne au mur × durée → en Wh. C'est ce chiffre qui servira à la vidéo du 16 nov.
-5. **Reproductible** :
+4. **Reproductible** :
    - Pour la vitesse, l'échantillonnage compte peu.
    - Pour comparer à Hardware IA, refais leur Arkanoid avec la température à 0 et la graine 42 (`--temp 0 --seed 42`).
    - Pour la qualité, garde les échantillonneurs conseillés par chaque éditeur : Qwen déconseille le mode glouton (température 0) en mode thinking.
@@ -402,9 +397,8 @@ Avant de lancer `opencode`, exporte la clé avec `export LLAMA_5080_KEY="$(secur
 | Lecture / écriture (tok/s) | pp512 = … / tg128 = … |
 | Vitesse à 30 K de contexte | … |
 | VRAM max / RAM utilisée | … / … |
-| Watts au mur (repos, lecture, écriture) | … / … / … |
 | Tâche : réussite ? | oui / non, nombre de coups de pouce |
-| Durée de la tâche, Wh | … |
+| Durée de la tâche | … |
 | Remarques (ratés, plantages) | … |
 
 ### 4.4 La grille de 3 tâches, identiques pour Claude et pour la 5080
@@ -421,18 +415,7 @@ Prépare-les vendredi matin dans un dépôt de test à part, pas dans `youtubeSk
    - Critère : la variante est ajoutée **et** les listes en dur de `rendre.sh` et de `psd.py` sont mises à jour. Cette règle est écrite dans le CLAUDE.md : tu vérifies si le modèle la suit.
    - Ce contexte long (environ 20 à 30 K tokens, estimation) sert aussi à la mesure de vitesse « à 30 K ».
 
-Pour chaque tâche, note la réussite, le nombre de tes interventions, la durée, les tok/s et les Wh. Côté Claude, note le modèle et le mode utilisés.
-
-### 4.5 La consommation au mur : ordre de grandeur (**estimation**, à remplacer par ta mesure)
-
-| Situation | Composants (estimation) | Au mur (estimation, rendement de l'alimentation d'environ 90 %) |
-|---|---|---|
-| PC au repos, modèle chargé | GPU 20 à 40 W, CPU 20 à 30 W, reste 30 à 40 W | **70 à 120 W** |
-| Qwen3.8-27B en écriture (tout dans la carte) | GPU 220 à 330 W (TGP max 360 W), CPU 25 à 40 W, reste 30 à 40 W | **300 à 450 W** |
-| Qwen3.6 avec experts en RAM | GPU 120 à 250 W, CPU 60 à 90 W (le 9700X travaille), reste 30 à 40 W | **250 à 420 W** |
-| Lecture d'un long prompt (pic) | GPU proche de son TGP | jusqu'à **450 W ou plus** |
-
-Seuls les 360 W de TGP de la 5080 viennent de NVIDIA. Le reste est un ordre de grandeur : en écriture, un modèle de langage est limité par la mémoire et pousse rarement la carte à son maximum. Le rendement d'environ 90 % de la RM1000e est `⚠️ à vérifier` (certification 80 PLUS). **Seul le wattmètre fait foi.**
+Pour chaque tâche, note la réussite, le nombre de tes interventions, la durée et les tok/s. Côté Claude, note le modèle et le mode utilisés.
 
 ---
 
@@ -443,12 +426,12 @@ Seuls les 360 W de TGP de la 5080 viennent de NVIDIA. Le reste est un ordre de g
 | Heure | Quoi |
 |---|---|
 | 9 h – 9 h 30 | Pilote, repli mémoire, écran sur l'iGPU, vérification de la RAM. Lancer **tous** les téléchargements (3.2). |
-| 9 h 30 – 10 h 30 | llama.cpp, `hf`, Tailscale (deux machines), HWiNFO, clé d'API (3.3), dossier `D:\mesures`. |
+| 9 h 30 – 10 h 30 | llama.cpp, `hf`, Tailscale (deux machines), clé d'API (3.3), dossier `D:\mesures`. |
 | 10 h 30 – 11 h 30 | Circuit complet avec Gemma 4 12B : serveur → `tailscale serve` → curl depuis le Mac → Claude Code, pi, OpenCode (3.5 et 3.6). |
 | 11 h 30 – 12 h 30 | Préparer le dépôt des 3 tâches. Faire passer les 3 tâches à **Claude** (référence). |
 | 14 h – 14 h 45 | Qwen3.8-27B : le raté Q4_K_M dans LM Studio (à filmer), puis ISTA IQ3_S avec llama-bench. |
 | 14 h 45 – 15 h 30 | Qwen3.8-27B : MTP oui/non, cache f16/q8_0, 32 K/64 K, IQ3_S/IQ3_XXS. Choisir la meilleure configuration. |
-| 15 h 30 – 17 h 30 | Qwen3.8-27B : les 3 tâches dans Claude Code, puis dans pi, avec les watts. |
+| 15 h 30 – 17 h 30 | Qwen3.8-27B : les 3 tâches dans Claude Code, puis dans pi. |
 | 17 h 30 – 19 h | Qwen3.6-35B-A3B : balayage de `-ncmoe`, essai de `-cmoe --moe-cache-mib`, tâche 1. |
 | Soir | Copier les CSV et les rushes sur le 2e SSD. Relire les fiches de mesures. |
 
@@ -460,7 +443,7 @@ Seuls les 360 W de TGP de la 5080 viennent de NVIDIA. Le reste est un ordre de g
 | 9 h 15 – 10 h 30 | Qwen3.6-35B-A3B : tâches 2 et 3 (Claude Code ou OpenCode). |
 | 10 h 30 – 12 h | Nemotron Bolt : chargement, llama-bench, tâche 1 si ça tient. |
 | 12 h – 12 h 45 | LFM2.5 et Gemma 4 12B : vitesse et Arkanoid seulement. |
-| 14 h – 15 h 30 | Plans propres pour le montage : l'agent qui code depuis le Mac, `nvidia-smi` et le wattmètre en gros plan, Arkanoid côte à côte (Claude contre 5080). |
+| 14 h – 15 h 30 | Plans propres pour le montage : l'agent qui code depuis le Mac, `nvidia-smi` (VRAM) en gros plan, Arkanoid côte à côte (Claude contre 5080). |
 | 15 h 30 – 16 h 15 | LM Studio : plans de chat et plan sécurité (Require Authentication, `tailscale serve`). |
 | 16 h 15 – 17 h | Refaire les mesures douteuses (3 passes). |
 | 17 h – 18 h | Tableau final des résultats + sauvegarde. Relever les prix des cartes (prévu les 24 et 25 oct. dans la fiche). |

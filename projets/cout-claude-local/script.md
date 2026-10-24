@@ -4,10 +4,11 @@
 
 **v2 du 22/10/2026** : corrections du [grill](grill-v1.md) appliquées sur le [brouillon v1](brouillon-v1.md).
 - **Accroche** : on garde « 30 660 € par mois » (ton choix), avec une phrase vers 0:20 qui annonce la version qui tient dans un PC gamer, pour tenir le « chez moi » de la miniature.
-- **Retournement** : il reprend les mesures de ton essai sur la 5080, faites pour Claude #1 (sorti le 2 nov.). Sortie de cette vidéo : **lun. 16 nov.** (inversée avec Claude #1 le 22/10).
+- **Retournement** : il reprend les mesures de ton essai sur la 5080, faites pour Claude #1 (sorti le 16 nov.). Sortie de cette vidéo : **lun. 30 nov.** (inversée avec Claude #1 le 22/10, puis reculée de deux semaines avec lui le 23/10) ; **avancée au lun. 23 nov. le 24/10**, avant le Black Friday, une semaine après Claude #1. Le 24/10 aussi : la série s'appelle « Abonnement ou IA locale ? » ; dans la voix, pas de « épisode un », les renvois se font par le contenu.
+- **23/10 (soir), à ta demande** : la section « La facture d'électricité » sort (le seul coût est l'achat, partout sur la chaîne). Les timecodes après 9:00 reculent de 40 s.
 - Bloc technique allégé, Kimi K3 réduit à deux phrases, nombres arrondis dans la voix, antirez nommé, question au public sur le prix du Mac, tics corrigés.
 
-**Durée** : environ 1 680 mots de voix off, plus tes ⟦à écrire⟧ (~200 mots) : 12 à 13 min à 145 mots/min.
+**Durée** : environ 1 600 mots de voix off depuis le retrait de l'électricité (avant : 1 680), plus tes ⟦à écrire⟧ (~200 mots) : 11 min 30 à 12 min 30 à 145 mots/min.
 
 **Conventions** : texte normal = voix off. `[VISUEL : …]` = à l'écran. `(…)` = ton. `⟦à écrire⟧` = à toi. `[S…]` = source dans [`sources.md`](sources.md). `⚠️` = à revérifier le jour de la voix. Rien de tout ça ne se lit.
 
@@ -22,9 +23,8 @@
 | 4:40 | Palier 1 : ma 5080 et beaucoup de RAM |
 | 6:20 | Palier 2 : un Mac Studio |
 | 8:00 | Palier 3 : un serveur à huit cartes |
-| 9:00 | La facture d'électricité |
-| 9:40 | Ce qui tourne sur ma carte |
-| 11:00 | Le verdict selon ton profil |
+| 9:00 | Ce qui tourne sur ma carte |
+| 10:20 | Le verdict selon ton profil |
 
 ---
 
@@ -118,6 +118,10 @@ Une IA, c'est un fichier rempli de nombres. Sur seize bits, un nombre prend deux
 
 Réduire les bits, ça s'appelle la quantification. C'est le JPEG de l'IA : tu écrases les détails, ça pèse moins lourd, et tu perds un peu de qualité.
 
+Si t'as pas tout suivi sur les bits, j'ai une vidéo qui décode le nom de ces fichiers, morceau par morceau : je te la mets là.
+
+[VISUEL : carte YouTube vers *IA en local : comment lire le nom d'un modèle*.]
+
 Pour vérifier, j'ai pris les fichiers d'antirez. C'est le développeur qui a créé Redis, et il a écrit son propre moteur pour faire tourner ce modèle sur Mac. Sa version en quatre bits fait trois cent seize gigas, celle en deux bits cent soixante-trois. La formule tombe juste. [S5] [S5 bis]
 
 [VISUEL : 316 × 8 ÷ 552 = 4,6 bits ; 163 × 8 ÷ 552 = 2,4 bits. Deux barres : « Q4 : 316 Go », « Q2 : 163 Go ».]
@@ -142,19 +146,19 @@ Ce qu'il faut retenir : cent soixante-trois gigas au plus serré, trois cent sei
 
 (ton de défi)
 
-Ma carte, d'abord. Seize gigas. Au moment où je tourne, une 5080 coûte environ deux mille euros chez le moins cher des marchands français. [S6] [S7]
+Ma carte, d'abord. Seize gigas. Au moment où je tourne, une 5080 coûte environ deux mille euros chez le moins cher des marchands français. [S6] [S7] La mienne, je l'ai eue en deux mille vingt-cinq à mille cent euros. La preuve que la crise du matériel a vraiment tout cassé.
 
-⚠️ Prix d'un seul modèle sur un comparateur, presque le double du prix de lancement : à relever à la main le jour de la voix. ⟦à écrire, si tu veux : ce que tu as payé la tienne, et quand.⟧
+⚠️ Prix d'un seul modèle sur un comparateur, presque le double du prix de lancement : à relever à la main le jour de la voix. Ton prix (24/10) : 1 100 € en 2025, dit dans la voix.
 
 [VISUEL : « RTX 5080 : 16 Go » face à « modèle : 163 Go minimum ». La barre ne rentre pas.]
 
 Cent soixante-trois gigas dans seize : non.
 
-Mais le cœur du modèle peut vivre dans la RAM de l'ordinateur. Avec cent quatre-vingt-douze gigas de RAM, la version en deux bits tient, de justesse. Et la RAM, en ce moment, c'est de l'or : un kit de trente-deux gigas dépasse les quatre cents euros. Pour cent quatre-vingt-douze, compte au moins deux mille cinq cents euros. [S8]
+Mais le cœur du modèle peut vivre dans la RAM de l'ordinateur. Avec cent quatre-vingt-douze gigas de RAM, la version en deux bits tient, de justesse. Et la RAM, en ce moment, c'est de l'or : mes trente-deux gigas, je les ai payés quatre-vingt-treize euros en deux mille vingt-cinq. Aujourd'hui, la même RAM est à cinq cent soixante euros sur Amazon. Pour cent quatre-vingt-douze, compte au moins deux mille cinq cents euros. [S8]
 
 [VISUEL : « 192 Go de DDR5 : 2 500 € et plus ». L'étiquette « ?? ?? € » du PC gamer de l'intro se remplit.]
 
-⚠️ Aucun prix actuel trouvé pour un kit de 4 × 48 Go (dernier prix LDLC : 2 859 €). **Ton PC (22/10)** : 32 Go (2 × 16 Go), payés 99 € en 2025 ; le même kit est affiché à 491,99 $ aujourd'hui. Pour passer à 192 Go, il faudrait **remplacer** ces barrettes par 4 × 48 Go, pas en ajouter : les 2 500 € ne s'ajoutent pas à ce que tu as. Vérifie aussi que ta B850M accepte 4 × 48 Go et à quelle vitesse : avec 4 barrettes de DDR5, la RAM tourne souvent moins vite, ce qui ferait baisser les 6 tokens/s. ⟦à écrire, si tu veux : « mes 32 Go, je les ai payés 99 euros en 2025 ; aujourd'hui, le même kit est affiché à près de 500 dollars ». C'est ta preuve vécue de la pénurie, et ça colle avec le ×5,6 d'overclocking.com (S8). Relève le prix actuel du kit Klevv en euros avant de le dire.⟧
+⚠️ Aucun prix actuel trouvé pour un kit de 4 × 48 Go (dernier prix LDLC : 2 859 €). **Ton PC (tes chiffres du 24/10)** : 32 Go (2 × 16 Go), payés 92,95 € en 2025 ; la même RAM est à 560 € sur Amazon : à revérifier le jour de la voix. Pour passer à 192 Go, il faudrait **remplacer** ces barrettes par 4 × 48 Go, pas en ajouter : les 2 500 € ne s'ajoutent pas à ce que tu as. Vérifie aussi que ta B850M accepte 4 × 48 Go et à quelle vitesse : avec 4 barrettes de DDR5, la RAM tourne souvent moins vite, ce qui ferait baisser les 6 tokens/s. Ta phrase est dans la voix depuis le 24/10 ; elle colle avec le ×5,6 d'overclocking.com (S8).
 
 Ça tient. Mais tenir ne dit pas si ça va vite.
 
@@ -219,29 +223,13 @@ Et si Claude est plus gros que DeepSeek ? Le plus gros modèle ouvert du moment,
 
 ---
 
-## 5. La facture d'électricité (9:00 – 9:40)
-
-Il reste à brancher tout ça. Beaucoup de vidéos anglophones calculent avec un kilowattheure américain. En France, le tarif réglementé d'EDF, option Base, est à vingt centimes le kilowattheure depuis le premier août. [S15]
-
-Le Mac Studio consomme au maximum quatre cent quatre-vingts watts, d'après Apple. Pour mon PC avec la 5080, ⟦à écrire : la consommation mesurée au wattmètre pendant les essais de Claude #1⟧. [S16] [S6]
-
-[VISUEL : tableau, calcul à l'écran.
-Mac Studio : 0,48 kW × 4 h × 30 j = 57,6 kWh → 11,5 €/mois ; 24 h/24 : 69 €/mois
-PC avec la 5080 : 0,6 kW × 4 h × 30 j = 72 kWh → 14,4 €/mois ; 24 h/24 : 86 €/mois]
-
-Quatre heures par jour, c'est le prix d'un abonnement de streaming. Même allumé jour et nuit, ça reste sous les cent euros par mois.
-
-⚠️ Les 600 W du PC sont une estimation, pas une mesure. ⟦à écrire, si tu as un wattmètre : la conso réelle de ton PC pendant l'essai.⟧
-
----
-
-## 6. Ce qui tourne sur ma carte (9:40 – 11:00)
+## 5. Ce qui tourne sur ma carte (9:00 – 10:20)
 
 [SON : la musique coupe net, une seconde de silence.]
 
-Maintenant, compare avec ce que tu paies déjà. L'abonnement Claude Max, c'est cent dollars, environ quatre-vingt-dix euros par mois. Les deux mille cinq cents euros de RAM, c'est plus de deux ans d'abonnement Max. [S18] [S19]
+Maintenant, compare avec ce que tu paies déjà. L'abonnement Claude Max, c'est cent dollars. En France, avec la TVA, je le paie cent sept euros par mois. Les deux mille cinq cents euros de RAM, c'est presque deux ans d'abonnement Max. [S18] [S19]
 
-[VISUEL : « 2 500 € ÷ 89 € ≈ 28 mois de Claude Max ». En dessous, en petit : « Pro : 20 $ ≈ 18 € ».]
+[VISUEL : « 2 500 € ÷ 107 € TTC ≈ 23 mois de Claude Max ». En dessous, en petit : « Pro : 20 $ ≈ 21 € TTC ».]
 
 Et pour une équipe qui paie Claude à l'usage ? Avec le budget du serveur, tu achètes environ un milliard sept cents millions de tokens d'Opus 5.5. Pour faire mieux, le serveur doit écrire six cent cinquante tokens par seconde, jour et nuit, tout le mois. [S2] [S19]
 
@@ -251,17 +239,17 @@ Et pour une équipe qui paie Claude à l'usage ? Avec le budget du serveur, tu a
 
 Louer, acheter ou rester abonné, j'en fais une vidéo complète le quatre janvier.
 
-Et sur ma carte, sans un euro de plus ? Je l'ai testé dans l'épisode un de « Claude ou mon PC ? ».
+Et sur ma carte, sans un euro de plus ? Je l'ai testé dans une vidéo complète, avec le calcul en entier : carte déjà payée ou pas, contre Pro et contre Max. Si tu veux le détail, elle est là.
 
 ⟦à écrire : le résultat de Claude #1 en deux ou trois phrases. Quel modèle de 16 Go ou moins, sa vitesse mesurée, la tâche réelle et ce qu'il en a fait. Une scène vue à l'écran, pas un tableau.⟧
 
-[VISUEL : extrait de Claude #1, le compteur de tokens par seconde en grand ; carte YouTube vers l'épisode 1.]
+[VISUEL : extrait de Claude #1, le compteur de tokens par seconde en grand ; carte YouTube vers la vidéo des 16 Go.]
 
 ⟦à écrire : ton avis, avec tes mots. Ce que tu continues à confier à Claude, et ce que tu feras désormais chez toi. Ça répond à ton enjeu du début.⟧
 
 ---
 
-## 7. Le verdict selon ton profil (11:00 – 12:20)
+## 6. Le verdict selon ton profil (10:20 – 11:40)
 
 (rythme posé, un profil par phrase)
 
@@ -277,9 +265,9 @@ Si tu diriges une équipe, fais le calcul avec tes volumes : en dessous de six c
 
 Trente mille euros par mois pour un cousin de Claude. Claude lui-même, personne ne sait combien il pèse.
 
-Ce que donne vraiment un modèle de seize gigas sur ma carte, tout est mesuré dans « Claude ou mon PC ? », épisode un. Il est juste là. Et dis-moi en commentaire quelle carte tu as.
+Ce que donne vraiment un modèle de seize gigas sur ma carte, tout est mesuré dans ma vidéo de test. Elle est juste là. Et dis-moi en commentaire quelle carte tu as.
 
-[VISUEL : écran de fin, 20 s : « Claude ou mon PC ? #1 » à gauche, « S'abonner » à droite.]
+[VISUEL : écran de fin, 20 s : « 16 Go de VRAM suffisent-ils pour remplacer Claude ? » à gauche, « S'abonner » à droite.]
 
 ---
 
@@ -303,9 +291,9 @@ Ce que donne vraiment un modèle de seize gigas sur ma carte, tout est mesuré d
 | 6:50 | Participation | « Tente ton chiffre en commentaire » |
 | 7:30 | Mesures | 30 % du plafond |
 | 8:20 | Retour au début | 42 € × 730 h = 30 660 € |
-| 9:40 | Coupure musique | 28 mois de Claude Max |
-| 10:20 | Boucle fermée | Le résultat de Claude #1 sur la 5080 |
-| 11:00 | Verdict | Quatre profils |
+| 9:00 | Coupure musique | 23 mois de Claude Max |
+| 9:40 | Boucle fermée | Le résultat de Claude #1 sur la 5080 |
+| 10:20 | Verdict | Quatre profils |
 
 ## Points de décrochage
 
@@ -313,7 +301,7 @@ Ce que donne vraiment un modèle de seize gigas sur ma carte, tout est mesuré d
 |---|---|---|
 | 0:45 – 1:20 | Moyen | Captures courtes, trois secondes chacune |
 | 3:10 – 4:40 | Moyen (était élevé en v1) | Bloc réduit : bits, JPEG, antirez, Engram. Une ligne de calcul à la fois |
-| 9:40 | Élevé | Coupure musicale, puis le chiffre de 28 mois |
+| 9:00 | Élevé | Coupure musicale, puis le chiffre de 23 mois |
 
 ## Notes de montage
 
@@ -325,7 +313,7 @@ Ce que donne vraiment un modèle de seize gigas sur ma carte, tout est mesuré d
 
 ## Avant la voix
 
-1. Les ⟦à écrire⟧ : ton enjeu, la question Reddit ou X, le résultat de Claude #1, ton avis, ta RAM. (Ton brouillon de Claude #1 dit que tu paies Claude Max 200 $ par mois : c'est peut-être ton enjeu.)
+1. Les ⟦à écrire⟧ : ton enjeu, la question Reddit ou X, le résultat de Claude #1, ton avis, ta RAM. (Tu paies Claude Max 107 € TTC par mois en France, tu l'as dit le 23/10 : c'est peut-être ton enjeu.)
 2. Le jour de la voix, relève à la main : le prix de la 5080, un kit de 192 Go de DDR5 et le Mac Studio 512 Go.
 3. Relis les `⚠️` restants dans [`sources.md`](sources.md), section 8.
 4. Relis les 15 premières secondes seules : donnent-elles envie de rester ?
