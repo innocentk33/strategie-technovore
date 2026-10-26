@@ -1,0 +1,159 @@
+<!doctype html>
+<!-- Uber, 3 miniatures inspirées d'autres niches (26/10) : ?v=1 VAR (football), ?v=2 caméra de surveillance (paranormal), ?v=3 jeu de course (gaming).
+     Page de 1280×720 rendue à ×3 (4K). Rendu : voir ../propositions.md, section « Hors niche ». -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:"Inter"; src:url(../../../../ressources/miniatures/fonts/inter-latin-wght.woff2) format("woff2"); font-weight:100 900; }
+  @font-face { font-family:"Anton"; src:url(../../../../ressources/miniatures/fonts/anton-latin-400.woff2) format("woff2"); }
+  @font-face { font-family:"JetBrains Mono"; src:url(../../../../ressources/miniatures/fonts/jetbrains-mono-latin-800.woff2) format("woff2"); font-weight:800; }
+  :root { --ink:#f5f5f7; --mid:#8e8e93; --red:#ff453a; --mint:#07c095; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1280px; height:720px; overflow:hidden; background:#000; }
+  body { position:relative; font-family:Inter, sans-serif; color:var(--ink); }
+  .abs { position:absolute; }
+  .full { position:absolute; inset:0; width:1280px; height:720px; }
+  .anton { font-family:Anton, sans-serif; font-weight:400; line-height:1; white-space:nowrap; }
+  .app { position:absolute; border-radius:22.5%; background:#000; border:2px solid #48484a; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 30px 60px rgba(0,0,0,.8); }
+  .app svg { width:80%; height:80%; }
+  .brand { position:absolute; left:34px; bottom:26px; display:flex; align-items:center; gap:10px; font-weight:600; font-size:19px; color:var(--mid); }
+  .brand i { width:11px; height:11px; border-radius:50%; background:var(--mint); box-shadow:0 0 10px var(--mint); }
+  .tag { position:absolute; transform:translate(-50%, -100%); padding:6px 16px 7px; border-radius:8px; font:800 30px/1 Inter; letter-spacing:-.01em; white-space:nowrap; }
+  .mono { font-family:"JetBrains Mono", monospace; font-weight:800; }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<div class="brand"><i></i>technovore</div>
+<script src="../../../../ressources/miniatures/logos/logos.js"></script>
+<script>
+  const v = new URLSearchParams(location.search).get('v') || '1';
+  const stage = document.getElementById('stage');
+  const uberTile = (x, y, size, rot = 6) => `<div class="app" style="left:${x}px;top:${y}px;width:${size}px;height:${size}px;transform:rotate(${rot}deg)">
+    <svg viewBox="0 0 24 24"><path d="${LOGO.uber}" fill="#fff"/></svg></div>`;
+  // Voiture vue de dessus (la même que dans noir.html), centrée sur (x, y), le nez vers le haut à rot = 0
+  const car = (x, y, rot, { s = 1, body = '#f5f5f7', glass = '#d1d1d6', op = 1, extra = '' } = {}) => `
+    <g transform="translate(${x} ${y}) rotate(${rot}) scale(${s}) translate(-33 -60)" opacity="${op}">
+      <rect x="2" y="0" width="62" height="120" rx="26" fill="${body}"/>
+      <path d="M10 32 Q33 22 56 32 L51 52 Q33 47 15 52 Z" fill="#1c1c1e"/><rect x="15" y="55" width="36" height="32" rx="7" fill="${glass}"/>
+      <path d="M15 90 Q33 95 51 90 L54 106 Q33 111 12 106 Z" fill="#1c1c1e"/>${extra}
+    </g>`;
+
+  const V = {
+    // 1 · VAR (football) : la voiture de ta carte et la vraie, séparées par deux lignes de hors-jeu
+    '1': () => {
+      // Le terrain : une carte de ville vue de dessus, inclinée comme la caméra principale d'un stade
+      // Le vert d'une pelouse sous les projecteurs, avec ses bandes de tonte : la tuile se détache du mode sombre
+      let p = `<rect width="2600" height="1700" fill="#0c2a19"/>`;
+      for (let k = 0; k < 17; k += 2) p += `<rect x="${k * 160}" y="0" width="160" height="1700" fill="#fff" opacity=".035"/>`;
+      for (let i = 0; i < 12; i++) for (let j = 0; j < 8; j++) {
+        if (j === 3) continue; // l'avenue
+        p += `<rect x="${i * 230 + 24}" y="${j * 230 - 70 + (j > 3 ? 90 : 0)}" width="182" height="182" rx="10" fill="#123d25" opacity=".9"/>`;
+      }
+      p += `<rect x="0" y="620" width="2600" height="250" fill="#262b33"/>
+        <line x1="0" y1="745" x2="2600" y2="745" stroke="#5a606b" stroke-width="8" stroke-dasharray="60 50"/>
+        <rect x="1084" y="620" width="520" height="250" fill="#07c095" opacity=".16"/>
+        <line x1="1084" y1="0" x2="1084" y2="1700" stroke="#ff453a" stroke-width="16"/>
+        <line x1="1604" y1="0" x2="1604" y2="1700" stroke="#07c095" stroke-width="16"/>
+        <g stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round"><line x1="1104" y1="960" x2="1584" y2="960"/><path d="M1134 935 L1104 960 L1134 985"/><path d="M1554 935 L1584 960 L1554 985"/></g>` +
+        car(940, 790, 90, { s: 2.4, op: .5, extra: `<rect x="-8" y="-10" width="82" height="140" rx="34" fill="none" stroke="#ff453a" stroke-width="6" stroke-dasharray="16 10"/>` }) +
+        car(1460, 790, 90, { s: 2.4 }) +
+        `<circle id="a" cx="940" cy="680" r="2" fill="none"/><circle id="b" cx="1460" cy="680" r="2" fill="none"/><circle id="m" cx="1344" cy="1110" r="2" fill="none"/>`;
+      stage.innerHTML = `
+        <div class="full" style="background:radial-gradient(ellipse 80% 70% at 50% 75%, #12261f 0%, #000 70%)"></div>
+        <div class="abs" style="left:-670px;top:-500px;width:2600px;height:1700px;transform:perspective(1000px) rotateX(50deg) rotateZ(-12deg);transform-origin:50% 60%">
+          <svg viewBox="0 0 2600 1700" width="2600" height="1700" style="filter:drop-shadow(0 0 10px rgba(0,0,0,.6))">${p}</svg></div>
+        <div class="full" style="background:linear-gradient(#000 0%, rgba(0,0,0,.6) 22%, transparent 40%)"></div>
+        <div class="abs" style="left:40px;top:40px;display:flex;align-items:stretch;box-shadow:0 20px 60px rgba(0,0,0,.8)">
+          <div style="background:#07c095;color:#000;padding:0 26px;display:flex;align-items:center;border-radius:14px 0 0 14px">
+            <div class="anton" style="font-size:82px;border:6px solid #000;border-radius:10px;padding:2px 14px 6px">VAR</div></div>
+          <div class="anton" style="background:#0b0b0d;padding:14px 34px 20px 30px;font-size:150px;border-radius:0 14px 14px 0;box-shadow:inset 0 0 0 2px #2c2c2e">HORS-JEU<span style="color:#ff453a"> ?</span></div>
+        </div>
+        ${uberTile(1062, 52, 168)}
+        <div id="tags"></div>`;
+      // Étiquettes de diffusion au-dessus des deux voitures, et la mesure entre les lignes
+      const at = id => { const r = document.getElementById(id).getBoundingClientRect(); return [r.left + r.width / 2, r.top]; };
+      const [ax, ay] = at('a'), [bx, by] = at('b'), [mx, my] = at('m');
+      document.getElementById('tags').innerHTML = `
+        <div class="tag" style="left:${ax}px;top:${ay}px;background:#ff453a;color:#fff">ta carte</div>
+        <div class="tag" style="left:${bx}px;top:${by}px;background:#07c095;color:#000">en vrai</div>
+        <div class="tag anton" style="left:${mx}px;top:${my}px;background:#000;color:#fff;font:400 64px/1 Anton;padding:8px 22px 12px;box-shadow:0 0 0 3px #fff">50 m</div>`;
+    },
+
+    // 2 · Caméra de surveillance (paranormal) : 4 voitures autour de toi… et 17 min d'attente
+    '2': () => {
+      let m = `<rect width="1280" height="720" fill="#0d1110"/><g transform="rotate(-12 640 360)">`;
+      for (let i = -3; i < 16; i++) for (let j = -3; j < 10; j++)
+        m += `<rect x="${i * 118 + 14}" y="${j * 118 + 14}" width="90" height="90" rx="6" fill="#161c1a"/>`;
+      m += `<path d="M-300 470 L 1600 470" stroke="#2b3330" stroke-width="58"/><path d="M780 -300 L 780 1100" stroke="#2b3330" stroke-width="46"/>`;
+      m += `</g>` +
+        car(725, 290, 30, { s: 1.15 }) + car(995, 270, -70, { s: 1.15 }) + car(715, 450, 112, { s: 1.15 }) + car(1005, 455, 160, { s: 1.15 }) +
+        `<circle cx="860" cy="360" r="20" fill="#000" stroke="#fff" stroke-width="7"/>`;
+      stage.innerHTML = `
+        <svg class="full" viewBox="0 0 1280 720" style="filter:grayscale(1) sepia(.6) hue-rotate(70deg) saturate(2.4) brightness(1.9) contrast(1.05)">${m}</svg>
+        <div class="full" style="background:repeating-linear-gradient(0deg, rgba(0,0,0,.28) 0 2px, transparent 2px 5px)"></div>
+        <svg class="full" viewBox="0 0 1280 720" style="mix-blend-mode:overlay;opacity:.5"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="1280" height="720" filter="url(#n)"/></svg>
+        <div class="full" style="background:radial-gradient(ellipse 85% 85% at 60% 45%, transparent 55%, rgba(0,0,0,.5) 100%)"></div>
+        <svg class="full" viewBox="0 0 1280 720">
+          <defs><filter id="g" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#ff3b30" flood-opacity=".9"/></filter></defs>
+          <path d="M 880 205 C 1080 200, 1170 290, 1150 380 C 1125 500, 960 535, 810 520 C 650 500, 585 410, 620 320 C 655 240, 770 205, 935 214" fill="none" stroke="#ff3b30" stroke-width="10" stroke-linecap="round" filter="url(#g)"/>
+          <line x1="860" y1="200" x2="860" y2="340" stroke="#fff" stroke-width="8"/>
+          <g fill="none" stroke="#fff" stroke-width="5" opacity=".85"><path d="M30 80 V30 H80"/><path d="M1200 30 H1250 V80"/><path d="M30 640 V690 H80"/><path d="M1250 640 V690 H1200"/></g>
+        </svg>
+        <div class="abs" style="left:615px;top:30px;width:490px;height:176px;border-radius:24px;background:#000;box-shadow:0 0 0 3px #fff, 0 30px 80px rgba(0,0,0,.9);display:flex;align-items:center;justify-content:center">
+          <div style="font:900 150px/1 Inter;letter-spacing:-.05em;text-shadow:-3px 0 rgba(255,59,48,.75), 3px 0 rgba(0,229,255,.6)">17<span style="font-size:96px;letter-spacing:-.03em"> min</span></div></div>
+        <div class="abs mono" style="left:58px;top:52px;font-size:34px;display:flex;align-items:center;gap:14px"><i style="width:26px;height:26px;border-radius:50%;background:#ff3b30;box-shadow:0 0 14px #ff3b30"></i>REC</div>
+        <div class="abs mono" style="left:58px;top:104px;font-size:26px;color:#e6ffe6">CAM 02 · 2015</div>
+        ${uberTile(84, 170, 170, -6)}`;
+    },
+
+    // 3 · Jeu de course (gaming) : la voiture traverse un immeuble en dérapage, compteur à 180
+    '3': () => {
+      let c = `<rect width="1280" height="720" fill="#0a0c1c"/>
+        <defs><filter id="b18"><feGaussianBlur stdDeviation="16"/></filter><filter id="b4"><feGaussianBlur stdDeviation="3"/></filter>
+        <filter id="neon" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#ff2bd6"/></filter></defs>`;
+      // Rues et immeubles en fausse 3D, comme les GTA vus de dessus
+      const blocks = [[-60, -80, 300, 230], [330, -80, 330, 200], [760, -80, 260, 200], [1110, -80, 260, 190], [-60, 270, 260, 260], [870, 290, 220, 200],
+        [1150, 280, 200, 230], [-60, 610, 300, 200], [300, 620, 300, 200], [700, 590, 300, 200], [1080, 600, 260, 200]];
+      for (const [x, y, w, h] of blocks)
+        c += `<rect x="${x + 14}" y="${y + 18}" width="${w}" height="${h}" fill="#05060f"/><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="4" fill="#131733"/>
+          <rect x="${x + 18}" y="${y + 18}" width="${w - 36}" height="${h - 36}" rx="3" fill="#181d40"/>`;
+      c += `<g stroke="#2e3566" stroke-width="5" stroke-dasharray="34 30"><line x1="0" y1="245" x2="1280" y2="245"/><line x1="0" y1="570" x2="1280" y2="570"/><line x1="290" y1="0" x2="290" y2="720"/><line x1="1050" y1="0" x2="1050" y2="720"/></g>`;
+      // Traces de pneus et fumée du dérapage
+      c += `<g fill="none" stroke="#000" stroke-width="16" opacity=".85" stroke-linecap="round"><path d="M 40 720 C 170 650, 290 640, 430 600"/><path d="M 110 730 C 230 690, 340 690, 470 660"/></g>
+        <g fill="#e8ecff" filter="url(#b18)" opacity=".42"><circle cx="210" cy="660" r="70"/><circle cx="330" cy="640" r="85"/><circle cx="430" cy="650" r="60"/><circle cx="120" cy="690" r="60"/></g>
+        <g stroke="#fff" stroke-width="4" opacity=".55" stroke-linecap="round"><line x1="230" y1="560" x2="390" y2="520"/><line x1="210" y1="600" x2="370" y2="575"/><line x1="280" y1="615" x2="420" y2="605"/></g>` +
+        `<rect x="584" y="196" width="320" height="250" fill="#05060f"/>` + car(560, 500, 58, { s: 2.35 }) +
+        // L'immeuble percuté, par-dessus le nez de la voiture : sa façade cassée la coupe en deux
+        `<path d="M 570 178 H 890 V 428 H 760 L 740 404 L 712 424 L 690 396 L 662 410 L 640 380 L 616 392 L 600 360 L 570 352 Z" fill="#1a1f3f" stroke="#ff2bd6" stroke-width="3" stroke-linejoin="round" filter="url(#neon)"/>
+        <path d="M 600 196 H 872 V 410 H 770 L 744 386 L 714 404 L 690 378 L 662 392 L 642 362 L 620 372 L 600 340 Z" fill="#2f3874"/>
+        <g stroke="#8d96d8" stroke-width="3" fill="none" opacity=".85"><path d="M640 380 L 690 320 L 740 330"/><path d="M712 424 L 770 360"/><path d="M600 360 L 650 290 L 640 240"/></g>` +
+        // Débris projetés vers l'arrière, et étincelles
+        `<g fill="#3d4688"><rect x="520" y="300" width="34" height="22" transform="rotate(20 537 311)"/><rect x="470" y="352" width="22" height="16" transform="rotate(-30 481 360)"/>
+          <rect x="560" y="250" width="18" height="14" transform="rotate(12 569 257)"/><rect x="780" y="470" width="26" height="18" transform="rotate(45 793 479)"/><rect x="840" y="455" width="16" height="12"/>
+          <rect x="500" y="250" width="12" height="10"/><rect x="745" y="510" width="14" height="10"/></g>
+        <g stroke="#ffb22e" stroke-width="5" stroke-linecap="round"><line x1="610" y1="372" x2="540" y2="330"/><line x1="628" y1="386" x2="560" y2="390"/><line x1="730" y1="420" x2="790" y2="450"/><line x1="700" y1="426" x2="720" y2="490"/></g>`;
+      // Compteur de vitesse, en haut à droite
+      const cx = 1075, cy = 210, r = 158;
+      const pt = (a, rr) => [cx + rr * Math.cos(a * Math.PI / 180), cy + rr * Math.sin(a * Math.PI / 180)];
+      let g = `<circle cx="${cx}" cy="${cy}" r="${r + 22}" fill="#06070f" opacity=".92" stroke="#2e3566" stroke-width="4"/>`;
+      for (let k = 0; k <= 20; k++) { // de 0 (135°) à 200 (405°)
+        const a = 135 + k * 13.5, [x1, y1] = pt(a, r), [x2, y2] = pt(a, r - (k % 5 ? 14 : 28));
+        g += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${k >= 15 ? '#ff2b4e' : '#9aa3dd'}" stroke-width="${k % 5 ? 4 : 7}" stroke-linecap="round"/>`;
+      }
+      const [n1, n2] = pt(135 + 18 * 13.5, r - 34);
+      g += `<path d="M ${pt(337.5, r + 8)} A ${r + 8} ${r + 8} 0 0 1 ${pt(405, r + 8)}" fill="none" stroke="#ff2b4e" stroke-width="10" filter="url(#neon)"/>
+        <line x1="${cx}" y1="${cy}" x2="${n1}" y2="${n2}" stroke="#ff2b4e" stroke-width="9" stroke-linecap="round" filter="url(#neon)"/><circle cx="${cx}" cy="${cy}" r="14" fill="#ff2b4e"/>`;
+      stage.innerHTML = `<svg class="full" viewBox="0 0 1280 720">${c}${g}</svg>
+        <div class="abs anton" style="left:${cx - 150}px;top:${cy - 34}px;width:300px;text-align:center;font-size:150px;font-style:italic;transform:skewX(-8deg);
+          text-shadow:0 0 24px rgba(255,43,214,.8), 0 6px 0 #000">180</div>
+        <div class="abs mono" style="left:${cx - 100}px;top:${cy + 128}px;width:200px;text-align:center;font-size:34px;color:#c9cff5">km/h</div>
+        ${uberTile(60, 50, 160, -6)}`;
+    },
+  };
+  (V[v] || V['1'])();
+</script>
+</body>
+</html>

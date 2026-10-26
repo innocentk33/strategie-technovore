@@ -4,7 +4,73 @@
 > Source : [`propositions/miniature.html`](propositions/miniature.html). Pour refaire un PNG après une retouche :
 > `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --window-size=1920,1080 --screenshot="$PWD/b.png" "file://$PWD/miniature.html?v=b"`
 
+## Hors niche : 3 nouvelles propositions (26/10)
+
+> Maquettes : [`propositions/hors-niche.html`](propositions/hors-niche.html) (`?v=1|2|3`), rendues en 4K : [`hors-niche-1.png`](propositions/hors-niche-1.png), [`-2`](propositions/hors-niche-2.png), [`-3`](propositions/hors-niche-3.png). Planche (360 px, 168 px, moitié basse cachée, avec `noir-01` en tête) : [`planche-hors-niche.png`](propositions/planche-hors-niche.png).
+> Pour refaire un rendu : `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --allow-file-access-from-files --window-size=1280,720 --force-device-scale-factor=3 --virtual-time-budget=3000 --screenshot="$PWD/hors-niche-1.png" "file://$PWD/hors-niche.html?v=1"` (depuis `propositions/`).
+> Pensées pour le titre *La carte d'Uber est une illusion (et c'est génial)* : aucune ne reprend « illusion », « carte » ni « génial ».
+
+### Les références (vidIQ, outliers du 26/10, dans [`refs/`](refs/))
+
+| Niche | Vidéo d'origine (chaîne) | Écart à la moyenne de la chaîne | Ce qu'on en retient |
+|---|---|---|---|
+| Football | *Croatia's Offside Goal & VAR Controversy Explained* (Footy PhD) | ×45 | Le bandeau « VAR CHECK » de la télé, en menthe et noir : reconnu avant d'être lu |
+| Football | *Iran v Egypt last minute offside goal controversy* (Hattrick Videos) | ×41 | Une question de hors-jeu en capitales étroites, très grosses |
+| Football | *Argentina v. Egypt VAR Controversy Explained* (Footy PhD) | ×37 | Deux positions, une question : « GOAL? / NO GOAL? » |
+| Paranormal | *BODYCAM SHOCKER: Cop Pulls Over a Skinwalker* (The Crime Files) | ×1 140 | Image d'archive, l'anomalie entourée de rouge |
+| Paranormal | *7 Disturbing Paranormal Police Encounters* (ROOM 13) | ×754 | Incrustation de caméra (heure, numéro), une seule anomalie |
+| Paranormal | *10 Real Scary Videos Caught On Camera* (THE NIGHT CREW) | ×532 | « THERE WERE ONLY TWO » : le texte contredit l'image, on cherche l'intrus |
+| Gaming | *L'Évolution des Maps dans les jeux GTA* (Mr Virtuoz) | ×67 | Une carte vue de dessus, en couleurs saturées |
+| Gaming | *10 véhicules à avoir sur GTA Online en 2026* (LE2NY®) | ×54 | Dérapage, fumée, néon rose et bleu |
+
+On reprend des **mécaniques** (le bandeau de la VAR, l'anomalie entourée sur une image d'archive, le compteur d'un jeu de course), jamais une miniature. Les autres références téléchargées (illusions d'optique, GTA 6, Carl Jung) n'ont rien donné d'utilisable.
+
+### 1 · « HORS-JEU ? » (football, la VAR)
+
+![1](propositions/hors-niche-1.png)
+
+- **Ce qu'on voit** : un ralenti de VAR sur une carte de ville verte comme une pelouse. La voiture de **ta carte** (fantôme, pointillés rouges) et la voiture **en vrai**, 50 m plus loin, chacune avec sa ligne de hors-jeu (rouge, menthe). Le bandeau « VAR | HORS-JEU ? » en haut, l'icône Uber à droite.
+- **La question** : la voiture que je vois est-elle vraiment là ? L'émotion : la polémique d'arbitrage, que tout fan de foot connaît.
+- **Tenu par la vidéo** : la règle rouge « 50 m » à 0:15,9, puis la voiture qui saute d'un trottoir à l'autre à 5:37 ; « la position d'il y a quelques secondes, en partie devinée » à 9:00.
+- **Pour qui** : le public africain et jeune, pour qui la VAR est un sujet de dispute de chaque week-end. Elle garde la menthe de Technovore.
+- **Risque** : le jeu de mots (« hors-jeu » pour une voiture) ne parle pas à ceux qui ne suivent pas le foot.
+
+### 2 · « 17 min » (paranormal, caméra de surveillance)
+
+![2](propositions/hors-niche-2.png)
+
+- **Ce qu'on voit** : l'écran filmé en vision nocturne (« REC », « CAM 02 · 2015 », coins de cadrage, lignes de balayage). Quatre voitures collées à ton point de départ, entourées de rouge, et l'étiquette du point : **17 min**.
+- **La question** : quatre voitures à côté de moi, et 17 minutes d'attente ? C'est la mécanique de « THERE WERE ONLY TWO » : l'image contredit le texte, sans rien affirmer.
+- **Tenu par la vidéo** : la question est posée à 0:22 ; la scène exacte (4 voitures, « 17 min » en rouge) arrive à 8:07, d'après l'enquête de Motherboard (2015). « 2015 » sur l'incrustation dit honnêtement que c'est une affaire ancienne.
+- **Point fort** : la plus forte curiosité des trois, et la scène se comprend sans lire.
+- **Risques** :
+  - même mystère que `noir-01` (« elle existe ? »), dans une autre exécution ;
+  - le PNG pèse 8,8 Mo à cause du grain : importe-le depuis l'ordinateur (l'appli mobile plafonne à 2 Mo).
+
+### 3 · « 180 km/h » (gaming, jeu de course)
+
+![3](propositions/hors-niche-3.png)
+
+- **Ce qu'on voit** : une ville vue de dessus façon GTA, en néon. La voiture traverse un immeuble en dérapage (traces de pneus, fumée, débris), et le compteur d'un jeu de course est bloqué à **180 km/h**.
+- **La question** : pourquoi la voiture d'Uber traverse-t-elle un immeuble à 180 ? L'émotion : le rire, le « WTF ».
+- **Tenu par la vidéo** : le teaser du dérapage à 0:17,7, puis le gag de Fast and Furious et « 180 km/h » à 5:50-6:01.
+- **Pour qui** : les gamers (18-24 ans : 61 % de la chaîne).
+- **Risque** : c'est un calcul au conditionnel dans la vidéo (« si l'appli faisait glisser la voiture d'une position fausse à l'autre »). Le spectateur qui attend une course-poursuite n'en verra que 10 secondes : c'est le joker.
+
+### Tests faits
+
+- **168 px et mode sombre** : les trois se lisent (texte, icône Uber, scène). Après correction, plus aucune ne se fond dans le fond sombre : pelouse verte pour 1, vision nocturne plus claire pour 2.
+- **Moitié basse cachée** : 1 garde « VAR | HORS-JEU ? » et Uber ; 2 garde « 17 min », le point et deux voitures (le groupe a été remonté) ; 3 garde « 180 » et l'immeuble percuté.
+- **Concurrence française** : d'après la recherche « comment fonctionne uber » du 21/10 (plus bas : tutos, chauffeurs VTC, histoire business), aucune vidéo sur Uber ne ressemble à l'une des trois. Pas revérifié le 26/10.
+
+### Ordre du test A/B
+
+« Tester et comparer » prend 3 miniatures : **`noir-01`** (la charte de la série, miniature par défaut), **1 (VAR)** et **2 (17 min)**. Elles remplacent le test `noir-01` contre `noir-01b`. 3 reste en réserve, ou remplace 2 si tu préfères tester trois promesses différentes (mystère, décalage, absurde).
+Ce test sort du protocole a/b/c du 24/10 (deux jokers, pas de version verte) : il dira quelle **idée** gagne, pas quelle charte. Le PSD se fera pour la gagnante.
+
 ## Titre et miniature : qui dit quoi
+
+> **26/10** : le titre devient *La carte d'Uber est une illusion (et c'est génial)* (50 caractères). Il dit qu'on se fait avoir, et que c'est voulu ; la miniature montre *quoi* : une voiture qui n'existe peut-être pas (`noir-01`), 50 m de décalage (« HORS-JEU ? ») ou des voitures qui ne viennent pas (« 17 min »). « Uber » est dans les 15 premiers caractères, donc la coupure mobile ne le cache plus. La suite date du 21/10, avec l'ancien titre.
 
 - **Titre** : *Le génie caché derrière la carte en temps réel d'Uber* (53 caractères).
 - **Ce que dit le titre** : il s'agit d'Uber et de sa carte en direct, et il y a de l'ingénierie cachée derrière.

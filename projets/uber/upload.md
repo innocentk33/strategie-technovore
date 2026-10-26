@@ -2,6 +2,7 @@
 
 > Vidéo finale : 9:59,6, montage HyperFrames. Les temps viennent du [storyboard](STORYBOARD.md), calé sur la vidéo finale. Sous-titres prêts : [`uber.fr.srt`](uber.fr.srt) et [`uber.en.srt`](uber.en.srt).
 > La vidéo est déjà en ligne **en privé** (id `cRv2ouxZZdw`). Son titre actuel, « L'hisoire du temps réel derriere uber », et ses tags, ceux des tutos Flutter, sont à remplacer par ce kit.
+> **26/10, ton choix : titre *La carte d'Uber est une illusion (et c'est génial)*** et test à trois miniatures (`noir-01`, « HORS-JEU ? » et « 17 min »). Les sections « Titres », « Le test », « Réglages Studio » et « Avant de publier » sont à jour.
 > Recherche vidIQ du 21/10. Le chiffre de 40 millions par jour a été vérifié le 21/10 dans les résultats d'Uber (lien dans la description).
 
 ## Mots-clés (vidIQ, 21/10)
@@ -20,20 +21,29 @@ En français, la recherche sur ce sujet précis est quasi nulle : la vidéo vivr
 
 | | Titre | Car. | Score vidIQ |
 |---|---|---|---|
-| **A · Mixte (recommandé)** | Le génie caché derrière la carte en temps réel d'Uber | 53 | 84 |
+| **Retenu le 26/10** | La carte d'Uber est une illusion (et c'est génial) | 50 | 88 |
+| *Écarté le 26/10* | Pourquoi la carte Uber est un mensonge permanent | 48 | 85 |
+| *Écarté le 26/10* | Dans les coulisses d'Uber : la technologie derrière votre course | 64 | 87 |
+| *Écarté le 26/10* | Les voitures fantômes d'Uber : la vérité technique | 50 | 84 |
+| A · Mixte (recommandé jusqu'au 26/10) | Le génie caché derrière la carte en temps réel d'Uber | 53 | 84 |
 | B · Recherche | Comment fonctionne la carte en temps réel d'Uber ? | 50 | 84 |
 | C · Curiosité | Uber a dû découper la planète en hexagones | 42 | 80 |
 | *Écarté* | Uber : le génie caché derrière sa carte en temps réel | 52 | 78 |
 
-- **Pourquoi A** :
+- **Pourquoi « illusion » (26/10)** :
+  - il garde le conflit de « mensonge » sans accuser Uber, que la vidéo n'accuse pas : c'est le support d'Uber qui parle d'un « effet visuel » (8:13), et la vidéo dit « la position d'un chauffeur d'il y a quelques secondes, en partie devinée » (9:00) ;
+  - « (et c'est génial) » est le verdict de la vidéo (9:35, « les ingés d'Uber, c'est des génies ») ;
+  - « Uber » arrive dans les 15 premiers caractères : la coupure mobile (vers 45) tombe dans la parenthèse ;
+  - les 6 titres notés par vidIQ le 26/10 vont de 78 à 88 : l'écart ne départage pas, le choix se fait sur le fond.
+- **Pourquoi A (21/10)** :
   - c'est la formule de l'inspiration (Philipp Lackner, « The Genius System Behind the Uber App's Real-Time Map », ×35,7) et celle de ton pilier ;
   - la miniature pose la question (« elle existe ? ») et le titre promet le génie, sans répéter la même info.
   - Sur mobile, « d'Uber » peut être coupé, mais le vrai logo Uber est sur la miniature.
 - **B** a le même score. Elle est plus « recherche », mais la recherche française est quasi nulle (< 750 par mois).
 - **C** reprend le hook de 0:06 (« hexagones »), donc la vidéo tient la promesse. C'est la variante à tester si A déçoit.
-- **Honnêteté** : la vidéo explique bien la carte en temps réel (trouver, envoyer, afficher), avec ses sources Uber Engineering. Rien dans A, B ou C n'est exagéré.
+- **Honnêteté** : la vidéo explique bien la carte en temps réel (trouver, envoyer, afficher), avec ses sources Uber Engineering. Rien dans A, B ou C n'est exagéré. « Illusion » est tenu par 8:13 et 9:00, alors que « mensonge » ne l'est pas : Uber a démenti, et la vidéo conclut au génie.
 
-**Le test** : Studio > ta vidéo > « Tester et comparer », miniature [`noir-01`](../../ressources/miniatures/rendus/noir-01.png) (« elle existe ? ») contre [`noir-01b`](../../ressources/miniatures/rendus/noir-01b.png) (« sa position est devinée. »). Même décor, une seule variable : le texte. C'est le test prévu dans les chartes de miniatures.
+**Le test (26/10)** : Studio sur ordinateur > ta vidéo > « Tester et comparer », trois miniatures dans cet ordre : [`noir-01`](../../ressources/miniatures/rendus/noir-01.png) (« elle existe ? », la charte de la série, gardée si le test n'est pas concluant), [`hors-niche-1`](miniature/propositions/hors-niche-1.png) (« HORS-JEU ? ») et [`hors-niche-2`](miniature/propositions/hors-niche-2.png) (« 17 min »). Le titre ne bouge pas pendant le test : le modifier l'arrête. La vidéo est programmée, donc privée jusqu'à 18 h : si Studio ne propose pas encore le test, lance-le dès la sortie. Il remplace le test `noir-01` contre `noir-01b` ; le détail est dans [`miniature/propositions.md`](miniature/propositions.md).
 
 ## Description
 
@@ -156,17 +166,17 @@ Les fiches ne suivent pas la règle « 20 % et 70 % » : elles sont posées sur 
 | Contenu modifié ou synthétique | Non | C'est ta vraie voix, et la carte est une animation recréée, pas une scène réaliste |
 | Promotion payante | Non | |
 | Commentaires | Ouverts, sans tri automatique pour les 2 premières heures | Tu réponds à tout pendant les 2 premières heures (stratégie, section 5) |
-| Miniature | `noir-01`, puis « Tester et comparer » avec `noir-01b` | Voir « Titres » |
+| Miniature | `noir-01`, puis « Tester et comparer » avec `hors-niche-1` et `hors-niche-2` (26/10) | Voir « Le test » |
 
 ## Avant de publier
 
-- [ ] Titre A dans Studio (fini « L'hisoire du temps réel derriere uber »)
+- [ ] Titre *La carte d'Uber est une illusion (et c'est génial)* dans Studio, avant 18 h (26/10)
 - [ ] Les tags Flutter remplacés par ceux du kit
 - [ ] « Uber » et « comment fonctionne » dans les 25 premiers mots de la description
 - [ ] Description sous 5 000 caractères (4 084) et tags sous 500 (296)
 - [ ] Chapitres à partir de 0:00, 20 chapitres, tous ≥ 10 s
 - [ ] Hashtags dans la description, pas dans le titre (3)
-- [ ] Miniature personnalisée `noir-01`, puis le test avec `noir-01b`
+- [ ] Miniature personnalisée `noir-01`, puis « Tester et comparer » avec `hors-niche-1` et `hors-niche-2` (les PNG 4K, importés depuis l'ordinateur)
 - [ ] Sous-titres FR et EN importés, et un coup d'œil sur un passage de chacun dans le lecteur
 - [ ] Fiche 1 à 5:08 vers OpenCode
 - [ ] Écran de fin : ArtCraft à gauche, « S'abonner » à droite, de 9:39,5 à 9:59,6, sur les cadres dessinés dans la vidéo

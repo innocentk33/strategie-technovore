@@ -8,6 +8,15 @@
         "value": "inter",
         "createdAt": "2026-10-24T15:29:47.347Z",
         "reason": "charte Technovore : Inter est la police locale des miniatures (ressources/miniatures/fonts, CLAUDE.md, section Outils)"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "projets/uber/miniature/propositions/hors-niche.html"
+        ],
+        "createdAt": "2026-10-26T08:33:54.712Z",
+        "reason": "Claude: maquette de miniature YouTube, les lueurs néon reprennent volontairement les codes des niches gaming et télé (demande de miniatures hors niche), pas une interface"
       }
     ]
   }

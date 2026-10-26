@@ -1,6 +1,6 @@
 # Uber : script v2
 
-**Titre** : *Le génie caché derrière la carte en temps réel d'Uber*
+**Titre** : *Le génie caché derrière la carte en temps réel d'Uber* (titre de publication depuis le 26/10 : *La carte d'Uber est une illusion (et c'est génial)*)
 
 **Durée** : environ 1 840 mots de voix off. À ton débit mesuré sur ArtCraft (145 mots/min, pauses et improvisations comprises) : environ 12 min 40, ou 12 min 20 sans la parenthèse Kalman. À 155 mots/min : 11 min 50. Les timecodes ci-dessous sont calculés à 145 ; à recaler sur la vraie prise.
 

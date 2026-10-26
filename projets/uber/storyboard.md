@@ -1,4 +1,4 @@
-# Storyboard : Le génie caché derrière la carte en temps réel d'Uber
+# Storyboard : La carte d'Uber est une illusion (et c'est génial)
 
 > Montage HyperFrames, recette « Premium noir » 16:9. **Durée : 9:59,6** (599,58 s), 1920 × 1080. Les temps de ce document sont ceux de la vidéo finale.
 > La page visuelle (une image par plan) est `boards/storyboard.html`, dans l'onglet Storyboard.
@@ -17,13 +17,14 @@
 
 ### Titres possibles
 
-1. **Le génie caché derrière la carte en temps réel d'Uber** (recommandé : recherche + curiosité)
+1. Le génie caché derrière la carte en temps réel d'Uber (recommandé jusqu'au 26/10 : recherche + curiosité)
 2. Uber a dû découper la planète en hexagones
 3. Comment fonctionne la carte en temps réel d'Uber ?
+4. **La carte d'Uber est une illusion (et c'est génial)** (retenu le 26/10)
 
 ### Miniature
 
-Retenue le 21/10 : [`noir-01.png`](../../ressources/miniatures/rendus/noir-01.png) (« elle existe ? »), en test A/B contre [`noir-01b.png`](../../ressources/miniatures/rendus/noir-01b.png). L'idée « COMMENT ?! » est abandonnée (voir la [fiche](fiche.md)).
+Retenue le 21/10 : [`noir-01.png`](../../ressources/miniatures/rendus/noir-01.png) (« elle existe ? »), en test A/B contre [`noir-01b.png`](../../ressources/miniatures/rendus/noir-01b.png). L'idée « COMMENT ?! » est abandonnée (voir la [fiche](fiche.md)). Le 26/10, le test devient `noir-01`, « HORS-JEU ? » et « 17 min » (voir [`miniature/propositions.md`](miniature/propositions.md)).
 
 ## 2. Description YouTube (à copier)
 

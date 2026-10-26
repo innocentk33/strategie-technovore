@@ -218,7 +218,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 - **Fréquence** : environ 1 semaine sur 3 (9 vidéos sur 27 d'ici fin avril).
 - **Trafic visé** : accueil et suggestions (il se place à côté des vidéos ByteMonk et Enrico Tartarotti).
 - **Exemples** :
-  1. *Le génie caché derrière la carte en temps réel d'Uber*.
+  1. *La carte d'Uber est une illusion (et c'est génial)*.
   2. *Comment 50 ingénieurs faisaient tourner WhatsApp pour 900 millions de personnes*.
   3. *Comment Google sait en une milliseconde que ton pseudo est déjà pris*.
 
@@ -434,7 +434,7 @@ Les cibles d'abonnés et de vues sont des estimations : les références du skil
 
 | Attribut | Valeur |
 |---|---|
-| **Titre** | Le génie caché derrière la carte en temps réel d'Uber |
+| **Titre** | La carte d'Uber est une illusion (et c'est génial) (26/10 ; avant : *Le génie caché derrière la carte en temps réel d'Uber*) |
 | **Stratégie de trafic** | Accueil d'abord |
 | **Mot-clé** | uber / comment fonctionne uber |
 | **Concurrence** | Faible côté ingénierie en français (Jared a fait l'histoire business) |
@@ -881,7 +881,7 @@ Chaque créneau se confirme au radar, deux semaines avant. Les faits (USSD et op
 | Rang | Idée | Titre | Format | Score | Créneau |
 |---|---|---|---|---|---|
 | 1 | 1 | 16 Go de VRAM suffisent-ils pour remplacer Claude ? | IA testé | 36/40 | 16 nov |
-| 2 | 2 | Le génie caché derrière la carte en temps réel d'Uber | Génie | 35/40 | 26 oct |
+| 2 | 2 | La carte d'Uber est une illusion (et c'est génial) | Génie | 35/40 | 26 oct |
 | 3 | 6 | Comment Waze sait qu'il y a un bouchon avant que tu le voies | Génie | 35/40 | 9 nov |
 | 4 | 3 | Comment 50 ingénieurs faisaient tourner WhatsApp pour 900 millions de personnes | Génie | 35/40 | 11 janv |
 | 5 | 5 | ArtCraft : il a recréé 7 logiciels Adobe avec une IA | IA récit | 35/40 | Publiée le 19 oct |
