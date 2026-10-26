@@ -143,7 +143,7 @@ Le README d'avril deux mille vingt-trois donne la réponse : de treize gigas, il
 [VISUEL : une barre de mémoire de 13 Go qui fond jusqu'à 3,9 Go ; le fichier entre enfin dans le MacBook.]
 [SON : « clac » quand il rentre.]
 
-[SI LE MODÈLE DE CLAUDE #1 ÉTAIT QUANTIFIÉ : « Et en fait, c'est encore le principe qu'on utilise aujourd'hui : le modèle que j'ai testé sur ma carte était lui aussi quantifié, en [TA QUANTIFICATION, EX. Q4]. »]
+[SI LE MODÈLE DE CLAUDE #1 ÉTAIT QUANTIFIÉ : « Et en fait, c'est encore le principe qu'on utilise aujourd'hui : le modèle de ma vidéo sur les seize gigas était lui aussi quantifié, en [SA QUANTIFICATION, EX. Q4]. » (Claude #1 est calculée depuis le 25/10 : pas de « j'ai testé ».)]
 
 Bon, sur un MacBook, ça passe. Mais les gens vont vite essayer beaucoup plus petit.
 

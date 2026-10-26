@@ -2,19 +2,70 @@
 
 > Pour la vidéo [« 16 Go de VRAM suffisent-ils pour remplacer Claude ? »](fiche.md) (sortie le 16 nov. depuis le 23/10). Recherche du 22/10/2026. Les chiffres sans source sont des **estimations** et sont marqués comme tels. `⚠️ à vérifier` = je n'ai pas pu le confirmer à la source.
 
+> **25/10 : plus d'essais** (ta décision : ça te prend trop de temps). Ce plan ne se lance plus. Le document reste la base du calcul de la vidéo, maintenant calculée ([fiche](fiche.md)) : les tailles de fichiers, ce que tes 32 Go de RAM permettent, et les mesures de tiers sur une 5080 (Hardware IA : 13 tok/s pour le Q4 qui déborde ; sudoingX : 53,4 tok/s sans MTP et 101,3 avec ; Luke's Dev Lab : 17 et 40 tok/s sur une carte bridée à 70 W). Les sections 2 à 5 (ordre des essais, installation, mesures, planning) restent pour mémoire.
+
 **Ta machine** : Ryzen 7 9700X (8 cœurs), B850M AORUS ELITE WIFI6E ICE, **32 Go** de DDR5-6000 (2 × 16 Go, EXPO déjà activé), RTX 5080 16 Go (Inno3D X3 OC), SSD 990 EVO Plus 2 To + P3 Plus 1 To, alimentation RM1000e. Tout ce document est calé sur cette machine.
 
-**Ce que ça change, en une phrase** : avec 32 Go de RAM, tout ce qui demande 40 Go ou plus (Qwen3.8-Flash-Next, Strata, DeepSeek) est exclu. Il reste les modèles qui tiennent dans la carte, plus les « petits » modèles à experts (MoE) dont on pose 5 à 10 Go d'experts en RAM.
+**Ce que ça change, en une phrase** : avec 32 Go de RAM, tout ce qui demande 40 Go ou plus (Qwen3.8-Flash-Next complet, DeepSeek) est exclu, sauf le Coder de Flash-Next via Strata, à tenter (correction du 24/10, section 0.2). Il reste les modèles qui tiennent dans la carte, plus les « petits » modèles à experts (MoE) dont on pose 5 à 10 Go d'experts en RAM.
 
 ---
 
 ## 0. À retenir avant tout
 
 1. **Le titre de la vidéo tient sur Qwen3.8-27B**, le modèle dense de Qwen sorti en août 2026, en quantification ISTA IQ3_S (11,77 Go). Son Q4 par défaut (16,46 Go) ne tient pas : d'après Hardware IA, le Q4 tombe à **13 tokens/s** sur une 5080 seule parce qu'il déborde en RAM. C'est ta scène « raté puis solution ».
-2. **Le brouillon doit changer** : Qwen3.8-Flash-Next via Strata ne tourne pas avec 32 Go de RAM (voir 1.3). Il passe en modèle « calculé » pour « Combien coûte Claude en local ? » (23 nov.).
+2. **Le brouillon doit changer** : Qwen3.8-Flash-Next complet ne tourne pas avec 32 Go de RAM (voir 1.3). Il passe en modèle « calculé » pour « Combien coûte Claude en local ? » (23 nov.). **24/10** : sa version Coder via Strata est à tenter (section 0.2).
 3. **Qwen 4 27B n'est pas sorti** au 22/10 : il a été annoncé (à l'Apsara du 22/09, d'après des sources secondaires), mais aucun poids n'est publié. Revérifie samedi matin.
 4. **Ollama** : la version actuelle est la **0.40.8** (21/10), pas la 0.40.6. La faille Bleeding Llama (CVE-2026-7482) est corrigée depuis la 0.17.1. Ollama n'a pas de clé d'API intégrée : ne l'expose pas sur le réseau.
 5. **Claude Code sur un modèle local fonctionne, mais Anthropic ne le prend pas en charge** : sa documentation dit qu'elle « ne prend pas en charge le routage de Claude Code vers des modèles autres que Claude ». Dis-le dans la vidéo : c'est du bricolage, et pi ou OpenCode sont prévus pour ça.
+
+### 0.1 Mise à jour du 24/10 : le modèle à lancer dans LM Studio
+
+- **Qwen3.8-Flash-Next ne passe pas dans LM Studio** : le plus petit fichier d'Unsloth (UD-IQ1_S) fait **72,5 Go**, et Unsloth demande « au moins 75 Go de RAM ou de mémoire unifiée ». Toi, tu as 16 + 32 = 48 Go, dont environ 40 utilisables.
+- **Mais avec Strata, sa version Coder est à tenter** (correction du 24/10, voir 0.2).
+- **Qwen 4 27B n'est toujours pas sorti** (annoncé à l'Apsara le 22/09, « en entraînement » au 13/10 d'après des sources secondaires).
+- **Le choix : Qwen3.8-27B ISTA `GSQ-RCO-IQ3_S-mtp`** (11,8 Go + 0,35 Go de tête MTP). D'après ISTA, ses fichiers « tournent sans modification dans llama.cpp, Ollama et LM Studio ». Dans LM Studio, cherche `ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF` et choisis le fichier dans la liste.
+  - Si l'écran reste branché sur la 5080, prends **`IQ3_XXS-mtp`** (10,1 Go) : il perd très peu (LiveCodeBench v6 à 84,6 contre 85,7 en BF16, mesure d'ISTA).
+- **Vitesse mesurée sur une RTX 5080 16 Go** (llama.cpp, pas LM Studio, Q3_K_M avec 64 K de contexte, dépôt communautaire sudoingX/qwen38-mtp) : **53,4 tok/s sans MTP, 101,3 avec MTP** (n-max 2), pour 15,4 Go de VRAM. Ça confirme le haut de l'estimation du tableau 1.1.
+- **MTP dans LM Studio** : il existe depuis la version 0.4.14, sur les GGUF seulement. Les exemples officiels sont des Qwen3.6 ; aucune source ne confirme Qwen3.8. `⚠️ à vérifier` : au chargement, l'option MTP doit apparaître. Si elle n'apparaît pas, mets à jour le moteur llama.cpp (Settings → Runtime) ; si elle manque toujours, la commande llama.cpp de la section 3.4 fait la même chose.
+- **Réglages de chargement dans LM Studio** : GPU Offload au maximum, Flash Attention activée, contexte à 32 K (64 K seulement si l'écran est sur l'iGPU), cache KV en q8_0 à essayer contre f16 (voir l'issue #27623). Pour la mesure du « raté » : `unsloth/Qwen3.8-27B-GGUF`, fichier `UD-Q4_K_M` (16,46 Go).
+- **« Répond vite »** : le mode thinking est actif par défaut en `xhigh`, donc le modèle réfléchit longtemps avant d'écrire. Garde-le pour les 3 tâches (c'est dans ce mode qu'ont été mesurés les scores de Qwen). Pour un plan de chat rapide, Qwen permet de le couper (`enable_thinking: false`, avec température 0,7, top-p 0,8, top-k 20 et presence penalty 1,5). Où se trouve cet interrupteur dans LM Studio : `⚠️ à vérifier`.
+- **Pour plus de vitesse, mais moins de niveau** : Qwen3.6-35B-A3B (tableau 1.1, ligne 2). Dans LM Studio, le réglage « Force model expert weights onto CPU » pose ses experts en RAM.
+- **Le concurrent : Swift 1.5 27B** (ajouté le 24/10, fiches Hugging Face lues ce jour-là). UkisAI a réentraîné Qwen3.8-27B pour qu'il réfléchisse moins.
+  - **La version à prendre** : `ukisai/Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF`, fichier `IQ3_S-mtp` (12,12 Go). Ce sont exactement les tailles et le découpage des fichiers d'ISTA, appliqués à Swift. Évite `ukisai/Swift-Qwen3.8-27B-GGUF` : c'est Swift **1.0**, avec des tailles classiques (IQ3_XS à 13,0 Go, Q4_K_M à 18,0 Go).
+  - **Ce qu'annonce UkisAI** (en BF16, réflexion en xhigh, 5 graines) : LiveCodeBench v6 à 81,7 % contre 76,8 % pour Qwen3.8-27B, Terminal-Bench 2.1 à 72,1 % contre 69,2 %, et environ 24 % de jetons en moins en code. En maths, il perd un peu (AIME 2026 : 96,0 % contre 98,7 %). Leur 76,8 % de base ne se compare pas au 85,7 d'ISTA : les deux bancs d'essai sont différents.
+  - **Les limites** :
+    - les seuls scores de code viennent d'UkisAI ;
+    - le seul test indépendant ([MindStudio](https://www.mindstudio.ai/blog/qwen3-8-27b-swift-vs-original-thinking), 19/09, une seule tâche avec un agent) porte sur Swift **1.0**. Swift a fini plus vite (35 min 52 contre 47 min 07), mais avec 5 fois plus de jetons, et son animation est restée bloquée. Celle de Qwen marchait jusqu'au bout ;
+    - sa compression est un peu moins fidèle que celle d'ISTA : en IQ3_S, l'écart (KLD) est plus grand sur 5 des 7 types de texte mesurés ;
+    - sa licence : Swift Open License 1.0, gratuite jusqu'à 1 M$ de revenus par an ;
+    - son MTP n'a pas été évalué. Pour la vitesse par jeton, il a la même architecture que Qwen3.8-27B, donc la même vitesse.
+  - **À faire** : la tâche 1 de la grille 4.4 avec les deux modèles, puis garder le meilleur. Si Swift ne gagne pas nettement, reste sur ISTA, dont le nom « Qwen3.8-27B » est plus simple à expliquer au public.
+
+### 0.2 Correction du 24/10 : Strata et le Coder de Flash-Next
+
+> **Décision du 24/10** : pas de démo Strata dans cette vidéo. La démo reste sur Qwen3.8-27B dans LM Studio, comparée à Claude Code en `--safe-mode` (fonctions `claude-ref` et `claude-local` dans ton profil PowerShell). Strata passe en calculé dans [Combien coûte Claude en local ?](../cout-claude-local/fiche.md). Raison : [Luke's Dev Lab, Qwen 3.8 27B vs Strata Coder](https://www.youtube.com/watch?v=xiMAxAQAfC4) (23/10), sur 16 Go de VRAM et 32 Go de RAM : le Coder écrit environ 2 fois plus vite (40 contre 17 tok/s, carte bridée à 70 W), mais le 27B est plus soigné et plus autonome. La section 3.7 reste pour mémoire.
+
+Le 22/10, j'avais écarté Strata en lisant seulement « 35 à 55 Go de RAM ». Sa doc (`docs/MODELS.md` et `docs/DETAILS.md`, lus le 24/10) prévoit ton cas.
+
+- **Ce qui tient** : le **Coder** d'ISTA-DASLab (`Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF`).
+  - C'est un Flash-Next **élagué** : il garde 256 des 512 experts de chaque couche, choisis sur du code (10 actifs par mot).
+  - D'après ses auteurs : 91,3 % du score SWE-bench Verified du modèle complet et 98,7 % de son LiveCodeBench v6.
+  - Le fichier chargé fait 29,6 Go, dont 23 Go d'experts. La table de 29 Go (Ngram) reste sur le SSD.
+  - Strata : « a 32 GB PC with a 12-16 GB GPU [runs] the Coder » en mode RAM réduite **résident**. Les experts que la carte ne garde pas sont copiés en RAM au démarrage, et rien n'est lu sur le SSD pendant les réponses.
+- **Dans la vidéo, ce n'est pas « Flash-Next »** mais « une version de Flash-Next réduite pour le code ». Les faits comptent.
+- **Les limites** :
+  - **Le français** : le Coder est « plus faible hors du code et dans les langues autres que l'anglais ». Un utilisateur a vu des réponses en chinois fausses ou qui bouclent (issue #438). Écris les prompts des 3 tâches en anglais ; un prompt en français peut faire une scène.
+  - **Pas de mesure publique sur ta config** : les mesures avec 32 Go de RAM sont sous Linux. Exemple : une RTX 3060 12 Go fait tourner Flash-Next IQ2_XS (modèle complet) à **43 à 50 tok/s**, avec 20,5 Gio d'experts en RAM. Le Coder fait 55 tok/s sur une RTX 5070 avec 64 Go de RAM (mesure de l'auteur).
+  - **Windows** : selon le README, Windows ne verrouille qu'environ la moitié de la RAM pour la carte graphique (d'où l'option `STRATA_PIN_BY_NEED`). Le premier chargement peut figer le PC 1 à 3 minutes.
+  - **Ce n'est pas LM Studio** : Strata a son propre moteur, qui reprend des parties de llama.cpp. Il sert les API OpenAI et Anthropic sur `127.0.0.1:8080`, le même port que llama-server dans ce plan : n'en lance qu'un à la fois.
+  - **Projet jeune** : créé le 24/09, environ 32 000 étoiles, 840 tickets ouverts, une version presque chaque jour (0.2.4 le 24/10). Note la version exacte dans la fiche d'essai. L'installeur n'est pas signé (SmartScreen).
+- **Le préréglage à corriger** : Strata compte RAM + VRAM − 5 Go = 43 Go et te range dans la tranche 40 Go. Il te propose donc Swift 1.5 IQ2_XS (39,2 Go). Or ses experts (35,5 Go) ne tiennent pas en RAM : ils seraient lus en partie sur le SSD, beaucoup plus lentement. Choisis le Coder : `START-HERE.bat --setup --family coder`. Dans le journal, vérifie que le mode est **resident** et non **mmap**.
+- **Disque** : environ 59 Go à télécharger (le fichier du Coder plus la table Ngram), et jusqu'à 23 Go de plus pour `experts.bin` en mode RAM réduite. Mets-le sur le 990 EVO Plus.
+- **Ce que ça change si ça tourne** : Flash-Next passe de « calculé » à « testé » (règle du pilier 2), et [Combien coûte Claude en local ?](../cout-claude-local/script.md) (23 nov.) peut le montrer. À décider après la mesure.
+
+Sources (24/10) : [Strata, README](https://github.com/Niko1221/Strata), [MODELS.md](https://github.com/Niko1221/Strata/blob/main/docs/MODELS.md), [DETAILS.md](https://github.com/Niko1221/Strata/blob/main/docs/DETAILS.md), [versions](https://github.com/Niko1221/Strata/releases), [ISTA-DASLab, Coder](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF).
+
+Sources du 24/10 : [Unsloth, Qwen3.8-Flash-Next](https://unsloth.ai/docs/models/qwen3.8-next) ; [ISTA-DASLab, GGUF](https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF) ; [Qwen, fiche Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B) ; [sudoingX/qwen38-mtp](https://github.com/sudoingX/qwen38-mtp) ; [LM Studio 0.4.14](https://lmstudio.ai/changelog/lmstudio-v0.4.14) ; [cellcog, Qwen 4](https://cellcog.ai/blog/qwen-4-release-date/).
 
 ---
 
@@ -50,7 +101,7 @@ Comment j'estime les vitesses : un modèle qui tient en VRAM écrit à peu près
 | Modèle | Raison |
 |---|---|
 | **Qwen3.8-Flash-Next** (125 milliards, 6 actifs, licence Qwen Community) | Les fichiers Unsloth font 72,5 Go et plus. Strata demande « au moins 32 Go de RAM et de VRAM ensemble », mais son premier chargement « peut figer le PC 1 à 3 minutes et demande 35 à 55 Go de RAM ». Sa version Coder « demande 32 Go de RAM ». Avec 32 Go dont 6 à 8 pris par Windows : **exclu**. |
-| **Strata** en général | Même raison. Son autre modèle, Qwen3.6-35B-A3B, se fait aussi bien avec llama.cpp (et les notes de version disent « Qwen3.6 sur Windows non testé »). |
+| **Strata** en général | ~~Même raison.~~ **Corrigé le 24/10** : le Coder de Flash-Next tient en mode RAM réduite résident (section 0.2). Son autre modèle, Qwen3.6-35B-A3B, se fait aussi bien avec llama.cpp (et les notes de version disent « Qwen3.6 sur Windows non testé »). |
 | **DeepSeek V4 Flash**, **GLM-5.x** | Faits pour 128 Go et plus. FreeToken (moteur MoE pour Windows et Linux, RTX 30/40/50) les vise, mais pas avec 32 Go. |
 | **Gemma 4 26B-A4B** | Faisable (MoE, 3,8 milliards actifs), mais faible en code : 25,8 sur SWE-bench Verified avec OpenCode (Liquid AI) et 37,2 sur Terminal-Bench 2.1 (NVIDIA). Qwen3.6 fait mieux en code au même prix. |
 | **Nemotron 3.5 Lightning 30B-A3B** | Terminal-Bench 2.1 : 24,6 (NVIDIA). Derrière Qwen3.6. |
@@ -67,7 +118,8 @@ Windows prend 6 à 8 Go (ton chiffre ; vérifie dans le Gestionnaire des tâches
 | Qwen3.6-35B-A3B UD-IQ4_XS (18,2 Go) | environ 5 Go | large | ✅ |
 | Qwen3.6-35B-A3B UD-Q4_K_M (22,7 Go) | environ 10 Go | correcte | ✅ |
 | Nemotron Bolt IQ2_XXS (22 Go) | environ 9 à 10 Go | correcte (Unsloth annonce 24 à 32 Go au minimum, RAM et VRAM comprises) | ⚠️ à tenter |
-| Flash-Next (40 Go et plus) | plus de 25 Go | insuffisante | ❌ |
+| Flash-Next complet (40 Go et plus) | plus de 25 Go | insuffisante | ❌ |
+| Flash-Next **Coder** via Strata (29,6 Go, mode RAM réduite résident) | ce que la carte ne garde pas, sur 23 Go d'experts | juste (Strata garde environ 10 Go pour Windows) | ⚠️ à tenter (24/10, section 0.2) |
 
 La vitesse de ta RAM limite celle des modèles MoE.
 - Théorie : DDR5-6000 en double canal = 96 Go/s.
@@ -359,6 +411,87 @@ Avant de lancer `opencode`, exporte la clé avec `export LLAMA_5080_KEY="$(secur
 
 **Premier test de bout en bout** : dans un dossier vide, lance `claude-5080 -p "Crée hello.py qui affiche Bonjour, puis exécute-le"`. Le fichier doit apparaître et s'exécuter. Refais le même test dans pi.
 
+### 3.7 Strata sur Windows : le Coder de Flash-Next (ajouté le 24/10)
+
+Pourquoi ce modèle et ses limites : section 0.2. Docs lues le 24/10 : `INSTALL.md`, `TERMINAL_LAUNCH.md`, `MODELS.md`, `DETAILS.md`, `TROUBLESHOOTING.md` du dépôt Niko1221/Strata.
+
+**a. Avant d'installer**
+- **Ferme LM Studio pour de bon** (icône près de l'horloge → Quit), sinon il garde de la VRAM et de la RAM. Strata a besoin des deux. S'il tourne en service : `lms unload --all` puis `lms server stop`. Les ports ne se gênent pas (LM Studio 1234, Strata 8080), c'est la mémoire qui compte.
+- **Arrête llama-server** s'il tourne : il prend le même port 8080.
+- **Ferme Chrome** et les gros programmes : avec 32 Go, chaque Go de RAM compte.
+- Pilote NVIDIA **580 ou plus** (`nvidia-smi`).
+- Au moins **90 Go libres** sur `D:` (990 EVO Plus).
+- Écran sur l'iGPU si possible : Strata garde alors 512 Mio de VRAM pour l'affichage au lieu de 1 536.
+
+**b. Installer le Terminal** (sans droits d'administrateur, dans `%LOCALAPPDATA%\Strata\terminal`)
+```powershell
+irm https://github.com/Niko1221/Strata/releases/latest/download/install.ps1 | iex
+```
+Pour le lire avant : `irm https://github.com/Niko1221/Strata/releases/latest/download/install.ps1 -OutFile $env:TEMP\strata-install.ps1`, puis `notepad $env:TEMP\strata-install.ps1`.
+
+Ouvre ensuite une **nouvelle** fenêtre PowerShell, puis lance `strata doctor` (il vérifie le PC et la carte).
+
+**c. Lancer le Coder** : `strata launch --data-dir D:\Strata`, puis dans les écrans :
+
+| Écran | Choix | Pourquoi |
+|---|---|---|
+| 2. Model | **Coder** (pas Swift 1.5, qu'il risque de proposer) | Seul modèle qui tient en RAM avec 32 Go (section 0.2) |
+| 3. Folder | `D:\Strata` | Le SSD rapide |
+| 4. Context | **64K**, mémoire en **8-bit** (`m`) ; 32K si l'écran dit « does not fit » | Le prompt système de Claude Code est long ; Strata teste ses connexions à 32K |
+| 5. Pictures | **No** | Inutile pour le code, et 0,9 Go de RAM gagnés |
+| 6. Parallel | **1** | Une requête à la fois |
+| 7. Tuning | **skip** au premier lancement, puis **quick** (environ 20 min, une seule fois) | Vérifier d'abord que ça démarre |
+| 8. Advanced | Ne touche à rien. Lis la commande exacte : elle doit contenir **`--resident-experts`**, pas `--mmap-experts` | En `mmap`, une partie des experts est lue sur le SSD, beaucoup plus lentement |
+| 9. Access | **This computer only** (127.0.0.1) si Claude Code tourne sur le PC ; **Tailscale** avec clé s'il tourne sur le Mac | « This computer only » n'a pas besoin de clé |
+| 10. Preset | `Coder 64K` | Pour relancer avec `strata launch --preset "Coder 64K"` |
+
+- **Premier chargement** : le PC peut figer 1 à 3 minutes, jusqu'à 10. N'y touche pas. S'il est encore figé après 10 minutes : redémarre, ferme tout, recommence.
+- **Si le moteur s'arrête au démarrage** : relance sans la couche MTP (environ 1 Go de VRAM), avec `--mtp off`.
+- **Si le PC rame une fois lancé** : le problème connu des PC de 32 Go se règle avec `--set STRATA_RESIDENT_PIN=0` (issue #649).
+- **Vérifier** :
+  - `strata status --url http://127.0.0.1:8080 --json` ;
+  - `strata monitor --url http://127.0.0.1:8080` : vitesses de lecture et d'écriture en direct, un bon plan à filmer ;
+  - `strata launch --show-key` affiche la clé si tu en as mis une. Ne la filme pas.
+- **Note dans la fiche d'essai** : la version (`strata update --check`), le mode `resident` ou `mmap`, le contexte et le MTP.
+
+**d. Brancher Claude Code**
+- Strata le prend en charge depuis la 0.1.17 : `ANTHROPIC_BASE_URL=http://127.0.0.1:8080` (sans `/v1`), un nom de modèle Claude que Claude Code connaît (Strata l'ignore), n'importe quel `ANTHROPIC_AUTH_TOKEN` (ou ta clé), et `CLAUDE_CODE_MAX_CONTEXT_TOKENS`.
+- Pour avoir la configuration exacte : `strata connect` affiche la liste des applications ; `strata connect <nom affiché pour Claude Code>` donne les variables ; ajoute `--check` pour envoyer un prompt et un appel d'outil de test.
+
+**e. Une comparaison équitable, sans clé d'API et sans tes MCP**
+- **`claude --safe-mode`** lance Claude Code sans CLAUDE.md, skills, plugins, hooks, serveurs MCP, commandes et mémoire auto. Ta connexion à l'abonnement, le choix du modèle et les outils de base marchent normalement (doc de Claude Code, `cli-reference`).
+  - Ne prends pas `--bare` : ce mode ne lit pas ta connexion claude.ai et demande une clé d'API.
+  - Utilise le **même** mode pour Claude (référence) et pour Strata : les deux ont alors exactement les mêmes outils.
+- **La tâche 3 teste une règle du CLAUDE.md**, que `--safe-mode` ne charge pas. Donne-la aux deux de la même façon : `--append-system-prompt-file .\CLAUDE.md`.
+- **Aucune requête ne part chez Anthropic avec Strata**, aucune clé d'API n'est demandée : tout va vers `127.0.0.1:8080`. Côté référence, c'est ton abonnement. Vérifie une fois que `$env:ANTHROPIC_API_KEY` est vide : s'il est rempli, Claude Code paierait à l'usage au lieu de passer par l'abonnement.
+- Deux fonctions pour ton profil PowerShell (`notepad $PROFILE`) :
+  ```powershell
+  # Référence : ton abonnement Claude, sans tes MCP ni tes plugins
+  function claude-ref { claude --safe-mode @args }
+
+  # Strata : même Claude Code, cerveau local
+  function claude-strata {
+    $vars = @{
+      ANTHROPIC_BASE_URL                       = "http://127.0.0.1:8080"
+      ANTHROPIC_AUTH_TOKEN                     = "strata"   # ou la clé de `strata launch --show-key`
+      ANTHROPIC_MODEL                          = "claude-sonnet-5-5"   # ignoré par Strata
+      CLAUDE_CODE_MAX_CONTEXT_TOKENS           = "65536"   # = le contexte choisi à l'écran 4
+      CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS   = "1"
+      CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC = "1"
+    }
+    try {
+      foreach ($k in $vars.Keys) { Set-Item "env:$k" $vars[$k] }
+      claude --safe-mode @args
+    } finally {
+      foreach ($k in $vars.Keys) { Remove-Item "env:$k" -ErrorAction SilentlyContinue }
+    }
+  }
+  ```
+  Le `finally` retire les variables en sortant, pour que `claude-ref` ne parte pas par erreur vers Strata.
+- **Vérifier** : dans `claude-strata`, `/status` doit montrer `http://127.0.0.1:8080` ; dans `claude-ref`, ta connexion claude.ai. Les deux sessions sans MCP : `/mcp` ne doit rien lister.
+- **Pour les 3 tâches** (section 4.4), écris les prompts **en anglais** : le Coder est plus faible dans les autres langues. Exemple pour la tâche 3 : `claude-strata --append-system-prompt-file .\CLAUDE.md`, puis le prompt.
+- Le niveau de réflexion par défaut de Strata est `high` : garde-le pour les mesures.
+
 ---
 
 ## 4. Mesures
@@ -500,7 +633,7 @@ Pour chaque tâche, note la réussite, le nombre de tes interventions, la durée
 - NVIDIA, Local AI Inference Recipes (recettes pour Windows, pilote 610.88 et CUDA 13.4, RTX 5090) : https://github.com/NVIDIA/local-ai-inference-recipes
 - NVIDIA, RTX 5080 (16 Go GDDR7, 256 bits, 360 W) : https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5080/
 - NVIDIA, notes de version de CUDA 13.4 (pilote 580 ou plus pour 13.x) : https://docs.nvidia.com/cuda/archive/13.4.2/cuda-toolkit-release-notes/index.html
-- Bande passante de 960 Go/s (30 Gbit/s) d'après la presse : https://www.notebookcheck.net/RTX-5080-will-boast-34-higher-memory-bandwidth-than-its-predecessor-according-to-recent-leak.933536.0.html
+- Bande passante de 960 Go/s (30 Gbit/s) d'après la presse : https://www.notebookcheck.net/RTX-5080-will-boast-34-higher-memory-bandwidth-than-its-predecessor-according-to-recent-leak.933536.0.html. **Confirmé le 25/10** par la fiche d'Inno3D de ta X3 OC (« Memory Clock 30Gbps », « 960 GB/sec ») : https://www.inno3d.com/product/inno3d-geforce-rtx-5080-x3-oc
 - Bande passante d'un seul CCD, d'après overclock.net : https://www.overclock.net/threads/amd-ddr5-oc-and-24-7-daily-memory-stability-thread.1800926/post-29086941
 - Repli mémoire de NVIDIA, d'après Cognex : https://docs.cognex.com/deep-learning_400/web/EN/deep-learning/Content/Topics/optimization/gpu-disable-shared.htm
 - Gigabyte B850M AORUS ELITE WIFI6E ICE (sorties HDMI et DisplayPort) : https://www.gigabyte.com/Motherboard/B850M-AORUS-ELITE-WIFI6E-ICE-rev-1x/sp

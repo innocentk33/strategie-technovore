@@ -10,7 +10,7 @@
 | **Format** | Longue, 9-11 min. **Testée** : capture d'écran de ton installation sur ta machine |
 | **Trafic visé** | Recherche (« ia en local », « lm studio », « ollama ») + suggestions à côté des vidéos « IA locale pour débutants » du mois |
 | **Mot-clé** | ia en local (18 376 par mois, +27 %, vidIQ 24/10, recherche de l'agent ; un autre appel du même jour donnait 21 403 : le volume bouge) ; installer ia en local (4 531, concurrence 28, vidIQ 24/10) ; ollama (9 849 en France) et lm studio (2 581 en France), vidIQ 23/10 |
-| **Type de hook** | Démonstration (le wifi coupé) + enjeu (Fable 5 coupé pour tout le monde) |
+| **Type de hook** | Démonstration (internet coupé, Google « inaccessible », et l'IA qui répond) + enjeu (Fable 5 coupé pour tout le monde) |
 | **Production estimée** | ~12-15 h (estimation : capture d'écran, peu d'animations) |
 
 ## Titres
@@ -23,7 +23,18 @@
 
 ## Miniature (charte verte, trois versions)
 
-Trois miniatures, comme pour chaque vidéo (règle du 24/10 dans `CLAUDE.md`) : a noir, b vert (la charte de la série, celle par défaut), c hors niche. Piste de scène : l'icône du wifi barrée, et une bulle de chat qui répond quand même. Le texte pose la question sans répéter le titre (« COUPÉ ? » ou « HORS LIGNE »). [CROCHET : ton choix, à travailler avec `/youtube thumbnail` puis `/coach-miniature-youtube`]
+Trois miniatures, comme pour chaque vidéo (règle du 24/10 dans `CLAUDE.md`) : a noir, b vert (la charte de la série, celle par défaut), c hors niche. **Piste corrigée le 25/10** : l'icône du wifi barrée n'est pas dans ta capture. Ce qu'elle montre, c'est la page « Ce site est inaccessible », puis Gemma qui répond quand même. La miniature reprend cette scène, qui est aussi le premier plan de la vidéo.
+
+- **a et b, « Hors ligne »** (même scène, seules les couleurs changent) :
+  - **fond** : la page d'erreur, recréée en grand et désaturée (la petite page triste, « Ce site est inaccessible ») ; pas de logo de Google ni de Chrome ;
+  - **premier plan**, sur les deux tiers de droite : la bulle de réponse de Gemma, en couleur (menthe `#07c095` pour b), avec trois lignes de texte et le curseur qui clignote ;
+  - **texte** : « HORS LIGNE », en haut à gauche ; sinon « ET POURTANT… » ;
+  - **la question qu'elle pose** : comment ça répond, si rien ne charge ? L'émotion : la surprise. Le titre complète (« installe ta propre IA ») sans répéter l'image ;
+  - **le risque** : à 168 px, la bulle doit se lire comme « ça répond » sans qu'on lise son texte. Teste-le dès la maquette (planche de lisibilité).
+- **c, hors niche, « Le piège »** : inspirée des chaînes de « scam baiting » (Kitboga, par exemple ; la vidéo d'origine est à noter dans `propositions.md` au moment des références) :
+  - le faux message du test 3, en gros, `sidedeouf.fr` et « accepté immédiatement » cerclés de rouge ;
+  - texte « IL TOMBE DEDANS ? » ;
+  - elle tient : la vidéo montre qu'il tombe dedans, puis qu'il se rattrape avec Think. Mais elle promet le test plus que l'installation : c'est le joker du test.
 
 Pas de logo d'Anthropic ni de capture d'une annonce de Fable 5 en miniature : le sujet, c'est ton IA à toi, pas l'affaire.
 
@@ -31,11 +42,11 @@ Pas de logo d'Anthropic ni de capture d'une annonce de Fable 5 en miniature : le
 
 Le meilleur moment tout de suite : la preuve qu'elle tourne chez toi.
 
-> « Je coupe le wifi. [VISUEL : l'icône du wifi qui se barre, puis LM Studio qui répond, en vrai, sur ta machine] Et mon IA me répond quand même. Le 12 juin, Anthropic a coupé Fable 5, le modèle le plus puissant qu'il ait jamais ouvert au public. Pour tout le monde. Trois jours après sa sortie. »
+> « Je coupe internet. [VISUEL : Google « Ce site est inaccessible », puis Gemma qui répond, en vrai, sur ta machine (capture du 24/10, 10:08-10:35)] Et mon IA me répond quand même. Le 12 juin, Anthropic a coupé Fable 5, le modèle le plus puissant qu'il ait jamais ouvert au public. Pour tout le monde. Trois jours après sa sortie. »
 
 Puis, avant 30 s : « Et ce n'était même pas son choix : c'est le gouvernement américain qui l'a exigé. Fable 5 est revenu 19 jours plus tard. Sauf que du coup, on sait une chose : ça peut arriver n'importe quand, chez n'importe quel fournisseur, même quand il n'est pas d'accord. Alors aujourd'hui, on installe une IA qui tourne chez toi, que personne ne peut te couper à distance. »
 
-Vérifié le 24/10 (`sources.md`, H1-H8) : sortie le 9 juin, coupure le 12 juin pour tous, retour le 1er juillet, tout confirmé par Anthropic ; une directive américaine de contrôle des exportations, qu'Anthropic a appliquée en disant ne pas être d'accord (citation exacte dans `sources.md`) ; « le plus puissant qu'il ait jamais ouvert au public », au passé (Mythos 5 existe, et Fable 5.1 est sorti en septembre). Coupe le wifi **après** avoir téléchargé le modèle. Le wifi coupé seul n'est pas unique (Tomatech et 100 % Futuriste ouvrent dessus) : c'est Fable 5 qui fait notre différence, il reste dans les 15 s.
+Vérifié le 24/10 (`sources.md`, H1-H8) : sortie le 9 juin, coupure le 12 juin pour tous, retour le 1er juillet, tout confirmé par Anthropic ; une directive américaine de contrôle des exportations, qu'Anthropic a appliquée en disant ne pas être d'accord (citation exacte dans `sources.md`) ; « le plus puissant qu'il ait jamais ouvert au public », au passé (Mythos 5 existe, et Fable 5.1 est sorti en septembre). Internet est coupé **après** le téléchargement du modèle et le test 1 (ta capture du 24/10). Le hook à jour est celui du [script](script.md) V3 (25/10). Internet coupé, seul, n'est pas unique (Tomatech et 100 % Futuriste ouvrent dessus) : c'est Fable 5 qui fait notre différence, il reste dans les 15 s.
 
 ## Texte et sous-texte
 
@@ -44,6 +55,8 @@ Vérifié le 24/10 (`sources.md`, H1-H8) : sortie le 9 juin, coupure le 12 juin 
 - **À ne pas recadrer** : ce n'est pas une vidéo contre le cloud. Tu utilises Claude, et tu le dis : le local, c'est le plan B qu'on contrôle, et ce qu'on garde pour soi.
 
 ## Contenu (plan)
+
+> Plan d'origine (24/10). Celui qui fait foi est le [script](script.md) V3 du 25/10, calé sur ta capture : plus de piège Bionic, plus de document, plus de tokens par seconde ; trois tests à la place.
 
 1. **Hook (0:00-0:30)** : voir plus haut.
 2. **Pourquoi une IA chez toi (0:30-2:30)**, trois raisons, une image chacune :

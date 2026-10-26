@@ -4,7 +4,7 @@
 
 **v2 du 22/10/2026** : corrections du [grill](grill-v1.md) appliquées sur le [brouillon v1](brouillon-v1.md).
 - **Accroche** : on garde « 30 660 € par mois » (ton choix), avec une phrase vers 0:20 qui annonce la version qui tient dans un PC gamer, pour tenir le « chez moi » de la miniature.
-- **Retournement** : il reprend les mesures de ton essai sur la 5080, faites pour Claude #1 (sorti le 16 nov.). Sortie de cette vidéo : **lun. 30 nov.** (inversée avec Claude #1 le 22/10, puis reculée de deux semaines avec lui le 23/10) ; **avancée au lun. 23 nov. le 24/10**, avant le Black Friday, une semaine après Claude #1. Le 24/10 aussi : la série s'appelle « Abonnement ou IA locale ? » ; dans la voix, pas de « épisode un », les renvois se font par le contenu.
+- **Retournement** : il reprend les mesures publiées rassemblées pour Claude #1 (sorti le 16 nov. ; plus d'essai sur la 5080 depuis le 25/10). Sortie de cette vidéo : **lun. 30 nov.** (inversée avec Claude #1 le 22/10, puis reculée de deux semaines avec lui le 23/10) ; **avancée au lun. 23 nov. le 24/10**, avant le Black Friday, une semaine après Claude #1. Le 24/10 aussi : la série s'appelle « Abonnement ou IA locale ? » ; dans la voix, pas de « épisode un », les renvois se font par le contenu.
 - **23/10 (soir), à ta demande** : la section « La facture d'électricité » sort (le seul coût est l'achat, partout sur la chaîne). Les timecodes après 9:00 reculent de 40 s.
 - Bloc technique allégé, Kimi K3 réduit à deux phrases, nombres arrondis dans la voix, antirez nommé, question au public sur le prix du Mac, tics corrigés.
 
@@ -239,9 +239,9 @@ Et pour une équipe qui paie Claude à l'usage ? Avec le budget du serveur, tu a
 
 Louer, acheter ou rester abonné, j'en fais une vidéo complète le quatre janvier.
 
-Et sur ma carte, sans un euro de plus ? Je l'ai testé dans une vidéo complète, avec le calcul en entier : carte déjà payée ou pas, contre Pro et contre Max. Si tu veux le détail, elle est là.
+Et sur ma carte, sans un euro de plus ? J'en ai fait une vidéo complète, avec les mesures de ceux qui ont la même carte et le calcul en entier : carte déjà payée ou pas, contre Pro et contre Max. Si tu veux le détail, elle est là.
 
-⟦à écrire : le résultat de Claude #1 en deux ou trois phrases. Quel modèle de 16 Go ou moins, sa vitesse mesurée, la tâche réelle et ce qu'il en a fait. Une scène vue à l'écran, pas un tableau.⟧
+⟦à écrire : le résultat de Claude #1 en deux ou trois phrases (calculé depuis le 25/10, plus d'essai). Quel modèle de 16 Go ou moins, sa vitesse d'après les mesures publiées (qui, quand), ce qu'il sait faire et ce qu'il rate. Une scène vue à l'écran, pas un tableau. Jamais « j'ai testé ».⟧
 
 [VISUEL : extrait de Claude #1, le compteur de tokens par seconde en grand ; carte YouTube vers la vidéo des 16 Go.]
 
@@ -265,7 +265,7 @@ Si tu diriges une équipe, fais le calcul avec tes volumes : en dessous de six c
 
 Trente mille euros par mois pour un cousin de Claude. Claude lui-même, personne ne sait combien il pèse.
 
-Ce que donne vraiment un modèle de seize gigas sur ma carte, tout est mesuré dans ma vidéo de test. Elle est juste là. Et dis-moi en commentaire quelle carte tu as.
+Ce que donne vraiment un modèle de seize gigas sur une carte comme la mienne, d'après ceux qui l'utilisent tous les jours, c'est dans ma vidéo sur les seize gigas. Elle est juste là. Et dis-moi en commentaire quelle carte tu as.
 
 [VISUEL : écran de fin, 20 s : « 16 Go de VRAM suffisent-ils pour remplacer Claude ? » à gauche, « S'abonner » à droite.]
 

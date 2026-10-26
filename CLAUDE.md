@@ -37,7 +37,7 @@ Quand une vidéo sort (l'auteur le dit, ou une vidéo publique apparaît dans `v
    - règles :
      - pas deux fois le même pilier de suite ;
      - au plus 1 vidéo de tendance sur 3 ;
-     - une vidéo IA est « testée » seulement si le modèle tourne sur la RTX 5080 (16 Go), sinon elle est « calculée » (voir `strategie.md`, pilier 2) ;
+     - toutes les vidéos IA sont « calculées » : sources, mesures publiées par les utilisateurs, études et calculs, sans essai sur la RTX 5080 (décidé le 25/10, voir `strategie.md`, pilier 2). Seule la vidéo d'installation (2 nov.) est filmée chez l'auteur ;
      - on ne copie pas l'angle ni la miniature d'un concurrent.
 5. **Écris** :
    - une entrée datée en tête de `etudes/radar.md` (chiffres + décision) ;

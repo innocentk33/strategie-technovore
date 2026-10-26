@@ -34,7 +34,7 @@
 
 **Place dans la série** (ta décision du 24/10, nuit : une progression douce) : la vidéo sort le 7 déc., la deuxième marche **après** [la vidéo d'installation](../installer-ia-locale/fiche.md) (2 nov.), et après Claude #1 (16 nov., testé) et Coût Claude (23 nov., calculé). Elle renvoie à la vidéo d'installation à 0:40 (carte YouTube) ; l'écran de fin pointe Claude #1, déjà en ligne.
 
-**Format** : vulgarisation, **calculé** (règle 1 dite à 0:30). Aucune vitesse, aucun benchmark à toi. Tant que tes essais sur la 5080 ne sont pas faits, tout ce qui tourne ou s'affiche chez toi est entre crochets.
+**Format** : vulgarisation, **calculé** (règle 1 dite à 0:30). Aucune vitesse, aucun benchmark à toi. Depuis le 25/10, plus d'essais sur la 5080 : les crochets d'essai ont été remplacés par leurs replis.
 
 **Conventions** : texte normal = voix off. `[VISUEL : …]` = animation ou capture. `[SON : …]` = bruitage ou musique. `[CROCHETS EN MAJUSCULES]` = à remplir par toi. Les noms de fichier s'écrivent en code dans les visuels et se disent comme ils se lisent (« IQ quatre XS »).
 
@@ -60,7 +60,7 @@ On dirait un mot de passe Wi-Fi. En fait, c'est une IA, en local. Dix-huit gigas
 
 Sauf que ma carte graphique en a seize.
 
-[CROCHET : CE QUI S'EST PASSÉ QUAND TU L'AS LANCÉ (TES ESSAIS DE CLAUDE #1), EN UNE PHRASE, SANS VITESSE. SANS ESSAI : « ET POURTANT, IL Y A UN MOYEN DE LE FAIRE TOURNER. »]
+Et pourtant, il y a un moyen de le faire tourner.
 
 Donc comment tu sais si un modèle rentre dans ton PC, avant de griller dix-huit gigas de data ?
 
@@ -233,7 +233,6 @@ Le plus connu, c'est llama.cpp, un logiciel libre. Et Ollama et LM Studio, que t
 Et le moteur ouvre une porte : une API. En gros, une adresse sur ton PC, où les autres programmes envoient leurs questions.
 
 [VISUEL : carte mentale, la case « API » s'allume : `http://localhost:…`, sans numéro de port.]
-[CROCHET : SI TES ESSAIS SONT FAITS, 5 S DU JOURNAL DE LLAMA-SERVER AU CHARGEMENT DU QWEN (DOSSIER VIDE EN ARRIÈRE-PLAN, AUCUN PROJET FLUTTER).]
 
 ---
 
@@ -322,13 +321,13 @@ Il reste ma question du début : dix-huit gigas, sur une carte de seize. Tu te r
 
 [VISUEL : le terrain revient : la carte graphique = le terrain principal, la RAM = un terrain annexe à côté. Une partie de l'effectif y passe ; quand un joueur de l'annexe est appelé, il s'allume sur place, avec une étiquette « processeur ». La barre « 18,2 Go » repasse sous la jauge « 16 Go ». Légende : « plan, d'après mon calcul ».]
 
-[CROCHET : CE QUE ÇA A DONNÉ À L'ESSAI : COMBIEN DE COUCHES SUR LA CARTE, COMBIEN D'EXPERTS EN RAM (JOURNAL DE LLAMA-SERVER), CE QU'AFFICHENT NVIDIA-SMI ET WINDOWS. SANS ESSAI : « LE RÉSULTAT, IL EST DANS MA VIDÉO SUR LES SEIZE GIGAS, JE TE LA METS LÀ. »]
+Ce que ça donne, d'après ceux qui l'ont mesuré, c'est dans ma vidéo sur les seize gigas. Je te la mets là.
 
 Et la prochaine fois que tu tombes sur un nom comme ça, tu fais le calcul avant de télécharger.
 
 [CROCHET : CE QUE TU UTILISES, TOI : UN MODÈLE, UN MOTEUR, UN HARNAIS. UNE PHRASE.]
 
-Écris en commentaire un nom de fichier à décoder, avec la mémoire de ton PC. Et si tu veux voir ces fichiers tourner pour de vrai, je les ai testés sur ma carte : la vidéo est juste là.
+Écris en commentaire un nom de fichier à décoder, avec la mémoire de ton PC. Et si tu veux savoir ce que ces fichiers donnent pour de vrai, j'ai rassemblé les mesures de ceux qui ont une carte comme la mienne : la vidéo est juste là.
 
 [VISUEL : écran de fin, 20 s : « 16 Go de VRAM suffisent-ils pour remplacer Claude ? » à gauche (en ligne depuis le 16/11), bouton « S'abonner » à droite.]
 
@@ -450,7 +449,7 @@ Non utilisés, volontairement (durée) : safetensors, les modèles gratuits d'Op
 
 ## Questions pour l'auteur
 
-1. **Le crochet du hook** : tes essais (23-24/10) seront faits avant ta voix (S2). Si le Qwen tourne, « et pourtant, il tourne » est le meilleur moment des 15 s. Une phrase, sans vitesse (la vidéo est calculée). Ça te va ?
+1. ~~**Le crochet du hook**~~ : **réglé le 25/10**, plus d'essais. Le repli « Et pourtant, il y a un moyen de le faire tourner » est écrit dans le script, comme celui de la fin.
 2. **« Dix-huit contre seize »** : je l'ai gardé dans le hook (le chiffre de la page qu'on télécharge, et celui de la boîte), et la section 3 rétablit « dix-sept contre seize dans la même unité ». L'autre option : dire « dix-sept » dès le hook (ce que tu verras dans Windows), mais le « dix-huit virgule deux, au chiffre près » de la règle perd son écho. Lequel ?
 3. **L'écran de fin** : **réglé le 24/10** (la vidéo sort le 7 déc., après Claude #1). Il pointe Claude #1, déjà en ligne. La dernière phrase dit « la vidéo qui vient juste après celle-ci » : elle reste vraie avant comme après le 16.
 4. **Le foot** : la fin dépend maintenant du bus et du terrain annexe. Si tu préfères rappeler le boss de Monster Hunter de Coût Claude pour la continuité, il faut refaire la fin avec lui.

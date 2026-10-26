@@ -24,7 +24,7 @@ Pour les idées qui portent un numéro, le hook, la miniature et le score sont d
 
 | Idée | Pilier | Score | Quand | Détail |
 |---|---|---|---|---|
-| Même carte, 2 fois plus rapide (testé sur ta 5080) | IA | 34/40 | Créneau radar (21/12 ou plus tard) | Idée 16. Signal du 22/10 : Code Unpacked (506 abonnés) fait 11,2 K en un jour avec « llama.cpp… 4× Faster » ([étude](etudes/outliers-2026-10-22.md)) |
+| Même carte, 2 fois plus rapide (calculé depuis le 25/10) | IA | 34/40 | Créneau radar (21/12 ou plus tard) | Idée 16. Signal du 22/10 : Code Unpacked (506 abonnés) fait 11,2 K en un jour avec « llama.cpp… 4× Faster » ([étude](etudes/outliers-2026-10-22.md)) |
 | Ton IA locale est-elle vraiment privée ? (sécurité : modèles piégés, Ollama ouvert sur le réseau) | IA | — | Créneau radar | Signal du 22/10 : Kai, « Your Local AI Is Not as Private as You Think », 208 K en 27 h ([étude](etudes/outliers-2026-10-22.md)). Ne pas reprendre son angle : trouver la croyance du public français à renverser, et tester sur ta machine |
 | Combien coûte [le modèle du moment] chez toi ? (calculé, la série de Kai et de Morgans Code) | IA | — | Créneaux radar | À noter au radar, modèle par modèle |
 | Les applis étudient ton cerveau et vivent de tes données (la 2e moitié de ton texte sur Windows Phone) | Génie | — | — | Proche de l'angle de Thibaut Dcode : à n'en faire une vidéo qu'avec un angle ingénierie |

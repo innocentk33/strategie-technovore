@@ -6,7 +6,7 @@
 | Champ | Détail |
 |---|---|
 | **Pilier** | IA chez moi (Help : vulgarisation, porte d'entrée de la série) |
-| **Format** | Longue, 12-14 min. **Mi-testée, mi-vulgarisation** (voir « Format » plus bas) |
+| **Format** | Longue, 12-14 min. **Calculée, vulgarisation** (plus d'essais depuis le 25/10 ; voir « Format » plus bas) |
 | **Trafic visé** | Recherche (« ia en local », 21 403 recherches/mois, +91 % sur 30 jours) + suggestions à côté des vidéos « IA locale pour débutants » |
 | **Mot-clé** | ia en local |
 | **Type de hook** | Énigme : un nom de fichier qu'on déchiffre |
@@ -61,8 +61,9 @@ La carte mentale en une phrase, à poser vers 0:25 et à refaire à la fin : **m
 
 ## Format : testé ou calculé ?
 
-- **Testé (léger, avec ta RTX 5080 de 16 Go)** : ce que tu peux **montrer** sans benchmark : `ls -lh` sur tes vrais fichiers (les tailles de `modeles-5080.md`) ; le journal de chargement de llama-server (combien de couches sur la carte, combien en RAM) ; `nvidia-smi` avant / après chargement ; « celui-ci tient, celui-là déborde » (le Q4 de Qwen3.8-27B à 16,46 Go d'après `modeles-5080.md`, contre l'IQ3_S à 11,8 Go). **Ne dis « testé » que pour ce que tu as vraiment lancé** ; les essais des 23-24/10 ne sont pas encore faits au moment où j'écris.
-- **Calculé / vulgarisation** : tout le reste. Dis-le dans les 30 premières secondes (règle 1 du calculé) : « aujourd'hui je ne mesure pas de vitesse, je t'apprends à lire ; les mesures, ce sera dans ma vidéo sur les 16 Go de VRAM » (elle sort le 16 nov., deux semaines après celle-ci). Les vitesses (tokens/s) : **hors sujet ici**, ne les cite pas.
+- **25/10 : plus de partie testée.** Toutes les vidéos IA sont calculées ; le script a pris ses replis (« Et pourtant, il y a un moyen de le faire tourner », puis « Ce que ça donne, d'après ceux qui l'ont mesuré… »). Le point qui suit reste pour mémoire.
+- ~~**Testé (léger, avec ta RTX 5080 de 16 Go)**~~ : ce que tu peux **montrer** sans benchmark : `ls -lh` sur tes vrais fichiers (les tailles de `modeles-5080.md`) ; le journal de chargement de llama-server (combien de couches sur la carte, combien en RAM) ; `nvidia-smi` avant / après chargement ; « celui-ci tient, celui-là déborde » (le Q4 de Qwen3.8-27B à 16,46 Go d'après `modeles-5080.md`, contre l'IQ3_S à 11,8 Go). **Ne dis « testé » que pour ce que tu as vraiment lancé** ; les essais des 23-24/10 ne sont pas encore faits au moment où j'écris.
+- **Calculé / vulgarisation** : tout le reste. Dis-le dans les 30 premières secondes (règle 1 du calculé) : « aujourd'hui je ne mesure pas de vitesse, je t'apprends à lire ; les mesures, ce sera dans ma vidéo sur les 16 Go de VRAM » (elle sort le 16 nov., trois semaines avant celle-ci depuis le 24/10, et ses mesures sont celles des utilisateurs, citées, depuis le 25/10). Les vitesses (tokens/s) : **hors sujet ici**, ne les cite pas.
 - Les tailles de fichier sont celles des **pages Hugging Face** (faits 13-15), pas des mesures de ton disque : vérifie avec `ls -l` quand tu as téléchargé.
 
 ## Ce qui parle aux PC de 8 Go (63 % de ton public est en Afrique, beaucoup de petites machines)

@@ -8,12 +8,21 @@
 - **Envies** : l'IA en local et raconter la tech.
 - **Style** : ta voix (enregistrée au téléprompteur depuis ArtCraft, ou clonée) et du motion design, sans visage.
 - **Rythme** : **une vidéo longue par semaine, le lundi à 18 h, aucun Short** (décidé le 21/10), en solo. **Objectif** : croissance.
-- **IA sans tester** : pour les modèles trop gros pour ta 5080, tu fais le calcul à partir des sources, comme Kai et Morgans Code (décidé le 21/10).
+- **IA sans tester** : toutes les vidéos IA sont calculées, comme chez Kai et Morgans Code : sources, mesures publiées par les utilisateurs, études et calculs. Seule la vidéo d'installation (2 nov.) est filmée chez toi (décidé le 25/10 : les essais te prennent trop de temps ; le 21/10, seuls les modèles trop gros pour ta 5080 étaient calculés).
 - **Flutter** : plus de nouvelles vidéos. **Chaîne** : on fait évoluer Technovore.
 
 ---
 
 ## 0. Ce qui change
+
+### Le 25/10 : plus aucun essai, toutes les vidéos IA sont calculées
+
+| Avant | Après | Pourquoi |
+|---|---|---|
+| Deux formats : **testé** (ce qui tient dans 16 Go) et **calculé** (le reste) | **Un seul format, calculé**, sauf la vidéo d'installation (2 nov.), filmée chez toi | Ta décision : les essais te prennent trop de temps. Kai et Morgans Code calculent presque tout, et ça marche ([`etudes/kai.md`](etudes/kai.md), [`etudes/morganscode.md`](etudes/morganscode.md)) |
+| Claude #1 (16 nov.) : démo de Qwen3.8-27B dans LM Studio contre Claude Code | **Claude #1 calculé** : les mesures publiées sur des cartes de 16 Go, les études et le calcul. Tes essais rapides (Qwen3.8-27B UD-IQ4_XS très lent, Gemma 4 12B QAT plutôt rapide) servent de vécu, sans chiffre | Plusieurs utilisateurs ont déjà mesuré et estimé ces modèles sur ta configuration ([`modeles-5080.md`](projets/claude-ou-mon-pc-1/modeles-5080.md)) |
+| « Mesure toi-même, ne cite pas Reddit » | **Cite les utilisateurs, datés, et croise-les** : au moins deux mesures concordantes pour un chiffre important, sinon dis qu'il n'y en a qu'une | Une mesure isolée de Reddit était le point faible de Kai ; plusieurs mesures croisées et datées deviennent ta force |
+| Claude #2 (18 janv.) et l'idée 16 testés | **Calculés** | Même décision |
 
 ### Le 23/10 (soir) : les scripts des 6 mois écrits d'avance
 
@@ -190,7 +199,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
   - Makertronic fait de l'actu hardware ;
   - Rudy IO et Nathan Inline montrent leurs configurations IA ;
   - en anglais, ByteMonk et Enrico Tartarotti font des explications d'ingénierie. **En français, personne ne raconte l'ingénierie des applis du quotidien.**
-  - en anglais, Kai et Morgans Code calculent le coût de l'IA locale, en dollars et sans tester. **Toi, tu comptes en euros, tu testes ce qui tient dans ta 5080 et tu calcules le reste à la source.** En français, personne ne fait ni l'un ni l'autre (radar du 21/10).
+  - en anglais, Kai et Morgans Code calculent le coût de l'IA locale, en dollars et sans tester. **Toi, tu comptes en euros, et tu croises les sources : mesures publiées par les utilisateurs, études, notes de version.** Tu as aussi la carte de 16 Go sous la main, ce qui te donne le vécu. En français, personne ne fait ce calcul (radar du 21/10).
 - **Micro-niche de départ** : « Le génie derrière l'app » + « Abonnement ou IA locale ? » (« Claude ou mon PC ? » jusqu'au 24/10).
 - **Élargissement prévu** :
   - **10 K abonnés** : les grandes histoires de la tech (Sony, llama.cpp, Plex, le streaming) ;
@@ -215,19 +224,19 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 ### Pilier 2 : « IA chez moi » (Hub + Help)
 - **But** : la tendance la plus forte (« ia en local » +215 %), avec tes vraies expériences.
-- **Deux formats, selon que le modèle tient ou non dans ta 5080** (décidé le 21/10) :
-  - **Testé**, la série **« Abonnement ou IA locale ? »** (sa playlist ; « Claude ou mon PC ? » jusqu'au 24/10 : on compare plusieurs abonnements à l'IA locale, pas seulement Claude). Pour ce qui tient dans 16 Go. On montre d'abord le résultat, on demande au public s'il vient de Claude Opus 5.5, on révèle que non, puis on explique comment c'est fait. Un épisode par nouveau modèle. Le thème « même carte, plus rapide » (le meilleur de Morgans Code, idée 16) se teste aussi chez toi.
-  - **Calculé**, pour ce qui ne tient pas (DeepSeek, Kimi, Claude). Le calcul part des sources, comme chez Kai et Morgans Code (« combien ça coûte ? », « N Go, ça suffit ? », « louer ou acheter ? »). C'est le format léger qui rend le rythme hebdomadaire tenable.
+- **Un seul format : calculé** (décidé le 25/10 ; du 21 au 24/10, ce qui tenait dans 16 Go devait être testé). Le calcul part des sources, comme chez Kai et Morgans Code (« combien ça coûte ? », « N Go, ça suffit ? », « louer ou acheter ? »). C'est le format léger qui rend le rythme hebdomadaire tenable. **Une exception** : la vidéo d'installation (2 nov.), une capture de ton écran.
+  - La série **« Abonnement ou IA locale ? »** (sa playlist ; « Claude ou mon PC ? » jusqu'au 24/10 : on compare plusieurs abonnements à l'IA locale, pas seulement Claude) : un épisode par nouveau modèle, avec ce qu'en disent les mesures publiées sur des cartes de 12 à 16 Go, puis le calcul. Le thème « même carte, plus rapide » (le meilleur de Morgans Code, idée 16) se calcule aussi.
+  - Les autres : ce qui ne tient pas dans 16 Go (DeepSeek, Kimi, Claude), le matériel et les prix.
 - **Règles du calculé** :
-  1. Dis-le dans les 30 premières secondes : « je n'ai pas cette machine, alors j'ai fait le calcul, et voici d'où viennent les chiffres ».
-  2. Chaque chiffre a sa source, datée dans `sources.md` : note de version, ticket GitHub, benchmark, prix relevé dans une boutique française. Ne recopie jamais un chiffre de Kai ou de Morgans : remonte à leur source.
-  3. Le calcul s'affiche à l'écran, puis on le confronte à une mesure : la tienne pour la partie qui tient dans 16 Go, sinon celle d'un tiers, citée.
-  4. Une estimation n'est jamais présentée comme une mesure. Écris « environ », « au mieux », « d'après X ».
+  1. Dis-le dans les 30 premières secondes : « je n'ai pas fait de banc d'essai : j'ai rassemblé les mesures de ceux qui l'ont fait, et j'ai fait le calcul. Voici d'où viennent les chiffres. »
+  2. Chaque chiffre a sa source, datée dans `sources.md` : note de version, ticket GitHub, benchmark, étude scientifique, mesure d'un utilisateur (Reddit, forum, GitHub, vidéo), prix relevé dans une boutique française. Ne recopie jamais un chiffre de Kai ou de Morgans : remonte à leur source.
+  3. Le calcul s'affiche à l'écran, puis on le confronte aux mesures publiées, citées. Pour un chiffre important, cherche au moins deux mesures qui concordent ; s'il n'y en a qu'une, dis-le.
+  4. Une estimation n'est jamais présentée comme une mesure. Écris « environ », « au mieux », « d'après X ». Tes impressions d'usage (« chez moi, ça m'a paru lent ») sont du vécu, pas une mesure : jamais de chiffre à toi, jamais « j'ai testé ».
   5. Des prix en euros, TVA comprise. Pas d'électricité : le seul coût compté est l'achat (décidé le 23/10).
 - **Fréquence** : **une semaine sur deux**, en alternance avec les deux autres piliers.
 - **Trafic visé** : accueil pour les épisodes, recherche pour les « combien ça coûte ».
 - **Exemples** :
-  1. *16 Go de VRAM suffisent-ils pour remplacer Claude ?* (Qwen sur RTX 5080, épisode 1 de « Abonnement ou IA locale ? »).
+  1. *16 Go de VRAM suffisent-ils pour remplacer Claude ?* (Qwen sur une carte de 16 Go, d'après les mesures publiées ; premier épisode d'« Abonnement ou IA locale ? »).
   2. *Il a recréé 7 logiciels Adobe avec une IA. J'ai testé son Photoshop.* (ArtCraft, le repo viral d'octobre).
   3. *Combien coûte Claude Opus 5.5 en local ? (j'ai fait le calcul)*.
 
@@ -246,7 +255,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 | Pilier | Type | Vidéos | Part |
 |---|---|---|---|
 | Le génie derrière l'app | Hub | 9 | 33 % |
-| IA chez moi | Hub (testé) et Help (calculé : « combien ça coûte », « louer ou acheter ») | 13 | 48 % |
+| IA chez moi | Hub (« Abonnement ou IA locale ? ») et Help (« combien ça coûte », « louer ou acheter »), tous calculés depuis le 25/10 sauf l'installation | 13 | 48 % |
 | Grandes histoires | Hero | 5 | 19 % |
 | **Total** | Hub ~60 % · Help ~20 % · Hero ~20 % | **27** | **100 %** |
 
@@ -385,7 +394,7 @@ Les cibles d'abonnés et de vues sont des estimations : les références du skil
 **Type détecté** : Commentaire / essai (`templates/commentary-channel.md`), en version explication animée.
 - **Équilibre Hero/Hub/Help** : appliqué via les trois piliers (voir l'équilibre plus haut).
 - **Erreur classique « tout miser sur l'actu »** : seuls les épisodes d'IA suivent l'actualité ; les vidéos « génie » durent des années.
-- **Erreur classique « personnalité qui s'efface »** : ta signature, c'est le dev qui ouvre le capot et qui teste chez lui, sur sa 5080. Garde le « je » dans chaque script.
+- **Erreur classique « personnalité qui s'efface »** : ta signature, c'est le dev qui ouvre le capot, fait le calcul et a la carte sous la main (depuis le 25/10, sans banc d'essai). Garde le « je » dans chaque script : ton vécu, tes prix, ton choix.
 
 ---
 
@@ -396,7 +405,7 @@ Les cibles d'abonnés et de vues sont des estimations : les références du skil
 
 ---
 
-### Idée 1 : Claude ou mon PC ? (épisode 1 : Qwen sur RTX 5080)
+### Idée 1 : Claude ou mon PC ? (épisode 1 : Qwen sur une carte de 16 Go, calculé depuis le 25/10)
 
 | Attribut | Valeur |
 |---|---|
@@ -408,7 +417,7 @@ Les cibles d'abonnés et de vues sont des estimations : les références du skil
 | **Tendance** | **En hausse, +215 %** |
 | **Durée** | 10-12 min |
 | **Niveau de RPM** | Élevé (tech/logiciel) |
-| **Urgence** | Tendance : le modèle doit encore être récent à la sortie. Essais les 23 et 24/10, **publication le 16 novembre** (avancée au 2 nov. le 22/10, revenue au 16 nov. le 23/10 derrière la vidéo qui pose les bases, aujourd'hui celle de l'installation (24/10) ; Coût Claude, le 23 nov., réutilise ses mesures) |
+| **Urgence** | Tendance : le modèle doit encore être récent à la sortie. **Publication le 16 novembre**, sans essai (ta décision du 25/10) (avancée au 2 nov. le 22/10, revenue au 16 nov. le 23/10 derrière la vidéo qui pose les bases, aujourd'hui celle de l'installation (24/10) ; Coût Claude, le 23 nov., réutilise ses mesures) |
 | **Score** | **36/40** (demande 9 · clic 9 · production 8 · niche 10) |
 
 **Hook** (ta structure) : « Cette app a été codée en quelques minutes par une IA. Claude Opus 5.5, tu penses ? … Non. Elle a été codée ici. [plan sur la 5080] Sans internet. Sans abonnement. »
@@ -417,6 +426,7 @@ Les cibles d'abonnés et de vues sont des estimations : les références du skil
 **À vérifier** : le nom exact et la version du modèle (« Qwen3.8 Flash ») au moment du tournage.
 **Source** : ton idée + Red Stapler.
 **Mise à jour du 18/10** : le titre met en avant la carte de 16 Go, et la vidéo absorbe le guide (idée 7) pour sortir avant le Black Friday. Chez Kai, les vidéos sur le matériel et le coût font environ 2 fois plus de vues que les tests de modèles ([`etudes/kai.md`](etudes/kai.md)).
+**Mise à jour du 25/10 : calculée.** Plus de démo, donc le hook de la révélation (« Claude ? Non, ma carte ») et les ratés filmés tombent. La vidéo s'appuie sur les mesures publiées sur des cartes de 16 Go (Hardware IA, sudoingX, Luke's Dev Lab : voir [`modeles-5080.md`](projets/claude-ou-mon-pc-1/modeles-5080.md)), les études et le calcul en quatre cas. Les ratés deviennent ceux qui sont documentés (le Q4 qui déborde en RAM). Nouveau hook à écrire au script, à partir du chiffre le plus fort (piste dans la [fiche](projets/claude-ou-mon-pc-1/fiche.md)). Score réestimé : **36/40** (demande 9 · clic 8 · production 9 · niche 10) : sans révélation, le clic baisse un peu ; sans essais, la production monte.
 
 ---
 
@@ -708,14 +718,14 @@ Pour prouver le titre avec un **jeu**, chercher un cas récent. Piste à sourcer
 
 | Attribut | Valeur |
 |---|---|
-| **Pilier** | IA chez moi, format **testé** (Hub) |
+| **Pilier** | IA chez moi, format **calculé** (Hub ; testé jusqu'au 25/10) |
 | **Stratégie de trafic** | Accueil + recherche |
 | **Mot-clé** | ia en local plus rapide / llama.cpp |
 | **Urgence** | Créneau radar (21/12 ou plus tard), quand un nouveau moteur ou une nouvelle compression fait parler |
 | **Score** | **34/40** (demande 8 · clic 8 · production 8 · niche 10) |
 
 **Hook** : « Même carte. Même modèle. Deux fois plus vite. Je n'ai rien acheté. »
-**Pourquoi** : c'est le meilleur thème de Morgans Code (26,8 K vues médianes sur 7 vidéos ; « 6× Faster Than llama.cpp », 62,9 K). Lui le calcule, toi tu le mesures sur ta 5080 : moteur, compression, cache.
+**Pourquoi** : c'est le meilleur thème de Morgans Code (26,8 K vues médianes sur 7 vidéos ; « 6× Faster Than llama.cpp », 62,9 K). Comme lui, tu le calcules (moteur, compression, cache), et tu le confrontes aux mesures publiées sur des cartes de 16 Go (décidé le 25/10 : plus d'essais).
 **Source** : [`etudes/morganscode.md`](etudes/morganscode.md).
 
 ---
@@ -908,7 +918,7 @@ Python et l'hommage au jeu vidéo passent devant des idées mieux notées pour d
   - remplacer les tags Flutter par défaut ;
   - appliquer le kit d'upload ([`projets/uber/upload.md`](projets/uber/upload.md), prêt le 21/10) ;
   - programmer la vidéo lun. 26 à 18 h.
-- **Essais sur la 5080 (ven. 23 et sam. 24)**, puis la **vidéo d'installation** (2 nov. : recherche, script et capture) et le script de **Claude #1** (16 nov.).
-- Script v2 de **Combien coûte Claude en local ?** (23 nov.) : fait le 22/10, à compléter avec les essais.
+- ~~Essais sur la 5080 (ven. 23 et sam. 24)~~ (abandonnés le 25/10 : toutes les vidéos IA sont calculées), puis la **vidéo d'installation** (2 nov. : recherche, script et capture) et le script de **Claude #1** (16 nov.), à partir des mesures publiées.
+- Script v2 de **Combien coûte Claude en local ?** (23 nov.) : fait le 22/10, à compléter avec les sources de Claude #1.
 
 **Ensuite** : l'ordre du [calendrier](calendrier.md), qui donne aussi le détail semaine par semaine jusqu'au 31 janvier. Les créneaux radar se remplissent à chaque sortie ([`etudes/radar.md`](etudes/radar.md)).

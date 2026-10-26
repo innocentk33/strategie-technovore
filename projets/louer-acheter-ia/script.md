@@ -251,9 +251,9 @@ Ce qu'elle fait tourner, c'est un modèle ouvert qui tient dans ses seize gigas.
 
 [VISUEL : la jauge « 16 Go » de la carte ; la barre « Qwen3.8-27B, 4 bits : ≈ 16,5 Go » qui dépasse en rouge, puis « 3 bits (IQ3_S) : ≈ 12 Go » qui rentre. Source : `claude-ou-mon-pc-1/modeles-5080.md` (UD-Q4_K_M 16,46 Go, IQ3_S d'ISTA 12,12 Go).]
 
-Est-ce que ça te suffit ? Ça, le calcul ne le dit pas. Du coup, je l'ai testé sur ma carte, dans une vidéo complète : si tu veux le détail, elle est là.
+Est-ce que ça te suffit ? Ça, le calcul seul ne le dit pas. Du coup, j'ai rassemblé les mesures et les avis de ceux qui ont une carte comme la mienne, dans une vidéo complète : si tu veux le détail, elle est là.
 
-⟦à écrire : le résultat de Claude #1 en deux ou trois phrases. Quel modèle, sa vitesse mesurée sur la 5080, la tâche réelle, et ce qu'il en a fait. Une scène vue à l'écran, pas un tableau.⟧
+⟦à écrire : le résultat de Claude #1 en deux ou trois phrases (calculé depuis le 25/10, plus d'essai). Quel modèle, sa vitesse sur une 5080 d'après les mesures publiées (qui, quand), ce qu'il sait faire et ce qu'il rate. Une scène vue à l'écran, pas un tableau. Jamais « j'ai testé ».⟧
 
 [VISUEL : extrait de Claude #1, le compteur de tokens par seconde en grand ; carte YouTube vers la vidéo des 16 Go.]
 
@@ -294,7 +294,7 @@ Alors avant de couper ou d'acheter quoi que ce soit, demande-toi de quel modèle
 
 Et toi, tu paies combien aujourd'hui, et quel modèle je calcule ensuite ? Dis-le en commentaire.
 
-Et ce que ce modèle fait vraiment sur ma carte, c'est dans ma vidéo de test, juste là.
+Et ce que ce modèle fait vraiment sur une carte comme la mienne, c'est dans ma vidéo sur les seize gigas, juste là.
 
 [VISUEL : écran de fin, 20 s : « 16 Go de VRAM suffisent-ils pour remplacer Claude ? » à gauche, « Combien coûte Claude en local ? » en second choix, « S'abonner » à droite.]
 
