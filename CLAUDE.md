@@ -64,6 +64,8 @@ Fichiers par ordre de production :
    - **l'enchaînement** : l'écran de fin pointe la vidéo suivante de la playlist du pilier, et une fiche tombe pendant le plateau de rétention.
 9. `miniature/` : `propositions.md`, maquettes HTML (`propositions/miniature.html?v=a|b|c`), PSD dans `photocraft/`.
 
+**Style de toutes les miniatures** (décidé le 03/11, d'après OpenCode piraté) : un visage ou un objet fort, net et en couleur, sur un fond très contrasté. Détails dans la section 2 de `ressources/miniatures/propositions.md`.
+
 **Trois miniatures par vidéo, pour « Tester et comparer »** (décidé le 24/10) :
 - **a, noir premium** : la charte `noir.html`, avec le sujet en gros au premier plan, en couleur, sur un décor désaturé ;
 - **b, couleurs de Technovore** : ardoise `#34495e` et menthe `#07c095`, la charte `vert.html` ;

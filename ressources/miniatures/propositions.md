@@ -30,6 +30,8 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 
 ### Communes aux deux chartes
 
+- **Un sujet fort sur un fond très contrasté** (décidé le 03/11, d'après le CTR d'OpenCode piraté, la meilleure de la chaîne) : un visage expressif ou un objet réel, net et en couleur, détouré sur un fond qui s'oppose à lui (sujet clair sur fond sombre, ou couleurs complémentaires). Ça vaut pour les deux chartes et pour les variantes a, b et c ; dans le vert, ça remplace le dessin au trait. À confirmer par les chiffres de Studio (CTR et impressions), sur 4 à 6 vidéos.
+
 - **Mise en page** : un objet héros à gauche (au moins 40 % de la largeur), le texte aligné à gauche vers x = 640-700, **dans la moitié haute** : la ligne principale finit au-dessus de y = 360 (règle du 24/10, voir le test des 50 % au § 5). Exception : la série « Abonnement ou IA locale ? ».
 - **Texte, 2 lignes au plus** :
   - une ligne de contexte grise de 4 mots au plus, seulement si elle dit ce que le titre ne dit pas ;
