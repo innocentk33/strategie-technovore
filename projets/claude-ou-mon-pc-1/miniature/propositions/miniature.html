@@ -1,0 +1,146 @@
+<!doctype html>
+<!-- Miniatures « 16 Go de VRAM suffisent (si tu prends le bon fichier) », 9 nov. 2026. ?v=a (noir premium) | b (couleurs Technovore) | c (hors niche, d'après carwow) | d (mains et contre-jour rouge, référence de l'auteur) | e (gravure N&B sur rouge, référence de l'auteur).
+     Rendu : ../rendre.sh ; récapitulatif : ../propositions.md -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:"Inter"; src:url(../../../../ressources/miniatures/fonts/inter-latin-wght.woff2) format("woff2"); font-weight:100 900; }
+  @font-face { font-family:"Archivo Black"; src:url(../../../../ressources/miniatures/fonts/archivo-black-latin-400.woff2) format("woff2"); }
+  @font-face { font-family:"Anton"; src:url(../../../../ressources/miniatures/fonts/anton-latin-400.woff2) format("woff2"); }
+  @font-face { font-family:"JetBrains Mono"; src:url(../../../../ressources/miniatures/fonts/jetbrains-mono-latin-500.woff2) format("woff2"); font-weight:500; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1280px; height:720px; overflow:hidden; }
+  body { position:relative; font-family:Inter, sans-serif; }
+  .bg, .glow, .gpu { position:absolute; }
+  .t { position:absolute; white-space:nowrap; }
+  .gpu { width:720px; transform-origin:50% 50%; }
+  .brand { position:absolute; left:34px; bottom:26px; display:flex; align-items:center; gap:10px; font-size:19px; }
+  .brand i { width:12px; height:12px; }
+  .row { position:absolute; display:flex; align-items:baseline; gap:.16em; white-space:nowrap; }
+  .row .t { position:static; }
+  .chip { position:absolute; font:800 34px/1 Inter; padding:7px 14px 9px; border-radius:10px; letter-spacing:-.02em; }
+
+  /* a : noir premium (charte noir.html) */
+  .a { background:#000; color:#f5f5f7; }
+  .a .bg { inset:0; opacity:.8; background-image:linear-gradient(rgba(58,58,60,.55) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(58,58,60,.55) 1.5px, transparent 1.5px);
+    background-size:64px 64px; background-position:-14px -26px; -webkit-mask-image:radial-gradient(ellipse 90% 90% at 30% 60%, #000 30%, transparent 90%); }
+  .a .glow { left:-500px; top:-260px; width:1800px; height:1500px; border-radius:50%; background:radial-gradient(closest-side, rgba(7,192,149,.6) 0%, rgba(7,192,149,.24) 40%, rgba(7,192,149,.08) 75%, transparent 100%); }
+  .a .gpu { filter:drop-shadow(0 0 2px rgba(190,255,235,.9)) drop-shadow(0 0 40px rgba(7,192,149,.75)) drop-shadow(0 40px 60px rgba(0,0,0,.9)); }
+  .a .ctx { font:700 46px/1 Inter; letter-spacing:-.02em; color:#8e8e93; }
+  .a .hero { font:800 150px/1 Inter; letter-spacing:-.045em; }
+  .a .ou { font-size:.42em; color:#8e8e93; font-weight:700; letter-spacing:-.02em; }
+  .a .good { color:#07c095; } .a .bad { color:#ff453a; }
+  .a .chip { background:#07c095; color:#000; }
+  .a .brand { color:#8e8e93; font-weight:600; } .a .brand i { border-radius:50%; background:#07c095; box-shadow:0 0 10px #07c095; }
+
+  /* b : couleurs Technovore (charte vert.html) : ardoise quadrillée, menthe seul accent */
+  .b { background:#34495e; color:#eff4f8; }
+  .b .bg { inset:0; background:linear-gradient(#42586e, transparent 260px), linear-gradient(#41576d 1px, transparent 1px) 0 0 / 32px 32px, linear-gradient(90deg, #41576d 1px, transparent 1px) 0 0 / 32px 32px; }
+  .b .glow { left:-500px; top:-260px; width:1800px; height:1500px; border-radius:50%; background:radial-gradient(closest-side, rgba(7,192,149,.55) 0%, rgba(7,192,149,.2) 40%, transparent 85%); }
+  .b .gpu { filter:drop-shadow(0 0 2px #e0e8f0) drop-shadow(0 0 34px rgba(7,192,149,.7)) drop-shadow(14px 18px 0 #1d2a37); }
+  .b .ctx { font:800 46px/1 Inter; letter-spacing:-.015em; color:#b4c1cf; }
+  .b .hero { font:400 150px/1 "Archivo Black"; letter-spacing:-.01em; }
+  .b .ou { font-size:.42em; color:#b4c1cf; font-family:Inter; font-weight:800; }
+  .b .good { color:#07c095; } .b .bad { color:#eff4f8; }
+  .b .chip { background:#07c095; color:#2f2e41; font-weight:900; }
+  .b .brand { color:#899aac; font:500 19px "JetBrains Mono"; } .b .brand i { border-radius:3px; background:#07c095; }
+
+  /* c : hors niche, d'après les « drag race » de carwow : plein jour, piste, deux machines identiques, étiquettes rouges */
+  .c { background:#9fd0ff; color:#fff; }
+  .c .bg { inset:0; background:linear-gradient(#3d8fe6 0%, #8cc6ff 38%, #dcefff 47%, #8fa77a 48.5%, #6f8a5c 52%); }
+  .c .road { position:absolute; left:0; top:0; width:1280px; height:720px; }
+  .c .gpu { width:570px; filter:drop-shadow(0 26px 18px rgba(0,0,0,.55)); }
+  .c .anton { position:absolute; font-family:Anton; line-height:1; white-space:nowrap; text-transform:uppercase; }
+  .c .main { font-size:118px; color:#fff; -webkit-text-stroke:10px #000; paint-order:stroke fill; text-shadow:0 8px 0 #000; }
+  .c .tag { font-size:96px; padding:6px 22px 12px; box-shadow:0 0 0 5px #fff, 0 10px 0 5px rgba(0,0,0,.35); }
+  .c .tag::after { content:""; position:absolute; left:50%; bottom:-26px; margin-left:-18px; border:18px solid transparent; border-top:20px solid var(--bgc); border-bottom:0; }
+  .c .tag small { font-size:.5em; margin-left:6px; }
+  .c .brand { display:none; }
+
+  /* d : d'après la référence de l'auteur (05/11) : objet sacré à contre-jour, fond rouge monochrome, fumée, deux mains qui n'osent pas toucher */
+  .d { background:#140003; color:#fff; }
+  .d .glow { left:-260px; top:-420px; width:1800px; height:1500px; border-radius:50%; background:radial-gradient(closest-side, #ff3a52 0%, #e0122c 28%, #a3071c 55%, #5c0310 80%, #2a0107 100%); }
+  .d .bg { inset:0; z-index:5; pointer-events:none; background:radial-gradient(ellipse 85% 95% at 50% 50%, transparent 60%, rgba(10,0,2,.6) 100%); }
+  .d .smoke { position:absolute; left:0; top:0; width:1280px; height:720px; mix-blend-mode:screen; }
+  .d .gpu { filter:brightness(.6) contrast(1.15) drop-shadow(0 0 2px #ff9aa6) drop-shadow(0 -4px 18px rgba(255,80,100,1)) drop-shadow(-3px 0 0 rgba(0,230,255,.28)) drop-shadow(3px 0 0 rgba(255,0,50,.5)); }
+  .d .main { position:absolute; width:360px; -webkit-mask-image:linear-gradient(#000 52%, transparent 88%); filter:grayscale(1) brightness(1.15) contrast(1.15) sepia(1) hue-rotate(-38deg) saturate(3.2) brightness(.85) drop-shadow(-4px 0 0 rgba(0,230,255,.35)) drop-shadow(4px 0 0 rgba(255,0,60,.55)) drop-shadow(0 0 18px rgba(0,0,0,.6)); }
+  .d .anton { position:absolute; font-family:Anton; line-height:1; white-space:nowrap; text-transform:uppercase; z-index:6; }
+  .d .hero { font-size:128px; color:#fff; letter-spacing:.01em; text-shadow:-4px 0 0 rgba(0,230,255,.55), 4px 0 0 rgba(255,0,60,.8), 0 0 40px rgba(255,40,70,.9), 0 6px 0 rgba(40,0,6,.9); }
+  .d .brand { display:none; }
+
+  /* e : d'après la référence de l'auteur (05/11, portrait gravé sur rouge) : rouge uni papier, la carte en gravure N&B, centrée-bas et coupée par le cadre, un mot blanc en haut */
+  .e { background:#e3120b; color:#fff; }
+  .e .paper { position:absolute; left:0; top:0; width:1280px; height:720px; mix-blend-mode:multiply; opacity:.5; }
+  .e .gpu { filter:drop-shadow(0 0 1px rgba(0,0,0,.6)); }
+  .e .hero { font:400 132px/1 "Archivo Black"; letter-spacing:-.01em; text-transform:uppercase; }
+  .e .brand { display:none; }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="bg"></div>
+<div id="stage"></div>
+<div class="brand"><i></i>technovore</div>
+<script>
+  const v = new URLSearchParams(location.search).get('v') || 'a';
+  document.body.className = v;
+  const IMG = '../photocraft/rtx5080-detoure.png';
+  const stage = document.getElementById('stage');
+  if (v === 'a' || v === 'b') {
+    // Même scène pour a et b (objet, texte, cadrage) : seules les couleurs et les polices de la charte changent.
+    // La vidéo s'ouvre sur ce plan : la carte de l'auteur, « 16 Go » en menthe dessus.
+    stage.innerHTML = `
+      <img class="gpu" src="${IMG}" style="left:-80px;top:290px;width:900px;transform:rotate(6deg)">
+      <div class="chip t" style="left:345px;top:423px;font-size:40px;transform:rotate(6deg)">16 Go</div>
+      <div class="t ctx" style="left:548px;top:52px;font-size:42px">même carte, même IA :</div>
+      <div class="hero row" data-w="700" style="left:540px;top:108px;font-size:178px"><span class="t good">101</span><span class="t ou">ou</span><span class="t"><span class="bad">13</span> ?</span></div>`;
+  } else if (v === 'd') {
+    // d : la carte au centre, à contre-jour, la chaleur qui monte d'elle, deux mains qui avancent sans la toucher
+    const HAND = '../photocraft/main-detouree.png';
+    stage.innerHTML = `
+      <svg class="smoke" viewBox="0 0 1280 720"><defs>
+        <filter id="fum" x="0" y="0" width="1280" height="720" filterUnits="userSpaceOnUse">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="45" result="pan"/><feTurbulence type="fractalNoise" baseFrequency="0.011 0.0035" numOctaves="5" seed="11"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 .55  0 0 0 0 .64  2.6 0 0 0 -.7"/>
+          <feComposite in2="pan" operator="in"/></filter>
+        <filter id="flou" x="-100%" y="-200%" width="300%" height="500%"><feGaussianBlur stdDeviation="40"/></filter>
+        <radialGradient id="panache" cx=".5" cy="1" r="1"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#fff" stop-opacity=".7"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+        <path d="M420 380 C390 250 330 120 290 -40 H990 C950 120 890 250 860 380 Z" fill="url(#panache)" filter="url(#fum)"/>
+        <ellipse cx="640" cy="360" rx="320" ry="70" fill="#ff5a72" opacity=".6" filter="url(#flou)"/></svg>
+      <img class="gpu" src="${IMG}" style="left:320px;top:360px;width:640px">
+      <img class="main" src="${HAND}" style="left:-124px;top:290px;transform:rotate(20deg)">
+      <img class="main" src="${HAND}" style="left:1044px;top:290px;transform:scaleX(-1) rotate(20deg)">
+      <div class="anton hero" style="left:50%;top:40px;transform:translateX(-50%)">trop petite ?</div>`;
+  } else if (v === 'e') {
+    // e : la 5080 en gravure, grande, centrée et coupée par le bas, le mot en haut au centre
+    stage.innerHTML = `
+      <svg class="paper" viewBox="0 0 1280 720"><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="4"/>
+        <feColorMatrix values="0 0 0 0 .25  0 0 0 0 0  0 0 0 0 0  1.6 0 0 0 -.62"/></filter>
+        <filter id="fibres"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.05" numOctaves="4" seed="9"/>
+        <feColorMatrix values="0 0 0 0 .3  0 0 0 0 0  0 0 0 0 0  1.2 0 0 0 -.5"/></filter>
+        <rect width="1280" height="720" filter="url(#grain)"/><rect width="1280" height="720" filter="url(#fibres)" opacity=".35"/></svg>
+      <img class="gpu" src="../photocraft/rtx5080-gravure.png" style="left:110px;top:300px;width:1060px">
+      <div class="t hero" style="left:50%;top:52px;transform:translateX(-50%)">ça rentre ?</div>`;
+  } else {
+    // c : la piste en perspective, deux 5080 identiques sur la ligne de départ, une étiquette par couloir
+    stage.innerHTML = `
+      <svg class="road" viewBox="0 0 1280 720"><path d="M560 345 H720 L1500 720 H-220 Z" fill="#55595f"/>
+        <path d="M560 345 H720 L1500 720 H-220 Z" fill="url(#g)"/><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9aa3ad" stop-opacity=".6"/><stop offset="1" stop-color="#2f3237" stop-opacity="0"/></linearGradient></defs>
+        <path d="M636 345 L644 345 L660 720 L620 720 Z" fill="#ffd60a"/>
+        <path d="M560 345 L-220 720" stroke="#f2f2f2" stroke-width="10"/><path d="M720 345 L1500 720" stroke="#f2f2f2" stroke-width="10"/></svg>
+      <img class="gpu" src="${IMG}" style="left:30px;top:415px;transform:perspective(900px) rotateX(28deg) rotate(-3deg)">
+      <img class="gpu" src="${IMG}" style="left:672px;top:415px;transform:perspective(900px) rotateX(28deg) rotate(3deg)">
+      <div class="anton main" style="left:44px;top:24px">même carte ?!</div>
+      <div class="anton tag" style="--bgc:#07c095;background:#07c095;color:#000;left:120px;top:176px">101<small>tok/s</small></div>
+      <div class="anton tag" style="--bgc:#e10600;background:#e10600;left:800px;top:176px">13<small>tok/s</small></div>`;
+  }
+  // Réduit la police des textes marqués data-w jusqu'à tenir dans cette largeur (px)
+  document.fonts.ready.then(() => document.querySelectorAll('[data-w]').forEach(e => {
+    let fs = parseFloat(getComputedStyle(e).fontSize);
+    while (e.getBoundingClientRect().width > +e.dataset.w && fs > 20) e.style.fontSize = (fs -= 2) + 'px';
+  }));
+</script>
+<script src="../../../../ressources/miniatures/export.js"></script>
+</body>
+</html>

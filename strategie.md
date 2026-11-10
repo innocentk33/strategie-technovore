@@ -8,7 +8,7 @@
 - **Envies** : l'IA en local et raconter la tech.
 - **Style** : ta voix (enregistrée au téléprompteur depuis ArtCraft, ou clonée) et du motion design, sans visage.
 - **Rythme** : **une vidéo longue par semaine, le lundi à 18 h, aucun Short** (décidé le 21/10), en solo. **Objectif** : croissance.
-- **IA sans tester** : toutes les vidéos IA sont calculées, comme chez Kai et Morgans Code : sources, mesures publiées par les utilisateurs, études et calculs. Seule la vidéo d'installation (2 nov.) est filmée chez toi (décidé le 25/10 : les essais te prennent trop de temps ; le 21/10, seuls les modèles trop gros pour ta 5080 étaient calculés).
+- **IA sans tester** : toutes les vidéos IA sont calculées, comme chez Kai et Morgans Code : sources, mesures publiées par les utilisateurs, études et calculs. Exceptions filmées chez toi : l'installation (2 nov.) et le test de Strata (16 nov., ta décision du 05/11) (décidé le 25/10 : les essais te prennent trop de temps ; le 21/10, seuls les modèles trop gros pour ta 5080 étaient calculés).
 - **Flutter** : plus de nouvelles vidéos. **Chaîne** : on fait évoluer Technovore.
 
 ---

@@ -11,7 +11,7 @@
 
 | Vidéo | Chaîne | Vues | Ce que tu en tires |
 |---|---|---|---|
-| [Qwen 3.8 27B en dos GPUs de 16 GB: de 13 a 66 tokens](https://www.youtube.com/watch?v=rH993Bf1sK8) (ES, 01/09) | Hardware IA (1,7 K abonnés) | 18 K | **La seule mesure trouvée sur une RTX 5080** : d'après lui, Qwen 3.8 27B en Q4 dans LM Studio donne **13 tokens/s** sur sa 5080 seule, parce que le fichier déborde en RAM. Son protocole est simple à copier : le même prompt (un Arkanoid en un seul fichier HTML), **température 0 et seed 42**, puis on compare les jeux obtenus. Le prompt exact est dans sa description. Outil de mesure : [nvitop](https://github.com/XuehaiPan/nvitop). |
+| [Qwen 3.8 27B en dos GPUs de 16 GB: de 13 a 66 tokens](https://www.youtube.com/watch?v=rH993Bf1sK8) (ES, 01/09) | Globalcobots (1,7 K abonnés ; « Hardware IA » n'est qu'un hashtag, corrigé le 07/11) | 18 K | **La seule mesure trouvée sur une RTX 5080** : d'après lui, Qwen 3.8 27B en Q4 dans LM Studio donne **13 tokens/s** sur sa 5080 seule, parce que le fichier déborde en RAM. Son protocole est simple à copier : le même prompt (un Arkanoid en un seul fichier HTML), **température 0 et seed 42**, puis on compare les jeux obtenus. Le prompt exact est dans sa description. Outil de mesure : [nvitop](https://github.com/XuehaiPan/nvitop). |
 | [Qwen 3.8 27B first tests - 16GB Local LLM setup](https://www.youtube.com/watch?v=1EzVVj7DFPc) (15/08) | Luke's Dev Lab (17,6 K) | 181 K (×7,9) | La grille de test la plus complète sur 16 Go, en 9 épreuves : vitesse, mémoire, agent, HumanEval, Kanban, sable, donjon, Blender, Godot. **Ses fichiers de configuration et ses prompts sont publics** : [github.com/lukesdevlab/youtube](https://github.com/lukesdevlab/youtube). Reprends 2 ou 3 de ses épreuves, pas les 9. |
 | [Qwen 3.8 27B: 16GB VRAM Local Test](https://www.youtube.com/watch?v=bTaN5VYCN58) (15/08) | kintu (3,3 K) | 49 K (**×42,9**) | Une petite chaîne qui explose avec ton sujet exact sur une carte de 16 Go (RTX 5060 Ti, 64 Go de RAM). Le chapitre « llama.cpp Config » (0:25) montre les réglages. Il termine sur une comparaison avec Claude Opus. |
 
@@ -57,7 +57,7 @@
 
 ## Ordre de visionnage conseillé (environ 1 h 30, à 1,5×)
 
-1. **Hardware IA** : la seule mesure sur ta carte, et son protocole.
+1. **Globalcobots** (vidéo espagnole, « Hardware IA » est un hashtag) : la seule mesure sur ta carte, et son protocole.
 2. **Luke's Dev Lab, Qwen 3.8 27B 16GB** : récupère ses configurations sur GitHub.
 3. **Kai, les quantifications** (de 2:15 à 11:00) : pour choisir le fichier.
 4. **James Layne** (de 0:00 à 5:30) : pour choisir le harnais.

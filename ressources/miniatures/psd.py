@@ -1,5 +1,6 @@
 """Fichiers PhotoCraft à calques : le décor (rendu sans texte) + un calque de texte modifiable par texte de la page.
 Usage : python3 -I psd.py [vert|noir] [n …]   (sans argument : toutes) → photocraft/<style>-NN.psd
+        python3 -I psd.py --page <maquette.html> <dossier de sortie> [v …]   (maquettes d'un projet, ?v=a|b|c) → <dossier>/<v>.psd
 Pour vérifier un PSD : photocraft-cli convert photocraft/vert-01.psd /tmp/vert-01.png
 """
 import html, json, pathlib, re, subprocess, sys, tempfile
@@ -18,8 +19,12 @@ def chrome(url, *args):
 
 
 def build(style, n, tmp):
-    url = f"file://{HERE}/{style}.html?n={n}"
     name = f"{style}-{int(n.rstrip('b')):02d}{'b' if n.endswith('b') else ''}"
+    build_url(f"file://{HERE}/{style}.html?n={n}", OUT / f"{name}.psd", tmp)
+
+
+def build_url(url, psd, tmp):
+    name = psd.stem
     decor = pathlib.Path(tmp) / f"{name}.png"
     chrome(url + "&layer=decor", f"--screenshot={decor}")
     dump = re.search(r'<pre id="dump">(.*?)</pre>', chrome(url + "&dump=1", "--dump-dom"), re.S)
@@ -43,12 +48,16 @@ def build(style, n, tmp):
             pos += len(r["t"])
         if it["opacity"] < 1:
             cmd += ["--cmd", "layer.setProps", "--params", json.dumps({"opacity": it["opacity"]})]
-    psd = OUT / f"{name}.psd"
     subprocess.run(cmd + ["--out", str(psd)], capture_output=True, text=True, check=True)
     print(name, len(items), "calques de texte")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and sys.argv[1:2] == ["--page"]:
+    page, out = pathlib.Path(sys.argv[2]).resolve(), pathlib.Path(sys.argv[3]).resolve()
+    with tempfile.TemporaryDirectory() as tmp:
+        for v in sys.argv[4:] or ["a", "b", "c"]:
+            build_url(f"file://{page}?v={v}", out / f"{v}.psd", tmp)
+elif __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     styles = [sys.argv[1]] if len(sys.argv) > 1 else ["vert", "noir"]
     kept = {"vert": "2 5 9 10", "noir": "1 1b 3 4 6 7 8"}

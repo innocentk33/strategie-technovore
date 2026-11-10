@@ -1,5 +1,7 @@
 # Combien coûte Claude en local ?
 
+> **05/11** : récupère de [Claude #1](../claude-ou-mon-pc-1/fiche.md) (section 5 de sa fiche) le calcul en quatre cas et les conseils d'achat (neuf et occasion), retirés du script du 9 nov. pour le garder court.
+
 > **Publication : lun. 23 nov. à 18 h** (avancée du 4 janv. au 2 nov. le 21/10, reculée au 16 nov. le 22/10 pour réutiliser les essais de [Claude #1](../claude-ou-mon-pc-1/fiche.md), au 30 nov. le 23/10, quand Claude #1 est passé au 16 nov., puis au 23 nov. le 24/10, à ta demande, pour sortir avant le Black Friday). Format **calculé** : les règles sont dans [`strategie.md`](../../strategie.md), pilier 2. Planning : [`calendrier.md`](../../calendrier.md), S4-S5. Études : [`etudes/kai.md`](../../etudes/kai.md) (idée 2) et [`etudes/morganscode.md`](../../etudes/morganscode.md).
 
 **Origine** : la série de Kai « What Would It Cost to Run [modèle] Locally? », qui compte 4 de ses 7 plus gros succès. Par exemple [Claude Fable 5](https://www.youtube.com/watch?v=fXWFSTSvnVM) (105 K vues, x38), [Claude Opus 5](https://www.youtube.com/watch?v=yJCHNdQ8sLs) (166 K vues, x23,5) et [DeepSeek V4.1 Flash](https://www.youtube.com/watch?v=04ePeOyRN0k) (529 K vues, x20,9). Personne ne fait ce format en français.

@@ -24,6 +24,30 @@
 
 ---
 
+## 05/11/2026 : bilan d'Uber, de l'IA locale et d'OpenCode (captures de Studio)
+
+| | IA locale (2/11) | Uber (26/10) | OpenCode (21/10) | ArtCraft (19/10) |
+|---|---|---|---|---|
+| Vues | 195-209 | 221 | 479 | 608 |
+| Impressions | 1,3 K | 4,4 K | 2,3 K | 10,5 K (21/10) |
+| CTR | 2,0 % | 1,3 % | **4,2 %** | 0,9 % |
+| % regardé | **41,2 %** (3:53) | 26,8 % (2:41) | 21,3 % (1:50) | 28 % |
+| Rétention 0:15 / 1:00 (courbe) | ~70 % / **~50 %** | ~65 % / ~45 % | ~65 % / ~35 % | 66 % / 47 % |
+| Commentaires | **7** | 0 | 1 | 1 |
+| Part des suggestions | 8,6 % | 24 % | 4,2 % (Accueil 79 %) | 98 % |
+
+- **IA locale** : le meilleur contenu de la chaîne (1:00 à 50 %, remontée entre 1:00 et 2:00, plateau à 50 % jusqu'à 3:30). Elle pèche par le clic.
+- **Uber** : YouTube l'a beaucoup montrée, mais personne n'a cliqué. Le titre est trop abstrait. **On la laisse tomber** (décision du 05/11) et on optimise les vidéos suivantes.
+- **OpenCode** : le drame fait cliquer, mais le contenu ne tient pas la promesse (plateau à 15 %).
+- **Suggestions** : les vidéos qui nous suggèrent n'ont rien à voir avec nous (JDG, trading, foot, Edenred…). YouTube n'a pas encore classé le nouveau format.
+
+**Décision (05/11)** : 3 vidéos « IA chez moi » pour 1 vidéo « histoire / génie ». La règle « pas deux fois le même pilier de suite » tombe. La prochaine vidéo est une vidéo IA locale : elle garde le fond de la vidéo d'installation et l'emballage d'OpenCode (enjeu, question, verdict), et vise 75 % à 0:15.
+
+**Ajout du 05/11 (recherche sur le web ; `vidiq_outliers` indisponible dans cette session)** :
+- **DeepSeek Super-Agent** (`dsh-superagent`, MIT, 31/10) : un prototype de recherche, un agent de code pour les équipes qui lit les discussions Feishu, sans benchmark publié. Trois grosses chaînes françaises l'ont déjà traité (selon l'auteur), et ce n'est pas de l'IA locale pour notre public. **On ne le fait pas.**
+- **Higgsfield contre ComfyUI** (fin octobre) : un concours à environ 25 K$ pour recréer Higgsfield en open source, suivi d'une mise en demeure sous 48 h. La vidéo envoyée par l'auteur (`znrYe8yVQ_Q`, en anglais, 85 K vues, 3/11) en parle. C'est un bon récit « open source contre géant », mais sur la vidéo IA, pas les LLM locaux. **Candidat pour un créneau histoire** (15 févr.), pas pour un créneau proche.
+- Calendrier : Claude #1 (« 16 Go suffisent », avec Strata) passe au 9 nov., « nom d'un modèle » au 16 nov.
+
 ## 23/10/2026 : radar des idées (le 8 mars, à la place de Mobile Money)
 
 Pas une sortie de vidéo : l'auteur a abandonné Mobile Money (« je n'aime pas l'idée ») et llama.cpp a pris son créneau du 8 févr. Il fallait une vidéo pour le 8 mars, entre deux créneaux IA, donc **génie ou histoire**. Environ 15 appels vidIQ.

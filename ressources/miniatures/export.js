@@ -4,7 +4,7 @@
 document.fonts.ready.then(() => setTimeout(() => {
   const q = new URLSearchParams(location.search);
   const hex = c => '#' + c.match(/\d+/g).slice(0, 3).map(v => (+v).toString(16).padStart(2, '0')).join('');
-  const font = f => /Archivo/.test(f) ? 'Archivo Black' : /JetBrains/.test(f) ? 'JetBrains Mono' : /Inter/.test(f) ? 'Inter' : /Mono/.test(f) ? 'Menlo' : 'System Font';
+  const font = f => /Anton/.test(f) ? 'Anton' : /Archivo/.test(f) ? 'Archivo Black' : /JetBrains/.test(f) ? 'JetBrains Mono' : /Inter/.test(f) ? 'Inter' : /Mono/.test(f) ? 'Menlo' : 'System Font';
   const items = [...document.querySelectorAll('.t')].filter(e => {
     const m = new DOMMatrix(getComputedStyle(e).transform);
     return Math.abs(m.b) < 1e-3 && getComputedStyle(e).display !== 'none';

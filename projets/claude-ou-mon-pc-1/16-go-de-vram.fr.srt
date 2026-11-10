@@ -1,0 +1,675 @@
+1
+00:00:00,000 --> 00:00:04,600
+Sur une carte de jeu avec 16 Go de VRAM,
+quelqu'un arrive à faire tourner Qwen.
+
+2
+00:00:04,600 --> 00:00:08,840
+Un vrai modèle de 27 milliards de
+paramètres, à 101 tokens par seconde.
+
+3
+00:00:08,840 --> 00:00:13,480
+Plus vite que tu ne lis. Un autre utilisateur,
+même carte, même modèle : 13 tokens/s.
+
+4
+00:00:13,480 --> 00:00:18,320
+8 fois moins. Et chez moi, ce Qwen m'a paru
+super lent. Du coup, 16 Go, ça suffit ou pas ?
+
+5
+00:00:18,320 --> 00:00:23,440
+Entre 101 et 13, il y a une grosse
+différence. Et cette différence,
+
+6
+00:00:23,440 --> 00:00:27,380
+c'est le fichier. Un fichier qui
+rentre, et un fichier qui déborde.
+
+7
+00:00:27,380 --> 00:00:31,540
+Alors on fait les comptes de ta carte. Et à
+la fin, je te dis ce qui clochait chez moi.
+
+8
+00:00:31,540 --> 00:00:35,800
+Donc, vois ta carte comme un budget.
+Trois choses se la partagent :
+
+9
+00:00:35,800 --> 00:00:40,320
+le fichier du modèle, la mémoire de la
+conversation, et l'agent, si tu codes avec.
+
+10
+00:00:40,320 --> 00:00:45,320
+Le même modèle existe en plusieurs
+fichiers. En gros, c'est le JPEG de l'IA.
+
+11
+00:00:45,320 --> 00:00:49,700
+On garde moins de bits par paramètre, le fichier
+devient plus léger, et on perd un peu de qualité.
+
+12
+00:00:49,700 --> 00:00:54,680
+C'est ce qu'on appelle la quantisation. Et là,
+premier piège : les gigas. Ta carte de 16 Go,
+
+13
+00:00:54,680 --> 00:01:00,400
+en vrai, c'est 17,2 milliards d'octets.
+Parce qu'en mémoire, on compte par paquets
+
+14
+00:01:00,400 --> 00:01:04,640
+de 1024. Les sites où tu télécharges
+les modèles, par contre, comptent en
+
+15
+00:01:04,640 --> 00:01:09,040
+milliards tout ronds. Donc un fichier de
+16 Go et demi, sur le papier, il rentre.
+
+16
+00:01:09,440 --> 00:01:13,560
+Sauf que Windows se sert aussi de ta
+carte, pour afficher ton écran par exemple.
+
+17
+00:01:13,560 --> 00:01:19,860
+Et ça, ça compte pour environ 1 Go. Résultat
+: le Q4_K_M, le 4 bits qu'on te propose
+
+18
+00:01:19,860 --> 00:01:28,320
+le plus souvent, fait entre 16 Go et
+demi et 19 Go, selon celui qui le publie.
+
+19
+00:01:28,440 --> 00:01:32,660
+Donc il ne passe pas, avant même que tu
+aies tapé un mot. Il existe des 4 bits plus
+
+20
+00:01:32,660 --> 00:01:38,740
+serrés, vers 14 Go. Et en 3 bits, un
+fichier soigné fait 12 Go, petit module
+
+21
+00:01:38,740 --> 00:01:43,740
+d'accélération compris. Là, il te reste
+environ 4 Go, un peu moins une fois que le
+
+22
+00:01:43,740 --> 00:01:50,060
+moteur s'est servi. Et ces 4 Go, il faut les
+partager. Chaque token que le modèle garde
+
+23
+00:01:50,060 --> 00:01:55,840
+en tête prend de la place sur ta carte.
+Et pour Qwen, on peut le calculer : sur 64
+
+24
+00:01:55,840 --> 00:02:01,320
+couches, seules 16 gardent vraiment la
+mémoire de la conversation. Donc fais la
+
+25
+00:02:01,320 --> 00:02:07,820
+multiplication : ça donne 64 kilo-octets par
+token. Ça n'a l'air de rien. Sauf que 8 000
+
+26
+00:02:07,820 --> 00:02:14,860
+tokens, la valeur par défaut de LM Studio,
+c'est déjà un demi-giga. Et 128 000, c'est 8 Go.
+
+27
+00:02:15,140 --> 00:02:20,860
+Plus que tout ce qui reste. Avec nos 4 Go,
+tu tiens environ 60 000 tokens. Et si tu
+
+28
+00:02:20,860 --> 00:02:25,980
+passes cette mémoire en 8 bits, un réglage
+du moteur, tu tiens presque le double.
+
+29
+00:02:25,980 --> 00:02:29,500
+Et la troisième ligne, c'est celle que tout
+le monde oublie : l'agent. Un agent de code
+
+30
+00:02:29,500 --> 00:02:33,620
+comme Claude Code, avant même ta première
+question, envoie ses consignes et la
+
+31
+00:02:33,620 --> 00:02:38,640
+liste de tous ses outils. Un utilisateur
+a relevé plus de 50 000 tokens au compteur
+
+32
+00:02:38,820 --> 00:02:44,640
+avant d'avoir tapé quoi que ce soit. Sur
+notre Qwen, ça fait plus de 3 Go. En fait,
+
+33
+00:02:44,680 --> 00:02:48,500
+c'est le jeu qui te réclame un patch de
+3 Go avant même l'écran titre. Donc, si
+
+34
+00:02:48,500 --> 00:02:53,820
+tu branches un agent sur ta carte, voilà
+les comptes. Avec la mémoire en version
+
+35
+00:02:53,820 --> 00:02:59,540
+normale, il te reste à peine 10 000 tokens
+pour ton vrai travail. Avec la mémoire en
+
+36
+00:02:59,540 --> 00:03:05,820
+8 bits, plus de 70 000 tokens. Ça passe,
+mais seulement si tu règles bien ta carte.
+
+37
+00:03:06,220 --> 00:03:11,320
+Bon, maintenant ça rentre. Mais ça va vite
+comment ? Pour écrire un seul token, la
+
+38
+00:03:11,320 --> 00:03:16,340
+carte doit relire tout le modèle. Donc la
+vitesse max, c'est simple : la vitesse de la
+
+39
+00:03:16,340 --> 00:03:22,300
+mémoire divisée par la taille du fichier.
+Une 5080, par exemple, c'est 960 gigas par
+
+40
+00:03:22,300 --> 00:03:27,300
+seconde. Avec un fichier de 12 gigas, ton
+plafond tourne autour des 80 tokens par
+
+41
+00:03:27,300 --> 00:03:31,000
+seconde. Mais en vrai, on ne l'atteint
+jamais tout à fait. Quelqu'un avec une
+
+42
+00:03:31,000 --> 00:03:37,220
+5060 Ti a pris un fichier 4 bits de 14
+gigas, exactement celui que j'avais chez
+
+43
+00:03:37,220 --> 00:03:45,720
+moi. Et il mesure 25 tokens par seconde,
+pour un plafond de 31. Environ 80 %. Garde
+
+44
+00:03:45,720 --> 00:03:49,800
+ce chiffre dans un coin, il va te servir.
+Mais et les 101 tokens du début ? Sans
+
+45
+00:03:49,800 --> 00:03:56,500
+réglage, la personne qui les a publiés
+mesure 53. Puis elle active le MTP, le petit
+
+46
+00:03:56,500 --> 00:04:00,580
+module d'accélération dont je te parlais.
+Le modèle devine plusieurs mots à
+
+47
+00:04:00,580 --> 00:04:06,020
+l'avance, et la carte les vérifie d'un seul
+coup. Résultat : 101. Par contre, c'est une
+
+48
+00:04:06,020 --> 00:04:11,120
+seule mesure. Et maintenant, le 13. Quand
+le fichier ne rentre pas, une partie part
+
+49
+00:04:11,120 --> 00:04:16,780
+dans ta RAM. Et la RAM, même en DDR5-6000
+comme la mienne, c'est environ 96 gigas
+
+50
+00:04:16,780 --> 00:04:21,440
+par seconde. 10 fois moins que la carte
+graphique. Et là, la règle est brutale :
+
+51
+00:04:21,440 --> 00:04:25,060
+c'est la mémoire la plus lente qui donne
+le rythme. Dans une vidéo espagnole, un
+
+52
+00:04:25,060 --> 00:04:30,380
+utilisateur charge un modèle 4 bits dans
+LM Studio, sur une 5080. Ça ne passe pas.
+
+53
+00:04:30,380 --> 00:04:36,240
+Il laisse une partie des couches en RAM,
+et il le dit lui-même : 13 tokens par
+
+54
+00:04:36,240 --> 00:04:40,120
+seconde, parce qu'une partie du modèle
+est dans la RAM. Ce ne sont pas les mêmes
+
+55
+00:04:40,120 --> 00:04:44,040
+réglages que pour le 101, donc je ne
+compare pas au chiffre près. Sur une seule
+
+56
+00:04:44,040 --> 00:04:48,420
+carte, une 5060 Ti par exemple, quelqu'un
+a vécu les deux. Avec la version
+
+57
+00:04:48,420 --> 00:04:53,220
+précédente de Qwen, son fichier débordait
+de 3 gigas : 8 ou 9 tokens par seconde.
+
+58
+00:04:53,220 --> 00:04:58,740
+Avec un fichier du Qwen actuel, qui tient
+dans la carte : 26. 3 fois plus. Et sa
+
+59
+00:04:58,740 --> 00:05:03,040
+conclusion, en gros : un fichier qui tient
+vaut mieux que le MTP. Au passage, ça vaut
+
+60
+00:05:03,040 --> 00:05:07,740
+aussi pour AMD. Regarde la vitesse de
+la mémoire, pas seulement les gigas
+
+61
+00:05:07,740 --> 00:05:12,600
+de la carte sur la boîte. Avec le même
+fichier, une RX 9070 XT a un plafond 2 fois
+
+62
+00:05:12,600 --> 00:05:19,340
+plus haut qu'une RX 9060 XT. 16 gigas toutes
+les deux. Et la 5080, encore au-dessus. Et
+
+63
+00:05:19,340 --> 00:05:23,340
+si tu n'as pas 16 gigas, t'es loin d'être
+le seul. Sur Steam, en octobre, plus
+
+64
+00:05:23,340 --> 00:05:30,040
+d'un joueur sur 4 a une carte graphique de
+8 gigas, et 1 sur 8 en a 12. En 12, le 27B
+
+65
+00:05:30,040 --> 00:05:35,700
+rentre en 3 bits, avec un seul fichier de
+10 gigas. Mais il te reste à peine 27 000
+
+66
+00:05:35,700 --> 00:05:40,960
+tokens. Une conversation, oui. Un agent de
+code lourd, non. En 8, il ne rentre pas :
+
+67
+00:05:41,060 --> 00:05:44,640
+tu tombes dans le cas du 13, en pire. Mais
+et la RAM, dans tout ça ? Pour ce modèle,
+
+68
+00:05:44,740 --> 00:05:48,340
+elle sert presque à rien. Tout se joue sur
+la carte. Retiens ça, parce qu'avec le modèle
+
+69
+00:05:48,340 --> 00:05:52,640
+suivant, ça va s'inverser. Parce qu'il
+y a un autre Qwen, bien plus gros : le
+
+70
+00:05:52,640 --> 00:05:57,700
+Flash-Next. 125 milliards de paramètres.
+En fait, il est découpé en centaines de
+
+71
+00:05:57,700 --> 00:06:02,300
+petits spécialistes, des experts. Et à
+chaque mot, il ne réveille que quelques-uns
+
+72
+00:06:02,300 --> 00:06:06,780
+d'entre eux : environ 6 milliards au
+travail. Et un projet open source sorti
+
+73
+00:06:06,780 --> 00:06:11,660
+fin septembre, Strata, le fait tourner sur
+un PC de gamer. Son astuce : les experts
+
+74
+00:06:11,660 --> 00:06:16,400
+qui servent le plus restent sur ta carte,
+les autres vont dans la RAM, et une grosse
+
+75
+00:06:16,400 --> 00:06:21,540
+table reste sur le SSD. Sauf que du coup,
+tout s'inverse. La doc de Strata le dit :
+
+76
+00:06:21,660 --> 00:06:26,640
+ta RAM doit contenir les experts, plus
+environ 10 gigas pour Windows et le reste.
+
+77
+00:06:27,100 --> 00:06:31,840
+Donc fais le calcul avec moi. Le plus
+petit fichier du modèle complet, c'est 34
+
+78
+00:06:31,840 --> 00:06:39,140
+gigas d'experts. Plus 10 : 44. Et moi, j'ai
+32 gigas de RAM. Du coup, c'est non. Mais
+
+79
+00:06:39,140 --> 00:06:44,160
+la doc a une réponse pour 32 gigas :
+prendre le modèle Coder, une version
+
+80
+00:06:44,160 --> 00:06:50,420
+réduite pour le code, qui garde la moitié
+des experts. 23 gigas plus 10 : environ 33.
+
+81
+00:06:50,760 --> 00:06:56,820
+Et Windows t'en laisse voir environ 33 et
+demi. Du coup, ça passe, à ras, navigateur
+
+82
+00:06:56,820 --> 00:07:01,440
+fermé. Et ça, c'est un calcul. Sauf qu'un
+utilisateur l'a mesuré, avec presque ma
+
+83
+00:07:01,440 --> 00:07:08,380
+config : le même processeur, une 5070 Ti
+de 16 gigas, 31 gigas de RAM visibles. 70
+
+84
+00:07:08,380 --> 00:07:13,920
+tokens par seconde. Un modèle de 125
+milliards, à cette vitesse, sur un PC de
+
+85
+00:07:13,920 --> 00:07:17,620
+joueur. Mais en tête de son rapport,
+la personne l'écrit elle-même : vitesse
+
+86
+00:07:17,620 --> 00:07:24,000
+seulement, aucun test de justesse. Et il
+y a un prix. Ses auteurs annoncent 95 % du
+
+87
+00:07:24,000 --> 00:07:27,500
+score de code du modèle complet, mais
+c'est leur chiffre. Sur un forum de
+
+88
+00:07:27,500 --> 00:07:32,240
+développeurs, quelqu'un sent, en substance,
+une vraie perte. Dans un test publié en
+
+89
+00:07:32,240 --> 00:07:38,200
+vidéo, sur une 5090, le Coder n'a pas
+réussi à finir sa tâche avec Claude Code.
+
+90
+00:07:38,700 --> 00:07:42,600
+Et d'après la doc, il est plus faible
+hors de l'anglais, du chinois, du japonais
+
+91
+00:07:42,600 --> 00:07:47,380
+et du coréen. Le français en fait partie. Et
+si tu te dis : bah, je rajoute de la RAM ?
+
+92
+00:07:47,860 --> 00:07:52,680
+Mais 32 gigas, je les avais achetés 93
+euros. Aujourd'hui, le même kit coûte
+
+93
+00:07:52,680 --> 00:07:58,960
+560 euros. C'est 6 fois le prix, pour
+les mêmes barrettes. Aïe. Coup dur pour
+
+94
+00:07:58,960 --> 00:08:03,100
+Guillaume. Bref, sur le papier, le
+Coder tient chez moi. Alors la semaine
+
+95
+00:08:03,100 --> 00:08:08,660
+prochaine, je lance pour de vrai un test
+sur ma 5080, et on regarde ce qu'il vaut.
+
+96
+00:08:09,120 --> 00:08:12,580
+Mais admettons que ça tourne chez toi.
+Est-ce que ça vaut ton abonnement ? Sur le
+
+97
+00:08:12,580 --> 00:08:19,740
+tableau publié par Qwen, le 27B bat
+l'ancien Opus 4.6 en code sur un test, et
+
+98
+00:08:19,740 --> 00:08:23,960
+il perd sur un autre. Mais c'est leur
+tableau, avec le modèle complet, pas
+
+99
+00:08:23,960 --> 00:08:28,360
+le fichier 3 bits qui tient sur ta carte.
+Un classement indépendant, lui, compare
+
+100
+00:08:28,360 --> 00:08:36,360
+le même 27B à Claude Opus 5, en agent dans le
+terminal : 6 % de réussite contre 46. Oh my
+
+101
+00:08:36,360 --> 00:08:43,400
+god ! Ouais, t'as bien entendu : 6. Donc
+pour coder en agent sur un vrai projet,
+
+102
+00:08:43,600 --> 00:08:48,000
+Claude est loin devant. Du coup, voilà
+comment je le lis. Ton modèle de 16 Go,
+
+103
+00:08:48,000 --> 00:08:51,260
+c'est un très bon plan B : tes données
+restent chez toi, il marche sans
+
+104
+00:08:51,260 --> 00:08:55,260
+internet, et t'as pas besoin de payer
+chaque mois. Pour le code sérieux en
+
+105
+00:08:55,260 --> 00:08:59,940
+agent, l'abonnement garde toujours l'avantage.
+Et en plus, chez Claude, le patch de
+
+106
+00:08:59,940 --> 00:09:04,480
+3 Go, c'est pas ta carte qui le paie. Et
+mon Qwen qui me paraissait super lent,
+
+107
+00:09:04,480 --> 00:09:13,540
+alors ? J'avais pris le fichier 4 bits de
+14 Go. Souviens-toi : la 5060 Ti en tire 25
+
+108
+00:09:13,540 --> 00:09:19,800
+tokens par seconde, et ma carte a 2
+fois plus de bande passante. D'après le
+
+109
+00:09:19,800 --> 00:09:25,560
+calcul, le mien aurait dû tourner autour
+de 50. Donc c'était pas la carte. Il reste
+
+110
+00:09:25,560 --> 00:09:30,940
+2 suspects. Le premier, je suis sûr qu'il
+était là : par défaut, ce Qwen réfléchit au
+
+111
+00:09:30,940 --> 00:09:36,800
+niveau maximum avant de répondre. Un
+développeur a compté plus de 22 000 tokens
+
+112
+00:09:36,800 --> 00:09:43,820
+de réflexion pour une seule demande :
+dessiner un pélican. Même à 50 tokens par
+
+113
+00:09:43,820 --> 00:09:49,920
+seconde, ça fait plus de 7 minutes avant
+de produire la première ligne utile. Ce
+
+114
+00:09:49,920 --> 00:09:53,680
+niveau de réflexion, tu peux le baisser
+dans le panneau de droite de LM Studio. Le
+
+115
+00:09:53,680 --> 00:09:58,720
+deuxième suspect, c'est moi. Avec 14 Go
+de fichier, une fois l'écran servi, il me
+
+116
+00:09:58,720 --> 00:10:04,960
+restait moins de 2 Go pour la conversation.
+Et j'avais monté la conversation à 64 000
+
+117
+00:10:04,960 --> 00:10:11,980
+tokens, puis à 100 000. Si on reprend la
+ligne 2 de la facture : 64 000 tokens, c'est
+
+118
+00:10:11,980 --> 00:10:19,760
+plus de 4 Go. 100 000, plus de 6. Il me
+manquait donc entre 2 et 4,5 Go. Et quand
+
+119
+00:10:19,760 --> 00:10:23,960
+ta carte est pleine, le pilote NVIDIA
+déborde en silence dans la RAM, au lieu de
+
+120
+00:10:23,960 --> 00:10:28,480
+planter. Ça marche, mais beaucoup plus
+lent. NVIDIA le dit lui-même, et LM Studio
+
+121
+00:10:28,480 --> 00:10:34,380
+aussi. En gros, d'après le calcul, j'avais
+recréé le 13 du début, tout seul. Pour le
+
+122
+00:10:34,380 --> 00:10:38,160
+savoir, ouvre simplement ton gestionnaire
+des tâches et regarde les performances du
+
+123
+00:10:38,160 --> 00:10:43,080
+GPU. Et tu regardes la mémoire GPU
+partagée pendant que le modèle écrit. Si
+
+124
+00:10:43,080 --> 00:10:47,060
+elle grimpe, t'as ton coupable. Et dans
+le panneau NVIDIA, un réglage interdit ce
+
+125
+00:10:47,060 --> 00:10:52,000
+débordement : le modèle plante au lieu de
+ramer, mais au moins, tu sais. Bref, ma
+
+126
+00:10:52,000 --> 00:10:56,760
+carte n'était pas en cause : c'était ce que
+je lui demandais. Donc oui, 16 Go suffisent
+
+127
+00:10:56,760 --> 00:11:01,400
+pour un vrai modèle de 27 milliards de
+paramètres, si tu prends le fichier qui
+
+128
+00:11:01,400 --> 00:11:06,080
+rentre, et si tu laisses de la place pour
+la conversation et l'agent. Pour aller
+
+129
+00:11:06,080 --> 00:11:11,220
+plus gros, c'est ta RAM qui décide,
+plus la carte. Et pour le code en agent,
+
+130
+00:11:11,540 --> 00:11:15,740
+Claude reste devant. Pour l'heure, je
+garde ma config : les moteurs sont de plus
+
+131
+00:11:15,740 --> 00:11:19,300
+en plus performants. Par contre, je vais
+passer de LM Studio à des moteurs comme
+
+132
+00:11:19,300 --> 00:11:23,940
+llama.cpp, ou à Strata. Si t'as jamais
+installé d'IA chez toi, j'ai une vidéo
+
+133
+00:11:23,940 --> 00:11:28,380
+qui le fait pas à pas, je te la mets en
+fiche. Et la semaine prochaine, on verra
+
+134
+00:11:28,380 --> 00:11:33,020
+Strata en vrai sur ma carte. En attendant,
+dis-moi en commentaire ta carte et ta RAM,
+
+135
+00:11:33,220 --> 00:11:38,440
+et je te dis ce qui tient
+chez toi. Allez, salut !
+

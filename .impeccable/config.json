@@ -17,6 +17,15 @@
         ],
         "createdAt": "2026-10-26T08:33:54.712Z",
         "reason": "Claude: maquette de miniature YouTube, les lueurs néon reprennent volontairement les codes des niches gaming et télé (demande de miniatures hors niche), pas une interface"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "projets/claude-ou-mon-pc-1/miniature/propositions/miniature.html"
+        ],
+        "createdAt": "2026-11-05T12:28:58.088Z",
+        "reason": "charte noir.html du projet (ressources/miniatures/propositions.md §2 : halo de la couleur d'accent derrière l'objet) ; miniature YouTube, pas une UI"
       }
     ]
   }

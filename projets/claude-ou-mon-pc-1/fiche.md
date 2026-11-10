@@ -1,5 +1,7 @@
 # Abonnement ou IA locale ? #1 : 16 Go de VRAM suffisent-ils ?
 
+> **07/11, script V3** ([`script.md`](script.md) ; V2 dans [`script-v2.md`](script-v2.md)) : plus aucun nom de chaîne dans la voix (ta règle : « un utilisateur relève »), le budget de la carte en trois lignes (inspiré de [Bruno Vega, 03/11](https://www.youtube.com/watch?v=kKdhK2zRtto)), ton Qwen lent expliqué par la réflexion au maximum et le débordement silencieux du pilote NVIDIA (S40, S43 à S45), Strata raccourci vers le test du 16 nov. **Correction** : « Hardware IA » n'est pas une chaîne mais un hashtag ; la vidéo du 13 tok/s est de la chaîne espagnole Globalcobots (`sources.md`, S21).
+
 > **24/10** : la série s'appelle « Abonnement ou IA locale ? » (c'est aussi la playlist) au lieu de « Claude ou mon PC ? », puisqu'on compare plusieurs abonnements à l'IA locale. Dans la voix, pas de « épisode un » : les vidéos se renvoient par ce qu'elles expliquent. Le dossier garde son nom.
 
 > **25/10, ta décision : la vidéo est calculée, sans essai.** Les essais te prennent trop de temps. Toutes les vidéos IA sont calculées, sauf celle de l'installation (règles du calculé : [`strategie.md`](../../strategie.md), pilier 2). On fait comme Kai et Morgans Code : les mesures publiées par les utilisateurs qui ont une carte de 16 Go, les études, les notes de version et le calcul. [`modeles-5080.md`](modeles-5080.md) devient la base du calcul : son plan d'essais ne se lance plus.
@@ -10,6 +12,8 @@
 >   - **Il est trop juste pour la carte.** 14,25 Go de poids sur 16 Go : il reste moins de 2 Go pour le contexte (le cache KV) et pour l'affichage de Windows si l'écran est branché sur la 5080. Dès que ça déborde, une partie passe en RAM, et la vitesse s'effondre (le Q4 qui déborde tombe à 13 tok/s chez Hardware IA). C'est la scène du point 4, avec un fichier encore plus proche de la limite.
 >   - **Il réfléchit avant de répondre.** Le mode thinking de Qwen3.8 est actif par défaut (`modeles-5080.md`, section 0.1) : il écrit longtemps avant la première ligne utile, ce qui paraît lent même à bonne vitesse.
 >   - Dans la vidéo, dis-le comme ça : « chez moi, ce modèle m'a paru très lent ; d'après le calcul, il est trop juste pour ma carte, et en plus il réfléchit avant de répondre ». Pas de tok/s à toi.
+> - **08/11, ta précision : tu avais monté le contexte à 64K, puis à 100K tokens.** Calcul (64 Kio par token, cache en version normale, S37) : 4,3 Go puis 6,6 Go de conversation, pour environ 1,9 Go libres une fois Windows servi : 2,4 à 4,6 Go de trop, qui débordent dans la RAM (S43, S44). Le débordement devient le coupable n° 2 du script V3, après la réflexion au maximum. Le réglage de réflexion est dans le panneau de droite de LM Studio (ton relevé).
+> - **Ton choix final (08/11)** : tu gardes ta config, parce que les moteurs sont de plus en plus performants, et tu passes de LM Studio à llama.cpp ou à Strata.
 > - **Gemma 4 est faible en code** (`modeles-5080.md`, tableau 1.1 et section 1.2) : rapide ne veut pas dire suffisant.
 
 > Analyse (hook, pourquoi, score) : [`strategie.md`](../../strategie.md), idée 1. Planning : [`calendrier.md`](../../calendrier.md). Premier jet : [`brouillon-script.md`](brouillon-script.md).
@@ -21,7 +25,7 @@
 **Ta machine**, la configuration de référence du calcul (config donnée le 22/10) :
 - CPU Ryzen 7 9700X (8 cœurs), carte mère Gigabyte B850M AORUS ELITE WIFI6E ICE (4 slots DDR5) ;
 - **RTX 5080 16 Go** (Inno3D X3 OC), achetée **1 100 € en 2025** (24/10) ;
-- **32 Go de DDR5-6000** (2 × 16 Go, EXPO activé), payés **92,95 € en 2025** (ta correction du 24/10). La même RAM est à **560 € sur Amazon** (ton relevé du 24/10) ;
+- **32 Go de DDR5-6000** (2 × 16 Go, EXPO activé), payés **92,95 € en 2025** (ta correction du 24/10). La même RAM est à **560 € sur Amazon** (ton relevé du 24/10, revérifié le 08/11) ;
 - SSD Samsung 990 EVO Plus 2 To et Crucial P3 Plus 1 To ;
 - alimentation Corsair RM1000e (1000 W) ;
 - **le PC complet** : monté pour jouer en 2025, **2 000 €** (24/10).
@@ -37,7 +41,9 @@ Avec 32 Go de RAM, les modèles à experts géants (Qwen3.8-Flash-Next complet, 
 | **Type de hook** | Récit avec révélation |
 | **Production estimée** | ~25 h, sans essais (estimation du 25/10 ; avant : ~35 h, dont ~10 h d'essais) |
 
-**Titres** :
+**Titre retenu (05/11, ton choix)** : *16 Go de VRAM suffisent (si tu prends le bon fichier)*.
+
+**Anciens titres** :
 1. Recherche : *IA en local : 16 Go de VRAM, est-ce que ça suffit ?*
 2. Curiosité : *Ma carte graphique peut-elle remplacer mon abonnement Claude ?*
 3. Mixte (recommandé) : *16 Go de VRAM suffisent-ils pour remplacer Claude ?*
@@ -49,7 +55,7 @@ Avec 32 Go de RAM, les modèles à experts géants (Qwen3.8-Flash-Next complet, 
 2. **Ce qui rentre et ce qui ne rentre pas dans 16 Go** (repris du guide) : 3 ou 4 modèles, avec les vitesses mesurées par des utilisateurs qui ont une carte de 16 Go, citées et datées dans `sources.md` (les premières sont dans `modeles-5080.md`, section 0.1 et tableau 1.1). Au moins deux mesures qui concordent pour chaque chiffre important ; sinon, dis qu'il n'y en a qu'une. Une mesure isolée de Reddit était le point faible de Kai : des mesures croisées deviennent ta force (règle du 25/10).
 3. **La quantization**, en deux phrases qui se suffisent (le JPEG de l'IA : moins de bits, un fichier plus léger, un peu moins de qualité). Les noms des fichiers se décodent dans [*IA en local*](../bases-ia-locale/fiche.md), qui sort après, le 7 déc. : une phrase (« je leur consacre une vidéo entière ») et une carte YouTube à ajouter le 7 déc.
 4. **Les ratés**, documentés par d'autres (plus d'essais depuis le 25/10) : le Q4 qui déborde en RAM, le Coder de Strata plus rapide mais moins soigné (Luke's Dev Lab), le thinking qui fait attendre. Ton impression sur Qwen3.8-27B (« très lent ») peut s'y glisser, comme vécu.
-5. **Le calcul en quatre cas** (ta demande du 24/10) : le prix d'achat seulement, pas d'électricité (décidé le 23/10). Mêmes prix que [Louer, acheter](../louer-acheter-ia/script.md), section « Le calcul » (relevé du 23/10, à refaire avant la voix) :
+5. **Déplacé vers [Coût Claude](../cout-claude-local/fiche.md) le 05/11 (ta décision) : le calcul en quatre cas et les conseils d'achat.** **Le calcul en quatre cas** (ta demande du 24/10) : le prix d'achat seulement, pas d'électricité (décidé le 23/10). Mêmes prix que [Louer, acheter](../louer-acheter-ia/script.md), section « Le calcul » (relevé du 23/10, à refaire avant la voix) :
    | | Contre Pro (20 $ ≈ 21,42 € TTC) | Contre Max (100 $ ≈ 107,10 € TTC) |
    |---|---|---|
    | **Tu as déjà la carte** | rien à rembourser : 21 € gardés par mois, environ 257 € par an | rien à rembourser : 107 € gardés par mois, environ 1 285 € par an |
@@ -65,7 +71,7 @@ Avec 32 Go de RAM, les modèles à experts géants (Qwen3.8-Flash-Next complet, 
 
    **Ton texte du 24/10**, à reprendre dans le script (tutoiement) : « La mienne, je l'ai eue en 2025 à 1 100 €. Aujourd'hui, on la trouve à 1 900 € : la preuve que la crise du matériel a vraiment tout cassé. Mon PC complet, je l'avais monté pour jouer en 2025 : il m'a coûté 2 000 €. La RAM ne m'avait coûté que 92,95 €, alors que la même vaut aujourd'hui 560 € sur Amazon. Et en ce moment, la 5080 coûte quasiment le même prix d'occasion qu'en neuf. Donc si tu pars du matériel que tu as déjà, ça te reviendra moins cher. Ou alors, l'occasion sur des modèles en dessous : une RTX 3060 peut se trouver à partir de 240 €, selon la personne qui revend sa carte. » Pour l'IA, dis « la 3060 de 12 Go » (il en existe une de 8 Go, moins utile : conseil 1 de `deux-cartes-occasion/sources.md`). Prix à revérifier le jour de la voix.
 
-   Enfin **ton choix**, avec tes mots ⟦à écrire : ce que tu gardes, ce que tu fais sur ta carte⟧. Rien n'est écrit à ta place.
+   Enfin **ton choix** (tes mots du 08/11) : tu gardes ta config, les moteurs sont de plus en plus performants, et tu passes de LM Studio à llama.cpp ou à Strata.
 6. **Quoi acheter (ou pas) avant le Black Friday, selon ton profil** :
    - tu as déjà une carte de 12 ou 16 Go ;
    - tu pars de zéro, en neuf **ou d'occasion** (ta demande du 24/10 : les cartes d'occasion qui donnent le plus de VRAM par euro, leurs pièges, la garantie ; faits dans [`deux-cartes-occasion/sources.md`](../deux-cartes-occasion/sources.md), section « Pour les conseils d'achat d'occasion » : 10 conseils vérifiés deux fois le 24/10, prix à relever par toi) ;
