@@ -20,17 +20,13 @@ Pour les idées qui portent un numéro, le hook, la miniature et le score sont d
 
 **Abandonnée le même jour** : Mobile Money, qui ne te plaît pas (voir [`archive/README.md`](archive/README.md)).
 
+**Passées en production le 10/11** (radar du 10/11, 2 vidéos IA par semaine) : même carte 2 fois plus rapide (19 nov.), IA locale privée (26 nov.), DeepSeek V4.1 Flash pour la série « combien coûte » (3 déc.) et Qwen 4 (12 nov.), ta demande. **Archivées le même jour** : les 4 idées génie (voir [`archive/README.md`](archive/README.md)).
+
 ## En réserve
 
 | Idée | Pilier | Score | Quand | Détail |
 |---|---|---|---|---|
-| Même carte, 2 fois plus rapide (calculé depuis le 25/10) | IA | 34/40 | Créneau radar (21/12 ou plus tard) | Idée 16. Signal du 22/10 : Code Unpacked (506 abonnés) fait 11,2 K en un jour avec « llama.cpp… 4× Faster » ([étude](etudes/outliers-2026-10-22.md)) |
-| Ton IA locale est-elle vraiment privée ? (sécurité : modèles piégés, Ollama ouvert sur le réseau) | IA | — | Créneau radar | Signal du 22/10 : Kai, « Your Local AI Is Not as Private as You Think », 208 K en 27 h ([étude](etudes/outliers-2026-10-22.md)). Ne pas reprendre son angle : trouver la croyance du public français à renverser, et tester sur ta machine |
 | Combien coûte [le modèle du moment] chez toi ? (calculé, la série de Kai et de Morgans Code) | IA | — | Créneaux radar | À noter au radar, modèle par modèle |
-| Les applis étudient ton cerveau et vivent de tes données (la 2e moitié de ton texte sur Windows Phone) | Génie | — | — | Proche de l'angle de Thibaut Dcode : à n'en faire une vidéo qu'avec un angle ingénierie |
-| Face ID : 30 000 points sur ton visage (et pourquoi certains Android se déverrouillent avec une photo) | Génie | 32/40 | Pas trop près de l'iPhone (7 déc.) | Radar du 23/10 : PawelCodeStuff, 713 K (×32) le 15/10/2026 ; en français, seulement Micode (2017) |
-| Le QR code qui marche même déchiré (correction d'erreurs, Denso Wave 1994) | Génie | 30/40 | Quand la vidéo de V2F ne circulera plus | Radar du 23/10 : History of Simple Things 1,35 M (×113). V2F (overfl0w) a fait 214 K en français en sept. 2026 : trouver un autre angle |
-| Le jour où l'Afrique de l'Ouest a perdu internet (câbles sous-marins, 14/03/2024) | Génie | 29/40 | Vers le 14 mars (3 ans de la coupure) | Radar du 23/10 : Factron Process 509 K (×162). Parle aux 63 % d'Afrique ; demande française faible |
 | Streaming +71 %, Plex, maison pilotée par IA, l'IA dans ta carte graphique | — | — | Si un créneau se libère, ou à 10 K abonnés | `strategie.md`, « Mises de côté » |
 
 ## En vrac

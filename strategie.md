@@ -7,13 +7,21 @@
 - **Public visé** : France, Belgique et Suisse. **Public réel** (avril-oct. 2026) : 63 % d'Afrique francophone, 36 % de France. **Âge** : 61 % de 18-24 ans, 33 % de 25-34 ans, 4 % de 35-44 ans. **94 % ont moins de 35 ans.**
 - **Envies** : l'IA en local et raconter la tech.
 - **Style** : ta voix (enregistrée au téléprompteur depuis ArtCraft, ou clonée) et du motion design, sans visage.
-- **Rythme** : **une vidéo longue par semaine, le lundi à 18 h, aucun Short** (décidé le 21/10), en solo. **Objectif** : croissance.
+- **Rythme** : **2 vidéos longues par semaine, le lundi et le jeudi à 18 h, uniquement IA / IA locale, jusqu'au 4 janvier ; ensuite une vidéo le lundi à 18 h** (décidé le 10/11 ; du 21/10 au 10/11, une vidéo le lundi). Aucun Short. En solo, 1 à 2 jours par vidéo. **Objectif** : croissance.
 - **IA sans tester** : toutes les vidéos IA sont calculées, comme chez Kai et Morgans Code : sources, mesures publiées par les utilisateurs, études et calculs. Exceptions filmées chez toi : l'installation (2 nov.) et le test de Strata (16 nov., ta décision du 05/11) (décidé le 25/10 : les essais te prennent trop de temps ; le 21/10, seuls les modèles trop gros pour ta 5080 étaient calculés).
 - **Flutter** : plus de nouvelles vidéos. **Chaîne** : on fait évoluer Technovore.
 
 ---
 
 ## 0. Ce qui change
+
+### Le 10/11 : 2 vidéos IA par semaine, génie et histoires archivés
+
+| Avant | Maintenant | Pourquoi |
+|---|---|---|
+| 1 vidéo le lundi, 3 IA pour 1 génie ou histoire | **2 vidéos par semaine, lundi et jeudi à 18 h, uniquement IA / IA locale**, jusqu'au 4 janvier ; ensuite 1 vidéo le lundi | Le 10/11 (vidIQ, du 01/09 au 10/11), la chaîne est encore fichée « tuto Flutter » : 15 des 20 vidéos qui nous suggèrent sont des tutos Flutter, et le fil abonnés ne retient que 3,5 % de la vidéo. Les vidéos IA retiennent 21-22 %. Deux fois plus de vidéos du même sujet refont le profil de la chaîne deux fois plus vite. Tu fais une vidéo en 1 à 2 jours |
+| Piliers 1 (génie) et 3 (histoires) | **Archivés** ([`archive/README.md`](archive/README.md)), y compris Python et llama.cpp (ta décision du même jour) | Un seul sujet tant que le profil n'est pas refait. Uber (génie) a fait 1,3 % de CTR |
+| Concurrents IA locale : Kai, Morgans Code, Code Unpacked | **+ RepoChad et Weights & Wonders** ([radar](etudes/radar.md)) | Ta demande. RepoChad, « Best Ways to Get 32GB VRAM for Qwen3.8-27B » : 270 K vues ; Weights & Wonders, « Don't Miss Out on These GPUs Before Qwen 4's Release! » : 25 K en 2 jours (vidIQ, 10/11) |
 
 ### Le 25/10 : plus aucun essai, toutes les vidéos IA sont calculées
 
@@ -213,6 +221,9 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 > **Hub** = série récurrente qui fidélise. **Hero** = grosse vidéo événement ou d'actualité. **Help** = vidéo qui répond à une recherche précise et dure dans le temps.
 
 ### Pilier 1 : « Le génie derrière l'app » (Hub)
+
+> **Archivé le 10/11** : la chaîne ne fait plus que de l'IA. Uber reste publiée ; les scripts sont dans [`archive/`](archive/README.md).
+
 - **But** : la série signature. Elle doit faire tes plus gros pics de vues.
 - **Format** : 10 à 14 min. Hook sur un geste banal (« ouvre Uber »), puis le problème impossible, puis l'astuce de génie, en motion design (Remotion). Fin : ce que ça change pour toi.
 - **Fréquence** : environ 1 semaine sur 3 (9 vidéos sur 27 d'ici fin avril).
@@ -233,7 +244,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
   3. Le calcul s'affiche à l'écran, puis on le confronte aux mesures publiées, citées. Pour un chiffre important, cherche au moins deux mesures qui concordent ; s'il n'y en a qu'une, dis-le.
   4. Une estimation n'est jamais présentée comme une mesure. Écris « environ », « au mieux », « d'après X ». Tes impressions d'usage (« chez moi, ça m'a paru lent ») sont du vécu, pas une mesure : jamais de chiffre à toi, jamais « j'ai testé ».
   5. Des prix en euros, TVA comprise. Pas d'électricité : le seul coût compté est l'achat (décidé le 23/10).
-- **Fréquence** : **une semaine sur deux**, en alternance avec les deux autres piliers.
+- **Fréquence** : **toutes les vidéos** depuis le 10/11 (2 par semaine jusqu'au 4 janvier, puis 1). Avant : une semaine sur deux.
 - **Trafic visé** : accueil pour les épisodes, recherche pour les « combien ça coûte ».
 - **Exemples** :
   1. *16 Go de VRAM suffisent-ils pour remplacer Claude ?* (Qwen sur une carte de 16 Go, d'après les mesures publiées ; premier épisode d'« Abonnement ou IA locale ? »).
@@ -241,6 +252,9 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
   3. *Combien coûte Claude Opus 5.5 en local ? (j'ai fait le calcul)*.
 
 ### Pilier 3 : « Les grandes histoires de la tech » (Hero)
+
+> **Archivé le 10/11**, y compris Python et llama.cpp.
+
 - **But** : vidéos passion et partageables, qui élargissent le public.
 - **Format** : documentaire de 12 à 18 min.
 - **Fréquence** : un peu moins d'une par mois (5 sur 27 d'ici fin avril : pixel, Python, Windows Phone, jeux, llama.cpp).
@@ -251,6 +265,9 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
   3. *Tu n'as jamais possédé tes jeux*.
 
 ### Équilibre des piliers (27 vidéos du 26 oct. au 26 avr.)
+
+> **Dépassé le 10/11** : tout est IA. Le tableau ci-dessous garde le plan du 21/10 pour mémoire.
+
 
 | Pilier | Type | Vidéos | Part |
 |---|---|---|---|
@@ -291,7 +308,7 @@ Avec REA (Eric Tech), c'est **la 2e anomalie sur le même thème** : « l'IA rec
 
 ## 5. Rythme de publication
 
-**Décidé le 21/10 : 1 vidéo longue par semaine, le lundi à 18 h (heure de Paris). Aucun Short.**
+**Décidé le 10/11 : 2 vidéos longues par semaine, le lundi et le jeudi à 18 h (heure de Paris), jusqu'au 4 janvier, puis 1 le lundi. Aucun Short.** (Du 21/10 au 10/11 : 1 vidéo le lundi. Les points ci-dessous datent de cette époque ; la charge passe à 1 à 2 jours par vidéo.)
 
 - **Étude vidIQ (5,08 M de chaînes)** : 12 vidéos et plus par mois font grandir les vues 8 fois plus vite, mais **la régularité compte plus que le volume** : un rythme régulier de 4 vidéos par mois vaut mieux que 12 vidéos irrégulières. Ton levier, c'est de **ne jamais rater un lundi**.
 - **Pourquoi c'est tenable** :
@@ -471,7 +488,7 @@ Les cibles d'abonnés et de vues sont des estimations : les références du skil
 **Hook** : « 900 millions d'utilisateurs. 50 ingénieurs. Un ingénieur pour 18 millions de personnes. Comment c'est possible ? »
 **Miniature** : logo WhatsApp géant, minuscule groupe de silhouettes en dessous, texte « 50 ? », vert et noir.
 **Pourquoi** : « The Insane Design Of Messaging » fait ×23,5. Mais elle parle du **design** de la messagerie, pas des serveurs (2e vérif du 23/10) : elle prouve la demande, pas l'angle. WhatsApp est aussi l'appli n°1 de ton public africain : la vidéo sert tes deux audiences.
-**Corrigé le 23/10** (`projets/whatsapp/sources.md`) : la cinquantaine d'ingénieurs pour 900 millions, c'est **en 2015** (Wired) ; au rachat de 2014, c'était une trentaine (32 ou 35 selon la source).
+**Corrigé le 23/10** (`archive/whatsapp/sources.md`) : la cinquantaine d'ingénieurs pour 900 millions, c'est **en 2015** (Wired) ; au rachat de 2014, c'était une trentaine (32 ou 35 selon la source).
 **À vérifier** : les chiffres (article de Wired de 2015 sur les 50 ingénieurs) et le rôle d'Erlang.
 **Source** : ton repérage + vidIQ.
 
@@ -539,7 +556,7 @@ Les cibles d'abonnés et de vues sont des estimations : les références du skil
 | **Score** | **35/40** (demande 9 · clic 8 · production 8 · niche 10) |
 
 **Hook** : « Waze t'a fait tourner à droite. Trois minutes plus tard, tu passes devant un accident que personne n'avait encore signalé. »
-**Corrigé le 23/10** (`projets/waze/sources.md`) : Waze ne peut pas savoir qu'il y a un accident si personne ne le signale, il voit seulement que les voitures ralentissent. Le script dit « un ralentissement que personne n'avait signalé », sans « trois minutes ».
+**Corrigé le 23/10** (`archive/waze/sources.md`) : Waze ne peut pas savoir qu'il y a un accident si personne ne le signale, il voit seulement que les voitures ralentissent. Le script dit « un ralentissement que personne n'avait signalé », sans « trois minutes ».
 **Miniature** : écran Waze avec une route rouge, flèche qui l'évite, texte « IL SAVAIT », bleu clair.
 **Pourquoi** : c'est la seule idée « génie » avec une preuve française directe (×4,6 chez Thibaut Dcode). La production est plus légère : tu réutilises les animations de carte faites pour Uber. **Ne refais pas l'angle « gratuité »** : toi, tu montres la machine (chaque téléphone sert de capteur de vitesse, les signalements, le calcul d'itinéraire).
 **Source** : ton repérage (Thibaut Dcode).
@@ -612,7 +629,7 @@ Pour prouver le titre avec un **jeu**, chercher un cas récent. Piste à sourcer
 | **Score** | **29/40** (demande 6 · clic 7 · production 6 · niche 10) |
 
 **Hook** : « Mars 2023. Un développeur bulgare publie un petit programme. Six mois plus tard, l'IA ne vit plus seulement dans les data centers. »
-**Corrigé le 23/10** (`projets/llama-cpp/sources.md`) : « bulgare » n'est pas sourcé, on dit « de Sofia ». Deux actualités à revérifier avant la sortie : ggml.ai a rejoint Hugging Face (20/02/2026), et Nvidia a annoncé le rachat de Hugging Face (03/09/2026, accord annoncé, pas conclu).
+**Corrigé le 23/10** (`archive/llama-cpp/sources.md`) : « bulgare » n'est pas sourcé, on dit « de Sofia ». Deux actualités à revérifier avant la sortie : ggml.ai a rejoint Hugging Face (20/02/2026), et Nvidia a annoncé le rachat de Hugging Face (03/09/2026, accord annoncé, pas conclu).
 **Miniature** : silhouette devant un écran de code, cerveau d'IA qui sort d'un PC, texte « IL A TOUT CHANGÉ ».
 **⚠️ Corrigé (21/10)** : le titre disait « mis ChatGPT dans ton PC ». llama.cpp faisait tourner LLaMA, le modèle de Meta, pas ChatGPT ; « un ChatGPT » garde l'idée sans l'erreur. Vérifié : le README d'origine (mars 2023) dit « hacked in an evening ».
 **Pourquoi** : il réunit tes deux piliers, et c'est un angle inédit en français.
@@ -630,7 +647,7 @@ Pour prouver le titre avec un **jeu**, chercher un cas récent. Piste à sourcer
 | **Concurrence** | Moyenne |
 | **Volume** | Non mesuré |
 | **Tendance** | Stable |
-| **Pilier** | Le génie derrière l'app (l'astuce cachée de l'écran ; [fiche](projets/ecran-blanc/fiche.md)) |
+| **Pilier** | Le génie derrière l'app (l'astuce cachée de l'écran ; [fiche](archive/ecran-blanc/fiche.md)) |
 | **Durée** | 10-12 min |
 | **Niveau de RPM** | Moyen |
 | **Urgence** | Evergreen. Provisoire : **le 19 avril**. Le 14 déc. revient à l'hommage au jeu vidéo (idée 20), le 23/10 |
@@ -651,7 +668,7 @@ Pour prouver le titre avec un **jeu**, chercher un cas récent. Piste à sourcer
 | **Pilier** | Le génie derrière l'app (Hub) |
 | **Stratégie de trafic** | Accueil + recherche |
 | **Mot-clé** | iphone fluide / android qui rame (volume non mesuré) |
-| **Urgence** | Evergreen. **Le 15 février**, provisoire (reculée du 7 déc. le 24/10, pour laisser la place à *IA en local*) ([fiche](projets/iphone-fluide/fiche.md)) |
+| **Urgence** | Evergreen. **Le 15 février**, provisoire (reculée du 7 déc. le 24/10, pour laisser la place à *IA en local*) ([fiche](archive/iphone-fluide/fiche.md)) |
 | **Score** | **32/40** (demande 8 · clic 8 · production 7 · niche 9) |
 
 **Hook** : « Pose ton doigt sur l'écran et fais défiler. La page colle à ton doigt. Ça n'a rien d'évident : Android a mis des années à y arriver. » (« des années » est à vérifier)
@@ -669,7 +686,7 @@ Pour prouver le titre avec un **jeu**, chercher un cas récent. Piste à sourcer
 | **Pilier** | Les grandes histoires de la tech (Hero) |
 | **Stratégie de trafic** | Accueil |
 | **Mot-clé** | python / histoire de python |
-| **Urgence** | Saisonnier. **Le 28 décembre**, la semaine de Noël ([fiche](projets/python/fiche.md)) |
+| **Urgence** | Saisonnier. **Le 28 décembre**, la semaine de Noël ([fiche](archive/python/fiche.md)) |
 | **Score** | **31/40** (demande 7 · clic 8 · production 8 · niche 8) |
 
 **Hook** (ta phrase) : « À quel moment tu t'ennuies assez pour avoir envie de créer un langage de programmation ? »
@@ -686,7 +703,7 @@ Pour prouver le titre avec un **jeu**, chercher un cas récent. Piste à sourcer
 | **Pilier** | Les grandes histoires de la tech (Hero) |
 | **Stratégie de trafic** | Accueil |
 | **Mot-clé** | windows phone / nokia lumia |
-| **Urgence** | Evergreen. **Le 25 janvier** ([fiche](projets/windows-phone/fiche.md), ton texte dans le [brouillon](projets/windows-phone/brouillon.md)) |
+| **Urgence** | Evergreen. **Le 25 janvier** ([fiche](archive/windows-phone/fiche.md), ton texte dans le [brouillon](archive/windows-phone/brouillon.md)) |
 | **Score** | **30/40** (demande 6 · clic 8 · production 7 · niche 9) |
 
 **Hook** (ta phrase) : « Ton téléphone, quand tu le sors de la boîte, c'est une brique qui ne sert à rien. »
@@ -749,14 +766,14 @@ Chaque créneau se confirme au radar, deux semaines avant. Les faits (USSD et op
 | **Pilier** | Les grandes histoires de la tech (Hero) |
 | **Stratégie de trafic** | Accueil |
 | **Mot-clé** | jeux vidéo (24 K recherches/mois) ; « histoire du jeu vidéo » sous les 750/mois (vidIQ, 23/10) |
-| **Urgence** | Evergreen. **Le 14 décembre**, juste avant Noël ([fiche](projets/pixel/fiche.md), ton texte dans le [brouillon](projets/pixel/brouillon.md)) |
+| **Urgence** | Evergreen. **Le 14 décembre**, juste avant Noël ([fiche](archive/pixel/fiche.md), ton texte dans le [brouillon](archive/pixel/brouillon.md)) |
 | **Score** | **27/40** (demande 6 · clic 8 · production 6 · niche 7) |
 
 **Hook** : « Un point blanc sur un écran noir. Cette année, 3,7 milliards de personnes jouent. »
 **Texte** : l'histoire du jeu vidéo, de Pong aux MMORPG. **Sous-texte** : on est parti d'un pixel seul, et aujourd'hui des milliards de joueurs sont connectés (ta phrase : « ce pixel il ne peut pas exister seul dans ce monde »).
 **Pourquoi** : c'est ton idée de départ et ta passion. En français, les essais sur le jeu vidéo dépassent souvent leur chaîne : Landry (7,6 K abonnés), « Les jeux vidéos sont une PERTE DE TEMPS. », 59 K, ×60 ; Kugen (1,2 K), 50 K, ×59 (vidIQ, 23/10). Aucun récit « de Pong à aujourd'hui » repéré sur les 6 derniers mois.
 **À vérifier** : le nombre de joueurs (Newzoo : environ 3,58 milliards en 2025) ; Pong n'est pas le premier jeu vidéo (*Tennis for Two*, 1958 ; *Spacewar!*, 1962) ; les dates des premiers mondes en ligne. Le détail est dans la fiche.
-**Source** : ton idée (`projets/pixel/brouillon.md`), précisée le 23/10.
+**Source** : ton idée (`archive/pixel/brouillon.md`), précisée le 23/10.
 
 ---
 
@@ -767,7 +784,7 @@ Chaque créneau se confirme au radar, deux semaines avant. Les faits (USSD et op
 | **Pilier** | Le génie derrière l'app (Hub) : l'« appli », ici, c'est ton jeu en ligne |
 | **Stratégie de trafic** | Accueil + suggestions |
 | **Mot-clé** | lag / ping (« lag jeux en ligne » moins de 750 par mois en France ; « ping » 3,2 K en France, vidIQ 23/10) |
-| **Urgence** | Evergreen. **Provisoire : le 8 mars**, choisi au radar du 23/10 à la place de Mobile Money ([fiche](projets/lag/fiche.md)) |
+| **Urgence** | Evergreen. **Provisoire : le 8 mars**, choisi au radar du 23/10 à la place de Mobile Money ([fiche](archive/lag/fiche.md)) |
 | **Score** | **32/40** (demande 7 · clic 9 · production 7 · niche 9) |
 
 **Hook** : « Tu étais caché derrière un mur, et tu es mort. Sur l'écran de l'autre, tu n'étais pas encore caché : il t'a tiré dans ton passé, et le serveur lui a donné raison. » (confirmé par Bernier 2001, Riot et Respawn ; surtout vrai face à un gros ping)
