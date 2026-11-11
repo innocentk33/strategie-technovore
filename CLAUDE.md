@@ -23,7 +23,7 @@ Cycle de vie : idée dans `idees.md` → dossier `projets/<nom>/` (copier une fi
 
 Par ordre de production : `fiche.md` → `brouillon*.md` → `script.md` (`script-v1.md` garde l'ancienne) → `grill-v1.md` → `sources.md` (faits vérifiés) → `teleprompteur.md`/`.txt` → `storyboard.md` → `upload.md` (skill `upload`) → `miniature/`.
 
-Les règles détaillées se chargent seules quand tu ouvres ces fichiers : `.claude/rules/script.md` (15 et 30 premières secondes, liaisons orales), `.claude/rules/miniatures.md` (style, 3 variantes, outils de rendu), `.claude/rules/ressources.md` (voix, régie).
+Les règles détaillées se chargent seules quand tu ouvres ces fichiers : `.claude/rules/script.md` (15 et 30 premières secondes, liaisons orales), `.claude/rules/miniatures.md` (style unique d'OpenCode depuis le 11/11, variantes, outils de rendu), `.claude/rules/ressources.md` (voix, régie).
 
 Les faits comptent : chaque affirmation d'une miniature ou d'un script doit être tenue par la vidéo et sourcée (voir `ressources/miniatures/propositions.md`, section 5, pour les pièges déjà repérés).
 

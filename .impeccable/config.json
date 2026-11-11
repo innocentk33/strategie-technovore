@@ -26,6 +26,15 @@
         ],
         "createdAt": "2026-11-05T12:28:58.088Z",
         "reason": "charte noir.html du projet (ressources/miniatures/propositions.md §2 : halo de la couleur d'accent derrière l'objet) ; miniature YouTube, pas une UI"
+      },
+      {
+        "rule": "radial-spotlight-glow",
+        "value": "*",
+        "files": [
+          "projets/strata-test/miniature/propositions/miniature.html"
+        ],
+        "createdAt": "2026-11-11T17:55:09.441Z",
+        "reason": "charte noir de la chaîne : ressources/miniatures/propositions.md § 2 impose « grille sombre et halo de la couleur d'accent derrière l'objet » ; miniature YouTube, pas une page web"
       }
     ]
   }

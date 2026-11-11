@@ -60,6 +60,7 @@
 
 **Confirmé (annonces officielles Alibaba/Qwen)** :
 - **22/09/2026, conférence Apsara (Hangzhou)** : Alibaba a dévoilé les noms **Qwen 4 Max, Qwen 4 Flash, Qwen 4 Plus, Qwen 4 27B**, et confirmé que Qwen 4 est en entraînement. Aucune date de sortie, aucun prix, aucun poids téléchargeable à cette date.
+  - **Corrigé le 11/11 (relecture du script Qwen 4, sources dans `projets/qwen-4-cartes/sources.md`)** : le communiqué officiel du 22/09 dit seulement que Qwen 4 est « en entraînement ». Le nom « Qwen 4 27B » vient de la presse sur la conférence (36Kr, 23/09) : c'est un nom annoncé, sans fichier ni caractéristiques, pas une fiche officielle. « Qwen4-Max » est officiel depuis la préversion cloud du 11/11 (Token Plan d'Alibaba, jusqu'au 25/11), sans rien à télécharger.
 - **26/08/2026** : Qwen a publié **Qwen3.8-Flash-Next** sur Hugging Face, explicitement présenté comme un aperçu de l'architecture de Qwen 4 (Gated DeltaNet + Qwen Sparse Attention).
 - **06/11/2026** : le compte officiel Qwen a posté un teaser (« The becoming begins ») qui a relancé les spéculations, sans date précise.
 - Alibaba a aussi annoncé une feuille de route **Qwen 4.5 et Qwen 5** (5 à 10 000 milliards de paramètres).

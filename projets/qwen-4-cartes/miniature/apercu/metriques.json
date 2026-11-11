@@ -1,0 +1,241 @@
+[
+  {
+    "fichier": "a.png",
+    "largeur": 3840,
+    "hauteur": 2160,
+    "ratio": 1.778,
+    "poids_octets": 4879209,
+    "poids_mo": 4.88,
+    "format": "PNG",
+    "luminosite_moyenne": 0.393,
+    "contraste_valeurs": 0.338,
+    "saturation_moyenne": 0.287,
+    "part_tres_claire": 0.035,
+    "part_tres_sombre": 0.423,
+    "couleur_moyenne_bords": "#54403B",
+    "part_bords_quasi_blancs": 0.017,
+    "part_bords_quasi_noirs": 0.521,
+    "palette": [
+      {
+        "hex": "#0E0C0E",
+        "rgb": [
+          14,
+          12,
+          14
+        ],
+        "part": 0.486
+      },
+      {
+        "hex": "#E1AD97",
+        "rgb": [
+          225,
+          173,
+          151
+        ],
+        "part": 0.203
+      },
+      {
+        "hex": "#D09270",
+        "rgb": [
+          208,
+          146,
+          112
+        ],
+        "part": 0.084
+      },
+      {
+        "hex": "#F3E2DD",
+        "rgb": [
+          243,
+          226,
+          221
+        ],
+        "part": 0.063
+      },
+      {
+        "hex": "#F1C5B3",
+        "rgb": [
+          241,
+          197,
+          179
+        ],
+        "part": 0.056
+      },
+      {
+        "hex": "#A16C57",
+        "rgb": [
+          161,
+          108,
+          87
+        ],
+        "part": 0.029
+      }
+    ],
+    "familles_couleurs_vives": 1,
+    "densite_details_par_case": [
+      {
+        "case": "haut-gauche",
+        "densite": 0.194
+      },
+      {
+        "case": "haut-centre",
+        "densite": 0.139
+      },
+      {
+        "case": "haut-droite",
+        "densite": 0.055
+      },
+      {
+        "case": "milieu-gauche",
+        "densite": 0.086
+      },
+      {
+        "case": "centre",
+        "densite": 0.097
+      },
+      {
+        "case": "milieu-droite",
+        "densite": 0.153
+      },
+      {
+        "case": "bas-gauche",
+        "densite": 0.007
+      },
+      {
+        "case": "bas-centre",
+        "densite": 0.139
+      },
+      {
+        "case": "bas-droite",
+        "densite": 0.193
+      }
+    ],
+    "densite_details_moyenne": 0.118,
+    "densite_details_ecart": 0.059,
+    "densite_zone_duree": 0.137,
+    "alertes": [
+      "4.88 Mo : au-dessus de 2 Mo, l'upload depuis un téléphone échoue (l'ordinateur accepte jusqu'à 50 Mo).",
+      "52 % du pourtour est quasi noir : la miniature se fond dans le mode sombre."
+    ]
+  },
+  {
+    "fichier": "b.png",
+    "largeur": 3840,
+    "hauteur": 2160,
+    "ratio": 1.778,
+    "poids_octets": 2236616,
+    "poids_mo": 2.24,
+    "format": "PNG",
+    "luminosite_moyenne": 0.398,
+    "contraste_valeurs": 0.447,
+    "saturation_moyenne": 0.127,
+    "part_tres_claire": 0.335,
+    "part_tres_sombre": 0.556,
+    "couleur_moyenne_bords": "#524F50",
+    "part_bords_quasi_blancs": 0.262,
+    "part_bords_quasi_noirs": 0.613,
+    "palette": [
+      {
+        "hex": "#0C0A0B",
+        "rgb": [
+          12,
+          10,
+          11
+        ],
+        "part": 0.558
+      },
+      {
+        "hex": "#FAF9FA",
+        "rgb": [
+          250,
+          249,
+          250
+        ],
+        "part": 0.327
+      },
+      {
+        "hex": "#9E9D9D",
+        "rgb": [
+          158,
+          157,
+          157
+        ],
+        "part": 0.039
+      },
+      {
+        "hex": "#626060",
+        "rgb": [
+          98,
+          96,
+          96
+        ],
+        "part": 0.031
+      },
+      {
+        "hex": "#F93A2F",
+        "rgb": [
+          249,
+          58,
+          47
+        ],
+        "part": 0.021
+      },
+      {
+        "hex": "#541D1B",
+        "rgb": [
+          84,
+          29,
+          27
+        ],
+        "part": 0.017
+      }
+    ],
+    "familles_couleurs_vives": 1,
+    "densite_details_par_case": [
+      {
+        "case": "haut-gauche",
+        "densite": 0.194
+      },
+      {
+        "case": "haut-centre",
+        "densite": 0.116
+      },
+      {
+        "case": "haut-droite",
+        "densite": 0.088
+      },
+      {
+        "case": "milieu-gauche",
+        "densite": 0.086
+      },
+      {
+        "case": "centre",
+        "densite": 0.082
+      },
+      {
+        "case": "milieu-droite",
+        "densite": 0.21
+      },
+      {
+        "case": "bas-gauche",
+        "densite": 0.007
+      },
+      {
+        "case": "bas-centre",
+        "densite": 0.054
+      },
+      {
+        "case": "bas-droite",
+        "densite": 0.178
+      }
+    ],
+    "densite_details_moyenne": 0.113,
+    "densite_details_ecart": 0.064,
+    "densite_zone_duree": 0.224,
+    "alertes": [
+      "2.24 Mo : au-dessus de 2 Mo, l'upload depuis un téléphone échoue (l'ordinateur accepte jusqu'à 50 Mo).",
+      "61 % du pourtour est quasi noir : la miniature se fond dans le mode sombre.",
+      "Beaucoup de détails sous la zone de la durée (bas droite) : vérifier que rien d'important n'y est caché."
+    ]
+  }
+]

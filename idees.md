@@ -27,6 +27,7 @@ Pour les idées qui portent un numéro, le hook, la miniature et le score sont d
 | Idée | Pilier | Score | Quand | Détail |
 |---|---|---|---|---|
 | Combien coûte [le modèle du moment] chez toi ? (calculé, la série de Kai et de Morgans Code) | IA | — | Créneaux radar | À noter au radar, modèle par modèle |
+| Le meilleur modèle que ta carte peut vraiment faire tourner, de 4 à 16 Go de VRAM (calculé, une ligne par palier : 4, 6, 8, 12, 16 Go). Inspiration : Codacus, [*What's the Best AI Model Your GPU Can Actually Run? 4GB to 16GB VRam*](https://www.youtube.com/watch?v=tek-IY9BRWc) (50,3 K vues, 02/11, 26:08 ; relevé yt-dlp le 11/11). Angle Technovore : les cartes que ton public possède vraiment (Steam : 8 Go = 26,9 %, 16 Go = 26,4 %, 12 Go = 12,9 %), les prix en euros et en FCFA, une carte « à la fin, ta carte » ; ne pas copier sa carte ni sa miniature. Renvoie à *16 Go de VRAM suffisent* et à *lire le nom d'un modèle* | IA | — | Ta demande du 11/11, à placer au prochain radar | Transcription lue le 11/11 |
 | Streaming +71 %, Plex, maison pilotée par IA, l'IA dans ta carte graphique | — | — | Si un créneau se libère, ou à 10 K abonnés | `strategie.md`, « Mises de côté » |
 
 ## En vrac

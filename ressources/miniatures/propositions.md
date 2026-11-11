@@ -1,5 +1,7 @@
 # Miniatures Technovore : une charte par pilier
 
+> **⚠️ 11/11/2026 : style unique, celui d'OpenCode piraté**, pour toutes les vidéos, y compris « IA chez moi » : fond noir texturé, logo, 2 lignes en capitales (sujet en blanc, mot choc en rouge), un visage ou un meme à droite. La charte verte n'est plus utilisée. Référence : [`images/reference-style-opencode.jpg`](images/reference-style-opencode.jpg). Le détail est dans `.claude/rules/miniatures.md`, et la raison dans [`etudes/audit-2026-11-11.md`](../../etudes/audit-2026-11-11.md) (16 Go : 1,5 % de CTR à J+2 contre 4,2 % pour OpenCode). Les règles communes du § 2 restent valables. Ce qui suit est l'historique.
+
 > **v2 du 21/10/2026**, après la critique du coach ([`coach.md`](coach.md)) : **noir** pour « Le génie derrière l'app » et les grandes histoires de la tech, **vert** pour « IA chez moi ».
 > - **24/10** : texte remonté dans la moitié haute sur les 11 miniatures (test des 50 %, § 5), rendus et PSD refaits.
 > - **Images** : [`rendus/`](rendus/), 11 miniatures en 4K (3840×2160, depuis le 23/10). La v1 (20 propositions, deux chartes par sujet) est dans [`rendus/v1/`](rendus/v1/).

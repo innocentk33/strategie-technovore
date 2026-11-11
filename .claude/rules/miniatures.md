@@ -7,7 +7,26 @@ paths:
 
 # Miniatures
 
-**Style de toutes les miniatures** (décidé le 03/11, d'après OpenCode piraté) : un visage ou un objet fort, net et en couleur, sur un fond très contrasté. Détails dans la section 2 de `ressources/miniatures/propositions.md`.
+## Style unique : celui d'OpenCode piraté (décidé le 11/11)
+
+**Toutes les miniatures prennent le style d'OpenCode piraté** (4,2 % de CTR, la meilleure de la chaîne), y compris celles d'« IA chez moi ». La charte verte (`vert.html`) n'est plus utilisée. La référence est [`ressources/miniatures/images/reference-style-opencode.jpg`](../../ressources/miniatures/images/reference-style-opencode.jpg) :
+- fond noir, texturé (code, grille sombre), jamais une couleur pleine ;
+- à gauche, le logo ou l'objet du sujet, petit, au-dessus du texte ;
+- 2 lignes de texte en capitales très grasses : le sujet en blanc, puis le mot choc en rouge (« OPENCODE / HACKÉ ») ; ensemble, elles se comprennent sans le titre ;
+- à droite, un visage expressif ou un meme (acteur ou réaction : voir la mémoire « visages et memes »), détouré, qui sort du cadre en bas.
+
+Contre-exemple : « 16 Go de VRAM » (09/11), avec un fond rouge plein, une carte graphique grise et le texte « ÇA RENTRE ? », a fait 1,5 % de CTR à J+2 (test A/B encore en cours) : pas d'émotion, et un texte qui ne dit pas le sujet (voir [`etudes/audit-2026-11-11.md`](../../etudes/audit-2026-11-11.md), § 4).
+
+**Seule la miniature est concernée.** Le montage de la vidéo garde sa propre DA : la règle « la vidéo commence sur la scène de la miniature » tombe.
+
+Le reste de ce fichier (3 variantes, chartes `noir`/`vert`) date d'avant cette décision. Ce qui en reste valable :
+- les règles communes de la section 2 de `ressources/miniatures/propositions.md` (moitié haute, zones interdites, 4K, jamais la même info que le titre) ;
+- les étapes (refs → `/youtube thumbnail` → maquette → `/coach-miniature-youtube` → test des 50 %) ;
+- les tests A/B, mais toutes les variantes sont dans le style OpenCode et ne changent qu'une seule chose (le meme, le mot choc ou l'objet). La base de départ est `noir.html`.
+
+---
+
+**Ancien style de toutes les miniatures** (décidé le 03/11, d'après OpenCode piraté) : un visage ou un objet fort, net et en couleur, sur un fond très contrasté. Détails dans la section 2 de `ressources/miniatures/propositions.md`.
 
 `projets/<nom>/miniature/` contient `propositions.md`, les maquettes HTML (`propositions/miniature.html?v=a|b|c`) et les PSD dans `photocraft/`.
 

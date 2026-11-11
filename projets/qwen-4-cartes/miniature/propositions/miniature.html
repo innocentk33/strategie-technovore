@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- Miniatures de « Qwen 4 arrive : quelle carte graphique acheter (ou pas) ? » (jeu. 12/11/2026).
+     Style OpenCode piraté (règle du 11/11). Page de 1280×720, rendue à ×3 par ../rendre.sh.
+     ?v=a : Harold (Hide the Pain Harold) · ?v=b : Jackie Chan (« WTF »). Seul le meme change. -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:"Archivo Black"; src:url(../../../../ressources/miniatures/fonts/archivo-black-latin-400.woff2) format("woff2"); }
+  @font-face { font-family:"JetBrains Mono"; src:url(../../../../ressources/miniatures/fonts/jetbrains-mono-latin-700.woff2) format("woff2"); }
+  :root { --ink:#ffffff; --red:#ff3b30; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1280px; height:720px; overflow:hidden; background:#0a0a0c; }
+  body { position:relative; color:var(--ink); }
+
+  /* Fond : journal de llama.cpp très sombre (texture « code » de la référence), plus fort à gauche */
+  .code { position:absolute; inset:-6px 0 0 -10px; font:700 15px/21px "JetBrains Mono", monospace; color:#9aa0a6; white-space:pre;
+    -webkit-mask-image:linear-gradient(90deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,.45) 50%, rgba(0,0,0,.1) 75%); }
+  /* Halo rouge derrière le meme : la tuile se détache du mode sombre de YouTube */
+  .halo { position:absolute; left:520px; top:-260px; width:1100px; height:1240px; border-radius:50%;
+    background:radial-gradient(closest-side, rgba(255,59,48,.6), rgba(255,59,48,.22) 50%, rgba(255,59,48,.06) 85%, transparent 100%); }
+  .vignette { position:absolute; inset:0; background:radial-gradient(ellipse 85% 95% at 35% 40%, transparent 55%, rgba(0,0,0,.6) 100%); }
+
+  /* Le meme, détouré, à droite ; il sort du cadre en bas */
+  .meme { position:absolute; display:none; filter:drop-shadow(0 0 18px rgba(255,59,48,.55)) drop-shadow(0 30px 40px rgba(0,0,0,.8)); }
+  [data-v="a"] .meme.a, [data-v="b"] .meme.b { display:block; }
+  /* Harold (1410×793, coupé en haut dans l'original) : retourné pour regarder vers le texte, collé en haut, il sort en bas ;
+     le téléphone part hors cadre à droite */
+  .meme.a { left:560px; top:-4px; width:1290px; transform:scaleX(-1); -webkit-mask-image:linear-gradient(270deg, transparent 0, #000 9%), linear-gradient(90deg, transparent 42%, #000 47%);
+    -webkit-mask-composite:source-in; mask-composite:intersect; }  /* fondus : le bas de la chemise (à gauche) et le téléphone (bord droit) */
+  /* Jackie Chan (1500×843) : visage à droite, la main gauche juste après le texte, la droite sort du cadre */
+  .meme.b { left:440px; top:0; width:1280px; -webkit-mask-image:linear-gradient(90deg, transparent 8%, #000 17%); }
+
+  /* Le sujet, petit, au-dessus du texte : logo Qwen + une vraie RTX 5090 (ASUS TUF, celle de la fiche Amazon à 7 900 €) */
+  .objet { position:absolute; left:58px; top:44px; display:flex; align-items:center; gap:22px; }
+  .objet img.qwen { width:78px; height:78px; filter:drop-shadow(0 0 14px rgba(8,45,255,.55)); }
+  .objet .logo { width:78px; height:78px; border-radius:18px; background:#fff; display:grid; place-items:center; }
+  .objet img.gpu { height:96px; filter:drop-shadow(0 0 16px rgba(255,255,255,.18)); }
+
+  /* Le texte : 2 lignes en capitales très grasses */
+  .t { position:absolute; left:52px; font-family:"Archivo Black", serif; text-transform:uppercase; letter-spacing:-.01em; line-height:1; white-space:nowrap;
+    text-shadow:0 6px 0 rgba(0,0,0,.55), 0 0 30px rgba(0,0,0,.9); }
+  .t1 { top:146px; font-size:104px; color:var(--ink); }
+  .t2 { top:246px; font-size:132px; color:var(--red); }
+</style>
+</head>
+<body>
+<div class="code" id="code"></div>
+<div class="halo"></div>
+<div class="vignette"></div>
+
+<img class="meme a" src="../sources/harold-detoure.png" alt="">
+<img class="meme b" src="../sources/jackie-chan-wtf-detoure.png" alt="">
+
+<div class="objet">
+  <div class="logo"><img class="qwen" src="../sources/qwen-color.svg" alt="Qwen" style="width:60px;height:60px;filter:none"></div>
+  <img class="gpu" src="../sources/tuf-rtx5090-recadree.png" alt="RTX 5090">
+</div>
+
+<div class="t t1">RTX 5090</div>
+<div class="t t2">7&#8239;900&nbsp;€</div>
+
+<script>
+  // Texture : un faux journal de llama.cpp, déterministe (même fond pour a et b). Aucun chiffre de vitesse ni nom de carte : la miniature n'affirme rien de plus que le texte
+  let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const lignes = [
+    'llama_model_load: loaded meta data with 41 key-value pairs', 'load_tensors: offloaded 65/65 layers to GPU',
+    'llm_load_print_meta: model size = 16.56 GiB', 'llama_context: n_ctx_per_seq = 32768   graph splits = 2',
+    'llama_model_loader: - type q4_K: 289 tensors', 'kv cache: 32768 tokens, q8_0',
+    'sampling: temp = 0.70, top_p = 0.80, top_k = 20', 'main: n_ctx = 32768, n_batch = 2048, n_ubatch = 512',
+    'prompt eval time = 412.07 ms / 1024 tokens', 'llama_kv_cache_unified: CUDA0 KV buffer size = 2048.00 MiB',
+    'srv  update_slots: all slots are idle', 'Q4_K_M  IQ4_XS  Q5_K_M  Q6_K  Q8_0'
+  ];
+  let out = [];
+  for (let r = 0; r < 36; r++) { let l = ''; while (l.length < 150) l += lignes[Math.floor(rnd() * lignes.length)] + '   '; out.push(l); }
+  const el = document.getElementById('code');
+  el.innerHTML = out.map(l => `<span style="opacity:${(.04 + rnd() * .08).toFixed(2)}">${l}</span>`).join('\n');
+  document.body.dataset.v = new URLSearchParams(location.search).get('v') || 'a';
+</script>
+<script src="../../../../ressources/miniatures/export.js"></script>
+</body>
+</html>

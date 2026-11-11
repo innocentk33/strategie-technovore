@@ -1,0 +1,404 @@
+TÉLÉPROMPTEUR — Qwen quatre arrive : les cartes graphiques qui le feront tourner (version deux, onze novembre)
+Une ligne = un souffle. Ligne vide = respiration. Les [MARQUEURS], ⟦à écrire⟧ et (indications) ne se lisent pas.
+Sous chaque ⟦à écrire⟧, le repli est déjà écrit en lignes : lis-le tel quel, ou remplace-le par tes mots.
+Les prix sont à relire sur les fiches du jour avant d'enregistrer (voir sources.md).
+
+[ HOOK ]
+
+(rapide, sur le prix)
+Sept mille neuf cents euros :
+c'est le prix d'une RTX 5090,
+aujourd'hui.
+
+Avec elle, Qwen tourne
+jusqu'à soixante-quinze tokens par seconde.
+
+Sur une 5060 Ti,
+son fichier ne rentre même pas.
+Avec un plus petit :
+vingt-huit.
+
+Qwen quatre, lui,
+n'est qu'en préversion,
+dans le cloud d'Alibaba :
+rien à télécharger.
+
+Sauf que la 5060 Ti et la 5080
+ont déjà pris plus de vingt pour cent
+en un mois.
+
+(plus bas, la question)
+Du coup,
+tu achètes maintenant,
+ou tu attends ?
+
+Voilà le classement,
+carte par carte,
+avec les prix du jour.
+
+[ LE PLAN ]
+
+Je te montre ce qui est sûr sur Qwen quatre,
+et ce qui ne l'est pas.
+La carte pour ton budget, en euros.
+Et ce que fait déjà celle que t'as.
+
+En route, il y a deux réglages gratuits
+qui font presque tripler la vitesse
+d'une paire de cartes.
+
+Et à la fin,
+je réponds à ta question en une phrase :
+acheter, ou attendre.
+
+[ QWEN QUATRE : CE QUI EST SÛR, CE QUI NE L'EST PAS ]
+
+(net, la réponse d'abord)
+Réponse courte :
+non, Qwen quatre n'est pas téléchargeable.
+Sur la page officielle de Qwen,
+à l'heure où j'enregistre,
+il n'y en a aucun.
+
+Par contre,
+si tu tapes « Qwen quatre, vingt-sept B » sur Hugging Face,
+tu vas tomber sur des pages qui portent ce nom.
+Ouvre-les :
+elles sont vides.
+En fait, des gens réservent juste la place
+pour le jour où il sortira.
+Donc si quelqu'un te propose un Qwen quatre
+à télécharger aujourd'hui,
+méfie-toi.
+
+⟦à écrire un : en une phrase, pourquoi toi tu guettes Qwen quatre. Sinon, lis le repli ci-dessous.⟧
+Moi, ce que je guette,
+c'est de savoir si un modèle de cette taille
+tiendra dans une carte de seize gigas.
+
+Ce qu'Alibaba a écrit noir sur blanc,
+c'est peu.
+Le vingt-deux septembre,
+son communiqué dit que Qwen quatre est « en entraînement »,
+sans date ni taille.
+Et depuis aujourd'hui,
+une préversion, Qwen quatre Max,
+est ouverte jusqu'au vingt-cinq novembre.
+Mais seulement dans le cloud :
+par l'abonnement d'Alibaba,
+ou en accès anticipé dans ses applis, comme l'appli Qwen.
+Tu peux l'essayer,
+mais pas le télécharger.
+Donc là non plus,
+pas de fichier.
+
+(ton plus sec)
+Et le Qwen quatre de vingt-sept milliards,
+celui qu'on pourrait faire tourner chez soi ?
+D'après la presse chinoise,
+il a été montré à la conférence,
+comme la version ouverte de Qwen quatre.
+Sauf qu'Alibaba ne l'a écrit nulle part :
+ni dans son communiqué,
+ni dans sa documentation.
+On n'en connaît ni la taille
+ni la date.
+Donc pour l'instant,
+c'est un nom annoncé,
+et personne n'a vu son fichier.
+
+Pour le reste,
+voilà ce qu'on raconte :
+une quinzaine de gigas,
+estimés à partir du code d'un logiciel,
+et une sortie « la semaine prochaine »,
+rapportée de seconde main.
+
+(relance, curieux)
+Mais alors,
+le soixante-quinze et le vingt-huit du début,
+c'est quoi ?
+C'est Qwen trois point huit, vingt-sept milliards :
+le Qwen d'aujourd'hui,
+celui que tu peux télécharger.
+
+(sourire dans la voix)
+C'est comme libérer de la place sur ton SSD
+pour un jeu dont personne ne connaît le poids :
+tu prends le précédent comme étalon.
+Si Qwen quatre garde cette taille,
+ces chiffres tiendront.
+Sinon,
+je refais les comptes.
+
+[ LA CARTE POUR CHAQUE BUDGET ]
+
+Son fichier le plus courant,
+le Q4 K M,
+pèse seize gigas et demi.
+Et pour que ça tourne vite,
+il doit rentrer dans ta carte,
+avec de la place en plus pour la conversation.
+Sinon, une partie déborde dans la RAM,
+et là, ça rame.
+
+[ SEIZE GIGAS : LA 5060 TI ]
+
+On commence par seize gigas,
+avec la RTX 5060 Ti.
+Comme tu l'as vu,
+le Q4 K M ne rentre pas.
+Du coup, on prend un fichier plus serré,
+de quatorze gigas,
+et un utilisateur mesure vingt-huit tokens par seconde.
+Pour discuter, c'est très correct.
+Par contre,
+il te reste moins de deux gigas pour la conversation,
+donc pour un agent de code,
+qui lit des fichiers entiers,
+c'est juste.
+
+J'ai tout détaillé lundi,
+dans la vidéo sur les seize gigas.
+
+Côté prix, regarde bien :
+la même carte, de la même marque,
+coûte six cent quatre-vingt-quatorze euros chez Amazon,
+et mille cent chez LDLC.
+Quatre cents euros d'écart
+pour la même boîte.
+(si l'écart a disparu sur tes captures, dis à la place : « De sept cents à mille cent euros, selon le marchand. » et saute les deux lignes d'avant)
+Donc compare avant de payer :
+pour essayer, elle suffit,
+pour travailler, c'est serré.
+
+Et en occasion, il y a bien moins cher :
+une Radeon RX six mille huit cents XT,
+seize gigas elle aussi,
+autour de deux cent quatre-vingts euros sur Leboncoin.
+Sauf que je n'ai trouvé aucune mesure
+de ce modèle sur cette carte,
+donc je ne te donne pas de vitesse.
+
+[ VINGT-QUATRE GIGAS : LA 3090, OU LA 7900 XTX ]
+
+Palier suivant :
+vingt-quatre gigas,
+avec la RTX 3090.
+Cette fois, le Q4 K M rentre,
+et il reste environ huit gigas
+pour la conversation.
+Résultat,
+autour de quarante tokens par seconde,
+et encore trente-quatre
+quand la conversation devient très longue.
+
+Et là, il y a un réglage
+dont tu vas entendre parler :
+le M T P.
+En gros, le modèle devine plusieurs mots d'avance,
+puis il vérifie.
+Sur une 3090,
+un utilisateur passe de quarante
+à plus de soixante-dix,
+sur du code.
+Le gain baisse quand la conversation s'allonge,
+mais il est gratuit.
+
+Neuve,
+la 3090 est encore affichée
+à près de trois mille euros chez Amazon.
+Évidemment, personne ne l'achète neuve :
+son vrai prix,
+c'est celui de l'occasion.
+
+Aujourd'hui, sur Leboncoin,
+j'en vois une à huit cent cinquante euros.
+Moins d'un tiers du prix neuf.
+Par contre, en occasion,
+vérifie qu'elle tourne avant de payer.
+
+Côté AMD,
+la RX 7900 XTX a aussi vingt-quatre gigas,
+pour un peu plus de mille quatre cents euros neuve.
+Sauf que ses mesures vont
+de vingt-neuf à quarante et un tokens par seconde,
+selon le logiciel et le système.
+Donc avec elle,
+c'est moins prévisible.
+
+[ TRENTE-DEUX GIGAS : DEUX 5060 TI, OU UNE 5090 ]
+
+Dernier palier :
+trente-deux gigas.
+Première option,
+deux 5060 Ti.
+Et c'est là que se cachent
+les deux réglages gratuits.
+
+(lent, on compte)
+Par défaut, le logiciel coupe le modèle en deux,
+couche par couche,
+et une carte attend l'autre :
+vingt-deux tokens par seconde.
+Active le tensor split,
+et les deux cartes calculent en même temps :
+trente-sept.
+Ajoute le M T P :
+soixante-six.
+Presque le triple,
+sans dépenser un euro.
+
+Et ce sont les mesures d'une même personne,
+avec le même fichier :
+la comparaison est propre.
+Attention quand même,
+le tensor split est encore marqué expérimental
+dans le logiciel.
+
+Les deux cartes, chez Amazon :
+à partir de mille quatre cents euros environ.
+
+Deuxième option :
+une seule RTX 5090.
+Jusqu'à soixante-quinze tokens par seconde,
+sans même le M T P.
+Donc à réglages égaux,
+elle reste devant.
+Sauf qu'en stock,
+elle démarre à sept mille neuf cents euros,
+et son prix médian a presque doublé
+en trois mois.
+
+(complice)
+Du coup, pour le prix d'une 5090,
+tu t'offres plus de cinq paires de 5060 Ti.
+Bon, t'en as pas besoin de cinq.
+Mais je fais une vidéo entière
+sur les trente-deux gigas
+le lundi vingt-trois novembre.
+
+⟦à écrire trois : l'encart Afrique, soixante à quatre-vingts mots, sans chiffre ni anecdote que tu n'as pas vécus. Sinon, lis le repli ci-dessous.⟧
+Si t'es en Afrique francophone,
+ces prix français ne sont qu'un repère.
+Chez toi, l'occasion et l'import
+sont souvent le seul chemin,
+et le prix change d'un pays à l'autre.
+Je te demande ton prix
+à la fin de la vidéo.
+
+[ ET SI T'AS DÉJÀ UNE CARTE ? ]
+
+Et si t'as déjà une carte ?
+Alors, avant d'acheter quoi que ce soit,
+regarde juste si le fichier rentre.
+
+Avec seize gigas,
+ça passe avec le fichier serré,
+on l'a vu.
+Et avec le M T P,
+l'utilisateur de la 5060 Ti
+passe de vingt-huit à cinquante et un,
+sur une conversation courte.
+Sur une 5080,
+quelqu'un a même mesuré
+cent un tokens par seconde,
+mais avec un fichier trois bits,
+moins précis,
+et c'est une seule mesure.
+
+Avec douze gigas, en revanche,
+ce modèle ne rentre pas,
+même en quatre bits.
+Une partie part dans la RAM,
+du coup, sur une 3060,
+on tombe entre cinq et sept tokens par seconde.
+Avec huit gigas, c'est pire.
+Et c'est le cas de beaucoup de monde :
+sur Steam, en octobre,
+plus d'un joueur sur quatre a huit gigas,
+et environ un sur huit en a douze.
+
+Et le piège, c'est le prix :
+une 3060 de douze gigas d'occasion,
+je la vois entre deux cent quatre-vingts
+et trois cent vingt euros sur Leboncoin.
+À peu près le prix de la Radeon de seize gigas.
+Donc pour ce genre de modèle,
+à prix égal, prends les seize.
+
+Donc si c'est ton cas,
+Qwen quatre ne va sans doute rien changer :
+rien ne dit qu'il sera plus petit,
+et pour un modèle de cette taille,
+il te faudra une carte des paliers d'avant.
+
+[ ACHETER OU ATTENDRE ? ]
+
+(on ralentit)
+Alors,
+tu achètes maintenant,
+ou tu attends ?
+
+D'abord,
+attendre Qwen quatre ne te protège pas des prix :
+ils ont commencé à monter sans lui.
+La cause avancée,
+d'après une chaîne américaine,
+c'est la pénurie de mémoire.
+Et personne ne sait
+quand ça redescendra.
+
+Mais acheter pour Qwen quatre,
+c'est acheter pour un fichier
+que personne n'a vu.
+En fait, le vingt-sept milliards
+a été montré à une conférence,
+rien de plus.
+
+Sauf qu'on sait déjà une chose :
+un modèle de vingt-sept milliards,
+en quatre bits,
+pèse entre quatorze et dix-huit gigas
+selon le fichier.
+On vient de le voir avec Qwen trois point huit.
+Donc si Qwen quatre garde cette taille,
+vingt-quatre gigas gardent de la marge,
+et seize gigas restent serrés.
+
+(posé, la règle)
+Voilà la règle, en une phrase :
+n'achète pas pour un nom,
+achète pour la taille d'un fichier,
+plus la place de la conversation.
+Aujourd'hui, ça veut dire vingt-quatre gigas,
+ou deux fois seize
+avec le bon réglage.
+
+Et si t'as déjà seize gigas ou plus,
+ne change rien pour l'instant :
+attends de voir le vrai fichier.
+Le jour où il sort,
+je refais ce classement
+avec les vrais chiffres.
+
+⟦à écrire quatre : ta décision à toi, la carte que tu prendrais et pourquoi, sans parler d'un test que tu n'as pas fait. Sinon, lis le repli ci-dessous.⟧
+Moi, je ne change rien
+avant d'avoir vu le vrai fichier de Qwen quatre.
+
+[ FIN ]
+
+Dis-moi en commentaire
+quelle carte t'as,
+et combien elle coûte vraiment chez toi :
+je compile vos réponses,
+surtout pour ceux qui n'ont pas accès aux prix français.
+Et si t'as seize gigas,
+la vidéo de lundi te dit quel fichier prendre.
+
+Lundi seize novembre,
+je teste Strata sur ma 5080,
+en vrai.
+Et le vingt-trois,
+les trente-deux gigas de VRAM,
+en détail.
