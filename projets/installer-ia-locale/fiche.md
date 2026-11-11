@@ -21,22 +21,18 @@
 
 « 10 minutes » doit être tenu : il faut télécharger environ 6,5 Go (l'appli, puis le modèle), soit plus d'une heure à 10 Mbit/s (F39). Garde le chiffre seulement si ton chrono le tient **hors téléchargement**, et dis-le dans la vidéo. Le titre 2 tient si la vidéo dit « à distance » (H6). Le titre de la vidéo du 7 déc. commence aussi par « IA en local : » : c'est le mot-clé, ça ne gêne pas, mais on pourra raccourcir le sien en *Comment lire le nom d'un modèle d'IA (35B, A3B, Q4_K_M…)*. [CROCHET : ton choix]
 
-## Miniature (charte verte, trois versions)
+## Miniature (six propositions, hors charte)
 
-Trois miniatures, comme pour chaque vidéo (règle du 24/10 dans `CLAUDE.md`) : a noir, b vert (la charte de la série, celle par défaut), c hors niche. **Piste corrigée le 25/10** : l'icône du wifi barrée n'est pas dans ta capture. Ce qu'elle montre, c'est la page « Ce site est inaccessible », puis Gemma qui répond quand même. La miniature reprend cette scène, qui est aussi le premier plan de la vidéo.
+**Refaites le 26/10, à ta demande** : six miniatures, sans les couleurs de la chaîne (« ça ne rend pas bien sur cette vidéo »), inspirées de ce qui marche dans la niche tech, avec des logos détournés. Les deux séries précédentes (« Il tombe dedans ? », puis « ELLE RÉPOND. » et la carte « SIGNÉ CHEZ MOI. ») sont supprimées. Cette vidéo sort donc de la règle a/b/c du 24/10. Détail, critique et tests dans [`miniature/propositions.md`](miniature/propositions.md).
 
-- **a et b, « Hors ligne »** (même scène, seules les couleurs changent) :
-  - **fond** : la page d'erreur, recréée en grand et désaturée (la petite page triste, « Ce site est inaccessible ») ; pas de logo de Google ni de Chrome ;
-  - **premier plan**, sur les deux tiers de droite : la bulle de réponse de Gemma, en couleur (menthe `#07c095` pour b), avec trois lignes de texte et le curseur qui clignote ;
-  - **texte** : « HORS LIGNE », en haut à gauche ; sinon « ET POURTANT… » ;
-  - **la question qu'elle pose** : comment ça répond, si rien ne charge ? L'émotion : la surprise. Le titre complète (« installe ta propre IA ») sans répéter l'image ;
-  - **le risque** : à 168 px, la bulle doit se lire comme « ça répond » sans qu'on lise son texte. Teste-le dès la maquette (planche de lisibilité).
-- **c, hors niche, « Le piège »** : inspirée des chaînes de « scam baiting » (Kitboga, par exemple ; la vidéo d'origine est à noter dans `propositions.md` au moment des références) :
-  - le faux message du test 3, en gros, `sidedeouf.fr` et « accepté immédiatement » cerclés de rouge ;
-  - texte « IL TOMBE DEDANS ? » ;
-  - elle tient : la vidéo montre qu'il tombe dedans, puis qu'il se rattrape avec Think. Mais elle promet le test plus que l'installation : c'est le joker du test.
+- **a, « PLUS BESOIN ? »** : le logo de ChatGPT barré dans un vrai panneau d'interdiction, de nuit.
+- **b, « ET S'ILS APPUIENT ? »** : le logo de ChatGPT sur un bouton d'arrêt d'urgence (Fable 5 coupé à distance).
+- **c, « aucune connexion, ET IL PARLE. »** : le dinosaure du jeu hors ligne de Chrome, qui écrit dans une bulle.
+- **d, « TU LA VEUX ? »** : une IA emballée comme un jouet, « TON IA », « GEMMA 4 », « INTERNET NON INCLUS ».
+- **e, « tes données : RIEN NE SORT. »** : un coffre-fort entrouvert.
+- **f, « MON IA, FAITE MAISON. »** : une cocotte rouge qui brille, des étoiles d'IA dans la vapeur.
 
-Pas de logo d'Anthropic ni de capture d'une annonce de Fable 5 en miniature : le sujet, c'est ton IA à toi, pas l'affaire.
+Les décors photo sont générés par vidIQ, sans texte ; textes et logos sont posés en HTML. **Pour « Tester et comparer » : a, c et f** (a en première position), avec le titre A ; b va avec le titre B, pour le test des titres. Si a reste, la voix doit répondre à « plus besoin de ChatGPT ? » (la réponse est nuancée : moins fort que le cloud, et tu gardes Claude).
 
 ## Les 15 premières secondes
 

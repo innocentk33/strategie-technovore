@@ -58,7 +58,8 @@ Règles du test (24/10) :
 - Deux chartes HTML de 1280×720 : `noir.html` pour « génie derrière l'app » et grandes histoires (`?n=1`, `1b`, `3`, `4`, `6`, `7`, `8`), et `vert.html` pour « IA chez moi » (`?n=2`, `5`, `9`, `10`). Les règles figées des chartes sont dans la section 2 de `propositions.md`, à respecter pendant au moins 5 vidéos.
 - Rendu PNG avec Chrome headless : `./ressources/miniatures/rendre.sh noir 3` (sans argument : toutes) → `rendus/`.
 - PSD à calques pour PhotoCraft : `python3 -I ressources/miniatures/psd.py noir 3` → `photocraft/`.
-  - Le script s'appuie sur `export.js` (`?layer=decor`, `?dump=1`) et `~/.local/bin/photocraft-cli`.
+  - Le script s'appuie sur `export.js` (`?layer=decor`, `?dump=1`) et `photocraft-cli` (`~/.local/bin` sur Mac, `C:\Program Files\PhotoCraft` sur Windows).
+  - Pour une miniature de projet : `python3 -I ressources/miniatures/psd.py --page <miniature.html> <dossier> [a b c]`, ou `--page <miniature.html> v=b <sortie.psd>` pour une seule.
   - Seuls les textes droits des éléments `.t` deviennent des calques de texte ; les textes tournés restent dans le décor.
   - Vérifier un PSD : `photocraft-cli convert <fichier>.psd <sortie>.png`.
 - Planches de lisibilité sur le fond sombre de YouTube : `python3 -I ressources/miniatures/planches.py <dossier des concurrents>` (Pillow).

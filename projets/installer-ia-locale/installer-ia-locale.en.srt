@@ -1,0 +1,1014 @@
+1
+00:00:00,000 --> 00:00:02,320
+If you want to use an
+AI, you need internet.
+
+2
+00:00:02,370 --> 00:00:05,470
+But can you have an AI that
+doesn't need internet at all?
+
+3
+00:00:05,540 --> 00:00:07,220
+Well, that's what we're
+going to find out today.
+
+4
+00:00:07,490 --> 00:00:10,300
+So here, I cut the internet,
+and my AI still answers me.
+
+5
+00:00:10,690 --> 00:00:13,660
+On June 12, Anthropic cut
+off Fable 5 for everyone.
+
+6
+00:00:13,860 --> 00:00:16,830
+The most powerful model it had
+ever released to the public.
+
+7
+00:00:17,260 --> 00:00:18,470
+Three days after its launch.
+
+8
+00:00:19,010 --> 00:00:21,570
+So how do you get an AI that nobody
+
+9
+00:00:21,620 --> 00:00:23,240
+can cut off remotely?
+
+10
+00:00:23,510 --> 00:00:24,870
+Well, you run it at home.
+
+11
+00:00:24,920 --> 00:00:28,270
+Like this one. And yours, we're
+installing it right now, for free.
+
+12
+00:00:28,540 --> 00:00:30,180
+And at the end, I set a trap for it.
+
+13
+00:00:30,230 --> 00:00:30,960
+The first time,
+
+14
+00:00:31,010 --> 00:00:32,090
+it falls right into it.
+
+15
+00:00:32,590 --> 00:00:33,860
+Okay, let's go.
+
+16
+00:00:34,440 --> 00:00:36,240
+First, let me make one thing clear.
+
+17
+00:00:36,290 --> 00:00:39,880
+I use Claude Code to build my mobile apps.
+
+18
+00:00:39,930 --> 00:00:41,190
+And I'm going to keep doing it.
+
+19
+00:00:41,490 --> 00:00:45,620
+Except that on June 12, it
+wasn't even Anthropic's choice.
+
+20
+00:00:46,000 --> 00:00:48,000
+The US government demanded it.
+
+21
+00:00:48,050 --> 00:00:50,150
+Anthropic simply applied the directive,
+
+22
+00:00:50,470 --> 00:00:52,550
+while saying they didn't agree with it.
+
+23
+00:00:52,600 --> 00:00:55,400
+And Fable 5 came back 19 days later.
+
+24
+00:00:55,820 --> 00:00:57,620
+And this has happened elsewhere too.
+
+25
+00:00:57,670 --> 00:01:02,620
+In August 2025, when GPT-5
+came out, OpenAI removed GPT-4o
+
+26
+00:01:02,670 --> 00:01:05,440
+from ChatGPT that same day.
+
+27
+00:01:05,880 --> 00:01:09,590
+Well, every subscriber complained,
+and it came back a few days later.
+
+28
+00:01:09,870 --> 00:01:13,160
+Because back then, people thought
+GPT-5 was completely useless.
+
+29
+00:01:13,510 --> 00:01:16,000
+So basically, it can happen to anyone,
+
+30
+00:01:16,110 --> 00:01:17,460
+with any provider,
+
+31
+00:01:17,510 --> 00:01:18,990
+even when the provider disagrees.
+
+32
+00:01:19,300 --> 00:01:21,330
+And you have no say in any of it.
+
+33
+00:01:21,610 --> 00:01:25,090
+So an AI at home is basically your plan B.
+
+34
+00:01:25,290 --> 00:01:27,460
+And it's the one you control.
+
+35
+00:01:27,800 --> 00:01:30,430
+And that's the first
+reason to have your own AI.
+
+36
+00:01:30,660 --> 00:01:33,550
+The other two reasons, I won't
+explain them, I'll show you instead.
+
+37
+00:01:34,250 --> 00:01:35,360
+Okay, let's install it.
+
+38
+00:01:35,600 --> 00:01:37,710
+A local AI is really two things.
+
+39
+00:01:37,990 --> 00:01:39,020
+A file, the model.
+
+40
+00:01:39,320 --> 00:01:40,910
+And an engine that runs it.
+
+41
+00:01:41,220 --> 00:01:42,670
+There are several engines.
+
+42
+00:01:42,800 --> 00:01:45,590
+Ollama, llama.cpp, LM Studio.
+
+43
+00:01:46,130 --> 00:01:47,300
+I picked LM Studio.
+
+44
+00:01:47,420 --> 00:01:49,930
+Because it's a real app, no
+terminal, and it's very accessible
+
+45
+00:01:49,980 --> 00:01:53,740
+for beginners. And above all, it tells
+you if a model fits on your machine
+
+46
+00:01:53,790 --> 00:01:56,640
+before you download it.
+
+47
+00:01:56,720 --> 00:01:58,260
+You'll see why that matters a lot.
+
+48
+00:01:58,730 --> 00:02:01,360
+So go to lmstudio.ai/download.
+
+49
+00:02:01,760 --> 00:02:03,950
+And take the second block,
+"Download LM Studio".
+
+50
+00:02:04,050 --> 00:02:06,970
+The one above is a different
+app, their personal agent.
+
+51
+00:02:07,280 --> 00:02:09,340
+It's available for Windows, Mac and Linux.
+
+52
+00:02:09,790 --> 00:02:11,640
+And never use a link from another website.
+
+53
+00:02:11,900 --> 00:02:13,550
+Always use the official link.
+
+54
+00:02:13,950 --> 00:02:16,720
+Before you click, though, just
+check that your machine can keep up.
+
+55
+00:02:16,780 --> 00:02:19,750
+On a Mac, you need an
+Apple chip, M1 or newer,
+
+56
+00:02:19,810 --> 00:02:20,970
+and macOS 14.
+
+57
+00:02:21,380 --> 00:02:23,020
+Intel Macs don't work.
+
+58
+00:02:23,070 --> 00:02:25,690
+And LM Studio recommends
+at least 16 GB of RAM,
+
+59
+00:02:25,860 --> 00:02:28,270
+plus 4 GB of memory on the graphics card
+
+60
+00:02:28,320 --> 00:02:29,760
+on Windows.
+
+61
+00:02:30,030 --> 00:02:33,230
+That's LM Studio's advice,
+but a Mac with 8 GB also runs
+
+62
+00:02:33,280 --> 00:02:35,040
+smaller models.
+
+63
+00:02:35,310 --> 00:02:37,630
+After that, honestly,
+installing it is child's
+
+64
+00:02:37,680 --> 00:02:40,600
+play. The installer is about
+600 MB, you accept the license
+
+65
+00:02:40,650 --> 00:02:41,710
+and off you go.
+
+66
+00:02:42,070 --> 00:02:44,100
+No account to create, nothing at all.
+
+67
+00:02:44,160 --> 00:02:46,820
+And on first launch, it
+already suggests a model.
+
+68
+00:02:47,180 --> 00:02:49,450
+It's the Gemma 4 E4B model.
+
+69
+00:02:49,740 --> 00:02:52,260
+I skip it, because my graphics
+card can handle a model
+
+70
+00:02:52,310 --> 00:02:53,510
+that's a bit bigger.
+
+71
+00:02:53,760 --> 00:02:55,850
+And for yours, we'll find out right now.
+
+72
+00:02:56,510 --> 00:02:59,700
+So when you open the app, there it
+is, except it's completely empty.
+
+73
+00:02:59,940 --> 00:03:02,700
+It's missing the file, in
+other words, the brain.
+
+74
+00:03:02,870 --> 00:03:05,140
+And to choose it, remember just one thing.
+
+75
+00:03:05,310 --> 00:03:08,210
+It's your graphics card's
+memory, the VRAM, that decides.
+
+76
+00:03:08,310 --> 00:03:11,100
+Or your Mac's memory, if you're on a Mac,
+
+77
+00:03:11,150 --> 00:03:12,770
+because it's unified memory.
+
+78
+00:03:12,930 --> 00:03:15,830
+The more memory you have, the
+bigger the model you can run.
+
+79
+00:03:16,120 --> 00:03:17,870
+To check your VRAM on Windows,
+
+80
+00:03:17,970 --> 00:03:20,520
+open Task Manager and go to Performance.
+
+81
+00:03:20,820 --> 00:03:22,790
+Then click on your graphics card.
+
+82
+00:03:22,900 --> 00:03:26,580
+And read the dedicated memory.
+Mine is an RTX 5080, 16 GB.
+
+83
+00:03:27,130 --> 00:03:30,160
+Then, in LM Studio, click
+"Model Search" on the left.
+
+84
+00:03:30,330 --> 00:03:32,570
+It shows you a selection
+of models right away.
+
+85
+00:03:32,840 --> 00:03:35,250
+And Gemma 4 is in there.
+Gemma 4 is from Google.
+
+86
+00:03:35,520 --> 00:03:38,470
+Released in April 2026,
+under the Apache 2.0 license.
+
+87
+00:03:38,620 --> 00:03:41,480
+Basically, you're allowed
+to use it, even for work.
+
+88
+00:03:41,990 --> 00:03:44,890
+And you'll also see weird
+names, like 12B, QAT.
+
+89
+00:03:45,280 --> 00:03:47,140
+I'm going to make a
+whole video about those.
+
+90
+00:03:47,190 --> 00:03:48,720
+For now, don't read the names.
+
+91
+00:03:48,770 --> 00:03:50,450
+Look at what the app tells you instead.
+
+92
+00:03:50,830 --> 00:03:54,570
+On Gemma 4 12B, it says in green:
+"Full GPU Offload Possible".
+
+93
+00:03:55,060 --> 00:03:57,270
+Basically, the whole
+model fits on my card.
+
+94
+00:03:57,600 --> 00:04:00,830
+But Flint is 24 GB, so it only partly fits
+
+95
+00:04:00,880 --> 00:04:01,960
+on my card.
+
+96
+00:04:02,250 --> 00:04:04,330
+So part of it will spill over into RAM.
+
+97
+00:04:04,560 --> 00:04:06,650
+In that case, it will run more slowly.
+
+98
+00:04:07,060 --> 00:04:08,480
+And that's why I picked LM Studio.
+
+99
+00:04:08,530 --> 00:04:10,180
+You don't burn gigabytes of data
+
+100
+00:04:10,310 --> 00:04:12,450
+downloading a model that won't be able
+
+101
+00:04:12,500 --> 00:04:14,050
+to run on your machine.
+
+102
+00:04:14,500 --> 00:04:17,630
+So if you have an 8 GB
+card, or just 8 GB of RAM,
+
+103
+00:04:17,680 --> 00:04:21,530
+pick a much smaller
+model, like Gemma 4 E4B.
+
+104
+00:04:21,930 --> 00:04:24,110
+It's the one suggested at launch.
+
+105
+00:04:24,210 --> 00:04:25,550
+It's about
+
+106
+00:04:25,800 --> 00:04:29,130
+5.9 GB. That leaves
+you plenty of headroom.
+
+107
+00:04:29,430 --> 00:04:33,890
+And if you have 16 GB like me,
+well, take Gemma 4 12B, a bit
+
+108
+00:04:33,940 --> 00:04:35,510
+bigger. It's only 7 GB.
+
+109
+00:04:36,020 --> 00:04:37,140
+So I click download.
+
+110
+00:04:37,190 --> 00:04:38,300
+And now you have to be patient.
+
+111
+00:04:38,350 --> 00:04:40,140
+For me, it took about 4 minutes.
+
+112
+00:04:40,190 --> 00:04:42,130
+But with a 10 Mbps connection,
+
+113
+00:04:42,290 --> 00:04:44,220
+expect more like an hour and a half.
+
+114
+00:04:44,810 --> 00:04:46,650
+And while it downloads, I
+have to tell you something.
+
+115
+00:04:46,700 --> 00:04:49,510
+A model that fits on your PC is
+weaker than the biggest model
+
+116
+00:04:49,560 --> 00:04:50,240
+in the cloud.
+
+117
+00:04:50,580 --> 00:04:52,070
+But how much weaker?
+
+118
+00:04:52,270 --> 00:04:53,500
+Honestly, there isn't…
+
+119
+00:04:53,550 --> 00:04:55,560
+a gap that's huge.
+
+120
+00:04:55,900 --> 00:04:58,440
+I gathered the benchmarks from
+people who have the same card as me.
+
+121
+00:04:58,490 --> 00:05:01,010
+And I'll show you all of it
+in a video in a few weeks.
+
+122
+00:05:01,360 --> 00:05:03,870
+So you don't miss it, feel free
+to subscribe to my channel.
+
+123
+00:05:04,060 --> 00:05:05,890
+A new video comes out every Monday.
+
+124
+00:05:06,250 --> 00:05:09,220
+Okay, now that the download is
+done, I'm running three tests.
+
+125
+00:05:09,370 --> 00:05:11,620
+The last one is really a
+trap, to see how the AI
+
+126
+00:05:11,670 --> 00:05:12,630
+will react.
+
+127
+00:05:13,090 --> 00:05:15,500
+So once it's downloaded,
+you load your model.
+
+128
+00:05:15,750 --> 00:05:17,860
+Now you can talk to it like any chatbot.
+
+129
+00:05:18,330 --> 00:05:19,470
+Okay, here's the first test.
+
+130
+00:05:19,520 --> 00:05:20,890
+An internet culture question.
+
+131
+00:05:20,940 --> 00:05:22,180
+Where does the "Macron
+
+132
+00:05:22,290 --> 00:05:23,210
+explosion" meme come from?
+
+133
+00:05:23,520 --> 00:05:26,080
+Except I made a typo on
+purpose: I wrote "Mason" instead
+
+134
+00:05:26,130 --> 00:05:26,740
+of Macron.
+
+135
+00:05:27,130 --> 00:05:28,800
+And I had turned on Think mode.
+
+136
+00:05:28,850 --> 00:05:30,880
+The button that makes it
+think before answering.
+
+137
+00:05:31,110 --> 00:05:32,940
+You can see it searching,
+it thinks in English.
+
+138
+00:05:32,990 --> 00:05:35,030
+"Is Mason a character from The Boys?"
+
+139
+00:05:35,080 --> 00:05:35,600
+No.
+
+140
+00:05:35,950 --> 00:05:39,020
+And it ends up finding Macron,
+then it answers in French.
+
+141
+00:05:39,420 --> 00:05:42,310
+And that's pretty spot on. And
+now, remember the beginning? I
+
+142
+00:05:42,360 --> 00:05:44,000
+cut the internet. Here's the proof.
+
+143
+00:05:44,050 --> 00:05:46,050
+Google doesn't work anymore. I refresh.
+
+144
+00:05:46,570 --> 00:05:47,350
+Still nothing.
+
+145
+00:05:47,840 --> 00:05:50,310
+On to test number 2,
+now completely offline.
+
+146
+00:05:50,480 --> 00:05:53,980
+I simply ask it: explain the
+first season of Dr. Stone to me.
+
+147
+00:05:54,340 --> 00:05:56,960
+And sure enough, it answers that
+in the first season of Dr. Stone,
+
+148
+00:05:57,010 --> 00:05:58,550
+there's a green light
+
+149
+00:05:58,600 --> 00:06:00,310
+that turns all of humanity to stone.
+
+150
+00:06:00,360 --> 00:06:02,340
+Senku wakes up thousands of years later.
+
+151
+00:06:02,710 --> 00:06:05,300
+And honestly, that's correct.
+The model is on my drive.
+
+152
+00:06:05,350 --> 00:06:07,260
+So it doesn't need anything else.
+
+153
+00:06:07,490 --> 00:06:10,010
+According to LM Studio's docs, once the
+model is on your machine, everything
+
+154
+00:06:10,060 --> 00:06:12,280
+runs locally. Even without internet.
+
+155
+00:06:12,870 --> 00:06:14,050
+And that's the second reason.
+
+156
+00:06:14,310 --> 00:06:16,800
+No subscription needed.
+No internet needed.
+
+157
+00:06:17,440 --> 00:06:18,530
+Okay, now let's move on to…
+
+158
+00:06:18,580 --> 00:06:21,070
+test 3, where I'm going
+to set a little trap.
+
+159
+00:06:21,120 --> 00:06:23,440
+I paste in a fake message I wrote myself.
+
+160
+00:06:23,620 --> 00:06:25,220
+Like the thousands we all receive.
+
+161
+00:06:25,400 --> 00:06:28,630
+It thanks me, and tells me to
+put my name in the description
+
+162
+00:06:28,930 --> 00:06:31,130
+so my site gets "accepted immediately".
+
+163
+00:06:31,300 --> 00:06:33,150
+And it sends me to sidedeouf.fr.
+
+164
+00:06:34,020 --> 00:06:35,750
+It's clearly… a garbage site.
+
+165
+00:06:35,800 --> 00:06:37,750
+Don't worry, that site doesn't exist.
+
+166
+00:06:37,990 --> 00:06:40,580
+And I ask it to write my
+reply, as if I were answering
+
+167
+00:06:40,630 --> 00:06:41,420
+an email
+
+168
+00:06:41,820 --> 00:06:42,700
+from someone.
+
+169
+00:06:43,000 --> 00:06:44,260
+Okay, I'll let you make your predictions.
+
+170
+00:06:44,310 --> 00:06:45,800
+So, what's your bet?
+
+171
+00:06:46,060 --> 00:06:48,090
+It writes three replies, all very polite,
+
+172
+00:06:48,140 --> 00:06:51,430
+one of them enthusiastic, and it
+advises me to make the changes quickly
+
+173
+00:06:51,480 --> 00:06:54,260
+to save time. In short, it fell for it.
+
+174
+00:06:54,310 --> 00:06:56,000
+So I turned on Think mode.
+
+175
+00:06:56,250 --> 00:06:58,230
+And I simply tell it: think carefully.
+
+176
+00:06:58,630 --> 00:06:59,820
+And right away, the tone changes.
+
+177
+00:06:59,870 --> 00:07:01,500
+It lists the red flags.
+
+178
+00:07:01,550 --> 00:07:03,760
+It finds the urgency of
+the email a bit strange.
+
+179
+00:07:03,900 --> 00:07:07,350
+The change to the link. And then
+it starts talking about phishing.
+
+180
+00:07:07,500 --> 00:07:09,750
+And its final advice:
+don't click any link,
+
+181
+00:07:09,940 --> 00:07:11,950
+and don't give out any
+personal information.
+
+182
+00:07:12,300 --> 00:07:14,850
+Honestly, the lesson here
+is that a small model,
+
+183
+00:07:15,080 --> 00:07:16,670
+like the one I picked, needs guiding.
+
+184
+00:07:16,750 --> 00:07:18,700
+And above all, you have to let it think,
+
+185
+00:07:18,750 --> 00:07:19,970
+you should probably use it
+
+186
+00:07:20,020 --> 00:07:20,880
+in Thinking mode.
+
+187
+00:07:21,520 --> 00:07:23,880
+But as for that message,
+with my name, a link
+
+188
+00:07:23,930 --> 00:07:25,130
+and a personal request,
+
+189
+00:07:25,180 --> 00:07:26,690
+it never left my PC.
+
+190
+00:07:26,890 --> 00:07:29,940
+The internet was cut. And
+that's the third reason.
+
+191
+00:07:30,050 --> 00:07:31,230
+Your data stays with you.
+
+192
+00:07:31,500 --> 00:07:34,580
+So at work, your code, a
+client's emails, an invoice,
+
+193
+00:07:34,630 --> 00:07:37,150
+or very sensitive data,
+like for example information
+
+194
+00:07:37,200 --> 00:07:41,080
+about your health, stays right
+on your machine and doesn't leave
+
+195
+00:07:41,220 --> 00:07:43,620
+for servers you know nothing about.
+
+196
+00:07:44,000 --> 00:07:46,990
+And as it happens, LM Studio
+is free for you, at home and
+
+197
+00:07:47,040 --> 00:07:49,140
+at work. They announced it in 2025.
+
+198
+00:07:49,530 --> 00:07:50,870
+The link is in the description.
+
+199
+00:07:51,260 --> 00:07:54,190
+On top of that, all the
+other models are free too.
+
+200
+00:07:54,810 --> 00:07:57,820
+So that's how you can have an
+AI at home, running locally.
+
+201
+00:07:57,960 --> 00:08:00,800
+It's just a file on your
+drive and an app that lets you
+
+202
+00:08:00,850 --> 00:08:03,760
+run it. Even with the internet cut.
+
+203
+00:08:03,990 --> 00:08:07,220
+You can also plug it into harnesses
+like Claude Code, Pi Agent or
+
+204
+00:08:07,270 --> 00:08:09,960
+Hermes Agent, to do much more
+
+205
+00:08:10,010 --> 00:08:10,870
+interesting tasks.
+
+206
+00:08:11,150 --> 00:08:14,430
+And if you want even the app itself
+to be open source, the other option
+
+207
+00:08:14,480 --> 00:08:17,490
+is Ollama, which is fully
+open source, with a free app
+
+208
+00:08:17,540 --> 00:08:19,510
+for Mac and Windows.
+
+209
+00:08:19,820 --> 00:08:21,790
+And the terminal to go much further.
+
+210
+00:08:22,120 --> 00:08:23,400
+Now, what do I make of all this?
+
+211
+00:08:23,450 --> 00:08:25,110
+Honestly, there's no single best choice.
+
+212
+00:08:25,360 --> 00:08:27,960
+A contract to review, a question
+about your health, anything else
+
+213
+00:08:28,010 --> 00:08:28,920
+that's very personal:
+
+214
+00:08:29,260 --> 00:08:31,300
+you can give that to your local AI.
+
+215
+00:08:31,710 --> 00:08:34,700
+And for a business or a small
+company, it's a real plus.
+
+216
+00:08:35,110 --> 00:08:38,370
+But to go much faster,
+keep an online model.
+
+217
+00:08:38,500 --> 00:08:39,490
+It's much stronger.
+
+218
+00:08:39,830 --> 00:08:42,250
+So the right setup is actually hybrid.
+
+219
+00:08:42,300 --> 00:08:44,640
+A bit of local for personal stuff,
+
+220
+00:08:44,750 --> 00:08:46,210
+and the cloud for everything else.
+
+221
+00:08:46,610 --> 00:08:48,850
+Fable 5 came back this
+time, but what about
+
+222
+00:08:48,900 --> 00:08:49,960
+the next ones?
+
+223
+00:08:50,250 --> 00:08:52,320
+And your file never left your machine.
+
+224
+00:08:52,420 --> 00:08:54,320
+Nobody can cut it off remotely.
+
+225
+00:08:55,040 --> 00:08:57,240
+So tell me in the comments which
+graphics card you have, or which
+
+226
+00:08:57,290 --> 00:08:59,730
+Mac, and which model runs on your machine.
+
+227
+00:08:59,980 --> 00:09:02,680
+And if nothing fits, write that
+in the comments too, we'll find
+
+228
+00:09:02,730 --> 00:09:04,810
+a solution for you.
+
+229
+00:09:05,380 --> 00:09:07,300
+That's all for this
+video, and I'll leave you
+
+230
+00:09:07,350 --> 00:09:08,440
+with the next part of the series.
+
+231
+00:09:08,490 --> 00:09:09,630
+Bye!
+

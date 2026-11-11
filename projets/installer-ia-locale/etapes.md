@@ -39,25 +39,26 @@ Tes décisions, dans les « Questions pour l'auteur » en bas du [script](script
 - [ ] Charte verte « IA chez moi », police mono pour les adresses et les noms de modèle
 - [ ] **Les 15 premières secondes d'abord**, et vérifiées : internet coupé (Google « inaccessible ») + la réponse + Fable 5 coupé pour tout le monde, rien d'autre
 - [ ] Aucune coupe entre l'onglet Google « inaccessible » et la réponse sur Dr Stone (c'est la preuve) ; le doublon 8:00-9:10 de la capture coupé
-- [ ] La vidéo commence sur la scène de la miniature b
+- [ ] La vidéo commence sur la capture 10:08 (Google « inaccessible ») : le plan des ciseaux est retiré avec son ancienne miniature (26/10, voir le hook du [script](script.md))
 - [ ] Écran de fin 20 s : *OpenCode* jusqu'au 16 nov.
 - [ ] Revoir la vidéo en entier : rien d'interdit à l'écran (clé, modèle « uncensored », document de travail, lien tiers)
 
-## 5. Les trois miniatures (en parallèle, mer. 28 – ven. 30 oct.)
+## 5. Les miniatures (v3 : six propositions, hors charte)
 
-Charte de la série : **vert**, donc b sert de miniature par défaut. Piste corrigée le 25/10 dans la [fiche](fiche.md) : la page « Ce site est inaccessible » en fond, désaturée, et la réponse de Gemma qui s'écrit par-dessus, en grand ; texte « HORS LIGNE » ; c'est aussi le premier plan de la vidéo. c, hors niche : le piège du test 3, façon chaîne de « scam baiting » (le faux message cerclé de rouge, « IL TOMBE DEDANS ? »). Ni logo de Google ou d'Anthropic, ni annonce de Fable 5.
+**Refaites le 26/10, à ta demande** : six miniatures sans les couleurs de la chaîne, inspirées de ce qui marche dans la niche tech, avec des logos détournés. Les deux séries précédentes sont supprimées (« ELLE RÉPOND. » et « SIGNÉ CHEZ MOI. » comprises). En test : a (« PLUS BESOIN ? », ChatGPT barré), c (le dinosaure de Chrome qui parle) et f (« MON IA, FAITE MAISON. »).
 
-- [ ] 10 à 15 références dans `miniature/refs/`
-- [ ] Concept et brief avec `/youtube thumbnail`
-- [ ] Maquette `miniature/propositions/miniature.html?v=a|b|c` : a (noir) et b (vert) **exactement la même scène**, c hors niche (note la chaîne et la vidéo d'origine dans `propositions.md`)
-- [ ] Critique avec `/coach-miniature-youtube`, corrections, test des 50 %
-- [ ] Rendu 4K et PSD (`photocraft/`)
+- [x] Références dans `miniature/refs/` (15, refaites le 26/10 : les surperformances de la niche, vidIQ ; les anciennes dans `refs/ancienne-serie/`)
+- [x] Six concepts avec `/coach-miniature-youtube` (mode conception, 26/10), décors photo générés par vidIQ, sans texte
+- [x] Maquette `miniature/propositions/miniature.html?v=a` à `f` (26/10, [`propositions.md`](miniature/propositions.md))
+- [x] Critique avec `/coach-miniature-youtube`, corrections, test des 50 % (26/10 : les six passent)
+- [x] Rendu 4K et PSD à calques des six (26/10, `miniature/photocraft/`)
+- [ ] Ton choix des trois miniatures du test (proposé : a, c, f)
 
 ## 6. Le kit d'upload (ven. 30 oct.)
 
-- [ ] `upload.md` : mots-clés vidIQ (ia en local, installer ia en local, lm studio, ollama), chapitres tirés du storyboard, description avec `lmstudio.ai/download → 2e bloc` et les sources
+- [x] `upload.md` (26/10, chapitres provisoires à recaler sur le storyboard) : mots-clés vidIQ (ia en local, installer ia en local, lm studio, ollama), chapitres tirés du storyboard, description avec `lmstudio.ai/download → 2e bloc` et les sources
 - [ ] Sous-titres `installer-ia-locale.fr.srt` et `.en.srt`
-- [ ] Section « Suggestions » : 4 ou 5 vidéos françaises du mois sur le sujet (dont *Adieu le cloud pour les LLM ! Vive le local*, Le Lab IA), leurs miniatures dans `miniature/hotes/`, la planche (`planches.py --suggestions`), la comparaison à 168 px, l'enchaînement
+- [x] Section « Suggestions » (26/10) : 4 ou 5 vidéos françaises du mois sur le sujet (dont *Adieu le cloud pour les LLM ! Vive le local*, Le Lab IA), leurs miniatures dans `miniature/hotes/`, la planche (`planches.py --suggestions`), la comparaison à 168 px, l'enchaînement
 
 Les crédits vidIQ sont encore pleins jusqu'au 12/11 : pas besoin de les économiser ici.
 

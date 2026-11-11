@@ -40,8 +40,8 @@
 
 ## 0. Hook (0:00 – 0:34) · objectif : 75 % à 0:15, 50 % à 1:00
 
-[VISUEL : capture 10:08-10:14 : le nouvel onglet, Google qui ne charge plus, « Ce site est inaccessible » en gros. Pas de titre, pas de logo, pas de visage. Garde un clic sur « Actualiser » : la page reste en erreur.]
-[SON : clic sec, puis le souffle du PC, rien d'autre.]
+[VISUEL : 0:00, la capture 10:08-10:14 (le plan d'ouverture sur la scène des ciseaux est retiré le 26/10, avec cette miniature) : le nouvel onglet, Google qui ne charge plus, « Ce site est inaccessible » en gros. Pas de titre, pas de logo, pas de visage. Garde un clic sur « Actualiser » : la page reste en erreur.]
+[SON : un clic sec quand internet se coupe, puis le souffle du PC, rien d'autre.]
 
 Je coupe internet.
 
@@ -326,7 +326,7 @@ Timecodes de la voix seule, à 145 mots/min (tes crochets les décaleront).
 - **Captures web** (connexion revenue) : le communiqué d'Anthropic du 12/06/2026, la page de Simon Willison du 08/08/2025, la page des configurations requises, le billet « free for work », ollama.com.
 - **Énergie** : rapide sur le hook, posée sur la section 1, montées à 6:48 (internet coupé) et 7:50 (il tombe dans le panneau).
 - **Carte YouTube** : vers *IA en local : comment lire le nom d'un modèle* à 4:16 (« je leur consacre une vidéo entière »), **à ajouter le 7 déc.** Vers Claude #1 à 5:40 (« combien moins fort ? »), **à ajouter le 16 nov.**
-- **Miniature** : piste corrigée le 25/10 dans la [fiche](fiche.md) : la page « Ce site est inaccessible » en fond, la réponse de Gemma qui s'écrit par-dessus. C'est le plan d'ouverture du hook (capture 10:08-10:35) : la vidéo commence bien sur la scène de la miniature.
+- **Miniature** (v3 du 26/10, six propositions hors charte, [`miniature/propositions.md`](miniature/propositions.md)) : en test, a (« PLUS BESOIN ? », ChatGPT barré dans un panneau), c (le dinosaure de Chrome qui parle) et f (« MON IA, FAITE MAISON. »). Le hook ouvre directement sur la capture 10:08 (Google inaccessible), la promesse de c. Si a reste en tête : une phrase de la voix doit répondre à « plus besoin de ChatGPT ? » (moins fort que le cloud, et tu gardes Claude).
 
 ## Faits utilisés
 
