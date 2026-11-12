@@ -8,6 +8,12 @@
 > - **Références** : [`refs/`](refs/), 15 miniatures.
 > - **Recommandée : a** (Harold). La raison est à la fin.
 
+> **12/11, ta décision : le test A/B oppose l'ancien texte au texte « PEAK »**, avec le même meme (Harold). Jackie (b) sort du test.
+> - **a** : [`rendus/a.png`](rendus/a.png), le texte Archivo Black (blanc, puis prix en rouge).
+> - **a-peak** : [`rendus/a-peak.png`](rendus/a-peak.png), les 2 lignes en blanc, en Anton, avec une copie rouge un peu plus grande et décalée vers le bas ([référence](../../../ressources/miniatures/images/reference-texte-peak.jpg)). PSD : [`photocraft/a-peak.psd`](photocraft/a-peak.psd) (4 calques de texte : les 2 lignes et leurs copies rouges).
+> - Maquette : `?v=a&txt=peak` ; rendu : `./rendre.sh "a&txt=peak"` → `rendus/a-peak.png`. Avant/après et 168 px : [`apercu/essai-peak.png`](apercu/essai-peak.png).
+> - **Seul le texte change.** Si la vidéo est déjà programmée avec le test Harold contre Jackie, garde-le : le test du texte se fera sur Strata.
+
 ## Le concept
 
 | | a | b |
@@ -121,7 +127,7 @@
 - Il se lit mieux en petit : peau chaude sur fond noir et rouge, grimace visible à 168 px.
 - b reste un bon challenger : plus de contraste (blanc pur), et un meme très diffusé (non mesuré auprès de notre public). Si b gagne, ce sera un signal pour les memes dessinés.
 
-**Le test** : a par défaut, b en challenger dans « Tester et comparer ». Seul le meme change ; texte, objet, fond et cadrage sont identiques.
+**Le test** (remplacé le 12/11) : ~~a par défaut, b en challenger~~. Désormais a contre a-peak dans « Tester et comparer » : seul le texte change, le meme reste Harold.
 
 ## À vérifier avant de publier
 
@@ -133,3 +139,46 @@
 - **Le logo Qwen** : en bleu (`#082dff`, LobeHub 1.102.0). Si tu vois encore le dégradé violet sur qwen.ai, dis-le et je change.
 - **La fiche** (`fiche.md`, section « Miniature ») parle encore de la charte verte et de « 24 GO ? » : elle date d'avant le 11/11. Je n'y ai pas touché.
 - **Le titre** n'est pas encore validé : la miniature ne répète ni « Qwen 4 », ni « carte graphique », ni « acheter », donc elle marche avec les deux titres.
+
+## c · les mains (demande de l'auteur, 12/11 au soir)
+
+> Pour le 3e test, à côté de `a` contre `a-peak`. Ta demande : une miniature soignée comme la variante d de « 16 Go de VRAM » (des mains qui veulent attraper la carte), mais sur fond noir, avec la carte graphique en évidence, le logo de Qwen et « QWEN 4 », le 4 bien visible dans une autre couleur.
+
+- **Rendus 4K** :
+  - [`rendus/c-mains-r.png`](rendus/c-mains-r.png), avec le 4 en rouge de la chaîne (recommandé) ;
+  - [`rendus/c-mains-b.png`](rendus/c-mains-b.png), avec le 4 en bleu de Qwen.
+- **Maquette** : [`propositions/mains.html`](propositions/mains.html) (`?c=r` ou `?c=b`).
+- **PSD** : [`photocraft/c-mains-r.psd`](photocraft/c-mains-r.psd), avec « QWEN » et « 4 » en calques de texte. Pour la version bleue, change la couleur du calque « 4 ».
+- **Scène** :
+  - fond noir avec une grille sombre ;
+  - la RTX 5090 ASUS TUF, en couleur et nette, au centre-droit, dans un contre-jour rouge (ou bleu) ;
+  - cinq mains qui se l'arrachent : trois l'agrippent par le bas et par le bord droit, deux surgissent derrière elle ;
+  - en haut à gauche, le logo de Qwen, puis « QWEN » en blanc et un « 4 » plus grand en couleur, en Anton.
+- **Images et licences** :
+  - **mains** : « Hands Darkness », StockSnap, CC0, la même photo que la variante d de « 16 Go de VRAM ». Les deux mains de la photo sont détourées par Vision : `sources/main-levee-stocksnap-cc0.png` et `sources/main-tendue-stocksnap-cc0.png`. Chacune sert aussi en miroir ;
+  - **carte** : image ASUS de la TUF RTX 5090, déjà utilisée en a ;
+  - **logo** : Qwen, LobeHub Icons.
+- **Contrôles** :
+  - à 168 px, « QWEN 4 » se lit et on comprend qu'on s'arrache la carte ; la version rouge ressort un peu plus sur le mode sombre de YouTube ;
+  - test des 50 % réussi : la moitié haute contient tout le texte.
+- **Limite** : les mains viennent d'une photo de 960 px, agrandie. Elles sont gardées sombres et en contre-jour : douces en 4K, invisibles à la taille d'une miniature. Pour une version encore plus nette, photographie tes propres mains en train de saisir, sur fond noir.
+- **Ce que teste c** : une autre idée que a (pas de meme, le nom du modèle au lieu du prix). Si c gagne, l'objet convoité et le nom du modèle battent le prix et la réaction.
+
+### Prompt pour une variante générée avec GPT (12/11)
+
+```
+YouTube thumbnail, 16:9, 1280x720, photorealistic, cinematic studio lighting, pure black background.
+
+Center-right: a high-end triple-fan graphics card (dark grey and silver, no brand logo visible), floating slightly tilted, sharply lit with a cool white rim light, small sparks of light on its edges.
+
+Five or six human hands of different skin tones reach in from the edges of the frame (bottom, right, top-right) and grab at the graphics card at the same time, fingers tense, as if everyone is fighting to get the last one. Hands are realistic, well lit, with soft shadows on the card. Shallow depth of field on the farthest hands.
+
+Left side, big bold text, perfectly legible, heavy sans-serif (like Inter Black or Montserrat ExtraBold), slight 3D drop shadow:
+"QWEN" in pure white, and right after it a huge "4" in vivid purple-violet (#6E5BFF), about 1.4 times taller than the letters, with a subtle glow.
+
+Leave an empty square area above the text, top-left, for a logo to be added later (no logo, no other text, no watermark).
+
+High contrast, minimal composition, readable at small size, no clutter, no extra words.
+```
+
+Ajoute ensuite le vrai logo de Qwen toi-même : GPT le dessine mal. Si le texte sort déformé, régénère seulement cette zone, ou retape « QWEN 4 » dans le PSD.

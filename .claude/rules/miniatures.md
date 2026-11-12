@@ -17,6 +17,15 @@ paths:
 
 Contre-exemple : « 16 Go de VRAM » (09/11), avec un fond rouge plein, une carte graphique grise et le texte « ÇA RENTRE ? », a fait 1,5 % de CTR à J+2 (test A/B encore en cours) : pas d'émotion, et un texte qui ne dit pas le sujet (voir [`etudes/audit-2026-11-11.md`](../../etudes/audit-2026-11-11.md), § 4).
 
+**Texte « PEAK », en essai depuis le 12/11** (demande de l'auteur, référence [`reference-texte-peak.jpg`](../../ressources/miniatures/images/reference-texte-peak.jpg)) :
+- les deux lignes passent en blanc, en Anton (`fonts/anton-latin-400.woff2`), avec des lettres serrées ;
+- derrière chaque ligne, une copie rouge pleine, sans flou, un peu plus grande (×1,06) et décalée vers le bas (0,075 em) ;
+- le texte est bien plus gros qu'en Inter : à 168 px, il prend presque toute la moitié gauche ;
+- on l'obtient avec `?txt=peak` dans les maquettes de Strata et de Qwen 4. La copie rouge est un vrai élément `.t`, pour devenir un calque dans le PSD. Rendus : `rendus/a-peak.png` ; PSD : `photocraft/a-peak.psd` ; avant/après : `apercu/essai-peak.png` ;
+- pour PhotoCraft, Anton doit être installé (`~/Library/Fonts/Anton-Regular.ttf`, fait le 12/11). Sans lui, le PSD prend une police fine.
+
+Ce n'est pas encore la règle. Le mot choc n'est plus écrit en rouge, puisque le rouge passe à l'ombre. **Test A/B décidé le 12/11** : `a` (ancien texte) contre `a-peak`, avec le même texte et le même meme, sur Qwen 4 (si le test Harold contre Jackie n'est pas déjà lancé) et sur Strata. On tranche avec les résultats ; si PEAK gagne les deux, il devient le texte de toutes les miniatures.
+
 **Seule la miniature est concernée.** Le montage de la vidéo garde sa propre DA : la règle « la vidéo commence sur la scène de la miniature » tombe.
 
 Le reste de ce fichier (3 variantes, chartes `noir`/`vert`) date d'avant cette décision. Ce qui en reste valable :

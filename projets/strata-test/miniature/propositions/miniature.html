@@ -42,6 +42,14 @@
   .rock { position:absolute; left:720px; top:58px; width:714px; height:688px; transform:scaleX(-1);
     background:url(../sources/the-rock-sourcil-detoure.png) no-repeat 0 0 / 100% 100%;
     filter:drop-shadow(0 0 2px rgba(255,90,80,.9)) drop-shadow(0 0 26px rgba(255,59,48,.45)) contrast(1.05) saturate(.8); }
+
+  /* Texte « PEAK » (?txt=peak, test A/B du 12/11 contre l'ancien texte) : lettres blanches serrées, copie rouge un peu plus grande décalée vers le bas, sans flou */
+  @font-face { font-family:"Anton"; src:url(../../../../ressources/miniatures/fonts/anton-latin-400.woff2) format("woff2"); }
+  [data-txt="peak"] .t { font-family:"Anton", sans-serif; font-weight:400; color:#fff; letter-spacing:-.025em; text-shadow:none; }
+  /* La copie rouge est un vrai élément .t (calque de texte dans le PSD), créé par le script : ×1,06, centrée, 0,075 em plus bas */
+  [data-txt="peak"] .t.echo { color:var(--red); }
+  [data-txt="peak"] .l1 { top:138px; font-size:200px; }
+  [data-txt="peak"] .l2 { top:340px; font-size:164px; color:#fff; }
 </style>
 </head>
 <body>
@@ -95,6 +103,20 @@
     rows.push(line);
   }
   document.getElementById('code').innerHTML = rows.map(l => l.split(' ').map(w => w ? `<span style="opacity:${(.025 + rnd() * .075).toFixed(2)}">${w}</span>` : '').join(' ')).join('\n');
+</script>
+<script>
+  // Texte « PEAK » (?txt=peak) : une copie rouge de chaque ligne, posée juste avant elle (donc dessous), avant que export.js lise les calques
+  document.body.dataset.txt = new URLSearchParams(location.search).get('txt') || '';
+  if (document.body.dataset.txt === 'peak') document.fonts.ready.then(() => {
+    document.querySelectorAll('.t').forEach(e => {
+      const fs = parseFloat(getComputedStyle(e).fontSize), w = e.getBoundingClientRect().width, c = e.cloneNode(true);
+      c.removeAttribute('id'); c.classList.add('echo');
+      c.style.fontSize = fs * 1.06 + 'px';
+      c.style.left = e.offsetLeft - .03 * w + 'px';
+      c.style.top = e.offsetTop + .075 * fs + 'px';
+      e.before(c);
+    });
+  });
 </script>
 <script src="../../../../ressources/miniatures/export.js"></script>
 </body>

@@ -1,0 +1,862 @@
+1
+00:00:00,000 --> 00:00:03,870
+7 900 euros, c'est le prix
+d'une RTX 5090, aujourd'hui.
+
+2
+00:00:04,160 --> 00:00:06,890
+Avec elle, Qwen tourne jusqu'à
+75 tokens par seconde.
+
+3
+00:00:06,940 --> 00:00:09,830
+Sur une 5060 Ti, son fichier
+ne rentre même pas.
+
+4
+00:00:09,900 --> 00:00:13,310
+Il faut prendre une version plus
+compressée, et là, tu tombes à 28.
+
+5
+00:00:13,460 --> 00:00:17,910
+Qwen 4, lui, n'est qu'en préversion
+dans le cloud chez Alibaba.
+
+6
+00:00:18,000 --> 00:00:19,610
+Il n'a pour l'instant
+rien à télécharger,
+
+7
+00:00:19,660 --> 00:00:24,870
+sauf que la 5060 Ti et la 5080 ont déjà
+pris plus de 20 % en un mois.
+
+8
+00:00:25,040 --> 00:00:27,050
+Du coup, tu achètes maintenant
+ou tu attends ?
+
+9
+00:00:27,100 --> 00:00:30,430
+Voilà le classement carte par carte,
+avec les prix du jour.
+
+10
+00:00:30,480 --> 00:00:33,930
+Je te montre ce qui est sûr sur Qwen 4
+et ce qui ne l'est pas.
+
+11
+00:00:34,160 --> 00:00:37,630
+La carte pour ton budget, en euros,
+et ce que fait déjà celle que tu as.
+
+12
+00:00:37,720 --> 00:00:40,510
+En route, il y a 2 réglages gratuits
+qui font presque tripler
+
+13
+00:00:40,560 --> 00:00:42,190
+la vitesse d'une paire de cartes.
+
+14
+00:00:42,240 --> 00:00:46,410
+Et à la fin, je te réponds à ta question
+en une phrase : acheter ou attendre.
+
+15
+00:00:46,700 --> 00:00:50,190
+Non, Qwen 4 n'est pas téléchargeable
+sur la page officielle de Qwen.
+
+16
+00:00:50,240 --> 00:00:52,330
+À l'heure où j'enregistre,
+il n'y en a aucun.
+
+17
+00:00:52,380 --> 00:00:55,430
+Par contre, si tu tapes « Qwen4-27B »
+sur Hugging Face,
+
+18
+00:00:55,640 --> 00:00:58,050
+tu vas tomber sur des pages
+qui portent ce nom.
+
+19
+00:00:58,240 --> 00:00:59,470
+Ouvre-les, elles sont vides.
+
+20
+00:00:59,540 --> 00:01:03,490
+En fait, des gens réservent juste la place
+pour le jour où il sortira.
+
+21
+00:01:03,720 --> 00:01:07,350
+Donc si quelqu'un te propose un Qwen 4
+à télécharger aujourd'hui, méfie-toi.
+
+22
+00:01:07,580 --> 00:01:10,910
+Par contre, moi, je guette actuellement
+Qwen 4 pour une raison simple.
+
+23
+00:01:11,200 --> 00:01:14,790
+En août, Qwen a sorti un avant-goût,
+Qwen 3.8 Flash Next,
+
+24
+00:01:14,860 --> 00:01:16,950
+qui montre l'architecture de Qwen 4.
+
+25
+00:01:17,100 --> 00:01:20,310
+Et en code, d'après les tests de Qwen,
+il bat déjà le 27B.
+
+26
+00:01:20,360 --> 00:01:23,150
+Du coup, j'attends beaucoup de Qwen 4,
+d'autant que Qwen,
+
+27
+00:01:23,200 --> 00:01:25,870
+c'est l'une des familles les plus
+recommandées pour coder en local.
+
+28
+00:01:26,120 --> 00:01:28,610
+Ce qu'Alibaba a écrit noir sur blanc,
+c'est peu.
+
+29
+00:01:28,740 --> 00:01:32,470
+Le 22 septembre, son communiqué dit
+que Qwen 4 est « en entraînement »,
+
+30
+00:01:32,720 --> 00:01:33,870
+sans date ni taille.
+
+31
+00:01:34,080 --> 00:01:35,730
+Et depuis le 11 novembre,
+
+32
+00:01:35,860 --> 00:01:40,590
+une préversion, Qwen 4 Max,
+est ouverte jusqu'au 25 novembre.
+
+33
+00:01:41,240 --> 00:01:44,050
+Mais seulement dans le cloud,
+par l'abonnement Alibaba
+
+34
+00:01:44,100 --> 00:01:47,210
+et un accès anticipé dans ses applis,
+comme l'appli Qwen.
+
+35
+00:01:47,260 --> 00:01:49,150
+Tu peux l'essayer,
+mais pas le télécharger.
+
+36
+00:01:49,500 --> 00:01:51,850
+Donc là non plus,
+on n'a pas encore de fichier.
+
+37
+00:01:52,000 --> 00:01:53,630
+Et le Qwen 4 de 27 milliards,
+
+38
+00:01:53,880 --> 00:01:55,830
+celui qu'on pourrait faire
+tourner chez soi,
+
+39
+00:01:55,900 --> 00:01:57,410
+d'après la presse chinoise,
+
+40
+00:01:57,460 --> 00:02:01,410
+il a été montré à la conférence
+comme la version ouverte de Qwen 4.
+
+41
+00:02:01,460 --> 00:02:03,890
+Sauf qu'Alibaba ne l'a écrit nulle part,
+
+42
+00:02:03,980 --> 00:02:06,190
+ni dans son communiqué,
+ni dans sa documentation.
+
+43
+00:02:06,420 --> 00:02:08,310
+On n'en connaît ni la taille,
+ni la date,
+
+44
+00:02:08,360 --> 00:02:12,550
+donc pour l'instant c'est un nom annoncé
+et personne n'a vu son fichier.
+
+45
+00:02:12,680 --> 00:02:14,330
+Pour le reste, voilà ce qu'on raconte :
+
+46
+00:02:14,380 --> 00:02:17,650
+une quinzaine de Go, estimés à partir
+du code d'un logiciel,
+
+47
+00:02:17,700 --> 00:02:20,050
+et une sortie « la semaine prochaine »,
+
+48
+00:02:20,360 --> 00:02:21,370
+rapportée de seconde main.
+
+49
+00:02:21,680 --> 00:02:25,650
+Mais alors, le 75 et le 28 du début,
+c'est quoi ?
+
+50
+00:02:25,700 --> 00:02:27,710
+C'est Qwen 3.8, 27 milliards :
+
+51
+00:02:27,900 --> 00:02:29,970
+le Qwen d'aujourd'hui,
+celui que tu peux télécharger.
+
+52
+00:02:30,100 --> 00:02:32,430
+C'est comme libérer de la place
+sur ton SSD
+
+53
+00:02:32,480 --> 00:02:34,830
+pour un jeu dont personne
+ne connaît le poids.
+
+54
+00:02:34,940 --> 00:02:36,570
+Tu prends le précédent comme étalon,
+
+55
+00:02:36,620 --> 00:02:38,770
+si Qwen 4 garde cette taille,
+ces chiffres tiendront,
+
+56
+00:02:38,820 --> 00:02:40,230
+sinon je refais les comptes.
+
+57
+00:02:40,360 --> 00:02:43,550
+Son fichier le plus courant, le Q4_K_M,
+pèse 16,5 Go.
+
+58
+00:02:43,600 --> 00:02:46,810
+Et pour que ça tourne vite,
+il doit rentrer sur ta carte,
+
+59
+00:02:46,860 --> 00:02:50,010
+avec de la place pour que tu puisses
+stocker la conversation.
+
+60
+00:02:50,200 --> 00:02:53,530
+Sinon, une partie déborde sur la RAM
+et, à partir de ce moment, ça rame.
+
+61
+00:02:53,580 --> 00:02:54,870
+On commence par 16 Go.
+
+62
+00:02:54,940 --> 00:02:59,370
+Avec la RTX 5060 Ti, comme tu l'as vu,
+le Q4_K_M ne rentre pas.
+
+63
+00:02:59,440 --> 00:03:01,730
+Du coup, on prend un fichier plus serré
+de 14 Go
+
+64
+00:03:01,780 --> 00:03:04,550
+et un utilisateur mesure
+28 tokens par seconde.
+
+65
+00:03:04,600 --> 00:03:06,090
+Pour discuter, c'est très correct.
+
+66
+00:03:06,140 --> 00:03:09,310
+Par contre, il te reste moins de 2 Go
+pour la conversation.
+
+67
+00:03:09,420 --> 00:03:13,030
+Donc pour un agent de code qui lit
+les fichiers en entier, c'est super juste.
+
+68
+00:03:13,080 --> 00:03:16,110
+J'ai tout détaillé lundi
+dans la vidéo sur les 16 Go.
+
+69
+00:03:16,360 --> 00:03:18,750
+Côté prix, regarde bien,
+la même carte de la même marque
+
+70
+00:03:18,800 --> 00:03:22,230
+coûte 833 euros chez Amazon
+et 1 100 chez LDLC.
+
+71
+00:03:22,280 --> 00:03:24,850
+Plus de 250 euros d'écart
+pour la même boîte.
+
+72
+00:03:25,140 --> 00:03:26,150
+Donc compare avant de payer :
+
+73
+00:03:26,200 --> 00:03:28,590
+pour essayer, elle suffit,
+pour travailler, c'est serré.
+
+74
+00:03:28,640 --> 00:03:30,570
+Et en occasion, il y a bien moins cher :
+
+75
+00:03:30,640 --> 00:03:34,010
+une Radeon RX 6800 XT,
+16 Go elle aussi,
+
+76
+00:03:34,160 --> 00:03:36,450
+autour des 280 euros sur Leboncoin.
+
+77
+00:03:36,500 --> 00:03:41,130
+Sauf que je n'ai trouvé aucune mesure
+de ce modèle sur cette carte.
+
+78
+00:03:41,200 --> 00:03:42,850
+Donc je ne peux pas te donner de vitesse.
+
+79
+00:03:42,900 --> 00:03:46,770
+Palier suivant : 24 Go,
+avec la RTX 3090.
+
+80
+00:03:46,820 --> 00:03:49,230
+Cette fois, le Q4_K_M rentre
+
+81
+00:03:49,280 --> 00:03:52,190
+et il reste environ 8 Go
+pour la conversation.
+
+82
+00:03:52,240 --> 00:03:54,950
+Résultat, autour des 40 tokens
+par seconde,
+
+83
+00:03:55,000 --> 00:03:58,030
+et encore 34 quand la conversation
+devient très longue.
+
+84
+00:03:58,080 --> 00:04:01,630
+Et là, il y a un réglage
+dont tu vas entendre parler : le MTP.
+
+85
+00:04:01,680 --> 00:04:04,850
+En gros, le modèle devine plusieurs mots
+d'avance, puis il vérifie.
+
+86
+00:04:04,900 --> 00:04:09,830
+Sur une 3090, un utilisateur passe de 40
+à 70 tokens, sur du code.
+
+87
+00:04:09,880 --> 00:04:13,290
+Le gain baisse quand la conversation
+s'allonge, mais il est gratuit.
+
+88
+00:04:13,340 --> 00:04:18,130
+Neuve, la 3090 est encore affichée
+à près de 3 000 euros chez Amazon.
+
+89
+00:04:18,180 --> 00:04:21,790
+Évidemment, personne ne l'achète neuve :
+son vrai prix, c'est celui de l'occasion.
+
+90
+00:04:21,840 --> 00:04:26,010
+Aujourd'hui, sur Leboncoin,
+j'en vois une à 850 euros,
+
+91
+00:04:26,060 --> 00:04:28,430
+moins d'un tiers du prix de la neuve.
+
+92
+00:04:28,480 --> 00:04:31,570
+Par contre, en occasion, vérifie
+qu'elle tourne avant de la payer.
+
+93
+00:04:31,620 --> 00:04:35,050
+Chez AMD, par contre,
+là on a la RX 7900 XTX,
+
+94
+00:04:35,100 --> 00:04:38,870
+qui a aussi 24 Go, pour un peu plus
+de 1 400 euros neuve.
+
+95
+00:04:38,920 --> 00:04:42,810
+Sauf que ses mesures vont
+de 29 à 41 tokens par seconde,
+
+96
+00:04:42,860 --> 00:04:44,630
+selon le logiciel et le système.
+
+97
+00:04:44,680 --> 00:04:47,250
+Donc avec elle, c'est moins prévisible.
+
+98
+00:04:47,300 --> 00:04:50,390
+Bon, maintenant, le meilleur palier,
+c'est celui des 32 Go.
+
+99
+00:04:50,440 --> 00:04:52,390
+Première option, deux 5060 Ti,
+
+100
+00:04:52,440 --> 00:04:55,090
+et c'est là que se cachent
+les 2 réglages gratuits.
+
+101
+00:04:55,140 --> 00:04:58,530
+Par défaut, le logiciel coupe le modèle
+en 2, couche par couche,
+
+102
+00:04:58,580 --> 00:05:00,270
+et une carte attend l'autre,
+
+103
+00:05:00,320 --> 00:05:02,910
+du coup, 22 tokens par seconde.
+
+104
+00:05:02,960 --> 00:05:05,910
+Active le tensor split,
+et les 2 cartes calculent en même temps.
+
+105
+00:05:05,960 --> 00:05:07,810
+Cela va te faire monter à 37.
+
+106
+00:05:07,860 --> 00:05:10,590
+Ajoute ensuite le MTP,
+et là, tu passes à 66.
+
+107
+00:05:10,640 --> 00:05:13,250
+Presque le triple, sans dépenser
+un euro en plus.
+
+108
+00:05:13,300 --> 00:05:15,150
+Et ce sont des mesures
+d'une même personne,
+
+109
+00:05:15,200 --> 00:05:17,810
+avec le même fichier :
+la comparaison est propre.
+
+110
+00:05:17,860 --> 00:05:19,470
+Attention quand même,
+le tensor split
+
+111
+00:05:19,520 --> 00:05:22,210
+est encore marqué expérimental
+dans le logiciel.
+
+112
+00:05:22,260 --> 00:05:26,790
+Les 2 cartes chez Amazon vont te coûter
+environ 1 670 euros.
+
+113
+00:05:26,840 --> 00:05:30,590
+Deuxième option, la plus simple :
+une RTX 5090,
+
+114
+00:05:30,640 --> 00:05:34,050
+jusqu'à 75 tokens par seconde,
+sans même le MTP.
+
+115
+00:05:34,100 --> 00:05:36,430
+Donc à réglages égaux,
+elle reste devant.
+
+116
+00:05:36,480 --> 00:05:39,210
+Sauf qu'en stock,
+elle démarre à 7 900 euros,
+
+117
+00:05:39,260 --> 00:05:41,750
+et son prix médian a presque doublé
+en 3 mois.
+
+118
+00:05:41,800 --> 00:05:44,550
+Du coup, pour le prix d'une 5090,
+
+119
+00:05:44,600 --> 00:05:47,110
+tu t'offres presque 5 paires de 5060.
+
+120
+00:05:47,160 --> 00:05:48,490
+Bon, tu n'as pas besoin de 5,
+
+121
+00:05:48,540 --> 00:05:52,210
+mais je te fais une vidéo entière
+sur les 32 Go la semaine prochaine.
+
+122
+00:05:52,260 --> 00:05:53,750
+Et si tu n'es pas en France,
+
+123
+00:05:53,800 --> 00:05:55,510
+peut-être que tu peux l'avoir
+moins cher chez toi,
+
+124
+00:05:55,560 --> 00:05:57,510
+mais par contre,
+je garde les prix en euros
+
+125
+00:05:57,560 --> 00:05:59,690
+et fais la conversion dans ta monnaie.
+
+126
+00:05:59,740 --> 00:06:02,830
+Et à la fin, dis-moi aussi
+combien cela peut coûter chez toi.
+
+127
+00:06:03,240 --> 00:06:04,770
+Et si tu as déjà une carte, alors
+
+128
+00:06:04,820 --> 00:06:07,890
+avant d'acheter quoi que ce soit,
+regarde juste si le fichier rentre.
+
+129
+00:06:07,940 --> 00:06:10,750
+Avec 16 Go, ça passe
+avec le fichier serré, on l'a vu.
+
+130
+00:06:10,860 --> 00:06:13,450
+Et avec le MTP,
+l'utilisateur de la 5060 Ti
+
+131
+00:06:13,500 --> 00:06:16,530
+passe de 28 à 51
+sur une conversation courte.
+
+132
+00:06:16,600 --> 00:06:20,110
+Sur une 5080, quelqu'un a mesuré
+101 tokens par seconde,
+
+133
+00:06:20,160 --> 00:06:24,110
+même avec le fichier 3 bits,
+moins précis, et c'est une seule mesure.
+
+134
+00:06:24,260 --> 00:06:28,390
+Avec 12 Go, en revanche, ce modèle
+ne rentre pas, même en 4 bits.
+
+135
+00:06:28,800 --> 00:06:30,070
+Une partie part dans la RAM.
+
+136
+00:06:30,140 --> 00:06:33,710
+Du coup, sur une 3060, on tombe
+entre 5 et 7 tokens par seconde.
+
+137
+00:06:33,860 --> 00:06:35,450
+Avec 8 Go, c'est pire.
+
+138
+00:06:35,520 --> 00:06:37,350
+Et c'est le cas de beaucoup de monde.
+
+139
+00:06:37,420 --> 00:06:41,230
+Sur Steam, en octobre, plus d'un joueur
+sur 4 avait 8 Go,
+
+140
+00:06:41,460 --> 00:06:43,510
+et environ un joueur sur 8 en a 12.
+
+141
+00:06:43,580 --> 00:06:44,870
+Et le piège ici, c'est le prix :
+
+142
+00:06:44,920 --> 00:06:49,750
+une 3060 de 12 Go d'occasion, je la vois
+entre 280 et 320 euros sur Leboncoin.
+
+143
+00:06:49,960 --> 00:06:51,930
+À peu près le prix de la Radeon de 16 Go.
+
+144
+00:06:52,120 --> 00:06:55,310
+Donc pour ce genre de modèle,
+à prix égal, prends les 16.
+
+145
+00:06:55,360 --> 00:06:59,130
+Donc si c'est ton cas,
+Qwen 4 ne va sans doute rien changer.
+
+146
+00:06:59,180 --> 00:07:01,130
+Rien ne dit qu'il sera plus petit,
+
+147
+00:07:01,180 --> 00:07:03,450
+et pour un modèle de cette taille,
+
+148
+00:07:03,500 --> 00:07:05,910
+il te faudra une carte
+des paliers d'avant.
+
+149
+00:07:05,960 --> 00:07:08,570
+Alors, tu achètes maintenant
+ou tu attends ?
+
+150
+00:07:08,620 --> 00:07:10,890
+D'abord, attendre Qwen 4
+ne te protège pas des prix.
+
+151
+00:07:10,940 --> 00:07:12,770
+Ils ont commencé à monter sans lui.
+
+152
+00:07:12,820 --> 00:07:15,570
+La cause avancée,
+d'après une chaîne américaine,
+
+153
+00:07:15,620 --> 00:07:16,750
+c'est une pénurie de mémoire.
+
+154
+00:07:16,800 --> 00:07:19,250
+Et personne ne sait
+quand ça redescendra.
+
+155
+00:07:19,300 --> 00:07:22,710
+Mais acheter pour Qwen 4, c'est acheter
+pour un fichier que personne n'a vu.
+
+156
+00:07:22,760 --> 00:07:25,950
+En fait, le 27B, c'est-à-dire
+le 27 milliards,
+
+157
+00:07:26,000 --> 00:07:28,290
+a été montré à une conférence,
+rien de plus.
+
+158
+00:07:28,340 --> 00:07:31,470
+Sauf qu'on sait une chose :
+un modèle de 27 milliards en 4 bits
+
+159
+00:07:31,520 --> 00:07:34,690
+pèse entre 14 et 18 Go
+selon le fichier.
+
+160
+00:07:34,740 --> 00:07:36,670
+On vient de le voir avec Qwen 3.8.
+
+161
+00:07:36,720 --> 00:07:38,470
+Donc si Qwen 4 garde cette taille,
+
+162
+00:07:38,700 --> 00:07:42,310
+24 Go gardent de la marge
+et 16 Go restent serrés.
+
+163
+00:07:42,520 --> 00:07:43,570
+Donc voilà la règle.
+
+164
+00:07:43,620 --> 00:07:45,690
+En une phrase :
+n'achète pas pour un nom,
+
+165
+00:07:45,740 --> 00:07:49,350
+achète pour la taille d'un fichier,
+plus la place de la conversation.
+
+166
+00:07:49,400 --> 00:07:54,730
+Aujourd'hui, ça veut dire environ 24 Go
+ou 2x16 avec un bon réglage.
+
+167
+00:07:54,840 --> 00:07:57,690
+Et si tu as déjà 16 Go ou plus,
+ne change rien pour l'instant,
+
+168
+00:07:57,860 --> 00:07:59,890
+attends de voir le vrai fichier.
+
+169
+00:08:00,040 --> 00:08:03,270
+Le jour où il sort, je referai
+ce classement avec les vrais chiffres.
+
+170
+00:08:03,460 --> 00:08:05,550
+Moi, je vais attendre, parce que
+des projets comme Strata
+
+171
+00:08:05,600 --> 00:08:08,310
+font déjà tourner une version
+compressée de Flash Next,
+
+172
+00:08:08,460 --> 00:08:12,930
+l'avant-goût de Qwen 4,
+avec 16 Go de VRAM et 32 Go de RAM.
+
+173
+00:08:12,980 --> 00:08:16,990
+Donc si Qwen 4 garde la même architecture,
+peut-être que mes 16 Go suffiront.
+
+174
+00:08:17,040 --> 00:08:19,390
+Alors, dis-moi en commentaire
+quelle carte tu as
+
+175
+00:08:19,440 --> 00:08:21,570
+et combien elle coûte
+vraiment chez toi.
+
+176
+00:08:21,620 --> 00:08:22,890
+Je compile vos réponses,
+
+177
+00:08:22,940 --> 00:08:24,750
+et surtout pour ceux qui n'ont pas
+accès au prix français.
+
+178
+00:08:24,800 --> 00:08:25,910
+Et si tu as 16 Go,
+
+179
+00:08:25,960 --> 00:08:29,030
+la vidéo de la semaine prochaine
+te dit quel fichier prendre.
+
+180
+00:08:29,080 --> 00:08:30,730
+Du coup, on se dit à la prochaine,
+
+181
+00:08:30,780 --> 00:08:34,790
+et la semaine prochaine, je testerai
+la version de Strata sur 16 Go,
+
+182
+00:08:34,840 --> 00:08:38,150
+et aussi je t'expliquerai comment
+fonctionnent les 32 Go de VRAM en détail.
+
+183
+00:08:38,200 --> 00:08:39,200
+Allez, salut !

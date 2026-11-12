@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- Miniature « mains » de « Qwen 4 arrive » (12/11/2026), demandée par l'auteur pour le 3e test :
+     fond noir, la RTX 5090 en évidence, plusieurs mains qui veulent l'attraper (comme la variante d de « 16 Go de VRAM »),
+     le logo de Qwen et « QWEN 4 » avec le 4 d'une autre couleur.
+     Page de 1280×720 rendue à ×3 (3840×2160). ?c=r : le 4 en rouge de la chaîne · ?c=b : le 4 en bleu de Qwen.
+     Mains : « Hands Darkness », StockSnap, CC0 (deux mains détourées par Vision, chacune utilisée aussi en miroir).
+     Carte : ASUS TUF RTX 5090 (image ASUS, celle de la fiche Amazon à 7 900 €). Logo : Qwen (LobeHub Icons). -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:"Anton"; src:url(../../../../ressources/miniatures/fonts/anton-latin-400.woff2) format("woff2"); }
+  :root { --ink:#ffffff; --red:#ff3b30; --qwen:#082dff; --qwen-vif:#4d68ff; --c4:var(--red); --glow:255,59,48; }
+  [data-c="b"] { --c4:var(--qwen-vif); --glow:40,80,255; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1280px; height:720px; overflow:hidden; background:#050506; }
+  body { position:relative; color:var(--ink); }
+
+  /* Fond noir texturé : grille sombre, plus marquée en haut à gauche (style OpenCode) */
+  .grille { position:absolute; inset:0;
+    background:repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 36px),
+               repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, transparent 1px 36px);
+    -webkit-mask-image:radial-gradient(ellipse 90% 90% at 25% 30%, #000 30%, transparent 85%); }
+  /* Contre-jour derrière la carte : la tuile se détache du mode sombre de YouTube */
+  .halo { position:absolute; left:470px; top:200px; width:860px; height:620px; border-radius:50%;
+    background:radial-gradient(closest-side, rgba(var(--glow),.62), rgba(var(--glow),.24) 48%, rgba(var(--glow),.07) 78%, transparent 100%); }
+  .rayon { position:absolute; left:610px; top:330px; width:560px; height:250px; border-radius:50%;
+    background:radial-gradient(closest-side, rgba(255,255,255,.22), transparent 100%); filter:blur(10px); }
+  .vignette { position:absolute; inset:0; background:radial-gradient(ellipse 80% 90% at 55% 55%, transparent 55%, rgba(0,0,0,.55) 100%); }
+
+  /* Les mains : sombres, bord éclairé par le contre-jour, avant-bras fondus vers le bord du cadre */
+  .main { position:absolute; transform-origin:50% 100%;
+    filter:sepia(.35) saturate(1.3) brightness(1.2) contrast(1.05) drop-shadow(0 0 1.5px rgba(var(--glow),.95)) drop-shadow(0 0 12px rgba(var(--glow),.35)); }
+  .main.loin { filter:sepia(.35) saturate(1.2) brightness(.82) contrast(1.05) blur(1.2px) drop-shadow(0 0 8px rgba(var(--glow),.45)); }
+  .fond { -webkit-mask-image:linear-gradient(0deg, transparent 0, #000 30%); }
+  .bordd { -webkit-mask-image:linear-gradient(0deg, transparent 0, #000 22%); }
+
+  /* La carte, en couleur et nette, légèrement tournée */
+  .gpu { position:absolute; left:455px; top:322px; width:740px; transform:rotate(-6deg);
+    filter:brightness(1.12) contrast(1.08) drop-shadow(0 -2px 0 rgba(255,255,255,.35)) drop-shadow(0 0 22px rgba(var(--glow),.7)) drop-shadow(0 34px 40px rgba(0,0,0,.85)); }
+
+  /* Le sujet, petit, au-dessus du texte : le logo de Qwen */
+  .logo { position:absolute; left:58px; top:44px; width:96px; height:96px; border-radius:22px; background:#fff; display:grid; place-items:center;
+    box-shadow:0 0 24px rgba(8,45,255,.55); }
+  .logo img { width:70px; height:70px; }
+
+  /* « QWEN 4 » : Anton, blanc, le 4 plus grand et d'une autre couleur */
+  .t { position:absolute; font-family:"Anton", sans-serif; line-height:1; white-space:nowrap; letter-spacing:-.02em; }
+  .qwen { left:50px; top:146px; font-size:210px; color:var(--ink); text-shadow:0 8px 0 rgba(0,0,0,.6), 0 0 34px rgba(0,0,0,.9); }
+  .quatre { left:512px; top:66px; font-size:280px; color:var(--c4);
+    text-shadow:0 0 26px rgba(var(--glow),.75), 0 10px 0 rgba(0,0,0,.6); -webkit-text-stroke:3px rgba(255,255,255,.9); paint-order:stroke fill; }
+</style>
+</head>
+<body>
+<div class="grille"></div>
+<div class="halo"></div>
+<div class="rayon"></div>
+
+<!-- mains derrière la carte (plus loin, floues) : elles surgissent au-dessus du bord de la carte -->
+<img class="main loin fond" src="../sources/main-levee-stocksnap-cc0.png" style="left:705px;top:232px;height:430px;transform:rotate(-6deg)" alt="">
+<img class="main loin fond" src="../sources/main-levee-stocksnap-cc0.png" style="left:930px;top:205px;height:440px;transform:scaleX(-1) rotate(-10deg)" alt="">
+
+<img class="gpu" src="../sources/tuf-rtx5090-recadree.png" alt="">
+
+<!-- mains devant la carte : elles l'agrippent par le bas et par le bord droit -->
+<img class="main fond" src="../sources/main-tendue-stocksnap-cc0.png" style="left:330px;top:470px;height:340px;transform:rotate(22deg)" alt="">
+<img class="main fond" src="../sources/main-tendue-stocksnap-cc0.png" style="left:960px;top:500px;height:320px;transform:scaleX(-1) rotate(20deg)" alt="">
+<img class="main bordd" src="../sources/main-tendue-stocksnap-cc0.png" style="left:1120px;top:250px;height:300px;transform:scaleX(-1) rotate(62deg)" alt="">
+
+<div class="vignette"></div>
+
+<div class="logo"><img src="../sources/qwen-color.svg" alt=""></div>
+<div class="t qwen">QWEN</div>
+<div class="t quatre">4</div>
+
+<script>
+  const p = new URLSearchParams(location.search);
+  document.body.dataset.c = p.get('c') || 'r';
+</script>
+<script src="../../../../ressources/miniatures/export.js"></script>
+</body>
+</html>

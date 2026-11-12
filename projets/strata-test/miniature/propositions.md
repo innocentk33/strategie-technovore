@@ -6,6 +6,12 @@
 >
 > **Les tests ne sont pas encore faits** : a et b n'affirment aucun chiffre ni aucun verdict. La variante c est un gabarit à remplir après les tests.
 
+> **12/11, ta décision : le test A/B oppose l'ancien texte au texte « PEAK »**, sur « TON PC / VS CLAUDE ? » et le même meme (The Rock). b (« AU NIVEAU ? ») sort du test.
+> - **a** : [`rendus/a.png`](rendus/a.png), Inter 900, « TON PC » en blanc et « VS CLAUDE ? » en rouge.
+> - **a-peak** : [`rendus/a-peak.png`](rendus/a-peak.png), les 2 lignes en blanc, en Anton, avec une copie rouge un peu plus grande et décalée vers le bas ([référence](../../../ressources/miniatures/images/reference-texte-peak.jpg)). PSD : [`photocraft/a-peak.psd`](photocraft/a-peak.psd) (4 calques de texte).
+> - Maquette : `?v=a&txt=peak` ; rendu : `./rendre.sh "a&txt=peak"` → `rendus/a-peak.png`. Avant/après et 168 px : [`apercu/essai-peak.png`](apercu/essai-peak.png).
+> - **Seul le texte change.** Après les tests, la variante c se rend aussi en PEAK (`./rendre.sh "c&txt=peak&rouge=…&toks=…"` → `rendus/c-peak.png`) si PEAK gagne.
+
 ## 1. Le concept
 
 - **Ce que la vidéo promet** (script V2) : la moitié d'un modèle géant tourne avec une carte de 16 Go **et 32 Go de RAM** ; elle code un jeu, un site et une île en 3D ; puis la question de la fin : « est-ce que ça remplace Claude ? ».
@@ -96,7 +102,7 @@ Aperçus : [`apercu/planche_a.png`](apercu/planche_a.png), [`apercu/comparaison.
 
 ## 6. Le choix recommandé
 
-**a (« TON PC / VS CLAUDE ? ») avec le titre 1**, en test A/B contre b dans « Tester et comparer ». a est la plus claire sans le titre et annonce la vraie boucle de la vidéo ; b est le challenger, même scène sans nom de marque.
+**a (« TON PC / VS CLAUDE ? ») avec le titre 1.** Depuis le 12/11, le test A/B oppose a à a-peak (même texte, même meme, seul le style du texte change) ; b n'est plus testé. Ancienne recommandation : a en test A/B contre b dans « Tester et comparer ». a est la plus claire sans le titre et annonce la vraie boucle de la vidéo ; b est le challenger, même scène sans nom de marque.
 
 ## 7. Après les tests : la variante c (gabarit)
 

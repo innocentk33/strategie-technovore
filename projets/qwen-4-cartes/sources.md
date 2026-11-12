@@ -13,7 +13,14 @@
 
 **Q2 `DEV` Fiche Hugging Face de Qwen3.8-Flash-Next** (organisation Qwen) : « This experimental preview of the architecture that will underpin Qwen4… ». 125 milliards de paramètres dont 6 activés, licence qwen-community-1.0. Publié le 24/08/2026 (API Hugging Face).
 → https://huggingface.co/Qwen/Qwen3.8-Flash-Next (11/11/2026)
-**Revérifié le 11/11 par la relecture** : phrase et date (24/08) confirmées ; la fiche disait 26/08, corrigé. Coupé du script V2 (ne sert pas l'achat).
+**Revérifié le 11/11 par la relecture** : phrase et date (24/08) confirmées ; la fiche disait 26/08, corrigé. Coupé du script V2 (ne sert pas l'achat). **Revient le 12/11** dans ta phrase de la section 1 (pourquoi tu guettes Qwen 4). Fiche relue le 12/11 : MoE de **125 milliards dont 6 activés** (512 experts, 10 routés + 1 partagé), plus 51 milliards d'embeddings n-gram et 4 milliards de MTP ; la collection affiche « Updated Aug 26 », la citation dit août 2026.
+
+**Q28 `DEV` Niveau en code de Qwen3.8-Flash-Next, chiffres de Qwen** (même fiche, lue le 12/11/2026). Flash-Next contre Qwen3.8-27B : SWE-bench Pro **62,5 contre 61,7** ; SWE-bench Multilingual **81,0 contre 73,8** ; NL2Repo-Bench 48,1 contre 42,3 ; LiveCodeBench v6 91,9 contre 90,3 ; DeepSWE 1.1 58,7 contre 42,2. **Mesures de l'équipe Qwen elle-même** (la note de la fiche le dit) : d'où « d'après les tests de Qwen » dans la voix. Sur NL2Repo, DeepSeek-V4-Flash fait mieux (54,2) ; on ne compare qu'au 27B.
+→ https://huggingface.co/Qwen/Qwen3.8-Flash-Next (12/11/2026)
+**Non sourcé, donc nuancé** : « Qwen est le modèle le plus apprécié pour coder en local » (ta phrase) devient « une des familles les plus recommandées ». Aucun classement relu ne dit « le plus ».
+
+**Q29 `DEV` Strata fait tourner une version compressée de Flash-Next** (reprend T5 et T6 de `projets/strata-test/sources.md`, relus le 11/11). Le « Coder » d'ISTA-DASLab est Qwen3.8-Flash-Next avec **256 experts gardés sur 512** et un quant **IQ1_M** ; la doc de Strata : « a 32 GB PC with a 12 to 16 GB GPU runs the Coder ». **Ce n'est pas Strata qui compresse** : il fait tourner le modèle compressé par ISTA-DASLab, en gardant les experts dans la RAM. D'où « des projets comme Strata font déjà tourner une version compressée ». **Conditionnel** : rien ne dit que Qwen 4 gardera exactement cette architecture (seul « underpin Qwen4 » est écrit, Q2).
+→ https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF ; https://github.com/Niko1221/Strata/blob/main/docs/MODELS.md#coder
 
 **Q3 `DEV` Qwen4-Max-Preview, ouvert le 11/11/2026.** Documentation officielle d'Alibaba Cloud : aperçu du **11/11 à 10 h au 25/11 à 24 h** (UTC+8), puis retrait ; « currently in preview and is available through Token Plan only » (abonnement d'Alibaba, **pas de paiement à l'usage**) ; contexte 1 million de tokens, sortie 393 216 tokens maximum. La page **ne dit rien des poids ni des autres modèles Qwen 4**, et n'affiche aucun prix. Le compte officiel Qwen a annoncé « Qwen4 is coming » le même jour (page X illisible : texte relayé par des sites tiers et par la recherche web).
 → https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview ; https://x.com/Alibaba_Qwen/status/2120335993643684315 (402, relayé) [À REVÉRIFIER le 12/11]
@@ -108,7 +115,14 @@ Texte de la V1 de Q6, gardé pour l'historique : il est absent du communiqué (Q
 - **5090** : moins chère en stock **7 900 €** (ASUS TUF, Amazon.fr), puis 7 950 et 7 995 € ; la plupart des offres en stock entre 7 900 et 9 600 € ; les fiches de 4 583 à 7 000 € sont en rupture.
 - **3090** neuve : 2 990 € (ROG Strix OC et MSI Suprim X, Amazon.fr) ; la « reconditionnée » à 3 303 € reste aberrante.
 - **7900 XTX** : 1 417 € (Sapphire Nitro+, Amazon.fr) ; une Sapphire Pulse à 6 273 € est une erreur de données.
-- Calcul du script : 2 × 694 = 1 388 € (« à partir de mille quatre cents euros environ ») ; 7 900 / 1 388 = 5,7 (« plus de cinq paires »).
+- ~~Calcul du script : 2 × 694 = 1 388 € ; 7 900 / 1 388 = 5,7 (« plus de cinq paires »)~~ : **remplacé le 12/11 par Q30**.
+
+**Q30 `MESURE` Tes captures Amazon.fr du 12/11/2026, avant l'enregistrement** :
+- **ASUS TUF Gaming RTX 5090 32 Go OC : 7 900,15 €** (4,4 étoiles, 51 avis) : le « 7 900 € » du hook et de la miniature tient.
+- **ASUS Prime RTX 5060 Ti 16 Go OC : 832,99 €** (4,7 étoiles, 226 avis, « Choix d'Amazon », « plus de 100 achetés au cours du mois dernier ») : **+139 € depuis le relevé de gpuprix du 11/11 (694 €, Q21)**, soit +20 % en un jour.
+- Conséquences dans le script : 2 × 832,99 = **1 665,98 €** (« à partir de mille six cent soixante-dix euros environ ») ; 7 900,15 / 1 665,98 = **4,74**, donc « plus de cinq paires » devient **« presque cinq paires »** ; écart avec LDLC (1 099,95 €, Q22, relevé le 11/11) : **266,96 €**, dit « plus de deux cent cinquante euros ».
+- Le « dès 694 € » des captures et du plan devient « dès 833 € ». **LDLC n'est pas revérifié le 12/11** : le téléprompteur a une phrase de repli si son prix a bougé.
+- Montage v3 (12/11) : la capture de la 5090 est montrée, prix surligné, sur « Sauf qu'en stock, elle démarre à 7 900 € ».
 
 **Q22 `MESURE` LDLC, fiches ouvertes le 11/11/2026** : RTX 5060 Ti 16 Go **MSI Ventus 2X OC Plus 1 029,95 €** (page : « Rupture » avec retrait en magasin, une unité par client) ; **ASUS Prime OC 1 099,95 €** (en stock). ⚠️ **Écart avec Q21 (694 €)** : ce n'est pas la même enseigne ni le même modèle ; une recherche web remonte aussi d'anciennes fiches LDLC (Gigabyte Windforce OC à 489,95 €, plus en vente ; MSI Ventus 3X OC à 739,95 € ; Gigabyte Gaming OC à 819,95 €), **sans date** : non retenues. Le script V1 disait « de sept cents à mille cent euros selon le marchand ».
 **Revérifié le 11/11 par la relecture** : l'ASUS Prime OC 16 Go est **en stock à 1 099,95 €** chez LDLC (« Dispo dans 12 boutiques »). **Correction** : la V1 écrivait « ce n'est pas la même enseigne ni le même modèle ». C'est **le même modèle** (ASUS PRIME GeForce RTX 5060 Ti OC Edition 16GB) à 694 € chez Amazon.fr et à 1 099,95 € chez LDLC : l'écart vient seulement du marchand. Le script V2 le dit (« la même carte, de la même marque »).
@@ -163,3 +177,4 @@ Version d'avant la relecture :
 - RTX 5080 : 1 899 € (non citée).
 Remplace le repli du 24/10 (Q23) pour la 3090. **Aucune mesure de Qwen3.8-27B sur RX 6800 XT trouvée** : la vidéo ne donne pas de vitesse pour cette carte.
 
+**Q31 `PRESSE` Poids de GTA 6 (pour le plan « faire de la place sur ton SSD », montage v3 du 12/11/2026).** Rockstar Games a annoncé le 3/11/2026 qu'il faut « jusqu'à 212 Go » d'espace libre sur PS5 et Xbox Series X|S, préchargement dès le 10/11, sortie le 19/11/2026 (Univers Simu, 3/11/2026 : https://www.univers-simu.com/news/gta-6-212-go-prechargement-version-boite-233046/ ; même chiffre chez Génération NT et Blog Nouvelles Technologies). Rockstar ne donne pas de taille définitive par console. Lu dans la presse (article résumé par un outil, le 12/11), pas sur le site de Rockstar : à recouper sur la Newswire de Rockstar si tu veux citer GTA 6 à voix haute. Le montage s'en sert comme contraste : le poids de GTA 6 est connu, celui de Qwen 4 non. La voix ne cite pas GTA 6.

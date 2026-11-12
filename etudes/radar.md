@@ -26,6 +26,46 @@
 
 ---
 
+## 12/11/2026 (soir) : sortie de Qwen 4, radar allégé, calendrier inchangé
+
+**Contexte** : « Qwen 4 quelle carte graphique acheter (ou pas) ? » est sortie le 12/11 à 21 h 45 (heure de Paris) : https://youtu.be/JuiZAwEiX-o. Le forfait vidIQ est gratuit depuis ce jour : 875 crédits avant le radar (150 renouvelables le 08/12, 725 en bonus), **20 dépensés**. Deux outils de la procédure manquent dans la connexion vidIQ : `vidiq_outliers` (concurrents et public français) et `vidiq_channel_analytics` (rétention, sources). Les concurrents passent donc par `vidiq_channel_videos`, une chaîne à la fois (5 crédits chacune).
+
+### Notre chaîne (`vidiq_user_videos`, 12/11 à 20 h 50 UTC)
+
+| Vidéo | Sortie | Recul | Vues | Likes / commentaires |
+|---|---|---|---|---|
+| Qwen 4 quelle carte graphique acheter (ou pas) ? | 12/11 | J+0 (5 min) | 0 | 0 / 1 |
+| 16 Go de VRAM : est-ce vraiment suffisant pour les LLM ? | 09/11 | J+3 | 285 | 10 / 3 |
+| Comment utiliser une IA sans internet sur ton PC | 02/11 | J+10 | 333 | 5 / 7 |
+| Uber : l'illusion parfaite du temps réel | 26/10 | J+17 | 224 | 7 / 0 |
+| OpenCode a été gravement piraté | 21/10 | J+22 | 492 | 4 / 1 |
+| ArtCraft (« Il a cloné toutes les applications Adobe ») | 19/10 | J+24 | 612 | 7 / 1 |
+
+- **16 Go** est à 285 vues à J+3, presque autant que l'installation à J+10 (333) : la meilleure entrée récente, avec 10 likes.
+- **Non mesuré** : le CTR, les tests A/B de miniatures (16 Go, Qwen 4) et la rétention. `vidiq_channel_analytics_extended` répond « channel_mismatch » : l'extension vidIQ du navigateur est connectée à un autre compte Google que celui de Technovore. À refaire au prochain radar, après avoir choisi le bon compte dans Studio (ou avec une capture de Studio).
+
+### Concurrents (`vidiq_channel_videos`, 12/11)
+
+- **Weights & Wonders** (EN) : *Watch This Before Building a Multi-GPU Local AI Setup!* (19 K vues, **1 562 vues/h**, ×2,2, sortie le 12/11) ; *11 GPUs You Should Get for Local AI Before Qwen 4's Release!* (45 K, ×5,9, 08/11, notre inspiration) ; *I Built THE BEST Local AI Stack for 32GB VRAM!* (7 K, 10/11).
+- **Kai** (EN) : *Qwen 4 27b: What to Expect from the next local LLM King?* (50 K, 11/11) ; *Apple's Local AI App for Mac Is Coming (Harbor)* (11,9 K, **2 374 vues/h**, 12/11) ; *The Local AI Hardware Mistake Almost Everyone Makes* (52 K, ×2, 07/11) ; *I Run Full DeepSeek v4.1 Flash on a 12GB GPU* (60,6 K, 06/11).
+- **Makertronic Tech** (FR) : *PRIX DES GPU : Pourquoi les cartes vont devenir INTOUCHABLES !* (1,2 K, **299 vues/h**, 12/11) ; *192 Go de VRAM : NVIDIA a un ÉNORME PROBLÈME !* (18,4 K, ×2,1, 08/11).
+
+### Public français
+
+Pas d'appel `vidiq_outliers` possible. Seul signal : Makertronic sur le prix des cartes, sorti le même jour que Qwen 4.
+
+### Décision
+
+- **Calendrier inchangé.** Le créneau habituel du radar (jeu. 19/11) a déjà sa vidéo, *Même carte, 2 fois plus rapide*. Le seul créneau libre reste le lun. 7/12.
+- **Les signaux nourrissent les vidéos déjà prévues** :
+  - **lun. 23/11, 32 Go de VRAM** : le multi-GPU marche (Weights & Wonders, 1 562 vues/h). Ajoute « ce qu'il faut vérifier avant de monter 2 cartes » : alimentation, lignes PCIe, tensor split encore expérimental (déjà mesuré dans Qwen 4) ;
+  - **jeu. 10/12, Mac mini ou PC gamer** : surveiller Harbor, l'appli d'IA locale d'Apple, si elle sort d'ici là ;
+  - **jeu. 17/12, prix après le Black Friday** : le prix des cartes intéresse le public français (Makertronic) ;
+  - **lun. 7/12** : la candidate « petits budgets » se renforce, avec un angle 8 à 12 Go. Kai fait 60 K vues avec un modèle sur 12 Go, et 8 Go est la VRAM d'un joueur sur quatre (Steam, octobre). À noter au prochain radar.
+- **Prochain radar** : à la sortie de Strata (lun. 16/11). On y mesure 16 Go à J+7 et Qwen 4 à J+4, avec Studio sur le bon compte.
+
+---
+
 ## 10/11/2026 : passage à 2 vidéos IA/semaine (lun. + jeu.), « 16 Go » à J+1, l'installation à J+8, Qwen 4 et deux nouvelles chaînes EN
 
 **Décision du jour (ta demande) :** la chaîne passe à **2 vidéos par semaine, lundi et jeudi, 18 h, uniquement IA / IA locale**, du jeu. 12/11 au lun. 4/01/2027, puis retour à 1 vidéo/semaine (lundi). Les piliers « génie » et « histoires » sont **archivés** pour cette période : plus de règle 3 pour 1. Chaque vidéo se fait en 1-2 jours, reste calculée (sources, mesures publiées, études, calculs) sauf exceptions filmées déjà décidées (installation du 2/11, test Strata du 16/11).

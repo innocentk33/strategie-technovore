@@ -42,6 +42,14 @@
     text-shadow:0 6px 0 rgba(0,0,0,.55), 0 0 30px rgba(0,0,0,.9); }
   .t1 { top:146px; font-size:104px; color:var(--ink); }
   .t2 { top:246px; font-size:132px; color:var(--red); }
+
+  /* Texte « PEAK » (?txt=peak, test A/B du 12/11 contre l'ancien texte) : lettres blanches serrées, copie rouge un peu plus grande décalée vers le bas, sans flou */
+  @font-face { font-family:"Anton"; src:url(../../../../ressources/miniatures/fonts/anton-latin-400.woff2) format("woff2"); }
+  [data-txt="peak"] .t { font-family:"Anton", sans-serif; font-weight:400; color:#fff; letter-spacing:-.025em; text-shadow:none; }
+  /* La copie rouge est un vrai élément .t (calque de texte dans le PSD), créé par le script : ×1,06, centrée, 0,075 em plus bas */
+  [data-txt="peak"] .t.echo { color:var(--red); }
+  [data-txt="peak"] .t1 { top:150px; font-size:156px; }
+  [data-txt="peak"] .t2 { top:318px; font-size:188px; color:#fff; }
 </style>
 </head>
 <body>
@@ -76,6 +84,20 @@
   const el = document.getElementById('code');
   el.innerHTML = out.map(l => `<span style="opacity:${(.04 + rnd() * .08).toFixed(2)}">${l}</span>`).join('\n');
   document.body.dataset.v = new URLSearchParams(location.search).get('v') || 'a';
+</script>
+<script>
+  // Texte « PEAK » (?txt=peak) : une copie rouge de chaque ligne, posée juste avant elle (donc dessous), avant que export.js lise les calques
+  document.body.dataset.txt = new URLSearchParams(location.search).get('txt') || '';
+  if (document.body.dataset.txt === 'peak') document.fonts.ready.then(() => {
+    document.querySelectorAll('.t').forEach(e => {
+      const fs = parseFloat(getComputedStyle(e).fontSize), w = e.getBoundingClientRect().width, c = e.cloneNode(true);
+      c.removeAttribute('id'); c.classList.add('echo');
+      c.style.fontSize = fs * 1.06 + 'px';
+      c.style.left = e.offsetLeft - .03 * w + 'px';
+      c.style.top = e.offsetTop + .075 * fs + 'px';
+      e.before(c);
+    });
+  });
 </script>
 <script src="../../../../ressources/miniatures/export.js"></script>
 </body>

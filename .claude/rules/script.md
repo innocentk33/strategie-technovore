@@ -10,7 +10,7 @@ paths:
 
 # Écriture : brouillon, script, grill, storyboard
 
-- `teleprompteur.md` et `.txt` : une ligne = un souffle ; les `[MARQUEURS]`, `⟦à écrire⟧` et `(indications)` ne se lisent pas.
+- `teleprompteur.md` et `.txt` : une ligne = un souffle ; les `[MARQUEURS]`, `⟦à écrire⟧` et `(indications)` ne se lisent pas. **Les nombres s'y écrivent en chiffres** (« 16 gigas », « 7900 euros », « 20 % », « Qwen 3.8 »), plus faciles à lire (demande de l'auteur, 11/11) ; on garde en lettres « un », « zéro » et ce qui n'est pas une quantité (« trois quarts », « deux 5060 Ti »). Le script garde ses nombres en lettres s'il veut ; le téléprompteur, non.
 - `storyboard.md` : timecodes calés sur `voix-off-montee.wav` ; en HyperFrames, `data-start` = le timecode en secondes.
 
 **Les 15 premières secondes sont les plus fortes de la vidéo** (règle du 22/10, section 5 de `strategie.md`) :
@@ -30,3 +30,10 @@ paths:
 - pas une étiquette vague : « on fait les comptes de ta carte » (16 Go) n'annonce rien de concret, et la vidéo a perdu un tiers de ses spectateurs juste après ;
 - avant le plan, **on montre le résultat** (l'IA qui répond sans internet, l'agent qui fait tout en un message) ; on explique après ;
 - juste après le plan, **la première partie commence par une réponse ou une démo**, pas par une définition ou une conversion d'unités. La théorie vient quand le spectateur en a besoin.
+
+**L'appel à l'abonnement des vidéos d'achat** (12/11, demande de l'auteur, première fois sur Qwen 4) :
+- la phrase : « **Si cette vidéo t'a évité un mauvais achat, abonne-toi.** » ;
+- elle sert pour les vidéos qui aident à choisir ou à acheter : cartes graphiques, VRAM, budgets, prix, Black Friday, Mac mini, louer ou acheter, cadeau ;
+- **dans la voix**, place-la juste après le moment où la vidéo a rendu service : la réponse, la règle ou le prix. Pas en ouverture, pas dans les 30 premières secondes ;
+- **dans le kit d'upload**, mets-la dans la description (le bloc « abonne-toi ») et à la fin du commentaire épinglé ;
+- pour les autres vidéos (vie privée, nom d'un modèle…), adapte le service rendu, au lieu de forcer « mauvais achat ».

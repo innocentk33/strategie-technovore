@@ -1,16 +1,17 @@
 TÉLÉPROMPTEUR — Le meilleur modèle possible pour 16 Go de VRAM (Strata) (V2, angle 16 Go, 11/11)
 Une ligne = un souffle. Ligne vide = respiration. Les [MARQUEURS], les ⟦R… : …⟧ et les (indications) ne se lisent pas : remplace chaque ⟦R…⟧ par ta phrase de la fiche (plan-tests.md, section 11) avant d'enregistrer.
-Un seul texte : plus de variantes A / B. R1 revient trois fois : c'est le même chiffre.
+Les nombres sont écrits en chiffres pour la lecture (11/11), mais tu les dis en entier.
+Un seul texte : plus de variantes A / B. R1 revient 3 fois : c'est le même chiffre.
 
 [ HOOK ]
 
 (rapide, une idée par image)
 
 Ce casse-briques, ce site, cette île en 3D : une IA les a écrits chez moi,
-sur une carte graphique de seize gigas, à ⟦R1 résultat : tok/s typique du jeu⟧ tokens par seconde.
-⟦R2 résultat : combien ont marché du premier coup⟧ sur trois ont marché du premier coup.
+sur une carte graphique de 16 gigas, à ⟦R1 résultat : tok/s typique du jeu⟧ tokens par seconde.
+⟦R2 résultat : combien ont marché du premier coup⟧ sur 3 ont marché du premier coup.
 
-Sauf que le modèle complet ne rentre pas dans mes trente-deux gigas de RAM :
+Sauf que le modèle complet ne rentre pas dans mes 32 gigas de RAM :
 j'ai pris sa moitié, gardée pour le code.
 Alors, une moitié de modèle, est-ce que ça remplace Claude ?
 
@@ -29,7 +30,7 @@ et qui ne touche pas à la config de mon Claude.
 Ma demande, je l'écris en anglais,
 parce que sa propre doc dit qu'il est plus faible dans les autres langues.
 Un casse-briques complet, dans un seul fichier :
-six rangées de briques, la raquette à la souris, trois vies,
+6 rangées de briques, la raquette à la souris, 3 vies,
 des bonus qui tombent, des bruitages,
 des étincelles quand une brique casse, et zéro erreur dans la console.
 Règle du jeu : un seul essai.
@@ -44,7 +45,7 @@ Il a fini.
 Je l'ouvre, et c'est le moment de vérité : ⟦R3 résultat : le jeu en une phrase⟧.
 
 Bon.
-Lundi dernier, je te disais que seize gigas de carte suffisent,
+Lundi dernier, je te disais que 16 gigas de carte suffisent,
 si tu prends le bon fichier.
 Sauf que là, le modèle est bien plus gros que ma carte.
 Comment il tient ?
@@ -53,7 +54,7 @@ Comment il tient ?
 
 En fait, le modèle d'origine est découpé en centaines de petits spécialistes, les experts.
 Et à chaque mot, il n'en réveille que quelques-uns :
-six milliards de paramètres au travail, sur cent vingt-cinq.
+6 milliards de paramètres au travail, sur 125.
 Strata, c'est le programme qui range tout ça.
 La carte garde les experts les plus utilisés,
 la RAM garde le reste, et une grosse table reste sur le SSD.
@@ -61,11 +62,11 @@ Il est gratuit, et open source.
 
 Sauf que sa règle, c'est : ta RAM doit contenir les experts,
 plus une dizaine de gigas pour Windows.
-Et avec trente-deux gigas de RAM et une carte de seize,
+Et avec 32 gigas de RAM et une carte de 16,
 sa doc ne prévoit qu'un seul fichier : le Coder.
 Le même modèle, coupé de moitié, gardé pour le code,
 et ses auteurs le disent eux-mêmes expérimental.
-Ils annoncent quatre-vingt-quinze pour cent du score de code du modèle complet.
+Ils annoncent 95 % du score de code du modèle complet.
 Ça, c'est leur chiffre.
 Moi, je regarde ce qu'il fait.
 
@@ -84,15 +85,15 @@ Voyons s'il tient sur autre chose.
 
 [ NIVEAU DEUX, PUIS LE BOSS ]
 
-Niveau deux : le site, ce qu'on demande le plus souvent à une IA.
+Niveau 2 : le site, ce qu'on demande le plus souvent à une IA.
 Une page de présentation pour une appli de paiement qui n'existe pas :
 un grand titre avec un téléphone dessiné,
-trois cartes, trois tarifs, une FAQ qui s'ouvre
+3 cartes, 3 tarifs, une FAQ qui s'ouvre
 et se ferme, et ça doit tenir sur un téléphone.
 ⟦R7 résultat : le site en une phrase⟧.
 
 Et maintenant, le boss final : une île en cubes, en 3D.
-Un relief généré, de l'eau, au moins quinze arbres,
+Un relief généré, de l'eau, au moins 15 arbres,
 la souris pour tourner autour, et la touche N pour passer à la nuit.
 Là, c'est le plus dur, parce qu'il doit calculer le relief
 et la lumière sans jamais voir ce qu'il dessine.
@@ -109,25 +110,25 @@ et ⟦R10 résultat : tok/s du site et de l'île⟧ pour le site et l'île.
 Du coup, pour te donner un repère :
 un utilisateur d'une 5070 Ti, avec le même processeur que moi
 et à peu près la même RAM,
-mesure environ soixante-dix tokens par seconde avec ce modèle.
+mesure environ 70 tokens par seconde avec ce modèle.
 Mais avec la réflexion coupée, et sans vérifier si le code marche.
 Chez moi : ⟦R11 résultat : face au repère, et pourquoi⟧.
 
 Et si ta carte est plus abordable ?
-Sur une Radeon de seize gigas, avec trente gigas de RAM,
-un autre utilisateur mesure environ trente-sept tokens par seconde,
+Sur une Radeon de 16 gigas, avec 30 gigas de RAM,
+un autre utilisateur mesure environ 37 tokens par seconde,
 toujours avec ce modèle.
 Parce que moi, je te le dis franchement :
 j'ai une 5080, une carte haut de gamme,
-et sa mémoire est deux fois plus rapide que celle d'une 5060 Ti.
+et sa mémoire est 2 fois plus rapide que celle d'une 5060 Ti.
 Donc mes chiffres, c'est plutôt le haut de la fourchette.
-Sur ta carte de seize gigas, ça tourne aussi, juste moins vite.
+Sur ta carte de 16 gigas, ça tourne aussi, juste moins vite.
 
 Et justement, la réflexion, c'est le piège.
 Par défaut, ce modèle réfléchit longtemps avant d'écrire,
 et cette réflexion compte dans la longueur maximale de sa réponse.
 Avec la config que Strata écrit pour Pi, cette limite,
-c'est un huitième du contexte : huit mille tokens chez moi.
+c'est un huitième du contexte : 8000 tokens chez moi.
 Un jeu complet plus la réflexion, ça peut déborder,
 et le fichier s'arrête au milieu.
 Du coup, avant le premier test,
@@ -137,24 +138,24 @@ La ligne est en description.
 
 Dernière chose : la vitesse baisse quand la conversation grandit.
 Le projet le publie lui-même : sur une autre machine, avec un ancien moteur,
-le Coder passe de cinquante-neuf à quarante-trois tokens par seconde entre mille
-et cent vingt-huit mille tokens de contexte.
+le Coder passe de 59 à 43 tokens par seconde entre 1000
+et 128 000 tokens de contexte.
 Donc plus l'agent lit de code, plus il ralentit.
-C'est pour ça que j'ai pris Pi : ses instructions font mille cinq cents tokens,
-contre sept mille quatre cents pour OpenCode.
+C'est pour ça que j'ai pris Pi : ses instructions font 1500 tokens,
+contre 7400 pour OpenCode.
 Moins à relire à chaque demande.
 
 [ LE MÊME TEST, DONNÉ À CLAUDE ]
 
-Maintenant, le vrai test : les trois mêmes demandes,
+Maintenant, le vrai test : les 3 mêmes demandes,
 mot pour mot, données à Claude avec mon abonnement.
 Un seul essai chacune, aucune relance.
 Ce n'est pas le même outil : Pi d'un côté, Claude Code de l'autre.
 Par contre, la demande est la même, et je note la même chose :
-la durée, et ce qui marche sur les cinq points.
+la durée, et ce qui marche sur les 5 points.
 ⟦R12 résultat : Claude, une phrase par test⟧.
-Donc, sur ces trois demandes : ⟦R13 à écrire : la comparaison, et ce qui sépare les deux⟧.
-Attention quand même : trois essais, une tentative chacun.
+Donc, sur ces 3 demandes : ⟦R13 à écrire : la comparaison, et ce qui sépare les deux⟧.
+Attention quand même : 3 essais, une tentative chacun.
 Ça dit ce qui s'est passé chez moi ce jour-là, rien de plus.
 
 [ LÀ OÙ ÇA CASSE ]
@@ -162,7 +163,7 @@ Attention quand même : trois essais, une tentative chacun.
 Chez moi : ⟦R14 résultat : ce qui a cassé, ou « rien n'a planté »⟧.
 Et chez les autres ?
 Sur GitHub, un ticket encore ouvert décrit le moteur qui plante avec ce Coder sur certaines longues demandes.
-Plusieurs utilisateurs l'ont eu, sur des cartes de huit et de douze gigas.
+Plusieurs utilisateurs l'ont eu, sur des cartes de 8 et de 12 gigas.
 Le message accuse la RAM.
 Sauf que des utilisateurs ont trouvé la vraie cause : un bug du moteur,
 avec un correctif proposé, pas encore dans la version que j'ai testée.
@@ -170,8 +171,8 @@ Un utilisateur de 5080 rapporte une autre erreur,
 « non-finite logits », avec d'autres fichiers du même modèle.
 Et un autre testeur a vu ce Coder rater une tâche de code dans Claude Code,
 là où d'autres versions du modèle l'ont réussie.
-Strata est jeune : le projet a été créé le vingt-quatre septembre,
-et il sort une version tous les deux ou trois jours.
+Strata est jeune : le projet a été créé le 24 septembre,
+et il sort une version tous les 2 ou 3 jours.
 Donc note ta version.
 Et si ça casse chez toi, copie le message exact :
 c'est comme ça que la cause de ce bug a été trouvée.
@@ -182,19 +183,19 @@ Alors, est-ce que ça remplace mon abonnement ?
 ⟦R15 à écrire : ton verdict, et ce qui t'a le plus surpris⟧.
 
 Si tu veux le refaire ce soir, voilà la liste.
-Un : il te faut une carte de douze à seize gigas,
-au moins trente-deux gigas de RAM,
-et environ quatre-vingt-dix gigas de disque libres.
-Deux : tu installes l'appli Strata, le lien est en description.
+1 : il te faut une carte de 12 à 16 gigas,
+au moins 32 gigas de RAM,
+et environ 90 gigas de disque libres.
+2 : tu installes l'appli Strata, le lien est en description.
 Dans sa liste de modèles,
 elle te dit si chacun tient sur ton PC avant de le télécharger.
-Trois : tu prends le Coder, sans les images,
+3 : tu prends le Coder, sans les images,
 et tu fermes tout, navigateur compris, avant de le lancer.
-Quatre : tu installes aussi le Terminal de Strata, une ligne en description,
+4 : tu installes aussi le Terminal de Strata, une ligne en description,
 tu branches Pi avec « strata connect pi », et tu montes la limite de réponse.
 Par contre, si tu as plus de RAM, d'après la doc,
-à quarante-huit gigas tu passes aux petites tailles du modèle complet,
-et à soixante-quatre, à toutes.
+à 48 gigas tu passes aux petites tailles du modèle complet,
+et à 64, à toutes.
 Si c'est ta toute première IA en local,
 commence plutôt par la vidéo sur LM Studio : je te la mets là.
 

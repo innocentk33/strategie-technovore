@@ -14,14 +14,14 @@
    - les mesures de deux 5060 Ti (22 → 37 → 66) viennent de **la même personne, avec le même fichier** (Q15). La V1 disait « utilisateurs différents » : la comparaison est en fait propre ;
    - le calcul « 27 milliards × ~4 bits ≈ 15 à 17 Go » est faux (4 bits donnent 13,9 Go). On montre la vraie liste des fichiers : **14 à 18 Go** selon le fichier quatre bits (Q9) ;
    - « seize gigas, non » contredisait la section 2 : seize gigas, c'est **serré**, pas impossible ;
-   - l'écart de prix de la 5060 Ti vient du **marchand**, pas du modèle : la même ASUS Prime OC coûte 694 € chez Amazon et 1 099,95 € chez LDLC (Q21, Q22) ;
+   - l'écart de prix de la 5060 Ti vient du **marchand**, pas du modèle : la même ASUS Prime OC coûte 694 € chez Amazon et 1 099,95 € chez LDLC (Q21, Q22 ; prix du 11/11, recalé à 832,99 € le 12/11, Q30) ;
    - le repli d'occasion de la 3090 dit 800 à 1 200 € (Q23), et non 800 à 1 000 ;
    - « tu auras la réponse quand Alibaba publiera les fichiers » devient « *si* » : rien n'est promis par écrit.
 6. **Section 4 sans « fait 1, fait 2, fait 3 ».** Elle devient une chaîne « mais / donc » : attendre ne protège pas des prix, mais acheter pour un nom non plus, sauf qu'on connaît déjà la taille d'un 27 milliards.
 7. **Ajouts sourcés :**
    - la 5060 Ti seule passe de 28 à 51 tok/s avec le MTP (même utilisateur, Q14) ;
    - le mode tensor est expérimental (Q15) ;
-   - « plus de cinq paires de 5060 Ti pour le prix d'une 5090 » (calcul, Q21).
+   - « plus de cinq paires de 5060 Ti pour le prix d'une 5090 » (calcul, Q21 ; devenu « presque cinq paires » le 12/11, Q30).
 8. **Tics retirés :**
    - les « du coup » qui ne relient rien (« Du coup, cette fois, le Q4_K_M rentre ») ;
    - le « et en effet » qui ne confirmait rien ;
@@ -69,7 +69,7 @@ Sur une 5060 Ti, son fichier ne rentre même pas.
 
 [0:09-0:12 VISUEL : un fichier plus petit, IQ4_XS (14,35 Go), se glisse en vert ; « 28 tok/s » en orange, sur la capture du billet de l'utilisateur (Q14).]
 
-Avec un plus petit : vingt-huit.
+Faut prendre une version plus compressée, et là, tu tombes à vingt-huit.
 
 [0:12-0:15 VISUEL : la vraie doc d'Alibaba, « available through Token Plan only » surligné en jaune (Q3) ; un tampon rouge « PAS DE FICHIER » se plaque sur le logo Qwen 4. SON : tampon.]
 
@@ -87,10 +87,10 @@ Du coup, tu achètes maintenant, ou tu attends ?
 
 [0:28-0:34 VISUEL : LE RÉSULTAT. Le classement s'écrit sur fond noir, une ligne par seconde, pendant la question et la phrase du classement, chaque ligne avec la photo de la carte :
 - RTX 5090, 32 Go : jusqu'à 75 tok/s, dès 7 900 € ;
-- 2 × RTX 5060 Ti, 32 Go : 22 → 66 tok/s, dès 1 400 € ;
+- 2 × RTX 5060 Ti, 32 Go : 22 → 66 tok/s, dès 1 670 € ;
 - RTX 3090, 24 Go : ~40 tok/s, ≈ 850 € d'occasion (Q27) ;
 - RX 7900 XTX, 24 Go : 29 à 41 tok/s, 1 417 € ;
-- RTX 5060 Ti, 16 Go : 28 tok/s (fichier serré), dès 694 €.
+- RTX 5060 Ti, 16 Go : 28 tok/s (fichier serré), dès 833 €.
 Petite mention : « Qwen3.8-27B · prix du 11/11/2026 ».]
 
 Voilà le classement, carte par carte, avec les prix du jour.
@@ -111,7 +111,9 @@ Réponse courte : non, Qwen quatre n'est pas téléchargeable. Sur la page offic
 
 Par contre, si tu tapes « Qwen4-27B » sur Hugging Face, tu vas tomber sur des pages qui portent ce nom. Ouvre-les : elles sont vides. En fait, des gens réservent juste la place pour le jour où il sortira. Donc si quelqu'un te propose un Qwen quatre à télécharger aujourd'hui, méfie-toi. (Q25)
 
-⟦à écrire 1 : en une phrase, pourquoi toi tu guettes Qwen 4. Repli prêt à lire : « Moi, ce que je guette, c'est de savoir si un modèle de cette taille tiendra dans une carte de seize gigas. »⟧
+[VISUEL : la fiche Hugging Face de Qwen3.8-Flash-Next, « This experimental preview of the architecture that will underpin Qwen4 » surligné ; puis son tableau de code, deux colonnes seulement : Flash-Next contre Qwen3.8-27B (SWE-bench Pro 62,5 contre 61,7 ; SWE-bench Multilingual 81,0 contre 73,8), avec la mention « chiffres de Qwen » (Q2, Q28).]
+
+Moi, je guette Qwen quatre pour une raison simple. En août, Qwen a sorti un avant-goût, Qwen trois point huit Flash Next, qui montre l'architecture de Qwen quatre. Et en code, d'après les tests de Qwen, il bat déjà le vingt-sept B. Du coup, j'attends beaucoup de Qwen quatre, d'autant que Qwen, c'est une des familles les plus recommandées pour coder en local. (Q2, Q28)
 
 [VISUEL : deux cartes vertes « SÛR » s'empilent, chacune avec la vraie capture et la phrase surlignée en jaune : le communiqué du 22/09 (« Qwen 4, is currently in training »), puis la doc de Qwen4-Max-Preview (« 11/11 – 25/11 », « Token Plan only »), puis le vrai post de @Alibaba_Qwen sur X, la ligne sur l'accès anticipé (QwenWork, Qoder, Qwen APP, QwenStudio) surlignée (Q1, Q3, Q26).]
 
@@ -151,9 +153,9 @@ On commence par seize gigas, avec la RTX 5060 Ti. Comme tu l'as vu, le Q quatre 
 
 J'ai tout détaillé lundi, dans la vidéo sur les seize gigas.
 
-[VISUEL : deux fiches côte à côte, la même ASUS Prime OC 16 Go : Amazon.fr « 694 € », LDLC « 1 099,95 € », date du jour sur chacune (Q21, Q22) [À REVÉRIFIER]. Un meme de visage choqué entre les deux.]
+[VISUEL : deux fiches côte à côte, la même ASUS Prime OC 16 Go : Amazon.fr « 832,99 € » (ta capture du 12/11, Q30), LDLC « 1 099,95 € », date du jour sur chacune (Q22, Q30) [LDLC À REVÉRIFIER]. Un meme de visage choqué entre les deux.]
 
-Côté prix, regarde bien : la même carte, de la même marque, coûte six cent quatre-vingt-quatorze euros chez Amazon, et mille cent chez LDLC. Quatre cents euros d'écart pour la même boîte. Donc compare avant de payer : pour essayer, elle suffit, pour travailler, c'est serré. (Q21, Q22)
+Côté prix, regarde bien : la même carte, de la même marque, coûte huit cent trente-trois euros chez Amazon, et mille cent chez LDLC. Plus de deux cent cinquante euros d’écart pour la même boîte. Donc compare avant de payer : pour essayer, elle suffit, pour travailler, c'est serré. (Q21, Q22)
 
 [VISUEL : ta capture Leboncoin de la RX 6800 XT Red Dragon, « 16 Go » et « 280 € » zoomés, date du 11/11 (Q27) ; petit tampon « vitesse : pas de mesure trouvée ».]
 
@@ -191,21 +193,21 @@ Dernier palier : trente-deux gigas. Première option, deux 5060 Ti. Et c'est là
 
 Et ce sont les mesures d'une même personne, avec le même fichier : la comparaison est propre. Attention quand même, le tensor split est encore marqué expérimental dans le logiciel. (Q15)
 
-[VISUEL : le calcul s'écrit : « 2 × 694 € ≈ 1 400 € » (Q21) [À REVÉRIFIER].]
+[VISUEL : le calcul s'écrit : « 2 × 833 € ≈ 1 670 € » (Q30).]
 
-Les deux cartes, chez Amazon : à partir de mille quatre cents euros environ. (Q21)
+Les deux cartes, chez Amazon : à partir de mille six cent soixante-dix euros environ. (Q30)
 
 [VISUEL : fiche de la RTX 5090, « 7 900 € », puis le graphique du comparateur : « médiane 9 300 € », « +89,8 % en 3 mois » en rouge (Q20, Q21). Le GIF Stonks revient, démesuré.]
 
 Deuxième option : une seule RTX 5090. Jusqu'à soixante-quinze tokens par seconde, sans même le MTP. Donc à réglages égaux, elle reste devant. Sauf qu'en stock, elle démarre à sept mille neuf cents euros, et son prix médian a presque doublé en trois mois. (Q12, Q20, Q21)
 
-[VISUEL : cinq paires de 5060 Ti qui s'empilent face à une seule 5090 ; légende « 7 900 € ÷ 1 400 € ≈ 5,6 ».]
+[VISUEL : quatre paires de 5060 Ti et presque une cinquième qui s'empilent face à une seule 5090 ; légende « 7 900 € ÷ 1 666 € ≈ 4,7 » (Q30).]
 
-Du coup, pour le prix d'une 5090, tu t'offres plus de cinq paires de 5060 Ti. Bon, t'en as pas besoin de cinq. Mais je fais une vidéo entière sur les trente-deux gigas le lundi vingt-trois novembre. (Q21)
+Du coup, pour le prix d'une 5090, tu t'offres presque cinq paires de 5060 Ti. Bon, t'en as pas besoin de cinq. Mais je fais une vidéo entière sur les trente-deux gigas le lundi vingt-trois novembre. (Q21)
 
 [VISUEL : carte YouTube, vidéo « 32 Go de VRAM » (lun. 23 nov.), 3 secondes.]
 
-⟦à écrire 3 : encart Afrique, 60 à 80 mots : ce qu'on trouve vraiment chez toi (neuf, occasion, import), à quel prix (en francs CFA ou en euros), les frais de dédouanement, la garantie. Sans aucun chiffre ni aucune anecdote que tu n'as pas vécus. Repli prêt à lire : « Si t'es en Afrique francophone, ces prix français ne sont qu'un repère. Chez toi, l'occasion et l'import sont souvent le seul chemin, et le prix change d'un pays à l'autre. Je te demande ton prix à la fin de la vidéo. »⟧
+Et si t'es pas en France, je garde les prix en euros : fais la conversion dans ta monnaie. Et à la fin, je te demande combien ça coûte chez toi.
 
 ---
 
@@ -255,7 +257,9 @@ Voilà la règle, en une phrase : n'achète pas pour un nom, achète pour la tai
 
 Et si t'as déjà seize gigas ou plus, ne change rien pour l'instant : attends de voir le vrai fichier. Le jour où il sort, je refais ce classement avec les vrais chiffres.
 
-⟦à écrire 4 : ta décision à toi, la carte que tu prendrais et pourquoi, sans parler d'un test que tu n'as pas fait. Repli prêt à lire : « Moi, je ne change rien avant d'avoir vu le vrai fichier de Qwen quatre. »⟧
+[VISUEL : la fiche du Coder sur Hugging Face, « Qwen3.8-Flash-Next » surligné dans son nom ; puis la ligne de la doc de Strata « a 32 GB PC with a 12 to 16 GB GPU runs the Coder » (Q29).]
+
+Moi, je vais attendre. Parce que des projets comme Strata font déjà tourner une version compressée de Flash Next, l'avant-goût de Qwen quatre, avec seize gigas de VRAM et trente-deux de RAM. Donc si Qwen quatre garde cette architecture, peut-être que mes seize gigas suffiront. (Q29)
 
 ---
 
@@ -290,7 +294,7 @@ Lundi seize novembre, je teste Strata sur ma 5080, en vrai. Et le vingt-trois, l
 | 4:02 | Surprise | la même carte, 400 € d'écart |
 | 4:38 | Révélation | le MTP, 40 → 72 |
 | 5:40 | Révélation | les deux réglages, 22 → 37 → 66 |
-| 6:41 | Contraste + blague | plus de cinq paires pour le prix d'une 5090 |
+| 6:41 | Contraste + blague | presque cinq paires pour le prix d'une 5090 |
 | 7:14 | Promesse tenue | ta carte actuelle, 28 → 51 |
 | 7:45 | Retournement | douze gigas : ça ne rentre pas, cinq à sept tok/s |
 | 8:28 | Question récoltée | « acheter ou attendre ? » |
@@ -331,7 +335,7 @@ Les relances tombent toutes les 30 à 62 s : le plus long trou est 4:38 → 5:40
 | Une quinzaine de gigas (code d'un logiciel), « la semaine prochaine » (seconde main) | Q7, Q8 |
 | Qwen3.8-27B : étalon ; fichiers de 14,35 à 17,66 Go en quatre bits | Q9, Q10, Q11 |
 | 5090 : jusqu'à 75 tok/s, sans MTP ; dès 7 900 € en stock, médiane presque doublée en 3 mois | Q12, Q20, Q21 |
-| 5060 Ti : 28 tok/s, 51 avec MTP ; 694 € (Amazon) contre 1 099,95 € (LDLC), même carte | Q14, Q21, Q22 |
+| 5060 Ti : 28 tok/s, 51 avec MTP ; 832,99 € (Amazon, 12/11) contre 1 099,95 € (LDLC, 11/11), même carte | Q14, Q22, Q30 |
 | 3090 : 40 puis 34 tok/s ; plus de 70 avec MTP sur du code ; neuve 2 990 € ; occasion 800-1 200 € fin octobre | Q13, Q21, Q23 |
 | 7900 XTX : 29 à 41 tok/s, 1 417 € | Q16, Q21 |
 | Deux 5060 Ti : 22, 37, 66 tok/s, même personne, même fichier ; tensor expérimental | Q15 |
@@ -354,7 +358,7 @@ Voir [`grill-v1.md`](grill-v1.md), section « Contrôles de la V2 », pour le d�
 | Mesure | V2 | Cible |
 |---|---|---|
 | Mots dits (sans les `⟦à écrire⟧`) | **1 390** | 1 300 à 1 600 |
-| Replis des `⟦à écrire⟧` | 104 mots | |
+| Tes 3 passages du 12/11 (remplacent les replis de 104 mots) | 139 mots, soit environ 15 s de plus à 145 mots/min | |
 | **Durée** | **environ 10 min 20 à 145 mots/min** avec les replis ; **environ 8 min 20 à ton débit de *16 Go*** (180 mots/min, 2 105 mots en 11:38) ; un encart Afrique complet ajoute 15 à 20 s | 9 à 11 min à 145 |
 | Mots jusqu'à la question centrale | **76** (31 s à 145, 25 s à ton débit) | ≤ 75 |
 | Liaisons orales pour 100 mots, liste étroite (donc, du coup, en fait, sauf que, en effet, voilà) | **1,65** (23) | ≥ 1,5 |
@@ -364,16 +368,16 @@ Voir [`grill-v1.md`](grill-v1.md), section « Contrôles de la V2 », pour le d�
 | Question centrale | 0:28 | avant 0:30 |
 | Résultat montré / plan en livrables | 0:31 / 0:34 à 1:02 : sûr ou pas, ta carte par budget, la tienne déjà, + les deux réglages + la réponse finale | vers 0:30 |
 | Première réponse | 1:02 à 145 (0:50 à ton débit), « non, Qwen quatre n'est pas téléchargeable » | vers 1:00 |
-| Ta phrase perso (`⟦à écrire 1⟧`) | vers 1:32 | avant 2:00 |
+| Ta phrase perso (pourquoi tu guettes Qwen 4, écrite le 12/11) | vers 1:32 | avant 2:00 |
 | « vous » dans la voix | 0 | 0 |
 
 ## À faire avant l'enregistrement (aujourd'hui)
 
-1. **Quatre `⟦à écrire⟧`** (ou garde le repli, déjà écrit en lignes dans le téléprompteur) :
-   - pourquoi tu guettes Qwen 4 (section 1) ;
-   - ~~tes annonces de 3090 d'occasion du jour~~ : fait le 11/11 (850 €, Q27), avec la RX 6800 XT et les 3060 ;
-   - l'encart Afrique (section 2) ;
-   - ta décision (section 4).
-2. **Refais les captures de prix**, date visible : la 5090 sur Amazon.fr, l'ASUS Prime OC 5060 Ti 16 Go sur Amazon.fr **et** sur LDLC, la 3090 et la 7900 XTX sur Amazon.fr. Si l'écart Amazon / LDLC a disparu, remplace la phrase par « de sept cents à mille cent euros selon le marchand ».
+1. ~~**Les `⟦à écrire⟧`**~~ : **tous écrits le 12/11** avec tes réponses.
+   - Pourquoi tu guettes Qwen 4 (section 1) : Flash-Next, l'avant-goût de Qwen 4, bat déjà le 27B en code (Q28). **Nuancé** : « le modèle le plus apprécié pour coder en local » devient « une des familles les plus recommandées », car aucun classement ne dit « le plus ».
+   - L'encart Afrique (section 2) : prix en euros, chacun convertit ; la demande de prix reste à la fin.
+   - Ta décision (section 4) : tu attends. **Précisé** : Strata ne compresse pas le modèle lui-même ; il fait tourner le Coder, une version de Flash-Next compressée par ISTA-DASLab (moitié des experts, 1 bit), avec 32 Go de RAM (Q29).
+   - ~~Tes annonces de 3090 d'occasion du jour~~ : fait le 11/11 (850 €, Q27), avec la RX 6800 XT et les 3060.
+2. **Captures de prix** (12/11 : la 5090 à 7 900,15 € et la 5060 Ti à 832,99 € sur Amazon.fr sont faites, Q30 ; restent LDLC, la 3090 et la 7900 XTX), date visible : la 5090 sur Amazon.fr, l'ASUS Prime OC 5060 Ti 16 Go sur Amazon.fr **et** sur LDLC, la 3090 et la 7900 XTX sur Amazon.fr. Si l'écart Amazon / LDLC a disparu, remplace la phrase par « de sept cents à mille cent euros selon le marchand ».
 3. **Le 12/11 au matin**, revérifie la page des modèles de Qwen sur Hugging Face et la doc `qwen4-max-preview`.
 4. **Choisis le titre** (voir l'en-tête) et reporte-le dans `README.md` et `calendrier.md`.
