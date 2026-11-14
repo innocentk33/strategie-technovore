@@ -17,7 +17,8 @@
 > - **Pourquoi le logo** : la V3 nomme Qwen 3.8 Flash Next dès la première phrase et a une section sur sa puissance (l'avant-goût de Qwen 4) ; le logo dit « Qwen » à ceux qui le cherchent, sans le mot dans le texte.
 > - **Ce qu'on perd** : la barrette « 32 GO », qui rappelait la condition de RAM ; le titre et la vidéo (section 5) le disent.
 > - **Test A/B proposé** : a-peak contre d-peak, une seule chose change (l'objet). Si tu veux un autre texte (`?v=d&txt=peak&l1=…&l2=…`), ce sera une autre variante, à tester à part.
-> - **Si tu génères des éléments avec ChatGPT** : le plus utile serait un visage plus expressif que The Rock (surpris ou bluffé, puisque la vidéo dit qu'« il s'en sort bien »), détouré sur fond uni, regard vers la gauche, ou une carte de 16 Go générique en 3D, sans marque. Pas de logo Qwen généré : on garde le vrai.
+> - **Visage : The Rock est gardé** (14/11 au soir, ta décision), pas de visage généré.
+> - *(Ancienne piste, écartée)* **Si tu génères des éléments avec ChatGPT** : le plus utile serait un visage plus expressif que The Rock (surpris ou bluffé, puisque la vidéo dit qu'« il s'en sort bien »), détouré sur fond uni, regard vers la gauche, ou une carte de 16 Go générique en 3D, sans marque. Pas de logo Qwen généré : on garde le vrai.
 
 ## 1. Le concept
 
