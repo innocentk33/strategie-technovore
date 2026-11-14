@@ -5,6 +5,8 @@
      ?v=b  TON PC / AU NIVEAU ?
      ?v=d  (14/11, ta demande) TON PC / VS CLAUDE ? en PEAK, avec le logo de Qwen en grand et la vraie photo d'une 5080 FE
            à la place de l'objet dessiné ; ?v=d&l1=…&l2=… change le texte. Rendu : ../rendre.sh "d&txt=peak" → rendus/d-peak.png
+     ?v=e  (14/11) comme d, plus un badge « ≈ 70 TOK/S · 5080 » sur la carte (la moyenne des tests, sur la 5080 de l'auteur)
+     ?v=f  (14/11) le versus : logo de Qwen « VS » logo de Claude, sans carte ; même texte
      ?v=c  gabarit d'après les tests : la ligne rouge et le badge se remplissent par l'URL ou par les constantes plus bas,
            ex. miniature.html?v=c&rouge=A%20TENU&toks=72   (sans paramètre : ⟦verdict⟧ et ⟦tok/s⟧ restent visibles, à ne pas publier)
      Page de 1280×720, rendue à ×3 par ../rendre.sh. -->
@@ -62,6 +64,25 @@
   [data-v="d"][data-txt="peak"] .l1 { top:196px; font-size:196px; }
   [data-v="d"][data-txt="peak"] .l2 { top:398px; font-size:160px; }
   [data-v="d"] .rock { left:700px; top:40px; width:740px; height:713px; }
+  /* Variantes e et f (14/11) : e = d + badge tok/s ; f = Qwen VS Claude */
+  [data-v="e"] .kit, [data-v="f"] .kit { display:none; }
+  [data-v="e"] .qwen, [data-v="f"] .qwen { display:flex; left:54px; top:30px; width:150px; height:150px; border-radius:30px; background:#fff;
+    align-items:center; justify-content:center; box-shadow:0 12px 30px rgba(0,0,0,.9), 0 0 0 4px rgba(255,255,255,.12); }
+  [data-v="e"] .qwen img, [data-v="f"] .qwen img { width:112px; height:112px; }
+  [data-v="e"] .gpu { display:block; left:224px; top:14px; width:390px; filter:drop-shadow(0 14px 24px rgba(0,0,0,.95)) drop-shadow(0 0 18px rgba(255,255,255,.10)) brightness(1.25) contrast(1.1); }
+  .badge { display:none; position:absolute; left:404px; top:146px; padding:2px 16px 6px; border-radius:12px; background:var(--red); color:#fff;
+    font:400 66px/1 "Anton", sans-serif; letter-spacing:-.01em; white-space:nowrap; box-shadow:0 10px 24px rgba(0,0,0,.9); }
+  .badge small { font-size:34px; opacity:.85; }
+  [data-v="e"] .badge { display:block; }
+  .vs, .claude { display:none; position:absolute; }
+  [data-v="f"] .vs { display:block; left:222px; top:52px; font:400 104px/1 "Anton", sans-serif; color:#fff; letter-spacing:-.02em;
+    text-shadow:0 8px 0 var(--red); }
+  [data-v="f"] .claude { display:flex; left:336px; top:30px; width:150px; height:150px; border-radius:30px; background:#f4f1ea;
+    align-items:center; justify-content:center; box-shadow:0 12px 30px rgba(0,0,0,.9), 0 0 0 4px rgba(255,255,255,.12); }
+  [data-v="f"] .claude img { width:108px; height:108px; }
+  [data-v="e"][data-txt="peak"] .l1, [data-v="f"][data-txt="peak"] .l1 { top:196px; font-size:196px; }
+  [data-v="e"][data-txt="peak"] .l2, [data-v="f"][data-txt="peak"] .l2 { top:398px; font-size:160px; }
+  [data-v="e"] .rock, [data-v="f"] .rock { left:700px; top:40px; width:740px; height:713px; }
 </style>
 </head>
 <body>
@@ -91,6 +112,9 @@
 </svg>
 <div class="qwen"><img src="../sources/qwen-color.svg" alt=""></div>
 <img class="gpu" src="../sources/rtx5080-fe-auteur.png" alt="">
+<div class="badge">≈ 70 TOK/S <small>· 5080</small></div>
+<div class="vs">VS</div>
+<div class="claude"><img src="../sources/claude.svg" alt=""></div>
 <div class="toks" id="toks"></div>
 <div class="t l1" id="l1">TON PC</div>
 <div class="t l2" id="rouge"></div>
@@ -104,8 +128,8 @@
   const TOKS    = q.has('toks') ? q.get('toks') : '⟦tok/s⟧';     // le tok/s typique du jeu (R1), sans unité ; ?toks= vide = pas de badge.
                                                    // Mesuré sur la 5080 : le badge le dit, pour ne pas le promettre à toutes les cartes de 16 Go.
   const rouge = { a:'VS CLAUDE ?', b:'AU NIVEAU ?', c:VERDICT }[v];
-  if (v === 'd' && q.get('l1')) document.getElementById('l1').textContent = q.get('l1');
-  document.getElementById('rouge').textContent = (v === 'd' && q.get('l2')) || rouge || 'VS CLAUDE ?';   // d reprend le texte de a
+  if ('def'.includes(v) && q.get('l1')) document.getElementById('l1').textContent = q.get('l1');
+  document.getElementById('rouge').textContent = ('def'.includes(v) && q.get('l2')) || rouge || (v === 'f' ? 'SUFFIT ?' : 'VS CLAUDE ?');   // d et e reprennent le texte de a ; f a dÃ©jÃ  Â« VS Â» dans ses logos
   if (v === 'c' && TOKS) { const t = document.getElementById('toks'); t.textContent = TOKS + ' tok/s · 5080'; t.classList.add('on'); }
 
   // Fond de code déterministe

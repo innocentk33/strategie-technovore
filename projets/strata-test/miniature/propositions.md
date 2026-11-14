@@ -18,6 +18,12 @@
 > - **Ce qu'on perd** : la barrette « 32 GO », qui rappelait la condition de RAM ; le titre et la vidéo (section 5) le disent.
 > - **Test A/B proposé** : a-peak contre d-peak, une seule chose change (l'objet). Si tu veux un autre texte (`?v=d&txt=peak&l1=…&l2=…`), ce sera une autre variante, à tester à part.
 > - **Visage : The Rock est gardé** (14/11 au soir, ta décision), pas de visage généré.
+>
+> **14/11 au soir, ta demande : deux variantes de plus, avec les tokens par seconde ou un versus.** Même meme, même style PEAK ; test 168 px et 50 % des trois : [`apercu/test-50-et-168px-def.png`](apercu/test-50-et-168px-def.png).
+> - **e** ([`rendus/e-peak.png`](rendus/e-peak.png), [`photocraft/e-peak.psd`](photocraft/e-peak.psd)) : d, plus un badge rouge « ≈ 70 TOK/S · 5080 » posé sur la carte. Le chiffre est la moyenne des tests (MON2 à MON4 : 69,4, 67,8, 66,1 ; « près de soixante-dix » dans la voix). **Le « · 5080 » reste** : c'est la vitesse de ta carte, la vidéo dit qu'une carte de 16 Go moins chère va moins vite (≈ 37 sur une Radeon). Le badge se lit à 168 px.
+> - **f** ([`rendus/f-peak.png`](rendus/f-peak.png), [`photocraft/f-peak.psd`](photocraft/f-peak.psd)) : le versus, logo de Qwen « VS » logo de Claude (sa vraie marque orange sur crème), sans carte. Comme « VS » est déjà dans les logos, le texte devient **« TON PC / SUFFIT ? »** : ton PC, avec Qwen, suffit-il face à Claude ? C'est la question du hook (« est-ce que ça remplace Claude ? ») et la réponse du verdict (« pas complètement, mais il n'en faut plus qu'un petit »).
+> - **Lecture du test** : d contre e ne change que le badge (est-ce que le chiffre fait cliquer ?) ; d contre f change l'objet et le texte, donc f est le joker. YouTube teste jusqu'à 3 miniatures : **d, e, f** ensemble, ou a-peak, d et e si tu veux garder le test PEAK de la semaine.
+
 > - *(Ancienne piste, écartée)* **Si tu génères des éléments avec ChatGPT** : le plus utile serait un visage plus expressif que The Rock (surpris ou bluffé, puisque la vidéo dit qu'« il s'en sort bien »), détouré sur fond uni, regard vers la gauche, ou une carte de 16 Go générique en 3D, sans marque. Pas de logo Qwen généré : on garde le vrai.
 
 ## 1. Le concept
