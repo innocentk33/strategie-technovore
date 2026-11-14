@@ -12,6 +12,13 @@
 > - Maquette : `?v=a&txt=peak` ; rendu : `./rendre.sh "a&txt=peak"` → `rendus/a-peak.png`. Avant/après et 168 px : [`apercu/essai-peak.png`](apercu/essai-peak.png).
 > - **Seul le texte change.** Après les tests, la variante c se rend aussi en PEAK (`./rendre.sh "c&txt=peak&rouge=…&toks=…"` → `rendus/c-peak.png`) si PEAK gagne.
 
+> **14/11 au soir, ta demande : variante d, « PEAK + Qwen + carte + visage ».** [`rendus/d-peak.png`](rendus/d-peak.png), PSD [`photocraft/d-peak.psd`](photocraft/d-peak.psd) (4 calques de texte), maquette `?v=d&txt=peak`, test 168 px et 50 % : [`apercu/test-50-et-168px-d.png`](apercu/test-50-et-168px-d.png).
+> - **Ce qui change par rapport à a-peak, et seulement ça** : l'objet. Le logo de Qwen sur une tuile blanche de 150 px (lisible à 168 px, le bleu de Qwen disparaîtrait sur le noir) et la vraie photo d'une 5080 FE (sans marque visible), au lieu de la carte et de la barrette dessinées. Même texte (« TON PC / VS CLAUDE ? », toujours la question du hook), même meme (The Rock, le doute).
+> - **Pourquoi le logo** : la V3 nomme Qwen 3.8 Flash Next dès la première phrase et a une section sur sa puissance (l'avant-goût de Qwen 4) ; le logo dit « Qwen » à ceux qui le cherchent, sans le mot dans le texte.
+> - **Ce qu'on perd** : la barrette « 32 GO », qui rappelait la condition de RAM ; le titre et la vidéo (section 5) le disent.
+> - **Test A/B proposé** : a-peak contre d-peak, une seule chose change (l'objet). Si tu veux un autre texte (`?v=d&txt=peak&l1=…&l2=…`), ce sera une autre variante, à tester à part.
+> - **Si tu génères des éléments avec ChatGPT** : le plus utile serait un visage plus expressif que The Rock (surpris ou bluffé, puisque la vidéo dit qu'« il s'en sort bien »), détouré sur fond uni, regard vers la gauche, ou une carte de 16 Go générique en 3D, sans marque. Pas de logo Qwen généré : on garde le vrai.
+
 ## 1. Le concept
 
 - **Ce que la vidéo promet** (script V2) : la moitié d'un modèle géant tourne avec une carte de 16 Go **et 32 Go de RAM** ; elle code un jeu, un site et un mini-Minecraft en 3D (à la place de l'île depuis le 13/11) ; puis la question de la fin : « est-ce que ça remplace Claude ? ».

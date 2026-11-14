@@ -3,6 +3,8 @@
      La v1 (« MA 5080 », avec la carte Inno3D de l'auteur) est dans miniature-v1.html et ../rendus/v1/.
      ?v=a  TON PC / VS CLAUDE ?      (test A/B : seule la ligne rouge change)
      ?v=b  TON PC / AU NIVEAU ?
+     ?v=d  (14/11, ta demande) TON PC / VS CLAUDE ? en PEAK, avec le logo de Qwen en grand et la vraie photo d'une 5080 FE
+           à la place de l'objet dessiné ; ?v=d&l1=…&l2=… change le texte. Rendu : ../rendre.sh "d&txt=peak" → rendus/d-peak.png
      ?v=c  gabarit d'après les tests : la ligne rouge et le badge se remplissent par l'URL ou par les constantes plus bas,
            ex. miniature.html?v=c&rouge=A%20TENU&toks=72   (sans paramètre : ⟦verdict⟧ et ⟦tok/s⟧ restent visibles, à ne pas publier)
      Page de 1280×720, rendue à ×3 par ../rendre.sh. -->
@@ -50,6 +52,16 @@
   [data-txt="peak"] .t.echo { color:var(--red); }
   [data-txt="peak"] .l1 { top:138px; font-size:200px; }
   [data-txt="peak"] .l2 { top:340px; font-size:164px; color:#fff; }
+  /* Variante d (14/11) : le logo de Qwen bien visible (tuile blanche) + la photo d'une 5080 FE, au lieu de l'objet dessiné */
+  .qwen, .gpu { display:none; position:absolute; }
+  [data-v="d"] .kit { display:none; }
+  [data-v="d"] .qwen { display:flex; left:54px; top:30px; width:150px; height:150px; border-radius:30px; background:#fff;
+    align-items:center; justify-content:center; box-shadow:0 12px 30px rgba(0,0,0,.9), 0 0 0 4px rgba(255,255,255,.12); }
+  [data-v="d"] .qwen img { width:112px; height:112px; }
+  [data-v="d"] .gpu { display:block; left:224px; top:14px; width:390px; filter:drop-shadow(0 14px 24px rgba(0,0,0,.95)) drop-shadow(0 0 18px rgba(255,255,255,.10)) brightness(1.25) contrast(1.1); }
+  [data-v="d"][data-txt="peak"] .l1 { top:196px; font-size:196px; }
+  [data-v="d"][data-txt="peak"] .l2 { top:398px; font-size:160px; }
+  [data-v="d"] .rock { left:700px; top:40px; width:740px; height:713px; }
 </style>
 </head>
 <body>
@@ -77,8 +89,10 @@
     <rect x="6" y="58" width="114" height="8" fill="#c9a227"/>
   </g>
 </svg>
+<div class="qwen"><img src="../sources/qwen-color.svg" alt=""></div>
+<img class="gpu" src="../sources/rtx5080-fe-auteur.png" alt="">
 <div class="toks" id="toks"></div>
-<div class="t l1">TON PC</div>
+<div class="t l1" id="l1">TON PC</div>
 <div class="t l2" id="rouge"></div>
 
 <script>
@@ -90,7 +104,8 @@
   const TOKS    = q.has('toks') ? q.get('toks') : '⟦tok/s⟧';     // le tok/s typique du jeu (R1), sans unité ; ?toks= vide = pas de badge.
                                                    // Mesuré sur la 5080 : le badge le dit, pour ne pas le promettre à toutes les cartes de 16 Go.
   const rouge = { a:'VS CLAUDE ?', b:'AU NIVEAU ?', c:VERDICT }[v];
-  document.getElementById('rouge').textContent = rouge;
+  if (v === 'd' && q.get('l1')) document.getElementById('l1').textContent = q.get('l1');
+  document.getElementById('rouge').textContent = (v === 'd' && q.get('l2')) || rouge || 'VS CLAUDE ?';   // d reprend le texte de a
   if (v === 'c' && TOKS) { const t = document.getElementById('toks'); t.textContent = TOKS + ' tok/s · 5080'; t.classList.add('on'); }
 
   // Fond de code déterministe
