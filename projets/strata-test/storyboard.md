@@ -1,5 +1,22 @@
-# Storyboard (V2, angle 16 Go) : « Le meilleur modèle possible pour 16 Go de VRAM (Strata, testé) »
+# Storyboard (V3 du script, angle 16 Go) : « Le meilleur modèle possible pour 16 Go de VRAM (Strata, testé) »
 
+> **V3 du script (14/11 au soir) : l'ordre des plans change, les timecodes et la colonne voix de ce storyboard sont à recaler après l'enregistrement.** Les plans gardent leur code V… ; voici où chacun passe dans la V3 (section du [script](script.md) entre parenthèses) :
+>
+> | Section V3 | Plans, dans l'ordre |
+> |---|---|
+> | 0. Hook (0:00-0:28) | V01-V05b sous toute la voix (île, casse-briques, Sillage, mini-Minecraft, « ≈ 70 tok/s ») · V06a-V06c (sans pastille) · V07a-V07d réécrits : « 1. Ce qu'il a réussi », « 2. Pourquoi il est si fort », « 3. Sa vitesse », « 4. L'installer », puis « 2 H PERDUES » en rouge |
+> | 1. Les résultats | V08 · V09 (les quatre prompts en cartes, lus par personne) · V11 (île) · V20f-V20g (casse-briques) · V18e-V18f (Sillage, carte « PLAN DE CLAUDE ») · V20c-V20d (mini-Minecraft, carte « 3 RELANCES ») |
+> | 2. La puissance | V12a (fiche Flash-Next, « underpin Qwen4 », **P01 à capturer**) · miniature de la vidéo Qwen 4 (C9) · tableau de Qwen, ligne SWE-bench Multilingual (**P01b à capturer**) · V13 (+ « SWE-bench Verified 79.2 / 82.8 ») · V11e |
+> | 3. D'où vient la puissance | V12 |
+> | 4. La vitesse | V21, V21b · V22 · V22e-V22f · V23d-V23e |
+> | 5. L'installation | V15 · V15b (RAM pleine, Disk read) · V23 (adresse, `models.json`, `maxTokens`) |
+> | 6. Les erreurs | V27c (coupé, 7 min) · V17a-V17d (essai 1) · V18a-V18d (le plan de Claude) · V20a-V20b (fichier vide, relances) · V27d (+ de 2 h) et R15 |
+> | 7. Et Claude ? | V24 (sans pastille) |
+> | 8. Chez les autres | V26 |
+> | 9. Verdict et ce soir | V27a-V27b · V28 · V29b |
+>
+> **Le pronostic est retiré** (14/11 au soir) : plus de pastille, V07e et V29a sont supprimés.
+>
 > **Mis à jour le 14/11 (après-midi), prêt pour la voix.** Chaque plan renvoie à un vrai fichier et à son timecode (codes TT, INST, CONF, DRAGON, BRICK, T3, VOY, MON0 à MON4 : voir « Les rushes » juste en dessous). Les trous R… sont remplis ; les cartes de verdict ne portent plus de note sur 5 (les consoles F12 n'ont pas été filmées), seulement la durée, les demandes et les relances.
 >
 > **Les timecodes de la vidéo sont des estimations** (script du 14/11, ≈ 13 min 30 à 14 min de voix). **À recaler sur `voix-off-montee.wav`** ; en HyperFrames, `data-start` = le timecode en secondes. Le hook est calculé à 155 mots/min : la question centrale tombe vers 0:28.
@@ -35,7 +52,7 @@ Dossier : `D:\_Technovore\Youtube\Strata test\`. Timecode = position dans le fic
 - **De vraies images** presque tout le temps. Schémas seulement pour **deux** idées (les experts, la carte, la RAM et le SSD ; la limite de réponse), en plans courts.
 - **Un plan nouveau toutes les 1 à 3 s dans les 30 premières secondes**, puis toutes les 10 s au plus.
 - **Un GIF ou un meme avant 0:15** : V05 (0:09).
-- **Le défi affiché avant 0:30** : la pastille « PRONOSTIC : LOCAL contre CLAUDE » apparaît à **0:28** et reste en bas jusqu'à la section 5.
+- **Le défi affiché avant 0:30** : « 2 H PERDUES » en rouge à la fin du plan (V07), récolté dans la section des erreurs. (La pastille du pronostic est retirée le 14/11 au soir.)
 - **Grands mots qui s'écrivent avec la voix**, un mot coloré par phrase.
 - **Les 15 premières secondes** : les quatre démos, le nom du modèle, **la vitesse**. Aucun contexte, aucun logo, aucun titre.
 - **Cartes de verdict** (V11c, V18f, V20d, V20g) : fond noir, le nom du test, puis **durée · demandes · relances**.
@@ -47,20 +64,17 @@ Dossier : `D:\_Technovore\Youtube\Strata test\`. Timecode = position dans le fic
 | V01 | 0:00 – 0:01 | L'île qui tourne | « 3D » | « Cette île en 3D… » | TT 0:06 |
 | V02 | 0:01 – 0:02 | Sillage, l'accueil sur le Kilimandjaro | « SITE » | « …ce site… » | TT 1:12 |
 | V03 | 0:02 – 0:03 | Le mini-Minecraft, un bloc posé | « MINECRAFT » | « …ce mini-Minecraft… » | TT 2:00-2:12 |
-| V03b | 0:03 – 0:05 | Le casse-briques en pleine partie | « JEU » | « …ce casse-briques : » | TT 2:36 |
-| V04 | 0:05 – 0:09 | Les quatre en mosaïque | « **Qwen 3.8 Flash Next** » · « chez moi » | « c'est Qwen 3.8 Flash Next qui les a écrits, chez moi… » | TT |
-| V05 | 0:09 – 0:11 | **GIF** : quelqu'un qui tape comme un fou | « 16 Go de VRAM » | « …sur une carte de seize gigas… » | GIF |
-| V05b | 0:11 – 0:14 | MON3, la phrase « average output was 67.8 tok/s » surlignée | **« ≈ 70 tok/s »** en très gros | « …à près de soixante-dix tokens par seconde. » | MON3 |
-| V05d | 0:14 – 0:20 | Entrée sur un prompt dans Pi (prompt flouté), puis un compteur « relances : à la main » | « **1 demande** par test » · « rien d'automatique » | « Une seule demande par test, rien d'automatique… je le relance. » | BRICK 0:01-0:03 |
-| V05c | 0:20 – 0:23 | Quatre vignettes : l'île et le casse-briques cochés, le site et le mini-Minecraft avec leurs relances | « **2 / 4** du premier coup » | « Et deux sur quatre ont marché du premier coup. » | TT |
-| V06a | 0:23 – 0:25 | La fiche Hugging Face du Coder, « half of its experts removed » surligné | « la **moitié** » | « Sauf que ce n'est qu'une moitié de modèle. » | `P03-2-moitie-des-experts` |
+| V03b | 0:03 – 0:05 | Le casse-briques en pleine partie | « JEU » | « …ce casse-briques, » | TT 2:36 |
+| V04 | 0:05 – 0:09 | Les quatre en mosaïque | « **Qwen 3.8 Flash Next** » · « chez moi » | « c'est une IA qui les a écrits, chez moi. Ces tests ont été réalisés avec Qwen 3.8 Flash Next… » | TT |
+| V05 | 0:09 – 0:11 | **GIF** : quelqu'un qui tape comme un fou | « 16 Go de VRAM » | « …qui tourne sur une carte de seize gigas… » | GIF |
+| V05b | 0:11 – 0:14 | MON3, la phrase « average output was 67.8 tok/s » surlignée | **« ≈ 70 tok/s »** en très gros | « …à près de soixante-dix tokens par seconde. Et tout ça, à partir d'un seul prompt. » | MON3 |
+| V06a | 0:23 – 0:25 | La fiche Hugging Face du Coder, « half of its experts removed » surligné | « la **moitié** » | « Par contre, ce n'est que la moitié d'un modèle. » | `P03-2-moitie-des-experts` |
 | V06b | 0:25 – 0:27 | Schéma très court : une grille d'experts dont la moitié s'éteint | « gardée pour **le code** » (écrit, pas dit) | | schéma |
-| V06c | 0:27 – 0:31 | Fond noir, le logo de Claude. **La pastille pronostic apparaît en bas** | « ÇA **REMPLACE** CLAUDE ? » | « Alors, est-ce que ça remplace Claude ? » | texte |
-| V07a | 0:31 – 0:33 | Ligne 1 qui s'écrit, le moniteur derrière | « 1. La vitesse » | « Au programme : la vitesse… » | texte + CONF 0:20 |
+| V06c | 0:27 – 0:31 | Fond noir, le logo de Claude | « ÇA **REMPLACE** CLAUDE ? » | « Alors, est-ce que ça remplace Claude ? » | texte |
+| V07a | 0:31 – 0:33 | Ligne 1 qui s'écrit, le moniteur derrière | « 1. La vitesse » | « Je te montre la vitesse… » | texte + CONF 0:20 |
 | V07b | 0:33 – 0:35 | Ligne 2, le téléchargement derrière | « 2. Ce qu'il faut à ton PC » | « …ce qu'il faut à ton PC… » | texte + INST 1:48 |
 | V07c | 0:35 – 0:37 | Ligne 3, Latitude Sud derrière | « 3. Le site, fait par Claude » | « …le site fait par Claude… » | texte + TT 2:58 |
 | V07d | 0:37 – 0:39 | Ligne 4, le ticket du plantage derrière | « 4. Là où ça casse » | « …et là où ça casse. » | texte + C2 |
-| V07e | 0:39 – 0:43 | Plein écran, deux mots qui s'opposent, la pastille grossit | « **TON PRONOSTIC** » · « LE LOCAL TIENT » / « CLAUDE ÉCRASE » | « Ton pronostic : le local tient, ou Claude écrase ? » | texte |
 
 ## Section 1 : Niveau un, l'île en 3D (0:43 – 2:12)
 
@@ -145,7 +159,7 @@ Dossier : `D:\_Technovore\Youtube\Strata test\`. Timecode = position dans le fic
 
 | Plan | Timecode | Ce qu'on voit | Texte à l'écran | Voix (résumé) | Source |
 |---|---|---|---|---|---|
-| V24a | 9:00 – 9:07 | Fond noir, le logo de Claude, la pastille pronostic revient | « ET CLAUDE ? » · « pas de faux match » | « Et Claude, dans tout ça ?… » | texte |
+| V24a | 9:00 – 9:07 | Fond noir, le logo de Claude | « ET CLAUDE ? » · « pas de faux match » | « Et Claude, dans tout ça ?… » | texte |
 | V24b | 9:07 – 9:15 | Latitude Sud qui défile | « 1 phrase · **2 min 23 s** · en français » | « Je lui ai juste demandé un site de voyage… ça tient la route. » | TT 2:52-3:10 |
 | V24c | 9:15 – 9:24 | Écran partagé : Latitude Sud / l'essai 1 en anglais | « mon modèle : 31 min · en anglais · demande détaillée » | « Mon modèle, lui, avait mis une demi-heure… » | TT 2:58 + TT 3:48 |
 | V24d | 9:24 – 9:30 | `AGENTS.md` en vignette | « le plan de Sillage : **Claude** » | « Et le plan qui a sauvé le deuxième essai… Bon, et là où ça casse ? » | capture du fichier |
@@ -179,12 +193,11 @@ Dossier : `D:\_Technovore\Youtube\Strata test\`. Timecode = position dans le fic
 | V28d | 12:21 – 12:43 | Ligne 4 : la page Serving (l'adresse), puis `models.json`, `"baseUrl"` et `"maxTokens"` ; puis la touche Échap | « 4. Branche Pi · **monte la limite** » · « bloqué 3 min → **Échap** » | « Quatre : tu branches Pi… » | texte + CONF 1:24-1:42 |
 | V28e | 12:43 – 12:52 | Fond noir, deux lignes | « 48 Go → les petites tailles » · « 64 Go → toutes » | « Par contre, si tu as plus de RAM… » | texte |
 | V28f | 12:52 – 12:58 | La miniature de la vidéo LM Studio du 02/11 | « 1re IA en local ? **Commence là** » | « Si c'est ta toute première IA en local… » | C5 |
-| V29a | 12:58 – 13:04 | La pastille pronostic revient en grand | « **QUI AVAIT RAISON ?** » | « Bref, et ton pronostic du début ?… » | texte |
 | V29b | 13:04 – 13:10 | Carte vers la vidéo du jeudi 19/11, écran de fin | « Jeudi : même carte, plus vite » | « Jeudi, on cherche comment aller plus vite… » | C5 |
 
 ## Rythme
 
-- **0:00 – 0:28** : 12 plans en 28 s (2,3 s en moyenne, 6 s au plus pour V05d). Puis le plan en 4 lignes (2 s chacune).
+- **0:00 – 0:28** : 10 plans en 28 s (V05d et V05c coupés le 14/11 au soir avec leurs phrases : le hook gagne environ 6 s, tous les timecodes qui suivent V05b sont à recaler sur la voix montée). Puis le plan en 4 lignes (2 s chacune).
 - **0:43 – 2:12** : plans de 4 à 12 s, vraie image partout sauf le GIF et les cartes du prompt.
 - **Après** : un plan toutes les 5 à 12 s ; jamais plus de 15 s de schéma de suite (V23a).
 - **GIF / memes** : V05 (0:09), V09c (1:15), V15c (3:21, « This is fine » : la RAM est vraiment pleine), V19a (5:29).
@@ -212,7 +225,7 @@ Dans `D:\_Technovore\Youtube\Strata test\captures web`, en 3840 × 2160, sans on
 ## À vérifier avant le montage
 
 - [ ] TT : onglets, barre d'adresse et chemins (`D:/strata-demo/…`) recadrés ou floutés ; aucune clé d'API à l'écran.
-- [ ] Les plans génériques (BRICK pour l'île, V05d, V08, V10) : le prompt du casse-briques flouté, pour ne pas montrer une autre demande que celle dont parle la voix.
+- [ ] Les plans génériques (BRICK pour l'île, V08, V10) : le prompt du casse-briques flouté, pour ne pas montrer une autre demande que celle dont parle la voix.
 - [ ] Aucun nom de chaîne ou de créateur à l'écran (V26e reste une carte texte ; pseudos GitHub floutés).
 - [ ] Les chiffres affichés sont dans [`sources.md`](sources.md) : vitesse, RAM, disque, demi-heure (T45) ; durées, relances, blocages (T41) ; le plan et Latitude Sud (T42) ; le prix (T43) ; les autres (T5, T6, T7, T13, T14, T25, T30, T39, T40).
 - [ ] Les GIF et memes sont du type déjà utilisé sur la chaîne (pas ton visage).

@@ -195,3 +195,6 @@ Relu le 11/11/2026 dans les fichiers du dépôt (`raw.githubusercontent.com`, br
 - **La fiche du Coder** est inchangée (T6), et dit aussi « reduces to only 29.6 GB which must reside in memory » : c'est la phrase utilisée pour « 29,6 Go ». `MODELS.md` affiche toujours les anciens 91 % et 99 %.
 - **Claude Pro** : « $17 per month with annual subscription discount ($200 billed up front). $20 if billed monthly », « Claude Code » dans la liste de Pro (T43 inchangé). À refaire le jour du montage.
 - **Miniatures** (C5) : celles que YouTube affiche le 14/11 pour `jMZFDNbwRNI` (09/11) et `9hr_zaJuUbM` (02/11).
+
+**T47 ✅ [DEV] La puissance de Flash-Next, chiffres de Qwen** (repris de Q2 et Q28 de `projets/qwen-4-cartes/sources.md`, fiche lue le 12/11/2026) : « This experimental preview of the architecture that will underpin Qwen4 » ; publié le 24/08/2026 ; 125 milliards de paramètres dont 6 activés. En code, contre Qwen3.8-27B : SWE-bench Pro 62,5 contre 61,7 ; **SWE-bench Multilingual 81,0 contre 73,8** (dit « quatre-vingt-un contre soixante-quatorze ») ; LiveCodeBench v6 91,9 contre 90,3. **Mesures de l'équipe Qwen** : d'où « d'après les tests de Qwen ». **Modèle complet, pas le Coder** : pour le Coder, on ne dit que T6 (95 % du score, d'après ses auteurs).
+→ https://huggingface.co/Qwen/Qwen3.8-Flash-Next (12/11/2026). Utilisé en section 2 de la V3 (14/11).
