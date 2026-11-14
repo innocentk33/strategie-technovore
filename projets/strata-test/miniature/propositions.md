@@ -14,7 +14,7 @@
 
 ## 1. Le concept
 
-- **Ce que la vidéo promet** (script V2) : la moitié d'un modèle géant tourne avec une carte de 16 Go **et 32 Go de RAM** ; elle code un jeu, un site et une île en 3D ; puis la question de la fin : « est-ce que ça remplace Claude ? ».
+- **Ce que la vidéo promet** (script V2) : la moitié d'un modèle géant tourne avec une carte de 16 Go **et 32 Go de RAM** ; elle code un jeu, un site et un mini-Minecraft en 3D (à la place de l'île depuis le 13/11) ; puis la question de la fin : « est-ce que ça remplace Claude ? ».
 - **Question posée par l'image** : ton PC de joueur peut-il tenir tête à Claude ?
 - **Émotion** : le doute, le défi. Dwayne Johnson lève le sourcil (« The People's Eyebrow ») et regarde le texte : « vraiment ? ». Ce doute marche que le local gagne ou perde ; un visage impressionné ou une grimace « yikes » donnerait déjà le verdict (§ 7). Il reste parce qu'il colle aussi au « TON PC » : c'est le spectateur qu'il met au défi.
 - **Types combinés** (coach) : réaction (meme) + comparaison (« VS ») + question.
@@ -125,10 +125,10 @@ Aperçus : [`apercu/planche_a.png`](apercu/planche_a.png), [`apercu/comparaison.
 
 Prends des **captures PNG en pleine résolution** (Win + Impr. écran, ou « Capture d'écran » dans OBS), pas des images extraites de la vidéo :
 
-1. **L'île voxel (P22)**, à son meilleur angle, de jour puis de nuit (touche N), sans la console. C'est l'objet le plus fort pour un futur test « objet » : l'île à la place de la carte et de la barrette, en haut à gauche. Neutre aussi pour toutes les cartes, et elle montre ce que le modèle fait.
+1. **Le mini-Minecraft (P22)**, sans la console ni la barre d'outils du navigateur : une vue à la première personne sur le plus beau coin (relief, lac, arbres), puis une vue en hauteur après quelques sauts. C'est l'objet le plus fort pour un futur test « objet » : le monde en cubes à la place de la carte et de la barrette, en haut à gauche. Neutre aussi pour toutes les cartes, et il montre ce que le modèle fait. Pas de logo Minecraft sur la miniature.
 2. **Le moniteur de Strata (P12 à P14)**, au moment où le compteur affiche le tok/s typique : il remplit ⟦tok/s⟧ et prouve le chiffre.
 3. **Le jeu (P20)** en pleine action (des étincelles, un bonus qui tombe) et **le haut du site (P21)** : en réserve.
-4. **L'île de Claude (P32)**, au même angle que la tienne : deux îles côte à côte pour une variante « duel » si le résultat est parlant.
+4. **Le mini-Minecraft de Claude (P32)**, au même cadrage que le tien : deux mondes côte à côte pour une variante « duel » si le résultat est parlant.
 5. **Tout plantage (P16)** : le message d'erreur en entier. Si le local casse, c'est la meilleure image pour le verdict « K.O. ».
 6. **Le Gestionnaire des tâches au plus bas (P15)** : la RAM libre presque à zéro, en réserve pour un texte sur la RAM.
 
