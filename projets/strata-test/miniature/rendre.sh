@@ -4,6 +4,12 @@
 # Variantes du 14/11 : ./rendre.sh "d&txt=peak" "f&txt=peak" "g&txt=peak" → rendus/d-peak.png (Qwen + 5080), f-peak.png (Qwen VS Claude), g-peak.png (à la manière de Kai)
 # Pour c (après les tests) : ./rendre.sh "c&rouge=A%20GAGNÉ&toks=72"  → rendus/c.png (ajoute &txt=peak pour c-peak.png)
 cd "$(dirname "$0")"
+if [ "$1" = kai ]; then
+  for v in h i j; do
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --allow-file-access-from-files --window-size=1280,720 --force-device-scale-factor=3 \
+      --virtual-time-budget=3000 --screenshot="$PWD/rendus/$v-kai.png" "file://$PWD/propositions/miniature-kai.html?v=$v" 2>/dev/null
+  done; exit
+fi
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 for v in ${@:-a "a&txt=peak" b "d&txt=peak" "f&txt=peak" "g&txt=peak"}; do
   out=$(echo "$v" | sed 's/&txt=peak/-peak/' | cut -d'&' -f1)
@@ -11,3 +17,4 @@ for v in ${@:-a "a&txt=peak" b "d&txt=peak" "f&txt=peak" "g&txt=peak"}; do
     --virtual-time-budget=3000 --screenshot="$PWD/rendus/$out.png" "file://$PWD/propositions/miniature.html?v=$v" 2>/dev/null
 done
 ls rendus
+# Variantes « à la manière de Kai » (14/11), autre page : ./rendre.sh kai  → rendus/h-kai.png, i-kai.png, j-kai.png
