@@ -35,6 +35,15 @@
         ],
         "createdAt": "2026-11-11T17:55:09.441Z",
         "reason": "charte noir de la chaîne : ressources/miniatures/propositions.md § 2 impose « grille sombre et halo de la couleur d'accent derrière l'objet » ; miniature YouTube, pas une page web"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "ressources/miniatures/propositions/kai-31-12.html"
+        ],
+        "createdAt": "2026-11-15T14:00:20.718Z",
+        "reason": "Claude: les <img> sont cachées (display:none) et reçoivent leur src par le script selon ?d=&v= ; maquette de miniature, pas une page publiée"
       }
     ]
   }

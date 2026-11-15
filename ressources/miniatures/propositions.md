@@ -75,7 +75,7 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
 | [`noir-07`](rendus/noir-07.png) | Pseudo pris, 30 nov. | Formulaire, « technovore » en erreur, « Ce nom est déjà pris. », « **il triche.** » | Ligne grise et petits textes retirés ; « G » de Google ajouté (voir § 5) |
 | [`noir-08`](rendus/noir-08.png) | Jeux, 22 févr. (provisoire) | PS5 éteinte en gris, « acheté. / **pas à toi.** » | Les trois cartes illisibles retirées |
 | [`vert-09`](rendus/vert-09.png) | llama.cpp, 8 mars (provisoire) | Grand portable, une ligne de commande, « llama.cpp », « codé en **1 SOIRÉE.** » | Calendrier retiré, ordinateur agrandi |
-| [`vert-10`](rendus/vert-10.png) | Abonnement ou IA locale ? #2, 18 janv. | Gabarit de série, emplacement du logo du modèle dans la baie | Mettre le logo réel (en couleurs) quand le modèle sera choisi |
+| [`vert-10`](rendus/vert-10.png) | Abonnement ou IA locale ? #2 (archivée le 15/11) | Gabarit de série, emplacement du logo du modèle dans la baie | Mettre le logo réel (en couleurs) quand le modèle sera choisi |
 
 ## 4. Tester les deux chartes et le lien avec la DA de la vidéo
 

@@ -2,10 +2,12 @@
 <!-- Miniatures « à la manière de Kai » de « Même carte, 2 fois plus rapide » (jeu. 19/11/2026), d'après la méthode du skill miniature-kai (15/11).
      Texte : TA CARTE / BRIDÉE ? (le titre dit le gain, la miniature dit le problème). Objet : la carte et un compteur de vitesse dont l'aiguille
      touche « 2× » (le chiffre de la fiche, à confirmer par les sources).
-     ?v=h  Kai + visage : portrait à gauche, texte à droite, la carte et le compteur dessous
+     ?v=h  Kai + visage : texte à gauche, la carte et le compteur dessous, portrait à droite tourné vers le texte
+           (15/11, ta demande : on lit de gauche à droite ; ?pos=droite redonne l'ancienne mise en page, visage à gauche)
      ?v=i  couleurs de Technovore, sans visage : le texte sur une ligne en haut, la carte à gauche, le grand compteur à droite
      ?v=j  couleurs de Technovore + visage (couleurs de peau gardées), même scène que h
-     Portrait : ?p=fry (défaut) ou ?p=dicaprio → ../sources/portrait-<p>-kai.png et -technovore.png, faits par ressources/miniatures/portrait.py.
+     Portrait : ?p=fry (défaut) ou ?p=dicaprio → ../sources/portrait-<p>-g-kai.png et -technovore.png (retournés par portrait.py --miroir ;
+     sans -g avec ?pos=droite).
      Page de 1280×720, rendue à ×3 par ../rendre.sh. -->
 <html lang="fr">
 <head>
@@ -14,22 +16,26 @@
   @font-face { font-family:"Archivo Black"; src:url(../../../../ressources/miniatures/fonts/archivo-black-latin-400.woff2) format("woff2"); }
   @font-face { font-family:"Anton"; src:url(../../../../ressources/miniatures/fonts/anton-latin-400.woff2) format("woff2"); }
   :root { --ink:#fff; --hl:#ffcc33; --echo:#ff3b30; --bg1:#1a1a1c; --bg2:#050505; --sh1:#ff3b30; --sh2:#2f6bff; --card:#ffcc33; }
-  [data-v="i"], [data-v="j"] { --hl:#07c095; --echo:#0f1a24; --bg1:#3d566e; --bg2:#1a252f; --sh1:#ffffff; --sh2:#0f1a24; --card:#07c095; }
+  /* 15/11, ta demande : fond sombre et uni (plus de grille ni de dégradé), plus de contraste ; l'ombre décalée du mot passe en blanc (ton choix) */
+  [data-v="i"], [data-v="j"] { --hl:#07c095; --echo:#ffffff; --bg1:#141e27; --bg2:#141e27; --sh1:#ffffff; --sh2:#34495e; --card:#07c095; }
   * { margin:0; padding:0; box-sizing:border-box; }
   html, body { width:1280px; height:720px; overflow:hidden; }
   body { position:relative; background:radial-gradient(ellipse 900px 600px at 50% 45%, var(--bg1) 0%, var(--bg2) 75%); color:var(--ink); }
   .grid { position:absolute; inset:0; opacity:.07;
     background-image:linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size:48px 48px;
     -webkit-mask-image:radial-gradient(ellipse at 50% 50%, #000 20%, transparent 75%); display:none; }
-  [data-v="i"] .grid, [data-v="j"] .grid { display:block; }
+  /* grille retirée le 15/11 */
 
   .t { position:absolute; white-space:nowrap; font-family:"Archivo Black", sans-serif; line-height:1; letter-spacing:-.02em; text-transform:uppercase; }
   .t.hl { color:var(--hl); }
   .t.echo { color:var(--echo); }
 
   .face { position:absolute; display:none; }
-  [data-v="h"] .face.kai { display:block; left:-40px; top:70px; width:690px; }
-  [data-v="j"] .face.tech { display:block; left:-40px; top:70px; width:690px; }
+  [data-v="h"] .face.kai { display:block; left:630px; top:70px; width:690px; }
+  [data-v="j"] .face.tech { display:block; left:630px; top:70px; width:690px; }
+  [data-pos="droite"][data-v="h"] .face.kai, [data-pos="droite"][data-v="j"] .face.tech { left:-40px; }
+  .scene .g, .scene .d { display:none; }
+  body:not([data-pos="droite"]) .scene .g, [data-pos="droite"] .scene .d { display:inline; }
 
   .scene { position:absolute; inset:0; }
   .scene > * { display:none; }
@@ -73,10 +79,10 @@
     <g id="tag"><rect x="5" y="5" width="150" height="64" rx="6" fill="var(--sh1)"/><rect width="150" height="64" rx="6" fill="#fff" stroke="#000" stroke-width="6"/><text x="75" y="51" text-anchor="middle" font-family="Anton" font-size="48" fill="#000">16 GO</text></g>
   </defs>
 
-  <!-- h : la carte et le compteur, sous le texte à droite -->
+  <!-- h : la carte et le compteur, sous le texte (à gauche par défaut, à droite avec ?pos=droite) -->
   <g class="duel">
-    <use href="#card" transform="translate(660 430) rotate(-5 210 95) scale(.78)"/>
-    <use href="#gauge" transform="translate(1045 560) scale(.66)"/>
+    <g class="g"><use href="#card" transform="translate(70 430) rotate(-5 210 95) scale(.78)"/><use href="#gauge" transform="translate(455 560) scale(.66)"/></g>
+    <g class="d"><use href="#card" transform="translate(660 430) rotate(-5 210 95) scale(.78)"/><use href="#gauge" transform="translate(1045 560) scale(.66)"/></g>
   </g>
 
   <!-- i : la carte à gauche, le grand compteur à droite -->
@@ -87,8 +93,8 @@
 
   <!-- j : comme h -->
   <g class="solo">
-    <use href="#card" transform="translate(660 430) rotate(-5 210 95) scale(.78)"/>
-    <use href="#gauge" transform="translate(1045 560) scale(.66)"/>
+    <g class="g"><use href="#card" transform="translate(70 430) rotate(-5 210 95) scale(.78)"/><use href="#gauge" transform="translate(455 560) scale(.66)"/></g>
+    <g class="d"><use href="#card" transform="translate(660 430) rotate(-5 210 95) scale(.78)"/><use href="#gauge" transform="translate(1045 560) scale(.66)"/></g>
   </g>
 </svg>
 
@@ -101,7 +107,9 @@
   document.body.dataset.v = v;
   // ?p=fry|dicaprio : le portrait (sources/portrait-<p>-kai.png et -technovore.png, faits par portrait.py)
   const p = q.get('p') || 'fry'; document.body.dataset.p = p;
-  fk.src = `../sources/portrait-${p}-kai.png`; ft.src = `../sources/portrait-${p}-technovore.png`;
+  const pos = q.get('pos') === 'droite' ? 'droite' : 'gauche'; document.body.dataset.pos = pos;
+  const n = pos === 'gauche' ? `${p}-g` : p;   // à gauche, le texte ; le portrait retourné regarde vers lui
+  fk.src = `../sources/portrait-${n}-kai.png`; ft.src = `../sources/portrait-${n}-technovore.png`;
   if (q.get('l1')) l1.textContent = q.get('l1');
   if (q.get('l2')) l2.textContent = q.get('l2');
   document.fonts.ready.then(() => {
@@ -114,9 +122,9 @@
       const fs = Math.min(112, 112 * 1180 / w0); l1.style.fontSize = l2.style.fontSize = fs + 'px';
       const gap = .28 * fs, w = l1.getBoundingClientRect().width + gap + l2.getBoundingClientRect().width, x0 = (1280 - w) / 2;
       l1.style.left = x0 + 'px'; l2.style.left = x0 + l1.getBoundingClientRect().width + gap + 'px';
-    } else {                               // deux lignes à droite, alignées à gauche, jusqu'à x = 1240
-      const fs = fit([l1, l2], 1240 - 640, 118);
-      place(l1, 640, 110, fs); place(l2, 640, 110 + fs * 1.18, fs);
+    } else {                               // deux lignes alignées à gauche : à gauche (x 60 → 640) ou, avec ?pos=droite, à droite (640 → 1240)
+      const x = pos === 'gauche' ? 60 : 640, fs = fit([l1, l2], 580, 118);
+      place(l1, x, 110, fs); place(l2, x, 110 + fs * 1.18, fs);
     }
     // comme chez Kai, seul le mot en couleur a sa copie décalée, posée dessous (un vrai élément .t, donc un calque dans le PSD)
     document.querySelectorAll('.t.hl').forEach(e => {

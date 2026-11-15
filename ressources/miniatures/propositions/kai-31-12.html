@@ -1,0 +1,197 @@
+<!doctype html>
+<!-- Miniatures « à la manière de Kai » des vidéos du 23/11 au 28/12/2026 (plan : ../plan-kai-31-12.md, skill miniature-kai).
+     Une seule maquette pour toutes : ?d=<dossier du projet>&v=h|i|j
+       h  palette de Kai + visage (ou matériel) illustré
+       i  couleurs de Technovore, sans visage : texte sur une ligne en haut, scène à plat
+       j  couleurs de Technovore + visage aux couleurs de peau, même scène que h
+     Trois mises en page, d'après le plan :
+       gauche     texte sur deux lignes à gauche, la scène dessous, le visage à droite tourné vers le texte
+       materiel   texte sur une ligne en haut, les illustrations du matériel dessous
+       severance  texte sur une ligne en haut, visage de face en très grand, coupé sous les yeux, tête ouverte, objets dedans
+                  (calques : portrait-<nom>-coupe-*.png, les objets SVG, portrait-<nom>-coupe-*-devant.png)
+     Images : ../../../projets/<d>/miniature/sources/portrait-<nom>-{kai,technovore}.png (portrait.py, 15/11).
+     Page de 1280×720, rendue à ×3 ; PSD : python3 -I ressources/miniatures/psd.py --page <ce fichier> "d=<d>&v=h" <sortie.psd> -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:"Archivo Black"; src:url(../fonts/archivo-black-latin-400.woff2) format("woff2"); }
+  @font-face { font-family:"Anton"; src:url(../fonts/anton-latin-400.woff2) format("woff2"); }
+  :root { --ink:#fff; --hl:#ffcc33; --echo:#ff3b30; --bg:radial-gradient(ellipse 900px 600px at 50% 45%, #1a1a1c 0%, #050505 75%);
+          --sh1:#ff3b30; --sh2:#2f6bff; --card:#ffcc33; --no:#ff3b30; }
+  /* 15/11 : fond sombre et uni, ombre décalée du mot en blanc */
+  [data-v="i"], [data-v="j"] { --hl:#07c095; --echo:#ffffff; --bg:#141e27; --sh1:#ffffff; --sh2:#34495e; --card:#07c095; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1280px; height:720px; overflow:hidden; }
+  body { position:relative; background:var(--bg); color:var(--ink); }
+  .t { position:absolute; white-space:nowrap; font-family:"Archivo Black", sans-serif; line-height:1; letter-spacing:-.02em; text-transform:uppercase; }
+  .t.hl { color:var(--hl); }
+  .t.echo { color:var(--echo); }
+  img.f { position:absolute; display:none; }
+  svg { position:absolute; inset:0; }
+  .anton { font-family:Anton; }
+</style>
+</head>
+<body>
+<img class="f" id="f1" alt="">
+<img class="f" id="f2" alt="">
+<svg viewBox="0 0 1280 720">
+  <defs>
+    <g id="fan"><circle r="60" fill="#fff" stroke="#000" stroke-width="6"/>
+      <g fill="var(--card)" stroke="#000" stroke-width="4"><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z"/><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z" transform="rotate(45)"/><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z" transform="rotate(90)"/><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z" transform="rotate(135)"/><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z" transform="rotate(180)"/><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z" transform="rotate(225)"/><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z" transform="rotate(270)"/><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z" transform="rotate(315)"/></g>
+      <circle r="18" fill="#1a252f" stroke="#000" stroke-width="5"/></g>
+    <!-- carte graphique, 420×190 -->
+    <g id="card">
+      <rect x="20" y="20" width="420" height="190" rx="16" fill="var(--sh2)"/>
+      <rect x="10" y="10" width="420" height="190" rx="16" fill="var(--sh1)"/>
+      <rect x="-30" y="18" width="36" height="160" rx="4" fill="#c7c7cc" stroke="#000" stroke-width="6"/>
+      <rect width="420" height="190" rx="16" fill="var(--card)" stroke="#000" stroke-width="7"/>
+      <use href="#fan" x="120" y="92"/><use href="#fan" x="300" y="92"/>
+      <rect x="70" y="190" width="240" height="13" fill="#000"/>
+    </g>
+    <!-- baie de serveurs, 240×330 -->
+    <g id="rack">
+      <rect x="20" y="20" width="240" height="330" rx="12" fill="var(--sh2)"/><rect x="10" y="10" width="240" height="330" rx="12" fill="var(--sh1)"/>
+      <rect width="240" height="330" rx="12" fill="#2b2b30" stroke="#000" stroke-width="7"/>
+      <g stroke="#000" stroke-width="5">
+        <rect x="22" y="24" width="196" height="58" rx="5" fill="#fff"/><rect x="22" y="98" width="196" height="58" rx="5" fill="#fff"/>
+        <rect x="22" y="172" width="196" height="58" rx="5" fill="#fff"/><rect x="22" y="246" width="196" height="58" rx="5" fill="#fff"/>
+      </g>
+      <g fill="var(--card)" stroke="#000" stroke-width="3">
+        <circle cx="48" cy="53" r="11"/><circle cx="48" cy="127" r="11"/><circle cx="48" cy="201" r="11"/><circle cx="48" cy="275" r="11"/>
+      </g>
+      <g fill="#000"><rect x="80" y="46" width="120" height="14" rx="3"/><rect x="80" y="120" width="120" height="14" rx="3"/><rect x="80" y="194" width="120" height="14" rx="3"/><rect x="80" y="268" width="120" height="14" rx="3"/></g>
+    </g>
+    <!-- nuage, environ 300×180 -->
+    <path id="cloudp" d="M70 180 C20 180 0 140 15 105 C25 80 55 70 80 78 C90 35 130 10 175 18 C215 25 240 55 242 90 C280 88 305 115 300 145 C296 168 278 180 255 180 Z"/>
+    <g id="cloud">
+      <use href="#cloudp" fill="var(--sh2)" transform="translate(16 16)"/><use href="#cloudp" fill="var(--sh1)" transform="translate(8 8)"/>
+      <use href="#cloudp" fill="#fff" stroke="#000" stroke-width="7"/>
+    </g>
+    <g id="nocloud"><use href="#cloud"/><line x1="10" y1="200" x2="300" y2="-10" stroke="#000" stroke-width="40" stroke-linecap="round"/><line x1="10" y1="200" x2="300" y2="-10" stroke="var(--no)" stroke-width="24" stroke-linecap="round"/></g>
+    <!-- boîte cadeau ouverte, 300×230 (la carte en sort) -->
+    <g id="gift">
+      <rect x="18" y="18" width="300" height="230" rx="8" fill="var(--sh2)"/><rect x="9" y="9" width="300" height="230" rx="8" fill="var(--sh1)"/>
+      <rect width="300" height="230" rx="8" fill="#ff3b30" stroke="#000" stroke-width="7"/>
+      <rect x="125" width="50" height="230" fill="#fff" stroke="#000" stroke-width="6"/>
+    </g>
+    <!-- Mac mini et tour, à plat (variante i) -->
+    <g id="mini">
+      <rect x="18" y="18" width="320" height="110" rx="34" fill="var(--sh2)"/><rect x="9" y="9" width="320" height="110" rx="34" fill="var(--sh1)"/>
+      <rect width="320" height="110" rx="34" fill="#d9dde3" stroke="#000" stroke-width="7"/>
+      <circle cx="210" cy="62" r="9" fill="#000"/><circle cx="238" cy="62" r="9" fill="#000"/><rect x="260" y="56" width="34" height="10" rx="4" fill="#000"/>
+    </g>
+    <g id="tower">
+      <rect x="22" y="22" width="300" height="440" rx="14" fill="var(--sh2)"/><rect x="11" y="11" width="300" height="440" rx="14" fill="var(--sh1)"/>
+      <rect width="300" height="440" rx="14" fill="#2b2b30" stroke="#000" stroke-width="7"/>
+      <rect x="24" y="24" width="252" height="392" rx="8" fill="#3a3550" stroke="#000" stroke-width="5"/>
+      <g transform="translate(55 260) scale(.45)"><use href="#card"/></g>
+      <use href="#fan" x="90" y="110" transform="scale(1)"/><use href="#fan" x="210" y="110"/>
+    </g>
+  </defs>
+  <g id="behind"></g>
+</svg>
+<img class="f" id="f3" alt="">
+<img class="f" id="f4" alt="">
+<svg viewBox="0 0 1280 720"><g id="front"></g></svg>
+
+<div class="t" id="l1"></div>
+<div class="t hl" id="l2"></div>
+
+<script>
+  const q = new URLSearchParams(location.search);
+  const v = q.get('v') || 'h', d = q.get('d') || 'multi-gpu';
+  document.body.dataset.v = v;
+  const src = n => `../../../projets/${d}/miniature/sources/${n}`;
+
+  // petits éléments SVG
+  const tile = (x, y, s, inner, sh = 'var(--sh1)', bg = '#fff', w = 150, h = 150) =>
+    `<g transform="translate(${x} ${y}) scale(${s})"><rect x="12" y="12" width="${w}" height="${h}" rx="10" fill="${sh}"/><rect width="${w}" height="${h}" rx="10" fill="${bg}" stroke="#000" stroke-width="7"/>${inner}</g>`;
+  const logo = (x, y, s, f) => tile(x, y, s, `<image href="${f}" x="28" y="28" width="94" height="94"/>`, 'var(--sh2)', '#f4f1ea');
+  const word = (x, y, s, w, txt, fs = 64) => tile(x, y, s, `<text x="${w / 2}" y="${fs * .95}" text-anchor="middle" class="anton" font-size="${fs}" fill="#000">${txt}</text>`, 'var(--sh1)', '#fff', w, fs * 1.25);
+  const big = (x, y, fs, txt, fill = 'var(--hl)', rot = 0) =>
+    `<text x="${x}" y="${y}" text-anchor="middle" class="anton" font-size="${fs}" fill="${fill}" stroke="#000" stroke-width="${fs / 9}" paint-order="stroke" transform="rotate(${rot} ${x} ${y})">${txt}</text>`;
+  // étiquette haute (texte en haut) : son bas plonge dans la tête ouverte, sous le bord avant
+  const slip = (x, y, s, w, txt, fs = 110, h = 230) => tile(x, y, s, `<text x="${w / 2}" y="${fs * .95}" text-anchor="middle" class="anton" font-size="${fs}" fill="#000">${txt}</text>`, 'var(--sh1)', '#fff', w, h);
+  const rot = (r, cx, cy, inner) => `<g transform="rotate(${r} ${cx} ${cy})">${inner}</g>`;
+  const use = (id, x, y, s = 1, r = 0) => `<use href="#${id}" transform="translate(${x} ${y}) rotate(${r}) scale(${s})"/>`;
+
+  // une vidéo = textes, mise en page, images, scènes (hj : sous le texte ou dans la tête ; i : à plat)
+  const V = {
+    'deux-cartes-occasion': { date: '23/11', l1: '32 GO', l2: 'PAS CHER ?', mode: 'gauche', face: 'fry-g',
+      dir: '../../../projets/meme-carte-plus-rapide/miniature/sources/',
+      hj: use('card', 60, 372, .74, -5) + use('card', 105, 492, .74, -5) + logo(490, 345, 1, '../../../projets/meme-carte-plus-rapide/miniature/sources/qwen-color.svg') + word(470, 560, 1, 190, '32 GO', 76),
+      i: use('card', 184, 250, 1.05, -5) + use('card', 264, 420, 1.05, -5) + logo(854, 230, 1.35, '../../../projets/meme-carte-plus-rapide/miniature/sources/qwen-color.svg') + word(814, 500, 1.15, 260, '32 GO', 96) },
+    'multi-gpu': { date: '7/12', l1: '2 CARTES', l2: '2× PLUS VITE ?', mode: 'gauche', face: 'boromir', fp: [590, 103, 800],
+      hj: use('card', 50, 345, .56) + use('card', 340, 345, .56) + '<rect x="160" y="327" width="300" height="26" rx="6" fill="var(--sh2)" stroke="#000" stroke-width="6"/>' + big(318, 655, 160, '×2 ?'),
+      i: use('card', 80, 260, 1.05) + use('card', 700, 260, 1.05) + '<rect x="260" y="226" width="760" height="40" rx="8" fill="var(--sh2)" stroke="#000" stroke-width="7"/>' + big(640, 680, 160, '×2 ?') },
+    'mac-mini-ia': { date: '10/12', l1: 'LE PETIT', l2: 'GAGNE ?', mode: 'materiel', faces: ['macmini', 'pcgamer'],
+      hj: big(640, 500, 140, 'VS', '#fff', -8),
+      i: use('mini', 80, 520, 1.25) + use('tower', 820, 200, 1.05) + big(640, 600, 150, 'VS', '#fff', -8) },
+    'cout-claude-local': { date: '14/12', l1: 'CLAUDE', l2: '?? ??? €', mode: 'severance', face: 'michael', fx: 656, fy: 303,
+      hj: use('rack', 400, 217, 1, -8) + logo(730, 262, 1.2, '../../../projets/strata-test/miniature/sources/claude.svg'),
+      i: use('rack', 270, 215, 1.25, -6) + logo(700, 265, 1.8, '../../../projets/strata-test/miniature/sources/claude.svg') },
+    'prix-apres-black-friday': { date: '17/12', l1: 'LES PRIX', l2: 'ONT BAISSÉ ?', mode: 'gauche', face: 'jim',
+      hj: use('card', 55, 515, .8, -5) + word(330, 310, 1.05, 290, '-?? %', 96),
+      i: use('card', 130, 360, 1.2, -5) + word(690, 320, 1.45, 320, '-?? %', 110) },
+    'bases-ia-locale': { date: '21/12', l1: 'TU LIS', l2: 'ÇA ?', mode: 'severance', face: 'mathlady', fx: 649, fy: 303, oy: 335,
+      hj: rot(-6, 452, 365, slip(320, 230, 1.15, 230, 'A3B')) + rot(5, 752, 355, slip(565, 220, 1.15, 325, '.GGUF')),
+      i: word(128, 318, 1.7, 230, 'A3B', 110) + word(579, 318, 1.7, 325, '.GGUF', 110) },
+    'cadeau-ia-locale': { date: '24/12', l1: 'TON CADEAU', l2: 'SANS CLOUD ?', mode: 'gauche', face: 'bean', fp: [595, 66, 740],
+      hj: use('card', 50, 440, .74, -6) + use('nocloud', 415, 385, .72),
+      i: use('card', 210, 250, .9, -12) + use('gift', 190, 360, 1.2) + use('nocloud', 780, 300, 1.25) },
+    'louer-acheter-ia': { date: '28/12', l1: 'TU PAIES', l2: 'TROP ?', mode: 'gauche', face: 'drake2', fp: [488, -35, 859],
+      hj: word(50, 392, .85, 280, '€/MOIS', 80) + use('cloud', 355, 378, .7) + use('card', 150, 555, .62, -5),
+      i: word(50, 365, 1.25, 280, '€/MOIS', 80) + use('cloud', 460, 335, 1.05) + use('card', 840, 365, .85) },
+  };
+  const c = V[d];
+  l1.textContent = q.get('l1') || c.l1; l2.textContent = q.get('l2') || c.l2;
+  const dir = c.dir || src('');
+  const pal = v === 'h' ? 'kai' : 'technovore';
+  const show = (img, file, x, y, w) => { img.src = file; Object.assign(img.style, { display: 'block', left: x + 'px', top: y + 'px', width: w + 'px' }); };
+
+  if (v !== 'i') {
+    if (c.mode === 'gauche') {
+      const [x, y, w] = c.fp || [610, 60, 700];
+      show(f1, `${dir}portrait-${c.face}-${pal}.png`, x, y, w);
+      if (c.fade) {                             // l'image source coupe le buste net sur son bord gauche : fondu de ce bord seul,
+        const [fy, fw] = c.fade;                // sous y = fy, sur fw px (la main reste nette)
+        const m = `linear-gradient(#000 ${fy - y - 40}px, transparent ${fy - y}px), linear-gradient(to right, transparent ${.03 * w}px, #000 ${.03 * w + fw}px)`;
+        f1.style.webkitMask = f1.style.mask = m;
+      }
+    }
+    if (c.mode === 'materiel') {               // le petit à gauche, le gros à droite (qui sort du cadre en bas)
+      show(f1, `${dir}portrait-${c.faces[0]}-${pal}.png`, 20, 250, 520);
+      show(f2, `${dir}portrait-${c.faces[1]}-${pal}.png`, 673, 190, 640);
+    }
+    if (c.mode === 'severance') {              // l'ouverture (fx, fy dans l'image habillée) centrée en x 640, y 380, ×1,3
+      const s = 1.3, x = 640 - c.fx * s, y = (c.oy || 380) - c.fy * s, w = 1334 * s;
+      show(f1, `${dir}portrait-${c.face}-coupe-${pal}.png`, x, y, w);
+      show(f3, `${dir}portrait-${c.face}-coupe-${pal}-devant.png`, x, y, w);
+    }
+    (c.mode === 'materiel' ? front : behind).innerHTML = c.hj;
+  } else behind.innerHTML = c.i;
+
+  document.fonts.ready.then(() => {
+    const place = (e, x, y, fs) => { e.style.fontSize = fs + 'px'; e.style.left = x + 'px'; e.style.top = y + 'px'; };
+    if (v === 'i' || c.mode !== 'gauche') {    // une seule ligne centrée en haut
+      place(l1, 0, 46, 112); place(l2, 0, 46, 112);
+      const w0 = l1.getBoundingClientRect().width + .28 * 112 + l2.getBoundingClientRect().width;
+      const fs = Math.min(112, 112 * 1180 / w0); l1.style.fontSize = l2.style.fontSize = fs + 'px';
+      const gap = .28 * fs, w = l1.getBoundingClientRect().width + gap + l2.getBoundingClientRect().width, x0 = (1280 - w) / 2;
+      l1.style.left = x0 + 'px'; l2.style.left = x0 + l1.getBoundingClientRect().width + gap + 'px';
+    } else {                                   // deux lignes à gauche, x 50 → 690
+      [l1, l2].forEach(e => e.style.fontSize = '130px');
+      const w = Math.max(l1.getBoundingClientRect().width, l2.getBoundingClientRect().width), fs = w > 640 ? 130 * 640 / w : 130;
+      place(l1, 50, 70, fs); place(l2, 50, 70 + fs * 1.15, fs);
+    }
+    // seul le mot en couleur a sa copie décalée, posée dessous (un vrai élément .t : un calque dans le PSD)
+    const fs = parseFloat(l2.style.fontSize), e = l2.cloneNode(true);
+    e.removeAttribute('id'); e.classList.remove('hl'); e.classList.add('echo');
+    e.style.left = parseFloat(l2.style.left) + .055 * fs + 'px'; e.style.top = parseFloat(l2.style.top) + .055 * fs + 'px';
+    l2.before(e);
+  });
+</script>
+<script src="../export.js"></script>
+</body>
+</html>

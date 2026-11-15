@@ -15,9 +15,11 @@
 
 | | Rendu | Ce qu'on y voit |
 |---|---|---|
-| **i**, Technovore sans visage | [`rendus/i-kai.png`](rendus/i-kai.png) | Fond ardoise, « TA CARTE BRIDÉE ? » sur une ligne en haut, la carte menthe à gauche, le grand compteur à droite |
+| **i**, Technovore sans visage | [`rendus/i-kai.png`](rendus/i-kai.png) | Fond sombre et uni `#141e27` (15/11 : plus de grille, ombre décalée du mot en blanc ; i et j refaits), « TA CARTE BRIDÉE ? » sur une ligne en haut, la carte menthe à gauche, le grand compteur à droite |
 | **h-fry** / **j-fry** | [`h-fry.png`](rendus/h-fry.png), [`j-fry.png`](rendus/j-fry.png) | Fry qui plisse les yeux (« Not sure if… ») : le soupçon, mot pour mot « bridée ? » |
 | **h-dicaprio** / **j-dicaprio** | [`h-dicaprio.png`](rendus/h-dicaprio.png), [`j-dicaprio.png`](rendus/j-dicaprio.png) | DiCaprio qui pointe : son doigt mène l'œil droit sur la carte et le compteur ; la reconnaissance plus que le doute |
+
+**15/11, ta demande : texte à gauche** (on lit de gauche à droite). Dans h et j, le texte et l'objet passent à gauche, le visage à droite, retourné pour regarder le texte (`portrait.py --miroir` → `sources/portrait-fry-g-*.png`, `portrait-dicaprio-g-*.png`). DiCaprio pointe maintenant le texte du doigt. L'ancienne mise en page reste disponible avec `?pos=droite`. Le visage touche le coin de la durée, en bas à droite : il n'y a là aucune information. Planche : [`apercu/test-50-et-168px-kai.png`](apercu/test-50-et-168px-kai.png).
 
 h = palette de Kai (jaune, ombres rouge et bleue), j = ardoise et menthe ; le visage garde ses couleurs de peau dans les deux. PSD : `photocraft/h-fry.psd`, `j-fry.psd`, `h-dicaprio.psd`, `j-dicaprio.psd`, `i-kai.psd`.
 

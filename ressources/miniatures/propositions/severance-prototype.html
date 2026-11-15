@@ -1,0 +1,56 @@
+<!doctype html>
+<!-- Prototype de la composition « Severance », version de l'auteur du 15/11 (références : ../images/reference-tete-ouverte-kai.webp,
+     reference-tete-en-bas.jpg, reference-tete-anneau.jpg) : le visage en très grand, de face, coupé en bas sous les yeux ; la tête
+     ouverte (portrait.py --coupe) ; les objets posés DANS la tête ; le texte sur une ligne en haut.
+     Trois couches : portrait-coupe-*.png (fond de la tête), le SVG des objets, portrait-coupe-*-devant.png (bord avant + visage).
+     ?v=h (palette de Kai) ou ?v=j (Technovore, fond sombre et uni). Rendu : ../images/prototype-severance.png -->
+<html><head><meta charset="utf-8"><style>
+@font-face { font-family:"Archivo Black"; src:url(../fonts/archivo-black-latin-400.woff2) format("woff2"); }
+:root { --ink:#fff; --hl:#ffcc33; --echo:#ff3b30; --bg:radial-gradient(ellipse 900px 600px at 50% 45%,#1a1a1c 0%,#050505 75%); --sh1:#ff3b30; --sh2:#2f6bff; --card:#ffcc33; }
+[data-v="j"] { --hl:#07c095; --echo:#ffffff; --bg:#141e27; --sh1:#ffffff; --sh2:#34495e; --card:#07c095; }
+*{margin:0;padding:0;box-sizing:border-box} html,body{width:1280px;height:720px;overflow:hidden}
+body{position:relative;background:var(--bg);color:var(--ink)}
+.t{position:absolute;white-space:nowrap;font-family:"Archivo Black";line-height:1;letter-spacing:-.02em;text-transform:uppercase}
+.t.hl{color:var(--hl)} .t.echo{color:var(--echo)}
+.face{position:absolute;left:-226px;top:56px;width:1815px;display:none}
+[data-v="h"] .kai,[data-v="j"] .tech{display:block}
+svg{position:absolute;inset:0}
+</style></head><body>
+<img class="face kai" src="../../../projets/strata-test/miniature/sources/portrait-coupe-kai.png">
+<img class="face tech" src="../../../projets/strata-test/miniature/sources/portrait-coupe-technovore.png">
+<svg viewBox="0 0 1280 720">
+ <defs>
+  <g id="fan"><circle r="60" fill="#fff" stroke="#000" stroke-width="6"/>
+   <g fill="var(--card)" stroke="#000" stroke-width="4"><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z"/><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z" transform="rotate(60)"/><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z" transform="rotate(120)"/><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z" transform="rotate(180)"/><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z" transform="rotate(240)"/><path d="M0 0 L-11 -53 A53 53 0 0 1 11 -53 Z" transform="rotate(300)"/></g>
+   <circle r="18" fill="#1a252f" stroke="#000" stroke-width="5"/></g>
+  <g id="card">
+   <rect x="20" y="20" width="420" height="190" rx="16" fill="var(--sh2)"/><rect x="10" y="10" width="420" height="190" rx="16" fill="var(--sh1)"/>
+   <rect width="420" height="190" rx="16" fill="var(--card)" stroke="#000" stroke-width="7"/>
+   <use href="#fan" x="120" y="92"/><use href="#fan" x="300" y="92"/>
+  </g>
+  <g id="ram">
+   <rect x="14" y="14" width="330" height="96" rx="6" fill="var(--sh2)"/><rect x="7" y="7" width="330" height="96" rx="6" fill="var(--sh1)"/>
+   <rect width="330" height="96" rx="6" fill="#fff" stroke="#000" stroke-width="7"/>
+   <g fill="#1a1a1c" stroke="#000" stroke-width="3"><rect x="22" y="16" width="52" height="46" rx="3"/><rect x="98" y="16" width="52" height="46" rx="3"/><rect x="174" y="16" width="52" height="46" rx="3"/><rect x="250" y="16" width="52" height="46" rx="3"/></g>
+   <g fill="#e8b84a" stroke="#000" stroke-width="2"><rect x="20" y="72" width="140" height="18"/><rect x="172" y="72" width="140" height="18"/></g>
+  </g>
+ </defs>
+ <!-- dans la tête : deux barrettes de RAM qui encadrent une carte graphique -->
+ <use href="#ram" transform="translate(300 300) rotate(-32 165 48)"/>
+ <use href="#ram" transform="translate(650 300) rotate(30 165 48)"/>
+ <use href="#card" transform="translate(430 232) rotate(-4 210 95)"/>
+</svg>
+<img class="face kai" src="../../../projets/strata-test/miniature/sources/portrait-coupe-kai-devant.png">
+<img class="face tech" src="../../../projets/strata-test/miniature/sources/portrait-coupe-technovore-devant.png">
+<div class="t" id="l1">LA RAM</div><div class="t hl" id="l2">TROP LENTE ?</div>
+<script>
+const v=new URLSearchParams(location.search).get('v')||'h'; document.body.dataset.v=v;
+document.fonts.ready.then(()=>{
+ let fs=104; const set=()=>{[l1,l2].forEach(e=>{e.style.fontSize=fs+'px';e.style.top='42px'})};
+ set(); const gap=()=>.28*fs, w=()=>l1.offsetWidth+gap()+l2.offsetWidth;
+ while(w()>1180){fs-=2;set();}
+ const x0=(1280-w())/2; l1.style.left=x0+'px'; l2.style.left=x0+l1.offsetWidth+gap()+'px';
+ const c=l2.cloneNode(true);c.removeAttribute('id');c.classList.remove('hl');c.classList.add('echo');
+ c.style.left=parseFloat(l2.style.left)+.055*fs+'px';c.style.top=42+.055*fs+'px';l2.before(c);
+});
+</script></body></html>
