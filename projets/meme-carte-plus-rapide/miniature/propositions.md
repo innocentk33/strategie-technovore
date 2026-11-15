@@ -21,6 +21,8 @@
 
 h = palette de Kai (jaune, ombres rouge et bleue), j = ardoise et menthe ; le visage garde ses couleurs de peau dans les deux. PSD : `photocraft/h-fry.psd`, `j-fry.psd`, `h-dicaprio.psd`, `j-dicaprio.psd`, `i-kai.psd`.
 
+> **15/11, ta décision : le test A/B oppose h-dicaprio, i-kai et j-dicaprio** ([`h-dicaprio.png`](rendus/h-dicaprio.png), [`i-kai.png`](rendus/i-kai.png), [`j-dicaprio.png`](rendus/j-dicaprio.png)), à charger dans « Tester et comparer » à l'upload. Fry reste en réserve (`h-fry`, `j-fry`).
+
 **Le test A/B (3 miniatures)** : la méthode garde h, i et j avec **le même visage** (h contre j = la palette, i contre j = le visage). Choisis donc un visage : **DiCaprio** pour la composition (le doigt pointe la carte), **Fry** pour le sens (le soupçon). Autre test possible, si tu préfères comparer les memes : j-fry, j-dicaprio et i.
 
 ## 3. À tenir dans la vidéo
