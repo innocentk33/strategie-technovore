@@ -44,10 +44,12 @@ Lecture du test : h contre j = la palette ; i contre j = le visage.
 
 ## Le prompt du portrait (ChatGPT)
 
-Adapte l'expression à la miniature (doute, surprise, frustration…) et garde le reste :
+**Le visage vient d'un meme connu ou d'un personnage connu** (règle de l'auteur, 15/11) : il a rejeté un « jeune joueur » générique. Choisis le meme dont l'émotion colle au texte (doute → Fry de Futurama qui plisse les yeux, The Rock au sourcil levé ; reconnaissance → DiCaprio qui pointe du doigt ; complicité → Jim Halpert qui regarde la caméra…), et pas celui de la vidéo précédente. Propose 2 ou 3 memes à l'auteur avant de lui donner le prompt.
+
+Adapte le personnage et l'expression, garde le reste :
 
 ```
-Illustration d'un [personnage : homme chauve et musclé / jeune joueur avec un casque autour du cou / …] qui [expression : lève un sourcil, l'air sceptique / écarquille les yeux, choqué / …]. Cadrage tête et épaules, de trois quarts, le regard tourné vers la droite de l'image. Style illustration éditoriale, comme une peinture numérique à aplats : contours nets, ombres franches, couleurs vives mais naturelles, pas de photoréalisme. Fond uni vert vif (#00FF00), sans dégradé ni ombre portée. Aucun texte, aucun logo. Format carré, 2048 × 2048 px, le personnage bien centré, coupé en bas au niveau des épaules.
+Illustration d'un [personnage du meme, décrit : homme chauve et musclé (The Rock) / jeune homme roux aux yeux plissés, style dessin animé (Fry) / …] qui [expression : lève un sourcil, l'air sceptique / écarquille les yeux, choqué / …]. Cadrage tête et épaules, de trois quarts, le regard tourné vers la droite de l'image. Style illustration éditoriale, comme une peinture numérique à aplats : contours nets, ombres franches, couleurs vives mais naturelles, pas de photoréalisme. Fond uni vert vif (#00FF00), sans dégradé ni ombre portée. Aucun texte, aucun logo. Format carré, 2048 × 2048 px, le personnage bien centré, coupé en bas au niveau des épaules.
 ```
 
 Si ChatGPT refuse une ressemblance avec une célébrité, retire la référence au meme : l'émotion compte plus que le visage. Les memes et visages d'acteurs sont autorisés par l'auteur ; « faceless » veut dire seulement sans le visage de l'auteur.

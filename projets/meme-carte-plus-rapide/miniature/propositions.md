@@ -26,8 +26,20 @@
 
 ## 4. Le portrait à générer (ChatGPT)
 
-Dépose-le dans `sources/` sous le nom `portrait-illustre.png`, puis : `python3 -I ressources/miniatures/portrait.py projets/meme-carte-plus-rapide/miniature/sources/portrait-illustre.png projets/meme-carte-plus-rapide/miniature/sources/` et `./rendre.sh`.
+**15/11, ta remarque** : pas de visage générique (le « jeune joueur » est écarté), un meme ou un personnage connu. Pistes pour « TA CARTE / BRIDÉE ? » (le doute, le soupçon) :
+
+1. ⭐ **Fry de Futurama, les yeux plissés** (« Not sure if… ») : le meme du soupçon par excellence, il colle mot pour mot à « bridée ? ». Déjà un dessin animé, donc le style illustré lui va sans effort.
+2. **Leonardo DiCaprio qui pointe du doigt** (*Once Upon a Time in Hollywood*) : la reconnaissance, « eh, c'est ma carte ! ». Plus positif, moins de doute.
+3. **Jim Halpert qui regarde la caméra** (*The Office*) : la complicité, « tu savais pas ? ». Plus subtil, se lit moins bien à 168 px.
+
+The Rock reste celui de Strata : on n'en remet pas un deuxième de suite.
+
+Prompt pour Fry (à adapter si tu choisis un autre meme) :
 
 ```
-Illustration d'un jeune joueur PC, un casque audio autour du cou, qui fixe quelque chose hors champ avec un air méfiant et un peu frustré, un sourcil froncé, comme s'il se rendait compte qu'on lui a caché quelque chose. Cadrage tête et épaules, de trois quarts, le regard tourné vers la droite de l'image. Style illustration éditoriale, comme une peinture numérique à aplats : contours nets, ombres franches, couleurs vives mais naturelles, pas de photoréalisme. Fond uni vert vif (#00FF00), sans dégradé ni ombre portée. Aucun texte, aucun logo. Format carré, 2048 × 2048 px, le personnage bien centré, coupé en bas au niveau des épaules.
+Illustration de Fry, le livreur roux de Futurama, dans la pose du meme « Not sure if… » : les yeux très plissés, l'air soupçonneux, la bouche serrée. Cadrage tête et épaules, de trois quarts, le regard tourné vers la droite de l'image. Style illustration éditoriale, comme une peinture numérique à aplats : contours nets, ombres franches, couleurs vives, fidèle au personnage. Fond uni vert vif (#00FF00), sans dégradé ni ombre portée. Aucun texte, aucun logo. Format carré, 2048 × 2048 px, le personnage bien centré, coupé en bas au niveau des épaules.
 ```
+
+Si ChatGPT refuse le personnage, demande « un jeune homme roux, cheveux en pétard, t-shirt rouge, yeux très plissés et soupçonneux, style dessin animé » : le meme se reconnaît à l'expression.
+
+Dépose l'image dans `sources/` sous le nom `portrait-illustre.png`, puis : `python3 -I ressources/miniatures/portrait.py projets/meme-carte-plus-rapide/miniature/sources/portrait-illustre.png projets/meme-carte-plus-rapide/miniature/sources/` et `./rendre.sh`.
