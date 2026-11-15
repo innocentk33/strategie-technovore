@@ -26,6 +26,8 @@ Contre-exemple : « 16 Go de VRAM » (09/11), avec un fond rouge plein, une cart
 
 Ce n'est pas encore la règle. Le mot choc n'est plus écrit en rouge, puisque le rouge passe à l'ombre. **Test A/B décidé le 12/11** : `a` (ancien texte) contre `a-peak`, avec le même texte et le même meme, sur Qwen 4 (si le test Harold contre Jackie n'est pas déjà lancé) et sur Strata. On tranche avec les résultats ; si PEAK gagne les deux, il devient le texte de toutes les miniatures.
 
+**Style « à la manière de Kai », en test depuis le 15/11** (demande de l'auteur) : 3 miniatures par vidéo, **h** (palette de Kai + visage illustré), **i** (couleurs de Technovore, ardoise et menthe, sans visage), **j** (couleurs de Technovore + visage aux couleurs de peau). Premier test A/B : Strata (16/11), h contre i contre j. Méthode, prompt du portrait ChatGPT et outils (`ressources/miniatures/portrait.py`) : skill `miniature-kai`. On tranche entre ce style et celui d'OpenCode avec les résultats.
+
 **Seule la miniature est concernée.** Le montage de la vidéo garde sa propre DA : la règle « la vidéo commence sur la scène de la miniature » tombe.
 
 Le reste de ce fichier (3 variantes, chartes `noir`/`vert`) date d'avant cette décision. Ce qui en reste valable :

@@ -34,6 +34,8 @@
 
 > - *(Ancienne piste, écartée)* **Si tu génères des éléments avec ChatGPT** : le plus utile serait un visage plus expressif que The Rock (surpris ou bluffé, puisque la vidéo dit qu'« il s'en sort bien »), détouré sur fond uni, regard vers la gauche, ou une carte de 16 Go générique en 3D, sans marque. Pas de logo Qwen généré : on garde le vrai.
 
+> **15/11, ta décision : le test A/B de la vidéo oppose h, i et j** (« à la manière de Kai », [`rendus/h-kai.png`](rendus/h-kai.png), [`rendus/i-kai.png`](rendus/i-kai.png), [`rendus/j-kai.png`](rendus/j-kai.png)), à charger dans « Tester et comparer » à l'upload. Lecture : h contre j = la palette (Kai contre Technovore) ; i contre j = le visage. Les variantes a, a-peak, d, f et g ne sont pas dans le test. La méthode est devenue le skill [`miniature-kai`](../../../.claude/skills/miniature-kai/SKILL.md).
+
 ## 1. Le concept
 
 - **Ce que la vidéo promet** (script V2) : la moitié d'un modèle géant tourne avec une carte de 16 Go **et 32 Go de RAM** ; elle code un jeu, un site et un mini-Minecraft en 3D (à la place de l'île depuis le 13/11) ; puis la question de la fin : « est-ce que ça remplace Claude ? ».
