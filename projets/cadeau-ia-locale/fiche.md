@@ -11,7 +11,7 @@
 
 ## L'angle
 
-Vidéo intemporelle de la veille de Noël, **programmée d'avance**. Synthèse des calculs déjà faits (16 Go, 32 Go, Mac mini, petits budgets) en paliers de budget : ce que tu peux faire tourner pour [X] €, [Y] €, [Z] €. Encart Afrique francophone : ce qui se trouve vraiment, et à quel prix.
+Vidéo intemporelle de la veille de Noël, **programmée d'avance**. Synthèse des calculs déjà faits (16 Go, 32 Go, [meilleure carte par budget](../carte-par-budget/fiche.md) du 26 nov., [RAM ou VRAM](../ram-vram-unifiee/fiche.md), [deux cartes](../multi-gpu/fiche.md), Mac mini) en paliers de budget : ce que tu peux faire tourner pour [X] €, [Y] €, [Z] €. Encart Afrique francophone : ce qui se trouve vraiment, et à quel prix.
 
 ## Points à vérifier avant le script
 

@@ -893,6 +893,24 @@ Chaque créneau se confirme au radar, deux semaines avant. Les faits (USSD et op
 
 ---
 
+### Idées 26 à 34 : tes demandes des 14 et 15/11 (vidéos qui marchent chez les concurrents)
+
+Non notées sur 40 : tu les as choisies parce qu'elles marchent (chiffres relevés sur les pages YouTube le 14/11).
+
+| # | Idée | Preuve (14/11) | Créneau |
+|---|---|---|---|
+| 26 | [Deux cartes graphiques pour l'IA : à savoir avant d'acheter la deuxième](projets/multi-gpu/fiche.md) | Weights & Wonders, *Watch This Before Building a Multi-GPU Local AI Setup!* : 32,9 K vues en 3 jours, avec 1,74 K abonnés | lun. 7 déc. |
+| 27 | [Quel modèle ta carte peut faire tourner ? De 4 à 16 Go](projets/modele-par-vram/fiche.md) (absorbe « petits budgets ») | Codacus, *What's the Best AI Model Your GPU Can Actually Run?* : 56,7 K vues en 12 jours, avec 46,8 K abonnés | lun. 18 janv. (provisoire, 15/11) |
+| 28 | [La meilleure carte graphique pour l'IA locale, à chaque budget](projets/carte-par-budget/fiche.md) | Locally, *The Best Local AI GPU For Every Budget (November 2026)* : 1,6 K vues en quelques heures (signal à confirmer) | jeu. 26 nov. (Black Friday) |
+| 30 | [Claude Code gratuit sur ton PC](projets/claude-code-gratuit/fiche.md) | Sharbel A. : 1,18 M de vues en 3 semaines ; Kevin Stratvert : 115 K en 5 jours ; en français, Cedric Oden IA : 65 K en 5 jours (15/11) | jeu. 7 janv. |
+| 31 | [Créer un jeu vidéo avec une IA locale](projets/jeu-video-ia-locale/fiche.md) | PΔX (en français) : 33,8 K en 3 jours ; Stefan 3D AI (jeux faits dans le cloud) : 205 K en 2 semaines (15/11) | jeu. 14 janv. |
+| 32 | [Les vieilles cartes de minage pour l'IA locale](projets/cartes-minage/fiche.md) | Kai : 22,8 K en 18 h ; DiscoverID (BC-250) : 216 K en 3 semaines (15/11) | jeu. 21 janv. |
+| 33 | [Ollama, LM Studio ou llama.cpp](projets/choisir-moteur/fiche.md) | The Dark Factory : 42,9 K en 9 jours (15/11) | lun. 25 janv. |
+| 34 | [Des petits modèles experts contre les géants](projets/petits-modeles-experts/fiche.md) | Codacus : 12 K en 14 h ; Nerdy Kings (LFM3) : 54 K en 13 jours (15/11) | jeu. 28 janv. |
+| 29 | [RAM, VRAM ou mémoire unifiée](projets/ram-vram-unifiee/fiche.md), avec le contre-pied de Strata | Locally, *RAM vs VRAM vs Unified Memory (Local AI)* : 2 K vues en 3 jours | jeu. 3 déc. |
+
+---
+
 ### Classement
 
 | Rang | Idée | Titre | Format | Score | Créneau |
@@ -902,7 +920,7 @@ Chaque créneau se confirme au radar, deux semaines avant. Les faits (USSD et op
 | 3 | 6 | Comment Waze sait qu'il y a un bouchon avant que tu le voies | Génie | 35/40 | 9 nov |
 | 4 | 3 | Comment 50 ingénieurs faisaient tourner WhatsApp pour 900 millions de personnes | Génie | 35/40 | 11 janv |
 | 5 | 5 | ArtCraft : il a recréé 7 logiciels Adobe avec une IA | IA récit | 35/40 | Publiée le 19 oct |
-| 6 | 11 | Combien coûte Claude en local ? ([fiche](projets/cout-claude-local/fiche.md)) | IA calculé | 34/40 (9 · 9 · 7 · 9) | 23 nov |
+| 6 | 11 | Combien coûte Claude Fable 5.2 chez toi ? ([fiche](projets/cout-claude-local/fiche.md), fusionnée avec Kimi le 15/11) | IA calculé | 34/40 (9 · 9 · 7 · 9) | 14 déc |
 | 7 | 16 | Même carte, 2 fois plus rapide | IA testé | 34/40 | Radar |
 | 8 | 4 | Comment un site sait en une milliseconde que ton pseudo est déjà pris (« en une milliseconde » gardé le 23/10 : tenu côté serveur, doc de Redis) | Génie | 33/40 | 30 nov (joker) |
 | 9 | 15 | Louer, acheter ou s'abonner ? | IA calculé | 33/40 | 4 janv |
@@ -922,7 +940,7 @@ Chaque créneau se confirme au radar, deux semaines avant. Les faits (USSD et op
 | 18 | 20 | D'un pixel à 3,7 milliards de joueurs | Histoire | 27/40 | 14 déc (passion) |
 | 19 | 10 | Le génie caché du pixel : comment ton écran trompe tes yeux | Génie | 27/40 | 19 avr (provisoire) |
 | — | 7 | ~~IA en local en 2027 : ce qu'il faut VRAIMENT pour la faire tourner~~ | — | — | Fusionnée dans l'idée 1 |
-| — | — | Claude ou mon PC ? #2 (suite de l'idée 1, dernier modèle sorti) | IA testé | — | 18 janv |
+| — | — | ~~Claude ou mon PC ? #2 (suite de l'idée 1, dernier modèle sorti)~~ | IA calculé | — | Archivée le 15/11 (plus d'actualité) |
 | — | — | OpenCode piraté (actu, hors classement) | IA récit | — | Publiée le 21 oct |
 
 Python et l'hommage au jeu vidéo passent devant des idées mieux notées pour des raisons de calendrier (Noël) et de passion.

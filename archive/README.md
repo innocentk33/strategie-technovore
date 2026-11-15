@@ -6,6 +6,9 @@ Les projets et les idées abandonnés. On note pourquoi, pour ne pas rouvrir le 
 
 | Projet | Abandonné le | Raison | Ce qu'on en garde |
 |---|---|---|---|
+| [Combien coûte Kimi K3.1 Pro chez toi ?](cout-kimi/fiche.md) (fiche) | 15/11/2026 | Ta décision : fusionnée dans [*Combien coûte Claude Fable 5.2 chez toi ?*](../projets/cout-claude-local/fiche.md), qui prend son créneau du lun. 14 déc. et calcule avec les modèles ouverts d'environ 1 To, dont Kimi | Le modèle (Kimi K3.1 Pro) comme modèle de calcul ; le portrait de M. Krabs, passé dans `projets/cout-claude-local/miniature/sources/` |
+| [Abonnement ou IA locale ? #2 : le dernier modèle sorti](claude-ou-mon-pc-2/fiche.md) (fiche) | 15/11/2026 | Ta décision : plus d'actualité. Son créneau du lun. 4 janv. passe au radar | Rien |
+| [L'IA cachée dans ta carte graphique](ia-cachee-carte-graphique/fiche.md) (fiche) | 15/11/2026 | Ta décision : tu n'y vois pas d'intérêt. Son créneau du jeu. 31 déc. allait à *Combien coûte Claude en local ?* (passée au 14 déc. le même jour) | La fiche (Tensor Cores, NPU, DLSS) |
 | [Auto-hébergement : « J'ai remplacé mes abonnements par un vieux PC »](autohebergement/) (notes + script complet) | 11/10/2026 (stratégie v3) | Moins de 750 recherches par mois pour « auto-hébergement », et le sujet est déjà traité en français. Le fil rouge « louer ou posséder » passe en réserve. | L'angle Sony part dans [`idees.md`](../idees.md) (« Tu n'as jamais possédé tes jeux ») |
 | Défi « 30 jours avec une IA locale » | 11/10/2026 | Trop lent face au rythme des sorties de modèles | Remplacé par la série « Claude ou mon PC ? » |
 | Windows 10 en vidéo longue | 11/10/2026 | La date du 13 octobre est passée | Devient un [Short](short-windows-10/fiche.md), archivé à son tour (ligne suivante) |

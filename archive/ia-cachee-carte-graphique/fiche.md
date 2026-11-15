@@ -1,5 +1,7 @@
 # L'IA cachée dans ta carte graphique
 
+> **Archivée le 15/11/2026** (ta décision : pas d'intérêt). Voir [`archive/README.md`](../README.md).
+>
 > Fiche du 10/11/2026, d'après le [2e radar du 10/11](../../etudes/radar.md) (30/40). Placée au **jeu. 31 déc., 18 h** dans le [`calendrier.md`](../../calendrier.md) et le [`README.md`](../../README.md). Vidéo **calculée** : règles du pilier 2 dans [`strategie.md`](../../strategie.md).
 
 | Champ | Détail |

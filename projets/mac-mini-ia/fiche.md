@@ -1,5 +1,7 @@
 # Mac mini ou PC gamer pour l'IA en local ?
 
+> **14/11** : [RAM, VRAM ou mémoire unifiée](../ram-vram-unifiee/fiche.md) sort juste avant, le jeu. 3 déc. Elle pose la mémoire unifiée ; ici, on ne la réexplique pas, on y renvoie et on passe au duel.
+>
 > Fiche du 24/10/2026, à ta demande : « une vidéo sur le Mac mini inspirée de celle-ci ». Créneau **provisoire : lun. 1er févr. 2027, 18 h** (créneau radar IA), à confirmer au radar du 18/01. Analyse : [`strategie.md`](../../strategie.md), idée 24. Planning : [`calendrier.md`](../../calendrier.md), S14-S15. **Recherche et double vérification pas encore faites** : chiffres de cette fiche marqués ⚠️, à refaire en phase 1 et 2 (S14 au plus tard, ou avant si tu veux).
 
 **Inspiration** : [Locally, *Apple Just Made The Mac Mini For Local AI*](https://www.youtube.com/watch?v=evkv0_HrhFM), 18 min, 26/08/2026 : 40 245 vues, ×21,9 sa moyenne (vidIQ, 24/10). Voix de synthèse.
@@ -40,7 +42,7 @@ Pas de « testé » ni de « j'ai essayé » : tu n'as pas de Mac mini.
 4. **La vitesse, calculée** (3:30-6:00) : le plafond de Coût Claude (bande passante ÷ Go lus par token). Mac mini M6 : 153 ou 170 Go/s ⚠️ (les sources divergent) ; RTX 5080 : 960 Go/s ✅ (vérifié le 25/10, voir point 3 des sources). Exemple : Qwen3.8-27B en Q4 (16,46 Go) ne tient pas dans ta 5080 et tient dans un Mac mini de 32 Go, mais avec un plafond d'environ 10 tokens/s (170 ÷ 16,46, estimation). Les modèles à experts (A3B, *IA en local*) changent tout : peu de Go lus par token, donc un plafond bien plus haut. Rien n'est mesuré : à recouper avec des mesures publiées et datées en phase 1.
 5. **Contre ton PC** (6:00-8:00) : ton PC, monté pour jouer en 2025 pour 2 000 € (dont la 5080 à 1 100 € et la RAM à 92,95 €), coûterait bien plus aujourd'hui (la 5080 à environ 1 900 €, la même RAM à 560 € sur Amazon : tes chiffres du 24/10, à revérifier). Le Mac mini, lui, est sorti en pleine crise de la mémoire, et son prix a monté ⚠️. Ce que le PC garde : la vitesse, CUDA, le jeu. Ce que le Mac gagne : la mémoire, le silence, la consommation (sans chiffre d'électricité : décision du 23/10).
 6. **Le calcul en quatre cas** (8:00-10:00) : Mac mini 32 Go [PRIX À RELEVER] contre Pro (≈ 21 €) et Max (≈ 107 €) ; « j'ai déjà un PC » contre « je pars de zéro » ; puis le pour et le contre, comme dans Claude #1 et Louer, acheter.
-7. **Ton avis** (10:00-11:00) : [CROCHET : TON CHOIX, AVEC TES MOTS]. Renvois : les deux cartes d'occasion (21 déc.), l'autre façon d'avoir beaucoup de mémoire ; le Mac Studio du palier 2 de Coût Claude (23 nov.).
+7. **Ton avis** (10:00-11:00) : [CROCHET : TON CHOIX, AVEC TES MOTS]. Renvois : les deux cartes d'occasion (21 déc.), l'autre façon d'avoir beaucoup de mémoire ; annonce le Mac Studio de *Combien coûte Claude Fable 5.2 chez toi ?* (14 déc., après celle-ci : « on en reparle lundi »).
 
 ## Les 15 premières secondes
 

@@ -78,9 +78,9 @@ Et cette même carte se loue dès trente centimes de dollar de l'heure.
 
 ## 1. D'où viennent les chiffres (0:40 – 1:21)
 
-[VISUEL : carte YouTube vers « Combien coûte Claude en local ? ». Extrait de 2 s de sa fin : « Louer, acheter ou rester abonné, j'en fais une vidéo complète le quatre janvier ».]
+[VISUEL : carte YouTube vers « Combien coûte Claude Fable 5.2 chez toi ? ». Extrait de 2 s de sa fin : « Louer, acheter ou rester abonné, j'en fais une vidéo complète le vingt-huit décembre ».]
 
-Tu te rappelles ? Dans « Combien coûte Claude en local », je t'avais promis cette vidéo pour le quatre janvier. Et en effet, on y est.
+Tu te rappelles ? Dans « Combien coûte Claude Fable 5.2 chez toi », je t'avais promis cette vidéo pour le vingt-huit décembre. Et en effet, on y est.
 
 ⟦à écrire : ton enjeu, en une ou deux phrases. Ton brouillon de Claude #1 dit : « on paie déjà 60 abonnements par mois, c'est trop », et que tu paies Claude Max. Une chose vraie, avec tes mots.⟧
 
@@ -257,7 +257,7 @@ Est-ce que ça te suffit ? Ça, le calcul seul ne le dit pas. Du coup, j'ai rass
 
 [VISUEL : extrait de Claude #1, le compteur de tokens par seconde en grand ; carte YouTube vers la vidéo des 16 Go.]
 
-Et un modèle de la trempe de Claude, chez soi ? J'en ai fait le calcul dans « Combien coûte Claude en local » : plus de trente mille euros par mois, rien que pour louer le serveur.
+Et un modèle de la trempe de Claude, chez soi ? J'en ai fait le calcul dans « Combien coûte Claude Fable 5.2 chez toi » : plus de trente mille euros par mois, rien que pour louer le serveur.
 
 [VISUEL : rappel de la baie de serveurs de Coût Claude, compteur « 30 660 € HT / mois », 2 s.]
 
@@ -296,7 +296,7 @@ Et toi, tu paies combien aujourd'hui, et quel modèle je calcule ensuite ? Dis-l
 
 Et ce que ce modèle fait vraiment sur une carte comme la mienne, c'est dans ma vidéo sur les seize gigas, juste là.
 
-[VISUEL : écran de fin, 20 s : « 16 Go de VRAM suffisent-ils pour remplacer Claude ? » à gauche, « Combien coûte Claude en local ? » en second choix, « S'abonner » à droite.]
+[VISUEL : écran de fin, 20 s : « 16 Go de VRAM suffisent-ils pour remplacer Claude ? » à gauche, « Combien coûte Claude Fable 5.2 chez toi ? » en second choix, « S'abonner » à droite.]
 
 ---
 

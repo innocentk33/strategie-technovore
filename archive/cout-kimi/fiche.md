@@ -1,5 +1,7 @@
 # Combien coûte Kimi K3.1 Pro chez toi ?
 
+> **15/11, ta demande** : avancée au **lun. 14 déc., 18 h** (au lieu du 21), parce que Kimi K3.1 Pro est déjà sorti. Le 21 déc. va à [*nom d'un modèle*](../bases-ia-locale/fiche.md).
+>
 > Fiche du 10/11/2026, d'après le [2e radar du 10/11](../../etudes/radar.md) (31/40). Placée au **lun. 21 déc., 18 h** dans le [`calendrier.md`](../../calendrier.md) et le [`README.md`](../../README.md). Vidéo **calculée** : règles du pilier 2 dans [`strategie.md`](../../strategie.md).
 
 | Champ | Détail |

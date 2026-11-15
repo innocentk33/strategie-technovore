@@ -1,6 +1,6 @@
 # Ton IA locale est-elle vraiment privée ?
 
-> Fiche du 10/11/2026, d'après la réserve d'[`idees.md`](../../idees.md) et le [radar du 10/11](../../etudes/radar.md) (34/40). Placée au **jeu. 26 nov., 18 h**. Vidéo **calculée** (sources, rapports de sécurité), sans essai.
+> Fiche du 10/11/2026, d'après la réserve d'[`idees.md`](../../idees.md) et le [radar du 10/11](../../etudes/radar.md) (34/40). Placée au jeu. 26 nov., puis **reculée au lun. 11 janv. 2027, 18 h, le 14/11** (provisoire, à confirmer au radar) : le 26 nov. va au [guide des cartes du Black Friday](../carte-par-budget/fiche.md). Elle est intemporelle. Vidéo **calculée** (sources, rapports de sécurité), sans essai.
 
 **Signal** : Kai, *Your Local AI Is Not as Private as You Think* (573,1 K vues, ×5,3, 21/10 ; radar du 10/11). Aucun équivalent en français. On ne reprend pas son angle : on part d'une croyance du public français à renverser.
 

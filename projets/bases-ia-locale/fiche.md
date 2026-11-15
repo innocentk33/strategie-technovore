@@ -1,5 +1,7 @@
 # IA en local : comment lire le nom d'un modèle (et tout ce qu'il y a autour)
 
+> **15/11** : la vidéo sort le **lun. 21 déc., 18 h** (au lieu du 14), programmée avant le 24. Ses renvois aux dates plus bas (7 déc., 14 déc.) sont dépassés.
+>
 > Phase 1 (recherche) du 23/10/2026. Analyse (piliers, grille) : [`strategie.md`](../../strategie.md), pilier 2. Planning : [`calendrier.md`](../../calendrier.md). Créneau : **lun. 7 déc. 2026, 18 h** (ta décision du 24/10, nuit : une progression douce, d'abord [la vidéo d'installation](../installer-ia-locale/fiche.md) le 2 nov., ensuite les noms ; d'abord placée au 30 nov., puis au 2 nov. le 23/10) ; reporté dans le README, le calendrier et `strategie.md` (idée 22). 2e vérification des faits faite le 23/10 (corrections en bas).
 > Faits et chiffres : [`sources.md`](sources.md). Les vidéos que celle-ci prépare : [`claude-ou-mon-pc-1`](../claude-ou-mon-pc-1/fiche.md), [`cout-claude-local`](../cout-claude-local/fiche.md), [`llama-cpp`](../llama-cpp/fiche.md), [`louer-acheter-ia`](../louer-acheter-ia/fiche.md), [`opencode`](../opencode/).
 
