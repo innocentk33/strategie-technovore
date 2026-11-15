@@ -7,7 +7,8 @@ Prend un portrait illustré sur fond vert uni (généré avec ChatGPT), le déto
   <sortie>/portrait-technovore.png         couleurs de peau gardées, contour blanc épais, ombres menthe et ardoise,
                                            halo sombre (variante j ; pas de duotone : il écrasait le contraste)
 
-Usage : python3 -I ressources/miniatures/portrait.py <image fond vert> <dossier sources/>
+Usage : python3 -I ressources/miniatures/portrait.py <image fond vert> <dossier sources/> [nom]
+  avec [nom] (ex. fry) : portrait-fry-detoure.png, portrait-fry-kai.png, portrait-fry-technovore.png
 Les deux portraits ont une marge de 40 px (à 1x) autour du visage : la maquette les place avec left/top/width.
 """
 import sys
@@ -55,16 +56,17 @@ def habille(cut, ombres, contour=25, halo=False, marge=60):
 
 
 def main():
-    if len(sys.argv) != 3:
+    if len(sys.argv) not in (3, 4):
         sys.exit(__doc__)
     src, out = Path(sys.argv[1]), Path(sys.argv[2])
+    nom = f"portrait-{sys.argv[3]}" if len(sys.argv) == 4 else "portrait"
     out.mkdir(parents=True, exist_ok=True)
     cut = detoure(src)
     reste = int((np.asarray(cut)[..., 3] > 0).sum())
-    cut.save(out / "portrait-illustre-detoure.png")
-    habille(cut, [((47, 107, 255), 24), ((255, 59, 48), 13)]).save(out / "portrait-kai.png")
-    habille(cut, [((15, 26, 36), 30), ((7, 192, 149), 17)], contour=31, halo=True).save(out / "portrait-technovore.png")
-    print(f"{out}/portrait-kai.png, portrait-technovore.png ({reste} pixels gardés)")
+    cut.save(out / (f"{nom}-detoure.png" if nom != "portrait" else "portrait-illustre-detoure.png"))
+    habille(cut, [((47, 107, 255), 24), ((255, 59, 48), 13)]).save(out / f"{nom}-kai.png")
+    habille(cut, [((15, 26, 36), 30), ((7, 192, 149), 17)], contour=31, halo=True).save(out / f"{nom}-technovore.png")
+    print(f"{out}/{nom}-kai.png, {nom}-technovore.png ({reste} pixels gardés)")
 
 
 if __name__ == "__main__":

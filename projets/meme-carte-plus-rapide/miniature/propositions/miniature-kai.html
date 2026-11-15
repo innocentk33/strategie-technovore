@@ -5,7 +5,7 @@
      ?v=h  Kai + visage : portrait à gauche, texte à droite, la carte et le compteur dessous
      ?v=i  couleurs de Technovore, sans visage : le texte sur une ligne en haut, la carte à gauche, le grand compteur à droite
      ?v=j  couleurs de Technovore + visage (couleurs de peau gardées), même scène que h
-     Portrait : ../sources/portrait-kai.png et portrait-technovore.png, faits par ressources/miniatures/portrait.py.
+     Portrait : ?p=fry (défaut) ou ?p=dicaprio → ../sources/portrait-<p>-kai.png et -technovore.png, faits par ressources/miniatures/portrait.py.
      Page de 1280×720, rendue à ×3 par ../rendre.sh. -->
 <html lang="fr">
 <head>
@@ -38,8 +38,8 @@
 </head>
 <body>
 <div class="grid"></div>
-<img class="face kai" src="../sources/portrait-kai.png" alt="">
-<img class="face tech" src="../sources/portrait-technovore.png" alt="">
+<img class="face kai" id="fk" alt="">
+<img class="face tech" id="ft" alt="">
 
 <svg class="scene" viewBox="0 0 1280 720">
   <defs>
@@ -99,6 +99,9 @@
   const q = new URLSearchParams(location.search);
   const v = q.get('v') || 'h';
   document.body.dataset.v = v;
+  // ?p=fry|dicaprio : le portrait (sources/portrait-<p>-kai.png et -technovore.png, faits par portrait.py)
+  const p = q.get('p') || 'fry'; document.body.dataset.p = p;
+  fk.src = `../sources/portrait-${p}-kai.png`; ft.src = `../sources/portrait-${p}-technovore.png`;
   if (q.get('l1')) l1.textContent = q.get('l1');
   if (q.get('l2')) l2.textContent = q.get('l2');
   document.fonts.ready.then(() => {
