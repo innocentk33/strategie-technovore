@@ -1,5 +1,6 @@
 # Quel modèle ta carte peut faire tourner ? De 4 à 16 Go de VRAM
 
+> **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > **Fiche du 14/11/2026, à ta demande** (ex-`petit-budget-ia/`, *L'IA locale sans grosse carte graphique*, renommée le 14/11). Les petits budgets sont désormais traités par paliers de VRAM. La thèse « la RAM plutôt que la carte » part dans [RAM, VRAM ou mémoire unifiée](../ram-vram-unifiee/fiche.md) (3 déc.), et le créneau du 7 déc. va au [multi-GPU](../multi-gpu/fiche.md). Placée au lun. 25 janv., puis au **lun. 18 janv. 2027, 18 h** (le 15/11, à la place de DeepSeek, avancé au 30 nov.), **provisoire, à confirmer au radar**. Vidéo **calculée**. Idée 27 de [`strategie.md`](../../strategie.md), non notée (ta demande du 14/11). Titre provisoire. Idée de départ (05/11) : le public sans carte de 16 Go (63 % en Afrique).
 
 **Inspiration** : Codacus, [*What's the Best AI Model Your GPU Can Actually Run? 4GB to 16GB VRam*](https://www.youtube.com/watch?v=tek-IY9BRWc), 26 min 8 s, publiée le 02/11 : **56 676 vues en 12 jours, avec 46,8 K abonnés** (page YouTube, 14/11). Le [radar du 12/11](../../etudes/radar.md) notait déjà que l'angle 8 à 12 Go se renforçait (Kai : 60 K vues avec un modèle sur 12 Go ; 8 Go, c'est la VRAM d'un joueur sur quatre, d'après Steam en octobre).
@@ -27,4 +28,4 @@
 - [ ] Les cartes de chaque palier, neuves et d'occasion, en euros et en FCFA.
 - [ ] Mots-clés vidIQ en `fr` (ia locale petit budget, ia sans carte graphique, quel modèle pour ma carte graphique).
 - [ ] Titres, puis les 15 premières secondes : le résultat d'abord.
-- [ ] Ne pas recouper [16 Go suffisent](../claude-ou-mon-pc-1/fiche.md) (le palier 16 Go y renvoie) ni la vidéo du 3 déc.
+- [ ] Ne pas recouper [16 Go suffisent](../claude-ou-mon-pc-1/fiche.md) (le palier 16 Go y renvoie) ni *RAM, VRAM ou mémoire unifiée* (31 déc. depuis le 16/11)

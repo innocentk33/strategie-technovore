@@ -231,7 +231,7 @@ Le rendu 4K est fini (371 Mo) : YouTube met plus longtemps à traiter la 4K, la 
 - [ ] Vérifications Studio (droits d'auteur) sans revendication
 - [ ] Publication jeu. 12/11 à 21:00 ; commentaire épinglé prêt à coller à la mise en ligne
 - [ ] **Lun. 16/11** : écran de fin et fiche 3 (8:06) vers Strata ; lien dans la description
-- [ ] **Lun. 23/11** : fiche 2 (5:49) vers la vidéo des 32 Go
+- [ ] **Lun. 30/11** (décalée du 23/11 le 16/11 : corrige aussi « Lundi 23/11 : les 32 Go » dans la description en ligne) : fiche 2 (5:49) vers la vidéo des 32 Go
 - [ ] Skill `radar` lancé après la sortie
 
 ## Suggestions

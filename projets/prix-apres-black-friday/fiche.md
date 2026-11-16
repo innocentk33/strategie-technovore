@@ -1,5 +1,6 @@
 # Le Black Friday a-t-il vraiment fait baisser les prix de l'IA en local ?
 
+> **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent. **Préparation à compléter : prix Black Friday et mi-décembre futurs, résultat et validation finale ouverts.**
 > Fiche du 10/11/2026, d'après le [2e radar du 10/11](../../etudes/radar.md) (33/40). Placée au **jeu. 17 déc., 18 h** dans le [`calendrier.md`](../../calendrier.md) et le [`README.md`](../../README.md). Vidéo **calculée** : règles du pilier 2 dans [`strategie.md`](../../strategie.md).
 
 | Champ | Détail |

@@ -1,0 +1,201 @@
+[VISUEL : graphique original 36,05 → 34,03 → 47,06, légendé « une mesure publiée, Qwen3.8-27B, 2 × 7900 XTX, 13/09/2026 ». F1.]
+
+Une carte écrit à 36 tokens par seconde.
+Le même testeur en ajoute une deuxième : il tombe à 34.
+Puis il change la répartition, et monte à 47.
+Ces chiffres sont les leurs, je n'ai rien testé chez moi.
+Donc, avant de payer ta deuxième carte, qu'est-ce qui décide si elle t'aide vraiment
+?
+
+On va identifier la mémoire qui te manque, distinguer les 2 répartitions, puis
+regarder les ports, les câbles et la place dans la tour.
+À la fin, tu auras une décision selon ton PC : ajouter, remplacer, ou garder ton
+argent.
+Le piège, c'est qu'un deuxième port long peut cacher une liaison beaucoup plus
+étroite.
+
+[GRAPHIC] [VISUEL : 3 cartes « manque de mémoire », « réponse lente », « plusieurs utilisateurs ». F3/F4/F6.]
+
+Si ton modèle déborde en RAM, la seconde carte peut lui donner de la place sur les
+GPU.
+Si tout tient déjà, tu cherches surtout une meilleure vitesse.
+Et si plusieurs personnes utilisent ta machine, le débit total pose encore une autre
+question.
+Du coup, la bonne carte dépend du problème que tu essaies de résoudre.
+
+Prends le premier cas.
+Ton modèle fait une partie du travail avec la RAM de ton PC, parce que la carte est
+pleine.
+Ajouter une carte peut garder davantage de poids en mémoire graphique.
+Donc tu peux gagner de la capacité et de la vitesse en même temps.
+En fait, le travail qui ralentissait la machine se déplace vers les cartes.
+
+[VISUEL : autre rapport, 4070 SUPER 12 Go + 5060 Ti 16 Go ; Qwen3.8-27B Q4, génération, contexte 16 384. F3.]
+
+Le résultat de 34 tokens ne condamne donc pas la deuxième carte.
+Dans un autre rapport, le fichier débordait en RAM : son auteur passe d'environ 11 à
+12 tokens par seconde à environ 21 quand 2 cartes le gardent en mémoire graphique.
+Même mode par couches, autre problème de départ.
+Le gain reste attaché à cette paire NVIDIA et à son contexte.
+
+Par contre, quand le fichier tient déjà entièrement sur une carte, on ne supprime
+plus cette attente-là.
+Il faut alors regarder ce que la deuxième fait réellement pendant la réponse.
+Les 2 situations peuvent donc donner des résultats opposés.
+
+Donc, avant la marque et le prix, écris ton manque en une phrase.
+«Je veux garder une conversation plus longue.» Ou «je veux une copie moins
+compressée.» Ou encore «je veux réduire mon attente avec le fichier actuel».
+Cette phrase évite de payer pour une capacité qui ne répond pas à ton besoin.
+
+[VISUEL : modèle découpé en deux piles ; une flèche traverse les deux. F4/F5.]
+
+Dans llama.cpp, la répartition par couches est le mode par défaut.
+Chaque carte garde sa tranche du modèle et le cache associé.
+Pour une conversation, le calcul passe successivement par ces tranches.
+C'est un peu comme un colis qui traverse 2 ateliers : avoir 2 ateliers donne de la
+place, mais le même colis doit encore faire le trajet.
+
+Le mode tensor partage les calculs à l'intérieur des couches.
+Les cartes travaillent davantage ensemble, et elles doivent aussi se transmettre des
+résultats plus souvent.
+Donc la liaison entre elles compte davantage.
+La documentation le marque encore expérimental : modèle, moteur et version peuvent
+limiter ce qui fonctionne.
+
+[VISUEL : retour au graphique F1, même fichier et même paire, génération uniquement.]
+
+Le premier graphique compare justement ces modes sur une même paire de Radeon :
+environ 36 avec une carte, 34 en couches, puis 47 en tensor.
+Le rapport précise les ports PCIe 4 à 8 lignes chacun.
+Ce résultat montre l'effet de cette configuration ; il n'isole pas la part de chaque
+liaison ni de chaque opération.
+On parle ici de génération.
+La lecture du prompt est une autre mesure, et certaines de ses séries sont trop
+variables pour qu'on leur fasse raconter la même histoire.
+
+[VISUEL : deuxième expérience, couche / tensor, autre build et autre paire NVIDIA. F2.]
+
+Une deuxième expérience trouve aussi un gain en changeant de mode sur une paire
+NVIDIA différente.
+Par contre, le facteur change.
+On a donc 2 observations favorables au mode tensor dans leurs conditions, sans
+reproduction du même multiplicateur.
+
+Si cette vidéo t'a évité un mauvais achat, abonne-toi.
+
+Et pour 2 cartes de 16 gigas, oui, les capacités physiques s'additionnent.
+Sauf qu'une partie sert aux tampons, au cache de conversation et parfois à
+l'affichage.
+Il faut de la marge sur les cartes concernées.
+On ne peut donc pas promettre un bloc de 32 gigas entièrement libre pour les seuls
+poids.
+
+[GRAPHIC] [VISUEL : port long, étiquette « format x16 », puis schéma « liaison x4 ». F9.]
+
+Le manuel de la carte mère peut te faire économiser davantage qu'une promotion.
+Le connecteur a une longueur physique.
+Les lignes actives sont la liaison réelle.
+Un port long peut donc fonctionner avec moins de lignes que le premier, ou partager
+ses ressources avec d'autres éléments.
+
+Sur la Gigabyte B850M documentée ici, le premier port est relié au processeur.
+Le second passe par le chipset et fonctionne en PCIe 3 avec 4 lignes.
+Donc 2 connecteurs qui se ressemblent peuvent offrir des chemins différents.
+Ce renseignement doit venir du manuel de la référence précise.
+
+Sauf que la génération compte aussi.
+«4 lignes» ne décrit pas le même débit théorique à toutes les générations PCIe.
+Et la vitesse finalement obtenue dépend du mode de répartition, des échanges et des
+cartes.
+C'est pour ça qu'on ne colle pas une pénalité fixe à tous les ports x4.
+
+Imagine un jeu coopératif où 2 joueurs doivent s'envoyer un message après chaque
+mouvement.
+Si la liaison prend du temps, la puissance de leurs machines ne règle pas tout.
+Un autre jeu demande seulement de transmettre le relais à certains moments : le même
+réseau peut alors être moins gênant.
+C'est l'idée à garder pour comprendre pourquoi les modes ne réagissent pas pareil.
+
+Du coup, un port étroit peut rester utile pour ajouter de la capacité, sans devenir
+la bonne base pour chercher l'accélération maximale.
+Et remplacer la carte mère pour obtenir une meilleure liaison change le prix de ton
+projet.
+Il faut le compter avant de dire que la seconde carte est une affaire.
+
+[VISUEL : silhouettes à l'échelle des cartes et du boîtier, puis connecteurs dessinés. F9.]
+
+En fait, la place se vérifie dans toutes les directions.
+La longueur de la carte, son épaisseur, l'espace sous le dernier port et la proximité
+des ventilateurs.
+Si le radiateur d'une carte bloque l'entrée d'air de l'autre, elles ne bénéficient
+pas du même environnement que dans une machine de benchmark ouverte.
+
+Par contre, l'alimentation demande la même précision.
+Son nombre de watts ne raconte pas tous les câbles disponibles.
+Les modèles partenaires d'une même famille peuvent demander des prises différentes.
+Donc on regarde la référence exacte de la carte, celle du bloc, et la documentation
+du fabricant.
+
+Le tableau peut donc garder 4 cases : dimensions, ports utilisables, câbles
+compatibles et marge d'alimentation.
+Une case inconnue laisse une dépense ou une incompatibilité possible.
+En fait, la facture de la deuxième carte commence là, avant son prix affiché.
+
+[VISUEL : cartes NVIDIA / AMD, noms des moteurs ; aucune capture personnelle. F4/F6–F8.]
+
+2 marques différentes peuvent participer à certains montages avec Vulkan.
+Par contre, le support documenté ne garantit pas chaque paire ni chaque modèle.
+Une carte déjà payée peut donc rester intéressante, si les pilotes et le moteur
+permettent le travail envisagé.
+
+Le logiciel décide aussi comment les cartes travaillent.
+Ollama privilégie une seule carte si tout y tient.
+LM Studio documente la sélection et la priorité des GPU ; cela ne signifie pas qu'un
+mode tensor est activé.
+Et dans llama.cpp, ce mode garde ses restrictions de cache et de modèles.
+Donc un résultat publié avec une ancienne version ne devient pas automatiquement une
+recette pour celle d'aujourd'hui.
+
+Imagine que ta paire dispose d'assez de mémoire, mais que le mode du rapport ne prend
+pas en charge ton modèle dans ta version.
+Du coup, la capacité supplémentaire ne te donne pas encore l'accélération recherchée.
+Le choix peut rester utile pour supprimer un débordement en RAM, avec une autre
+répartition.
+Il faut simplement garder le problème de départ dans la décision.
+
+[VISUEL : facture en 4 cases « carte », « boîtier », « alimentation », « carte mère ».]
+
+On peut donc additionner les dépenses.
+La seconde carte, puis les changements nécessaires pour qu'elle fonctionne
+correctement.
+Si tu dois changer le bloc, le boîtier et la carte mère, compare le total avec une
+carte unique de capacité suffisante.
+Le comparatif des routes vers 32 gigas donne des offres datées ; les ruptures et les
+pièces supplémentaires comptent dans le choix.
+
+Si tu as déjà les ports, la place et les câbles, ajouter peut être cohérent pour
+garder un modèle en VRAM.
+Si tu cherches seulement à accélérer un fichier déjà à l'aise, une mesure publiée sur
+une configuration proche devient plus utile que le seul total de mémoire.
+Et si tu pars de zéro avec un budget serré, la simplicité d'une seule carte a aussi
+une valeur.
+
+Sauf que le contexte voulu peut encore changer la comparaison.
+Une réponse courte et un agent qui relit un gros dépôt n'ont pas la même pression
+mémoire.
+Une machine plus rapide à conversation vide peut demander un compromis une fois
+remplie.
+Du coup, le rapport utile donne le fichier, le contexte, le moteur, la génération et
+la lecture du prompt séparément.
+
+[CROCHET : ton avis sur le niveau de bricolage que tu accepterais, facultatif.]
+
+Avant l'achat, ta décision tient sur 4 lignes : ce qui manque, ce que les ports
+permettent, ce que le boîtier accepte et ce que le moteur sait faire.
+Si les 4 sont cohérentes, la deuxième carte peut rendre service.
+Sinon, le giga le moins cher du tableau risque de devenir le plus encombrant de ton
+bureau.
+Et quand ajouter une carte complique trop la machine, la vidéo Mac mini ou PC gamer
+du 10 décembre compare une autre route.
+Allez, salut !

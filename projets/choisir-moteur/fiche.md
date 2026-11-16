@@ -1,5 +1,6 @@
 # Ollama, LM Studio ou llama.cpp : lequel choisir pour ton IA locale ?
 
+> **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > Fiche du 15/11/2026, à ta demande (remplir les créneaux radar de janvier). Placée au **lun. 25 janv. 2027, 18 h**, **provisoire, à confirmer au radar**. Vidéo **calculée**. Idée 33 de [`strategie.md`](../../strategie.md), non notée (relevé YouTube du 15/11). Titre provisoire.
 
 **Inspiration** (vues relevées sur YouTube le 15/11) : The Dark Factory, [*Ollama vs LM Studio on My Mac. Not Even Close*](https://www.youtube.com/watch?v=S8-YeAT5xQc) (42,9 K vues en 9 jours) ; Kevin Stratvert, [*How to Use Ollama (Free Local AI)*](https://www.youtube.com/watch?v=btMoPRHz8eM) (176 K en 9 jours). En français, rien de récent qui compare les trois (recherche du 15/11 : de petites vidéos à moins de 400 vues).

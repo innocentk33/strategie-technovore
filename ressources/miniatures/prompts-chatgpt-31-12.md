@@ -6,10 +6,10 @@
 
 | Image | Vidéo | État |
 |---|---|---|
-| Fry | 23/11 | dans `meme-carte-plus-rapide/miniature/sources/` (retourné par `--miroir`) |
+| Fry | 30/11 (16/11) | dans `meme-carte-plus-rapide/miniature/sources/` (retourné par `--miroir`) |
 | M1, les 3 cartes | 26/11 | reçue dans la conversation : à enregistrer en `projets/carte-par-budget/miniature/sources/cartes-vert.png` |
-| V1, Keanu | 30/11 | reçue : à enregistrer en `projets/cout-deepseek-flash/miniature/sources/keanu-vert.png` |
-| V2, Roll Safe | 3/12 | reçue : à enregistrer en `projets/ram-vram-unifiee/miniature/sources/rollsafe-vert.png` |
+| V1, Keanu | 3/12 (16/11) | reçue : à enregistrer en `projets/cout-deepseek-flash/miniature/sources/keanu-vert.png` |
+| V2, Roll Safe | 31/12 (16/11) | reçue : à enregistrer en `projets/ram-vram-unifiee/miniature/sources/rollsafe-vert.png` |
 | Les 9 ci-dessous | 7/12 → 28/12 | générées le 15/11 ([`generations-31-12.md`](generations-31-12.md)), détourées et maquettées (voir le suivi du plan) |
 
 ## Garder le même style d'une image à l'autre

@@ -1,5 +1,6 @@
 # La meilleure carte graphique pour l'IA locale, à chaque budget (Black Friday)
 
+> **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > Fiche du 14/11/2026, à ta demande (« en prévision du Black Friday »). Placée au **jeu. 26 nov., 18 h**, la veille du Black Friday (ven. 27 nov.), à la place d'[IA locale privée](../ia-locale-privee/fiche.md), qui recule au lun. 11 janv. Vidéo **calculée**. Idée 28 de [`strategie.md`](../../strategie.md), non notée (ta demande du 14/11). Titre provisoire.
 
 **Inspiration** : Locally, [*The Best Local AI GPU For Every Budget (November 2026)*](https://www.youtube.com/watch?v=-ImyaGElyfk), 12 min 21 s, publiée le 14/11 : 1 570 vues quelques heures après sa sortie, avec 4,5 K abonnés (page YouTube, 14/11). **Signal pas encore prouvé** : à remesurer au radar du 16/11.
@@ -17,7 +18,7 @@
 ## À ne pas confondre avec
 
 - [Qwen 4 : quelle carte acheter (ou pas)](../qwen-4-cartes/fiche.md) (publiée le 12/11) : là, on choisissait une carte pour **un** modèle. Ici, on donne la meilleure carte **par budget**, quel que soit le modèle.
-- [32 Go de VRAM au moins cher](../deux-cartes-occasion/fiche.md) (23 nov.) : c'est le palier du haut. Ici, on le cite en une phrase et on y renvoie.
+- [32 Go de VRAM au moins cher](../deux-cartes-occasion/fiche.md) (30 nov., décalée le 16/11 : elle sort **après** celle-ci, on l'annonce au lieu d'y renvoyer) : c'est le palier du haut. Ici, on le cite en une phrase et on y renvoie.
 - [Le cadeau IA locale](../cadeau-ia-locale/fiche.md) (24 déc.) : c'est une machine entière, en paliers de budget. Il reprendra ces prix, mis à jour.
 
 ## Pistes (à sourcer)

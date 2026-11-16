@@ -1,5 +1,6 @@
 # Des petits modèles experts peuvent-ils battre les géants ?
 
+> **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > Fiche du 15/11/2026, à ta demande (remplir les créneaux radar de janvier). Placée au **jeu. 28 janv. 2027, 18 h**, **provisoire, à confirmer au radar**. Vidéo **calculée**. Idée 34 de [`strategie.md`](../../strategie.md), non notée (relevé YouTube du 15/11). Titre provisoire.
 
 **Inspiration** (vues relevées sur YouTube le 15/11) : Codacus, [*Is this how Local AI reaches Frontier Capabilities?*](https://www.youtube.com/watch?v=PZQWdlTi9B0) (12 K vues en 14 h, publiée le 14/11) : une équipe de petits modèles spécialisés sur une RTX 3060 de 12 Go, testée sur de vrais travaux. En français : Nerdy Kings, [*LFM3 dépasse Qwen3.5-9B avec 6× moins de paramètres*](https://www.youtube.com/watch?v=2R10nIG5S9k) (54 K en 13 jours).

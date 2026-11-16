@@ -1,0 +1,114 @@
+# RAM, VRAM ou mémoire unifiée : laquelle aide vraiment ton IA ?
+
+Version corrigée après revue indépendante Astra. Sources au16/11/2026, diffusion prévue31/12. Calculs et mesures publiques distincts ; aucune manipulation requise.
+
+<!-- METRICS -->
+**Voix : 1587 mots · 10:57 à 145 mots/min.** Les balises ne sont pas lues.
+
+| Partie | Début estimé |
+|---|---|
+| Résultat, question et plan | 0:00 |
+| Le modèle tient, la réponse attend encore | 0:41 |
+| Ce qui traverse la mémoire à chaque token | 2:31 |
+| Les experts changent la quantité de travail | 4:24 |
+| Une réserve commune au processeur et au GPU | 6:41 |
+| Quand le disque entre dans le trajet | 8:20 |
+| L’achat utile selon ta machine | 9:31 |
+<!-- /METRICS -->
+
+## Voix
+
+[VISUEL : Coder IQ1_M allégé ; Strata0.1.55/moteur0.1.54 ; RTX5070Ti16Gio, Ryzen7 9700X,31,2GioRAM ; chat court, médiane3essais, réflexion coupée ;70,4tok/s,02/11/2026. F6/F10]
+
+Une version Coder allégée atteint environ 70 tokens par seconde, avec une carte de 16 gigas et 32 gigas de RAM. Ces chiffres sont les leurs, je n’ai rien testé chez moi. Donc, pour ton prochain achat, faut-il plus de RAM, plus de VRAM, ou une mémoire unifiée ? [F6,F10]
+
+On compare la place nécessaire et le débit des données. Tu vas voir le calcul de débit, pourquoi les modèles à experts changent l'addition, puis les achats utiles selon ton PC. Et on termine avec le cas où ajouter de la RAM peut laisser ta réponse presque aussi lente.
+
+### Le modèle tient, la réponse attend encore
+
+[GRAPHIC] [VISUEL : une grande réserve, un robinet ; capacité en Go et débit en Go/s. F1–F3.]
+
+Si ton modèle tient déjà entièrement sur une bonne carte graphique, ajouter de la RAM ne transforme pas automatiquement son débit. Par contre, si la machine manque de mémoire pour charger le fichier ou garder la conversation, cette RAM supplémentaire peut rendre possible ce qui bloquait. Voilà les deux bénéfices à distinguer avant le panier.
+
+En fait, la capacité, c’est la taille de la réserve. Le débit, c'est la quantité qui peut en sortir chaque seconde. Tu peux avoir un énorme réservoir avec une petite arrivée au moteur. Et dans une IA locale, il faut à la fois garder les bonnes données et les apporter assez vite au calcul.
+
+Donc « j'ai 64 gigas » ne suffit pas à prévoir une vitesse. Il faut connaître leur type, leur organisation et la machine qui les utilise. Une seule barrette, une paire bien configurée et une mémoire partagée intégrée au processeur ne racontent pas le même trajet.
+
+Du coup, prenons un exemple calculé avec de la DDR5 à 5 600 mégatransferts par seconde. Sur deux canaux de 64 bits, le débit théorique atteint 89,6 gigaoctets par seconde. C'est une estimation depuis les caractéristiques ; la machine n'utilisera pas forcément tout ce débit en permanence. Donc augmenter seulement le nombre de gigas ne change pas cette formule.
+
+En face, la fiche d'une RTX 5080 annonce 960 gigaoctets par seconde pour sa mémoire graphique. Le nombre est beaucoup plus élevé. Sauf que cette réserve fait 16 gigas : tu ne peux pas y installer n'importe quel modèle avec n'importe quelle conversation. La vitesse et la place doivent être utiles en même temps.
+
+### Ce qui traverse la mémoire à chaque token
+
+[VISUEL : livre dense dont toutes les pages sont parcourues, puis calcul « 89,6 ÷ 17 ». F4.]
+
+Pour comprendre un modèle dense, imagine qu'on doive parcourir environ 17 gigaoctets de poids à chaque token. Avec notre débit théorique de RAM, la simple division donne environ 5 tokens par seconde. C'est un scénario simplifié, pas une mesure. On suppose une lecture complète, une conversation et aucun autre coût.
+
+Le calcul sert à expliquer pourquoi davantage de capacité ne suffit pas toujours. Si les mêmes données doivent toujours traverser le même passage, une réserve plus grande ne les transporte pas plus vite. Du coup, ton modèle peut enfin se charger tout en continuant à écrire lentement.
+
+Par contre, on ne va pas prédire chaque moteur avec cette division. Le calcul, le cache, la quantification et la manière de produire les tokens changent les coûts. Certains procédés vérifient plusieurs propositions ensemble. Plusieurs utilisateurs peuvent aussi partager une partie du travail. Donc la formule éclaire un cas précis, elle ne remplace pas les mesures.
+
+En fait, un rapport sur une carte de 12 gigas illustre une autre configuration, où le fichier et son placement changent ensemble. Un fichier qui déborde dans la RAM écrit autour de 13 tokens par seconde. Une copie plus compacte, entièrement sur le GPU, dépasse 42 dans ses essais. Mais le fichier et les réglages ont aussi changé : ce résultat ne permet pas d'accuser la RAM de tout l'écart.
+
+Voilà pourquoi la question « combien de gigas ? » arrive avec une deuxième : « où sont les données utilisées pendant la réponse ? » Si une petite partie reste sur un chemin lent et qu'on doit l'attendre à chaque token, elle peut peser lourd dans le résultat.
+
+### Les experts changent la quantité de travail
+
+[GRAPHIC] [VISUEL : grand classeur d'experts ; quelques dossiers seulement s'allument par token. F7/F9.]
+
+Sauf qu’avec un modèle à mélange d’experts, une partie seulement des poids est activée pour chaque token. Tous les experts doivent rester accessibles, mais chaque étape ne demande pas le travail de tout le monde. C'est ce qui permet d'envisager une grande réserve en RAM à côté d'une carte plus petite.
+
+Imagine une équipe de spécialistes. Pour une question donnée, on appelle seulement ceux dont on a besoin. Les autres restent disponibles pour la suite. Donc le nombre total de paramètres peut être grand sans que chaque token réclame le calcul de tous ces paramètres.
+
+Par contre, il reste deux contraintes. Il faut garder les experts quelque part, et apporter les bons au bon moment. Si le routage change beaucoup, si les experts utiles ne sont pas en mémoire rapide ou si le moteur les déplace mal, le trajet peut encore te faire attendre. Le mot MoE ne supprime aucun de ces coûts.
+
+Strata, par exemple, garde certains éléments et des experts sur la carte, les autres experts dans la RAM, et une table particulière sur le SSD. Le processeur peut calculer les experts hors GPU pendant que la carte traite sa partie. Du coup, le logiciel organise une coopération entre plusieurs ressources qui ont chacune leurs limites.
+
+C’est le contexte du résultat du début, avec le Coder allégé en IQ1_M. Un utilisateur sur une 5070 Ti de 16 gigas et environ 32 gigas de RAM publie 70,4 tokens par seconde en chat court. Sa réflexion est coupée. C'est une médiane de plusieurs essais, et il précise ne pas avoir vérifié la justesse. Donc cette mesure prouve une vitesse dans ce scénario, sans promettre la même qualité sur ton travail.
+
+La version conserve une partie des experts du modèle de départ. L’allégement et la compression participent donc au résultat, avec la répartition du travail. La RAM garde les experts qui ne sont pas sur la carte, et le processeur calcule leur partie. Le logiciel organise deux chemins de calcul, avec leurs échanges. [F7,F10]
+
+### Une réserve commune au processeur et au GPU
+
+[VISUEL : CPU et GPU autour d'une même réserve ; une partie est réservée au système. F3.]
+
+En fait, la mémoire unifiée change encore l’organisation. Sur les machines concernées, le processeur et le GPU accèdent à une réserve commune. Tu n'as plus la même séparation physique entre des barrettes d'un côté et la mémoire d'une carte dédiée de l'autre.
+
+Du coup, un gros modèle peut profiter d'une capacité qui serait coûteuse à obtenir sur une seule carte graphique. Mais le système, les applications et le modèle partagent cette réserve. Une machine annoncée avec 64 gigas ne promet pas 64 gigas entièrement libres pour ton IA.
+
+Sauf que cette organisation ne donne pas un débit identique à toutes les machines. Apple annonce par exemple 307 gigaoctets par seconde sur le Mac mini M5 Pro. Certaines configurations M6 du même Mac mini annoncent un autre débit. Donc le nom de la mémoire ne dispense pas de lire la fiche de la puce précise.
+
+Donc compare aussi la capacité réellement accessible au moteur. Le système peut garder une marge, et les outils n'utilisent pas tous la mémoire de la même manière. Ce qui compte pour toi, c'est le fichier, son contexte et le logiciel qui vont ensemble sur cette configuration.
+
+En fait, la mémoire unifiée peut répondre à un besoin de grosse capacité dans une machine compacte. Une carte dédiée peut rester très intéressante pour sa bande passante et les logiciels qui l'exploitent. Ce sont des compromis à relier à ton usage, avec une mesure sur le modèle choisi.
+
+### Quand le disque entre dans le trajet
+
+[VISUEL : stockage, RAM et VRAM ; une flèche de disque apparaît uniquement pour les éléments concernés. F7/F8.]
+
+Par contre, si la réserve déborde, le disque entre dans le trajet. Et certains moteurs y placent volontairement des données. Il peut servir au chargement initial, à des données gardées sur disque ou à un débordement quand la mémoire manque. Ces situations n'ont pas le même coût. Donc voir une activité disque pendant la génération ne prouve pas que tout le modèle manque de RAM.
+
+Dans un moteur qui lit une table particulière sur le SSD, une partie du trafic est prévue. Dans un autre cas, le système doit récupérer constamment des pages qu'il n'arrive plus à garder en mémoire. Le symptôme visible se ressemble ; l'explication peut changer. Et l'achat utile peut changer avec elle.
+
+Alors, que changent 32 gigas de plus ? Si le système devait relire le disque faute de place, ils peuvent supprimer cette attente. Si les mêmes poids étaient déjà en RAM, tu gardes le même débit de mémoire. Donc la même capacité ajoutée peut résoudre un manque de place, tout en laissant la vitesse d’accès inchangée.
+
+### L’achat utile selon ta machine
+
+[GRAPHIC] [VISUEL : trois profils, sans tarif inventé.]
+
+Alors, pour choisir, pars du matériel que tu as. Avec une bonne carte dont le modèle tient déjà en VRAM, regarde d'abord le moteur, le contexte et les réglages documentés. Ajouter de la RAM peut donner du confort aux autres applications ; le gain de génération n'est pas acquis.
+
+Par contre, avec une carte plus petite et un modèle à experts, la RAM peut devenir la réserve qui manque. Vérifie la capacité recommandée pour le fichier, la marge du système et le moteur capable de l'exploiter. La carte, le processeur et les échanges continuent de compter.
+
+Si tu pars de zéro et que tu veux de grands modèles dans un ordinateur compact, regarde les configurations à mémoire unifiée. Compare le coût complet, la capacité utile et les vitesses publiées sur ton modèle. La quantité de mémoire seule ne départage pas deux machines.
+
+Si cette vidéo t’a évité un mauvais achat, abonne-toi.
+
+[CROCHET : ton avis sur le compromis entre vitesse, capacité et simplicité. Facultatif.]
+
+La vidéo prévue le 18 janvier sur les modèles par taille de carte reprendra ce calcul par paliers concrets. Pour aujourd'hui, garde ces trois lignes avant d'acheter : la place du fichier, la place de la conversation et le trajet des données pendant la réponse. C'est là que tes gigas deviennent utiles. Allez, salut !
+
+
+## Crochets et production
+
+Avis personnel facultatif. Visuels : sources, jauges et calculs uniquement. Coder expérimental allégé explicitement identifié ;70,4t/s ne constitue pas une mesure de qualité. Le calcul89,6/17 est un scénario de lecture complète, pas une limite universelle. Pas de classement de vitesse entre fichiers ou architectures différents.

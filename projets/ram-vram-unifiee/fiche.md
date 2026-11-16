@@ -1,5 +1,8 @@
 # RAM, VRAM ou mémoire unifiée : laquelle fait tourner ton IA le plus vite ?
 
+> **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
+> **16/11, ta demande** : la vidéo recule au **jeu. 31 déc., 18 h** (créneau radar), programmée d'avance. Elle sort donc **après** DeepSeek (3 déc.) et le [Mac mini](../mac-mini-ia/fiche.md) (10 déc.) : elle ne les « prépare » plus, elle y renvoie.
+>
 > Fiche du 14/11/2026, à ta demande. Placée au **jeu. 3 déc., 18 h**, à la place de [DeepSeek V4.1 Flash](../cout-deepseek-flash/fiche.md), qui sort désormais juste avant, le lun. 30 nov. (15/11) : DeepSeek montre le résultat (sans carte graphique, 64 Go de RAM), et cette vidéo explique pourquoi. Elle prépare le [Mac mini](../mac-mini-ia/fiche.md) (10 déc.) en posant la mémoire unifiée. Vidéo **calculée**, plus les mesures de ton test [Strata](../strata-test/fiche.md) (16 nov.). Idée 29 de [`strategie.md`](../../strategie.md), non notée (ta demande du 14/11). Titre provisoire.
 
 **Inspiration** : Locally, [*RAM vs VRAM vs Unified Memory (Local AI)*](https://www.youtube.com/watch?v=WpHKek1GV70) (titre de départ : *Which Memory Runs Local AI Fastest (RAM, VRAM, Unified)*), 12 min 50 s, publiée le 11/11 : 1 991 vues en 3 jours, avec 4,5 K abonnés (page YouTube, 14/11).

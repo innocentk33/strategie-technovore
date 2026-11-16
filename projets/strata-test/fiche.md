@@ -1,5 +1,7 @@
 # Le meilleur modèle possible pour 16 Go de VRAM (Strata, testé)
 
+> **Publiée le 16/11/2026 :** [Voir sur YouTube](https://www.youtube.com/watch?v=892vB0mRY8U)
+
 > **11/11, ta décision** : nouveau titre, et un angle grand public. Ta 5080 est une carte chère, que peu de gens ont : la miniature parle à toute carte de 16 Go (5060 Ti, 4060 Ti, RX 9060 XT…). À tenir dans la vidéo : le test demande aussi **32 Go de RAM**, et la vitesse dépend de la carte (une 5070 Ti mesurée à ~70 tok/s, T-sources). Ancien titre de travail : *Je teste le meilleur modèle possible avec Strata sur ma 5080*.
 
 > Planning : [`calendrier.md`](../../calendrier.md), **lun. 16 nov. 2026 à 18 h**. Ta décision du 05/11 : la suite de [« 16 Go suffisent »](../claude-ou-mon-pc-1/fiche.md) (9 nov.), et une exception au « tout calculé » : celle-ci est **filmée chez toi**.

@@ -1,0 +1,972 @@
+1
+00:00:00,108 --> 00:00:03,350
+These tests were done with
+Qwen 3.8 Flash Next,
+
+2
+00:00:03,370 --> 00:00:06,831
+which runs on a 16 GB card,
+at almost 70 tokens per second.
+
+3
+00:00:06,851 --> 00:00:08,400
+And all of that from a single prompt.
+
+4
+00:00:08,420 --> 00:00:09,955
+Thing is, it's only half a model.
+
+5
+00:00:09,975 --> 00:00:11,830
+So, does it replace Claude?
+
+6
+00:00:11,850 --> 00:00:13,877
+I'm going to show you in this video
+what it managed to do,
+
+7
+00:00:13,897 --> 00:00:16,383
+why it's so strong and how fast
+it runs,
+
+8
+00:00:16,403 --> 00:00:17,694
+and how to install it at home.
+
+9
+00:00:17,714 --> 00:00:20,316
+And at the end, the mistakes that cost me
+quite a bit of time.
+
+10
+00:00:20,336 --> 00:00:21,629
+First, the results.
+
+11
+00:00:21,649 --> 00:00:24,886
+On the left, that's Pi, the tool that lets
+the AI write files all by itself.
+
+12
+00:00:24,906 --> 00:00:27,260
+On the right, that's Strata's counter,
+
+13
+00:00:27,302 --> 00:00:30,337
+the program that runs the model,
+in tokens per second.
+
+14
+00:00:30,357 --> 00:00:32,850
+A token is roughly
+three quarters of a word.
+
+15
+00:00:32,870 --> 00:00:36,268
+I write my prompt in English because
+it's much more effective,
+
+16
+00:00:36,288 --> 00:00:39,670
+since its docs say it's weaker
+in other languages,
+
+17
+00:00:39,690 --> 00:00:41,149
+and I never touch the code.
+
+18
+00:00:41,169 --> 00:00:44,558
+If it gets stuck, I nudge it with a simple
+phrase or word: "continue,"
+
+19
+00:00:44,578 --> 00:00:48,100
+and I count every nudge like one more
+coin at the arcade.
+
+20
+00:00:48,137 --> 00:00:50,041
+The first test is a 3D island.
+
+21
+00:00:50,061 --> 00:00:51,936
+It rotates with the mouse, it zooms,
+
+22
+00:00:51,956 --> 00:00:55,249
+and when I press the N key,
+night falls, with stars.
+
+23
+00:00:55,269 --> 00:00:58,406
+It wrote it in 15 and a half minutes,
+with no retries at all.
+
+24
+00:00:58,426 --> 00:00:59,482
+Next, the brick breaker.
+
+25
+00:00:59,502 --> 00:01:01,210
+It has lives, a game over screen,
+
+26
+00:01:01,230 --> 00:01:05,473
+sound effects, and power-ups that widen
+the paddle or triple the ball.
+
+27
+00:01:05,493 --> 00:01:08,244
+That one it did in 8 minutes,
+also with no retries.
+
+28
+00:01:08,264 --> 00:01:11,372
+Then I made the site for a travel agency
+that doesn't exist,
+
+29
+00:01:11,392 --> 00:01:14,123
+with my own photos, Kilimanjaro
+big on the home page,
+
+30
+00:01:14,143 --> 00:01:17,153
+destinations with their prices,
+and traveler testimonials.
+
+31
+00:01:17,173 --> 00:01:18,972
+It really looks like a real agency site.
+
+32
+00:01:18,992 --> 00:01:23,513
+It took 17 minutes, but following a plan
+that I'd written beforehand with Claude,
+
+33
+00:01:23,533 --> 00:01:25,526
+and I'll explain why I did that
+a bit later.
+
+34
+00:01:25,546 --> 00:01:26,928
+And the hardest one: a mini-Minecraft.
+
+35
+00:01:26,948 --> 00:01:29,506
+You walk around a world made of cubes,
+with trees and terrain,
+
+36
+00:01:29,526 --> 00:01:32,787
+you jump, you break blocks, you can even
+add blocks of dirt, build,
+
+37
+00:01:32,807 --> 00:01:34,742
+add stone, sand, etc.
+
+38
+00:01:34,817 --> 00:01:37,847
+Even the pixel textures are
+generated in code,
+
+39
+00:01:37,913 --> 00:01:39,499
+without it ever seeing what it draws.
+
+40
+00:01:39,519 --> 00:01:42,603
+That one, though, took 3 retries
+and just 35 minutes.
+
+41
+00:01:42,623 --> 00:01:45,772
+To understand these results,
+you need to know where this model comes from.
+
+42
+00:01:45,792 --> 00:01:48,611
+Qwen 3.8 Flash Next, a preview of Qwen 4,
+
+43
+00:01:48,660 --> 00:01:51,494
+released in August to show off
+its new architecture.
+
+44
+00:01:51,514 --> 00:01:55,615
+And in coding, according to Qwen's tests,
+it beats Qwen 3.8 27B,
+
+45
+00:01:55,652 --> 00:01:58,242
+the model I told you about last Thursday.
+
+46
+00:01:58,346 --> 00:02:03,346
+On a multi-language coding test,
+it scores 81 versus 74 for the 27B.
+
+47
+00:02:03,428 --> 00:02:05,327
+Except at my place, it doesn't run in full.
+
+48
+00:02:05,347 --> 00:02:08,147
+With 32 GB of RAM, I can only
+take the Coder,
+
+49
+00:02:08,167 --> 00:02:11,826
+which is the same model cut in half
+and kept for code.
+
+50
+00:02:11,904 --> 00:02:14,156
+Its authors themselves say
+it's experimental
+
+51
+00:02:14,176 --> 00:02:16,525
+and weaker outside of code
+and English.
+
+52
+00:02:16,545 --> 00:02:18,479
+But on the main coding test,
+
+53
+00:02:18,499 --> 00:02:21,799
+they still keep 95% of the full
+model's score.
+
+54
+00:02:21,925 --> 00:02:23,111
+That's their number.
+
+55
+00:02:23,131 --> 00:02:24,935
+What it actually does, you just saw.
+
+56
+00:02:24,955 --> 00:02:27,689
+And even cut in half, it's still
+way bigger than my card.
+
+57
+00:02:27,709 --> 00:02:31,517
+Last Monday, I told you 16 GB is enough
+if you pick the right file.
+
+58
+00:02:31,537 --> 00:02:32,831
+So, how does it fit?
+
+59
+00:02:32,851 --> 00:02:36,148
+Well, the model is split into
+hundreds of little specialists
+
+60
+00:02:36,168 --> 00:02:37,593
+called experts.
+
+61
+00:02:37,613 --> 00:02:40,119
+And for each word, it only wakes up
+a few of them.
+
+62
+00:02:40,139 --> 00:02:44,084
+Out of 125 billion parameters,
+only 6 billion are at work.
+
+63
+00:02:44,104 --> 00:02:46,957
+That's what lets it be both huge
+and fast.
+
+64
+00:02:46,977 --> 00:02:49,374
+And Strata is the program
+that sorts all of that out.
+
+65
+00:02:49,394 --> 00:02:53,210
+The card keeps the most-used experts,
+the RAM keeps the rest,
+
+66
+00:02:53,230 --> 00:02:55,461
+and a big table stays on the SSD.
+
+67
+00:02:55,611 --> 00:02:58,697
+On top of that, Strata is free
+and open source.
+
+68
+00:02:59,058 --> 00:03:02,451
+Now, about speed. To measure it
+without the tools in the way,
+
+69
+00:03:02,471 --> 00:03:06,620
+I asked it for a short story about
+a dragon who loves video games.
+
+70
+00:03:06,640 --> 00:03:11,105
+Almost no thinking, a short answer,
+and the monitor shows 51 tokens per second.
+
+71
+00:03:11,125 --> 00:03:14,619
+During the real tests, with all the code,
+it's even faster, weirdly.
+
+72
+00:03:14,639 --> 00:03:18,621
+Close to 70 on average, and
+depending on the test, 43 to 84.
+
+73
+00:03:18,773 --> 00:03:22,220
+For a reference point, a user with
+a 5070 Ti,
+
+74
+00:03:22,240 --> 00:03:25,313
+with the same processor as me
+and about the same RAM,
+
+75
+00:03:25,333 --> 00:03:28,535
+measures about 70 tokens per second
+with this model.
+
+76
+00:03:28,655 --> 00:03:32,110
+He turned thinking off,
+and he doesn't check that the code works.
+
+77
+00:03:32,130 --> 00:03:33,398
+Mine is in the same range,
+
+78
+00:03:33,418 --> 00:03:36,216
+but with thinking on,
+and code that has to work.
+
+79
+00:03:36,236 --> 00:03:40,875
+And if your card is more affordable, like
+a 16 GB Radeon, with 30 GB of RAM,
+
+80
+00:03:40,895 --> 00:03:45,089
+another user measures about 37 tokens
+per second, still with this model.
+
+81
+00:03:45,109 --> 00:03:47,359
+Me, I have a 5080, a high-end card,
+
+82
+00:03:47,379 --> 00:03:51,539
+and its memory is 2 times faster
+than a 5060 Ti's, for example.
+
+83
+00:03:51,623 --> 00:03:53,817
+So my numbers are more the high end
+of the range.
+
+84
+00:03:53,837 --> 00:03:56,718
+On your 16 GB card, it runs too,
+just slower.
+
+85
+00:03:56,738 --> 00:03:59,145
+And speed drops as the
+conversation grows.
+
+86
+00:03:59,165 --> 00:04:01,545
+The project itself publishes that.
+
+87
+00:04:01,628 --> 00:04:06,869
+On another machine, with an older engine,
+the Coder drops from 59 to 43 tokens/s.
+
+88
+00:04:06,962 --> 00:04:09,841
+So basically, the more code the agent
+reads, the slower it gets.
+
+89
+00:04:09,861 --> 00:04:10,958
+That's why I picked Pi:
+
+90
+00:04:10,978 --> 00:04:15,270
+its instructions are 1500 tokens,
+versus 7400 for OpenCode.
+
+91
+00:04:15,326 --> 00:04:17,390
+That's less for it to reread every time.
+
+92
+00:04:17,410 --> 00:04:20,820
+To install it, Strata has a simple rule:
+your RAM must hold the experts,
+
+93
+00:04:20,840 --> 00:04:22,746
+plus about ten GB for Windows.
+
+94
+00:04:22,766 --> 00:04:26,109
+That's why with 32 GB,
+its docs only offer me the Coder.
+
+95
+00:04:26,129 --> 00:04:28,389
+Then there are about sixty GB
+to download.
+
+96
+00:04:28,409 --> 00:04:31,198
+At my place, between clicking Download
+and my first message,
+
+97
+00:04:31,218 --> 00:04:32,986
+a bit less than half an hour went by.
+
+98
+00:04:33,006 --> 00:04:36,515
+Before launching it, you have to close
+everything, browser included,
+
+99
+00:04:36,535 --> 00:04:41,092
+because while it writes,
+my RAM is full at 30.8 GB out of 31.
+
+100
+00:04:41,155 --> 00:04:44,190
+And look at this box on the monitor,
+it's the disk reading.
+
+101
+00:04:44,210 --> 00:04:45,535
+At rest, it's at zero.
+
+102
+00:04:45,555 --> 00:04:48,310
+As soon as it writes, it goes up to
+around 200 MB per second.
+
+103
+00:04:48,330 --> 00:04:51,218
+The RAM is full, so part of it
+goes through the SSD.
+
+104
+00:04:51,238 --> 00:04:52,322
+Next, I plug in Pi.
+
+105
+00:04:52,342 --> 00:04:55,846
+Strata's app gives me an address
+and I put it in Pi's file
+
+106
+00:04:55,866 --> 00:04:57,126
+with the model's name.
+
+107
+00:04:57,146 --> 00:04:59,429
+As for the thinking, though,
+it's a bit trickier.
+
+108
+00:04:59,449 --> 00:05:01,529
+This model thinks for a long time
+before it writes,
+
+109
+00:05:01,549 --> 00:05:04,794
+and that thinking counts toward the maximum
+length of its answer.
+
+110
+00:05:04,814 --> 00:05:06,694
+By default, Pi gives it 16,000 tokens,
+
+111
+00:05:06,714 --> 00:05:09,188
+and that's also what Strata would
+write for it on my machine.
+
+112
+00:05:09,208 --> 00:05:12,983
+A full game plus the thinking can
+overflow, and the file stops halfway.
+
+113
+00:05:13,003 --> 00:05:17,067
+So before the first test, I raised
+that limit by hand, to 32,000 tokens.
+
+114
+00:05:17,087 --> 00:05:19,000
+All the files are in the description.
+
+115
+00:05:19,020 --> 00:05:20,838
+And right there is my first mistake.
+
+116
+00:05:20,858 --> 00:05:22,862
+32,000 tokens wasn't enough.
+
+117
+00:05:22,882 --> 00:05:25,598
+Once, it got cut off dead
+in the middle of the site,
+
+118
+00:05:25,618 --> 00:05:29,621
+7 minutes lost, and then
+it had to write the file in chunks.
+
+119
+00:05:29,768 --> 00:05:32,080
+So if you redo this,
+go even higher.
+
+120
+00:05:32,100 --> 00:05:33,995
+The site, though, wasn't
+done on the first try.
+
+121
+00:05:34,015 --> 00:05:37,035
+On the first try, I ask it for
+a home screen that slowly zooms,
+
+122
+00:05:37,055 --> 00:05:39,357
+6 destinations, reviews that
+scroll by themselves,
+
+123
+00:05:39,377 --> 00:05:42,774
+a full-screen gallery, and the whole
+thing has to fit on a phone.
+
+124
+00:05:42,794 --> 00:05:45,056
+It writes everything in half an hour,
+but in English,
+
+125
+00:05:45,076 --> 00:05:46,993
+even though I asked for French.
+
+126
+00:05:47,013 --> 00:05:48,663
+And at the end, it wants to test itself.
+
+127
+00:05:48,683 --> 00:05:52,393
+It opens an invisible Chrome browser,
+and Chrome never hands control back.
+
+128
+00:05:52,413 --> 00:05:55,598
+So it stayed stuck for almost 2 hours
+until I stopped it.
+
+129
+00:05:55,618 --> 00:05:58,940
+For the second try, I gave
+the photos to Claude and asked it
+
+130
+00:05:58,960 --> 00:06:00,836
+to draw me up a plan for this model,
+
+131
+00:06:00,856 --> 00:06:03,763
+with the steps and all the text
+already written in French.
+
+132
+00:06:03,783 --> 00:06:07,015
+The local model only had to follow
+the plan, step by step.
+
+133
+00:06:07,035 --> 00:06:10,242
+That gave the site you saw,
+in 17 minutes, with zero errors,
+
+134
+00:06:10,262 --> 00:06:13,193
+even though it got stuck 2 more times
+because of Chrome.
+
+135
+00:06:13,213 --> 00:06:16,438
+You do need to know that a few lines
+of the page were already in the plan.
+
+136
+00:06:16,458 --> 00:06:19,542
+And the plan changed the order.
+Well, there, Claude got it wrong.
+
+137
+00:06:19,562 --> 00:06:22,549
+There was no more full-screen gallery,
+and the reviews no longer scrolled.
+
+138
+00:06:22,569 --> 00:06:24,750
+Instead, there's a slideshow
+on the home page
+
+139
+00:06:24,770 --> 00:06:27,264
+and a card that opens
+for each destination.
+
+140
+00:06:27,284 --> 00:06:29,162
+For the mini-Minecraft, the mistake
+was its own.
+
+141
+00:06:29,182 --> 00:06:32,365
+On the first try, it tells me:
+"file written and checked."
+
+142
+00:06:32,385 --> 00:06:34,799
+Except the folder was empty,
+it hadn't written anything at all.
+
+143
+00:06:34,819 --> 00:06:35,924
+It took 3 retries,
+
+144
+00:06:35,944 --> 00:06:39,364
+and on the last one, it even found
+a bug in its own code.
+
+145
+00:06:39,384 --> 00:06:42,611
+So, in total, with all those freezes
+on Chrome, I spent nearly 2 hours
+
+146
+00:06:42,631 --> 00:06:44,962
+waiting for nothing. But actually,
+it wasn't because of the code,
+
+147
+00:06:44,982 --> 00:06:46,799
+it was more because of the tool:
+
+148
+00:06:46,819 --> 00:06:49,508
+Pi was waiting for an answer
+that Chrome never gave.
+
+149
+00:06:49,528 --> 00:06:52,510
+So tell it not to open a browser
+to test itself,
+
+150
+00:06:52,530 --> 00:06:55,188
+and if it stays stuck more than 3 minutes
+on a command,
+
+151
+00:06:55,208 --> 00:06:56,683
+just press Esc.
+
+152
+00:06:56,703 --> 00:06:59,213
+But what interested me most
+about the model, actually,
+
+153
+00:06:59,233 --> 00:07:03,195
+is that it writes its own test scripts
+without anyone asking it to.
+
+154
+00:07:03,215 --> 00:07:04,135
+So, what about Claude?
+
+155
+00:07:04,155 --> 00:07:07,553
+After the fiasco it caused
+by changing my instructions,
+
+156
+00:07:07,573 --> 00:07:09,741
+it was still super efficient.
+
+157
+00:07:09,806 --> 00:07:11,660
+I didn't give it my prompts
+word for word,
+
+158
+00:07:11,680 --> 00:07:13,728
+so I'm not going to stage a fake showdown.
+
+159
+00:07:13,748 --> 00:07:17,003
+I just asked it for a travel site
+with my photos, in one sentence.
+
+160
+00:07:17,023 --> 00:07:20,053
+It did it in under 2 and a half minutes,
+in French, and it holds up.
+
+161
+00:07:20,073 --> 00:07:22,033
+My model, meanwhile, took half an hour,
+
+162
+00:07:22,053 --> 00:07:24,668
+and in English, with a much
+more detailed request.
+
+163
+00:07:24,688 --> 00:07:26,961
+On my machine, the engine never crashed
+during my tests.
+
+164
+00:07:26,981 --> 00:07:28,889
+For others, that's not always the case.
+
+165
+00:07:28,909 --> 00:07:31,947
+On GitHub, a still-open ticket
+describes the engine crashing
+
+166
+00:07:31,967 --> 00:07:34,770
+with this Coder on certain
+long requests.
+
+167
+00:07:34,790 --> 00:07:37,611
+Several users hit it
+on an 8 to 12 GB card,
+
+168
+00:07:37,631 --> 00:07:39,793
+and the error message blames the RAM.
+
+169
+00:07:39,813 --> 00:07:42,658
+Except actually, users found
+the real cause:
+
+170
+00:07:42,678 --> 00:07:44,674
+it's an engine bug.
+A fix has been proposed,
+
+171
+00:07:44,694 --> 00:07:47,059
+but it's not in the version
+I tested yet.
+
+172
+00:07:47,079 --> 00:07:51,522
+A 5080 user also reports
+another error: "non-finite logits,"
+
+173
+00:07:51,542 --> 00:07:53,453
+with other files of the same model.
+
+174
+00:07:53,473 --> 00:07:57,447
+And another tester saw this Coder
+fail a coding task in Claude Code,
+
+175
+00:07:57,467 --> 00:07:59,874
+where other versions of the model
+got it right.
+
+176
+00:07:59,894 --> 00:08:01,529
+Mind you, Strata is very young:
+
+177
+00:08:01,549 --> 00:08:06,370
+the project was created on September 24,
+and it ships a version every 2 to 3 days.
+
+178
+00:08:06,436 --> 00:08:07,588
+So note your version carefully.
+
+179
+00:08:07,608 --> 00:08:09,934
+And if it breaks on your end,
+copy the exact message,
+
+180
+00:08:09,954 --> 00:08:13,356
+because that's how the cause
+of this bug was found.
+
+181
+00:08:13,376 --> 00:08:16,656
+So, does it replace my subscription
+or maybe even yours?
+
+182
+00:08:16,676 --> 00:08:17,969
+I don't think it fully does.
+
+183
+00:08:17,989 --> 00:08:20,384
+That said, with the 20-dollar-a-month
+subscription,
+
+184
+00:08:20,404 --> 00:08:24,079
+Claude can write the plan and the local model
+runs it on your card.
+
+185
+00:08:24,099 --> 00:08:27,744
+That's exactly what I do,
+and that's exactly what saved the site.
+
+186
+00:08:27,764 --> 00:08:30,066
+And even without a plan, it does very well:
+
+187
+00:08:30,086 --> 00:08:32,550
+the island, the brick breaker, all done
+quickly and with no retries,
+
+188
+00:08:32,570 --> 00:08:34,051
+and even the mini-Minecraft.
+
+189
+00:08:34,071 --> 00:08:37,179
+So, if this video saved you from
+a bad purchase, subscribe.
+
+190
+00:08:37,199 --> 00:08:39,606
+And if you want to redo it tonight at home,
+here's the list:
+
+191
+00:08:39,626 --> 00:08:42,560
+1, you need a card with 12 to 16 GB,
+
+192
+00:08:42,580 --> 00:08:45,368
+maybe we'll try to do it with
+an 8 GB card,
+
+193
+00:08:45,388 --> 00:08:48,903
+at least 32 GB of RAM, and about 90 GB
+free on the disk.
+
+194
+00:08:48,923 --> 00:08:51,901
+2, you install the Strata app,
+the link is in the description.
+
+195
+00:08:51,921 --> 00:08:54,791
+In its model list, it tells you
+whether each one fits on your PC
+
+196
+00:08:54,811 --> 00:08:56,419
+before you even download it.
+
+197
+00:08:56,439 --> 00:08:58,852
+3, if you take the Coder, without the images,
+
+198
+00:08:58,872 --> 00:09:02,018
+and before launching, you close everything,
+browser included.
+
+199
+00:09:02,038 --> 00:09:04,790
+4, you plug in Pi with the address
+the app gives you,
+
+200
+00:09:04,810 --> 00:09:08,744
+and you raise your response limits
+higher than my 32,000 tokens.
+
+201
+00:09:08,842 --> 00:09:10,082
+The file is in the description.
+
+202
+00:09:10,102 --> 00:09:12,387
+And if you have more RAM,
+according to the docs,
+
+203
+00:09:12,407 --> 00:09:15,367
+at 48 GB, you move up to the small sizes
+of the full model,
+
+204
+00:09:15,387 --> 00:09:17,126
+and at 64, you can take them all.
+
+205
+00:09:17,146 --> 00:09:21,193
+And if this is your very first local AI,
+start with the video on LM Studio instead,
+
+206
+00:09:21,213 --> 00:09:22,436
+I'll put it right there.
+
+207
+00:09:22,456 --> 00:09:25,830
+See you next time for another
+video. Bye!

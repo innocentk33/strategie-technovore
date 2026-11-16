@@ -1,5 +1,8 @@
 # Combien coûte DeepSeek V4.1 Flash chez toi ?
 
+> **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
+> **16/11, ta demande** : la vidéo recule au **jeu. 3 déc., 18 h** (le 30 nov. va à [32 Go de VRAM](../deux-cartes-occasion/fiche.md)). [RAM, VRAM ou mémoire unifiée](../ram-vram-unifiee/fiche.md) ne la suit plus : elle passe au jeu. 31 déc. L'explication « pourquoi la RAM suffit ici » (un MoE ne lit qu'une partie de ses poids) doit donc tenir en quelques phrases dans cette vidéo.
+>
 > **15/11, ta demande : nouvel angle et nouvelle date.** Titre provisoire : *DeepSeek V4.1 Flash sans carte graphique : 64 Go de RAM suffisent ?* La vidéo sort le **lun. 30 nov., 18 h** (avancée du 18 janv.), parce que le modèle est déjà sorti et qu'en janvier il serait vieux. Elle sort juste avant [RAM, VRAM ou mémoire unifiée](../ram-vram-unifiee/fiche.md) (3 déc.), qui explique pourquoi la RAM suffit ici.
 >
 > **Inspiration** : Kai, [*Deepseek V4.1 Flash Runs With No GPU Just 64GB RAM*](https://www.youtube.com/watch?v=wiMs92u-dk0), 29 min 52 s, publiée le 13/11 : **60 154 vues en 2 jours, avec 74,4 K abonnés** (page YouTube, 15/11). Ce qu'il montre : llama-modchip, des correctifs sur llama.cpp, fait tenir DeepSeek V4 Flash 0731 (284B, environ 13B actifs par mot) dans un fichier de 56,93 Go à 1,71 bit par poids. Ça tourne à 8,66 tok/s sur un portable Ryzen 9 9955HX avec 64 Go de DDR5, sans carte graphique, et deux personnes extérieures l'ont reproduit. Le piège : d'après les notes de version, ce fichier est 60,8 % moins bon en perplexité (7,30 contre 4,54) que les poids d'origine. L'échelle d'AtomicChat va de 79 Go (21 % moins bon) à 144 Go (à 0,2 % près). Selon lui, passer de 64 à 96 Go de RAM coûte 460 $ de plus.
@@ -21,7 +24,7 @@
 
 ## ⚠️ Le modèle du moment peut changer
 
-Depuis le 15/11, la vidéo sort le 30 nov. : le modèle est fixé, c'est DeepSeek V4.1 Flash.
+Depuis le 16/11, la vidéo sort le 3 déc. (le 30 nov. depuis le 15/11) : le modèle est fixé, c'est DeepSeek V4.1 Flash.
 
 ## Points à vérifier
 

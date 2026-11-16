@@ -1,0 +1,311 @@
+Sur une carte de 4 gigas,
+un utilisateur publie 96 tokens par seconde avec un petit
+Qwen en 4 bits.
+Sur la même machine,
+le modèle plus gros déborde et ralentit.
+Donc ta petite carte peut encore servir,
+si le fichier correspond à sa mémoire.
+
+Ces chiffres sont les leurs,
+je n’ai rien testé chez moi.
+Alors,
+quel modèle choisir avec les gigas que tu possèdes déjà ?
+
+[VISUEL : source publique : RTX 3050 Ti portable, Qwen 3.5-2B Q4_K_M, contexte 4 096, médiane de trois passages chauds.]
+
+On garde un candidat pour 4,
+6,
+8,
+12 et 16 gigas,
+sa taille de fichier et un usage concret.
+On regarde aussi les vitesses publiées et ce qu’elles ne
+permettent pas de promettre.
+Et à la fin,
+tu pourras choisir où garder de la place :
+dans les poids du modèle ou dans la conversation.
+
+Avec 4 gigas,
+le premier candidat est Qwen 3.5-2B en Q4_K_M.
+Son fichier de poids fait 1,28 giga.
+Donc il laisse davantage de place que les modèles plus encombrants.
+Ce chiffre ne comprend pas à lui seul la conversation,
+le logiciel et toutes les fonctions de vision.
+
+Le résultat du début vient d’un portable avec une RTX
+3050 Ti de 4 gigas,
+32 gigas de RAM et Ubuntu.
+L’utilisateur mesure une génération chaude,
+après chargement,
+avec Ollama,
+sur un contexte de 4096 tokens.
+La valeur est la médiane de 3 passages.
+C’est une mesure publiée sur cette machine,
+avec ce modèle.
+
+[VISUEL : poids 1,28 Go d’un côté ; mémoire chargée ≈ 2,4 Go dans la source de l’autre ; unités et réglages distingués.]
+
+En fait,
+les 2 nombres n’ont pas le même rôle.
+La taille du téléchargement t’aide à choisir le fichier.
+L’occupation pendant le fonctionnement t’aide à comprendre ce qui reste
+dans la carte.
+Les poids ne sont pas seuls au bureau.
+Donc le reste de la jauge ne constitue pas une
+réserve entièrement disponible pour ajouter des milliards de paramètres.
+
+L’usage réaliste pour ce palier,
+c’est une petite demande bien cadrée :
+reformuler un message,
+expliquer un paragraphe,
+proposer un brouillon court.
+Le modèle peut répondre vite et se tromper quand même.
+Donc le débit ne remplace pas la vérification du contenu.
+
+Le même utilisateur montre aussi ce qui se passe quand
+il monte en taille :
+son 4B atteint 25 tokens par seconde,
+avec une partie du travail passée au processeur.
+On observe donc ici une limite matérielle,
+sans mesure comparative de qualité.
+Le plus gros modèle peut demander plus d’attente sans rendre
+le même service.
+Par contre,
+ce résultat ne mesure pas la justesse des réponses de chacun :
+pour une erreur de calcul ou une information importante,
+la vérification reste nécessaire.
+
+Du coup,
+le bon choix sur 4 gigas est souvent celui qui
+garde une marge.
+Si un autre programme occupe déjà la mémoire,
+le modèle dispose de moins de place.
+Et si tu ajoutes des documents ou des fonctions de vision,
+le besoin augmente encore.
+
+[VISUEL : jauge 4 Go, petite marge, contexte et projecteur séparés.]
+
+Avec 6 gigas,
+on peut regarder Qwen 3.5-4B en Q4_K_M.
+Le fichier pèse 2,74 gigas.
+C’est un candidat pour de petites demandes de texte,
+avec de la place à conserver pour le reste du fonctionnement.
+Du coup,
+la marge réelle dépend du contexte choisi.
+
+Une publication sur une RTX 4050 de portable avec 6
+gigas donne environ 50 tokens par seconde sur un Qwen 4B,
+selon la longueur du contexte.
+Mais le format exact n’est pas identifié dans la ligne de résultats.
+Donc cette mesure décrit la configuration publiée ;
+elle ne devient pas une vitesse promise pour notre fichier.
+
+Par contre,
+elle rappelle une chose utile :
+la conversation peut changer le débit.
+La même famille de modèle n’affiche pas forcément la même
+vitesse au début et après plusieurs échanges.
+On garde donc le contexte à côté du nombre de tokens.
+
+Pour quelqu’un qui résume de petits textes,
+cette marge peut compter davantage que quelques paramètres supplémentaires.
+En fait,
+le fichier choisi doit laisser au moteur la place nécessaire
+à la conversation.
+Le nom du modèle vient avec cette condition.
+
+[VISUEL : palier 6 Go, Qwen 4B, 2,74 Go ; vitesse de la source séparée, format non identifié.]
+
+Il faut aussi savoir quel fichier on compare.
+Le nom Qwen 4B peut désigner plusieurs compressions.
+Une version 8 bits et une version 4 bits n’occupent
+pas la même place.
+Du coup,
+« j’ai le même modèle » ne suffit pas pour
+expliquer 2 résultats différents.
+
+Une application peut proposer plusieurs versions côte à côte.
+Donc la bonne ligne contient le modèle,
+la compression et le nom du fichier.
+
+Avec 8 gigas,
+le candidat suivant est Qwen 3.5-9B en Q4_K_M.
+Le fichier de poids est affiché 5,68 gigas.
+Donc la question devient plus serrée :
+combien reste-t-il pour la conversation,
+le bureau et les allocations du logiciel ?
+
+Une source publie son propre banc d’essai sur une RTX
+4060 de 8 gigas,
+avec 32 gigas de RAM.
+En génération courte,
+elle obtient 45,6 tokens par seconde.
+Avec 16000 tokens déjà présents dans le contexte,
+elle relève 41,6.
+En fait,
+cette mesure concerne un Q4_K_M,
+avec le moteur llama.cpp et l’accélération CUDA.
+
+[VISUEL : profondeur 0 → 16 K, génération 45,6 → 41,6 ; préremplissage dans une autre colonne.]
+
+Ces 2 valeurs sont 2 lignes de la même série
+publiée par un auteur.
+Mais elles montrent un effet concret :
+le débit du début n’est pas automatiquement celui d’une conversation remplie.
+La lecture du prompt est encore une autre colonne ;
+elle ne doit pas être confondue avec l’écriture de la réponse.
+
+En fait,
+c’est un palier intéressant pour expliquer des textes et garder
+un assistant généraliste.
+On monte en capacité de modèle,
+avec un fichier encore assez petit pour laisser une partie
+de la carte disponible.
+Mais le nombre de milliards ne garantit pas qu’il remplacera
+un service très puissant sur toutes les questions.
+
+Si tu possèdes déjà une carte de 8 gigas,
+le premier achat à éviter,
+c’est parfois une carte neuve alors que le bon fichier
+répond à ton besoin.
+Une nouvelle référence peut rendre le travail plus rapide,
+mais il faut savoir quelle limite on cherche à résoudre.
+
+Si cette vidéo t’a évité un mauvais achat,
+abonne-toi.
+
+Le Qwen 27B très compressé peut aussi attirer sur ce palier.
+On l’a traité à part,
+avec son prix en qualité et en mémoire de conversation.
+Ici,
+le 9B sert de candidat plus modeste ;
+on garde une réserve pour la conversation.
+
+[VISUEL : grosmodèlecompressé à côté du 9 B ;objectifusageplutôtquerecord.]
+
+Avec 12 gigas,
+le candidat choisi change aussi d’usage.
+Qwen 2.5-Coder-14B en Q4_K_M est spécialisé dans le code.
+Son fichier est affiché 8,99 gigas.
+Donc il reste une marge à partager entre le contexte
+et le fonctionnement du moteur.
+
+Une mesure publiée sur une RTX 3060 de 12 gigas
+obtient environ 35 tokens par seconde,
+avec Ollama sous Windows,
+un cache 8 bits et un contexte de 16000 tokens.
+La publication date du 28 août 2026.
+Elle décrit ce matériel et ces conditions.
+
+Une autre équipe publie 28,5 tokens par seconde sur le
+même nom de modèle et une 3060 de 12 gigas.
+Son protocole utilise un petit prompt et des réponses plafonnées
+à 200 tokens.
+Donc les 2 résultats montrent un fonctionnement concret,
+mais ils ne donnent pas une vitesse identique à garantir.
+
+[VISUEL : deux mesures séparées, 35 et 28,5 ; dates et protocoles ; aucune moyenne.]
+
+Pour ce palier,
+l’usage proposé est donc l’aide sur du code :
+comprendre une fonction,
+rédiger un morceau bien délimité ou expliquer une erreur.
+Le fait qu’un modèle écrive vite ne signifie pas qu’il
+réussira seul une longue opération dans un dépôt entier.
+
+La différence est facile à imaginer.
+Une fonction courte arrive presque entièrement dans la conversation.
+Un projet ajoute d’autres fichiers,
+des dépendances et des résultats d’outils.
+Du coup,
+la taille du contexte devient une contrainte à part entière.
+
+Tu peux aussi garder le 9B sur une carte de 12 gigas.
+S’il répond à ta demande,
+la mémoire supplémentaire peut servir aux documents et à la conversation.
+Donc le passage de 8 à 12 gigas donne plusieurs options :
+compression moins forte,
+conversation plus longue,
+ou modèle plus encombrant.
+Le choix suit la tâche.
+
+[VISUEL : trois usages de la marge, poids / qualité / conversation, sans chiffre estimé.]
+
+Avec 16 gigas,
+on peut aborder Qwen 3.8-27B en UD-IQ4_XS.
+Le fichier actuel tourne autour de 14,4 gigas.
+C’est un gros candidat,
+avec une marge plus étroite.
+Donc le contexte et les fonctions supplémentaires demandent une attention particulière.
+
+Dans une mesure publiée sur une 5060 Ti 16 gigas,
+le modèle écrit 28 tokens par seconde avec un contexte
+de 8192 tokens et un cache 8 bits.
+On garde cette vitesse sans l’accélération qui,
+dans la même publication,
+utilise une deuxième carte pour le brouillon.
+
+Par contre,
+le chiffre du fichier actuel et la mesure d’octobre ne
+sont pas un nouveau test de la version publiée aujourd’hui.
+Le conseil repose sur une famille de fichiers et des conditions documentées.
+Les mises à jour peuvent déplacer légèrement la taille et les besoins.
+
+[VISUEL : palier 16 Go, fichier 14,4 Go, contexte 8 K de la source ; mention de mesure unique en octobre.]
+
+Ce palier peut donc convenir à quelqu’un qui veut un
+modèle plus grand pour expliquer,
+écrire et travailler sur des tâches courtes.
+Mais si tu attends beaucoup de mémoire de conversation,
+un modèle plus petit peut encore être un meilleur compagnon.
+
+Il reste la RAM du PC.
+Les machines publiées dans certains exemples possèdent 32 gigas.
+Ça décrit leur configuration ;
+ça ne démontre pas un minimum universel pour chaque palier.
+Et une partie du modèle gardée en RAM ne transforme
+pas cette mémoire en VRAM rapide.
+
+Il faut aussi distinguer le texte des images.
+Les dépôts Qwen proposent un fichier de vision séparé.
+Donc un conseil construit pour discuter en texte ne réserve
+pas automatiquement toute la mémoire d’un usage avec des images.
+Le projecteur ajoute son poids,
+et le traitement demande aussi ses propres allocations.
+
+Donc la bonne fiche contient 3 lignes :
+capacité de la carte,
+mémoire du PC et fichier exact.
+Si on retire une de ces lignes,
+la promesse devient floue.
+Une démonstration sur un énorme modèle partiellement en RAM peut être intéressante,
+avec un compromis très différent d’un petit modèle entièrement sur la carte.
+
+Le comparatif par budget présente des offres françaises datées et leurs limites.
+Une conversion en francs CFA ne décrit pas une offre locale.
+Ici,
+on part du matériel déjà présent.
+
+Le tableau te donne 5 points de départ avec la
+carte que tu as. 4 gigas :
+petit Qwen 2B pour les demandes courtes. 6 gigas :
+Qwen 4B avec davantage de marge. 8 gigas :
+Qwen 9B pour un assistant généraliste. 12 gigas :
+Coder 14B pour des tâches de code cadrées. 16 gigas :
+Qwen 27B compressé,
+avec un contexte choisi en connaissance de cause.
+
+[CROCHET : ton avis sur le compromis petit modèle rapide ou gros modèle plus lent, sans résultat personnel inventé.]
+
+Le 21 janvier,
+on regardera les anciennes cartes de minage pour l’IA locale.
+Puis,
+le 25 janvier,
+on comparera Ollama,
+LM Studio et llama.cpp.
+Et dans les commentaires,
+donne ta carte,
+sa mémoire et l’usage qui te manque :
+ça permet de parler d’un besoin concret.
+
+Allez,
+salut !

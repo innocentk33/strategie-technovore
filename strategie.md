@@ -893,7 +893,7 @@ Chaque créneau se confirme au radar, deux semaines avant. Les faits (USSD et op
 
 ---
 
-### Idées 26 à 34 : tes demandes des 14 et 15/11 (vidéos qui marchent chez les concurrents)
+### Idées 26 à 35 : tes demandes des 14, 15 et 16/11 (vidéos qui marchent chez les concurrents)
 
 Non notées sur 40 : tu les as choisies parce qu'elles marchent (chiffres relevés sur les pages YouTube le 14/11).
 
@@ -907,7 +907,8 @@ Non notées sur 40 : tu les as choisies parce qu'elles marchent (chiffres relev�
 | 32 | [Les vieilles cartes de minage pour l'IA locale](projets/cartes-minage/fiche.md) | Kai : 22,8 K en 18 h ; DiscoverID (BC-250) : 216 K en 3 semaines (15/11) | jeu. 21 janv. |
 | 33 | [Ollama, LM Studio ou llama.cpp](projets/choisir-moteur/fiche.md) | The Dark Factory : 42,9 K en 9 jours (15/11) | lun. 25 janv. |
 | 34 | [Des petits modèles experts contre les géants](projets/petits-modeles-experts/fiche.md) | Codacus : 12 K en 14 h ; Nerdy Kings (LFM3) : 54 K en 13 jours (15/11) | jeu. 28 janv. |
-| 29 | [RAM, VRAM ou mémoire unifiée](projets/ram-vram-unifiee/fiche.md), avec le contre-pied de Strata | Locally, *RAM vs VRAM vs Unified Memory (Local AI)* : 2 K vues en 3 jours | jeu. 3 déc. |
+| 29 | [RAM, VRAM ou mémoire unifiée](projets/ram-vram-unifiee/fiche.md), avec le contre-pied de Strata | Locally, *RAM vs VRAM vs Unified Memory (Local AI)* : 2 K vues en 3 jours | jeu. 31 déc. (décalée du 3 déc. le 16/11) |
+| 35 | [Qwen 27B sur une carte de 8 Go : 5 fois plus vite avec un seul fichier](projets/qwen-27b-8go/fiche.md) (ta demande du 16/11) | SimplyExplain, *Your 8GB GPU Runs Qwen 3.8 27B 5x Faster Now (One New File)* : 8,7 K vues en 3 jours, avec 2,07 K abonnés ; Red Stapler, *I ran Qwen3.8 27B on single 8GB Card!* : 788 K vues (pages YouTube, 16/11) | lun. 23 nov. À sa place, « 32 Go de VRAM » (idée 23) passe au lun. 30 nov. et DeepSeek V4.1 Flash au jeu. 3 déc. |
 
 ---
 

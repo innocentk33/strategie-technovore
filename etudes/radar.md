@@ -64,6 +64,8 @@ Pas d'appel `vidiq_outliers` possible. Seul signal : Makertronic sur le prix des
   - **lun. 7/12** : la candidate « petits budgets » se renforce, avec un angle 8 à 12 Go. Kai fait 60 K vues avec un modèle sur 12 Go, et 8 Go est la VRAM d'un joueur sur quatre (Steam, octobre). À noter au prochain radar.
 - **Prochain radar** : à la sortie de Strata (lun. 16/11). On y mesure 16 Go à J+7 et Qwen 4 à J+4, avec Studio sur le bon compte.
 
+> **16/11, ta demande** : le lun. 23/11 va à *Qwen 27B sur une carte de 8 Go, 5 fois plus vite* (SimplyExplain : 8,7 K vues en 3 jours avec 2,07 K abonnés ; Red Stapler : 788 K vues ; pages YouTube, 16/11), ce qui répond au signal « 8 à 12 Go » noté plus haut. « 32 Go de VRAM » passe au lun. 30/11, DeepSeek au jeu. 3/12, « RAM, VRAM ou mémoire unifiée » au jeu. 31/12 (créneau radar).
+>
 > **Remplacé le 14/11, ta demande** : le « calendrier inchangé » ci-dessus ne tient plus. Le multi-GPU a sa propre vidéo (lun. 7/12, 32,9 K vues en 3 jours chez Weights & Wonders, page YouTube du 14/11) ; « petits budgets » devient *Quel modèle ta carte peut faire tourner ? De 4 à 16 Go* (25/01, provisoire, d'après Codacus) ; la meilleure carte par budget prend le jeu. 26/11 et RAM, VRAM ou mémoire unifiée le jeu. 3/12 (deux vidéos de Locally). IA locale privée recule au 11/01 et DeepSeek V4.1 Flash au 18/01. Au radar du 16/11 : remesurer *The Best Local AI GPU For Every Budget* (1,6 K vues après quelques heures), dont le signal n'est pas encore prouvé. Détail dans [`calendrier.md`](../calendrier.md).
 
 ---

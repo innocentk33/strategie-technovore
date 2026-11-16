@@ -1,6 +1,7 @@
 # Mac mini ou PC gamer pour l'IA en local ?
 
-> **14/11** : [RAM, VRAM ou mémoire unifiée](../ram-vram-unifiee/fiche.md) sort juste avant, le jeu. 3 déc. Elle pose la mémoire unifiée ; ici, on ne la réexplique pas, on y renvoie et on passe au duel.
+> **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
+> **14/11** : [RAM, VRAM ou mémoire unifiée](../ram-vram-unifiee/fiche.md) sortait juste avant, le jeu. 3 déc. ; **depuis le 16/11, elle sort après, le jeu. 31 déc.** : pose donc ici la mémoire unifiée en deux phrases. Elle pose la mémoire unifiée ; ici, on ne la réexplique pas, on y renvoie et on passe au duel.
 >
 > Fiche du 24/10/2026, à ta demande : « une vidéo sur le Mac mini inspirée de celle-ci ». Créneau **provisoire : lun. 1er févr. 2027, 18 h** (créneau radar IA), à confirmer au radar du 18/01. Analyse : [`strategie.md`](../../strategie.md), idée 24. Planning : [`calendrier.md`](../../calendrier.md), S14-S15. **Recherche et double vérification pas encore faites** : chiffres de cette fiche marqués ⚠️, à refaire en phase 1 et 2 (S14 au plus tard, ou avant si tu veux).
 

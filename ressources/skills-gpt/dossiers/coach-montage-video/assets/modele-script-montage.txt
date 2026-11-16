@@ -1,0 +1,90 @@
+MODÈLE DE SCRIPT DE MONTAGE
+===========================
+
+FICHE D'IDENTITÉ
+  Titre de la vidéo        :
+  Cible                    : débutant  <->  avancé
+  But                      : théorique <->  pratique
+  Ambiance                 : éducatif  <->  divertissant
+  Complexité               : simple    <->  complexe
+  Concept de miniature     : (sur quoi s'appuie-t-il de déjà éprouvé ?)
+  Problème profond         :
+  Outil de montage         : (Premiere / After Effects / Canva / DaVinci / CapCut / Remotion / HyperFrames / hybride)
+  Technique nouvelle tentée:
+
+HISTOIRE SECONDAIRE (voyage du héros, une ligne par étape, laisser vide si absente)
+  Héros                    :
+  01 Statu quo             :
+  02 Appel à l'aventure    :
+  03 Aide / mentor         :
+  04 Départ                :
+  05 Épreuves              : = le contenu principal
+  06 Approche              :
+  07 Crise                 :
+  08 Trésor                :
+  09 Résultat              :
+  10 Retour                :
+  11 Nouvelle vie          :
+  12 Résolution            :
+
+CODE COULEUR (surlignage Notion)
+  [VID] Vidéo / B-roll ......... Bleu    fond #E7F3F8  texte #337EA9
+  [IMG] Image .................. Vert    fond #EDF3EC  texte #448361
+  [ECR] Capture d'écran ........ Violet  fond #F6F3F9  texte #9065B0
+  [ANI] Animation .............. Orange  fond #FBECDD  texte #D9730D
+  [TXT] Texte sur fond noir .... Gris    fond #F1F1EF  texte #787774
+  [MEM] Mème / blague visuelle . Rose    fond #FAF1F5  texte #C14C8A
+  Suivi : Jaune = à retravailler (#FBF3DB / #CB912F)
+          Rouge = élément manquant (#FDEBEC / #D44C47)
+          Marron = pause voulue (#F4EEEE / #9F6B53)
+
+---------------------------------------------------------------
+PARTIE 1 – [Nom]   Étape du héros : [..]   Musique : [ambiance / morceau]
+---------------------------------------------------------------
+
+#01   [début ≈ 0:00]
+VO      : "Texte exact de la voix off."
+VISUEL  : [CATÉGORIE] description de ce qu'on voit
+TEXTE   : (aucun | sous-titre | texte central | texte intégré) + contenu
+EFFETS  : zoom (point d'attention : centre / tiers gauche / tiers droit), overlay, transition… ou rien
+SON     : whoosh / riser / impact / bruitage spécifique, et à quel instant ; ou rien
+NOTE    : pause voulue, coupe sur le rythme, etc.
+
+#02   [début ≈ 0:00]
+VO      :
+VISUEL  :
+TEXTE   :
+EFFETS  :
+SON     :
+NOTE    :
+
+---------------------------------------------------------------
+PARTIE 2 – [Nom]   Étape du héros : [..]   Musique : [ambiance / morceau]
+---------------------------------------------------------------
+
+#03   [début ≈ 0:00]
+VO      :
+VISUEL  :
+TEXTE   :
+EFFETS  :
+SON     :
+NOTE    :
+
+===============================================================
+FICHE D'ANIMATION (une par élément [ANI])
+Assez précise pour être réalisée à la main ou codée par un agent IA.
+===============================================================
+
+ANI-01   lié au passage #..
+  Esquisse     : (description ou lien vers le croquis)
+  Éléments     : formes, textes, icônes, couleurs
+  État initial : ce qu'on voit à la première image
+  Déroulé      :
+    t = 0,00 s  ...
+    t = 0,50 s  ...
+    t = 1,20 s  ...
+  Easing       : (lissé en sortie / en entrée et sortie / rebond…)
+  Point d'attention : (où le regard doit être à la fin)
+  Son associé  : (whoosh à t = .., impact à t = ..)
+  Outil prévu  : (Canva / After Effects / Remotion / HyperFrames)
+  Export       : (vidéo normale / fond noir + mode Écran / transparence)

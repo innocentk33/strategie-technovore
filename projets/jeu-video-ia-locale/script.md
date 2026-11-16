@@ -1,0 +1,101 @@
+# Créer un petit jeu avec une IA locale : ce que montrent 16 Go
+
+Version finale après revue indépendante du 16 novembre 2026. Publication : 14 janvier 2027. Base : 145 mots/minute, voix seule, hors indications. V1 conservée.
+
+Voix : **1 560 mots** (hors crochets), **10:46 à 145 mots/minute**. Liaisons strictes : **27**, soit **1,73/100 mots**. Question et disclaimer dans les **49 premiers mots**, soit environ **0:20**. Les repères ci-dessous sont calculés sur la voix, sans ajouter de pauses de montage.
+
+| Partie | Début calculé |
+|---|---|
+| Résultat et question | 0:00 |
+| Deux jeux, deux résultats | 0:40 |
+| Code et assets séparés | 2:26 |
+| Images et cohérence | 3:11 |
+| Accessoire 3D | 4:59 |
+| Son et droits | 6:33 |
+| Intégration et profils | 8:10 |
+
+## Voix
+
+[VISUEL : archive T45 si disponible, sinon schéma légendé « reconstitution du fonctionnement documenté ». Coder IQ1_M, Pi 1.5.2, réflexion high, contexte 131 072, 16 Go VRAM + environ 32 Go RAM. T41/T45, novembre 2026. La voix reste valable sans rush.]
+
+Un casse-briques avec vies et bonus, obtenu avec une IA locale sur 16 gigas, d'après les archives Strata. Pour les autres outils, ces chiffres sont les leurs, je n'ai rien testé chez moi. Donc, jusqu'où ta carte de joueur peut-elle t'amener vers un jeu que tu voudrais publier ?
+
+On regarde ce que le code a réellement réussi, puis les images, les objets 3D et le son. On distinguera le résultat de code des pistes d'assets, leurs besoins mémoire annoncés et leurs retouches. Et une licence peut rendre un outil inadapté au projet commercial que tu imagines.
+
+[GRAPHIC] [VISUEL : chronologie des archives, casse-briques 8 min 12 s ; mini-Minecraft 34 min 58 s, dont 23 min 08 s de travail du modèle et 3 relances. F1/F2, T41.]
+
+Dans ces archives, le Coder de Strata écrit le casse-briques en 8 minutes et 12 secondes, après une seule demande. La machine a aussi 32 gigas de RAM. Le relevé des images décrit les vies, les bonus et la fin de partie : c'est une boucle jouable documentée, avec cette configuration.
+
+Par contre, l'autre exemple raconte une histoire différente. Le mini-Minecraft a demandé près de 35 minutes et plusieurs relances. Au premier message, le modèle affirme même avoir écrit et vérifié le fichier sans avoir appelé l'outil d'écriture. Du coup, une réponse assurée ne prouve pas que le jeu existe sur le disque.
+
+En fait, les deux projets donnent une échelle à l'objectif. Une balle qui rebondit, des blocs que tu places et un menu qui répond, ça donne une preuve concrète. Une promesse de monde ouvert avec inventaire, combat, sauvegarde et multijoueur réclame beaucoup plus de liens entre les systèmes.
+
+Donc le premier projet gagne à tenir autour d'une action claire. Attraper, éviter, sauter, casser. Tu peux observer ce que le joueur fait et ce que le jeu lui renvoie. Si cette boucle n'est pas agréable avec des formes simples, de belles textures ne la rendent pas automatiquement meilleure.
+
+La vitesse en tokens par seconde aide à attendre moins longtemps pendant le code. Elle ne mesure pas les collisions, la difficulté ou le plaisir de jouer. Un modèle rapide peut écrire un fichier qui se lance et contient encore des erreurs. Le résultat utile se juge aussi à ce qui fonctionne après la génération.
+
+[VISUEL : cartes « code », « images », « 3D », « audio », étudiées séparément. Jauge du chargement successif, schéma de méthode, pas mesure. F12.]
+
+Et les 16 gigas du titre ne veulent pas dire que tous les outils restent chargés en même temps. Tu peux produire le code, libérer le modèle, puis travailler sur les images. Ensuite seulement, passer à un autre outil. Du coup, ces outils peuvent être étudiés séparément, avec leur mémoire annoncée. Le casse-briques est notre résultat de code ; les autres étapes restent des pistes documentées, pas une chaîne complète démontrée sur cette carte.
+
+Cette séparation compte aussi pour le temps. Si tu dois changer d'outil à chaque petite correction, le workflow peut devenir moins confortable. En revanche, elle évite d'additionner des besoins mémoire qui ne sont pas forcément simultanés.
+
+[VISUEL : page officielle SDXL et planche dessinée « concept », « sprite », « animation ». F4–F6.]
+
+Si on veut donner une identité visuelle au prototype, un modèle comme SDXL peut générer des concepts, des textures ou des éléments visuels à partir d'un texte. Sa version de base peut fonctionner seule. Par contre, une image réussie ne fournit pas automatiquement une série d'animations cohérentes.
+
+Imaginons qu'on remplace une forme simple du jeu par un personnage vu de côté. Tu demandes ensuite la même pose avec le bras un peu plus haut. Si le casque, le visage et les proportions changent, tu as deux illustrations, mais ton animation saute. Donc il faut encore contrôler les silhouettes, les couleurs, les alignements et la transparence.
+
+Sauf que le pixel art ajoute une autre contrainte. Une image qui ressemble à des pixels n'a pas forcément une grille propre ni une palette cohérente. Pour un petit jeu, quelques sprites retouchés peuvent être plus utiles qu'une centaine d'images presque compatibles. Et cette retouche peut rester une vraie partie du travail.
+
+Côté mémoire, le modèle, la résolution et le pipeline comptent. La documentation Diffusers propose notamment de déplacer certains composants vers la RAM pour réduire la place sur la carte, avec un coût de performance. Donc on ne peut pas donner un seul minimum valable pour toutes les configurations d'images à partir du nom SDXL.
+
+Sa licence autorise des usages sous conditions et ne se résume pas à un usage personnel uniquement. Par contre, elle ne garantit pas les droits de tous les contenus qui pourraient apparaître. Le plus simple pour ton projet reste de garder la provenance et la licence de chaque élément utilisé.
+
+[GRAPHIC] [VISUEL : image d'un accessoire → maillage ; collision simplifiée dessinée à côté. F7/F12.]
+
+Si le projet ajoute un petit accessoire 3D, TripoSR propose de reconstruire une forme depuis une image. Le projet annonce environ 6 gigas de VRAM dans ses réglages par défaut, pour une image. C'est un besoin annoncé par les auteurs, pas une mesure sur toutes les cartes de 16 gigas.
+
+Donc un accessoire simple peut devenir une piste intéressante. Par contre, la forme obtenue doit encore correspondre au jeu. Son échelle, ses matériaux et sa collision demandent un contrôle. Pour un personnage animé, il faut également penser à la déformation et au squelette ; reconstruire sa silhouette ne fournit pas automatiquement ces éléments.
+
+En fait, une caisse qui paraît correcte de face peut cacher un dos approximatif. Un objet très détaillé peut avoir une géométrie peu adaptée à ton nombre d'ennemis à l'écran. Du coup, le travail continue entre le fichier généré et l'asset intégré dans le moteur.
+
+Le code et les poids de TripoSR sont annoncés sous licence MIT. C'est une information utile si tu compares les outils. Sauf que la licence du logiciel ne te donne pas les droits sur une image d'entrée prise à quelqu'un d'autre. Il faut regarder les deux côtés du trajet.
+
+Donc le temps de génération annoncé sur A100 ne prédit pas celui de ta carte. La capacité publiée et les conditions de la mesure gardent leur place dans le choix.
+
+[VISUEL : courbe audio dessinée, étiquettes « modèle », « code », « poids ». F8/F9.]
+
+Le prototype peut maintenant avoir besoin d'un son ou d'une musique. MusicGen est une piste locale documentée. Sa documentation recommande 16 gigas pour les modèles de taille moyenne. Un petit modèle ou une séquence plus courte peut demander moins. Donc, là encore, la référence exacte et la durée changent le travail que tu demandes à la machine.
+
+La recommandation mémoire atteint 16 gigas ; peut-on maintenant utiliser ces poids pour le jeu qu'on veut vendre ? Sauf que la licence peut décider avant la mémoire. Le code d'AudioCraft est sous MIT, tandis que les poids publiés sont sous une licence non commerciale. Tu ne peux donc pas conclure « le dépôt est MIT, tout mon workflow commercial est autorisé ». Il faut lire les conditions des poids que tu utilises.
+
+Pour une première version destinée à être vendue, tu peux aussi choisir des sons existants avec une licence adaptée. Le kit de plateforme de Kenney, par exemple, documente des sprites, des modèles et des effets sonores sous CC0. Ce sont des assets préparés, avec une provenance connue, qui évitent de transformer chaque bruit de saut en projet de recherche.
+
+Du coup, tu n'es pas obligé de tout générer pour créer avec une IA locale. Le modèle peut aider au code, les assets peuvent venir d'une bibliothèque, et toi tu relies les éléments. Cette combinaison peut même te rapprocher plus vite d'un jeu cohérent.
+
+[GRAPHIC] [VISUEL : schéma du petit projet ; noms de fichiers fictifs légendés « exemple ». F10–F12.]
+
+Le moteur rassemble le résultat. Godot permet de créer des jeux commerciaux sous sa licence MIT, en conservant les mentions nécessaires. Par contre, les images, les musiques, les polices et les extensions ajoutées ont leurs propres conditions. Donc la licence du moteur ne remplace pas celle des éléments que tu importes.
+
+Le mini-Minecraft montre ce qui reste à faire après la première réponse : obtenir le fichier, corriger les erreurs et vérifier les actions du joueur. Le modèle a même trouvé à la dernière relance un problème que ses propres contrôles avaient manqué. Donc l'assurance du compte rendu ne remplace pas le comportement du jeu.
+
+Le casse-briques atteint plus vite une boucle plus petite. Son périmètre laisse moins de systèmes à relier. Du coup, le nombre de minutes de génération raconte aussi l'ampleur de la demande, les relances et le travail qui reste entre les fichiers. Une vitesse d'écriture seule ne permet pas de les comparer comme deux jeux équivalents.
+
+Quand le jeu semble fini, le joueur attend encore des contrôles compréhensibles, une relance après la défaite, un score correct et une image lisible quand plusieurs éléments bougent. En fait, une page qui s'ouvre ne démontre pas tous ces comportements.
+
+Si ces limites t'aident à choisir un projet que ta machine peut accompagner, abonne-toi.
+
+[VISUEL : 3 profils « prototype de code », « petit jeu 2D », « projet 3D ambitieux ».]
+
+Donc les archives montrent un prototype de code local sur 16 gigas de VRAM, accompagné de RAM. Les outils d'assets apportent ensuite leurs propres conditions, étudiées séparément. Pour un petit jeu en 2D, des formes simples et une bibliothèque à licence claire peuvent suffire à avancer. Pour une production 3D ambitieuse, la géométrie, l'animation et l'intégration demandent davantage de travail que la génération d'une première image.
+
+Si tu veux commercialiser, ajoute les licences au même tableau que la VRAM. Si tu veux apprendre, choisis un jeu assez petit pour comprendre les changements du modèle. Et si tu veux seulement montrer une idée jouable, les archives du casse-briques donnent déjà un exemple concret de ce premier palier.
+
+[CROCHET : ton avis de joueur sur le type de petit projet que tu aurais envie de pousser. Facultatif.]
+
+Le casse-briques nous donne un premier palier documenté ; les relances du mini-Minecraft montrent la distance qui peut rester sur un projet plus large. Dans la vidéo du 18 janvier, on revient aux modèles selon ta VRAM pour choisir celui qui accompagnera ce travail. Allez, salut !
+
+## Hors voix
+
+Sources F1–F12. Réutilisation facultative des archives T41/T45 ; la voix ne prétend pas que des images sont montrées si le montage emploie une reconstitution. Aucun jeu, image, objet ou son nouveau à produire. Les pistes SDXL/TripoSR/MusicGen restent distinctes de la preuve de code ; le workflow complet sur 16 Go n'est pas certifié. La licence du moteur, du code et des poids reste séparée des droits des assets.

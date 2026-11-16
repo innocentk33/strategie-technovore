@@ -1,5 +1,6 @@
 # Deux cartes graphiques pour l'IA : à savoir avant d'acheter la deuxième
 
+> **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > Fiche du 14/11/2026, à ta demande. Placée au **lun. 7 déc., 18 h**, à la place de « petits budgets », qui devient [Quel modèle ta carte peut faire tourner ?](../modele-par-vram/fiche.md) (25 janv., provisoire). Elle sort deux semaines après [32 Go de VRAM au moins cher](../deux-cartes-occasion/fiche.md) (23 nov.), dont elle est la suite. Vidéo **calculée**. Idée 26 de [`strategie.md`](../../strategie.md), non notée (ta demande du 14/11). Titre provisoire.
 
 **Inspiration** : Weights & Wonders, [*Watch This Before Building a Multi-GPU Local AI Setup!*](https://www.youtube.com/watch?v=sF_P1OICoEw), 15 min 23 s, publiée le 11/11 (le 12/11, heure de Paris) : **32 914 vues en 3 jours, avec 1,74 K abonnés** (page YouTube, 14/11). Le [radar du 12/11](../../etudes/radar.md) la notait déjà à 1 562 vues/h. C'est la même chaîne que notre inspiration pour Qwen 4.
@@ -26,5 +27,5 @@
 
 1. Les mesures publiées sont celles de sa description : LithiumDevourer, xenodeve et jeffbolznv sur GitHub, le blog de Jeff Geerling, infermeld. Remonte à chaque source et date-la. Ne cite que ce qui est mesuré.
 2. Pas de nom de chaîne dans la voix ([sources anonymes](../../CLAUDE.md) : « un créateur a mesuré… ») ; les noms vont dans `sources.md`.
-3. Ne pas refaire la vidéo du 23 nov. : on renvoie à ses prix et à ses routes vers 32 Go.
+3. Ne pas refaire la vidéo des 32 Go (30 nov. depuis le 16/11) : on renvoie à ses prix et à ses routes vers 32 Go.
 4. `sources.md` à créer.
