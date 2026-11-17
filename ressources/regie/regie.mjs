@@ -4,6 +4,9 @@
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
+import { createYouTube } from './youtube.mjs';
+import { readYouTubeKey } from './config.mjs';
 
 const ROOT = path.resolve(process.env.REGIE_DEPOT ?? path.join(import.meta.dirname, '../..'));
 const PORT = Number(process.argv[2]) || 4321;
@@ -17,7 +20,7 @@ const MOIS = ['janv', 'févr', 'mars', 'avr', 'mai', 'juin', 'juil', 'août', 's
 // Les étapes d'un dossier, dans l'ordre de production de CLAUDE.md (la voix avant le storyboard, calé sur elle)
 const ETAPES = [
   ['fiche', /^fiche\.md$/], ['brouillon', /^brouillon.*\.md$/i], ['script', /^script\.md$/], ['grill', /^grill.*\.md$/],
-  ['sources', /^sources\.md$/], ['prompteur', /^teleprompteur\.md$/], ['voix', /^[^/]+\.(m4a|wav)$/],
+  ['sources', /^sources\.md$/], ['prompteur', /^teleprompteur\.(md|txt)$/], ['voix', /^[^/]+\.(m4a|wav)$/],
   ['storyboard', /^storyboard\.md$/i], ['upload', /^upload\.md$/], ['miniatures', /^miniature\//],
 ];
 const TYPES = {
@@ -65,38 +68,99 @@ function compteCases(src) {
   return { fait: idx.filter(i => lignes[i].match(RE_CASE)[2] !== ' ').length, total: idx.length };
 }
 
-// ponytail: relit tous les .md des projets à chaque appel (~3 Mo, quelques ms) ; un cache par mtime si ça rame un jour
+const versionSources = sources => createHash('sha256').update(JSON.stringify(sources)).digest('hex');
+const sourcesSuivi = () => ({ readme: lire('README.md'), calendrier: lire('calendrier.md') });
+const parisYear = () => Number(new Intl.DateTimeFormat('fr', { timeZone: 'Europe/Paris', year: 'numeric' }).format(new Date()));
+
+// Les années viennent de l'en-tête explicite du calendrier ; aucun glissement selon la date du lancement.
+function datesPublication(src, anneeInitiale) {
+  let annee = anneeInitiale, moisPrec;
+  const dates = new Map();
+  for (const ligne of src.split('\n')) {
+    if (!ligne.startsWith('|') || !LIEN_FICHE.test(ligne)) continue;
+    const c = cellules(ligne), nom = ligne.match(LIEN_FICHE)[1];
+    const texte = c.length > 4 ? c[1] : c[2];
+    const d = texte.match(/(\d{1,2})(?:er)?\s+([a-zéû]+)\.?(?:\s+(20\d{2}))?/i);
+    const mois = d ? MOIS.findIndex(m => d[2].toLowerCase().startsWith(m)) : -1;
+    if (mois < 0) continue;
+    if (d[3]) annee = Number(d[3]); else if (moisPrec !== undefined && mois < moisPrec) annee++;
+    moisPrec = mois;
+    const jour = Number(d[1]);
+    if (new Date(Date.UTC(annee, mois, jour)).getUTCDate() !== jour) continue;
+    dates.set(nom, `${annee}-${String(mois + 1).padStart(2, '0')}-${String(jour).padStart(2, '0')}`);
+  }
+  return dates;
+}
+
+function creneaux() {
+  const src = lire('calendrier.md');
+  const annee = Number(src.match(/^#.*?\b(20\d{2})\b/m)?.[1] ?? parisYear());
+  const lignes = src.split('\n').filter(l => l.startsWith('|') && /^\d+$/.test(cellules(l)[0]) && !LIEN_FICHE.test(l));
+  const enrichi = src.split('\n').map((l, i) => lignes.includes(l) ? l.replace(/\|([^|]*)\|([^|]*)\|([^|]*)\|/, `|$1|$2| [créneau](projets/creneau-${i}/fiche.md) |`) : l).join('\n');
+  const dates = datesPublication(enrichi, annee);
+  return src.split('\n').flatMap((l, i) => {
+    if (!lignes.includes(l)) return [];
+    const c = cellules(l), date = dates.get(`creneau-${i}`);
+    return date ? [{ date, heure: '18:00', timezone: 'Europe/Paris', titre: c[2].replace(/\*/g, '') === 'Radar' ? 'Radar · sujet à choisir' : c[2].replace(/\*/g, ''), pilier: c[3] || null, note: c[6] || '' }] : [];
+  });
+}
+
+function videoPublication(cellule, statut) {
+  if (statut !== 'Publié') return null;
+  // Une référence d'inspiration dans les notes n'associe jamais une vidéo au projet.
+  const debut = cellule.split(/;| · /)[0];
+  const m = debut.match(/:\s*\[[^\]]+\]\((https:\/\/[^)]+)\)/);
+  if (!m) return null;
+  try {
+    const u = new URL(m[1]);
+    const id = ['youtube.com', 'www.youtube.com', 'm.youtube.com'].includes(u.hostname) && u.pathname === '/watch' ? u.searchParams.get('v') : u.hostname === 'youtu.be' ? u.pathname.slice(1) : null;
+    return /^[\w-]{11}$/.test(id ?? '') ? id : null;
+  } catch { return null; }
+}
+
+function associationsYouTube() {
+  const fichier = path.join(ROOT, '.regie-youtube.json');
+  try {
+    const data = JSON.parse(fs.readFileSync(fichier, 'utf8'));
+    if (!data || typeof data !== 'object' || Array.isArray(data)) return {};
+    return Object.fromEntries(Object.entries(data).filter(([nom, id]) => /^[\w-]+$/.test(nom) && typeof id === 'string' && /^[\w-]{11}$/.test(id)));
+  } catch { return {}; }
+}
+
 function projets() {
-  const tous = fichiers();
+  const tous = fichiers(), sources = sourcesSuivi(), version = versionSources(sources), associations = associationsYouTube();
+  const annee = Number(sources.calendrier.match(/^#.*?\b(20\d{2})\b/m)?.[1] ?? sources.readme.match(/^#.*?\b(20\d{2})\b/m)?.[1] ?? parisYear());
+  const dates = datesPublication(sources.calendrier, annee);
+  const datesREADME = datesPublication(sources.readme, annee);
   const piliers = {};
-  for (const l of lire('calendrier.md').split('\n')) {
+  for (const l of sources.calendrier.split('\n')) {
     const m = l.startsWith('|') && l.match(LIEN_FICHE);
     if (m && !(m[1] in piliers)) piliers[m[1]] = cellules(l)[3]?.split(' ')[0];
   }
-  // Le tableau du README est chronologique : l'année avance quand le mois recule
-  let annee, moisPrec;
-  return lire('README.md').split('\n').filter(l => l.startsWith('|') && LIEN_FICHE.test(l)).map(l => {
+  return sources.readme.split('\n').filter(l => l.startsWith('|') && LIEN_FICHE.test(l)).map(l => {
     const [video, format, publication, cellule] = cellules(l);
     const nom = video.match(LIEN_FICHE)[1];
-    let date = null;
-    const d = publication.match(/(\d{1,2})(?:er)?\s+([a-zéû]+)/i);
-    const mois = d ? MOIS.findIndex(m => d[2].toLowerCase().startsWith(m)) : -1;
-    if (mois >= 0) {
-      const auj = new Date();
-      if (annee === undefined) {
-        annee = auj.getFullYear();
-        const ecart = (new Date(annee, mois, +d[1]) - auj) / 864e5;
-        if (ecart > 182) annee--; else if (ecart < -182) annee++;
-      } else if (mois < moisPrec) annee++;
-      moisPrec = mois;
-      date = `${annee}-${String(mois + 1).padStart(2, '0')}-${d[1].padStart(2, '0')}`;
-    }
     const s = cellule.match(RE_STATUT);
     const statut = s ? (s[2] === 'Publiée' ? 'Publié' : s[2]) : null;
     const dossier = `projets/${nom}/`;
     const siens = tous.filter(f => f.startsWith(dossier)).map(f => f.slice(dossier.length));
+    const images = siens.filter(f => {
+      const normalise = f.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
+      if (/(?:^|[\/_. -])(?:refs?|references?|apercus?|planches?|hotes?|sources?|assets?)(?:[\/_. -]|$)/.test(normalise)) return false;
+      return /^miniatures?\/rendus\/[^/]+\.(png|jpe?g|webp)$/i.test(f) || /^miniature\.(png|jpe?g|webp)$/i.test(f);
+    }).sort((a, b) => Number(!a.includes('/rendus/')) - Number(!b.includes('/rendus/')) || a.localeCompare(b, 'en'));
+    const heure = publication.match(/(?:^|[, ])(\d{1,2})\s*h(?:\s*(\d{2}))?/i);
     return {
-      nom, titre: video.match(/^\[(.+?)\]\(/)?.[1] ?? nom, format, publication, date,
+      nom, titre: video.match(/^\[(.+?)\]\(/)?.[1] ?? nom, format, publication,
+      date: dates.get(nom) ?? datesREADME.get(nom) ?? null,
+      heure: heure && Number(heure[1]) < 24 && Number(heure[2] ?? 0) < 60 ? `${heure[1].padStart(2, '0')}:${heure[2] ?? '00'}` : null,
+      timezone: 'Europe/Paris', version, thumbnail: images[0] ? dossier + images[0] : null,
+      thumbnailVariants: images.map(f => {
+        const name = path.basename(f, path.extname(f));
+        const key = name.match(/^([a-z])(?:$|[-_])/i)?.[1].toLowerCase() ?? name.toLowerCase();
+        return { key, label: key.length === 1 ? `Variante ${key.toUpperCase()}` : name, name, path: dossier + f };
+      }),
+      youtubeVideoId: Object.hasOwn(associations, nom) ? associations[nom] : videoPublication(cellule, statut),
       pilier: piliers[nom] ?? null, statut, etape: STATUTS.indexOf(statut),
       note: s ? cellule.slice(s[0].length).trim() : cellule,
       etapes: ETAPES.map(([etape, re]) => ({
@@ -109,29 +173,48 @@ function projets() {
 
 // Remplace le statut en tête de la cellule et date le changement ; garde le reste de la note
 function nouvelleCellule(cellule, statut) {
-  const jour = new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' });
+  const jour = new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', timeZone: 'Europe/Paris' });
   const s = cellule.match(RE_STATUT);
   if (!s) return `**${statut}** (${jour})${cellule ? ` · ${cellule}` : ''}`;
   const reste = cellule.slice(s[0].length);
   return `**${statut}**` + (/^ \(\d{1,2}\/\d{1,2}/.test(reste) ? reste.replace(/\d{1,2}\/\d{1,2}/, jour) : ` (${jour})${reste}`);
 }
 
-function majLigne(fichier, nom, statut) {
-  const lignes = lire(fichier).split('\n');
+function majLigne(src, nom, statut) {
+  const lignes = src.split('\n');
   const i = lignes.findIndex(l => l.startsWith('|') && l.includes(`(projets/${nom}/fiche.md)`));
-  if (i < 0) return false;
+  if (i < 0) return null;
   const l = lignes[i].trimEnd(), fin = l.lastIndexOf('|'), debut = l.lastIndexOf('|', fin - 1);
   lignes[i] = `${l.slice(0, debut + 1)} ${nouvelleCellule(l.slice(debut + 1, fin).trim(), statut)} ${l.slice(fin)}`;
-  fs.writeFileSync(chemin(fichier), lignes.join('\n'));
-  return true;
+  return lignes.join('\n');
 }
 
-function changerStatut({ nom, statut }) {
+function changerStatut({ nom, statut, version }) {
   if (!/^[\w-]+$/.test(nom ?? '') || !STATUTS.includes(statut)) throw erreur(400, 'Projet ou statut inconnu');
-  if (!majLigne('README.md', nom, statut)) throw erreur(404, `projets/${nom} n'est pas dans le tableau du README`);
-  // Le calendrier dit « Publiée » (la vidéo)
-  const cal = majLigne('calendrier.md', nom, statut === 'Publié' ? 'Publiée' : statut);
-  return { fichiers: cal ? ['README.md', 'calendrier.md'] : ['README.md'] };
+  const avant = sourcesSuivi();
+  if (typeof version !== 'string' || version !== versionSources(avant)) throw erreur(409, 'Le suivi a changé : actualise avant de changer le statut');
+  const readme = majLigne(avant.readme, nom, statut);
+  if (readme === null) throw erreur(404, `projets/${nom} n'est pas dans le tableau du README`);
+  const calendrier = majLigne(avant.calendrier, nom, statut === 'Publié' ? 'Publiée' : statut);
+  const changements = [['README.md', readme, avant.readme], ...(calendrier === null ? [] : [['calendrier.md', calendrier, avant.calendrier]])];
+  // Prépare les deux fichiers avant remplacement ; aucune attente entre contrôle et écriture.
+  const prepares = [];
+  try {
+    for (const [fichier, contenu] of changements) {
+      const temporaire = path.join(ROOT, `.regie-${path.basename(fichier)}-${process.pid}`);
+      fs.writeFileSync(temporaire, contenu, { flag: 'wx', mode: fs.statSync(chemin(fichier)).mode });
+      prepares.push(temporaire);
+    }
+    if (version !== versionSources(sourcesSuivi())) throw erreur(409, 'Le suivi a changé : actualise avant de changer le statut');
+    let ecrits = 0;
+    try {
+      for (let i = 0; i < changements.length; i++) { fs.renameSync(prepares[i], chemin(changements[i][0])); ecrits++; }
+    } catch (e) {
+      for (let i = 0; i < ecrits; i++) fs.writeFileSync(chemin(changements[i][0]), changements[i][2]);
+      throw e;
+    }
+  } finally { for (const temporaire of prepares) fs.rmSync(temporaire, { force: true }); }
+  return { fichiers: changements.map(c => c[0]), version: versionSources(sourcesSuivi()) };
 }
 
 function cocher({ chemin: rel, index, total, coche }) {
@@ -153,6 +236,8 @@ function envoyerFichier(res, abs) {
 }
 
 // Le direct : chaque fichier modifié (par toi, par Claude ou par la page) est poussé aux pages ouvertes
+const youtube = createYouTube({ key: readYouTubeKey(ROOT) });
+const youtubeData = force => youtube.get(projets().map(p => p.youtubeVideoId).filter(Boolean), { force });
 const ecoutes = new Set();
 fs.watch(ROOT, { recursive: true }, (_, f) => {
   if (!f || /(^|\/)(\.|node_modules\/|claude-youtube\/)/.test(f)) return;
@@ -173,12 +258,15 @@ http.createServer(async (req, res) => {
       if (!req.headers['content-type']?.startsWith('application/json')) throw erreur(415, 'JSON attendu');
       let corps = '';
       for await (const morceau of req) corps += morceau;
+      if (url.pathname === '/api/youtube/refresh') { JSON.parse(corps); return repondre(200, await youtubeData(true)); }
       if (url.pathname === '/api/statut') return repondre(200, changerStatut(JSON.parse(corps)));
       if (url.pathname === '/api/case') return repondre(200, cocher(JSON.parse(corps)));
       throw erreur(404, 'Introuvable');
     }
     if (url.pathname === '/') return envoyerFichier(res, path.join(import.meta.dirname, 'index.html'));
     if (url.pathname === '/api/arbre') return repondre(200, fichiers().filter(f => f.endsWith('.md')));
+    if (url.pathname === '/api/calendrier') return repondre(200, creneaux());
+    if (url.pathname === '/api/youtube') return repondre(200, await youtubeData(false));
     if (url.pathname === '/api/projets') return repondre(200, projets());
     if (url.pathname === '/api/direct') {
       res.writeHead(200, { 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-store' });

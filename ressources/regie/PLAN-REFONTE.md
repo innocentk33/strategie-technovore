@@ -1,6 +1,6 @@
 # Plan de refonte de la régie
 
-16 novembre 2026 — proposition à valider, sans modification de l'interface.
+16 novembre 2026 — plan validé et réalisé. La connexion réelle à YouTube attend une clé API ; OAuth et Reporting restent des extensions ultérieures.
 
 ## Brief confirmé
 
@@ -66,4 +66,10 @@ Sources officielles :
 - Les écritures préservent les notes existantes et refusent les versions périmées.
 - Les deux thèmes et les interactions sont vérifiés sur le rendu réel.
 
-Décisions restantes : validation du plan et de la composition proposée ; configuration Google Cloud pour activer la connexion réelle. Aucun secret à inclure dans le chat ou dans Git.
+## Livraison et vérifications
+
+Interface réalisée : Production Kanban/liste, Publiées, calendrier mois/semaine/agenda, créneaux Radar et Documents ; thèmes clair/sombre/système. API publique YouTube facultative, cache mémoire horodaté et association explicite des vidéos. Voir CONNEXION-YOUTUBE.md pour l'activation.
+
+Tests de la régie réussis sur dépôt temporaire ; 6 tests YouTube réussis avec réponses simulées. Parcours visuels vérifiés sur ordinateur et mobile, dans les deux thèmes : filtres, recherche, calendrier, navigation et lecteur. Revue Impeccable : correction du focus de recherche évaluée comme résolue, verdict `ship`. Aucune statistique réelle récupérée, faute de clé API configurée.
+
+Reste à configurer Google Cloud pour activer les statistiques réelles. Aucun secret à inclure dans le chat ou dans Git.

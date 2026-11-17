@@ -1,5 +1,10 @@
 .DS_Store
 node_modules/
+# Secrets locaux : seuls les modèles vides peuvent être suivis
+.env
+.env.*
+!.env.example
+!.env.local.example
 # Rushs, exports et prises de voix : trop lourds pour git
 *.mp4
 *.mov

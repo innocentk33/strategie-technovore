@@ -1,0 +1,365 @@
+[
+  {
+    "projet": "qwen-27b-8go",
+    "variante": "h",
+    "png": "projets/qwen-27b-8go/miniature/rendus/h-kai.png",
+    "psd": "projets/qwen-27b-8go/miniature/photocraft/h-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 2445492
+  },
+  {
+    "projet": "qwen-27b-8go",
+    "variante": "i",
+    "png": "projets/qwen-27b-8go/miniature/rendus/i-kai.png",
+    "psd": "projets/qwen-27b-8go/miniature/photocraft/i-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 247563
+  },
+  {
+    "projet": "qwen-27b-8go",
+    "variante": "j",
+    "png": "projets/qwen-27b-8go/miniature/rendus/j-kai.png",
+    "psd": "projets/qwen-27b-8go/miniature/photocraft/j-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 1794335
+  },
+  {
+    "projet": "carte-par-budget",
+    "variante": "h",
+    "png": "projets/carte-par-budget/miniature/rendus/h-kai.png",
+    "psd": "projets/carte-par-budget/miniature/photocraft/h-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 3267804
+  },
+  {
+    "projet": "carte-par-budget",
+    "variante": "i",
+    "png": "projets/carte-par-budget/miniature/rendus/i-kai.png",
+    "psd": "projets/carte-par-budget/miniature/photocraft/i-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 330049
+  },
+  {
+    "projet": "carte-par-budget",
+    "variante": "j",
+    "png": "projets/carte-par-budget/miniature/rendus/j-kai.png",
+    "psd": "projets/carte-par-budget/miniature/photocraft/j-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 2261752
+  },
+  {
+    "projet": "cout-deepseek-flash",
+    "variante": "h",
+    "png": "projets/cout-deepseek-flash/miniature/rendus/h-kai.png",
+    "psd": "projets/cout-deepseek-flash/miniature/photocraft/h-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 2644945
+  },
+  {
+    "projet": "cout-deepseek-flash",
+    "variante": "i",
+    "png": "projets/cout-deepseek-flash/miniature/rendus/i-kai.png",
+    "psd": "projets/cout-deepseek-flash/miniature/photocraft/i-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 148641
+  },
+  {
+    "projet": "cout-deepseek-flash",
+    "variante": "j",
+    "png": "projets/cout-deepseek-flash/miniature/rendus/j-kai.png",
+    "psd": "projets/cout-deepseek-flash/miniature/photocraft/j-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 2018931
+  },
+  {
+    "projet": "ram-vram-unifiee",
+    "variante": "h",
+    "png": "projets/ram-vram-unifiee/miniature/rendus/h-kai.png",
+    "psd": "projets/ram-vram-unifiee/miniature/photocraft/h-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 2665315
+  },
+  {
+    "projet": "ram-vram-unifiee",
+    "variante": "i",
+    "png": "projets/ram-vram-unifiee/miniature/rendus/i-kai.png",
+    "psd": "projets/ram-vram-unifiee/miniature/photocraft/i-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 204055
+  },
+  {
+    "projet": "ram-vram-unifiee",
+    "variante": "j",
+    "png": "projets/ram-vram-unifiee/miniature/rendus/j-kai.png",
+    "psd": "projets/ram-vram-unifiee/miniature/photocraft/j-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 1950781
+  },
+  {
+    "projet": "claude-code-gratuit",
+    "variante": "h",
+    "png": "projets/claude-code-gratuit/miniature/rendus/h-kai.png",
+    "psd": "projets/claude-code-gratuit/miniature/photocraft/h-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 1660222
+  },
+  {
+    "projet": "claude-code-gratuit",
+    "variante": "i",
+    "png": "projets/claude-code-gratuit/miniature/rendus/i-kai.png",
+    "psd": "projets/claude-code-gratuit/miniature/photocraft/i-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 132143
+  },
+  {
+    "projet": "claude-code-gratuit",
+    "variante": "j",
+    "png": "projets/claude-code-gratuit/miniature/rendus/j-kai.png",
+    "psd": "projets/claude-code-gratuit/miniature/photocraft/j-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 1746009
+  },
+  {
+    "projet": "ia-locale-privee",
+    "variante": "h",
+    "png": "projets/ia-locale-privee/miniature/rendus/h-kai.png",
+    "psd": "projets/ia-locale-privee/miniature/photocraft/h-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 2915477
+  },
+  {
+    "projet": "ia-locale-privee",
+    "variante": "i",
+    "png": "projets/ia-locale-privee/miniature/rendus/i-kai.png",
+    "psd": "projets/ia-locale-privee/miniature/photocraft/i-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 133513
+  },
+  {
+    "projet": "ia-locale-privee",
+    "variante": "j",
+    "png": "projets/ia-locale-privee/miniature/rendus/j-kai.png",
+    "psd": "projets/ia-locale-privee/miniature/photocraft/j-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 3030061
+  },
+  {
+    "projet": "jeu-video-ia-locale",
+    "variante": "h",
+    "png": "projets/jeu-video-ia-locale/miniature/rendus/h-kai.png",
+    "psd": "projets/jeu-video-ia-locale/miniature/photocraft/h-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 2351446
+  },
+  {
+    "projet": "jeu-video-ia-locale",
+    "variante": "i",
+    "png": "projets/jeu-video-ia-locale/miniature/rendus/i-kai.png",
+    "psd": "projets/jeu-video-ia-locale/miniature/photocraft/i-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 110545
+  },
+  {
+    "projet": "jeu-video-ia-locale",
+    "variante": "j",
+    "png": "projets/jeu-video-ia-locale/miniature/rendus/j-kai.png",
+    "psd": "projets/jeu-video-ia-locale/miniature/photocraft/j-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 2447975
+  },
+  {
+    "projet": "modele-par-vram",
+    "variante": "h",
+    "png": "projets/modele-par-vram/miniature/rendus/h-kai.png",
+    "psd": "projets/modele-par-vram/miniature/photocraft/h-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 2386667
+  },
+  {
+    "projet": "modele-par-vram",
+    "variante": "i",
+    "png": "projets/modele-par-vram/miniature/rendus/i-kai.png",
+    "psd": "projets/modele-par-vram/miniature/photocraft/i-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 182396
+  },
+  {
+    "projet": "modele-par-vram",
+    "variante": "j",
+    "png": "projets/modele-par-vram/miniature/rendus/j-kai.png",
+    "psd": "projets/modele-par-vram/miniature/photocraft/j-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 1487322
+  },
+  {
+    "projet": "cartes-minage",
+    "variante": "h",
+    "png": "projets/cartes-minage/miniature/rendus/h-kai.png",
+    "psd": "projets/cartes-minage/miniature/photocraft/h-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 3009335
+  },
+  {
+    "projet": "cartes-minage",
+    "variante": "i",
+    "png": "projets/cartes-minage/miniature/rendus/i-kai.png",
+    "psd": "projets/cartes-minage/miniature/photocraft/i-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 102933
+  },
+  {
+    "projet": "cartes-minage",
+    "variante": "j",
+    "png": "projets/cartes-minage/miniature/rendus/j-kai.png",
+    "psd": "projets/cartes-minage/miniature/photocraft/j-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 1955937
+  },
+  {
+    "projet": "choisir-moteur",
+    "variante": "h",
+    "png": "projets/choisir-moteur/miniature/rendus/h-kai.png",
+    "psd": "projets/choisir-moteur/miniature/photocraft/h-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 2036767
+  },
+  {
+    "projet": "choisir-moteur",
+    "variante": "i",
+    "png": "projets/choisir-moteur/miniature/rendus/i-kai.png",
+    "psd": "projets/choisir-moteur/miniature/photocraft/i-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 246840
+  },
+  {
+    "projet": "choisir-moteur",
+    "variante": "j",
+    "png": "projets/choisir-moteur/miniature/rendus/j-kai.png",
+    "psd": "projets/choisir-moteur/miniature/photocraft/j-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 2116503
+  },
+  {
+    "projet": "petits-modeles-experts",
+    "variante": "h",
+    "png": "projets/petits-modeles-experts/miniature/rendus/h-kai.png",
+    "psd": "projets/petits-modeles-experts/miniature/photocraft/h-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 2756737
+  },
+  {
+    "projet": "petits-modeles-experts",
+    "variante": "i",
+    "png": "projets/petits-modeles-experts/miniature/rendus/i-kai.png",
+    "psd": "projets/petits-modeles-experts/miniature/photocraft/i-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 147717
+  },
+  {
+    "projet": "petits-modeles-experts",
+    "variante": "j",
+    "png": "projets/petits-modeles-experts/miniature/rendus/j-kai.png",
+    "psd": "projets/petits-modeles-experts/miniature/photocraft/j-kai.psd",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "octets_png": 2032129
+  }
+]

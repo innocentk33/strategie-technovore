@@ -1,0 +1,623 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-16T18:26:59.125178+00:00",
+  "title": "Design System: La régie · Technovore",
+  "extensions": {
+    "colorMeta": {
+      "clair-fond": {
+        "role": "neutral",
+        "displayName": "Clair fond",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "clair-panneau": {
+        "role": "neutral",
+        "displayName": "Clair panneau",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "clair-releve": {
+        "role": "neutral",
+        "displayName": "Clair releve",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "clair-releve-2": {
+        "role": "neutral",
+        "displayName": "Clair releve 2",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "clair-trait": {
+        "role": "neutral",
+        "displayName": "Clair trait",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "clair-trait-fort": {
+        "role": "neutral",
+        "displayName": "Clair trait fort",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "clair-encre": {
+        "role": "neutral",
+        "displayName": "Clair encre",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "clair-encre-2": {
+        "role": "neutral",
+        "displayName": "Clair encre 2",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "clair-encre-3": {
+        "role": "neutral",
+        "displayName": "Clair encre 3",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "clair-menthe": {
+        "role": "secondary",
+        "displayName": "Clair menthe",
+        "tonalRamp": [
+          "oklch(15% 0.1057 167.94)",
+          "oklch(26% 0.1057 167.94)",
+          "oklch(38% 0.1057 167.94)",
+          "oklch(49% 0.1057 167.94)",
+          "oklch(61% 0.1057 167.94)",
+          "oklch(72% 0.1057 167.94)",
+          "oklch(84% 0.1057 167.94)",
+          "oklch(95% 0.1057 167.94)"
+        ]
+      },
+      "clair-menthe-doux": {
+        "role": "secondary",
+        "displayName": "Clair menthe doux",
+        "tonalRamp": [
+          "oklch(15% 0.0168 168.50)",
+          "oklch(26% 0.0168 168.50)",
+          "oklch(38% 0.0168 168.50)",
+          "oklch(49% 0.0168 168.50)",
+          "oklch(61% 0.0168 168.50)",
+          "oklch(72% 0.0168 168.50)",
+          "oklch(84% 0.0168 168.50)",
+          "oklch(95% 0.0168 168.50)"
+        ]
+      },
+      "clair-rouge": {
+        "role": "secondary",
+        "displayName": "Clair rouge",
+        "tonalRamp": [
+          "oklch(15% 0.1976 27.91)",
+          "oklch(26% 0.1976 27.91)",
+          "oklch(38% 0.1976 27.91)",
+          "oklch(49% 0.1976 27.91)",
+          "oklch(61% 0.1976 27.91)",
+          "oklch(72% 0.1976 27.91)",
+          "oklch(84% 0.1976 27.91)",
+          "oklch(95% 0.1976 27.91)"
+        ]
+      },
+      "clair-ambre": {
+        "role": "secondary",
+        "displayName": "Clair ambre",
+        "tonalRamp": [
+          "oklch(15% 0.1143 71.99)",
+          "oklch(26% 0.1143 71.99)",
+          "oklch(38% 0.1143 71.99)",
+          "oklch(49% 0.1143 71.99)",
+          "oklch(61% 0.1143 71.99)",
+          "oklch(72% 0.1143 71.99)",
+          "oklch(84% 0.1143 71.99)",
+          "oklch(95% 0.1143 71.99)"
+        ]
+      },
+      "clair-accent": {
+        "role": "primary",
+        "displayName": "Clair accent",
+        "tonalRamp": [
+          "oklch(15% 0.1976 27.91)",
+          "oklch(26% 0.1976 27.91)",
+          "oklch(38% 0.1976 27.91)",
+          "oklch(49% 0.1976 27.91)",
+          "oklch(61% 0.1976 27.91)",
+          "oklch(72% 0.1976 27.91)",
+          "oklch(84% 0.1976 27.91)",
+          "oklch(95% 0.1976 27.91)"
+        ]
+      },
+      "clair-accent-doux": {
+        "role": "primary",
+        "displayName": "Clair accent doux",
+        "tonalRamp": [
+          "oklch(15% 0.0186 21.57)",
+          "oklch(26% 0.0186 21.57)",
+          "oklch(38% 0.0186 21.57)",
+          "oklch(49% 0.0186 21.57)",
+          "oklch(61% 0.0186 21.57)",
+          "oklch(72% 0.0186 21.57)",
+          "oklch(84% 0.0186 21.57)",
+          "oklch(95% 0.0186 21.57)"
+        ]
+      },
+      "sombre-fond": {
+        "role": "neutral",
+        "displayName": "Sombre fond",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "sombre-panneau": {
+        "role": "neutral",
+        "displayName": "Sombre panneau",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "sombre-releve": {
+        "role": "neutral",
+        "displayName": "Sombre releve",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "sombre-releve-2": {
+        "role": "neutral",
+        "displayName": "Sombre releve 2",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "sombre-trait": {
+        "role": "neutral",
+        "displayName": "Sombre trait",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "sombre-trait-fort": {
+        "role": "neutral",
+        "displayName": "Sombre trait fort",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "sombre-encre": {
+        "role": "neutral",
+        "displayName": "Sombre encre",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "sombre-encre-2": {
+        "role": "neutral",
+        "displayName": "Sombre encre 2",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "sombre-encre-3": {
+        "role": "neutral",
+        "displayName": "Sombre encre 3",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "sombre-menthe": {
+        "role": "secondary",
+        "displayName": "Sombre menthe",
+        "tonalRamp": [
+          "oklch(15% 0.1198 169.11)",
+          "oklch(26% 0.1198 169.11)",
+          "oklch(38% 0.1198 169.11)",
+          "oklch(49% 0.1198 169.11)",
+          "oklch(61% 0.1198 169.11)",
+          "oklch(72% 0.1198 169.11)",
+          "oklch(84% 0.1198 169.11)",
+          "oklch(95% 0.1198 169.11)"
+        ]
+      },
+      "sombre-menthe-doux": {
+        "role": "secondary",
+        "displayName": "Sombre menthe doux",
+        "tonalRamp": [
+          "oklch(15% 0.0380 171.28)",
+          "oklch(26% 0.0380 171.28)",
+          "oklch(38% 0.0380 171.28)",
+          "oklch(49% 0.0380 171.28)",
+          "oklch(61% 0.0380 171.28)",
+          "oklch(72% 0.0380 171.28)",
+          "oklch(84% 0.0380 171.28)",
+          "oklch(95% 0.0380 171.28)"
+        ]
+      },
+      "sombre-rouge": {
+        "role": "secondary",
+        "displayName": "Sombre rouge",
+        "tonalRamp": [
+          "oklch(15% 0.1435 26.08)",
+          "oklch(26% 0.1435 26.08)",
+          "oklch(38% 0.1435 26.08)",
+          "oklch(49% 0.1435 26.08)",
+          "oklch(61% 0.1435 26.08)",
+          "oklch(72% 0.1435 26.08)",
+          "oklch(84% 0.1435 26.08)",
+          "oklch(95% 0.1435 26.08)"
+        ]
+      },
+      "sombre-ambre": {
+        "role": "secondary",
+        "displayName": "Sombre ambre",
+        "tonalRamp": [
+          "oklch(15% 0.1196 80.89)",
+          "oklch(26% 0.1196 80.89)",
+          "oklch(38% 0.1196 80.89)",
+          "oklch(49% 0.1196 80.89)",
+          "oklch(61% 0.1196 80.89)",
+          "oklch(72% 0.1196 80.89)",
+          "oklch(84% 0.1196 80.89)",
+          "oklch(95% 0.1196 80.89)"
+        ]
+      },
+      "sombre-accent": {
+        "role": "primary",
+        "displayName": "Sombre accent",
+        "tonalRamp": [
+          "oklch(15% 0.1435 26.08)",
+          "oklch(26% 0.1435 26.08)",
+          "oklch(38% 0.1435 26.08)",
+          "oklch(49% 0.1435 26.08)",
+          "oklch(61% 0.1435 26.08)",
+          "oklch(72% 0.1435 26.08)",
+          "oklch(84% 0.1435 26.08)",
+          "oklch(95% 0.1435 26.08)"
+        ]
+      },
+      "sombre-accent-doux": {
+        "role": "primary",
+        "displayName": "Sombre accent doux",
+        "tonalRamp": [
+          "oklch(15% 0.0375 21.91)",
+          "oklch(26% 0.0375 21.91)",
+          "oklch(38% 0.0375 21.91)",
+          "oklch(49% 0.0375 21.91)",
+          "oklch(61% 0.0375 21.91)",
+          "oklch(72% 0.0375 21.91)",
+          "oklch(84% 0.0375 21.91)",
+          "oklch(95% 0.0375 21.91)"
+        ]
+      },
+      "marque-rouge": {
+        "role": "primary",
+        "displayName": "Marque rouge",
+        "tonalRamp": [
+          "oklch(15% 0.2145 27.50)",
+          "oklch(26% 0.2145 27.50)",
+          "oklch(38% 0.2145 27.50)",
+          "oklch(49% 0.2145 27.50)",
+          "oklch(61% 0.2145 27.50)",
+          "oklch(72% 0.2145 27.50)",
+          "oklch(84% 0.2145 27.50)",
+          "oklch(95% 0.2145 27.50)"
+        ]
+      },
+      "blanc": {
+        "role": "neutral",
+        "displayName": "Blanc",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "miniature-temps": {
+        "role": "neutral",
+        "displayName": "Miniature temps",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Titre Studio",
+        "purpose": "Titres de vue ; 24px au seuil 820px."
+      },
+      "reading": {
+        "displayName": "Lecture longue",
+        "purpose": "Markdown à 72ch maximum."
+      }
+    },
+    "shadows": [
+      {
+        "name": "segment-selectionne",
+        "value": "0 2px 4px #0001",
+        "purpose": "Bouton de segment actif."
+      },
+      {
+        "name": "annonce",
+        "value": "0 8px 24px #0002",
+        "purpose": "Retour de mutation."
+      },
+      {
+        "name": "tiroir-mobile",
+        "value": "0 0 40px rgba(0, 0, 0, .6)",
+        "purpose": "Navigation au-dessus du contenu."
+      }
+    ],
+    "motion": [
+      {
+        "name": "sortie",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Entrée .22s, tiroir .25s, annonce .25s ; supprimés si mouvement réduit."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "studio-compact",
+        "value": "1200px"
+      },
+      {
+        "name": "reader-single",
+        "value": "1180px"
+      },
+      {
+        "name": "project-compact",
+        "value": "900px"
+      },
+      {
+        "name": "navigation-drawer",
+        "value": "820px"
+      },
+      {
+        "name": "mobile-agenda",
+        "value": "600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Bouton action",
+      "kind": "button",
+      "refersTo": "button-action",
+      "description": "Action secondaire standard du Studio.",
+      "html": "<button class=\"ds-action\">Aujourd’hui</button>",
+      "css": ".ds-action{font-family:var(--texte);border:1px solid var(--trait-fort);border-radius:6px;background:var(--panneau);color:var(--encre);padding:8px 10px;font-size:12px;min-height:36px;cursor:pointer}.ds-action:hover:not(:disabled){background:var(--releve)}.ds-action:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}.ds-action:disabled{cursor:wait;opacity:.6}"
+    },
+    {
+      "name": "Bouton segment",
+      "kind": "button",
+      "refersTo": "button-segment",
+      "description": "Choix de vue, avec état sélectionné.",
+      "html": "<div class=\"ds-segments\"><button aria-pressed=\"true\">Kanban</button><button aria-pressed=\"false\">Liste</button></div>",
+      "css": ".ds-segments{display:inline-flex;padding:3px;background:var(--releve);border-radius:7px;gap:2px}.ds-segments button{font-family:var(--texte);background:none;border:0;border-radius:5px;padding:7px 11px;font-size:12px;cursor:pointer;color:var(--encre-3)}.ds-segments button[aria-pressed=\"true\"]{background:var(--panneau);color:var(--encre);box-shadow:0 2px 4px #0001;font-weight:600}.ds-segments button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}"
+    },
+    {
+      "name": "Recherche vidéo",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Focus porté par le conteneur du champ.",
+      "html": "<label class=\"ds-search\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m16 16 4 4\"/></svg><input aria-label=\"Rechercher une vidéo\" placeholder=\"Rechercher une vidéo\"></label>",
+      "css": ".ds-search{font-family:var(--texte);display:flex;gap:8px;align-items:center;height:36px;min-width:180px;width:280px;border:1px solid var(--trait-fort);border-radius:6px;background:var(--panneau);padding:0 10px;color:var(--encre-3)}.ds-search input{font-family:var(--texte);min-width:0;width:100%;border:0;outline:0;background:none;font-size:13px;color:var(--encre)}.ds-search:focus-within{outline:2px solid var(--menthe);outline-offset:3px}.ds-search input::placeholder{color:var(--encre-3)}"
+    },
+    {
+      "name": "Navigation active",
+      "kind": "nav",
+      "refersTo": "navigation-current",
+      "description": "État courant de la navigation latérale.",
+      "html": "<nav class=\"ds-navigation\"><a href=\"#production\" aria-current=\"page\">Production</a><a href=\"#publiees\">Publiées</a></nav>",
+      "css": ".ds-navigation{display:grid;gap:4px;font-family:var(--texte);}.ds-navigation a{display:flex;align-items:center;gap:10px;min-height:43px;border-radius:7px;padding:9px 13px;font-size:14px;font-weight:550;color:var(--encre-2);text-decoration:none}.ds-navigation a:hover{background:var(--releve);color:var(--encre)}.ds-navigation a[aria-current]{color:var(--accent);background:var(--accent-doux)}.ds-navigation a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}"
+    },
+    {
+      "name": "Badge publié",
+      "kind": "chip",
+      "refersTo": "badge-published",
+      "description": "Statut de publication explicite.",
+      "html": "<span class=\"ds-published\">Publié</span>",
+      "css": ".ds-published{font-family:var(--texte);font-size:11px;background:var(--menthe-doux);padding:3px 7px;border-radius:4px;color:var(--menthe);white-space:nowrap;display:inline-block}"
+    },
+    {
+      "name": "Carte vidéo",
+      "kind": "card",
+      "refersTo": "card-video",
+      "description": "Forme de carte sans image fictive.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-thumbnail\">Miniature absente</div><div class=\"ds-card-body\"><h3><a href=\"#projet\">La prochaine vidéo</a></h3><p>Script · Projet local</p></div></article>",
+      "css": ".ds-card{font-family:var(--texte);width:235px;background:var(--panneau);color:var(--encre);border:1px solid var(--trait);border-radius:12px;overflow:hidden;margin-bottom:12px}.ds-card:hover{border-color:var(--trait-fort)}.ds-thumbnail{display:flex;aspect-ratio:16/9;background:var(--releve-2);align-items:center;justify-content:center;color:var(--encre-3);font-size:11px}.ds-card-body{padding:13px}.ds-card h3{font-size:13px;line-height:1.45;margin:0 0 7px;font-weight:600}.ds-card a{color:inherit;text-decoration:none}.ds-card a:hover{text-decoration:underline;text-underline-offset:3px}.ds-card a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}.ds-card p{color:var(--encre-3);font-size:11px;margin:4px 0}"
+    },
+    {
+      "name": "Événement publié",
+      "kind": "custom",
+      "refersTo": "calendar-event",
+      "description": "Événement du calendrier avec repère de publication.",
+      "html": "<a class=\"ds-event\" href=\"#projet\"><small>Lundi · 18:00</small><strong>La prochaine vidéo</strong></a>",
+      "css": ".ds-event{font-family:var(--texte);display:flex;flex-direction:column;gap:3px;padding:7px;border-radius:5px;background:var(--releve);color:var(--encre);margin:4px 0;font-size:11px;line-height:1.35;text-decoration:none;box-shadow:inset 0 2px var(--menthe)}.ds-event:hover{background:var(--releve-2)}.ds-event strong{display:block;font-weight:600;overflow-wrap:anywhere}.ds-event small{display:block;margin:0 0 3px;color:var(--encre-3);font-size:10px}.ds-event:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "La régie YouTube Studio",
+    "overview": "Une régie de travail inspirée de YouTube Studio : surfaces neutres, contrôles familiers et miniatures réelles. Le rouge signale la navigation active ; la menthe accompagne les liens, les publications et certains états de lecture. La densité permet de suivre plusieurs vidéos tout en gardant leurs titres lisibles.\n\nLe clair et le sombre partagent la même géométrie. Le mode système choisit l’un de ces deux thèmes selon la préférence du système. La lecture des documents conserve une mesure généreuse et les polices locales de Technovore ; la charte des miniatures reste indépendante de l’interface.",
+    "keyCharacteristics": [
+      "Surfaces neutres et bordures fines.",
+      "Miniatures 16:9 et statuts textuels.",
+      "Navigation rouge mesurée, menthe fonctionnelle.",
+      "Inter locale et lecture longue à 72ch."
+    ],
+    "rules": [
+      {
+        "name": "The Semantic Color Rule",
+        "body": "Le rouge de navigation suit --accent ; les publications et les liens suivent --menthe. Ne pas remplacer les états textuels par la couleur seule.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reading Measure Rule",
+        "body": "Les paragraphes du lecteur restent à 72ch maximum ; les tableaux et blocs de code peuvent utiliser la largeur disponible.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Les cartes restent sans ombre au repos et au survol ; leur bordure change. Réserver les ombres aux états et couches déjà présents.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do utiliser les propriétés CSS du thème actif et garder les mêmes dimensions en clair et sombre.",
+      "Do conserver des titres et statuts textuels avec les miniatures réelles.",
+      "Do préserver le focus visible et la préférence de réduction du mouvement.",
+      "Do garder « Publié » distinct de « Programmé »."
+    ],
+    "donts": [
+      "Don't appliquer la charte des miniatures à toutes les surfaces de l’interface.",
+      "Don't remplacer Inter locale par SF Pro.",
+      "Don't ajouter une ombre aux cartes vidéo ordinaires."
+    ]
+  }
+}

@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Node sans dépendance (`regie.mjs`, modules `node:*`) et une page HTML ; choix de l'auteur du 24/10/2026. Rendu Markdown dans la page (marked + DOMPurify, versions figées sur jsDelivr).
+Node sans dépendance serveur (`regie.mjs`, modules `node:*`) et une page HTML ; choix de l'auteur du 24/10/2026. Rendu Markdown dans la page (Marked 15.0.12 et DOMPurify 3.2.6, versions figées embarquées dans `vendor/`, empreintes SHA384 vérifiées).
 
 ## Users
 
@@ -34,7 +34,16 @@ La régie : lire confortablement les fichiers Markdown du dépôt, et piloter la
 
 ## Brand Commitments
 
-Technovore : charte noir premium (fond noir, `#1c1c1e`, encre `#f5f5f7`, gris `#8e8e93`, rouge `#ff453a`), menthe `#07c095` et ardoise `#34495e` ; polices locales de `ressources/miniatures/fonts/` (Archivo Black, Inter, JetBrains Mono), jamais SF Pro. Tout en français, tutoiement.
+Technovore : refonte validée le 16/11/2026, inspirée de YouTube Studio, avec modes clair, sombre et système. Conserver les polices locales de `ressources/miniatures/fonts/` (Inter principale, Archivo Black, JetBrains Mono), jamais SF Pro. Tout en français, tutoiement. La charte des miniatures reste indépendante de celle de l'interface.
+
+## Refonte validée le 16 novembre 2026
+
+- Production en Kanban et liste ; une vue Publiées donne accès aux vidéos terminées. « Terminée » signifie exclusivement publiée, pas programmée.
+- Déplacement Kanban par poignée à la souris, avec choix explicite Fiche/Brouillon/Recherche dans Préparation ; le menu Statut reste disponible au clavier et sur écran tactile. Écritures versionnées et conflits signalés.
+- Choix global des miniatures locales : Auto, une lettre disponible ou Variées avec mélange mémorisé. Une variante absente utilise le repli Auto et le signale. Préférence locale au navigateur, sans modification sur YouTube.
+- Vrai calendrier mensuel, vue semaine et agenda mobile, dates et heures Europe/Paris ; ouverture du projet depuis une publication.
+- Conserver le lecteur de documents, la mise à jour en direct et les fichiers Markdown comme source de vérité métier. Les préférences visuelles peuvent être mémorisées localement.
+- Intégration YouTube publique en lecture seule, facultative : métadonnées et compteurs horodatés. La régie reste utilisable sans clé ni réseau ; les données absentes ne valent pas zéro. Analytics/OAuth et Reporting sont des extensions ultérieures.
 
 ## Product Principles
 

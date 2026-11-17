@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-16",
+  "variants": {
+    "h": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 3,
+      "png_sha256": "0faa759614e7bef265fdf999180866ca4b6efa93e9ffa50e63b77bde943fe6ce",
+      "psd_sha256": "65a28ba79ff0c878276a2f79e2ac787f5d7855f3513678e534c365ff84cc188e",
+      "psd_png_mean_absolute_error": 0.0371,
+      "png_bytes": 2351446,
+      "psd_bytes": 11404034
+    },
+    "i": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 3,
+      "png_sha256": "6a4b4b1e5f381d66c373930b83034fcb707c5ed336835fd1aefe4630e23f907c",
+      "psd_sha256": "94e085e3430451e93b1a7738876b699c2d2b682d71733b28f6e9c2484dc4c2a9",
+      "psd_png_mean_absolute_error": 0.0719,
+      "png_bytes": 110545,
+      "psd_bytes": 1978845
+    },
+    "j": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 3,
+      "png_sha256": "3fb9efad3854023839843ab3f1807dbe95ee96044bfcd1eef253b45c9518d2ae",
+      "psd_sha256": "4cef798695e21f1c0ba667c2585bbd33fb09668ceb0b410591e5164666017321",
+      "psd_png_mean_absolute_error": 0.0423,
+      "png_bytes": 2447975,
+      "psd_bytes": 11795314
+    }
+  }
+}

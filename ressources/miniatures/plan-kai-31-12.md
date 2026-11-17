@@ -4,6 +4,8 @@
 >
 > Strata (16/11) et « même carte » (19/11) sont déjà faites. Le calendrier bouge souvent : on maquette dans l'ordre des dates, et les vidéos lointaines restent au stade du brief ci-dessous.
 
+> **16/11 — miniatures réalisées pour les 11 vidéos demandées** : [galerie h/i/j et sources](serie-2026-11-16/index.html), [plan de production et revue croisée](serie-2026-11-16/PLAN.md). Les maquettes de ces 11 vidéos sont locales à chaque projet ; le suivi ci-dessous est actualisé pour Qwen 8 Go, budget, DeepSeek et RAM. Les sept sujets de janvier sont inclus dans la nouvelle galerie.
+
 ## Les trois cas
 
 | Cas | h (palette de Kai) | i (Technovore, sans image) | j (Technovore) |
@@ -34,11 +36,11 @@ La colonne « Cas » dit où va le texte ; c'est ma proposition, tu peux la chan
 
 | Date | Vidéo | Cas | Texte (l1 / l2) | Visage recommandé | Rechanges | Objet de la scène |
 |---|---|---|---|---|---|---|
-| lun. 23/11 | [Qwen 27B sur 8 Go](../../projets/qwen-27b-8go/fiche.md) (ajoutée le 16/11) | visage, texte à gauche | 8 GO / 5× PLUS VITE ? | **à choisir** (un meme connu, pas encore généré) | — | la jauge de 8 Go, le fichier de 7,63 Go qui rentre |
+| lun. 23/11 | [Qwen 27B sur 8 Go](../../projets/qwen-27b-8go/fiche.md) (ajoutée le 16/11) | visage, texte à gauche | 8 GO / ÇA RENTRE ? | **Nick Young**, généré le 16/11 | — | jauge 8 Go, fichier 7,63 Go séparé ; taille des poids distincte de la mémoire totale |
 | lun. 30/11 (décalée du 23/11 le 16/11) | [32 Go pour Qwen 27B](../../projets/deux-cartes-occasion/fiche.md) | visage, texte à gauche | 32 GO / PAS CHER ? | **Fry** (déjà généré, retourné par `--miroir` pour regarder le texte) | Oprah « you get a car », Ron Swanson | deux cartes empilées, tuile Qwen, étiquette 32 GO |
-| jeu. 26/11 | [Carte par budget](../../projets/carte-par-budget/fiche.md) | matériel, texte en haut | PAYER PLUS / POUR RIEN ? | **3 cartes graphiques** de tailles différentes (M1) | (les cartes SVG de Strata) | étiquettes de prix vides, remplies avec tes relevés du 20 et du 26/11 |
-| jeu. 3/12 (décalée du 30/11 le 16/11) | [DeepSeek sans carte graphique](../../projets/cout-deepseek-flash/fiche.md) | visage, texte à gauche | ET LA / QUALITÉ ? | **Keanu Reeves** « whoa » (V1) | Pikachu surpris, Nick Young confus | tuile DeepSeek, barrettes de RAM, carte barrée. Pas de chiffre : la version du modèle est à vérifier |
-| jeu. 31/12 (décalée du 3/12 le 16/11) | [RAM, VRAM ou unifiée](../../projets/ram-vram-unifiee/fiche.md) | **Severance** (proposé), texte en haut | LA RAM / TROP LENTE ? | **Roll Safe** (doigt sur la tempe) (V2) | Gru et son plan, Walter White | dans la tête : deux barrettes de RAM et une carte (le prototype) |
+| jeu. 26/11 | [Carte par budget](../../projets/carte-par-budget/fiche.md) | matériel, texte en haut | PAYER PLUS / POUR RIEN ? | **3 cartes graphiques** de tailles différentes (M1) | (les cartes SVG de Strata) | trois cartes génériques de tailles différentes, sans tarif ni référence commerciale |
+| jeu. 3/12 (décalée du 30/11 le 16/11) | [DeepSeek sans carte graphique](../../projets/cout-deepseek-flash/fiche.md) | visage, texte à gauche | ET LA / QUALITÉ ? | **Keanu Reeves** « whoa » (V1) | Pikachu surpris, Nick Young confus | tuile DeepSeek, barrette et label 64 Go ; pas de gain de vitesse ni de score de qualité sur l’image. Script corrigé du 16/11 |
+| jeu. 31/12 (décalée du 3/12 le 16/11) | [RAM, VRAM ou unifiée](../../projets/ram-vram-unifiee/fiche.md) | visage, texte à gauche (16/11) | LA RAM / TROP LENTE ? | **Roll Safe** (doigt sur la tempe) (V2) | Gru et son plan, Walter White | RAM et carte ; trois types de mémoire en i. Coupe Severance écartée pour préserver le geste |
 | lun. 7/12 | [Deux cartes graphiques](../../projets/multi-gpu/fiche.md) | visage, texte à gauche | 2 CARTES / 2× PLUS VITE ? | **Boromir** « on ne fait pas simplement… » (V3) | Gordon Ramsay exaspéré, Steve Harvey choqué | deux cartes reliées, « ×2 ? ». On n'affirme pas « plus lent » : une seule mesure publiée |
 | jeu. 10/12 | [Mac mini ou PC gamer](../../projets/mac-mini-ia/fiche.md) | matériel, texte en haut | LE PETIT / GAGNE ? | **Mac mini** (M2) contre **PC gamer** (M3) | — | les deux machines face à face, « VS ». La question reste ouverte tant que le calcul n'est pas fait |
 | lun. 14/12 | [Coût de Claude Fable 5.2](../../projets/cout-claude-local/fiche.md) (fusion avec Kimi, 15/11) | **Severance** (proposé), texte en haut | CLAUDE / ?? ??? € | **Michael Scott** (horrifié) (V9) | **M. Krabs** (V4, l'ancienne miniature de Kimi, déjà générée), M. Burns qui joint les doigts | dans la tête, une baie de serveurs et la tuile Claude. Le prix arrive avec le calcul du script |
@@ -73,11 +75,11 @@ Une seule maquette pour toutes les vidéos : [`propositions/kai-31-12.html`](pro
 
 | Date | Images reçues | Maquette | Rendus + PSD | Test A/B décidé |
 |---|---|---|---|---|
-| 23/11 | (8 Go : visage à choisir) | | | |
+| 23/11 | Nick Young généré ✓ | ✓ locale | ✓ h/i/j | à lancer |
 | 30/11 | Fry ✓ | ✓ | ✓ | |
-| 26/11 | M1 : **pas sur le disque** (`carte-par-budget/miniature/sources/` est vide) | | | |
-| 3/12 | Keanu : **pas sur le disque** | | | |
-| 31/12 | Roll Safe : **pas sur le disque** | | | |
+| 26/11 | M1 : cartes générées ✓ | ✓ locale | ✓ h/i/j | à lancer |
+| 3/12 | Keanu généré ✓ | ✓ locale | ✓ h/i/j | à lancer |
+| 31/12 | Roll Safe généré ✓ | ✓ locale, sans coupe | ✓ h/i/j | à lancer |
 | 7/12 | Boromir ✓ | ✓ | ✓ | |
 | 10/12 | Mac mini ✓, PC gamer ✓ | ✓ | ✓ | |
 | 14/12 | Michael ✓ (Krabs ✓ en rechange) | ✓ Severance | ✓ | |

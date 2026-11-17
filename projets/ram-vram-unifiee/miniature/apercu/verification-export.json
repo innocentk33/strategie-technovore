@@ -1,0 +1,50 @@
+[
+  {
+    "variante": "h",
+    "png": [
+      3840,
+      2160
+    ],
+    "psd": [
+      3840,
+      2160
+    ],
+    "textes_modifiables": 3,
+    "polices": [
+      "Archivo Black"
+    ],
+    "avertissements": []
+  },
+  {
+    "variante": "i",
+    "png": [
+      3840,
+      2160
+    ],
+    "psd": [
+      3840,
+      2160
+    ],
+    "textes_modifiables": 6,
+    "polices": [
+      "Archivo Black"
+    ],
+    "avertissements": []
+  },
+  {
+    "variante": "j",
+    "png": [
+      3840,
+      2160
+    ],
+    "psd": [
+      3840,
+      2160
+    ],
+    "textes_modifiables": 3,
+    "polices": [
+      "Archivo Black"
+    ],
+    "avertissements": []
+  }
+]

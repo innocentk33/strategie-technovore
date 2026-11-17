@@ -7,6 +7,12 @@ paths:
 
 # Miniatures
 
+## Logos reconnaissables (demande de l’auteur, 16/11/2026)
+
+Quand le sujet est un outil ou un modèle connu, privilégier son **véritable logo**, conservé dans ses couleurs et proportions : Claude, DeepSeek, Qwen, LM Studio, Ollama, llama.cpp, etc. Réutiliser les SVG du projet ou récupérer les fichiers depuis le site ou dépôt officiel, avec leur provenance. Ne pas inventer un monogramme, une pseudo-icône ou un pictogramme de code à la place du logo réel.
+
+Une illustration de l’emblème dans notre style est possible si elle reste immédiatement reconnaissable (exemple donné par l’auteur : la baleine de DeepSeek). Les tuiles, contours et ombres peuvent suivre la charte, sans déformer le logo. Vérifier la reconnaissance à 168 px et laisser un espace visible entre titre et logos : aucune lettre ni copie décalée du titre ne doit toucher les tuiles, même inclinées.
+
 ## Style unique : celui d'OpenCode piraté (décidé le 11/11)
 
 **Toutes les miniatures prennent le style d'OpenCode piraté** (4,2 % de CTR, la meilleure de la chaîne), y compris celles d'« IA chez moi ». La charte verte (`vert.html`) n'est plus utilisée. La référence est [`ressources/miniatures/images/reference-style-opencode.jpg`](../../ressources/miniatures/images/reference-style-opencode.jpg) :

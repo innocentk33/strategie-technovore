@@ -39,7 +39,7 @@ Chaînes trouvées par vidIQ (concurrents de Kai), plus AIex pour le matériel. 
   - une ligne de contexte grise de 4 mots au plus, seulement si elle dit ce que le titre ne dit pas ;
   - une ligne principale de 3 mots au plus, d'au moins 110 px, terminée par « . » ou « ? ».
 - **Jamais la même information que le titre.**
-- **Logos dans leurs vraies couleurs** : Uber noir, Waze cyan, WhatsApp vert, Claude orange.
+- **Logos authentiques et reconnaissables, dans leurs vraies couleurs** : Uber noir, Waze cyan, WhatsApp vert, Claude orange. Demande confirmée le 16/11 : employer les véritables logos de Claude, DeepSeek, Qwen, LM Studio, Ollama et llama.cpp quand ils identifient le sujet. Ne pas substituer un monogramme inventé ou une icône générique. Une illustration reconnaissable de l’emblème (par exemple la baleine DeepSeek) est possible dans notre style. Consigner la source officielle du fichier et laisser un espace net entre titre et tuiles de logos.
 - **Rien d'important sous 50 px de haut**, ni dans le coin de la durée (x > 1100, y > 610).
 - **Export en 4K** (décidé le 23/10, nos vidéos étant longues) : 3840×2160 en 16:9. On dessine toujours dans une page de 1280×720, et `rendre.sh` et `psd.py` la rendent à ×3 ; toutes les cotes de ce document restent en 1280×720. YouTube accepte 50 Mo depuis un ordinateur, mais seulement 2 Mo depuis l'appli mobile : importe la miniature depuis l'ordinateur (aide YouTube « Ajouter des miniatures de vidéo », lue le 23/10).
 - **La menthe `#07c095` dans les deux chartes** : c'est le fil qui relie les piliers (ponctuation « gagnée » et voyant de la marque en noir).

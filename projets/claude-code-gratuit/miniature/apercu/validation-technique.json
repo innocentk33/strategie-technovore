@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-16",
+  "revision": "logos-reels-couleurs-marques",
+  "variants": {
+    "h": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 3,
+      "png_sha256": "f1bdf201355c7785d96a02a91ca50126ffde4f6eab4229d749dc1997d7a6c121",
+      "psd_sha256": "9f93baeda28863e344cfea70b97135f9b17963463eba3a0b5c78409e3cfdbcc4",
+      "psd_png_mean_absolute_error": 0.0431,
+      "png_bytes": 1660222,
+      "psd_bytes": 8745300
+    },
+    "i": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 3,
+      "png_sha256": "7094e7bc57516c5e8f06f9e05feea1de7c5a79b5c35f518d0fdb287a8671e02a",
+      "psd_sha256": "16ccce57436e22e3bb0507598d7d9621ff82fec547496fd86727f011e640b550",
+      "psd_png_mean_absolute_error": 0.0621,
+      "png_bytes": 132143,
+      "psd_bytes": 2129698
+    },
+    "j": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 3,
+      "png_sha256": "b85127f3f2aace68d8670045b1f08cebdc09033aa5f151b318f0cd54d15702e2",
+      "psd_sha256": "7bb34c38e87223fcb009c2c99e91afa0f5bbcbbf43b11374b940693261b6d60e",
+      "psd_png_mean_absolute_error": 0.0518,
+      "png_bytes": 1746009,
+      "psd_bytes": 9117049
+    }
+  }
+}

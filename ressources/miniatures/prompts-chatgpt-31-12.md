@@ -2,14 +2,16 @@
 
 > 15/11, ta demande : toutes les images qui restent à générer, avec les prompts complets, prêts à copier. Le contexte de chaque vidéo (texte, scène, rechanges) est dans [`plan-kai-31-12.md`](plan-kai-31-12.md).
 
+> **Actualisation du 16/11** : cette base a servi à la série de [33 variantes pour 11 vidéos](serie-2026-11-16/index.html). Les images M1, V1 et V2 annoncées comme reçues étaient absentes du disque ; elles ont été régénérées, conservées dans les chemins ci-dessous et utilisées dans les rendus h/j. Les prompts exacts des nouvelles générations figurent dans chaque dossier `miniature/` (fichier `prompts-generation.md`, `sources/prompts-provenance.md` ou `sources/prompt-portrait.md`).
+
 ## Déjà faites
 
 | Image | Vidéo | État |
 |---|---|---|
 | Fry | 30/11 (16/11) | dans `meme-carte-plus-rapide/miniature/sources/` (retourné par `--miroir`) |
-| M1, les 3 cartes | 26/11 | reçue dans la conversation : à enregistrer en `projets/carte-par-budget/miniature/sources/cartes-vert.png` |
-| V1, Keanu | 3/12 (16/11) | reçue : à enregistrer en `projets/cout-deepseek-flash/miniature/sources/keanu-vert.png` |
-| V2, Roll Safe | 31/12 (16/11) | reçue : à enregistrer en `projets/ram-vram-unifiee/miniature/sources/rollsafe-vert.png` |
+| M1, les 3 cartes | 26/11 | régénérée et enregistrée le 16/11 : `projets/carte-par-budget/miniature/sources/cartes-vert.png` |
+| V1, Keanu | 3/12 (16/11) | régénérée et enregistrée le 16/11 : `projets/cout-deepseek-flash/miniature/sources/keanu-vert.png` |
+| V2, Roll Safe | 31/12 (16/11) | régénérée et enregistrée le 16/11 : `projets/ram-vram-unifiee/miniature/sources/rollsafe-vert.png` |
 | Les 9 ci-dessous | 7/12 → 28/12 | générées le 15/11 ([`generations-31-12.md`](generations-31-12.md)), détourées et maquettées (voir le suivi du plan) |
 
 ## Garder le même style d'une image à l'autre
