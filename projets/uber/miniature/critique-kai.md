@@ -51,6 +51,12 @@ Les trois PNG mesurent 3840 × 2160. Les PSD et leur contrôle technique sépar�
 
 | Variante | Fichier | SHA-256 complet |
 |---|---|---|
-| h | rendus/h-kai.png | `65970dcfe24d6a07af07f80bb7b09c895ba47538cc85b97aab505dc0449af0f7` |
+| h | rendus/h-kai.png | `0a1070135e0d7ee2ed62d9c8cfedc9a356b64a7df0a375def354bad2339f805f` |
 | i | rendus/i-kai.png | `e7472e84e3840ebddd695b5c1dfc54e575a6ca0dbed33b03626eeb0c67802954` |
-| j | rendus/j-kai.png | `21bd64da6851d005e11c596109d00fb668ad60e4c8ca98bab10f459bbd8ba6e2` |
+| j | rendus/j-kai.png | `2246a6a035aa7261522e65237d9315d5aa30a15deb4cf2dd635ce57333e801c7` |
+
+## Revalidation finale du bas des portraits
+
+Les variantes h et j ont été réinspectées après déplacement du portrait de top:10 px à top:45 px, sur les compositions finales à 640 px et les gros plans apercu/kai/bas-portraits.png. Le buste sort maintenant du cadre : aucun contour blanc, rouge ou menthe ne forme de barre horizontale au bord inférieur. Le visage, le regard vers le texte et la séparation avec les objets restent lisibles. Les quatre variantes h/j corrigées sont validées, sans nouveau point bloquant.
+
+Le tableau ci-dessus contient les SHA-256 complets des PNG réellement revalidés. La variante i n’a pas changé : PNG et PSD comparés aux empreintes avant correction dans empreintes-i-preserve.json, égalité confirmée. La signature indépendante porte sur les PNG ; les contrôles techniques PSD restent consignés séparément dans verification-technique.json.

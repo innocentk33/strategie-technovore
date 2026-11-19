@@ -43,3 +43,7 @@ Le véritable logo provient de `ressources/miniatures/logos/lm-studio.svg` : fic
 ## Relecture et test proposé
 
 Contrôle visuel des 6 PNG par le producteur, puis critique indépendante par un autre agent dans `critique-kai.md`. Aucune prédiction de CTR. Test h/i/j sous le même titre, sans publication automatique. h/j teste surtout la palette ; i change aussi la mise en page et l’échelle, donc i/j compare une proposition sans visage plutôt que le seul effet du visage isolé.
+
+## Correction du bord inférieur du portrait — 19/11/2026
+
+Dans h/j, le portrait est descendu de 35 px (top : 10 → 45 px à 1×). Le bord horizontal de l’image et son ombre passent entièrement sous le cadre. Les quatre PNG et PSD concernés sont régénérés et les PSD rouverts ; les variantes i PNG et PSD sont conservées octet pour octet, contrôlées avec `apercu/kai/empreintes-i-preserve.json`. Recadrage de contrôle visuel : `apercu/kai/bas-portraits.png`. Le JSON et les planches reflètent les nouvelles versions.

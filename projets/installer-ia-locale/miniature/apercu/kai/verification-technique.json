@@ -12,11 +12,11 @@
         2160
       ],
       "editable_type_blocks": 3,
-      "png_sha256": "249a1e2d4c56c06b8a80417d36ca81734e140d850da359497308add4493027a1",
-      "psd_sha256": "5ea868448e6135c50bf69e8d87f8fcbe2881e1c16b2e3524391800cf77be7dc7",
+      "png_sha256": "23844d46df3413b607c762a15ba7d4d7c4f751f67a86e3d2ccf09aeace6fff3d",
+      "psd_sha256": "14525fefdabf8bba1e73581e065f2b057a05234b35fb1d9bfba42b42a8a6a43a",
       "psd_png_mean_absolute_error": 0.0377,
-      "png_bytes": 2143877,
-      "psd_bytes": 10513393
+      "png_bytes": 2018473,
+      "psd_bytes": 9953725
     },
     "i": {
       "png_dimensions": [
@@ -44,11 +44,11 @@
         2160
       ],
       "editable_type_blocks": 3,
-      "png_sha256": "c5ddf28afd1d64cc8b968ce04794e5c426fc9477c0ba0ebd19fba8fcf80572bb",
-      "psd_sha256": "14a9091c246a832188a19b8bc97b17d763cfd1f6d4672e533dceeb851fa25a5d",
+      "png_sha256": "72131109200916c452262c7727557246381137d18b81b50fb9a7d09c357ba0ae",
+      "psd_sha256": "8dab36a7d842e2d32bbf3b7cb7da122eea356ad5235dccfd2f3d89c786eeada3",
       "psd_png_mean_absolute_error": 0.0536,
-      "png_bytes": 2226096,
-      "psd_bytes": 10893435
+      "png_bytes": 2099466,
+      "psd_bytes": 10324511
     }
   }
 }
