@@ -4,17 +4,17 @@
     "largeur": 3840,
     "hauteur": 2160,
     "ratio": 1.778,
-    "poids_octets": 2023668,
-    "poids_mo": 2.02,
+    "poids_octets": 1966934,
+    "poids_mo": 1.97,
     "format": "PNG",
-    "luminosite_moyenne": 0.279,
-    "contraste_valeurs": 0.35,
-    "saturation_moyenne": 0.199,
-    "part_tres_claire": 0.128,
-    "part_tres_sombre": 0.631,
-    "couleur_moyenne_bords": "#191718",
-    "part_bords_quasi_blancs": 0.02,
-    "part_bords_quasi_noirs": 0.942,
+    "luminosite_moyenne": 0.266,
+    "contraste_valeurs": 0.345,
+    "saturation_moyenne": 0.185,
+    "part_tres_claire": 0.127,
+    "part_tres_sombre": 0.658,
+    "couleur_moyenne_bords": "#181718",
+    "part_bords_quasi_blancs": 0.024,
+    "part_bords_quasi_noirs": 0.949,
     "palette": [
       {
         "hex": "#111011",
@@ -23,50 +23,50 @@
           16,
           17
         ],
-        "part": 0.722
+        "part": 0.737
       },
       {
-        "hex": "#F7F5F5",
+        "hex": "#F7F6F6",
         "rgb": [
           247,
-          245,
-          245
+          246,
+          246
         ],
-        "part": 0.115
+        "part": 0.114
       },
       {
-        "hex": "#F2935E",
+        "hex": "#F2925D",
         "rgb": [
           242,
-          147,
-          94
+          146,
+          93
         ],
-        "part": 0.052
+        "part": 0.053
       },
       {
-        "hex": "#FECD32",
+        "hex": "#FECD33",
         "rgb": [
           254,
           205,
-          50
-        ],
-        "part": 0.031
-      },
-      {
-        "hex": "#E06335",
-        "rgb": [
-          224,
-          99,
-          53
+          51
         ],
         "part": 0.019
       },
       {
-        "hex": "#A09E9E",
+        "hex": "#A3A2A2",
         "rgb": [
-          160,
-          158,
-          158
+          163,
+          162,
+          162
+        ],
+        "part": 0.019
+      },
+      {
+        "hex": "#DF6234",
+        "rgb": [
+          223,
+          98,
+          52
         ],
         "part": 0.018
       }
@@ -75,47 +75,46 @@
     "densite_details_par_case": [
       {
         "case": "haut-gauche",
-        "densite": 0.107
+        "densite": 0.133
       },
       {
         "case": "haut-centre",
-        "densite": 0.044
+        "densite": 0.034
       },
       {
         "case": "haut-droite",
-        "densite": 0.093
+        "densite": 0.075
       },
       {
         "case": "milieu-gauche",
-        "densite": 0.243
+        "densite": 0.204
       },
       {
         "case": "centre",
-        "densite": 0.188
+        "densite": 0.147
       },
       {
         "case": "milieu-droite",
-        "densite": 0.167
+        "densite": 0.165
       },
       {
         "case": "bas-gauche",
-        "densite": 0.056
+        "densite": 0.115
       },
       {
         "case": "bas-centre",
-        "densite": 0.102
+        "densite": 0.13
       },
       {
         "case": "bas-droite",
-        "densite": 0.193
+        "densite": 0.19
       }
     ],
     "densite_details_moyenne": 0.133,
-    "densite_details_ecart": 0.064,
-    "densite_zone_duree": 0.118,
+    "densite_details_ecart": 0.051,
+    "densite_zone_duree": 0.191,
     "alertes": [
-      "2.02 Mo : au-dessus de 2 Mo, l'upload depuis un téléphone échoue (l'ordinateur accepte jusqu'à 50 Mo).",
-      "94 % du pourtour est quasi noir : la miniature se fond dans le mode sombre."
+      "95 % du pourtour est quasi noir : la miniature se fond dans le mode sombre."
     ]
   },
   {
@@ -123,14 +122,14 @@
     "largeur": 3840,
     "hauteur": 2160,
     "ratio": 1.778,
-    "poids_octets": 193776,
-    "poids_mo": 0.19,
+    "poids_octets": 246840,
+    "poids_mo": 0.25,
     "format": "PNG",
-    "luminosite_moyenne": 0.35,
-    "contraste_valeurs": 0.382,
-    "saturation_moyenne": 0.367,
-    "part_tres_claire": 0.24,
-    "part_tres_sombre": 0.064,
+    "luminosite_moyenne": 0.342,
+    "contraste_valeurs": 0.384,
+    "saturation_moyenne": 0.344,
+    "part_tres_claire": 0.243,
+    "part_tres_sombre": 0.078,
     "couleur_moyenne_bords": "#141E27",
     "part_bords_quasi_blancs": 0.0,
     "part_bords_quasi_noirs": 0.0,
@@ -142,59 +141,59 @@
           28,
           36
         ],
-        "part": 0.652
+        "part": 0.671
       },
       {
-        "hex": "#FBFBFC",
+        "hex": "#FCFCFC",
         "rgb": [
-          251,
-          251,
+          252,
+          252,
           252
         ],
-        "part": 0.219
+        "part": 0.217
       },
       {
-        "hex": "#08C196",
+        "hex": "#A3A3A4",
         "rgb": [
-          8,
-          193,
-          150
+          163,
+          163,
+          164
         ],
-        "part": 0.045
+        "part": 0.026
       },
       {
-        "hex": "#7349F2",
+        "hex": "#2E4A5A",
         "rgb": [
-          115,
-          73,
-          242
+          46,
+          74,
+          90
         ],
         "part": 0.022
       },
       {
-        "hex": "#294E59",
+        "hex": "#09C297",
         "rgb": [
-          41,
-          78,
-          89
+          9,
+          194,
+          151
         ],
-        "part": 0.02
+        "part": 0.021
       },
       {
-        "hex": "#5B5F61",
+        "hex": "#5C5E61",
         "rgb": [
-          91,
-          95,
+          92,
+          94,
           97
         ],
-        "part": 0.019
+        "part": 0.016
       }
     ],
-    "familles_couleurs_vives": 2,
+    "familles_couleurs_vives": 3,
     "densite_details_par_case": [
       {
         "case": "haut-gauche",
-        "densite": 0.078
+        "densite": 0.087
       },
       {
         "case": "haut-centre",
@@ -202,36 +201,36 @@
       },
       {
         "case": "haut-droite",
-        "densite": 0.073
-      },
-      {
-        "case": "milieu-gauche",
-        "densite": 0.116
-      },
-      {
-        "case": "centre",
-        "densite": 0.172
-      },
-      {
-        "case": "milieu-droite",
-        "densite": 0.108
-      },
-      {
-        "case": "bas-gauche",
         "densite": 0.082
       },
       {
+        "case": "milieu-gauche",
+        "densite": 0.111
+      },
+      {
+        "case": "centre",
+        "densite": 0.176
+      },
+      {
+        "case": "milieu-droite",
+        "densite": 0.086
+      },
+      {
+        "case": "bas-gauche",
+        "densite": 0.066
+      },
+      {
         "case": "bas-centre",
-        "densite": 0.102
+        "densite": 0.084
       },
       {
         "case": "bas-droite",
-        "densite": 0.088
+        "densite": 0.078
       }
     ],
-    "densite_details_moyenne": 0.103,
-    "densite_details_ecart": 0.028,
-    "densite_zone_duree": 0.004,
+    "densite_details_moyenne": 0.098,
+    "densite_details_ecart": 0.031,
+    "densite_zone_duree": 0.0,
     "alertes": []
   },
   {
@@ -239,16 +238,16 @@
     "largeur": 3840,
     "hauteur": 2160,
     "ratio": 1.778,
-    "poids_octets": 2104526,
-    "poids_mo": 2.1,
+    "poids_octets": 2045561,
+    "poids_mo": 2.05,
     "format": "PNG",
-    "luminosite_moyenne": 0.301,
-    "contraste_valeurs": 0.334,
-    "saturation_moyenne": 0.426,
-    "part_tres_claire": 0.142,
-    "part_tres_sombre": 0.112,
-    "couleur_moyenne_bords": "#1B242B",
-    "part_bords_quasi_blancs": 0.021,
+    "luminosite_moyenne": 0.291,
+    "contraste_valeurs": 0.331,
+    "saturation_moyenne": 0.421,
+    "part_tres_claire": 0.138,
+    "part_tres_sombre": 0.117,
+    "couleur_moyenne_bords": "#1B232B",
+    "part_bords_quasi_blancs": 0.024,
     "part_bords_quasi_noirs": 0.111,
     "palette": [
       {
@@ -258,50 +257,50 @@
           27,
           34
         ],
-        "part": 0.714
+        "part": 0.735
       },
       {
-        "hex": "#F6F5F5",
+        "hex": "#F6F6F6",
         "rgb": [
           246,
-          245,
-          245
+          246,
+          246
         ],
-        "part": 0.125
+        "part": 0.122
       },
       {
-        "hex": "#F2935E",
+        "hex": "#F2925D",
         "rgb": [
           242,
-          147,
-          94
+          146,
+          93
         ],
-        "part": 0.052
+        "part": 0.053
       },
       {
-        "hex": "#0BC297",
+        "hex": "#0BC398",
         "rgb": [
           11,
-          194,
-          151
+          195,
+          152
         ],
-        "part": 0.037
+        "part": 0.024
       },
       {
-        "hex": "#9F9FA0",
+        "hex": "#A1A0A1",
         "rgb": [
-          159,
-          159,
-          160
+          161,
+          160,
+          161
         ],
-        "part": 0.023
+        "part": 0.02
       },
       {
-        "hex": "#5F5F61",
+        "hex": "#5E5E60",
         "rgb": [
-          95,
-          95,
-          97
+          94,
+          94,
+          96
         ],
         "part": 0.019
       }
@@ -310,46 +309,47 @@
     "densite_details_par_case": [
       {
         "case": "haut-gauche",
-        "densite": 0.101
+        "densite": 0.12
       },
       {
         "case": "haut-centre",
-        "densite": 0.045
+        "densite": 0.032
       },
       {
         "case": "haut-droite",
-        "densite": 0.099
+        "densite": 0.081
       },
       {
         "case": "milieu-gauche",
-        "densite": 0.246
+        "densite": 0.216
       },
       {
         "case": "centre",
-        "densite": 0.204
+        "densite": 0.156
       },
       {
         "case": "milieu-droite",
-        "densite": 0.168
+        "densite": 0.167
       },
       {
         "case": "bas-gauche",
-        "densite": 0.058
+        "densite": 0.12
       },
       {
         "case": "bas-centre",
-        "densite": 0.107
+        "densite": 0.137
       },
       {
         "case": "bas-droite",
-        "densite": 0.197
+        "densite": 0.194
       }
     ],
     "densite_details_moyenne": 0.136,
-    "densite_details_ecart": 0.066,
-    "densite_zone_duree": 0.122,
+    "densite_details_ecart": 0.053,
+    "densite_zone_duree": 0.207,
     "alertes": [
-      "2.1 Mo : au-dessus de 2 Mo, l'upload depuis un téléphone échoue (l'ordinateur accepte jusqu'à 50 Mo)."
+      "2.05 Mo : au-dessus de 2 Mo, l'upload depuis un téléphone échoue (l'ordinateur accepte jusqu'à 50 Mo).",
+      "Beaucoup de détails sous la zone de la durée (bas droite) : vérifier que rien d'important n'y est caché."
     ]
   }
 ]

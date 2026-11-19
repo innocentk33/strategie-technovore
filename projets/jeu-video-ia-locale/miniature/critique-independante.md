@@ -1,5 +1,19 @@
 # Critique indépendante — jeu-video-ia-locale
 
+## Revalidation ciblée du 20/11/2026 — bord inférieur
+
+**H : validée après correction. J : validée après correction. I : conservée.** Relecture indépendante par lot_modeles, distinct de l’agent qui a déplacé les portraits. Les deux PNG corrigés ont été vus en entier, en comparaison à 640 px et sur leur bande inférieure. Le déplacement top:10→42 px fait sortir le buste et son contour du cadre : aucune ligne horizontale blanche, rouge ou menthe au bord inférieur. Le visage entier, le regard vers l’accroche, le jeu et la manette restent lisibles ; aucune lettre ni copie ne touche le portrait.
+
+La présente validation concerne la correction de cadrage et les PNG ; elle ne remplace pas le contrôle PSD séparé. Les observations de fond et l’historique du 16/11 sont conservés plus bas. La variante i n’a pas changé dans cette correction.
+
+| Variante finale | SHA-256 complet du PNG |
+|---|---|
+| h | `7426c7eb23fc51f8713015b29d0ae5b2d2ac306ac9b4e13c288d37c03b172149` |
+| i | `6a4b4b1e5f381d66c373930b83034fcb707c5ed336835fd1aefe4630e23f907c` |
+| j | `9e73e3520da4dd1282c07fb909dcb5f0ef643cea333def53cfd2b28d3afa4ba7` |
+
+---
+
 16/11/2026 — relecteur distinct de l’auteur des maquettes. Grille du skill coach-miniature-youtube appliquée après lecture du script corrigé et de propositions.md. **Validation finale : les trois variantes h/i/j sont livrables après corrections et seconde visualisation indépendante.**
 
 ## Revalidation finale du 16/11/2026

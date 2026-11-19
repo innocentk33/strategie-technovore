@@ -35,3 +35,8 @@ Validation finale : critique indépendante du lot matériel approuvée après co
 À la demande de l’auteur, les marques sont identifiées par leurs SVG véritables. Provenance et empreintes dans `sources/logos-provenance.md`. Logo Claude original placé dans le terminal CLAUDE CODE, puce distincte marquée LOCAL. PNG, PSD, planches et empreintes sont régénérés après cette modification ; la critique précédente est remplacée par une relecture indépendante des nouvelles versions.
 
 Vérification après correction des logos : les 3 PSD ont été recréés puis rouverts et comparés visuellement aux PNG ; 3 calques texte modifiables conservés. `apercu/validation-technique.json` contient les nouvelles empreintes et mesures. Le logo Claude est orange #D97757, copie de la source Strata existante, et reste associé au terminal Claude Code.
+
+
+## Correction du bord inférieur — 20/11/2026
+
+Un trait horizontal de contour sous le buste h/j a été supprimé en décalant le portrait de 20 px vers le bas, dans la maquette reproductible. PNG/PSD et aperçus locaux réexportés, variante i identique. [Rapport et hashes finaux](apercu/audit-bord-2026-11-20/rapport.md).

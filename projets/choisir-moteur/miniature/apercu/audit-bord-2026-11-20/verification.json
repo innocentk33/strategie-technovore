@@ -1,0 +1,56 @@
+[
+  {
+    "variante": "h",
+    "sha256_avant": "1a61da19e207b47efc979ea441f17d362e5199139790488da7b287e8f074e337",
+    "sha256_apres": "6b3e0c9ad13fe91d527d2f0ea2565c0ebecf29e768bebef8c8d23cdae084c79a",
+    "trait_accent_max_12px_avant": 1922,
+    "trait_accent_max_12px_apres": 0,
+    "psd": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 3,
+      "fonts": [
+        "Archivo Black"
+      ],
+      "png_sha256": "6b3e0c9ad13fe91d527d2f0ea2565c0ebecf29e768bebef8c8d23cdae084c79a",
+      "psd_sha256": "3fce6cd36758825d6ea19614c9077967ef2c4def28ca506824a591c08ac1c418",
+      "psd_png_mean_absolute_error": 0.041901,
+      "png_bytes": 1966934,
+      "psd_bytes": 9671299,
+      "warnings": []
+    }
+  },
+  {
+    "variante": "j",
+    "sha256_avant": "e3134169c6f9406c05d3e2a796df8a60a2d945064957bf08fb53178003c936a6",
+    "sha256_apres": "60890b751fe1c3da94ed32f3ca2ed233c6e9fcf28b2752af0a125c0e631fce22",
+    "trait_accent_max_12px_avant": 1916,
+    "trait_accent_max_12px_apres": 0,
+    "psd": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 3,
+      "fonts": [
+        "Archivo Black"
+      ],
+      "png_sha256": "60890b751fe1c3da94ed32f3ca2ed233c6e9fcf28b2752af0a125c0e631fce22",
+      "psd_sha256": "a49a3c196f2b5f82144cf493f5d4c2b5f380482d2f1436d211702359129dc8c2",
+      "psd_png_mean_absolute_error": 0.046635,
+      "png_bytes": 2045561,
+      "psd_bytes": 10029549,
+      "warnings": []
+    }
+  }
+]

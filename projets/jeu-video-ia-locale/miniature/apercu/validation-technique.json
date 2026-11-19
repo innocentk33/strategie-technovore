@@ -1,5 +1,6 @@
 {
-  "date": "2026-11-16",
+  "date": "2026-11-20",
+  "project": "jeu-video-ia-locale",
   "variants": {
     "h": {
       "png_dimensions": [
@@ -11,11 +12,11 @@
         2160
       ],
       "editable_type_blocks": 3,
-      "png_sha256": "0faa759614e7bef265fdf999180866ca4b6efa93e9ffa50e63b77bde943fe6ce",
-      "psd_sha256": "65a28ba79ff0c878276a2f79e2ac787f5d7855f3513678e534c365ff84cc188e",
+      "png_sha256": "7426c7eb23fc51f8713015b29d0ae5b2d2ac306ac9b4e13c288d37c03b172149",
+      "psd_sha256": "8152a31cd6c1680442d281661b211ff30817d9ce1261c683bd934b34af3c7928",
       "psd_png_mean_absolute_error": 0.0371,
-      "png_bytes": 2351446,
-      "psd_bytes": 11404034
+      "png_bytes": 2235962,
+      "psd_bytes": 10874501
     },
     "i": {
       "png_dimensions": [
@@ -43,11 +44,11 @@
         2160
       ],
       "editable_type_blocks": 3,
-      "png_sha256": "3fb9efad3854023839843ab3f1807dbe95ee96044bfcd1eef253b45c9518d2ae",
-      "psd_sha256": "4cef798695e21f1c0ba667c2585bbd33fb09668ceb0b410591e5164666017321",
+      "png_sha256": "9e73e3520da4dd1282c07fb909dcb5f0ef643cea333def53cfd2b28d3afa4ba7",
+      "psd_sha256": "1fd838ddac7d66b4755efbffb3ac05dc9544ddb37f77a55933509ab07704f1b0",
       "psd_png_mean_absolute_error": 0.0423,
-      "png_bytes": 2447975,
-      "psd_bytes": 11795314
+      "png_bytes": 2330491,
+      "psd_bytes": 11256577
     }
   }
 }

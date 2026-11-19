@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-16",
-  "revision": "logos-reels-couleurs-marques",
+  "date": "2026-11-20",
+  "revision": "suppression-contour-horizontal-inferieur",
   "variants": {
     "h": {
       "png_dimensions": [
@@ -12,11 +12,15 @@
         2160
       ],
       "editable_type_blocks": 3,
-      "png_sha256": "4d0afffb992388cfc4101d855b676ac51383a9e827f213bd996a77a6cdea88f4",
-      "psd_sha256": "3aec510ab6613afb1aca14b9ffa50d59c692ec3c7ec2d992a91ca2506242014f",
-      "psd_png_mean_absolute_error": 0.0419,
-      "png_bytes": 2036767,
-      "psd_bytes": 9964344
+      "fonts": [
+        "Archivo Black"
+      ],
+      "png_sha256": "6b3e0c9ad13fe91d527d2f0ea2565c0ebecf29e768bebef8c8d23cdae084c79a",
+      "psd_sha256": "3fce6cd36758825d6ea19614c9077967ef2c4def28ca506824a591c08ac1c418",
+      "psd_png_mean_absolute_error": 0.041901,
+      "png_bytes": 1966934,
+      "psd_bytes": 9671299,
+      "warnings": []
     },
     "i": {
       "png_dimensions": [
@@ -44,11 +48,15 @@
         2160
       ],
       "editable_type_blocks": 3,
-      "png_sha256": "82d94b2701bb458f71651ebe040a13e408979f6b58c373efacf0364719f5f98f",
-      "psd_sha256": "c2e9356ea752d1e4c530c899c30104c6c48446190f488c8bfd0515ed681eddf0",
-      "psd_png_mean_absolute_error": 0.0466,
-      "png_bytes": 2116503,
-      "psd_bytes": 10327145
+      "fonts": [
+        "Archivo Black"
+      ],
+      "png_sha256": "60890b751fe1c3da94ed32f3ca2ed233c6e9fcf28b2752af0a125c0e631fce22",
+      "psd_sha256": "a49a3c196f2b5f82144cf493f5d4c2b5f380482d2f1436d211702359129dc8c2",
+      "psd_png_mean_absolute_error": 0.046635,
+      "png_bytes": 2045561,
+      "psd_bytes": 10029549,
+      "warnings": []
     }
   }
 }

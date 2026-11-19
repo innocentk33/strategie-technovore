@@ -38,3 +38,7 @@ Les illustrations manquantes ont été générées avec l’outil intégré `ima
 Chaque variante est critiquée par un agent GPT‑6.1 Sol, effort élevé, distinct de son producteur. Les réserves, corrections et versions relues sont consignées dans les onze critiques. Les avis de préférence sont des hypothèses, pas des prédictions de CTR.
 
 h/j comparent les palettes à scène conservée. i propose une scène sans portrait et change aussi sa composition : i/j ne mesure donc pas exclusivement l’effet d’un visage. Aucun test YouTube ni publication n’a été lancé.
+
+## Relecture des cadrages du 20 novembre
+
+Le contrôle a porté sur les 56 variantes h et j déjà rendues dans les 27 projets, y compris les déclinaisons Fry et DiCaprio. Six rendus présentaient un trait horizontal au bas du buste. Les portraits ont été descendus pour faire sortir le contour du cadre. Les critiques et les exports se trouvent dans les projets [Choisir son moteur](../../../projets/choisir-moteur/miniature/critique-independante.md), [Claude Code avec une IA locale](../../../projets/claude-code-gratuit/miniature/critique-independante.md) et [Créer un petit jeu avec une IA locale](../../../projets/jeu-video-ia-locale/miniature/critique-independante.md).

@@ -1,4 +1,20 @@
+> **Mise à jour du 20/11/2026 :** le cadrage inférieur h/j a été corrigé et fait l’objet de la contre-revue ci-dessous. Les revues antérieures conservent les empreintes de leurs versions historiques ; voir [rapport du bord inférieur](apercu/audit-bord-2026-11-20/rapport.md) pour les fichiers actuels et la nouvelle contre-revue.
+
 > **Validation antérieure à la correction des logos.** Pour les derniers PNG, voir [critique-logos.md](critique-logos.md), avec vérification indépendante et empreintes finales.
+
+## Revalidation ciblée du 20/11/2026 — bord inférieur
+
+**H : validée après correction. J : validée après correction. I : inchangée.** Relecture indépendante par lot_modeles, distinct de lot_materiel qui a produit la retouche. Les compositions finales h/j ont été vues en entier à 640 px puis sur une bande inférieure agrandie. Le portrait passe de top:10 à top:30 px : le buste et ses ombres sortent du cadre. Aucune barre horizontale de contour blanc, rouge ou menthe n’est visible en bas. Le regard vers le texte, la marge avec les objets et la reconnaissance des vrais logos sont conservés ; aucune collision nouvelle.
+
+Cette signature porte sur la correction de cadrage et les PNG finaux. Les revues de concept et de logos précédentes restent consignées plus bas ; leurs anciennes empreintes sont historiques. La variante i n’a pas été retouchée. Les PSD et leur contrôle technique sont traités séparément par le producteur.
+
+| Variante finale | Dimensions | SHA-256 complet du PNG |
+|---|---|---|
+| h | 3840 × 2160 | `7de1fe57cca38dc801d48e40e4f2180a9b860047e15d937152ba99baf8fb7b9c` |
+| i | 3840 × 2160 | `7094e7bc57516c5e8f06f9e05feea1de7c5a79b5c35f518d0fdb287a8671e02a` |
+| j | 3840 × 2160 | `1cee9f7434d887ac945140fae3dbc42491a946898a2aa46c1e70816d1d91a8ef` |
+
+---
 
 # Critique indépendante — claude-code-gratuit
 

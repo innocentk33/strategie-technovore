@@ -305,7 +305,7 @@
       "Archivo Black"
     ],
     "warnings": [],
-    "sha256_png": "f1bdf201355c7785d96a02a91ca50126ffde4f6eab4229d749dc1997d7a6c121"
+    "sha256_png": "7de1fe57cca38dc801d48e40e4f2180a9b860047e15d937152ba99baf8fb7b9c"
   },
   {
     "projet": "claude-code-gratuit",
@@ -333,7 +333,7 @@
       "Archivo Black"
     ],
     "warnings": [],
-    "sha256_png": "b85127f3f2aace68d8670045b1f08cebdc09033aa5f151b318f0cd54d15702e2"
+    "sha256_png": "1cee9f7434d887ac945140fae3dbc42491a946898a2aa46c1e70816d1d91a8ef"
   },
   {
     "projet": "ia-locale-privee",
@@ -389,7 +389,7 @@
       "Archivo Black"
     ],
     "warnings": [],
-    "sha256_png": "0faa759614e7bef265fdf999180866ca4b6efa93e9ffa50e63b77bde943fe6ce"
+    "sha256_png": "7426c7eb23fc51f8713015b29d0ae5b2d2ac306ac9b4e13c288d37c03b172149"
   },
   {
     "projet": "jeu-video-ia-locale",
@@ -417,7 +417,7 @@
       "Archivo Black"
     ],
     "warnings": [],
-    "sha256_png": "3fb9efad3854023839843ab3f1807dbe95ee96044bfcd1eef253b45c9518d2ae"
+    "sha256_png": "9e73e3520da4dd1282c07fb909dcb5f0ef643cea333def53cfd2b28d3afa4ba7"
   },
   {
     "projet": "choisir-moteur",
@@ -431,7 +431,7 @@
       "Archivo Black"
     ],
     "warnings": [],
-    "sha256_png": "4d0afffb992388cfc4101d855b676ac51383a9e827f213bd996a77a6cdea88f4"
+    "sha256_png": "6b3e0c9ad13fe91d527d2f0ea2565c0ebecf29e768bebef8c8d23cdae084c79a"
   },
   {
     "projet": "choisir-moteur",
@@ -459,6 +459,6 @@
       "Archivo Black"
     ],
     "warnings": [],
-    "sha256_png": "82d94b2701bb458f71651ebe040a13e408979f6b58c373efacf0364719f5f98f"
+    "sha256_png": "60890b751fe1c3da94ed32f3ca2ed233c6e9fcf28b2752af0a125c0e631fce22"
   }
 ]

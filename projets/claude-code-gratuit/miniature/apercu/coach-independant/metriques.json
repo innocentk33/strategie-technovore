@@ -4,17 +4,17 @@
     "largeur": 3840,
     "hauteur": 2160,
     "ratio": 1.778,
-    "poids_octets": 1646225,
-    "poids_mo": 1.65,
+    "poids_octets": 1609583,
+    "poids_mo": 1.61,
     "format": "PNG",
-    "luminosite_moyenne": 0.212,
-    "contraste_valeurs": 0.282,
-    "saturation_moyenne": 0.221,
-    "part_tres_claire": 0.062,
-    "part_tres_sombre": 0.665,
-    "couleur_moyenne_bords": "#131112",
-    "part_bords_quasi_blancs": 0.003,
-    "part_bords_quasi_noirs": 0.943,
+    "luminosite_moyenne": 0.219,
+    "contraste_valeurs": 0.29,
+    "saturation_moyenne": 0.216,
+    "part_tres_claire": 0.07,
+    "part_tres_sombre": 0.669,
+    "couleur_moyenne_bords": "#121113",
+    "part_bords_quasi_blancs": 0.004,
+    "part_bords_quasi_noirs": 0.949,
     "palette": [
       {
         "hex": "#100F11",
@@ -23,34 +23,34 @@
           15,
           17
         ],
-        "part": 0.724
+        "part": 0.732
       },
       {
-        "hex": "#243343",
+        "hex": "#EFEEEE",
         "rgb": [
-          36,
-          51,
-          67
-        ],
-        "part": 0.053
-      },
-      {
-        "hex": "#EEEFF0",
-        "rgb": [
-          238,
           239,
-          240
+          238,
+          238
         ],
-        "part": 0.049
+        "part": 0.056
       },
       {
-        "hex": "#A14F23",
+        "hex": "#233344",
         "rgb": [
-          161,
+          35,
+          51,
+          68
+        ],
+        "part": 0.041
+      },
+      {
+        "hex": "#A04F23",
+        "rgb": [
+          160,
           79,
           35
         ],
-        "part": 0.039
+        "part": 0.04
       },
       {
         "hex": "#FECE33",
@@ -59,7 +59,7 @@
           206,
           51
         ],
-        "part": 0.038
+        "part": 0.037
       },
       {
         "hex": "#D16A34",
@@ -83,15 +83,15 @@
       },
       {
         "case": "haut-droite",
-        "densite": 0.064
+        "densite": 0.054
       },
       {
         "case": "milieu-gauche",
-        "densite": 0.206
+        "densite": 0.241
       },
       {
         "case": "centre",
-        "densite": 0.103
+        "densite": 0.098
       },
       {
         "case": "milieu-droite",
@@ -103,18 +103,18 @@
       },
       {
         "case": "bas-centre",
-        "densite": 0.118
+        "densite": 0.131
       },
       {
         "case": "bas-droite",
-        "densite": 0.137
+        "densite": 0.139
       }
     ],
-    "densite_details_moyenne": 0.129,
-    "densite_details_ecart": 0.048,
-    "densite_zone_duree": 0.223,
+    "densite_details_moyenne": 0.133,
+    "densite_details_ecart": 0.056,
+    "densite_zone_duree": 0.238,
     "alertes": [
-      "94 % du pourtour est quasi noir : la miniature se fond dans le mode sombre.",
+      "95 % du pourtour est quasi noir : la miniature se fond dans le mode sombre.",
       "Beaucoup de détails sous la zone de la durée (bas droite) : vérifier que rien d'important n'y est caché."
     ]
   },
@@ -123,13 +123,13 @@
     "largeur": 3840,
     "hauteur": 2160,
     "ratio": 1.778,
-    "poids_octets": 112112,
-    "poids_mo": 0.11,
+    "poids_octets": 132143,
+    "poids_mo": 0.13,
     "format": "PNG",
-    "luminosite_moyenne": 0.25,
-    "contraste_valeurs": 0.281,
-    "saturation_moyenne": 0.434,
-    "part_tres_claire": 0.108,
+    "luminosite_moyenne": 0.269,
+    "contraste_valeurs": 0.3,
+    "saturation_moyenne": 0.426,
+    "part_tres_claire": 0.13,
     "part_tres_sombre": 0.076,
     "couleur_moyenne_bords": "#131D26",
     "part_bords_quasi_blancs": 0.0,
@@ -142,7 +142,7 @@
           27,
           35
         ],
-        "part": 0.606
+        "part": 0.614
       },
       {
         "hex": "#243442",
@@ -151,16 +151,16 @@
           52,
           66
         ],
-        "part": 0.152
+        "part": 0.122
       },
       {
-        "hex": "#EDF0F1",
+        "hex": "#EEEFEE",
         "rgb": [
-          237,
-          240,
-          241
+          238,
+          239,
+          238
         ],
-        "part": 0.087
+        "part": 0.108
       },
       {
         "hex": "#08C196",
@@ -169,25 +169,25 @@
           193,
           150
         ],
-        "part": 0.083
+        "part": 0.08
       },
       {
-        "hex": "#9B9FA3",
+        "hex": "#9CA0A4",
         "rgb": [
-          155,
-          159,
-          163
+          156,
+          160,
+          164
         ],
         "part": 0.023
       },
       {
-        "hex": "#5C6166",
+        "hex": "#5B6166",
         "rgb": [
-          92,
+          91,
           97,
           102
         ],
-        "part": 0.021
+        "part": 0.022
       }
     ],
     "familles_couleurs_vives": 1,
@@ -206,19 +206,19 @@
       },
       {
         "case": "milieu-gauche",
-        "densite": 0.125
+        "densite": 0.164
       },
       {
         "case": "centre",
-        "densite": 0.131
+        "densite": 0.144
       },
       {
         "case": "milieu-droite",
-        "densite": 0.057
+        "densite": 0.063
       },
       {
         "case": "bas-gauche",
-        "densite": 0.087
+        "densite": 0.108
       },
       {
         "case": "bas-centre",
@@ -226,11 +226,11 @@
       },
       {
         "case": "bas-droite",
-        "densite": 0.066
+        "densite": 0.081
       }
     ],
-    "densite_details_moyenne": 0.106,
-    "densite_details_ecart": 0.029,
+    "densite_details_moyenne": 0.117,
+    "densite_details_ecart": 0.031,
     "densite_zone_duree": 0.004,
     "alertes": []
   },
@@ -239,35 +239,35 @@
     "largeur": 3840,
     "hauteur": 2160,
     "ratio": 1.778,
-    "poids_octets": 1732776,
-    "poids_mo": 1.73,
+    "poids_octets": 1693835,
+    "poids_mo": 1.69,
     "format": "PNG",
-    "luminosite_moyenne": 0.231,
-    "contraste_valeurs": 0.262,
+    "luminosite_moyenne": 0.238,
+    "contraste_valeurs": 0.269,
     "saturation_moyenne": 0.453,
-    "part_tres_claire": 0.075,
-    "part_tres_sombre": 0.142,
-    "couleur_moyenne_bords": "#141E26",
-    "part_bords_quasi_blancs": 0.004,
-    "part_bords_quasi_noirs": 0.098,
+    "part_tres_claire": 0.083,
+    "part_tres_sombre": 0.132,
+    "couleur_moyenne_bords": "#151E26",
+    "part_bords_quasi_blancs": 0.005,
+    "part_bords_quasi_noirs": 0.097,
     "palette": [
       {
-        "hex": "#121A22",
+        "hex": "#131B22",
         "rgb": [
-          18,
-          26,
+          19,
+          27,
           34
         ],
-        "part": 0.73
+        "part": 0.735
       },
       {
-        "hex": "#EEF0F1",
+        "hex": "#EEEFEF",
         "rgb": [
           238,
-          240,
-          241
+          239,
+          239
         ],
-        "part": 0.055
+        "part": 0.062
       },
       {
         "hex": "#253442",
@@ -276,7 +276,7 @@
           52,
           66
         ],
-        "part": 0.05
+        "part": 0.039
       },
       {
         "hex": "#A24D24",
@@ -285,7 +285,7 @@
           77,
           36
         ],
-        "part": 0.036
+        "part": 0.037
       },
       {
         "hex": "#08C297",
@@ -294,7 +294,7 @@
           194,
           151
         ],
-        "part": 0.034
+        "part": 0.033
       },
       {
         "hex": "#CA6B34",
@@ -314,23 +314,23 @@
       },
       {
         "case": "haut-centre",
-        "densite": 0.058
+        "densite": 0.057
       },
       {
         "case": "haut-droite",
-        "densite": 0.069
+        "densite": 0.059
       },
       {
         "case": "milieu-gauche",
-        "densite": 0.212
+        "densite": 0.246
       },
       {
         "case": "centre",
-        "densite": 0.114
+        "densite": 0.109
       },
       {
         "case": "milieu-droite",
-        "densite": 0.194
+        "densite": 0.193
       },
       {
         "case": "bas-gauche",
@@ -338,16 +338,16 @@
       },
       {
         "case": "bas-centre",
-        "densite": 0.117
+        "densite": 0.13
       },
       {
         "case": "bas-droite",
-        "densite": 0.142
+        "densite": 0.145
       }
     ],
-    "densite_details_moyenne": 0.131,
-    "densite_details_ecart": 0.048,
-    "densite_zone_duree": 0.236,
+    "densite_details_moyenne": 0.134,
+    "densite_details_ecart": 0.057,
+    "densite_zone_duree": 0.253,
     "alertes": [
       "Beaucoup de détails sous la zone de la durée (bas droite) : vérifier que rien d'important n'y est caché."
     ]

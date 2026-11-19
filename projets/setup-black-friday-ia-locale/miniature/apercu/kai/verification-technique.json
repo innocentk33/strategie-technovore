@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-20",
+  "project": "setup-black-friday-ia-locale",
+  "variants": {
+    "h": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 5,
+      "png_sha256": "4554c985972a6d7e49cd3c66f605746e15a11bf49ec7db02e143e067dbb0562d",
+      "psd_sha256": "55e26321765137191fb1d124b25f49e35eb858200304191ce373165ddd351816",
+      "psd_png_mean_absolute_error": 0.2353,
+      "png_bytes": 1912264,
+      "psd_bytes": 9641992
+    },
+    "i": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 5,
+      "png_sha256": "9133e2321e74cbf4f3f5ae38314a7fa5f6478874230a739668667f282c02a64c",
+      "psd_sha256": "78c29b1d973f6b6e3a9e7e4d9d2b1190ea28ef0caa8fc4e2c1f477a4636614b4",
+      "psd_png_mean_absolute_error": 0.2698,
+      "png_bytes": 243026,
+      "psd_bytes": 2441138
+    },
+    "j": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 5,
+      "png_sha256": "95f1e568c78d854fc2bef4cfcaaef2db14c3a2a59fece82589e23380236a0ed0",
+      "psd_sha256": "54ae896efc30a20c7160581fb14c74c281096caecec72569b20f879f12af7d97",
+      "psd_png_mean_absolute_error": 0.2496,
+      "png_bytes": 1964678,
+      "psd_bytes": 9968499
+    }
+  }
+}

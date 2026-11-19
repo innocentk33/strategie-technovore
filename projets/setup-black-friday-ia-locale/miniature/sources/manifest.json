@@ -1,0 +1,18 @@
+{
+  "tour-detouree.png": {
+    "sha256": "74c1327e8aea7540ec4950c2814d1c20c2471619f9d16e8a88766b33c44a275f",
+    "bytes": 1534979
+  },
+  "tour-kai.png": {
+    "sha256": "aebed6ce4f071c193e5ad0c05bdfc2fa31e710c52065ac771dabc3e3f98bc859",
+    "bytes": 1234459
+  },
+  "tour-vert-original.png": {
+    "sha256": "38afa40c3c97a0b6417ebeb184c375e5ec81f2576e9bfa6ace15e15ffd46a3c5",
+    "bytes": 1526396
+  },
+  "tour-technovore.png": {
+    "sha256": "3627d3531930adec73691e2f87ce94f3613257b99e53beff25d3f161dc95e4da",
+    "bytes": 1278494
+  }
+}
