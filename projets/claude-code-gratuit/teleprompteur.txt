@@ -1,8 +1,6 @@
 Claude Code peut envoyer ses demandes à une IA sur ton PC.
 Sauf que son fichier doit laisser de la place aux instructions,
 au code et aux résultats des outils.
-Ces chiffres sont les leurs,
-je n’ai rien testé chez moi.
 Donc,
 avec 8,
 12 ou 16 gigas,

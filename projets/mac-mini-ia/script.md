@@ -14,7 +14,7 @@ Script corrigé du 16/11/2026, créneau du 10 décembre. **1713 mots de voix, en
 
 ## Voix
 
-Un Mac mini peut offrir 32 gigas de mémoire partagée, face aux 16 gigas dédiés d’une RTX 5080. Il apporte de la place, mais le modèle et le logiciel décident encore du résultat. Ces chiffres sont les leurs, je n’ai rien testé chez moi. Alors, qu’est-ce qui justifierait l’achat du Mac face à ton PC ? [F1,F2]
+Un Mac mini peut offrir 32 gigas de mémoire partagée, face aux 16 gigas dédiés d’une RTX 5080. Il apporte de la place, mais le modèle et le logiciel décident encore du résultat. Alors, qu’est-ce qui justifierait l’achat du Mac face à ton PC ? [F1,F2]
 
 [VISUEL : jauges mémoire 32 et 16 ;bandes passantes séparées ;pages constructeurs datées.]
 

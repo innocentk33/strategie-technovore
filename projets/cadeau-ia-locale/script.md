@@ -14,7 +14,7 @@ Script corrigé du 16/11/2026, créneau du 24 décembre. **1550 mots de voix, en
 
 ## Voix
 
-Cette tour est vendue avec 16 gigas de RAM. Sa carte graphique n’en a que 8. Pour offrir une IA locale, lire la mauvaise ligne peut donc changer ce que la machine accueille. Ces chiffres sont les leurs, je n’ai rien testé chez moi. Alors, quel budget correspond vraiment à l’usage de la personne qui reçoit le cadeau ? [F2,F3]
+Cette tour est vendue avec 16 gigas de RAM. Sa carte graphique n’en a que 8. Pour offrir une IA locale, lire la mauvaise ligne peut donc changer ce que la machine accueille. Alors, quel budget correspond vraiment à l’usage de la personne qui reçoit le cadeau ? [F2,F3]
 
 [VISUEL : trois machines, RAM/VRAM/unifiée sous les jauges ; prix datés.]
 

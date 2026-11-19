@@ -14,7 +14,7 @@ Script corrigé du 16/11/2026, créneau du 7 janvier 2027. **1537 mots de voix, 
 
 ## Voix
 
-Claude Code peut envoyer ses demandes à une IA sur ton PC. Sauf que son fichier doit laisser de la place aux instructions, au code et aux résultats des outils. Ces chiffres sont les leurs, je n’ai rien testé chez moi. Donc, avec 8, 12 ou 16 gigas, quelle tâche peut-on raisonnablement lui confier ? [F1,F2]
+Claude Code peut envoyer ses demandes à une IA sur ton PC. Sauf que son fichier doit laisser de la place aux instructions, au code et aux résultats des outils. Donc, avec 8, 12 ou 16 gigas, quelle tâche peut-on raisonnablement lui confier ? [F1,F2]
 
 [VISUEL : Claude Code, moteur local, modèle, fichiers du projet ; schéma documentaire.]
 

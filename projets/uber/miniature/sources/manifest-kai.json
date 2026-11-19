@@ -1,0 +1,22 @@
+{
+  "uber-wordmark.svg": {
+    "bytes": 933,
+    "sha256": "8e580232236d43c715637618ce31621f2afc802a22af9b12706dc153c6a52002"
+  },
+  "travolta-vert.png": {
+    "bytes": 1562932,
+    "sha256": "c33b4f3e7c624734c978f0b1b949af81e0ae6d2b1089b826148c07d1086321b2"
+  },
+  "portrait-travolta-technovore.png": {
+    "bytes": 1115621,
+    "sha256": "ede5658f8d0925e0342f54906a1fa8e6ddd254076fe612aa246a24b8c2dbbccd"
+  },
+  "portrait-travolta-detoure.png": {
+    "bytes": 1480767,
+    "sha256": "77147c0a2d5d39d73dd688b662ed5cef59c53dd6ee47f333c2785c85f070a953"
+  },
+  "portrait-travolta-kai.png": {
+    "bytes": 1046339,
+    "sha256": "22d741c91fdceb72c3dec1e4c600b455deab73b170f76ec1d1febe5951ef4fba"
+  }
+}

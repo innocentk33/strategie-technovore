@@ -1,0 +1,573 @@
+{
+  "miniatures": [
+    {
+      "projet": "qwen-4-cartes",
+      "variante": "h",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "941c5843ba9f9feddaf5a6f4df16dd60889169cf23881e2988d8a4e4bca5713e",
+      "sha256_psd": "e49654ffaba0b86b7ff07cc04c8a9f24f1451eb0f08abc6a57967cd095e32a81",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 84.0,
+          "text": "QWEN 4"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 295.6676940917969,
+          "text": "TROP TÔT ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 295.6679992675781,
+          "text": "TROP TÔT ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 295.6676940917969,
+          "text": "ACHETER"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "qwen-4-cartes",
+      "variante": "i",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "2d2eccff9e496b52ff1da62f1c7c3325797a2c04f1554a3ed929d279db84e2d7",
+      "sha256_psd": "bc6a7deca2b9dfbf53208889b1f6e436acc534be7ab821568906402066ed2c13",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 126.0,
+          "text": "QWEN 4"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 299.0046081542969,
+          "text": "TROP TÔT ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 299.0046081542969,
+          "text": "TROP TÔT ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 299.0046081542969,
+          "text": "ACHETER"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "qwen-4-cartes",
+      "variante": "j",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "9bb67b504da279aedde4f04cd9a4a426399d10f546de72af38136563aa7313fd",
+      "sha256_psd": "30b54552d25c1b090da4e04e4582a4b7a530d2459dc001aaecfa040c390da2f6",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 84.0,
+          "text": "QWEN 4"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 295.6676940917969,
+          "text": "TROP TÔT ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 295.6679992675781,
+          "text": "TROP TÔT ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 295.6676940917969,
+          "text": "ACHETER"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "claude-ou-mon-pc-1",
+      "variante": "h",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "9b575c804ba8c94b7ed302a0f610fe2129baa610d0ad16cee47dec11234bd817",
+      "sha256_psd": "ff49a90006d62529541743d75761a619c6ff01f7358f04a4109bc4ff12e154cb",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 135.0,
+          "text": "16 GO"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 99.0,
+          "text": ".GGUF"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 269.1129150390625,
+          "text": "DÉBORDE ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 269.1129150390625,
+          "text": "DÉBORDE ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 269.1129150390625,
+          "text": "TON FICHIER"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "claude-ou-mon-pc-1",
+      "variante": "i",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "7bbb3b30f71ea2b51b4bf6d196ef167182a33ab36a44d02845c07be910c93848",
+      "sha256_psd": "0dbe8eaea5b21159f57856f96da73b5e415e03aa0d6ea99cd59035b2768319b1",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 156.0,
+          "text": "16 GO"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 135.0,
+          "text": ".GGUF"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 263.2668151855469,
+          "text": "DÉBORDE ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 263.2668151855469,
+          "text": "DÉBORDE ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 263.2668151855469,
+          "text": "TON FICHIER"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "claude-ou-mon-pc-1",
+      "variante": "j",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "39db82c9b59baf550b004439404373f6923c1a716174668c448ba852ca7492ba",
+      "sha256_psd": "6f4bcf7695b366fc56acdb664806c8c164a9b5eccc1b7d51c9d819b1017799bb",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 135.0,
+          "text": "16 GO"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 99.0,
+          "text": ".GGUF"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 269.1129150390625,
+          "text": "DÉBORDE ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 269.1129150390625,
+          "text": "DÉBORDE ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 269.1129150390625,
+          "text": "TON FICHIER"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "installer-ia-locale",
+      "variante": "h",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "249a1e2d4c56c06b8a80417d36ca81734e140d850da359497308add4493027a1",
+      "sha256_psd": "5ea868448e6135c50bf69e8d87f8fcbe2881e1c16b2e3524391800cf77be7dc7",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 277.93109130859375,
+          "text": "HORS LIGNE"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 277.93109130859375,
+          "text": "HORS LIGNE"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 277.93109130859375,
+          "text": "TON IA"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "installer-ia-locale",
+      "variante": "i",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "a198b32231a5489aa065ee7a106deb68c857c6ca8cf50074e86081b821527143",
+      "sha256_psd": "7a4e1bec18ddae02843507faa872c3659390ed7135673820812d868470ec57ed",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 328.2720031738281,
+          "text": "HORS LIGNE"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 328.2720031738281,
+          "text": "HORS LIGNE"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 328.2720031738281,
+          "text": "TON IA"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "installer-ia-locale",
+      "variante": "j",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "c5ddf28afd1d64cc8b968ce04794e5c426fc9477c0ba0ebd19fba8fcf80572bb",
+      "sha256_psd": "14a9091c246a832188a19b8bc97b17d763cfd1f6d4672e533dceeb851fa25a5d",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 277.93109130859375,
+          "text": "HORS LIGNE"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 277.93109130859375,
+          "text": "HORS LIGNE"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 277.93109130859375,
+          "text": "TON IA"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "uber",
+      "variante": "h",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "65970dcfe24d6a07af07f80bb7b09c895ba47538cc85b97aab505dc0449af0f7",
+      "sha256_psd": "cdcc5cd00473d1af7fcaac6b2ddb1c1f2dd6777344166f43f49f37d3beb7c9e2",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 323.6940002441406,
+          "text": "LÀ ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 323.6940002441406,
+          "text": "LÀ ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 323.6940002441406,
+          "text": "VRAIMENT"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "uber",
+      "variante": "i",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "e7472e84e3840ebddd695b5c1dfc54e575a6ca0dbed33b03626eeb0c67802954",
+      "sha256_psd": "2b2be1ce1190bb49e37949ed812c368994bb878c5071b04f5620c95a785015fc",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 336.0,
+          "text": "LÀ ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 336.0,
+          "text": "LÀ ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 336.0,
+          "text": "VRAIMENT"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "uber",
+      "variante": "j",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "21bd64da6851d005e11c596109d00fb668ad60e4c8ca98bab10f459bbd8ba6e2",
+      "sha256_psd": "7d41c76500b971b6fe4dfdd3f5f4e0fdfb8d5d973eab89d4fc339958be3cc8bc",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 323.6940002441406,
+          "text": "LÀ ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 323.6940002441406,
+          "text": "LÀ ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 323.6940002441406,
+          "text": "VRAIMENT"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "opencode",
+      "variante": "h",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "d4da257aaecc8028a7e2d725b7b4171877ba7e2bc1b890807419ed8c3db900bf",
+      "sha256_psd": "f13b3713c843eb1620e60637df80f89fea3f82ecf85d521d98c956eb0d64ae5d",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 352.72198486328125,
+          "text": "VOLÉES ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 352.72198486328125,
+          "text": "VOLÉES ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 352.72198486328125,
+          "text": "TES CLÉS"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "opencode",
+      "variante": "i",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "d853d3722ddada8250ac417db0a4b358ae10c6fede03aa366673f41c4ca04cfd",
+      "sha256_psd": "7ab6656a07fdb32077c86434151a462a0705320283f0417d7f1b34fde8ba73c3",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 330.39898681640625,
+          "text": "VOLÉES ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 330.39898681640625,
+          "text": "VOLÉES ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 330.39898681640625,
+          "text": "TES CLÉS"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "opencode",
+      "variante": "j",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "a260183ff00f6427b0f073f269191ed41fd6675676d7a7c7d88c4a169db62537",
+      "sha256_psd": "fdbcec481237db9521b15b9d09afa49ed45c62d7faae1e32081641a1c9f0b321",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 352.72198486328125,
+          "text": "VOLÉES ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 352.72198486328125,
+          "text": "VOLÉES ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 352.72198486328125,
+          "text": "TES CLÉS"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "artcraft",
+      "variante": "h",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "40016b1f77a8cd729cee8f2152686738be369ed559c976c1ec92602eb9539dd9",
+      "sha256_psd": "29c1d8834d851f265176c09b07d43e3d0e4fe0cbbbc43a12138564ec34de3653",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 390.0,
+          "text": "L’ABO ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 390.0,
+          "text": "L’ABO ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 390.0,
+          "text": "FINI"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "artcraft",
+      "variante": "i",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "58bcb2ee1b505577a981f7f33b4d9e8100acf4897d68b8bd10f578395496892f",
+      "sha256_psd": "78cec2b411cabb904376b7baa36c180e9443f15b7f26c7ce4df01cb6d0060908",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 336.0,
+          "text": "L’ABO ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 336.0,
+          "text": "L’ABO ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 336.0,
+          "text": "FINI"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    },
+    {
+      "projet": "artcraft",
+      "variante": "j",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256_png": "85103c1d5de4570f5d06fdee5ecd3a15ba1ac5d14c515312a1cf2e5ad3a59fc4",
+      "sha256_psd": "06bc41db98cebd0257535232b777c7b68409e3577538b195105dae30b9b8647a",
+      "calques_texte": [
+        {
+          "font": "Archivo Black",
+          "sizePt": 390.0,
+          "text": "L’ABO ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 390.0,
+          "text": "L’ABO ?"
+        },
+        {
+          "font": "Archivo Black",
+          "sizePt": 390.0,
+          "text": "FINI"
+        }
+      ],
+      "avertissements": [],
+      "empreinte_presente_dans_critique": true
+    }
+  ],
+  "liens_locaux_verifies": 84,
+  "liens_manquants": []
+}

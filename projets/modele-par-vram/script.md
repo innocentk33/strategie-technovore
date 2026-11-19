@@ -17,7 +17,7 @@ Version finale documentaire du 16/11/2026, publication provisoire du 18/01/2027.
 
 Sur une carte de 4 gigas, un utilisateur publie 96 tokens par seconde avec un petit Qwen en 4 bits. Sur la même machine, le modèle plus gros déborde et ralentit. Donc ta petite carte peut encore servir, si le fichier correspond à sa mémoire. [F2]
 
-Ces chiffres sont les leurs, je n’ai rien testé chez moi. Alors, quel modèle choisir avec les gigas que tu possèdes déjà ?
+Alors, quel modèle choisir avec les gigas que tu possèdes déjà ?
 
 [VISUEL : source publique : RTX 3050 Ti portable, Qwen 3.5-2B Q4_K_M, contexte 4 096, médiane de trois passages chauds.]
 

@@ -1,0 +1,769 @@
+1
+00:00:00,030 --> 00:00:02,358
+Est-ce qu'un modèle de 27 milliards
+de paramètres peut tenir
+
+2
+00:00:02,378 --> 00:00:04,092
+sur une simple carte graphique de 8 Go ?
+
+3
+00:00:04,179 --> 00:00:04,979
+Eh ben en fait, oui.
+
+4
+00:00:05,037 --> 00:00:06,922
+Sur une carte de 8 Go,
+tu changes un seul fichier,
+
+5
+00:00:06,942 --> 00:00:10,359
+et Qwen 27B passe de 3,2
+à 18 tokens par seconde.
+
+6
+00:00:10,537 --> 00:00:13,802
+Sauf que cette mesure vient
+d'une GTX 1080 Ti limitée à 8 Go.
+
+7
+00:00:13,938 --> 00:00:14,747
+Du coup, la vraie question :
+
+8
+00:00:14,851 --> 00:00:16,807
+qu'est-ce que ce fichier te fait
+perdre en échange ?
+
+9
+00:00:17,227 --> 00:00:19,541
+Dans cette vidéo, on va voir
+comment ce fichier fait tout
+
+10
+00:00:19,561 --> 00:00:20,784
+pour tenir dans 8 Go,
+
+11
+00:00:20,846 --> 00:00:22,544
+ce qu'il te coûte
+en mémoire de conversation,
+
+12
+00:00:22,564 --> 00:00:23,854
+et ce qu'il te coûte en qualité.
+
+13
+00:00:24,041 --> 00:00:25,402
+Et à la fin, tu verras un travail
+
+14
+00:00:25,422 --> 00:00:27,287
+que ce fichier rate presque
+9 fois sur 10,
+
+15
+00:00:27,359 --> 00:00:28,942
+dans les tests de ceux mêmes
+qui l'ont fabriqué.
+
+16
+00:00:29,399 --> 00:00:30,515
+D'abord, ce que ça change en vrai.
+
+17
+00:00:30,655 --> 00:00:32,126
+Prends une réponse de 500 tokens.
+
+18
+00:00:32,360 --> 00:00:35,175
+À 3,2 tokens par seconde,
+tu attends 2 minutes 36.
+
+19
+00:00:35,339 --> 00:00:36,602
+À 18, c'est 28 secondes.
+
+20
+00:00:36,790 --> 00:00:39,282
+Il s'agit d'une division,
+mais en vrai, ça te donne une idée.
+
+21
+00:00:39,463 --> 00:00:42,148
+Du coup, cet écart change
+ta façon de parler avec l'IA.
+
+22
+00:00:42,332 --> 00:00:44,148
+Quand chaque réponse prend
+2 minutes et demie,
+
+23
+00:00:44,168 --> 00:00:45,700
+tu n'oses plus rien lui demander.
+
+24
+00:00:45,813 --> 00:00:48,103
+Tu prépares un gros pavé
+pour éviter de faire des allers-retours.
+
+25
+00:00:48,202 --> 00:00:49,953
+À 28 secondes, tu peux
+relancer, corriger,
+
+26
+00:00:49,998 --> 00:00:52,268
+et faire des allers-retours
+sans te soucier de ce qui se passe.
+
+27
+00:00:52,564 --> 00:00:54,342
+Par contre, ce gain
+ne touche que l'écriture.
+
+28
+00:00:54,461 --> 00:00:56,324
+Avant d'écrire,
+le modèle lit ta demande,
+
+29
+00:00:56,344 --> 00:00:59,191
+et cette lecture reste à peu près
+la même avec les 2 fichiers.
+
+30
+00:00:59,272 --> 00:01:00,725
+Et s'il réfléchit avant de répondre,
+
+31
+00:01:00,745 --> 00:01:03,115
+cette réflexion, ce sont aussi
+des tokens à écrire.
+
+32
+00:01:03,236 --> 00:01:06,013
+Une réponse courte à l'écran peut donc
+cacher beaucoup plus de travail
+
+33
+00:01:06,033 --> 00:01:06,880
+que tu ne le penses.
+
+34
+00:01:07,184 --> 00:01:08,122
+Mais alors, d'où vient ce gain ?
+
+35
+00:01:08,447 --> 00:01:09,967
+L'ancien fichier
+ne tenait pas sur la carte.
+
+36
+00:01:09,987 --> 00:01:12,783
+Une partie tournait sur la RAM du PC,
+avec le processeur,
+
+37
+00:01:12,893 --> 00:01:14,403
+et la carte passait son temps
+à l'attendre.
+
+38
+00:01:14,424 --> 00:01:16,364
+En gros, un cuisinier
+dont la moitié des ingrédients
+
+39
+00:01:16,384 --> 00:01:17,559
+se trouve dans une autre pièce :
+
+40
+00:01:17,579 --> 00:01:18,379
+il a beau être rapide,
+
+41
+00:01:18,399 --> 00:01:20,929
+mais il passe son temps à aller courir
+et chercher ce qu'il lui manque.
+
+42
+00:01:20,995 --> 00:01:23,585
+En fait, le nouveau petit fichier, lui,
+tient entièrement dans la carte.
+
+43
+00:01:23,652 --> 00:01:25,685
+Il s'appelle UD-IQ2_XS.
+
+44
+00:01:26,001 --> 00:01:27,733
+Moi, c'est du charabia,
+mais c'est son nom.
+
+45
+00:01:27,847 --> 00:01:31,614
+Il fait 7,63 Go, et il a été publié
+par Unsloth le 11 novembre.
+
+46
+00:01:31,891 --> 00:01:33,801
+Je viens t'afficher le nom complet,
+c'est beaucoup plus simple.
+
+47
+00:01:34,181 --> 00:01:35,818
+Sauf que pour rentrer
+dans une carte de 8 Go,
+
+48
+00:01:36,000 --> 00:01:38,108
+le modèle a dû suivre
+une diète incroyable.
+
+49
+00:01:38,253 --> 00:01:40,028
+Ses nombres sont rangés
+avec moins de précision,
+
+50
+00:01:40,048 --> 00:01:41,598
+c'est ce qu'on appelle la quantification.
+
+51
+00:01:41,738 --> 00:01:44,135
+Le modèle garde son nom,
+mais il ne répond plus tout à fait pareil.
+
+52
+00:01:44,588 --> 00:01:47,198
+Au passage, le MTP, le module
+qui doublait la vitesse
+
+53
+00:01:47,376 --> 00:01:49,109
+dans la vidéo précédente,
+est laissé de côté
+
+54
+00:01:49,129 --> 00:01:50,569
+pour cette mesure, faute de place.
+
+55
+00:01:50,720 --> 00:01:52,971
+Donc les 18 tokens par seconde obtenus,
+c'est sans lui.
+
+56
+00:01:53,385 --> 00:01:55,595
+Bon, on a trouvé tout ce qu'on gagne
+avec ce fichier.
+
+57
+00:01:55,724 --> 00:01:56,959
+Maintenant, ce que ça nous coûte,
+
+58
+00:01:57,093 --> 00:01:58,793
+et le premier prix, c'est de la place.
+
+59
+00:01:58,905 --> 00:02:01,613
+Le fichier fait 7,63 Go,
+et ta carte fait 8.
+
+60
+00:02:01,775 --> 00:02:04,701
+Sauf que le modèle n'est pas le seul
+qui rentre dans ta carte.
+
+61
+00:02:04,847 --> 00:02:07,589
+Le moteur a besoin d'espace aussi
+pour travailler. Ton bureau par exemple :
+
+62
+00:02:07,609 --> 00:02:10,071
+si tu branches ton moniteur directement
+sur ta carte graphique,
+
+63
+00:02:10,091 --> 00:02:11,082
+il en a aussi besoin.
+
+64
+00:02:11,102 --> 00:02:13,485
+Et surtout, il faut garder
+la conversation quelque part.
+
+65
+00:02:13,505 --> 00:02:15,106
+Elle aussi a besoin
+de cette même carte.
+
+66
+00:02:15,192 --> 00:02:17,936
+La taille du fichier ne te dit pas donc
+combien de discussions il te reste.
+
+67
+00:02:18,222 --> 00:02:20,852
+Et la mémoire de la conversation,
+c'est-à-dire le KV cache :
+
+68
+00:02:20,904 --> 00:02:24,596
+dans la mesure, avec un cache de 8 bits,
+il reste environ 14 000 tokens
+
+69
+00:02:24,616 --> 00:02:25,416
+pour la discussion.
+
+70
+00:02:25,511 --> 00:02:28,580
+Ta demande et tout ce que le modèle écrit,
+sa réflexion comprise,
+
+71
+00:02:28,600 --> 00:02:29,752
+se partagent donc cette place.
+
+72
+00:02:29,835 --> 00:02:31,167
+Pour discuter, c'est correct,
+
+73
+00:02:31,198 --> 00:02:33,255
+mais pour coller un long document
+ou un long prompt,
+
+74
+00:02:33,275 --> 00:02:34,497
+c'est beaucoup plus difficile.
+
+75
+00:02:34,722 --> 00:02:36,623
+Et la bonne nouvelle ici,
+c'est que ça tient la vitesse.
+
+76
+00:02:36,643 --> 00:02:38,091
+Avec presque 14 000 tokens dedans,
+
+77
+00:02:38,111 --> 00:02:40,601
+l'écriture est encore
+à 15 tokens par seconde.
+
+78
+00:02:40,744 --> 00:02:43,378
+Tu peux aussi compresser
+ce cache en 4 bits, par exemple.
+
+79
+00:02:43,427 --> 00:02:46,990
+Là, celui qui a mesuré monte
+environ à 22 500 tokens.
+
+80
+00:02:47,010 --> 00:02:48,649
+Par contre, avec un cache
+en 4 bits plein,
+
+81
+00:02:48,669 --> 00:02:51,123
+l'écriture tombe autour
+de 12 tokens par seconde.
+
+82
+00:02:51,166 --> 00:02:52,345
+C'est un autre réglage confort,
+
+83
+00:02:52,365 --> 00:02:55,085
+mais lui aussi, il a son coût
+sur la facture finale.
+
+84
+00:02:55,180 --> 00:02:58,732
+Et quand il remplit la mémoire
+au-delà de 24 000 tokens, ça a planté.
+
+85
+00:02:58,820 --> 00:03:00,078
+Le modèle se charge parfaitement,
+
+86
+00:03:00,098 --> 00:03:02,325
+mais c'est la discussion qui finit
+par ne plus rentrer.
+
+87
+00:03:02,565 --> 00:03:03,622
+Pour des échanges qui sont courts,
+
+88
+00:03:03,642 --> 00:03:05,875
+des demandes du quotidien,
+tu ne vois pas la limite.
+
+89
+00:03:06,010 --> 00:03:07,024
+Sauf que pour une longue session,
+
+90
+00:03:07,044 --> 00:03:09,373
+par exemple pour du code
+avec des fichiers, un historique,
+
+91
+00:03:09,393 --> 00:03:10,755
+c'est là que ça commence à coincer.
+
+92
+00:03:11,178 --> 00:03:14,136
+Et si cette vidéo t'a aidé
+à faire le bon choix pour ta carte,
+
+93
+00:03:14,176 --> 00:03:15,146
+n'oublie pas de t'abonner.
+
+94
+00:03:15,428 --> 00:03:16,980
+Bon, le deuxième prix, c'est la qualité.
+
+95
+00:03:17,168 --> 00:03:18,819
+Et là, les chiffres viennent d'Unsloth
+eux-mêmes,
+
+96
+00:03:18,895 --> 00:03:21,667
+c'est leur campagne de tests,
+pas une vérification indépendante.
+
+97
+00:03:21,726 --> 00:03:24,121
+Et leurs tests tournent avec
+une très longue conversation
+
+98
+00:03:24,141 --> 00:03:25,734
+et la réflexion poussée au maximum :
+
+99
+00:03:25,844 --> 00:03:27,791
+rien à voir avec une carte de 8 Go.
+
+100
+00:03:27,955 --> 00:03:29,331
+Ces scores montrent où ça casse,
+
+101
+00:03:29,378 --> 00:03:31,409
+mais ils ne donnent pas
+ton taux de réussite à toi.
+
+102
+00:03:31,718 --> 00:03:34,538
+Sur LiveCodeBench, par exemple,
+des exercices de programmation,
+
+103
+00:03:34,558 --> 00:03:37,276
+le modèle complet, sans compression,
+est autour de 89,
+
+104
+00:03:37,296 --> 00:03:38,966
+le petit fichier autour de 85.
+
+105
+00:03:39,039 --> 00:03:41,421
+Franchement, pour un modèle
+compressé à ce point, il tient bien.
+
+106
+00:03:41,508 --> 00:03:42,945
+Alors, à ton avis,
+ça tient aussi
+
+107
+00:03:42,965 --> 00:03:44,536
+quand on lui confie un vrai projet ?
+
+108
+00:03:44,920 --> 00:03:48,326
+Sur leur test d'agent, où le modèle
+travaille seul dans un dépôt de code,
+
+109
+00:03:48,409 --> 00:03:51,116
+le modèle complet réussit
+environ 40 % des tâches,
+
+110
+00:03:51,136 --> 00:03:52,692
+le petit fichier environ 13 %.
+
+111
+00:03:52,912 --> 00:03:54,222
+Là, franchement, ça dégringole.
+
+112
+00:03:54,266 --> 00:03:56,975
+Et l'ancien fichier, celui qui tournait
+à 3,2 tokens par seconde,
+
+113
+00:03:56,995 --> 00:03:59,400
+reste autour de 36 %.
+Donc, sur ce travail,
+
+114
+00:03:59,420 --> 00:04:02,736
+le petit fichier réussit 3 fois
+moins souvent que le modèle complet.
+
+115
+00:04:02,998 --> 00:04:05,001
+Et en fait, quand tu lui demandes
+de l'aide sur une fonction,
+
+116
+00:04:05,197 --> 00:04:06,983
+tu lis sa réponse
+et tu juges toi-même.
+
+117
+00:04:07,112 --> 00:04:08,869
+Un agent, lui, enchaîne
+les décisions tout seul,
+
+118
+00:04:08,889 --> 00:04:10,185
+et il modifie plusieurs fichiers,
+
+119
+00:04:10,205 --> 00:04:13,385
+et une erreur au début se paie toujours
+à toutes les étapes d'après.
+
+120
+00:04:13,616 --> 00:04:15,584
+Donc le compteur du début ne suffit plus.
+
+121
+00:04:15,645 --> 00:04:17,932
+Du coup, une réponse en 28 secondes
+que tu dois réparer
+
+122
+00:04:17,952 --> 00:04:19,746
+peut te coûter plus cher
+qu'une réponse lente
+
+123
+00:04:19,766 --> 00:04:20,876
+qui marche du premier coup.
+
+124
+00:04:21,144 --> 00:04:22,751
+Et si t'es sur LM Studio, par exemple,
+
+125
+00:04:22,771 --> 00:04:24,500
+sa documentation a les mêmes réglages :
+
+126
+00:04:24,622 --> 00:04:25,926
+la part du modèle sur la carte,
+
+127
+00:04:25,946 --> 00:04:27,056
+la taille de la conversation,
+
+128
+00:04:27,076 --> 00:04:28,812
+et le cache en 8 bits ou 4 bits.
+
+129
+00:04:28,945 --> 00:04:31,615
+Sauf que toutes ces vitesses
+ont été mesurées dans llama.cpp,
+
+130
+00:04:31,696 --> 00:04:32,628
+pas dans LM Studio.
+
+131
+00:04:32,765 --> 00:04:34,327
+Et l'option pour couper les réflexions
+
+132
+00:04:34,347 --> 00:04:36,556
+dépend de la façon dont
+le modèle est configuré aussi.
+
+133
+00:04:36,826 --> 00:04:38,976
+Alors, qu'est-ce qu'on peut conclure
+de ce fichier finalement ?
+
+134
+00:04:39,041 --> 00:04:41,117
+En fait, pour discuter
+et expliquer un truc,
+
+135
+00:04:41,137 --> 00:04:42,107
+c'est le bon fichier,
+
+136
+00:04:42,178 --> 00:04:44,819
+dans la mesure où le modèle tient
+en entier sur 8 Go,
+
+137
+00:04:44,850 --> 00:04:46,481
+et il écrit plus de 5 fois plus vite.
+
+138
+00:04:46,589 --> 00:04:48,928
+Tant que la conversation reste courte,
+la place suffit.
+
+139
+00:04:48,948 --> 00:04:52,314
+Pour te faire aider sur un bout de code
+ou corriger un petit script, par exemple,
+
+140
+00:04:52,334 --> 00:04:54,524
+dans leurs tests, les exercices
+de programmation tiennent bien.
+
+141
+00:04:54,544 --> 00:04:56,348
+Par contre, il faut vraiment
+tout relire toi-même,
+
+142
+00:04:56,368 --> 00:04:57,947
+et si tu ne donnes pas
+tout ton projet d'un coup,
+
+143
+00:04:57,967 --> 00:04:58,826
+ça pourrait marcher.
+
+144
+00:04:58,920 --> 00:05:01,252
+Pour un agent qui travaille, par contre,
+tout seul dans un projet,
+
+145
+00:05:01,285 --> 00:05:02,239
+garde l'ancien fichier,
+
+146
+00:05:02,259 --> 00:05:04,698
+quitte à attendre
+à 3,2 tokens par seconde,
+
+147
+00:05:04,842 --> 00:05:05,697
+parce que dans le test,
+
+148
+00:05:05,717 --> 00:05:08,013
+le petit fichier, il rate presque
+9 fois sur 10.
+
+149
+00:05:08,211 --> 00:05:09,786
+L'ancien, à peu près 2 fois sur 3.
+
+150
+00:05:09,933 --> 00:05:11,204
+Du coup, à quoi ça sert d'aller vite
+
+151
+00:05:11,224 --> 00:05:13,135
+si c'est pour se tromper à chaque pas ?
+
+152
+00:05:13,420 --> 00:05:15,460
+Alors, ce que ce petit fichier
+te fait gagner ou te fait perdre,
+
+153
+00:05:15,480 --> 00:05:16,468
+tu le sais maintenant.
+
+154
+00:05:16,568 --> 00:05:19,020
+Pour discuter, avec un peu de place,
+il y a pas de problème,
+
+155
+00:05:19,040 --> 00:05:19,964
+c'est top qualité.
+
+156
+00:05:19,984 --> 00:05:21,598
+Par contre, pour un agent
+qui va effectuer des tâches
+
+157
+00:05:21,616 --> 00:05:23,194
+beaucoup plus longues,
+là, ça devient corsé.
+
+158
+00:05:23,214 --> 00:05:25,959
+Donc, dans la même carte, en vrai,
+tu peux faire 2 métiers différents
+
+159
+00:05:25,979 --> 00:05:27,429
+selon le fichier que tu lui donnes.
+
+160
+00:05:27,663 --> 00:05:28,772
+Alors, dites-moi en commentaire :
+
+161
+00:05:28,792 --> 00:05:31,238
+est-ce que vous êtes prêts à utiliser
+un fichier différent
+
+162
+00:05:31,258 --> 00:05:32,738
+en fonction de ce que vous avez à faire,
+
+163
+00:05:32,758 --> 00:05:35,415
+ou en fonction de ce que vous
+voulez faire, selon vos besoins ?
+
+164
+00:05:35,499 --> 00:05:37,759
+Et si cette vidéo vous a plu,
+n'hésitez pas à vous abonner,
+
+165
+00:05:37,779 --> 00:05:40,203
+à partager la vidéo
+et à booster la chaîne.
+
+166
+00:05:40,223 --> 00:05:41,149
+Ça me fera très plaisir.
+
+167
+00:05:41,169 --> 00:05:42,865
+Allez, on se dit à la prochaine. Salut !

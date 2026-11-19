@@ -4,7 +4,6 @@
 
 Une version Coder allégée atteint environ 70 tokens par seconde,
 avec une carte de 16 gigas et 32 gigas de RAM.
-Ces chiffres sont les leurs, je n’ai rien testé chez moi.
 Donc, pour ton prochain achat, faut-il plus de RAM,
 plus de VRAM, ou une mémoire unifiée ?
 [F6,F10]

@@ -20,7 +20,7 @@ Version corrigée après revue indépendante Astra. Sources au16/11/2026, diffus
 
 [VISUEL : Coder IQ1_M allégé ; Strata0.1.55/moteur0.1.54 ; RTX5070Ti16Gio, Ryzen7 9700X,31,2GioRAM ; chat court, médiane3essais, réflexion coupée ;70,4tok/s,02/11/2026. F6/F10]
 
-Une version Coder allégée atteint environ 70 tokens par seconde, avec une carte de 16 gigas et 32 gigas de RAM. Ces chiffres sont les leurs, je n’ai rien testé chez moi. Donc, pour ton prochain achat, faut-il plus de RAM, plus de VRAM, ou une mémoire unifiée ? [F6,F10]
+Une version Coder allégée atteint environ 70 tokens par seconde, avec une carte de 16 gigas et 32 gigas de RAM. Donc, pour ton prochain achat, faut-il plus de RAM, plus de VRAM, ou une mémoire unifiée ? [F6,F10]
 
 On compare la place nécessaire et le débit des données. Tu vas voir le calcul de débit, pourquoi les modèles à experts changent l'addition, puis les achats utiles selon ton PC. Et on termine avec le cas où ajouter de la RAM peut laisser ta réponse presque aussi lente.
 

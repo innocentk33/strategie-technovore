@@ -1,0 +1,789 @@
+1
+00:00:00,067 --> 00:00:02,426
+On a 16 GB card,
+you turn on a single setting,
+
+2
+00:00:02,446 --> 00:00:04,031
+and your AI writes twice as fast:
+
+3
+00:00:04,283 --> 00:00:06,350
+from 29 to 64 tokens per second.
+
+4
+00:00:06,473 --> 00:00:08,989
+Same file, same card,
+and nothing new to buy.
+
+5
+00:00:09,016 --> 00:00:10,847
+And that's what 6 published
+measurements find,
+
+6
+00:00:10,867 --> 00:00:12,754
+across 5 models of 16 GB cards:
+
+7
+00:00:12,885 --> 00:00:15,264
+between 1.9 and 2.3 times faster.
+
+8
+00:00:15,474 --> 00:00:16,995
+So could your card be held back,
+
+9
+00:00:17,015 --> 00:00:18,622
+without you even knowing it?
+
+10
+00:00:18,710 --> 00:00:20,268
+And careful, this applies to writing too,
+
+11
+00:00:20,288 --> 00:00:23,859
+on Qwen 3.8 27B, a model that
+fits entirely on your card.
+
+12
+00:00:24,030 --> 00:00:27,066
+So in this video, we'll look at
+the setting that lets you double
+
+13
+00:00:27,086 --> 00:00:28,378
+the speed of your graphics card
+
+14
+00:00:28,398 --> 00:00:30,328
+and the engine that gets you there.
+
+15
+00:00:30,396 --> 00:00:33,578
+And above all, everything to avoid
+so you don't lose what you gained:
+
+16
+00:00:33,724 --> 00:00:36,954
+a conversation that's too long, and
+you've already lost a third of your speed.
+
+17
+00:00:37,046 --> 00:00:37,941
+And stay until the end,
+
+18
+00:00:37,961 --> 00:00:39,561
+because we're going to debunk a setting
+
+19
+00:00:39,581 --> 00:00:41,771
+you may have turned on to go faster.
+
+20
+00:00:42,219 --> 00:00:43,699
+The setting that doubles it is MTP,
+
+21
+00:00:43,826 --> 00:00:45,656
+a small extra module inside the model.
+
+22
+00:00:45,808 --> 00:00:49,192
+Basically, it's like the suggestions
+on your phone's keyboard:
+
+23
+00:00:49,374 --> 00:00:53,401
+the model suggests several tokens ahead,
+then checks them all at once.
+
+24
+00:00:53,683 --> 00:00:56,948
+And when it guessed right,
+it writes several for the price of one.
+
+25
+00:00:57,121 --> 00:00:59,358
+However, this only affects writing.
+
+26
+00:00:59,489 --> 00:01:03,332
+Reading your prompt is slowed down
+by MTP in the first tests from May.
+
+27
+00:01:03,466 --> 00:01:07,350
+On a 5080, it goes from
+53 to 101 tokens per second.
+
+28
+00:01:07,413 --> 00:01:10,469
+On a 4060 Ti, from 17.6 to 40,
+
+29
+00:01:10,583 --> 00:01:13,533
+and even at AMD, on an RX 9060 XT,
+
+30
+00:01:13,707 --> 00:01:15,455
+from 15 to almost 29.
+
+31
+00:01:15,615 --> 00:01:18,049
+So even the Radeon
+almost doubles its speed.
+
+32
+00:01:18,461 --> 00:01:21,606
+Except 5 of these 6 measurements
+come from the same online table,
+
+33
+00:01:21,626 --> 00:01:23,116
+with the same test script.
+
+34
+00:01:23,394 --> 00:01:26,781
+So the most solid one is
+the first one, the 29 to 64:
+
+35
+00:01:26,874 --> 00:01:28,846
+it was measured separately, 5 times.
+
+36
+00:01:29,027 --> 00:01:30,031
+And it finds the same thing.
+
+37
+00:01:30,219 --> 00:01:32,689
+In fact, in the table,
+that doubling is an average over code,
+
+38
+00:01:32,786 --> 00:01:35,410
+text and commands,
+with reasoning turned off.
+
+39
+00:01:35,590 --> 00:01:39,083
+On text alone, it drops
+to 1.8 times on a 4060 Ti.
+
+40
+00:01:39,425 --> 00:01:41,201
+Code is where it gains the most.
+
+41
+00:01:41,380 --> 00:01:44,934
+And on a mixture-of-experts model,
+measurements drop to 1.5 times at best.
+
+42
+00:01:45,204 --> 00:01:47,291
+So why do I say your card is held back?
+
+43
+00:01:47,414 --> 00:01:50,401
+Because in llama.cpp,
+MTP doesn't turn on by itself.
+
+44
+00:01:50,498 --> 00:01:53,516
+You have to ask for it, and you need
+a file that contains the module,
+
+45
+00:01:53,538 --> 00:01:55,097
+a small extra piece of model.
+
+46
+00:01:55,302 --> 00:01:58,768
+LM Studio has handled
+it since version 0.4.22.
+
+47
+00:01:58,890 --> 00:02:02,171
+You'll find it in the settings
+panel of the model you selected.
+
+48
+00:02:02,348 --> 00:02:05,888
+So whichever one you're on, go check
+that it's really turned on for you.
+
+49
+00:02:06,268 --> 00:02:09,190
+But MTP has a price,
+and it takes up space.
+
+50
+00:02:09,695 --> 00:02:13,294
+According to the measurements,
+1 to 2.5 GB of extra VRAM.
+
+51
+00:02:13,468 --> 00:02:16,224
+And on a 16 GB card, that's
+exactly where it gets tight.
+
+52
+00:02:16,617 --> 00:02:20,130
+So the real setting number one is that
+the model fits entirely in your card.
+
+53
+00:02:20,369 --> 00:02:24,482
+On a 16 GB 4080, with an
+older 27-billion Qwen:
+
+54
+00:02:24,502 --> 00:02:27,698
+a 15 GB file that spills over
+a bit, 20 tokens per second.
+
+55
+00:02:27,890 --> 00:02:32,278
+An 11.5 GB file that fits completely,
+45 tokens per second.
+
+56
+00:02:32,457 --> 00:02:34,826
+More than double, just by
+picking a single smaller file.
+
+57
+00:02:34,900 --> 00:02:37,554
+And if part of the model leaves
+the card, it's a freefall.
+
+58
+00:02:37,814 --> 00:02:42,170
+On a 5060 Ti, someone deliberately
+left 8 layers out of 48
+
+59
+00:02:42,190 --> 00:02:46,393
+of a smaller model: it drops from
+43 to 12.5 tokens per second.
+
+60
+00:02:46,488 --> 00:02:49,309
+In fact, the part left
+in RAM runs much slower,
+
+61
+00:02:49,356 --> 00:02:50,530
+so the card waits for it.
+
+62
+00:02:50,728 --> 00:02:53,045
+On the other hand,
+a smaller file is more compressed,
+
+63
+00:02:53,118 --> 00:02:56,265
+and none of these measurements
+says what you lose in quality.
+
+64
+00:02:56,576 --> 00:02:58,906
+But in reality, these gains don't add up.
+
+65
+00:02:59,174 --> 00:03:01,085
+If MTP makes your file spill over,
+
+66
+00:03:01,242 --> 00:03:02,922
+the drop eats what it gains you.
+
+67
+00:03:03,053 --> 00:03:06,148
+So first, a file that
+fits with room for MTP,
+
+68
+00:03:06,222 --> 00:03:07,521
+then you turn on MTP.
+
+69
+00:03:08,025 --> 00:03:10,558
+Well, with just these 2 settings,
+your model can write
+
+70
+00:03:10,578 --> 00:03:12,712
+twice as fast on the
+card you already have.
+
+71
+00:03:12,898 --> 00:03:14,523
+So before buying a bigger card,
+
+72
+00:03:14,589 --> 00:03:18,423
+especially right now with the crazy
+prices, they've completely skyrocketed,
+
+73
+00:03:18,453 --> 00:03:22,088
+try optimizing the one you already
+have and turning on a few settings.
+
+74
+00:03:22,108 --> 00:03:24,392
+If this video saved you from
+a bad purchase, subscribe.
+
+75
+00:03:24,844 --> 00:03:26,508
+And the engine that gets you there,
+
+76
+00:03:26,605 --> 00:03:28,558
+the program that runs the model.
+
+77
+00:03:28,709 --> 00:03:30,423
+The most popular is llama.cpp.
+
+78
+00:03:30,588 --> 00:03:33,325
+All 6 of the first
+measurements were made on it.
+
+79
+00:03:33,373 --> 00:03:35,076
+When everything fits in
+the card, it's great:
+
+80
+00:03:35,096 --> 00:03:39,379
+Ollama was measured 10% slower
+than llama.cpp, on a 5060 Ti,
+
+81
+00:03:39,411 --> 00:03:41,756
+and up to 30% slower on a 3090.
+
+82
+00:03:42,133 --> 00:03:45,067
+And LM Studio was nearly
+tied with llama.cpp:
+
+83
+00:03:45,304 --> 00:03:47,472
+76.8 versus 77.
+
+84
+00:03:47,791 --> 00:03:51,050
+So if you're on LM Studio or llama.cpp,
+like in the previous video,
+
+85
+00:03:51,225 --> 00:03:52,415
+on that front, you're fine.
+
+86
+00:03:52,810 --> 00:03:56,023
+And even with an optimized engine,
+an update can slow you down.
+
+87
+00:03:56,217 --> 00:03:58,442
+On a 5080 with the Strata engine,
+
+88
+00:03:58,609 --> 00:04:02,195
+a user lost 25% moving to a newer version,
+
+89
+00:04:02,313 --> 00:04:05,417
+and its version
+0.2.14, released on November 15,
+
+90
+00:04:05,616 --> 00:04:08,705
+reads your prompt faster,
+but writes about 10% slower
+
+91
+00:04:08,734 --> 00:04:11,351
+on a 5070 Ti, according
+to the project itself.
+
+92
+00:04:11,546 --> 00:04:13,212
+That's why you should note your version,
+
+93
+00:04:13,232 --> 00:04:15,345
+to know where a slowdown comes from.
+
+94
+00:04:15,477 --> 00:04:17,727
+The ones from my previous
+video are on screen.
+
+95
+00:04:18,023 --> 00:04:19,733
+And what if your model
+is too big for your card?
+
+96
+00:04:19,824 --> 00:04:21,359
+In the previous video, I showed you:
+
+97
+00:04:21,379 --> 00:04:23,265
+the RAM full, and the
+disk starting to read.
+
+98
+00:04:23,463 --> 00:04:26,155
+On a mixture-of-experts model,
+in llama.cpp, there's a setting for you:
+
+99
+00:04:26,292 --> 00:04:28,727
+where the experts go,
+those little specialists in the model.
+
+100
+00:04:28,918 --> 00:04:31,560
+Which ones stay on the card,
+and which go to RAM.
+
+101
+00:04:31,637 --> 00:04:34,227
+The right setting is to keep as
+many on the card as possible,
+
+102
+00:04:34,322 --> 00:04:35,537
+right before it crashes.
+
+103
+00:04:35,697 --> 00:04:38,775
+On a 12 GB 3060, it gained 12%.
+
+104
+00:04:38,866 --> 00:04:41,721
+On a 16 GB 5060 Ti, with the expert cache
+
+105
+00:04:41,741 --> 00:04:44,849
+that arrived in llama.cpp
+in October, 29% more.
+
+106
+00:04:45,090 --> 00:04:47,574
+Just one measurement each,
+so take them with a grain of salt,
+
+107
+00:04:47,594 --> 00:04:50,247
+and their PCs had 32 and 64 GB of RAM.
+
+108
+00:04:50,461 --> 00:04:51,426
+Now, what's the catch?
+
+109
+00:04:51,573 --> 00:04:54,022
+The longer your conversation,
+the slower it gets.
+
+110
+00:04:54,096 --> 00:04:57,208
+Remember the first measurement,
+at 29 tokens per second?
+
+111
+00:04:57,314 --> 00:05:00,627
+From 64,000 tokens of
+conversation, it drops to 20.
+
+112
+00:05:00,810 --> 00:05:02,172
+So a third of the speed is gone,
+
+113
+00:05:02,192 --> 00:05:04,753
+and with MTP, the 64 becomes 39.
+
+114
+00:05:04,956 --> 00:05:07,783
+MTP still doubles it,
+but everything goes down.
+
+115
+00:05:07,956 --> 00:05:09,102
+And it can get much worse.
+
+116
+00:05:09,165 --> 00:05:12,181
+In fact, the conversation's
+memory is stored on your card too.
+
+117
+00:05:12,201 --> 00:05:15,746
+And the 4080 that reached
+45 with a small file?
+
+118
+00:05:15,766 --> 00:05:19,880
+At 128,000 tokens of conversation,
+this memory pushes the model out,
+
+119
+00:05:19,900 --> 00:05:22,243
+and the card drops below
+10 tokens per second.
+
+120
+00:05:22,305 --> 00:05:25,679
+In short, 2 dead-simple moves: a new
+conversation as soon as you change topic,
+
+121
+00:05:25,699 --> 00:05:28,602
+and a conversation size set as
+tight as possible in your engine.
+
+122
+00:05:28,694 --> 00:05:31,044
+And if you really need
+a long conversation,
+
+123
+00:05:31,145 --> 00:05:33,088
+there's one last setting to try.
+
+124
+00:05:33,368 --> 00:05:35,192
+That setting is compressing the KV cache,
+
+125
+00:05:35,212 --> 00:05:36,765
+which is the conversation's memory.
+
+126
+00:05:36,902 --> 00:05:39,465
+Do you think that can
+make it write faster?
+
+127
+00:05:39,618 --> 00:05:41,884
+Keep your answer,
+and tell me in the comments.
+
+128
+00:05:41,945 --> 00:05:45,274
+On a 5060 Ti, with a
+small 7-billion model,
+
+129
+00:05:45,294 --> 00:05:48,213
+writing is 6.6% slower at 8 bits,
+
+130
+00:05:48,233 --> 00:05:50,292
+and 1.8% slower at 4 bits.
+
+131
+00:05:50,370 --> 00:05:54,535
+And on an NVIDIA machine built for AI,
+at 4 bits, at 64,000 tokens,
+
+132
+00:05:54,555 --> 00:05:55,689
+it loses 35%.
+
+133
+00:05:55,709 --> 00:05:57,524
+So for speed, it's useless.
+
+134
+00:05:57,698 --> 00:05:58,953
+But it makes room.
+
+135
+00:05:59,143 --> 00:06:03,066
+On a 16 GB laptop 3080, with Qwen 3.8 27B,
+
+136
+00:06:03,092 --> 00:06:06,293
+you go from 32,000 to over
+128,000 tokens of conversation.
+
+137
+00:06:06,406 --> 00:06:09,521
+So it fits a lot more
+conversation in your card
+
+138
+00:06:09,554 --> 00:06:11,291
+before the model gets pushed out.
+
+139
+00:06:11,361 --> 00:06:13,511
+It doesn't save you from
+the lost third of speed,
+
+140
+00:06:13,541 --> 00:06:15,689
+since the first measurement already had
+
+141
+00:06:15,871 --> 00:06:19,232
+the compressed cache. But it can
+avoid the violent drop in speed.
+
+142
+00:06:19,543 --> 00:06:22,101
+But you also have to
+be careful with 4 bits.
+
+143
+00:06:22,219 --> 00:06:24,728
+On the 7-billion model from earlier,
+
+144
+00:06:24,762 --> 00:06:28,160
+the 8-bit answer is 82%
+similar to the original,
+
+145
+00:06:28,244 --> 00:06:29,976
+at 4 bits, only 8%.
+
+146
+00:06:30,047 --> 00:06:33,957
+And at least 3 of the first 6 measurements
+were at 4 bits on a much bigger model:
+
+147
+00:06:33,998 --> 00:06:36,362
+what that cost in quality, nobody said.
+
+148
+00:06:36,629 --> 00:06:39,060
+So if everything fits at 8 bits
+on your end, stay at 8 bits.
+
+149
+00:06:39,242 --> 00:06:40,749
+There, that's the little
+setting that lets you
+
+150
+00:06:40,769 --> 00:06:42,740
+last longer in your conversation.
+
+151
+00:06:43,065 --> 00:06:44,741
+So now, what do you need to be able to
+
+152
+00:06:44,929 --> 00:06:46,894
+properly tune your engine and your model,
+
+153
+00:06:47,083 --> 00:06:48,968
+in order: a file that fits in your card,
+
+154
+00:06:48,988 --> 00:06:50,718
+with room for MTP,
+
+155
+00:06:50,798 --> 00:06:53,523
+then MTP turned on, especially for code,
+
+156
+00:06:53,586 --> 00:06:56,071
+llama.cpp or LM Studio,
+rather than Ollama,
+
+157
+00:06:56,095 --> 00:06:57,421
+and if your model spills over,
+
+158
+00:06:57,577 --> 00:06:59,045
+set where the experts go,
+
+159
+00:06:59,092 --> 00:07:01,360
+a fresh conversation
+when this one gets long,
+
+160
+00:07:01,380 --> 00:07:03,657
+and also the 8-bit cache
+if you're short on room.
+
+161
+00:07:03,910 --> 00:07:05,300
+And don't forget to note your version
+
+162
+00:07:05,320 --> 00:07:07,335
+to compare whether things change or not,
+
+163
+00:07:07,355 --> 00:07:10,116
+or whether you may have
+hit a bug with yours.
+
+164
+00:07:10,367 --> 00:07:12,130
+So, is your card held back or not?
+
+165
+00:07:12,318 --> 00:07:14,945
+If MTP is off by default,
+or if your file spills over,
+
+166
+00:07:14,965 --> 00:07:16,385
+your card is completely held back.
+
+167
+00:07:16,439 --> 00:07:19,363
+It's fixed in a few clicks,
+tonight, with this video,
+
+168
+00:07:19,395 --> 00:07:20,529
+without buying anything new.
+
+169
+00:07:20,814 --> 00:07:23,496
+And if your card only has 8 GB,
+we'll try to explore later
+
+170
+00:07:23,516 --> 00:07:26,863
+how to fit an AI model on 8 GB of VRAM.
+
+171
+00:07:26,980 --> 00:07:28,856
+Alright, I hope you liked this video,
+
+172
+00:07:28,876 --> 00:07:30,298
+don't forget to subscribe to the channel,
+
+173
+00:07:30,318 --> 00:07:32,649
+and if you can, boost the video.
+
+174
+00:07:32,669 --> 00:07:34,314
+See you next time. Bye!
+

@@ -1,5 +1,7 @@
 # La meilleure carte graphique pour l'IA locale, à chaque budget (Black Friday)
 
+> **Angle du 18/11/2026 (ta demande)** : « tu t'apprêtes à mettre 600 € dans une carte graphique au Black Friday pour l'IA locale ». Choisir comme pour le jeu ne marche pas : la mémoire d'abord (ce qui rentre), puis le débit mémoire (la vitesse d'écriture). V3 réécrite et grillée ([grill-v3.md](grill-v3.md)), recherches dans `recherche/`. Les paliers 300/500/800 € ci-dessous sont l'historique.
+> **Titres, ton choix du 19/11/2026** : test A/B entre A, *Carte graphique pour l’IA locale : combien coûte la mémoire dont tu as besoin ?* (titre actuel, gardé dans le README et le calendrier), et B, *N'achète pas une carte graphique pour l'IA locale avant d'avoir vu cette vidéo*.
 > **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > Fiche du 14/11/2026, à ta demande (« en prévision du Black Friday »). Placée au **jeu. 26 nov., 18 h**, la veille du Black Friday (ven. 27 nov.), à la place d'[IA locale privée](../ia-locale-privee/fiche.md), qui recule au lun. 11 janv. Vidéo **calculée**. Idée 28 de [`strategie.md`](../../strategie.md), non notée (ta demande du 14/11). Titre provisoire.
 

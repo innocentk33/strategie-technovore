@@ -17,7 +17,7 @@ Voix : **1 596 mots** (hors crochets), **11:00 à 145 mots/minute**. Liaisons st
 
 [VISUEL : carte du rapport redessinée, « 175 108 hôtes uniques observés en 293 jours, étude publiée en 2026 ». F1.]
 
-Des chercheurs ont observé au total plus de 175 000 hôtes Ollama uniques accessibles sur internet, cumulés sur 293 jours. Des IA qu'on peut pourtant faire tourner chez soi. Ces chiffres sont les leurs, je n'ai rien testé chez moi. Donc, quand un outil est présenté comme local, qu'est-ce que ta configuration protège vraiment ?
+Des chercheurs ont observé au total plus de 175 000 hôtes Ollama uniques accessibles sur internet, cumulés sur 293 jours. Des IA qu'on peut pourtant faire tourner chez soi. Donc, quand un outil est présenté comme local, qu'est-ce que ta configuration protège vraiment ?
 
 On va suivre un document : son traitement par le modèle, les outils qui peuvent en recevoir un extrait, puis les copies qui restent. À chaque étape, la question est la même : qui peut accéder à quoi ? La recherche web donne le premier exemple.
 

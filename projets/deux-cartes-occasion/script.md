@@ -1,121 +1,154 @@
 # 32 Go pour Qwen 27B : les prix, les routes et leurs pièges
 
-Version corrigée après roast indépendant ; relevés du16/11/2026. Prix par référence, classement global non établi.
+V3 du 19/11/2026, grill-v3 appliqué ; prix relevés le 16/11, à relire avant la voix
 
 <!-- METRICS -->
-**Voix : 1859 mots · 12:49 à 145 mots/min.** Les balises ne sont pas lues.
+**Voix : 1590 mots · 10:57 à 145 mots/min.** Balises [VISUEL], renvois [F…] et titres non lus ; compte fait avec node. Question centrale au 72e mot (0:29). Liaisons strictes (donc, du coup, en fait, sauf que, voilà, par contre, alors, pourtant) : 36, soit 2,26 pour 100 mots. Aucun crochet.
 
 | Partie | Début estimé |
 |---|---|
-| Résultat, question et plan | 0:00 |
-| La conversation remplit aussi la carte | 0:36 |
-| Les paires et leurs restrictions | 2:31 |
-| Les 32 gigas sur une seule carte | 4:19 |
-| Acheter la machine complète | 7:02 |
-| Ce que la tour doit accueillir | 8:48 |
-| Les recours et le choix final | 10:31 |
+| Le résultat | 0:00 |
+| La question et le plan | 0:20 |
+| De combien tu as vraiment besoin | 0:57 |
+| Route 1 : deux cartes de 16 gigas | 2:34 |
+| Route 2 : une seule carte de 32 gigas | 4:46 |
+| Route 3 : changer d'ordinateur | 6:53 |
+| Avant de payer : les recours | 7:58 |
+| La route que je prendrais | 8:59 |
 <!-- /METRICS -->
 
 ## Voix
-[VISUEL : ASRock Arc Pro B65 32GB1799,95€ etGigabyte R9700 32GB2799,95€, LDLC16/11/2026, toutesdeuxenstock. F85,F91,F95]
 
-1000 euros d’écart entre deux références de 32 gigas chez le même marchand. Pourtant, aucune ne garantit tout le contexte de Qwen 27B. Ces chiffres sont les leurs, je n’ai rien testé chez moi. Donc quelle route te donne la mémoire utile sans transformer ton PC en chantier ?
+### Le résultat
 
-On compare les cartes seules, les paires et les ordinateurs complets. On calcule la place de la conversation, puis on regarde ce que ta tour peut accueillir. Le choix dépend aussi de ce que tu possèdes déjà.
+[VISUEL : deux cartes côte à côte, même fond. « ASRock Arc Pro B65 32 Go : 1799,95 € » / « Gigabyte Radeon AI PRO R9700 32 Go : 2799,95 € ». Bandeau : « LDLC, 16/11/2026, prix TTC affichés, les deux en stock ». Un « +1000 € » rouge tombe entre les deux. F85, F91, F95]
 
-### La conversation remplit aussi la carte
+Tu peux payer 1000 euros de plus pour la même quantité de mémoire : 32 gigas sur une seule carte, chez le même marchand, le même jour. [F95] Et même avec ces 32 gigas, Qwen 27B en 4 bits, avec sa conversation la plus longue, te laisse moins d'un giga de marge. [F81]
 
-[GRAPHIC] [VISUEL : fichier + conversation + tampons, trois zones d'une même jauge. F80/F81.]
+### La question et le plan
 
-Pour Qwen 27B en 4 bits avec une conversation courte, 24 gigas peuvent déjà suffire. Les 32 deviennent intéressants quand tu veux davantage de contexte, une copie moins compressée ou plus de marge. Du coup, acheter seulement parce qu'un titre affiche « full context », ça peut te coûter une carte pour rien.
+[VISUEL : une jauge de 32 gigas qui se remplit presque jusqu'en haut ; il reste un trait fin, « ≈ 0,7 ». « Fichier 4 bits + cache 16 bits complet ». F81]
 
-La mémoire de conversation grossit pendant que tu discutes. Elle garde des informations utilisées pour la suite. Ton fichier de modèle garde sa taille, mais cette réserve-là se remplit. Donc un modèle qui se charge au début ne promet pas une conversation longue sans débordement.
+Du coup, pour faire tourner Qwen 27B chez toi, quelle route vers 32 gigas tu prends, et quel piège elle te cache ?
 
-Dans la configuration officielle de Qwen 3.8 27B, on peut calculer la partie principale de ce cache. En précision 16 bits, c'est environ 2 gigas binaires à 32 mille tokens, 8 à 128 mille, et 16 à la fenêtre native complète. Attention, c'est un calcul théorique, hors autres allocations. On n'a pas lancé ces conversations sur les cartes du tableau.
+[VISUEL : le plan en quatre lignes qui s'écrivent avec la voix : « COMBIEN IL TE FAUT » · « 3 ROUTES, LEURS PRIX DU 16/11, LEURS PIÈGES » · « CE QUE TE PAIENT LES 1000 € » · « LA ROUTE QUE JE PRENDRAIS ».]
 
-Et là, tu vois le problème. Les poids du fichier 4 bits retenu ici prennent déjà plus de 15 gigas binaires. Ajoute 16 pour le contexte complet. Il reste une toute petite marge sur 32, avant les tampons et le reste du moteur. Donc il faudra réduire le cache, le contexte, ou choisir une autre copie du modèle. Le chiffre sur la boîte ne fait pas disparaître cette addition.
+Aujourd'hui, on va voir combien de mémoire Qwen 27B prend vraiment, conversation comprise. Ensuite, trois routes vers 32 gigas, avec leurs prix relevés chez LDLC le 16 novembre, et le piège de chacune, celui qui n'est pas écrit sur l'étiquette. Et à la fin, ce que ces 1000 euros de plus t'achètent vraiment, et la route que je prendrais selon le PC que tu as déjà.
 
-Par contre, quantifier le cache peut rendre cette route beaucoup plus réaliste. On doit simplement annoncer le réglage avec la capacité. « 32 gigas » tout seul ne décrit pas la conversation que tu pourras garder. Donc le premier achat à comparer doit répondre à cette capacité utile, avec son réglage de cache. [F80,F81]
+### De combien tu as vraiment besoin
 
-[VISUEL : tableau de prix daté du 16/11, stock et restrictions écrits en gros. F86/F87.]
+[VISUEL : jauge de 24 gigas ; le fichier Qwen3.8-27B Q4_K_M entre dedans, avec une petite conversation par-dessus, coche verte. Étiquette : « fichier 4 bits, conversation courte (32 K) ». Section C de sources.md, conseil 10, F41]
 
-### Les paires et leurs restrictions
+Première réponse, et elle peut déjà t'économiser une carte : pour Qwen 27B en 4 bits, avec une conversation courte, 24 gigas suffisent. [F41, section C, conseil 10] Donc les 32, en fait, c'est pour lui laisser une longue mémoire.
 
-Deux Intel Arc A770 de 16 gigas donneraient 32 gigas de capacité physique. Chez un marchand français, la référence consultée affiche 459,95 euros TTC. Le calcul donne donc 919,90 euros pour deux. Sauf que la page indique une rupture en ligne. C'est un repère affiché, pas une paire que je te promets de commander ce soir.
+[VISUEL : trois zones dans une même jauge : « le fichier » (fixe), « la conversation » (qui grossit pendant qu'on parle), « le reste du moteur ». F80]
 
-En fait, la capacité obtenue explique l’intérêt des paires. Sauf que la facture dépend aussi de leur installation dans ta tour. On y revient avec les contraintes de la tour.
+Parce que voilà le truc : pendant que tu discutes, le modèle garde des notes sur tout ce qui a été dit. Ton fichier, lui, ne bouge pas. Sauf que cette réserve-là grossit à chaque message.
 
-Côté NVIDIA, on peut aussi regarder deux RTX 5060 Ti de 16 gigas. La référence ASUS consultée affiche 1 079,95 euros TTC, en stock. Donc deux fois ce prix donnent 2 159,90 euros, avant tout changement du PC. Et il y a une autre ligne à lire : limitée à une carte par client. Ce total est un calcul de comparaison ; cette fiche ne permet pas de commander la paire telle quelle.
+[VISUEL : trois barres calculées : 2 / 8 / 16 Gio, pour 32 768, 131 072 et 262 144 tokens. « Calcul à partir de la configuration officielle de Qwen3.8-27B, cache en 16 bits ». F80]
 
-Du coup, on garde le nom complet, les 16 gigas et la restriction. Vérifier la capacité exacte évite de commander une autre version.
+Et on peut la calculer, à partir de la configuration officielle du modèle. Avec un cache en 16 bits, c'est environ 2 gigas pour 32 000 tokens, 8 pour 128 000, et 16 pour la fenêtre complète de 262 000. [F80]
 
-Si cette vidéo t'a évité un mauvais achat, abonne-toi.
+[VISUEL : l'addition qui s'empile dans la jauge de 32 : « 15,3 Gio (16,46 Go affichés sur Hugging Face) + 16 (conversation complète) = 31,3 Gio ». Il reste un trait de 0,7. F81]
 
-Deux RTX 3060 de 12 gigas donnent 24 gigas. Elles peuvent répondre à un besoin plus modeste, mais elles n'atteignent pas notre palier de 32. Deux RTX 3090 donnent 48, avec d'autres contraintes de place et d'alimentation. Et deux Radeon de 16 gigas constituent encore une autre route. Les annonces d'occasion françaises ne sont pas assez vérifiables ici pour leur inventer un prix actuel : elles restent hors classement économique. [F90]
+Alors fais l'addition avec moi. Le fichier 4 bits, c'est 16 gigas et demi sur Hugging Face. Mais compté comme ta carte compte, c'est un peu plus de 15. Tu ajoutes 16 pour la conversation complète. Ça fait 31,3. Sur une carte de 32. [F81] Et ça, c'est avant les tampons et tout le reste du moteur. Bon, la boîte dit 32 gigas, mais ta marge, elle est déjà partie.
 
-[VISUEL : une seule carte prend place dans le boîtier dessiné. F82–F85.]
+Du coup, avec 32 gigas, le contexte complet, il faut aller le chercher : en compressant le cache, ou en raccourcissant un peu la conversation. [F81]
 
-### Les 32 gigas sur une seule carte
+Et si t'as qu'une carte de 8 gigas, on a vu lundi dernier comment Qwen 27B y tourne quand même, juste en changeant de fichier. Là, on parle de ceux qui veulent la place.
 
-Une seule carte de 32 gigas simplifie une partie du problème physique. La Radeon AI PRO R9700 a bien 32 gigas de mémoire dédiée. La référence Gigabyte consultée affiche 2 799,95 euros TTC, en stock, le 16 novembre. C'est une offre précise chez un marchand, pas le prix minimum de toutes les R9700.
+### Route 1 : deux cartes de 16 gigas
 
-Donc tu paies ici la capacité sur une seule carte, avec un environnement logiciel AMD à vérifier pour ton usage. La présence de 32 gigas ne transforme pas tous les outils CUDA en outils compatibles. Le programme qui lance ton modèle compte aussi dans l'achat.
+[VISUEL : tableau, en gros : « 2 × Intel Arc A770 16 Go : 2 × 459,95 € = 919,90 € » avec un tampon « RUPTURE EN LIGNE LE 16/11 » ; « 2 × ASUS Dual RTX 5060 Ti OC 16 Go : 2 × 1079,95 € = 2159,90 € » avec « 1 PAR CLIENT ». LDLC, 16/11. F86, F87]
 
-Par contre, chez le même marchand, l’ASRock Arc Pro B65 de 32 gigas est affichée 1799,95 euros TTC, en stock le 16 novembre. La B70 de 32 gigas est affichée 2299,95 euros, également en stock. Donc on retrouve les 1000 euros de l’ouverture entre la B65 et la Gigabyte R9700. Les deux Intel ont elles-mêmes 500 euros d’écart. [F91,F92,F95]
+Première route, la plus tentante : deux cartes de 16 gigas, et hop, 32. La moins chère du relevé, c'est l'Intel Arc A770 : 460 euros chez LDLC le 16 novembre. Donc deux, ça fait 920 euros. Moins de 1000 euros pour 32 gigas ! Sauf que… ce jour-là, la page affichait une rupture en ligne. [F87] Bref, ta paire à 920 euros, le 16 novembre, tu ne pouvais pas la commander.
 
-En fait, le prix le plus bas de ces trois références est celui de la B65. Pour en faire le meilleur achat pour toi, il faudrait aussi comparer ton moteur et ton modèle. Aucun résultat de vitesse commun aux trois cartes n’est établi dans ce relevé. Donc on peut classer ces prix affichés, tout en gardant la question du confort ouverte.
+Côté NVIDIA, la RTX 5060 Ti de 16 gigas d'ASUS est bien en stock : 1080 euros. Ça ferait 2160 la paire. Sauf qu'il y a une petite ligne sous le prix : limitée à une par client. [F86] En gros, le boss de fin, c'est pas le prix, c'est la règle du magasin.
 
-Une autre R9700, l’ASRock Creator, affiche 2349,95 euros TTC. Sauf que son délai dépasse 15 jours. Elle doit garder cette étiquette à côté du prix. [F93]
+[VISUEL : « 2 × RTX 3090 : 2 × 24 = 48 Go », « prix actuel non établi » ; en petit, « 2 × RTX 3060 = 24 Go : sous le palier ». F90]
 
-La RTX 5090 a aussi 32 gigas. L’ASUS TUF consultée affiche 9399,95 euros TTC chez LDLC le 16 novembre, avec un seul exemplaire en stock. Donc elle ajoute une offre NVIDIA à notre comparaison, à un tarif très différent. La V100 d’occasion reste sans prix actuel établi. [F84,F90,F96]
+Et deux RTX 3090 ? Ça fait 48, mais aucune offre d'occasion vérifiable ce jour-là pour te donner un vrai prix. [F90]
 
-Pour la Tesla V100 de 32 gigas, la version précise change aussi l’installation : une carte prévue pour un serveur ne se transforme pas automatiquement en carte de joueur. Connectique, refroidissement, pilotes, format, il faut un ensemble cohérent. Le dossier rappelle aussi les limites des anciennes générations avec les outils CUDA récents.
+[VISUEL : schéma de ma carte mère, d'après son manuel (Gigabyte B850M AORUS ELITE WIFI6E ICE) : slot du haut « PCIe 5.0 x16, processeur », slot du bas « PCIe 3.0 x4, chipset », en dernière position. F60]
 
-En fait, la carte seule peut afficher moins cher et réclamer davantage de travail autour. Si tu débutes et que tu as seulement envie de discuter avec ton IA, ce travail fait partie du coût. On le garde dans le verdict, même s'il n'apparaît pas dans la colonne euros par giga.
+Maintenant, le vrai piège de cette route, c'est ta tour. Prends la mienne : une carte mère micro-ATX, comme beaucoup d'autres. D'après son manuel, le deuxième slot a la même longueur que le premier. Pourtant, il n'a que 4 lignes en PCIe 3.0, et il passe par le chipset. [F60] Et en plus, il est tout en bas. Du coup, une carte de 2 slots dedans dépasse sous la carte mère, et il te faut un boîtier à 5 emplacements. [F60]
 
-[VISUEL : ordinateur compact ; CPU et GPU accèdent à une même réserve. F88/F89.]
+[VISUEL : panneau de mon alimentation Corsair RM1000e ; une seule prise 12V-2x6 entourée ; « avec la 5080 branchée : peut-être 2 × 8 broches restantes ». F61]
 
-### Acheter la machine complète
+Ensuite, l'alimentation. La mienne fait 1000 watts. Sauf qu'avec ma RTX 5080 branchée, il ne me resterait peut-être que 2 prises 8 broches. [F61] Donc avant d'acheter la deuxième carte, tu regardes ton boîtier, et tu comptes tes câbles.
 
-Mais ton point de départ change encore le calcul si tu remplaces l’ordinateur. Un Ryzen AI Max+ peut employer une grande mémoire partagée avec son GPU intégré. Le mini-PC consulté existe en 64 ou 128 gigas. Et le Mac mini est proposé dans des configurations à 32 ou 64 gigas de mémoire unifiée.
+[VISUEL : deux bureaux, un modèle coupé en deux tranches de couches ; la flèche de travail passe de l'un à l'autre, jamais les deux en même temps. « llama.cpp, --split-mode layer (défaut) ». F20, F33]
 
-Du coup, on change de comparaison. On achète un ordinateur complet, avec son processeur, son stockage et son système. Si ton PC actuel te sert déjà pour jouer et travailler, son remplacement doit aussi préserver ces usages.
+Et le dernier piège, c'est la vitesse. Par défaut, llama.cpp coupe le modèle en tranches de couches, une tranche par carte. [F20] Et pour une seule conversation, elles travaillent chacune leur tour. En fait, la mémoire s'additionne, mais la vitesse, elle, ne double pas. [F33]
 
-Autre détail : la mémoire partagée sert aussi au système et aux applications. Une configuration à 32 gigas ne promet pas 32 gigas libres pour le GPU. Et avoir une grande réserve ne dit pas à quelle vitesse le modèle écrit. Pour ça, il faut une mesure sur le modèle, le moteur et la configuration concernés.
+Bref, deux cartes, c'est de la place, pas de la vitesse. Si cette vidéo t'a évité un mauvais achat, abonne-toi.
 
-Pour le Mac mini M6 de 32 gigas avec 512 gigas de stockage, LDLC affiche 1709 euros TTC le 16 novembre, avec un délai supérieur à 15 jours. Du coup, son prix se compare au budget d’un ordinateur complet. Pour le Ryzen, le prix TTC de la configuration exacte reste à établir. [F88,F94]
+### Route 2 : une seule carte de 32 gigas
 
-Voilà pourquoi le comparatif garde deux colonnes : le matériel à ajouter et l'ordinateur à remplacer. Si tu pars de zéro, une machine compacte peut être cohérente. Si tu as déjà une tour adaptée et une carte utile, l'ajout peut demander moins de changements. Le besoin final est le même ; le point de départ change la facture.
+[VISUEL : quatre cartes alignées par prix, avec leur statut : « Arc Pro B65 : 1799,95 €, en stock » ; « Arc Pro B70 : 2299,95 €, en stock » ; « Radeon AI PRO R9700 ASRock : 2349,95 €, + de 15 jours » ; « Radeon AI PRO R9700 Gigabyte : 2799,95 €, en stock ». LDLC, 16/11, offres relevées (pas tout le marché). F85, F91, F92, F93]
 
-[GRAPHIC] [VISUEL : manuel carte mère, dimensions et connecteurs, aucune capture personnelle à produire. F60–F65.]
+Deuxième route : une seule carte de 32 gigas. Plus de deuxième slot, plus de câbles en double, et là, d'un coup, le PC redevient simple. Et c'est là qu'on retrouve nos 1000 euros du début.
 
-### Ce que la tour doit accueillir
+Chez LDLC, toujours le 16 novembre, la moins chère en stock de mon relevé, c'est l'Intel Arc Pro B65 d'ASRock : 1800 euros, à 5 centimes près. [F91] Sa grande sœur, la B70, est à 2300. [F92] Côté AMD, la Radeon AI PRO R9700 de Gigabyte est à 2800, en stock. [F85]
 
-Reprends la paire d’Intel A770. Même si elle redevient disponible, son prix ne dit toujours pas ce que ta tour peut accueillir. Un deuxième connecteur long sur la carte mère ne signifie pas forcément une liaison aussi rapide que le premier. Dans l'exemple documenté du dossier, le second fonctionne en PCIe 3.0 avec quatre lignes et passe par le chipset. Le manuel donne cette information ; la forme du connecteur ne la donne pas.
+[VISUEL : la même jauge « 32 GO » sur la B65 et la R9700 ; « +1000 € = ? » ; puis la couverture du guide AMD « Radeon AI PRO : ROCm et PyTorch » qui s'ajoute côté R9700. F83, F95]
 
-Sauf que le connecteur disponible ne règle pas l’espace sous cette carte. Sur une petite carte mère, le port du bas peut mettre le radiateur de la seconde carte tout contre le fond du boîtier. Donc on compare les dimensions réelles et les emplacements disponibles. Une photo avec deux cartes côte à côte ne prouve pas qu'elles rentrent dans ta tour.
+Donc 32 gigas des deux côtés, et jusqu'à 1000 euros d'écart. [F95] Alors, ces 1000 euros, ils t'achètent quoi ? Pas un giga de plus, en tout cas. Et la vitesse, le prix ne te la dit pas. Ce que la R9700 a en plus sur le papier, c'est un guide officiel d'AMD pour y faire tourner ses outils d'IA. [F83] Sauf que, même là, 32 gigas et un guide ne prouvent pas que chaque moteur la prend en charge. [F83] Du coup, voilà le vrai piège de cette route : avant de comparer les prix, tu vérifies que ton logiciel gère la carte.
 
-Du coup, l’alimentation entre aussi dans la facture. Il faut la puissance, mais aussi les bons câbles et leurs connecteurs. Le dossier distingue les modèles et les prises. On ne transforme pas une prise disponible en branchement compatible à l'aide d'un adaptateur trouvé au hasard.
+[VISUEL : « ASUS TUF RTX 5090 32 Go : 9399,95 € — 1 en stock », LDLC, 16/11. F96]
 
-Par contre, la capacité supplémentaire peut rendre un modèle possible sans accélérer sa réponse. Un moteur peut répartir le modèle entre les cartes. En répartition par couches, pour une seule conversation, les cartes traitent successivement leurs parties. Ajouter la mémoire rend donc certains modèles possibles sans promettre deux fois plus de tokens par seconde. Les détails du partage et des lignes PCIe arrivent dans la suite consacrée aux deux cartes.
+Et chez NVIDIA ? La RTX 5090 a aussi 32 gigas. Sauf que la TUF d'ASUS s'affichait à 9400 euros, avec un seul exemplaire en stock. [F96] Ouais. Pour ce prix-là, on change carrément de catégorie.
 
-[VISUEL : facture vendeur professionnel, calendrier de livraison et étiquette retour. F74–F79.]
+[VISUEL : une Tesla V100 32 Go de serveur, sans ventilateur, avec trois étiquettes : « ni ventilateur ni sortie vidéo », « pilote 580 = dernière branche », « CUDA 13 : plus de compilation ». F70, F90, conseil 4]
 
-### Les recours et le choix final
+Reste la Tesla V100 de 32 gigas d'occasion, la carte de serveur qui fait des centaines de milliers de vues en anglais. [vidIQ, 24/10] Pas d'offre vérifiable dans ce relevé, donc pas de prix. [F90] Par contre, son piège, on le connaît : NVIDIA a fait du pilote 580 la dernière branche qui la gère, et CUDA 13 ne compile plus pour elle. [F70] En plus, comme les autres cartes de serveur, elle n'a ni ventilateur ni sortie vidéo : tout est à refaire autour. [conseil 4] En fait, elle peut paraître pas chère, et te coûter tout un week-end.
 
-En fait, une annonce de particulier et une vente professionnelle ne t'offrent pas le même recours. En France, quand un particulier achète à un professionnel, la garantie légale de conformité couvre aussi l'occasion pendant 2 ans à partir de la délivrance. Pour l'occasion, la présomption que le défaut existait déjà dure 12 mois. Ensuite, la question de la preuve change.
+### Route 3 : changer d'ordinateur
 
-Pour un achat à distance auprès d'un professionnel, le droit de rétractation donne en principe 14 jours à partir du lendemain de la réception du bien. Donc une ligne « garantie commerciale 12 mois » ne raconte pas tout. Et ces règles françaises ne deviennent pas automatiquement celles de ton pays si tu regardes depuis Abidjan, Douala ou Kinshasa. Les frais d'importation et les recours locaux doivent être vérifiés séparément.
+[VISUEL : « Mac mini M6 32 Go / 512 Go : 1709 € — délai + de 15 jours », LDLC, 16/11 ; processeur et puce graphique puisent dans la même réserve de 32 Go ; une part grisée « système et applis ». F89, F94]
 
-Alors, quel choix regarder ? Si tu as déjà une carte de 16 gigas et une tour adaptée, compare d'abord le coût de la seconde carte compatible, câbles et place compris. Si tu pars de zéro et que tu veux un ensemble simple, compare aussi une seule carte de 32 gigas. Si tu veux remplacer l'ordinateur, les machines à mémoire unifiée entrent dans la course. Et si ton Qwen en 4 bits avec contexte court tient déjà correctement, garde ton argent tant que tu n'as pas identifié ce qui te manque.
+Troisième route, et c'est là que ça devient bizarre. Le Mac mini M6 avec 32 gigas de mémoire unifiée et 512 de stockage est affiché 1709 euros chez LDLC le 16 novembre. [F94] Donc un ordinateur complet coûte moins cher que la carte de 32 gigas la moins chère du relevé.
 
-Parmi nos quatre offres immédiatement en stock à une carte de 32 gigas, la B65 affiche le prix le plus bas. Les paires du tableau ont leurs restrictions, et les routes sans prix actuel restent non classées. Donc le choix se fait avec trois lignes devant toi : le fichier, la conversation voulue et le PC que tu possèdes. Le moins cher de ces quatre prix n’établit pas le meilleur achat pour tous les logiciels. [F85–F96]
+Sauf que, déjà, le délai dépasse 15 jours. [F94] Et surtout, cette mémoire, elle est partagée : le système et tes applis se servent dedans. [F89]
 
-[CROCHET : ton avis personnel sur le compromis que tu accepterais. Facultatif, sans fait nouveau.]
+[VISUEL : mini-PC GMKtec EVO-X2, Ryzen AI Max+ 395, deux versions « 64 Go » et « 128 Go » ; « 1999,99 € affichés (64 Go + 1 To), TVA non précisée ». F88]
 
-Jeudi 3 décembre, on regarde une autre route : DeepSeek sans carte graphique, avec 64 gigas de RAM. Le calcul portera sur le coût de cette mémoire et sur ce que la compression fait perdre. Allez, salut !
+Côté PC, il y a les mini-PC Ryzen AI Max+, avec 64 ou même 128 gigas de mémoire partagée. Celui que j'ai regardé affiche presque 2000 euros en 64 gigas, sauf que sa page ne dit pas clairement si la TVA est dedans. [F88] Et là encore, la mémoire est fixe : tu choisis à l'achat, et c'est pour toujours. [F88]
 
+Du coup, le piège de cette route, c'est la facture : tu remplaces ton PC entier, celui qui te sert aussi à jouer et à bosser.
 
-## Crochets et limites
+### Avant de payer : les recours
 
-Avis personnel facultatif. V100, occasion et Ryzen TTC : prix non établis. Pas de performances comparables entre toutes les routes. Aucune manipulation à filmer ; tableaux sources et jauges calculées uniquement.
+[VISUEL : deux colonnes : « vendeur pro, neuf ou occasion : 2 ans de garantie légale ; défaut présumé 2 ans (neuf), 12 mois (occasion) ; 14 jours de rétractation à distance » / « particulier : vices cachés seulement, à prouver ». F74, F75, F76, F79]
+
+Et avant de payer, un dernier piège, qui n'est pas technique. En France, chez un vendeur professionnel, neuf ou d'occasion, tu as 2 ans de garantie légale, et il ne peut pas les réduire. [F74, F75] Le défaut est présumé exister dès la vente pendant ces 2 ans pour du neuf, et 12 mois pour de l'occasion. [F75] Et pour un achat à distance, tu as 14 jours après la réception pour te rétracter. [F79] Donc ces 14 jours, c'est ta fenêtre pour tester la carte.
+
+Par contre, entre particuliers, il te reste seulement les vices cachés, et c'est à toi de les prouver. [F76]
+
+[VISUEL : carte de l'Afrique de l'Ouest et centrale, Abidjan, Dakar, Douala, Kinshasa ; deux étiquettes : « valable partout : le calcul de la mémoire, les slots, l'alimentation » / « valable en France seulement : ces prix TTC, ces garanties ».]
+
+Et si tu regardes depuis Abidjan, Dakar ou Kinshasa : ces prix sont des prix français, et ces garanties, c'est le droit français. [F74, F79] Donc chez toi, renseigne-toi sur le recours du vendeur avant de payer. Par contre, l'addition de la mémoire, les slots et l'alimentation, ça, c'est valable partout. [F60, F61, F81]
+
+### La route que je prendrais
+
+[VISUEL : trois profils, chacun avec sa route et son prix du 16/11 : « tu as déjà une 16 Go NVIDIA → + 1 × 5060 Ti 16 Go : 1079,95 € » ; « tu pars de zéro → Arc Pro B65 : 1799,95 € » ; « tu remplaces tout → Mac mini M6 32 Go : 1709 €, ou mini-PC Ryzen AI Max+ 64 Go : 1999,99 € affichés ». F85, F86, F88, F91, F94]
+
+Alors, quelle route ? Ça dépend de ce que tu as déjà.
+
+Si tu as déjà une carte NVIDIA de 16 gigas, et une tour qui accueille une deuxième carte, c'est le seul cas où je prendrais une paire : la moitié est déjà payée. Regarde la 5060 Ti de 16 gigas, à 1080 euros. [F86] Et du coup, la limite d'une par client ne te gêne plus, puisque t'en achètes qu'une. Mais vérifie d'abord ton slot, ton boîtier et tes câbles. [F60, F61]
+
+Si tu pars de zéro, moi, je ne commencerais pas par une paire. Sur le papier, c'est la moins chère, mais en vrai, c'est elle qui a le plus de pièges. [F20, F33, F60, F61, F86, F87] Donc je prendrais la B65, à 1800 euros : la moins chère des offres en stock du relevé, avec la même quantité de mémoire que la R9700 à 2800. [F85, F91] Sauf que, avant de cliquer, tu vérifies que ton logiciel la gère. S'il ne la gère pas, là, les 1000 euros de la R9700 et son guide officiel peuvent avoir un sens. [F83, F95]
+
+[VISUEL : retour de la jauge du début, 31,3 sur 32, posée sur le Mac mini ; la part « système » la fait déborder. Puis la jauge de 64 du mini-PC, avec de la place. F81, F88, F89]
+
+Et si tu veux remplacer tout l'ordinateur, le Mac mini à 1709 euros entre dans la course. Par contre, souviens-toi de l'addition du début : 31,3 gigas pour la conversation complète. Sur un Mac de 32 gigas, dont le système prend sa part, en cache 16 bits, ça ne rentre pas : tu compresses le cache, ou tu raccourcis. [F81, F89] Et si c'est vraiment la conversation complète que tu veux, la seule route chiffrée de mon relevé qui dépasse 32 gigas, c'est le mini-PC Ryzen AI Max+ en 64. [F88]
+
+Et en fait, si tu as déjà 24 gigas et qu'une conversation courte te suffit, garde ton argent. [section C] La meilleure carte, parfois, c'est celle que tu n'achètes pas.
+
+Allez, salut !
+
+## Faits utilisés
+
+F20, F33, F41, F60, F61, F70, F74, F75, F76, F79, F80, F81, F83, F85, F86, F87, F88, F89, F90, F91, F92, F93, F94, F95, F96 ; section C et conseils 4 et 10 de sources.md ; vues de la vidéo V100 (vidIQ, 24/10). Prix du 16/11 chez LDLC, exacts dans les [VISUEL], arrondis dans la voix (sauf les 1000 € du hook et les 1709 € du Mac).
+
+Écartés faute de source ou de fiabilité : vitesses publiées F28, F29, F31, F32 (marquées ⚠️) ; prix d'occasion d'octobre F1 à F16 (pas des prix du 16/11) ; prix actuels de la V100, des paires de 3090 et de Radeon 16 Go d'occasion ; prix TTC certifié du Ryzen AI Max+ (seul le 1999,99 € affiché, TVA non claire, est dit) ; coûts d'import vers l'Afrique.

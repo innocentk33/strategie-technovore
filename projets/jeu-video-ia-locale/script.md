@@ -18,7 +18,7 @@ Voix : **1 560 mots** (hors crochets), **10:46 à 145 mots/minute**. Liaisons st
 
 [VISUEL : archive T45 si disponible, sinon schéma légendé « reconstitution du fonctionnement documenté ». Coder IQ1_M, Pi 1.5.2, réflexion high, contexte 131 072, 16 Go VRAM + environ 32 Go RAM. T41/T45, novembre 2026. La voix reste valable sans rush.]
 
-Un casse-briques avec vies et bonus, obtenu avec une IA locale sur 16 gigas, d'après les archives Strata. Pour les autres outils, ces chiffres sont les leurs, je n'ai rien testé chez moi. Donc, jusqu'où ta carte de joueur peut-elle t'amener vers un jeu que tu voudrais publier ?
+Un casse-briques avec vies et bonus, obtenu avec une IA locale sur 16 gigas, d'après les archives Strata. Donc, jusqu'où ta carte de joueur peut-elle t'amener vers un jeu que tu voudrais publier ?
 
 On regarde ce que le code a réellement réussi, puis les images, les objets 3D et le son. On distinguera le résultat de code des pistes d'assets, leurs besoins mémoire annoncés et leurs retouches. Et une licence peut rendre un outil inadapté au projet commercial que tu imagines.
 

@@ -3,7 +3,6 @@
 Des chercheurs ont observé au total plus de 175 000 hôtes Ollama uniques accessibles
 sur internet, cumulés sur 293 jours.
 Des IA qu'on peut pourtant faire tourner chez soi.
-Ces chiffres sont les leurs, je n'ai rien testé chez moi.
 Donc, quand un outil est présenté comme local, qu'est-ce que ta configuration protège
 vraiment ?
 

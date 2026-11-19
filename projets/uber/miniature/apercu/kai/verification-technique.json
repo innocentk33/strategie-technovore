@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-19",
+  "project": "uber",
+  "variants": {
+    "h": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 3,
+      "png_sha256": "65970dcfe24d6a07af07f80bb7b09c895ba47538cc85b97aab505dc0449af0f7",
+      "psd_sha256": "cdcc5cd00473d1af7fcaac6b2ddb1c1f2dd6777344166f43f49f37d3beb7c9e2",
+      "psd_png_mean_absolute_error": 0.0359,
+      "png_bytes": 1972252,
+      "psd_bytes": 9711202
+    },
+    "i": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 3,
+      "png_sha256": "e7472e84e3840ebddd695b5c1dfc54e575a6ca0dbed33b03626eeb0c67802954",
+      "psd_sha256": "2b2be1ce1190bb49e37949ed812c368994bb878c5071b04f5620c95a785015fc",
+      "psd_png_mean_absolute_error": 0.0403,
+      "png_bytes": 125218,
+      "psd_bytes": 2075772
+    },
+    "j": {
+      "png_dimensions": [
+        3840,
+        2160
+      ],
+      "psd_dimensions": [
+        3840,
+        2160
+      ],
+      "editable_type_blocks": 3,
+      "png_sha256": "21bd64da6851d005e11c596109d00fb668ad60e4c8ca98bab10f459bbd8ba6e2",
+      "psd_sha256": "7d41c76500b971b6fe4dfdd3f5f4e0fdfb8d5d973eab89d4fc339958be3cc8bc",
+      "psd_png_mean_absolute_error": 0.0403,
+      "png_bytes": 2047600,
+      "psd_bytes": 10039806
+    }
+  }
+}

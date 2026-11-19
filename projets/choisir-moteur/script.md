@@ -14,7 +14,7 @@ Version finale documentaire du 16/11/2026, publication provisoire du 25/01/2027.
 
 ## Voix
 
-Sur un Steam Deck, une autre préparation de Vulkan améliore jusqu’à 63 % le débit de lecture du prompt d’un modèle 9B, dans une étude publiée. Donc les réglages font partie du résultat. Ces chiffres sont les leurs, je n’ai rien testé chez moi. Alors, pour ton usage, qu’est-ce qui doit décider entre Ollama, LM Studio et llama.cpp ? [F4]
+Sur un Steam Deck, une autre préparation de Vulkan améliore jusqu’à 63 % le débit de lecture du prompt d’un modèle 9B, dans une étude publiée. Donc les réglages font partie du résultat. Alors, pour ton usage, qu’est-ce qui doit décider entre Ollama, LM Studio et llama.cpp ? [F4]
 
 [VISUEL : étude datée du 17/09/2026 ; PP +63 %, Steam Deck, Vulkan ; aucun transfert Windows.]
 

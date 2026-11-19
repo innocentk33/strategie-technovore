@@ -2,7 +2,6 @@
 
 Un casse-briques avec vies et bonus, obtenu avec une IA locale sur 16 gigas, d'après
 les archives Strata.
-Pour les autres outils, ces chiffres sont les leurs, je n'ai rien testé chez moi.
 Donc, jusqu'où ta carte de joueur peut-elle t'amener vers un jeu que tu voudrais
 publier ?
 

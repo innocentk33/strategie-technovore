@@ -1,0 +1,110 @@
+[
+  {
+    "variante": "h",
+    "png": [
+      3840,
+      2160
+    ],
+    "sha256": "941c5843ba9f9feddaf5a6f4df16dd60889169cf23881e2988d8a4e4bca5713e",
+    "psd": [
+      3840,
+      2160
+    ],
+    "calques_texte": [
+      {
+        "font": "Archivo Black",
+        "sizePt": 84.0,
+        "text": "QWEN 4"
+      },
+      {
+        "font": "Archivo Black",
+        "sizePt": 295.6676940917969,
+        "text": "TROP TÔT ?"
+      },
+      {
+        "font": "Archivo Black",
+        "sizePt": 295.6679992675781,
+        "text": "TROP TÔT ?"
+      },
+      {
+        "font": "Archivo Black",
+        "sizePt": 295.6676940917969,
+        "text": "ACHETER"
+      }
+    ],
+    "avertissements": [],
+    "difference_moyenne_png_psd": 0.06918881012088478
+  },
+  {
+    "variante": "i",
+    "png": [
+      3840,
+      2160
+    ],
+    "sha256": "2d2eccff9e496b52ff1da62f1c7c3325797a2c04f1554a3ed929d279db84e2d7",
+    "psd": [
+      3840,
+      2160
+    ],
+    "calques_texte": [
+      {
+        "font": "Archivo Black",
+        "sizePt": 126.0,
+        "text": "QWEN 4"
+      },
+      {
+        "font": "Archivo Black",
+        "sizePt": 299.0046081542969,
+        "text": "TROP TÔT ?"
+      },
+      {
+        "font": "Archivo Black",
+        "sizePt": 299.0046081542969,
+        "text": "TROP TÔT ?"
+      },
+      {
+        "font": "Archivo Black",
+        "sizePt": 299.0046081542969,
+        "text": "ACHETER"
+      }
+    ],
+    "avertissements": [],
+    "difference_moyenne_png_psd": 0.0990458220807613
+  },
+  {
+    "variante": "j",
+    "png": [
+      3840,
+      2160
+    ],
+    "sha256": "9bb67b504da279aedde4f04cd9a4a426399d10f546de72af38136563aa7313fd",
+    "psd": [
+      3840,
+      2160
+    ],
+    "calques_texte": [
+      {
+        "font": "Archivo Black",
+        "sizePt": 84.0,
+        "text": "QWEN 4"
+      },
+      {
+        "font": "Archivo Black",
+        "sizePt": 295.6676940917969,
+        "text": "TROP TÔT ?"
+      },
+      {
+        "font": "Archivo Black",
+        "sizePt": 295.6679992675781,
+        "text": "TROP TÔT ?"
+      },
+      {
+        "font": "Archivo Black",
+        "sizePt": 295.6676940917969,
+        "text": "ACHETER"
+      }
+    ],
+    "avertissements": [],
+    "difference_moyenne_png_psd": 0.08407869566615227
+  }
+]

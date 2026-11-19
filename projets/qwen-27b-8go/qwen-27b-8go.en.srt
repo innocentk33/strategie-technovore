@@ -1,0 +1,770 @@
+1
+00:00:00,030 --> 00:00:02,358
+Can a 27-billion-parameter
+model fit
+
+2
+00:00:02,378 --> 00:00:04,092
+on a plain 8 GB graphics card?
+
+3
+00:00:04,179 --> 00:00:04,979
+Well, actually, yes.
+
+4
+00:00:05,037 --> 00:00:06,922
+On an 8 GB card,
+you change a single file,
+
+5
+00:00:06,942 --> 00:00:10,359
+and Qwen 27B goes from 3.2
+to 18 tokens per second.
+
+6
+00:00:10,537 --> 00:00:13,802
+Except this measurement comes from
+a GTX 1080 Ti limited to 8 GB.
+
+7
+00:00:13,938 --> 00:00:14,747
+So, the real question:
+
+8
+00:00:14,851 --> 00:00:16,807
+what does this file make you lose
+in exchange?
+
+9
+00:00:17,227 --> 00:00:19,541
+In this video, we'll look at
+how this file does everything
+
+10
+00:00:19,561 --> 00:00:20,784
+to fit in 8 GB,
+
+11
+00:00:20,846 --> 00:00:22,544
+what it costs you
+in conversation memory,
+
+12
+00:00:22,564 --> 00:00:23,854
+and what it costs you in quality.
+
+13
+00:00:24,041 --> 00:00:25,402
+And at the end, you'll see a job
+
+14
+00:00:25,422 --> 00:00:27,287
+that this file fails almost
+9 times out of 10,
+
+15
+00:00:27,359 --> 00:00:28,942
+in the tests of the very people
+who made it.
+
+16
+00:00:29,399 --> 00:00:30,515
+First, what it really changes.
+
+17
+00:00:30,655 --> 00:00:32,126
+Take a 500-token answer.
+
+18
+00:00:32,360 --> 00:00:35,175
+At 3.2 tokens per second,
+you wait 2 minutes 36 seconds.
+
+19
+00:00:35,339 --> 00:00:36,602
+At 18, it's 28 seconds.
+
+20
+00:00:36,790 --> 00:00:39,282
+It's just a division,
+but it gives you the idea.
+
+21
+00:00:39,463 --> 00:00:42,148
+So this gap changes
+how you talk to AI.
+
+22
+00:00:42,332 --> 00:00:44,148
+When every answer takes
+two and a half minutes,
+
+23
+00:00:44,168 --> 00:00:45,700
+you don't dare ask it anything anymore.
+
+24
+00:00:45,813 --> 00:00:48,103
+You write one big block to avoid
+going back and forth.
+
+25
+00:00:48,202 --> 00:00:49,953
+At 28 seconds, you can
+follow up, correct,
+
+26
+00:00:49,998 --> 00:00:52,268
+and go back and forth
+without worrying about what's going on.
+
+27
+00:00:52,564 --> 00:00:54,342
+But this gain only affects
+the writing.
+
+28
+00:00:54,461 --> 00:00:56,324
+Before writing,
+the model reads your request,
+
+29
+00:00:56,344 --> 00:00:59,191
+and that reading stays about the same
+with both files.
+
+30
+00:00:59,272 --> 00:01:00,725
+And if it thinks before answering,
+
+31
+00:01:00,745 --> 00:01:03,115
+that thinking is also
+tokens to write.
+
+32
+00:01:03,236 --> 00:01:06,013
+A short answer on screen can therefore
+hide a lot more work
+
+33
+00:01:06,033 --> 00:01:06,880
+than you think.
+
+34
+00:01:07,184 --> 00:01:08,122
+So where does this gain come from?
+
+35
+00:01:08,447 --> 00:01:09,967
+The old file
+didn't fit on the card.
+
+36
+00:01:09,987 --> 00:01:12,783
+Part of it ran in the PC's RAM,
+with the processor,
+
+37
+00:01:12,893 --> 00:01:14,403
+and the card spent its time
+waiting for it.
+
+38
+00:01:14,424 --> 00:01:16,364
+Basically, a cook
+with half of his ingredients
+
+39
+00:01:16,384 --> 00:01:17,559
+in another room:
+
+40
+00:01:17,579 --> 00:01:18,379
+he can be as fast as he likes,
+
+41
+00:01:18,399 --> 00:01:20,929
+but he spends his time running around
+to fetch what he's missing.
+
+42
+00:01:20,995 --> 00:01:23,585
+Well, the new small file, though,
+fits entirely in the card.
+
+43
+00:01:23,652 --> 00:01:25,685
+It's called UD-IQ2_XS.
+
+44
+00:01:26,001 --> 00:01:27,733
+To me, it's gibberish,
+but that's its name.
+
+45
+00:01:27,847 --> 00:01:31,614
+It's 7.63 GB, and it was published
+by Unsloth on November 11.
+
+46
+00:01:31,891 --> 00:01:33,801
+I'll show you the full name,
+it's much simpler.
+
+47
+00:01:34,181 --> 00:01:35,818
+But to fit
+on an 8 GB card,
+
+48
+00:01:36,000 --> 00:01:38,108
+the model had to go on
+an incredible diet.
+
+49
+00:01:38,253 --> 00:01:40,028
+Its numbers are stored
+with less precision,
+
+50
+00:01:40,048 --> 00:01:41,598
+that's what we call quantization.
+
+51
+00:01:41,738 --> 00:01:44,135
+The model keeps its name,
+but it doesn't answer quite the same.
+
+52
+00:01:44,588 --> 00:01:47,198
+By the way, the MTP, the module
+that doubled the speed
+
+53
+00:01:47,376 --> 00:01:49,109
+in the previous video,
+is left out
+
+54
+00:01:49,129 --> 00:01:50,569
+of this measurement, for lack of room.
+
+55
+00:01:50,720 --> 00:01:52,971
+So the 18 tokens per second we got
+are without it.
+
+56
+00:01:53,385 --> 00:01:55,595
+Okay, we've found everything we gain
+with this file.
+
+57
+00:01:55,724 --> 00:01:56,959
+Now, what it costs us,
+
+58
+00:01:57,093 --> 00:01:58,793
+and the first price is space.
+
+59
+00:01:58,905 --> 00:02:01,613
+The file is 7.63 GB,
+and your card has 8.
+
+60
+00:02:01,775 --> 00:02:04,701
+But the model isn't the only thing
+that goes in your card.
+
+61
+00:02:04,847 --> 00:02:07,589
+The engine also needs room to work.
+Your desktop, for example:
+
+62
+00:02:07,609 --> 00:02:10,071
+if you plug your monitor directly
+into your graphics card,
+
+63
+00:02:10,091 --> 00:02:11,082
+it needs some too.
+
+64
+00:02:11,102 --> 00:02:13,485
+And above all, you have to keep
+the conversation somewhere.
+
+65
+00:02:13,505 --> 00:02:15,106
+It also needs
+that same card.
+
+66
+00:02:15,192 --> 00:02:17,936
+So the file size doesn't tell you
+how much discussion you have left.
+
+67
+00:02:18,222 --> 00:02:20,852
+And the conversation's memory,
+that is, the KV cache:
+
+68
+00:02:20,904 --> 00:02:24,596
+in the measurement, with an 8-bit cache,
+about 14,000 tokens are left
+
+69
+00:02:24,616 --> 00:02:25,416
+for the discussion.
+
+70
+00:02:25,511 --> 00:02:28,580
+Your request and everything
+the model writes, its thinking included,
+
+71
+00:02:28,600 --> 00:02:29,752
+so they share this space.
+
+72
+00:02:29,835 --> 00:02:31,167
+For chatting, that's fine,
+
+73
+00:02:31,198 --> 00:02:33,255
+but pasting a long document
+or a long prompt
+
+74
+00:02:33,275 --> 00:02:34,497
+is much harder.
+
+75
+00:02:34,722 --> 00:02:36,623
+And the good news here
+is that the speed holds up.
+
+76
+00:02:36,643 --> 00:02:38,091
+With almost 14,000 tokens in it,
+
+77
+00:02:38,111 --> 00:02:40,601
+the writing is still at
+15 tokens per second.
+
+78
+00:02:40,744 --> 00:02:43,378
+You can also compress
+this cache to 4 bits, for example.
+
+79
+00:02:43,427 --> 00:02:46,990
+There, the person who measured goes up
+to about 22,500 tokens.
+
+80
+00:02:47,010 --> 00:02:48,649
+But with a full
+4-bit cache,
+
+81
+00:02:48,669 --> 00:02:51,123
+the writing drops to around
+12 tokens per second.
+
+82
+00:02:51,166 --> 00:02:52,345
+It's another comfort setting,
+
+83
+00:02:52,365 --> 00:02:55,085
+but it has its cost too,
+on the final bill.
+
+84
+00:02:55,180 --> 00:02:58,732
+And when he filled the memory
+beyond 24,000 tokens, it crashed.
+
+85
+00:02:58,820 --> 00:03:00,078
+The model loads perfectly,
+
+86
+00:03:00,098 --> 00:03:02,325
+but it's the conversation that ends up
+no longer fitting.
+
+87
+00:03:02,565 --> 00:03:03,622
+For short exchanges,
+
+88
+00:03:03,642 --> 00:03:05,875
+everyday requests,
+you don't see the limit.
+
+89
+00:03:06,010 --> 00:03:07,024
+But for a long session,
+
+90
+00:03:07,044 --> 00:03:09,373
+for example for code
+with files and a history,
+
+91
+00:03:09,393 --> 00:03:10,755
+that's where it starts to get stuck.
+
+92
+00:03:11,178 --> 00:03:14,136
+And if this video helped you
+make the right choice for your card,
+
+93
+00:03:14,176 --> 00:03:15,146
+don't forget to subscribe.
+
+94
+00:03:15,428 --> 00:03:16,980
+Okay, the second price is quality.
+
+95
+00:03:17,168 --> 00:03:18,819
+And here, the numbers come from Unsloth
+themselves,
+
+96
+00:03:18,895 --> 00:03:21,667
+it's their own test campaign,
+not an independent check.
+
+97
+00:03:21,726 --> 00:03:24,121
+And their tests run with
+a very long conversation
+
+98
+00:03:24,141 --> 00:03:25,734
+and thinking pushed to the maximum:
+
+99
+00:03:25,844 --> 00:03:27,791
+nothing like an 8 GB card.
+
+100
+00:03:27,955 --> 00:03:29,331
+These scores show where it breaks,
+
+101
+00:03:29,378 --> 00:03:31,409
+but they don't give you
+your own success rate.
+
+102
+00:03:31,718 --> 00:03:34,538
+On LiveCodeBench, for example,
+programming exercises,
+
+103
+00:03:34,558 --> 00:03:37,276
+the full model, with no compression,
+is around 89,
+
+104
+00:03:37,296 --> 00:03:38,966
+the small file around 85.
+
+105
+00:03:39,039 --> 00:03:41,421
+Honestly, for a model
+compressed this much, it holds up well.
+
+106
+00:03:41,508 --> 00:03:42,945
+So, what do you think,
+does it hold up too
+
+107
+00:03:42,965 --> 00:03:44,536
+when you hand it a real project?
+
+108
+00:03:44,920 --> 00:03:48,326
+On their agent test, where the model
+works alone in a code repository,
+
+109
+00:03:48,409 --> 00:03:51,116
+the full model succeeds
+on about 40% of tasks,
+
+110
+00:03:51,136 --> 00:03:52,692
+the small file, about 13%.
+
+111
+00:03:52,912 --> 00:03:54,222
+Here, honestly, it plummets.
+
+112
+00:03:54,266 --> 00:03:56,975
+And the old file, the one that ran
+at 3.2 tokens per second,
+
+113
+00:03:56,995 --> 00:03:59,400
+stays around 36%.
+So, on this kind of work,
+
+114
+00:03:59,420 --> 00:04:02,736
+the small file succeeds 3 times
+less often than the full model.
+
+115
+00:04:02,998 --> 00:04:05,001
+And actually, when you ask it
+for help with a function,
+
+116
+00:04:05,197 --> 00:04:06,983
+you read its answer
+and judge it yourself.
+
+117
+00:04:07,112 --> 00:04:08,869
+An agent, though, chains
+decisions on its own,
+
+118
+00:04:08,889 --> 00:04:10,185
+and it modifies several files,
+
+119
+00:04:10,205 --> 00:04:13,385
+and a mistake at the start always
+gets paid for at every step after.
+
+120
+00:04:13,616 --> 00:04:15,584
+So the counter from the start
+is no longer enough.
+
+121
+00:04:15,645 --> 00:04:17,932
+So, an answer in 28 seconds
+that you have to repair
+
+122
+00:04:17,952 --> 00:04:19,746
+can cost you more
+than a slow answer
+
+123
+00:04:19,766 --> 00:04:20,876
+that works the first time.
+
+124
+00:04:21,144 --> 00:04:22,751
+And if you're on LM Studio, for example,
+
+125
+00:04:22,771 --> 00:04:24,500
+its documentation has the same settings:
+
+126
+00:04:24,622 --> 00:04:25,926
+how much of the model goes on the card,
+
+127
+00:04:25,946 --> 00:04:27,056
+the conversation size,
+
+128
+00:04:27,076 --> 00:04:28,812
+and the 8-bit or 4-bit cache.
+
+129
+00:04:28,945 --> 00:04:31,615
+Except all these speeds
+were measured in llama.cpp,
+
+130
+00:04:31,696 --> 00:04:32,628
+not in LM Studio.
+
+131
+00:04:32,765 --> 00:04:34,327
+And the option to turn off thinking
+
+132
+00:04:34,347 --> 00:04:36,556
+depends on how the model
+is configured too.
+
+133
+00:04:36,826 --> 00:04:38,976
+So what can we conclude
+about this file, in the end?
+
+134
+00:04:39,041 --> 00:04:41,117
+Actually, for chatting
+and having something explained,
+
+135
+00:04:41,137 --> 00:04:42,107
+it's the right file,
+
+136
+00:04:42,178 --> 00:04:44,819
+since the model fits
+entirely in 8 GB,
+
+137
+00:04:44,850 --> 00:04:46,481
+and it writes over 5 times faster.
+
+138
+00:04:46,589 --> 00:04:48,928
+As long as the conversation stays short,
+the space is enough.
+
+139
+00:04:48,948 --> 00:04:52,314
+To get help with a piece of code
+or fix a small script, for example,
+
+140
+00:04:52,334 --> 00:04:54,524
+in their tests, the programming
+exercises hold up well.
+
+141
+00:04:54,544 --> 00:04:56,348
+But you really have to
+reread everything yourself,
+
+142
+00:04:56,368 --> 00:04:57,947
+and if you don't give it
+your whole project at once,
+
+143
+00:04:57,967 --> 00:04:58,826
+it could work.
+
+144
+00:04:58,920 --> 00:05:01,252
+For an agent that works, though,
+alone on a project,
+
+145
+00:05:01,285 --> 00:05:02,239
+keep the old file,
+
+146
+00:05:02,259 --> 00:05:04,698
+even if you have to wait
+at 3.2 tokens per second,
+
+147
+00:05:04,842 --> 00:05:05,697
+because in the test,
+
+148
+00:05:05,717 --> 00:05:08,013
+the small file fails almost
+9 times out of 10.
+
+149
+00:05:08,211 --> 00:05:09,786
+The old one, about 2 times out of 3.
+
+150
+00:05:09,933 --> 00:05:11,204
+So what's the point of going fast
+
+151
+00:05:11,224 --> 00:05:13,135
+if it's to get it wrong at every step?
+
+152
+00:05:13,420 --> 00:05:15,460
+So, what this small file makes you
+gain or lose,
+
+153
+00:05:15,480 --> 00:05:16,468
+you know it now.
+
+154
+00:05:16,568 --> 00:05:19,020
+For chatting, with a bit of room,
+there's no problem,
+
+155
+00:05:19,040 --> 00:05:19,964
+it's top quality.
+
+156
+00:05:19,984 --> 00:05:21,598
+But for an agent that's going
+to perform tasks
+
+157
+00:05:21,616 --> 00:05:23,194
+much longer than that,
+that's where it gets tricky.
+
+158
+00:05:23,214 --> 00:05:25,959
+So, on the same card, really,
+you can do 2 different jobs
+
+159
+00:05:25,979 --> 00:05:27,429
+depending on the file you give it.
+
+160
+00:05:27,663 --> 00:05:28,772
+So, tell me in the comments:
+
+161
+00:05:28,792 --> 00:05:31,238
+are you ready to use
+a different file
+
+162
+00:05:31,258 --> 00:05:32,738
+depending on what you have to do,
+
+163
+00:05:32,758 --> 00:05:35,415
+or depending on what you want to do,
+according to your needs?
+
+164
+00:05:35,499 --> 00:05:37,759
+And if you liked this video,
+don't hesitate to subscribe,
+
+165
+00:05:37,779 --> 00:05:40,203
+to share the video
+and to boost the channel.
+
+166
+00:05:40,223 --> 00:05:41,149
+It'll make me very happy.
+
+167
+00:05:41,169 --> 00:05:42,865
+Well, see you next time. Bye!

@@ -18,7 +18,7 @@ Voix : **1 488 mots** (hors crochets), **10:16 à 145 mots/minute**. Liaisons st
 
 [VISUEL : ChartQA test, LFM3-VL-2B 92,7 / GPT-5.6 Luna 90,2 ; « résultats Liquid AI, octobre 2026, sans réplication indépendante ». F1–F2.]
 
-Un modèle de 2 milliards dépasse GPT-5.6 Luna sur un test de lecture de graphiques : 92,7 contre 90,2, selon son éditeur. Ces chiffres sont les leurs, je n'ai rien testé chez moi. Donc, pour ton travail précis, un petit modèle local peut-il remplacer celui du cloud ?
+Un modèle de 2 milliards dépasse GPT-5.6 Luna sur un test de lecture de graphiques : 92,7 contre 90,2, selon son éditeur. Donc, pour ton travail précis, un petit modèle local peut-il remplacer celui du cloud ?
 
 On va séparer trois tâches : lire un document, résoudre un problème de maths et modifier du code. Puis on regardera ce qui peut tenir sur une carte de 8 ou 12 gigas. Sauf que bien lire un graphique ne garantit pas la même avance sur une infographie. La deuxième ligne du même tableau permet de comparer.
 

@@ -137,6 +137,11 @@ Relevé du **16/11/2026**, pour la vidéo du **23/11/2026**. Vidéo calculée, a
 - Deuxième contrôle arithmétique : **156,25 × 3,2 = 500** ; **(250 / 9) × 18 = 500**. Ce contrôle ne crée aucune seconde mesure indépendante.
 - Voix et visuel portent « division » / « exemple théorique », et aucune animation n'imite un chat filmé chez l'auteur.
 
+### F17 ⚠️ — MTP laissé de côté dans la mesure F2
+
+- Ajout du **18/11/2026**. Sources : `recherche-mesures.md`, M2 l. 38 (description de https://www.youtube.com/watch?v=u_DYZhTZ2IM : laisser de côté le projecteur vision et le fichier MTP) ; transcription `etudes/transcriptions/simplyexplain-u_DYZhTZ2IM.md`, **06:52** : le fichier vision et le fichier de décodage spéculatif, ensemble, demandent plus de 2 Go qu'une carte de 8 Go n'a pas.
+- Voix autorisée : dans cette mesure, le fichier MTP est laissé de côté, faute de place. Rien de plus : on ne sait pas si l'ancien essai à 3,2 tournait avec ou sans MTP ; ne pas dire « tout vient du fichier » ni que le MTP est impossible sur 8 Go.
+
 ## Deuxième vérification : journal et corrections
 
 | Groupe | Deuxième lecture du 16/11 | Correction retenue |

@@ -3,8 +3,6 @@ une autre préparation de Vulkan améliore jusqu’à 63 % le
 débit de lecture du prompt d’un modèle 9B,
 dans une étude publiée.
 Donc les réglages font partie du résultat.
-Ces chiffres sont les leurs,
-je n’ai rien testé chez moi.
 Alors,
 pour ton usage,
 qu’est-ce qui doit décider entre Ollama,

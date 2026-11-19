@@ -13,7 +13,7 @@ Script corrigé du 16/11/2026, publication prévue le 3 décembre. **1529 mots, 
 
 ## Voix
 
-Un DeepSeek de 284 milliards de paramètres écrit sans carte graphique, sur 64 gigas de RAM. Une mesure publiée donne environ 9 tokens par seconde. Ces chiffres sont les leurs, je n’ai rien testé chez moi. Sauf que la compression dégrade le modèle. Donc acheter la mémoire pour le faire tourner, est-ce que ça vaut le coût ? [F1,F2]
+Un DeepSeek de 284 milliards de paramètres écrit sans carte graphique, sur 64 gigas de RAM. Une mesure publiée donne environ 9 tokens par seconde. Sauf que la compression dégrade le modèle. Donc acheter la mémoire pour le faire tourner, est-ce que ça vaut le coût ? [F1,F2]
 
 [VISUEL : fiche du dépôt et tableau de mesure, zéro GPU surligné ; aucun essai personnel.]
 

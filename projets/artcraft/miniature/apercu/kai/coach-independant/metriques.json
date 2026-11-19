@@ -1,0 +1,355 @@
+[
+  {
+    "fichier": "h-kai.png",
+    "largeur": 3840,
+    "hauteur": 2160,
+    "ratio": 1.778,
+    "poids_octets": 2271856,
+    "poids_mo": 2.27,
+    "format": "PNG",
+    "luminosite_moyenne": 0.239,
+    "contraste_valeurs": 0.34,
+    "saturation_moyenne": 0.215,
+    "part_tres_claire": 0.112,
+    "part_tres_sombre": 0.627,
+    "couleur_moyenne_bords": "#151216",
+    "part_bords_quasi_blancs": 0.018,
+    "part_bords_quasi_noirs": 0.837,
+    "palette": [
+      {
+        "hex": "#0D0B0D",
+        "rgb": [
+          13,
+          11,
+          13
+        ],
+        "part": 0.752
+      },
+      {
+        "hex": "#F7F6F8",
+        "rgb": [
+          247,
+          246,
+          248
+        ],
+        "part": 0.106
+      },
+      {
+        "hex": "#562821",
+        "rgb": [
+          86,
+          40,
+          33
+        ],
+        "part": 0.024
+      },
+      {
+        "hex": "#595459",
+        "rgb": [
+          89,
+          84,
+          89
+        ],
+        "part": 0.022
+      },
+      {
+        "hex": "#FECD33",
+        "rgb": [
+          254,
+          205,
+          51
+        ],
+        "part": 0.021
+      },
+      {
+        "hex": "#F2986D",
+        "rgb": [
+          242,
+          152,
+          109
+        ],
+        "part": 0.019
+      }
+    ],
+    "familles_couleurs_vives": 2,
+    "densite_details_par_case": [
+      {
+        "case": "haut-gauche",
+        "densite": 0.078
+      },
+      {
+        "case": "haut-centre",
+        "densite": 0.004
+      },
+      {
+        "case": "haut-droite",
+        "densite": 0.192
+      },
+      {
+        "case": "milieu-gauche",
+        "densite": 0.133
+      },
+      {
+        "case": "centre",
+        "densite": 0.1
+      },
+      {
+        "case": "milieu-droite",
+        "densite": 0.282
+      },
+      {
+        "case": "bas-gauche",
+        "densite": 0.091
+      },
+      {
+        "case": "bas-centre",
+        "densite": 0.103
+      },
+      {
+        "case": "bas-droite",
+        "densite": 0.216
+      }
+    ],
+    "densite_details_moyenne": 0.133,
+    "densite_details_ecart": 0.079,
+    "densite_zone_duree": 0.156,
+    "alertes": [
+      "2.27 Mo : au-dessus de 2 Mo, l'upload depuis un téléphone échoue (l'ordinateur accepte jusqu'à 50 Mo).",
+      "84 % du pourtour est quasi noir : la miniature se fond dans le mode sombre."
+    ]
+  },
+  {
+    "fichier": "i-kai.png",
+    "largeur": 3840,
+    "hauteur": 2160,
+    "ratio": 1.778,
+    "poids_octets": 89669,
+    "poids_mo": 0.09,
+    "format": "PNG",
+    "luminosite_moyenne": 0.281,
+    "contraste_valeurs": 0.334,
+    "saturation_moyenne": 0.422,
+    "part_tres_claire": 0.167,
+    "part_tres_sombre": 0.023,
+    "couleur_moyenne_bords": "#141E27",
+    "part_bords_quasi_blancs": 0.0,
+    "part_bords_quasi_noirs": 0.0,
+    "palette": [
+      {
+        "hex": "#131D26",
+        "rgb": [
+          19,
+          29,
+          38
+        ],
+        "part": 0.748
+      },
+      {
+        "hex": "#FBFCFC",
+        "rgb": [
+          251,
+          252,
+          252
+        ],
+        "part": 0.153
+      },
+      {
+        "hex": "#EB1001",
+        "rgb": [
+          235,
+          16,
+          1
+        ],
+        "part": 0.026
+      },
+      {
+        "hex": "#0AC297",
+        "rgb": [
+          10,
+          194,
+          151
+        ],
+        "part": 0.02
+      },
+      {
+        "hex": "#4C7AFB",
+        "rgb": [
+          76,
+          122,
+          251
+        ],
+        "part": 0.015
+      },
+      {
+        "hex": "#9A9DA0",
+        "rgb": [
+          154,
+          157,
+          160
+        ],
+        "part": 0.014
+      }
+    ],
+    "familles_couleurs_vives": 3,
+    "densite_details_par_case": [
+      {
+        "case": "haut-gauche",
+        "densite": 0.053
+      },
+      {
+        "case": "haut-centre",
+        "densite": 0.103
+      },
+      {
+        "case": "haut-droite",
+        "densite": 0.032
+      },
+      {
+        "case": "milieu-gauche",
+        "densite": 0.07
+      },
+      {
+        "case": "centre",
+        "densite": 0.071
+      },
+      {
+        "case": "milieu-droite",
+        "densite": 0.09
+      },
+      {
+        "case": "bas-gauche",
+        "densite": 0.081
+      },
+      {
+        "case": "bas-centre",
+        "densite": 0.035
+      },
+      {
+        "case": "bas-droite",
+        "densite": 0.072
+      }
+    ],
+    "densite_details_moyenne": 0.067,
+    "densite_details_ecart": 0.022,
+    "densite_zone_duree": 0.0,
+    "alertes": []
+  },
+  {
+    "fichier": "j-kai.png",
+    "largeur": 3840,
+    "hauteur": 2160,
+    "ratio": 1.778,
+    "poids_octets": 2348567,
+    "poids_mo": 2.35,
+    "format": "PNG",
+    "luminosite_moyenne": 0.281,
+    "contraste_valeurs": 0.319,
+    "saturation_moyenne": 0.406,
+    "part_tres_claire": 0.126,
+    "part_tres_sombre": 0.126,
+    "couleur_moyenne_bords": "#1B262E",
+    "part_bords_quasi_blancs": 0.022,
+    "part_bords_quasi_noirs": 0.06,
+    "palette": [
+      {
+        "hex": "#151B23",
+        "rgb": [
+          21,
+          27,
+          35
+        ],
+        "part": 0.75
+      },
+      {
+        "hex": "#F7F6F8",
+        "rgb": [
+          247,
+          246,
+          248
+        ],
+        "part": 0.114
+      },
+      {
+        "hex": "#5B565B",
+        "rgb": [
+          91,
+          86,
+          91
+        ],
+        "part": 0.026
+      },
+      {
+        "hex": "#F2986D",
+        "rgb": [
+          242,
+          152,
+          109
+        ],
+        "part": 0.019
+      },
+      {
+        "hex": "#552D28",
+        "rgb": [
+          85,
+          45,
+          40
+        ],
+        "part": 0.019
+      },
+      {
+        "hex": "#0AC297",
+        "rgb": [
+          10,
+          194,
+          151
+        ],
+        "part": 0.018
+      }
+    ],
+    "familles_couleurs_vives": 2,
+    "densite_details_par_case": [
+      {
+        "case": "haut-gauche",
+        "densite": 0.086
+      },
+      {
+        "case": "haut-centre",
+        "densite": 0.005
+      },
+      {
+        "case": "haut-droite",
+        "densite": 0.199
+      },
+      {
+        "case": "milieu-gauche",
+        "densite": 0.13
+      },
+      {
+        "case": "centre",
+        "densite": 0.108
+      },
+      {
+        "case": "milieu-droite",
+        "densite": 0.284
+      },
+      {
+        "case": "bas-gauche",
+        "densite": 0.099
+      },
+      {
+        "case": "bas-centre",
+        "densite": 0.117
+      },
+      {
+        "case": "bas-droite",
+        "densite": 0.222
+      }
+    ],
+    "densite_details_moyenne": 0.139,
+    "densite_details_ecart": 0.078,
+    "densite_zone_duree": 0.156,
+    "alertes": [
+      "2.35 Mo : au-dessus de 2 Mo, l'upload depuis un téléphone échoue (l'ordinateur accepte jusqu'à 50 Mo)."
+    ]
+  }
+]

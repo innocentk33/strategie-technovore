@@ -1,0 +1,811 @@
+1
+00:00:00,067 --> 00:00:02,426
+Sur une carte de 16 Go,
+tu allumes un seul paramètre,
+
+2
+00:00:02,446 --> 00:00:04,031
+et ton IA écrit 2 fois plus vite :
+
+3
+00:00:04,283 --> 00:00:06,350
+de 29 à 64 tokens par seconde.
+
+4
+00:00:06,473 --> 00:00:08,989
+Le même fichier, la même carte,
+et rien à acheter de nouveau.
+
+5
+00:00:09,016 --> 00:00:10,847
+Et c'est ce que trouvent
+6 mesures publiées,
+
+6
+00:00:10,867 --> 00:00:12,754
+sur 5 modèles de cartes de 16 Go :
+
+7
+00:00:12,885 --> 00:00:15,264
+entre 1,9 et 2,3 fois plus vite.
+
+8
+00:00:15,474 --> 00:00:16,995
+Du coup, ta carte,
+elle ne serait pas bridée,
+
+9
+00:00:17,015 --> 00:00:18,622
+par hasard, sans que tu ne le saches ?
+
+10
+00:00:18,710 --> 00:00:20,268
+Et attention, ça vaut
+aussi pour l'écriture,
+
+11
+00:00:20,288 --> 00:00:23,859
+sur Qwen 3.8 27B, un modèle qui
+tient entièrement dans ta carte.
+
+12
+00:00:24,030 --> 00:00:27,066
+Donc dans cette vidéo, on va voir
+le réglage qui te permet de doubler
+
+13
+00:00:27,086 --> 00:00:28,378
+la vitesse de ta carte graphique
+
+14
+00:00:28,398 --> 00:00:30,328
+et le moteur qui te permet d'y arriver.
+
+15
+00:00:30,396 --> 00:00:33,578
+Et surtout, tout ce qu'il faut éviter
+pour ne pas perdre ce que tu as gagné :
+
+16
+00:00:33,724 --> 00:00:36,954
+une conversation trop longue, et c'est
+déjà un tiers de la vitesse qui part.
+
+17
+00:00:37,046 --> 00:00:37,941
+Et reste jusqu'à la fin,
+
+18
+00:00:37,961 --> 00:00:39,561
+parce qu'on va démystifier un réglage
+
+19
+00:00:39,581 --> 00:00:41,771
+que tu as peut-être allumé
+pour aller plus vite.
+
+20
+00:00:42,219 --> 00:00:43,699
+Le réglage qui double, c'est le MTP,
+
+21
+00:00:43,826 --> 00:00:45,656
+un petit module en plus dans le modèle.
+
+22
+00:00:45,808 --> 00:00:49,192
+En gros, c'est comme les suggestions
+de clavier de ton téléphone :
+
+23
+00:00:49,374 --> 00:00:53,401
+le modèle propose plusieurs tokens d'avance,
+puis il les vérifie tous d'un coup.
+
+24
+00:00:53,683 --> 00:00:56,948
+Et quand il a deviné juste,
+il en écrit plusieurs pour le prix d'un.
+
+25
+00:00:57,121 --> 00:00:59,358
+Par contre, ça ne joue que sur l'écriture.
+
+26
+00:00:59,489 --> 00:01:03,332
+La lecture de ton prompt est ralentie avec
+le MTP dans les premiers tests de mai.
+
+27
+00:01:03,466 --> 00:01:07,350
+Sur une 5080, on passe de
+53 à 101 tokens par seconde.
+
+28
+00:01:07,413 --> 00:01:10,469
+Sur une 4060 Ti, de 17,6 à 40,
+
+29
+00:01:10,583 --> 00:01:13,533
+et même chez AMD, sur une RX 9060 XT,
+
+30
+00:01:13,707 --> 00:01:15,455
+de 15 à presque 29.
+
+31
+00:01:15,615 --> 00:01:18,049
+Donc même la Radeon
+double presque de vitesse.
+
+32
+00:01:18,461 --> 00:01:21,606
+Sauf que 5 de ces 6 mesures
+viennent du même tableau en ligne,
+
+33
+00:01:21,626 --> 00:01:23,116
+avec le même script de test.
+
+34
+00:01:23,394 --> 00:01:26,781
+Du coup, la plus solide,
+c'est celle du début, le 29 à 64 :
+
+35
+00:01:26,874 --> 00:01:28,846
+elle a été mesurée à part, 5 fois.
+
+36
+00:01:29,027 --> 00:01:30,031
+Et elle trouve pareil.
+
+37
+00:01:30,219 --> 00:01:32,689
+En fait, dans le tableau, ce « 2 fois »,
+c'est une moyenne sur du code,
+
+38
+00:01:32,786 --> 00:01:35,410
+du texte et des commandes,
+avec la réflexion coupée.
+
+39
+00:01:35,590 --> 00:01:39,083
+Sur du texte seul, ça tombe
+à 1,8 fois sur une 4060 Ti.
+
+40
+00:01:39,425 --> 00:01:41,201
+C'est sur du code que ça gagne le plus.
+
+41
+00:01:41,380 --> 00:01:44,934
+Et sur un modèle à experts,
+les mesures tombent à 1,5 fois au mieux.
+
+42
+00:01:45,204 --> 00:01:47,291
+Alors, pourquoi est-ce que je
+dis que ta carte est bridée ?
+
+43
+00:01:47,414 --> 00:01:50,401
+Parce que dans llama.cpp,
+le MTP ne s'allume pas tout seul.
+
+44
+00:01:50,498 --> 00:01:53,516
+Il faut le demander, et il faut
+un fichier qui contient le module,
+
+45
+00:01:53,538 --> 00:01:55,097
+un petit bout de modèle en plus.
+
+46
+00:01:55,302 --> 00:01:58,768
+LM Studio le gère depuis
+la version 0.4.22.
+
+47
+00:01:58,890 --> 00:02:02,171
+Tu le trouves dans le panneau des
+réglages du modèle que tu as sélectionné.
+
+48
+00:02:02,348 --> 00:02:05,888
+Donc que tu sois sur l'un ou sur l'autre,
+va vérifier qu'il est bien allumé chez toi.
+
+49
+00:02:06,268 --> 00:02:09,190
+Sauf que le MTP, il a un prix,
+et il prend de la place.
+
+50
+00:02:09,695 --> 00:02:13,294
+Selon les mesures,
+entre 1 et 2,5 Go de VRAM en plus.
+
+51
+00:02:13,468 --> 00:02:16,224
+Et sur une carte de 16 Go,
+c'est justement là que ça coince.
+
+52
+00:02:16,617 --> 00:02:20,130
+Donc le vrai réglage numéro un, c'est que
+le modèle tienne en entier dans ta carte.
+
+53
+00:02:20,369 --> 00:02:24,482
+Sur une 4080 de 16 Go, avec un
+Qwen de 27 milliards plus ancien :
+
+54
+00:02:24,502 --> 00:02:27,698
+un fichier de 15 Go qui déborde
+un peu, 20 tokens par seconde.
+
+55
+00:02:27,890 --> 00:02:32,278
+Un fichier de 11,5 Go qui tient
+totalement, 45 tokens par seconde.
+
+56
+00:02:32,457 --> 00:02:34,826
+Plus du double, juste en prenant
+un seul fichier plus petit.
+
+57
+00:02:34,900 --> 00:02:37,554
+Et si une partie du modèle sort
+de la carte, c'est la chute.
+
+58
+00:02:37,814 --> 00:02:42,170
+Sur une 5060 Ti, quelqu'un a laissé
+dehors exprès 8 couches sur 48
+
+59
+00:02:42,190 --> 00:02:46,393
+d'un modèle plus petit : on tombe
+de 43 à 12,5 tokens par seconde.
+
+60
+00:02:46,488 --> 00:02:49,309
+En fait, la partie restée sur la
+RAM va beaucoup plus lentement,
+
+61
+00:02:49,356 --> 00:02:50,530
+du coup la carte l'attend.
+
+62
+00:02:50,728 --> 00:02:53,045
+Par contre, un fichier plus
+petit est plus compressé,
+
+63
+00:02:53,118 --> 00:02:56,265
+et aucune de ces mesures ne
+dit ce que tu perds en qualité.
+
+64
+00:02:56,576 --> 00:02:58,906
+Sauf que dans la réalité,
+ces gains ne s'additionnent pas.
+
+65
+00:02:59,174 --> 00:03:01,085
+Si le MTP fait déborder ton fichier,
+
+66
+00:03:01,242 --> 00:03:02,922
+la chute mange ce qu'il te fait gagner.
+
+67
+00:03:03,053 --> 00:03:06,148
+Du coup, d'abord un fichier
+qui tient avec la place du MTP,
+
+68
+00:03:06,222 --> 00:03:07,521
+ensuite tu actives le MTP.
+
+69
+00:03:08,025 --> 00:03:10,558
+Bon, rien qu'avec ces 2 réglages,
+ton modèle peut écrire
+
+70
+00:03:10,578 --> 00:03:12,712
+2 fois plus vite sur la
+carte que tu as déjà.
+
+71
+00:03:12,898 --> 00:03:14,523
+Donc avant de racheter
+une plus grosse carte,
+
+72
+00:03:14,589 --> 00:03:18,423
+surtout actuellement avec les prix
+incroyables, ils ont complètement flambé,
+
+73
+00:03:18,453 --> 00:03:22,088
+essaie plutôt d'optimiser celle que tu
+as déjà et d'activer certains paramètres.
+
+74
+00:03:22,108 --> 00:03:24,392
+Si cette vidéo t'a évité un
+mauvais achat, abonne-toi.
+
+75
+00:03:24,844 --> 00:03:26,508
+Et le moteur qui te permet d'y arriver,
+
+76
+00:03:26,605 --> 00:03:28,558
+c'est le programme qui
+fait tourner le modèle.
+
+77
+00:03:28,709 --> 00:03:30,423
+Le plus populaire, c'est llama.cpp.
+
+78
+00:03:30,588 --> 00:03:33,325
+Les 6 mesures du début ont
+toutes été faites dessus.
+
+79
+00:03:33,373 --> 00:03:35,076
+Quand tout tient dans
+la carte, c'est génial :
+
+80
+00:03:35,096 --> 00:03:39,379
+Ollama a été mesuré 10 % plus lent
+que llama.cpp, sur une 5060 Ti,
+
+81
+00:03:39,411 --> 00:03:41,756
+et jusqu'à 30 % plus lent sur une 3090.
+
+82
+00:03:42,133 --> 00:03:45,067
+Et LM Studio était presque
+à égalité avec llama.cpp :
+
+83
+00:03:45,304 --> 00:03:47,472
+76,8 contre 77.
+
+84
+00:03:47,791 --> 00:03:51,050
+Du coup, si tu es sur LM Studio ou sur
+llama.cpp, comme dans la vidéo précédente,
+
+85
+00:03:51,225 --> 00:03:52,415
+de ce côté-là, t'es tranquille.
+
+86
+00:03:52,810 --> 00:03:56,023
+Et même avec un moteur optimisé,
+une mise à jour peut ralentir.
+
+87
+00:03:56,217 --> 00:03:58,442
+Sur une 5080 avec le moteur Strata,
+
+88
+00:03:58,609 --> 00:04:02,195
+un utilisateur a perdu 25 % en
+passant sur une version plus récente,
+
+89
+00:04:02,313 --> 00:04:05,417
+et sa version 0.2.14, sortie
+le 15 novembre,
+
+90
+00:04:05,616 --> 00:04:08,705
+lit ton prompt plus vite,
+mais écrit environ 10 % moins vite
+
+91
+00:04:08,734 --> 00:04:11,351
+sur une 5070 Ti,
+d'après le projet lui-même.
+
+92
+00:04:11,546 --> 00:04:13,212
+Voilà pourquoi il faut noter ta version,
+
+93
+00:04:13,232 --> 00:04:15,345
+pour savoir d'où vient le ralentissement.
+
+94
+00:04:15,477 --> 00:04:17,727
+Celles de ma vidéo précédente
+sont affichées à l'écran.
+
+95
+00:04:18,023 --> 00:04:19,733
+Et si ton modèle est
+trop gros pour ta carte ?
+
+96
+00:04:19,824 --> 00:04:21,359
+Dans la vidéo précédente,
+je te l'ai montré :
+
+97
+00:04:21,379 --> 00:04:23,265
+la RAM pleine,
+et le disque qui se met à lire.
+
+98
+00:04:23,463 --> 00:04:26,155
+Sur un modèle à experts, dans llama.cpp,
+il y a un réglage à toi :
+
+99
+00:04:26,292 --> 00:04:28,727
+où vont les experts,
+ces petits spécialistes du modèle.
+
+100
+00:04:28,918 --> 00:04:31,560
+Lesquels restent sur la carte,
+et lesquels partent sur la RAM.
+
+101
+00:04:31,637 --> 00:04:34,227
+Le bon réglage, c'est d'en garder
+sur la carte autant que possible,
+
+102
+00:04:34,322 --> 00:04:35,537
+juste avant que ça plante.
+
+103
+00:04:35,697 --> 00:04:38,775
+Sur une 3060 de 12 Go,
+ça a fait gagner 12 %.
+
+104
+00:04:38,866 --> 00:04:41,721
+Sur une 5060 Ti de
+16, avec le cache d'experts
+
+105
+00:04:41,741 --> 00:04:44,849
+arrivé dans llama.cpp en
+octobre, 29 % de plus.
+
+106
+00:04:45,090 --> 00:04:47,574
+Une seule mesure chacune,
+donc à prendre avec des pincettes,
+
+107
+00:04:47,594 --> 00:04:50,247
+et leurs PC avaient 32 et 64 Go de RAM.
+
+108
+00:04:50,461 --> 00:04:51,426
+Maintenant, qu'est-ce qui coince ?
+
+109
+00:04:51,573 --> 00:04:54,022
+Plus ta conversation est
+longue, plus ça ralentit.
+
+110
+00:04:54,096 --> 00:04:57,208
+Tu te rappelles de la mesure du
+début, à 29 tokens par seconde ?
+
+111
+00:04:57,314 --> 00:05:00,627
+À partir de 64 000 tokens de
+conversation, elle tombe à 20.
+
+112
+00:05:00,810 --> 00:05:02,172
+Donc un tiers de la vitesse en moins,
+
+113
+00:05:02,192 --> 00:05:04,753
+et avec le MTP, les 64 deviennent 39.
+
+114
+00:05:04,956 --> 00:05:07,783
+Le MTP double toujours,
+mais tout descend par la suite.
+
+115
+00:05:07,956 --> 00:05:09,102
+Et ça peut être bien pire.
+
+116
+00:05:09,165 --> 00:05:12,181
+En fait, la mémoire de la conversation
+se range aussi dans ta carte.
+
+117
+00:05:12,201 --> 00:05:15,746
+Et la 4080 qui montait à
+45 avec un petit fichier ?
+
+118
+00:05:15,766 --> 00:05:19,880
+À 128 000 tokens de conversation,
+cette mémoire pousse le modèle dehors,
+
+119
+00:05:19,900 --> 00:05:22,243
+et la carte tombe sous
+les 10 tokens par seconde.
+
+120
+00:05:22,305 --> 00:05:25,679
+Bref, 2 gestes tout bêtes : une nouvelle
+conversation dès que tu changes de sujet,
+
+121
+00:05:25,699 --> 00:05:28,602
+et une taille de conversation réglée
+au plus juste dans ton moteur.
+
+122
+00:05:28,694 --> 00:05:31,044
+Et si tu as vraiment besoin
+d'une longue conversation,
+
+123
+00:05:31,145 --> 00:05:33,088
+il te reste un dernier réglage à faire.
+
+124
+00:05:33,368 --> 00:05:35,192
+Ce réglage, c'est compresser le cache KV,
+
+125
+00:05:35,212 --> 00:05:36,765
+qui est la mémoire de la conversation.
+
+126
+00:05:36,902 --> 00:05:39,465
+À ton avis, est-ce que ça peut
+permettre d'écrire plus vite ?
+
+127
+00:05:39,618 --> 00:05:41,884
+Garde ta réponse,
+et dis-le-moi en commentaire.
+
+128
+00:05:41,945 --> 00:05:45,274
+Sur une 5060 Ti, avec un
+petit modèle de 7 milliards,
+
+129
+00:05:45,294 --> 00:05:48,213
+l'écriture est 6,6 % plus lente en 8 bits,
+
+130
+00:05:48,233 --> 00:05:50,292
+et 1,8 % plus lente en 4 bits.
+
+131
+00:05:50,370 --> 00:05:54,535
+Et sur une machine de NVIDIA faite
+pour l'IA, en 4 bits, à 64 000 tokens,
+
+132
+00:05:54,555 --> 00:05:55,689
+elle perd 35 %.
+
+133
+00:05:55,709 --> 00:05:57,524
+Donc pour la vitesse, il ne sert à rien.
+
+134
+00:05:57,698 --> 00:05:58,953
+Sauf qu'il fait de la place.
+
+135
+00:05:59,143 --> 00:06:03,066
+Sur une 3080 de PC portable
+de 16 Go, avec Qwen 3.8 27B,
+
+136
+00:06:03,092 --> 00:06:06,293
+on passe de 32 000 à plus de
+128 000 tokens de conversation.
+
+137
+00:06:06,406 --> 00:06:09,521
+Du coup, il fait tenir beaucoup
+plus de conversation dans ta carte
+
+138
+00:06:09,554 --> 00:06:11,291
+avant que le modèle soit poussé dehors.
+
+139
+00:06:11,361 --> 00:06:13,511
+Il ne t'évite pas le
+tiers de vitesse en moins,
+
+140
+00:06:13,541 --> 00:06:15,689
+puisque la mesure du début avait déjà
+
+141
+00:06:15,871 --> 00:06:19,232
+le cache compressé. Par contre,
+il peut éviter le drop violent de vitesse.
+
+142
+00:06:19,543 --> 00:06:22,101
+Par contre, il faut aussi faire
+attention au 4 bits, quand même.
+
+143
+00:06:22,219 --> 00:06:24,728
+Sur le modèle de 7 milliards
+de tout à l'heure,
+
+144
+00:06:24,762 --> 00:06:28,160
+la réponse en 8 bits ressemble
+à 82 % à celle d'origine,
+
+145
+00:06:28,244 --> 00:06:29,976
+en 4 bits, à 8 % seulement.
+
+146
+00:06:30,047 --> 00:06:33,957
+Et au moins 3 des 6 mesures du début étaient
+en 4 bits sur un modèle bien plus gros :
+
+147
+00:06:33,998 --> 00:06:36,362
+ce que ça a coûté en qualité,
+personne ne l'a dit.
+
+148
+00:06:36,629 --> 00:06:39,060
+Du coup, si tout tient en 8 bits
+chez toi, reste en 8 bits.
+
+149
+00:06:39,242 --> 00:06:40,749
+Voilà, c'est ce petit
+réglage qui te permet
+
+150
+00:06:40,769 --> 00:06:42,740
+de tenir plus longtemps
+dans ta conversation.
+
+151
+00:06:43,065 --> 00:06:44,741
+Donc maintenant, qu'est-ce
+qu'il te faut pour pouvoir
+
+152
+00:06:44,929 --> 00:06:46,894
+bien régler ton moteur et ton modèle,
+
+153
+00:06:47,083 --> 00:06:48,968
+dans l'ordre : un fichier
+qui tienne dans ta carte,
+
+154
+00:06:48,988 --> 00:06:50,718
+avec de la place pour le MTP,
+
+155
+00:06:50,798 --> 00:06:53,523
+ensuite le MTP allumé,
+surtout pour du code,
+
+156
+00:06:53,586 --> 00:06:56,071
+llama.cpp ou LM Studio, plutôt qu'Ollama,
+
+157
+00:06:56,095 --> 00:06:57,421
+et si ton modèle déborde,
+
+158
+00:06:57,577 --> 00:06:59,045
+règle où vont les experts,
+
+159
+00:06:59,092 --> 00:07:01,360
+une conversation neuve
+quand celle-ci s'allonge,
+
+160
+00:07:01,380 --> 00:07:03,657
+et aussi le cache en 8 bits
+si tu manques de place.
+
+161
+00:07:03,910 --> 00:07:05,300
+Et n'oublie pas de noter ta version
+
+162
+00:07:05,320 --> 00:07:07,335
+pour comparer s'il y a
+des évolutions ou pas,
+
+163
+00:07:07,355 --> 00:07:10,116
+ou est-ce que t'as peut-être
+rencontré un bug avec la tienne.
+
+164
+00:07:10,367 --> 00:07:12,130
+Alors, est-ce que ta
+carte est bridée ou pas ?
+
+165
+00:07:12,318 --> 00:07:14,945
+Si le MTP est éteint de base,
+ou si ton fichier déborde,
+
+166
+00:07:14,965 --> 00:07:16,385
+ta carte est complètement bridée.
+
+167
+00:07:16,439 --> 00:07:19,363
+Ça se répare en quelques clics,
+et dès ce soir avec cette vidéo,
+
+168
+00:07:19,395 --> 00:07:20,529
+sans rien acheter de nouveau.
+
+169
+00:07:20,814 --> 00:07:23,496
+Et si ta carte n'a que 8 Go,
+on va essayer d'explorer plus tard
+
+170
+00:07:23,516 --> 00:07:26,863
+comment faire tenir un
+modèle d'IA sur 8 Go de VRAM.
+
+171
+00:07:26,980 --> 00:07:28,856
+Allez, j'espère que vous
+avez aimé cette vidéo,
+
+172
+00:07:28,876 --> 00:07:30,298
+n'oubliez pas de vous abonner à la chaîne,
+
+173
+00:07:30,318 --> 00:07:32,649
+et si vous avez la possibilité,
+boostez la vidéo.
+
+174
+00:07:32,669 --> 00:07:34,314
+On se dit à la prochaine. Salut !
+

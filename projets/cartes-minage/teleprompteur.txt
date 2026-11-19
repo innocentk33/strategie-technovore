@@ -2,7 +2,6 @@
 
 9 cartes, 54 gigas et plus de 30 tokens par seconde annoncés, pour 35 dollars selon
 leur propriétaire en Russie.
-Ces chiffres sont les leurs, je n'ai rien testé chez moi.
 Donc, à quel profil ce genre de récupération peut-il convenir ?
 
 On va regarder pourquoi son modèle convient à ce matériel, puis 3 routes de

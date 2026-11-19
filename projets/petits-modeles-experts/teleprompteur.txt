@@ -2,7 +2,6 @@
 
 Un modèle de 2 milliards dépasse GPT-5.6 Luna sur un test de lecture de graphiques :
 92,7 contre 90,2, selon son éditeur.
-Ces chiffres sont les leurs, je n'ai rien testé chez moi.
 Donc, pour ton travail précis, un petit modèle local peut-il remplacer celui du cloud
 ?
 

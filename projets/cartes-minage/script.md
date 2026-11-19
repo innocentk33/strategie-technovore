@@ -19,7 +19,7 @@ Voix : **1 581 mots** (hors crochets), **10:54 à 145 mots/minute**. Liaisons st
 
 [VISUEL : neuf rectangles de 6 Go ; « Achat déclaré : 3 000 RUB, environ 35 USD, Russie, octobre 2026 ». F1–F2. Résultat attribué au propriétaire, pas à la chaîne.]
 
-Neuf cartes, 54 gigas et plus de 30 tokens par seconde annoncés, pour 35 dollars selon leur propriétaire en Russie. Ces chiffres sont les leurs, je n'ai rien testé chez moi. Donc, à quel profil ce genre de récupération peut-il convenir ?
+Neuf cartes, 54 gigas et plus de 30 tokens par seconde annoncés, pour 35 dollars selon leur propriétaire en Russie. Donc, à quel profil ce genre de récupération peut-il convenir ?
 
 On va regarder pourquoi son modèle convient à ce matériel, puis trois routes de récupération : les P106, la Tesla P40 et la BC-250. Et on va compter ce qui manque autour. Parce que le prix de neuf cartes trouvées dans un garage ne donne pas encore le prix d'une machine utilisable chez toi.
 

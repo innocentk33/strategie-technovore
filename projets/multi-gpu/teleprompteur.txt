@@ -3,7 +3,6 @@
 Une carte écrit à 36 tokens par seconde.
 Le même testeur en ajoute une deuxième : il tombe à 34.
 Puis il change la répartition, et monte à 47.
-Ces chiffres sont les leurs, je n'ai rien testé chez moi.
 Donc, avant de payer ta deuxième carte, qu'est-ce qui décide si elle t'aide vraiment
 ?
 

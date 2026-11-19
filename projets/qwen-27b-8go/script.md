@@ -1,205 +1,254 @@
 # Qwen 27B sur 8 Go : plus rapide, mais à quel prix ?
 
-Version corrigée documentaire du 16/11/2026, après clarification du format. Sortie : 23 novembre. Durée cible : 8–10 min à 145 mots/min. Ancienne version conservée dans `archive-avant-recentrage/`. Sources : `sources.md`. Méthode : `ressources/skills-gpt/youtube-script-et-hook.md`, puis grill storytelling indépendant.
+Version 3 du 18/11/2026, corrigée après `grill-v3.md` (B1, B2, I1 à I9, détails). Sortie : lundi 23 novembre 2026. V2 dans `script-v2.md`, V1 dans `script-v1.md`. Seule source de faits : `sources.md` (F1 à F17 ; M2 = `recherche-mesures.md`).
 
-**Production :** voix ou face caméra, extraits de sources publiques, graphiques et schémas. Tous les essais évoqués sont ceux des sources. Aucun logiciel à ouvrir, aucun modèle à télécharger, aucun test ni capture personnelle à fournir par l'auteur. Les visuels sont des consignes de montage documentaire, pas des démonstrations à reproduire.
+**Production :** vidéo calculée et documentaire. Aucun essai de l'auteur, aucune manipulation de LM Studio à filmer.
 
-**Voix : 1367 mots, soit 9:26 à 145 mots/min**, hors pauses et crochet facultatif. **Liaisons strictes : 26, soit 1.90 pour 100 mots**. Liste : donc, du coup, en fait, sauf que, en effet, par contre, voilà pourquoi, voilà comment. Timecodes indicatifs à recaler au montage.
+**Voix : 1197 mots (`wc -w` du téléprompteur), soit 8:20 à 145 mots/min** (environ 9 min avec les nombres lus en lettres). **Liaisons strictes : 20, soit 1.65 pour 100 mots** (donc, du coup, en fait, sauf que, par contre, voilà, en gros). Aucun crochet.
 
 | Partie | Début | Mots |
 |---|---:|---:|
-| Le résultat et le prix caché | 0:00 | 62 |
-| Le plan | 0:26 | 38 |
-| Ce que les secondes changent | 0:41 | 285 |
-| Le modèle rentre, mais il a changé | 2:39 | 202 |
-| La qualité ne baisse pas partout pareil | 4:03 | 299 |
-| La place qui manque après le chargement | 6:07 | 215 |
-| Ce que ça signifie dans LM Studio | 7:36 | 92 |
-| Le verdict par usage | 8:14 | 174 |
+| Le résultat | 0:00 | 28 |
+| L'aveu et la question | 0:12 | 46 |
+| Le plan | 0:31 | 56 |
+| Ce que les secondes changent | 0:54 | 136 |
+| Pourquoi ça va plus vite | 1:50 | 163 |
+| Le premier prix : la place | 2:58 | 265 |
+| Le deuxième prix : la qualité | 4:47 | 248 |
+| Et dans LM Studio ? | 6:30 | 65 |
+| Le verdict par usage | 6:57 | 183 |
+| Fin | 8:12 | 19 |
 
 ## Voix
 
-### Le résultat et le prix caché
+### Le résultat
 
-[VISUEL : deux barres 3,2 et 18 tokens/s. Attribution : mesure publiée, 13/11/2026, GTX 1080 Ti limitée à 8 Go, llama.cpp. F2]
+[VISUEL : deux barres 3,2 → 18 tok/s. « Mesure publiée, 13/11/2026, GTX 1080 Ti limitée à 8 Go, llama.cpp ». F2]
 
-Sur une carte limitée à 8 gigas, un testeur change de fichier.
-Qwen 27B passe de 3,2 à 18 tokens par seconde pour écrire sa réponse.
-Ces chiffres sont les leurs, je n'ai rien testé chez moi.
-Sauf que le petit fichier réussit moins bien certains travaux.
-Du coup, qu'est-ce que tu gagnes vraiment, si tu gardes ta carte de joueur ?
+Sur une carte de 8 gigas, tu changes un seul fichier,
+et Qwen 27B passe de 3,2 à 18 tokens par seconde.
+Même modèle, même carte, rien acheté. [F2]
+
+### L'aveu et la question
+
+Sauf que c'est une seule mesure publiée,
+sur une GTX 1080 Ti limitée à 8 gigas.
+Du coup, la vraie question :
+qu'est-ce que ce fichier te fait perdre en échange ? [F2]
 
 ### Le plan
 
-On va traduire cette vitesse en temps d'attente, regarder ce que le fichier perd en qualité et combien de conversation il peut garder.
-À la fin, tu sauras pour quel usage le plus lent reste le meilleur choix.
+[VISUEL : trois livrables à l'écran, puis « 9 fois sur 10 ? » en suspens. F4]
+
+Dans cette vidéo, on va voir
+comment ce fichier fait tout tenir dans 8 gigas,
+ce qu'il te coûte en mémoire de conversation,
+et ce qu'il te coûte en qualité.
+Et reste jusqu'à la fin :
+il y a un travail que ce fichier rate presque 9 fois sur 10,
+dans les tests de ceux qui le fabriquent. [F4 : 100 − 12,8 = 87,2 % d'échecs]
 
 ### Ce que les secondes changent
 
-[VISUEL : calcul affiché, « exemple théorique : 500 tokens générés, vitesse constante, hors lecture et démarrage ». 500 ÷ 3,2 et 500 ÷ 18. F16]
+[VISUEL : « exemple théorique : 500 tokens, vitesse constante ». 500 ÷ 3,2 = 2 min 36 ; 500 ÷ 18 = 28 s. F16]
 
-Pour 500 tokens à écrire, ça donne environ 2 minutes 36 contre 28 secondes.
-C'est un calcul à débit constant, hors lecture de la demande et démarrage.
-Et un token, c'est un morceau de texte, pas forcément un mot entier.
-Donc on compare la même quantité à écrire, sans prétendre que toutes les réponses ont cette longueur.
+D'abord, ce que ça change en vrai.
+Prends une réponse de 500 tokens.
+À 3,2 tokens par seconde, tu attends 2 minutes 36.
+À 18, c'est 28 secondes.
+Juste une division, mais ça donne l'idée. [F16]
 
-L'écart peut changer la façon de discuter avec l'IA.
-Quand chaque relance prend longtemps, demander une précision devient pénible.
-Tu finis par préparer un gros message pour éviter les allers-retours.
-Une écriture plus rapide rend les échanges courts moins laborieux.
-Voilà l'intérêt pour quelqu'un qui veut comprendre une erreur ou retravailler un paragraphe.
+Du coup, cet écart change ta façon de parler à l'IA.
+Quand chaque réponse prend 2 minutes et demie,
+tu n'oses plus demander une précision.
+Tu prépares un gros pavé pour éviter les allers-retours.
+À 28 secondes, tu peux relancer, corriger.
+Ça redevient une discussion.
 
-Sauf que ces secondes commencent après la lecture de la demande.
-Le logiciel doit d'abord lire ton texte, puis produire sa réponse.
-Dans l'essai publié, la lecture reste du même ordre avec les deux fichiers. [F2]
-Donc le gain ne raccourcit pas de la même façon toute l'attente.
-Et si le modèle réfléchit avant de répondre, il produit aussi des tokens pour cette réflexion.
-Donc une réponse courte à l'écran peut cacher une génération plus longue. [F7]
+Par contre, ce gain ne touche que l'écriture.
+Avant d'écrire, le modèle lit ta demande,
+et cette lecture reste à peu près la même avec les 2 fichiers.
+Et s'il réfléchit avant de répondre,
+cette réflexion, ce sont aussi des tokens à écrire.
+Une réponse courte à l'écran
+peut donc cacher beaucoup plus de travail derrière. [F2 (lecture similaire), F16 (réflexion exclue)]
 
-[VISUEL : « lire la demande → générer », avec réflexion et réponse dans le second bloc. Aucun faux chat animé. F2, F7]
+### Pourquoi ça va plus vite
 
-Mais il y a une limite plus importante : ce résultat vient d'une seule machine.
-Le testeur utilise une GTX 1080 Ti dont il réserve une partie de la mémoire pour se rapprocher d'un budget de 8 gigas. [F2]
-On n'a pas trouvé de deuxième reproduction du nouveau fichier sur une vraie carte de 8 gigas. [F11]
-Du coup, les 28 secondes illustrent son débit, elles ne prédisent pas celui de ton PC.
+[VISUEL : schéma ancien fichier RAM + GPU, puis nouveau tout GPU. F2, M2]
 
-Si ces comparaisons t'aident à comprendre ce que ton PC peut faire, abonne-toi.
+Mais alors, d'où vient ce gain ?
+L'ancien fichier ne tenait pas dans la carte.
+Une partie tournait dans la RAM du PC, avec le processeur.
+Et la carte passait son temps à l'attendre.
+En gros, c'est un cuisinier dont la moitié des ingrédients
+est dans une autre pièce :
+il a beau être rapide,
+il passe son temps à courir chercher ce qui lui manque. [F2, M2 (33/65 couches sur le GPU)]
 
-Mais ce gain vient d'un changement précis : le modèle tient maintenant entièrement sur la carte.
+[VISUEL : page Hugging Face, nom complet Qwen3.8-27B-UD-IQ2_XS.gguf, 7,63 GB. F1]
 
-### Le modèle rentre, mais il a changé
+En fait, le nouveau fichier, lui, tient entièrement dans la carte.
+Il s'appelle UD-IQ2_XS, il fait 7,63 gigas,
+et Unsloth l'a mis à jour le 11 novembre.
+Le nom complet est à l'écran. [F1, M2]
 
-[VISUEL : schéma ancien fichier partagé RAM/GPU, puis nouveau fichier tout GPU. Encadré nom et taille sur page Hugging Face. F1, F2]
+Sauf que pour rentrer, le modèle a dû maigrir.
+Ses nombres sont rangés avec moins de précision :
+c'est la quantification.
+Le modèle garde son nom,
+mais il ne répond plus tout à fait pareil. [F1]
 
-L'ancien fichier travaille en partie dans la RAM du PC.
-Le nouveau tient entièrement sur la carte dans son essai. [F2]
-En fait, c'est comme un cuisinier qui a enfin tous ses ingrédients sur son plan de travail.
-Il peut avancer sans attendre ce qui se trouve dans l'autre pièce.
+Au passage, le MTP,
+le module qui doublait la vitesse dans la vidéo précédente,
+est laissé de côté dans cette mesure, faute de place.
+Ce 18, c'est sans lui. [F17]
 
-Le fichier s'appelle UD-IQ2_XS, pour Qwen 3.8 27B.
-Hugging Face affiche 7,63 gigas, et Unsloth annonce cette mise à jour le 11 novembre. [F1]
-Le nom complet est à l'écran, avec la source en description.
+### Le premier prix : la place
 
-Donc la carte n'a pas gagné de mémoire : la copie du modèle prend moins de place.
-Pour y arriver, certains nombres sont stockés avec moins de précision.
-C'est ce qu'on appelle la quantification.
-Le modèle garde son nom, mais ses réponses peuvent changer.
+Voilà ce que t'as gagné.
+Maintenant, ce que ça te coûte.
+Et le premier prix, c'est la place.
 
-Et le MTP de la vidéo précédente reste désactivé dans cet essai, pour garder de la place. [F2]
-Ici, le gain vient du nouveau fichier et de son chargement complet sur la carte.
-On ne peut pas empiler les gains des deux vidéos comme des bonus d'équipement.
+[VISUEL : carte de 8 Go découpée « poids / conversation / moteur / bureau », proportions illustratives. F9]
 
-Sauf que jusqu'ici, on a seulement compté la vitesse.
-Une réponse produite en 28 secondes peut être une mauvaise affaire si elle te donne davantage de travail à corriger.
+Le fichier fait 7,63 gigas, ta carte en a 8.
+Sauf que le modèle n'est pas seul dans la carte.
+Le moteur a besoin d'espace pour travailler,
+ton bureau en prend aussi,
+et surtout, il faut garder la conversation quelque part.
+La taille du fichier ne te dit donc pas
+combien de discussion il te reste. [F9]
 
-### La qualité ne baisse pas partout pareil
+Cette mémoire de la conversation, c'est le cache KV.
+Dans la mesure, avec un cache en 8 bits,
+il reste environ 14 000 tokens.
+Ta demande et tout ce que le modèle écrit, sa réflexion comprise,
+se partagent cette place.
+Pour discuter, c'est correct.
+Pour coller un long document, ça part vite. [F3, F16]
 
-[VISUEL : graphiques Unsloth, 11/11/2026. LiveCodeBench puis DeepSWE ; annotations et lectures arrondies distinguées. F4]
+Et la bonne nouvelle, c'est que ça tient la vitesse.
+Avec presque 14 000 tokens dedans,
+l'écriture est encore à 15 tokens par seconde. [F2 (15,3 à 13,8K, cache 8 bits)]
 
-Sur les exercices de programmation de LiveCodeBench, les scores publiés par Unsloth restent assez proches.
-Le modèle complet est autour de 89, le petit fichier autour de 85, en lecture arrondie du graphique. [F4]
-Donc il ne s'effondre pas sur toutes les tâches parce qu'il est plus compressé.
+[VISUEL : deux cartes séparées « cache 8 bits : ≈14K, 15,3 tok/s à 13,8K » et « cache 4 bits : ≈22,5K, 11,6 tok/s plein ». Pas une courbe d'un seul réglage. F2, F3]
 
-À ton avis, cette proximité tient aussi quand il doit travailler sur un projet entier ?
+Tu peux aussi compresser ce cache encore plus, en 4 bits.
+Là, celui qui a mesuré monte à environ 22 500 tokens.
+Par contre, avec ce cache 4 bits plein,
+l'écriture tombe autour de 12 tokens par seconde.
+C'est un autre réglage, avec son propre prix. [F3 (11,6, cache 4 bits plein)]
 
-[VISUEL : brève pause ; passer du problème isolé au schéma d'un dépôt. Puis révéler DeepSWE. F4]
+Et quand il a rempli la mémoire au-delà de 24 000 tokens,
+ça a planté.
+Le modèle se charge,
+c'est la discussion qui finit par ne plus rentrer. [F3]
 
-Sur leur test de travail autonome dans un dépôt de code, l'écart se creuse.
-Le modèle complet réussit environ 40 % des tâches.
+Pour des échanges courts, tu ne vois même pas cette limite.
+Sauf que pour une longue session,
+avec des fichiers et un historique,
+c'est elle qui commande.
+
+Si cette vidéo t'aide à voir ce que ta carte peut vraiment faire,
+abonne-toi.
+
+### Le deuxième prix : la qualité
+
+[VISUEL : « Campagne Unsloth, 11/11/2026 — 128K / 256K de contexte, réflexion xhigh ». F4]
+
+Le deuxième prix, c'est la qualité.
+Et là, les chiffres viennent d'Unsloth, ceux qui fabriquent le fichier.
+C'est leur campagne de tests, pas une vérification indépendante.
+Et leurs tests tournent avec une très longue conversation
+et la réflexion poussée au maximum.
+Rien à voir avec une carte de 8 gigas.
+Ces scores montrent où ça casse,
+ils ne te donnent pas ton taux de réussite à toi. [F4]
+
+[VISUEL : graphique LiveCodeBench, « lecture arrondie ». F4]
+
+Sur LiveCodeBench, des exercices de programmation,
+le modèle complet, sans compression, est autour de 89,
+le petit fichier autour de 85.
+Franchement, pour un modèle compressé à ce point, il tient bien. [F4 (88,62 annoté ; ≈84,5 lu)]
+
+Alors, à ton avis, ça tient aussi
+quand on lui confie un vrai projet ?
+
+[VISUEL : DeepSWE : 40 / 13 / 36, modèle complet / petit fichier / ancien fichier. F4]
+
+Sur leur test d'agent,
+où le modèle travaille seul dans un dépôt de code,
+le modèle complet réussit environ 40 % des tâches.
 Le petit fichier, environ 13 %.
-Et le fichier 4 bits de leur graphique reste autour de 36 %. [F4]
-Donc le fichier 4 bits garde un score nettement supérieur sur ce travail.
+Là, ça dégringole.
+Et l'ancien fichier, celui qui tournait à 3,2 tokens par seconde,
+reste autour de 36 %.
+Donc sur ce travail-là,
+le petit fichier réussit 3 fois moins souvent que le modèle complet. [F4 (40,40 annoté ; ≈12,8 et ≈36 lus ; 40,4/12,8 ≈ 3,2)]
 
-[VISUEL : changement de cadrage ; garder uniquement 40 / 13 / 36 et les trois variantes. Mention « campagne Unsloth, pas test indépendant ».]
+En fait, quand tu lui demandes d'aider sur une fonction,
+tu lis sa réponse, et tu juges toi-même.
+Un agent, lui, enchaîne les décisions tout seul,
+il modifie plusieurs fichiers,
+et une erreur au début se paie à toutes les étapes d'après.
 
-En fait, demander une aide sur une fonction et confier tout un projet à un agent, ce sont des travaux très différents.
-Dans le premier cas, tu peux lire la proposition et juger si elle t'aide.
-Dans l'autre, les décisions s'enchaînent, avec des modifications à suivre dans plusieurs fichiers.
-Une erreur peut entraîner du travail supplémentaire derrière.
+Le compteur du début ne suffit plus, du coup.
+Une réponse en 28 secondes que tu dois réparer
+peut te coûter plus cher qu'une réponse lente qui marche.
 
-Donc le compteur du début ne suffit plus.
-Une réponse rapide que tu dois réparer peut te prendre plus de temps qu'une réponse lente mais utilisable.
-Pour quelqu'un qui attend une explication, le gain peut compter.
-Pour quelqu'un qui délègue un projet entier, les échecs supplémentaires peuvent coûter bien plus que l'attente économisée.
+### Et dans LM Studio ?
 
-Par contre, ces chiffres sont ceux d'Unsloth, qui fabrique le fichier.
-Et leurs évaluations utilisent de grands contextes, avec une réflexion élevée. [F4]
-Elles ne mesurent pas exactement l'usage limité à 8 gigas dont on parle ici.
-Donc elles signalent un risque, elles ne donnent pas un taux de réussite pour ton travail à toi.
+[VISUEL : tableau tiré de la doc LM Studio : déchargement GPU / contexte / cache K-V / réflexion. F5–F7]
 
-Et même une réponse correcte peut être inutilisable si la conversation manque de place avant la fin.
-
-### La place qui manque après le chargement
-
-[VISUEL : schéma « poids / conversation / travail du moteur / autres usages ». Proportions illustratives, sans soustraire des unités incompatibles. F9]
-
-Le fichier de 7,63 gigas doit partager la carte avec autre chose.
-Le moteur a besoin d'espace pour travailler et conserver la conversation.
-Le bureau peut aussi en occuper. [F9]
-Du coup, la taille du téléchargement ne dit pas combien de discussion il reste.
-
-Cette mémoire de conversation, c'est le cache KV.
-Dans le même essai, un cache en 8 bits laisse environ 14000 tokens de contexte. [F3]
-Ta demande, l'historique et ce que le modèle génère occupent cette fenêtre.
-Donc plus la conversation grossit, moins il reste de place pour la suite.
-
-Sauf qu'on peut aussi compresser cette mémoire.
-Le testeur rapporte environ 22500 tokens avec un cache en 4 bits.
-Mais quand cette fenêtre est remplie, son débit tombe autour de 12 tokens par seconde. [F3]
-Les 18 du début correspondent à une conversation vide.
-Voilà pourquoi une seule vitesse affichée raconte mal une longue session.
-
-[VISUEL : retour aux barres du début ; ajouter « contexte vide » sous 18 et une carte séparée « cache 4 bits plein : ≈12 ». Conditions différentes, pas courbe d'un seul réglage. F2, F3]
-
-Et il rapporte un plantage quand il pousse le contexte trop loin. [F3]
-Le modèle se charge, mais la conversation finit par dépasser la mémoire disponible.
-Le chargement réussit, pourtant la conversation finit par l’arrêter.
-
-Du coup, pour des échanges courts, cette limite peut rester discrète.
-Pour une longue session avec des documents et un historique à conserver, elle devient centrale.
-Donc le fichier rentre, mais la conversation reste à l'étroit.
-
-### Ce que ça signifie dans LM Studio
-
-[VISUEL : tableau documentaire tiré de la documentation : chargement GPU / contexte / cache / réflexion. Aucun écran à capturer chez l'auteur. F5–F7]
-
-Si tu utilises LM Studio, sa documentation décrit les mêmes leviers : la part du modèle sur la carte, la longueur de contexte et la compression de sa mémoire de conversation. [F5, F6]
-Du coup, ce compromis aide à comprendre ce que ton logiciel doit faire tenir ensemble.
-
-Mais les débits publiés restent ceux de llama.cpp.
-Aucune mesure équivalente dans LM Studio n'a été vérifiée ici.
-Et ses commandes de réflexion dépendent de la configuration du modèle. [F7]
-Donc ni le débit, ni les limites de contexte de cette machine ne deviennent automatiquement les tiens.
+Et si tu es sur LM Studio ?
+Sa documentation a les mêmes réglages :
+la part du modèle sur la carte, la taille de la conversation,
+et le cache en 8 ou en 4 bits.
+Sauf que toutes ces vitesses ont été mesurées dans llama.cpp,
+pas dans LM Studio.
+Et l'option pour couper la réflexion
+dépend de la façon dont le modèle est configuré. [F5, F6, F7, F2]
 
 ### Le verdict par usage
 
-[VISUEL : trois profils, conclusions issues des mesures, pas tests d'usage réalisés par l'auteur. F4, F10]
+[VISUEL : trois profils, conclusions tirées des mesures publiées. F2, F4, F10]
 
-Pour discuter brièvement ou demander une explication, ce fichier ouvre une piste intéressante : le modèle peut tenir sur la carte, avec une écriture nettement accélérée dans l'essai publié.
-La qualité de ces usages précis reste à confirmer indépendamment.
+Alors, verdict.
 
-Pour de l'aide sur un fichier de code, le résultat proche sur les exercices de programmation est encourageant.
-Sauf que ça reste une proposition à relire, avec un contexte limité.
+Pour discuter, te faire expliquer un truc :
+c'est le bon fichier.
+Dans la mesure, le modèle tient en entier dans les 8 gigas,
+et il écrit plus de 5 fois plus vite.
+Tant que la conversation reste courte, la place suffit. [F2, F14 (5,625 à vide ; 5,1 à 13,8K)]
 
-Pour un agent chargé d'un projet entier, le fichier moins compressé garde un avantage net dans les tests d'Unsloth.
-Donc le plus lent peut être le choix le plus utile.
-C'est le compromis que les 18 tokens par seconde ne montraient pas au début.
+Pour te faire aider sur un bout de code :
+dans leurs tests, les exercices de programmation tiennent bien.
+Par contre, tu relis tout,
+et tu ne lui donnes pas tout ton projet d'un coup. [F4, F10]
 
-[CROCHET : ton avis personnel sur ce compromis, en une ou deux phrases. Aucun essai ni vécu à inventer. Le texte tient sans cet avis.]
+Pour un agent qui travaille seul sur un projet entier :
+garde l'ancien fichier, quitte à attendre à 3,2 tokens par seconde.
+Parce que dans leurs tests, le petit fichier rate presque 9 fois sur 10.
+L'ancien, à peu près 2 fois sur 3.
+Aller plus vite pour se tromper plus souvent, ça sert à rien. [F2, F4 (87,2 % et 64 % d'échecs)]
 
-En fait, la même carte peut rendre un autre service selon le fichier et le travail demandé.
-Mais quand la qualité ou la place pour la conversation deviennent le blocage, gagner en vitesse ne suffit plus.
-Jeudi, on compare les cartes par budget et leurs prix affichés en France, pour voir ce qu'acheter plus de mémoire apporte vraiment. [F15]
-Allez, salut !
+Alors, ce que ce fichier te fait perdre, tu le sais maintenant :
+pour discuter, un peu de place et un peu de qualité.
+Pour un agent, beaucoup trop.
+Donc la même carte de 8 gigas peut faire 2 métiers différents,
+selon le fichier que tu lui donnes.
 
-## Crochets et questions
+### Fin
 
-- Un seul crochet facultatif : avis de l'auteur. Aucun manque factuel reporté sur lui.
-- Aucune manipulation ni capture LM Studio nécessaire pour tourner cette vidéo.
-- Aucune question bloquante : format calculé confirmé par l'auteur, référence SimplyExplain.
+Jeudi, on regarde les cartes par budget,
+pour voir ce que plus de mémoire t'apporte vraiment.
+Allez, salut ! [F15]
 
-## Notes de méthode
+## Notes
 
-Structure : explication documentaire portée par l'avant/après, puis l'objection la plus forte (qualité), le budget de conversation, et le verdict. L'auteur interprète les preuves publiées ; aucun parcours d'essai personnel. Le calcul de durée est une illustration, pas une nouvelle mesure.
-
-Les références méthodologiques retention-scripting-guide.md et algorithm-guide.md ont été retrouvées dans le dossier local claude-youtube et lues. Leurs statistiques générales de rétention ne servent ni de faits dans la voix ni de promesses de résultat. Les règles explicites de l'auteur priment : 145 mots/min, résultat avant 15s, disclaimer avant30s, plan après question centrale, pas de longue introduction générique.
+- Aucun crochet ; l'ancien « avis personnel » est supprimé sans remplacement.
+- Un seul renvoi dans le corps (MTP, « la vidéo précédente », F17) et l'annonce de jeudi 26/11 (F15).
+- « Presque 9 fois sur 10 » = 87,2 % d'échecs, « 2 fois sur 3 » = 64 %, lectures graphiques Unsloth (F4), toujours attribués à « leurs tests ».
+- « Plus de 5 fois plus vite » reste rattaché à « dans la mesure » (F14) ; aucun ×5 général.

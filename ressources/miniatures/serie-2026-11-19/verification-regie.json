@@ -1,0 +1,144 @@
+{
+  "endpoint": "http://127.0.0.1:4321/api/projets",
+  "date": "2026-11-19",
+  "projets": [
+    {
+      "projet": "qwen-4-cartes",
+      "variantes": [
+        {
+          "key": "h",
+          "label": "Variante H",
+          "name": "h-kai",
+          "path": "projets/qwen-4-cartes/miniature/rendus/h-kai.png"
+        },
+        {
+          "key": "i",
+          "label": "Variante I",
+          "name": "i-kai",
+          "path": "projets/qwen-4-cartes/miniature/rendus/i-kai.png"
+        },
+        {
+          "key": "j",
+          "label": "Variante J",
+          "name": "j-kai",
+          "path": "projets/qwen-4-cartes/miniature/rendus/j-kai.png"
+        }
+      ]
+    },
+    {
+      "projet": "claude-ou-mon-pc-1",
+      "variantes": [
+        {
+          "key": "h",
+          "label": "Variante H",
+          "name": "h-kai",
+          "path": "projets/claude-ou-mon-pc-1/miniature/rendus/h-kai.png"
+        },
+        {
+          "key": "i",
+          "label": "Variante I",
+          "name": "i-kai",
+          "path": "projets/claude-ou-mon-pc-1/miniature/rendus/i-kai.png"
+        },
+        {
+          "key": "j",
+          "label": "Variante J",
+          "name": "j-kai",
+          "path": "projets/claude-ou-mon-pc-1/miniature/rendus/j-kai.png"
+        }
+      ]
+    },
+    {
+      "projet": "installer-ia-locale",
+      "variantes": [
+        {
+          "key": "h",
+          "label": "Variante H",
+          "name": "h-kai",
+          "path": "projets/installer-ia-locale/miniature/rendus/h-kai.png"
+        },
+        {
+          "key": "i",
+          "label": "Variante I",
+          "name": "i-kai",
+          "path": "projets/installer-ia-locale/miniature/rendus/i-kai.png"
+        },
+        {
+          "key": "j",
+          "label": "Variante J",
+          "name": "j-kai",
+          "path": "projets/installer-ia-locale/miniature/rendus/j-kai.png"
+        }
+      ]
+    },
+    {
+      "projet": "uber",
+      "variantes": [
+        {
+          "key": "h",
+          "label": "Variante H",
+          "name": "h-kai",
+          "path": "projets/uber/miniature/rendus/h-kai.png"
+        },
+        {
+          "key": "i",
+          "label": "Variante I",
+          "name": "i-kai",
+          "path": "projets/uber/miniature/rendus/i-kai.png"
+        },
+        {
+          "key": "j",
+          "label": "Variante J",
+          "name": "j-kai",
+          "path": "projets/uber/miniature/rendus/j-kai.png"
+        }
+      ]
+    },
+    {
+      "projet": "opencode",
+      "variantes": [
+        {
+          "key": "h",
+          "label": "Variante H",
+          "name": "h-kai",
+          "path": "projets/opencode/miniature/rendus/h-kai.png"
+        },
+        {
+          "key": "i",
+          "label": "Variante I",
+          "name": "i-kai",
+          "path": "projets/opencode/miniature/rendus/i-kai.png"
+        },
+        {
+          "key": "j",
+          "label": "Variante J",
+          "name": "j-kai",
+          "path": "projets/opencode/miniature/rendus/j-kai.png"
+        }
+      ]
+    },
+    {
+      "projet": "artcraft",
+      "variantes": [
+        {
+          "key": "h",
+          "label": "Variante H",
+          "name": "h-kai",
+          "path": "projets/artcraft/miniature/rendus/h-kai.png"
+        },
+        {
+          "key": "i",
+          "label": "Variante I",
+          "name": "i-kai",
+          "path": "projets/artcraft/miniature/rendus/i-kai.png"
+        },
+        {
+          "key": "j",
+          "label": "Variante J",
+          "name": "j-kai",
+          "path": "projets/artcraft/miniature/rendus/j-kai.png"
+        }
+      ]
+    }
+  ]
+}

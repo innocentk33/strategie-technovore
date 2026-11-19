@@ -1,0 +1,22 @@
+{
+  "portrait-rollsafe-technovore.png": {
+    "bytes": 1196649,
+    "sha256": "f34979f9e599dfd194132f30463dc16fdfe68c27e05b9b1b0f1506e5e4b974b3"
+  },
+  "portrait-rollsafe-detoure.png": {
+    "bytes": 1509184,
+    "sha256": "bdbf095bc9cab015114b8f07e8e9abe928764c680a3f021a0eed87e8c27c27f9"
+  },
+  "lm-studio-officiel.svg": {
+    "bytes": 2405,
+    "sha256": "18950f44a1ba87eb6de782ed6c7691de21c1bfebf0000c7c896240aed104ffef"
+  },
+  "rollsafe-vert.png": {
+    "bytes": 1566938,
+    "sha256": "3ab1750e6dabf34dc7d0fd68db515f9a895ea7bce8c29c796e6b751de119d02c"
+  },
+  "portrait-rollsafe-kai.png": {
+    "bytes": 1120414,
+    "sha256": "899aa5a6b6231802534de4953e8795009511087b133a20c96115b6f3f17fb896"
+  }
+}

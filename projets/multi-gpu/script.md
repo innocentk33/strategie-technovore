@@ -17,7 +17,7 @@ Voix : **1 512 mots** (hors crochets), **10:26 à 145 mots/minute**. Liaisons st
 
 [VISUEL : graphique original 36,05 → 34,03 → 47,06, légendé « une mesure publiée, Qwen3.8-27B, 2 × 7900 XTX, 13/09/2026 ». F1.]
 
-Une carte écrit à 36 tokens par seconde. Le même testeur en ajoute une deuxième : il tombe à 34. Puis il change la répartition, et monte à 47. Ces chiffres sont les leurs, je n'ai rien testé chez moi. Donc, avant de payer ta deuxième carte, qu'est-ce qui décide si elle t'aide vraiment ?
+Une carte écrit à 36 tokens par seconde. Le même testeur en ajoute une deuxième : il tombe à 34. Puis il change la répartition, et monte à 47. Donc, avant de payer ta deuxième carte, qu'est-ce qui décide si elle t'aide vraiment ?
 
 On va identifier la mémoire qui te manque, distinguer les deux répartitions, puis regarder les ports, les câbles et la place dans la tour. À la fin, tu auras une décision selon ton PC : ajouter, remplacer, ou garder ton argent. Le piège, c'est qu'un deuxième port long peut cacher une liaison beaucoup plus étroite.
 
