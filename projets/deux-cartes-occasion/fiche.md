@@ -102,3 +102,10 @@ Règle du 22/10 : le meilleur moment d'abord, aucun contexte, aucun « dans cett
 7. **Versions** : llama.cpp (`--split-mode tensor` est « expérimental », F20), pilote NVIDIA 580 pour Pascal (F70), version de CUDA.
 8. **Faits chiffrés de la vidéo** : chaque prix a une date et le mot « demandé ». Ne dis pas « une 3090 coûte X » sans la date.
 9. **Modèles** : aucun modèle « uncensored » ou « abliterated » (les dépôts Hugging Face en proposent pour Qwen3.8-27B ; prends les versions d'Unsloth, d'ISTA ou de Bartowski listées dans `sources.md`).
+
+## Tes choix du 20/11/2026 (script V4)
+
+- **Prix** : on prend le meilleur prix trouvé, quel que soit le marchand, en le nommant ; on ne dit plus « même marchand ». Tu préfères Amazon, souvent moins cher. Relevé complet : [recherche/prix-20-11.md](recherche/prix-20-11.md), à relire le 26-27/11 avant la voix.
+- **Hook** : ton texte (« l'un des meilleurs modèles que tu peux faire tourner sur ta machine », plus de 6 millions de téléchargements en un mois, la météo, « la VRAM, c'est de l'or », « 2800 euros… ou, si t'es malin, beaucoup moins »). Retirés parce que faux : « le plus téléchargé sur Internet », « petit frère Flash-Next », « tout type de modèle, même les plus gros ».
+- **Verdict** : une deuxième RTX 5060 Ti 16 Go à 800 € (Amazon) si tu en as déjà une ; la paire à 1600 € si ta tour accepte deux cartes ; la B65 à 1900 € (LDLC) pour une seule carte ; le Mac mini à 1709 € si tu changes tout ; rien si tu as déjà 24 Go.
+- **À savoir** : avec ce hook, la question centrale arrive vers 39 s à 145 mots/min, au-delà de la règle des 30 s.

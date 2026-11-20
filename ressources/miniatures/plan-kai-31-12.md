@@ -8,6 +8,8 @@
 
 ## Les trois cas
 
+**Basalt, jeudi 3 décembre.** H et J présentent « BASALT / 500 TOKENS/S ? » avec Jim Halpert. I présente « BASALT / 224 TOKENS/S ? » et donne davantage de place aux deux logos. H contre J permet de comparer les palettes avec la même accroche. I change à la fois le nombre et la composition. [Aperçu des trois variantes](../../projets/basalt/miniature/apercu/comparaison-500px.png) · [Relecture indépendante](../../projets/basalt/miniature/critique-kai.md)
+
 | Cas | h (palette de Kai) | i (Technovore, sans image) | j (Technovore) |
 |---|---|---|---|
 | **Visage** (meme) | texte à gauche, visage à droite qui regarde le texte (ou texte en haut, selon la vidéo) | scène à plat, texte sur une ligne en haut | visage aux couleurs de peau, même mise en page que h |

@@ -1,0 +1,84 @@
+{
+  "h": {
+    "png": [
+      3840,
+      2160
+    ],
+    "png_octets": 2200158,
+    "sha256_png": "9cf4c4bd1c81892d78e6f26e7c74967d19bf61877bb4bcbe0911de8c7917c60e",
+    "psd": [
+      3840,
+      2160
+    ],
+    "psd_octets": 10057778,
+    "calques_texte": 3,
+    "textes": [
+      "TOKENS/S ?",
+      "TOKENS/S ?",
+      "500"
+    ],
+    "fontes": [
+      "Archivo Black",
+      "Archivo Black",
+      "Archivo Black"
+    ],
+    "avertissements": [],
+    "difference_moyenne_255": 0.08578241544495885,
+    "portrait_bas_source_dans_page": 766.1244377811095,
+    "coupe_buste_sous_cadre": true
+  },
+  "i": {
+    "png": [
+      3840,
+      2160
+    ],
+    "png_octets": 222599,
+    "sha256_png": "bf578aac3a9cdc51896223dcec95fe7c8d68e40adeb5d13b4d24117e0e06a15c",
+    "psd": [
+      3840,
+      2160
+    ],
+    "psd_octets": 2255066,
+    "calques_texte": 3,
+    "textes": [
+      "TOKENS/S ?",
+      "TOKENS/S ?",
+      "224"
+    ],
+    "fontes": [
+      "Archivo Black",
+      "Archivo Black",
+      "Archivo Black"
+    ],
+    "avertissements": [],
+    "difference_moyenne_255": 0.06479934252829218
+  },
+  "j": {
+    "png": [
+      3840,
+      2160
+    ],
+    "png_octets": 2305677,
+    "sha256_png": "6510adfe74e54c9224f5e715dbf1000e240b23a66cc586a939e83198c3a4c784",
+    "psd": [
+      3840,
+      2160
+    ],
+    "psd_octets": 10456847,
+    "calques_texte": 3,
+    "textes": [
+      "TOKENS/S ?",
+      "TOKENS/S ?",
+      "500"
+    ],
+    "fontes": [
+      "Archivo Black",
+      "Archivo Black",
+      "Archivo Black"
+    ],
+    "avertissements": [],
+    "difference_moyenne_255": 0.10539689429012344,
+    "portrait_bas_source_dans_page": 775.0,
+    "coupe_buste_sous_cadre": true
+  }
+}

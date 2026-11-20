@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Basalt · 500 ou 224 tokens/s ? · h/i/j</title>
+<style>
+@font-face{font-family:'Archivo Black';src:url(../../../../ressources/miniatures/fonts/archivo-black-latin-400.woff2)}
+*{box-sizing:border-box;margin:0}html,body{width:1280px;height:720px;overflow:hidden}
+body{position:relative;background:#101011;color:#fff;--hl:#ffcc33;--echo:#ff3b30;--sh1:#ff3b30;--sh2:#2f6bff}
+[data-v=i],[data-v=j]{background:#141e27;--hl:#07c095;--echo:#fff;--sh1:#fff;--sh2:#34495e}
+.t{position:absolute;font-family:'Archivo Black',sans-serif;line-height:1;letter-spacing:-.035em;white-space:nowrap;text-transform:uppercase;z-index:4}
+.accent{color:var(--hl)}.echo{color:var(--echo)}
+#portrait{position:absolute;left:650px;top:35px;width:740px;z-index:1}
+/* Le bord droit et la coupe horizontale du buste sont hors du cadre, sans fondu. */
+#scene{position:absolute;inset:0;z-index:2}.tile-name{font-family:'Archivo Black',sans-serif;font-size:40px;letter-spacing:-1px;fill:#111}
+#score-brand{position:absolute;left:54px;top:17px;display:flex;align-items:center;gap:17px;height:59px;z-index:4;font:52px/1 'Archivo Black',sans-serif;letter-spacing:-2px}#score-brand img{width:57px;height:57px}
+</style></head><body>
+<img id="portrait" src="../sources/portrait-kai.png" alt="Jim Halpert, sceptique">
+<div id="score-brand"><img src="../sources/basalt-logo.svg" alt="">BASALT</div>
+<svg id="scene" viewBox="0 0 1280 720" aria-label="Strata donne naissance à Basalt">
+<defs>
+<g id="strata"><rect x="14" y="14" width="248" height="218" rx="18" fill="var(--sh2)"/><rect x="7" y="7" width="248" height="218" rx="18" fill="var(--sh1)"/><rect width="248" height="218" rx="18" fill="#fff" stroke="#000" stroke-width="7"/><image href="../sources/strata-mark-light.svg" x="62" y="12" width="124" height="124"/><text class="tile-name" x="124" y="187" text-anchor="middle">STRATA</text></g>
+<g id="basalt"><rect x="14" y="14" width="248" height="218" rx="18" fill="var(--sh2)"/><rect x="7" y="7" width="248" height="218" rx="18" fill="var(--sh1)"/><rect width="248" height="218" rx="18" fill="#fff" stroke="#000" stroke-width="7"/><image href="../sources/basalt-logo.svg" x="66" y="18" width="116" height="116"/><text class="tile-name" x="124" y="187" text-anchor="middle">BASALT</text></g>
+<g id="arrow"><path d="M0 0h38V-19L75 15 38 49V30H0Z" fill="var(--hl)" stroke="#000" stroke-width="5" stroke-linejoin="round"/></g>
+</defs>
+<g id="logos"><use href="#strata" transform="translate(0 0) rotate(-4 124 109)"/><use href="#arrow" transform="translate(264 88)"/><use href="#basalt" transform="translate(350 0) rotate(4 124 109)"/></g>
+</svg>
+<div class="t" id="l1">500</div><div class="t accent" id="l2">TOKENS/S ?</div>
+<script>
+const q=new URLSearchParams(location.search),v=q.get('v')||'h';document.body.dataset.v=v;
+const face=document.getElementById('portrait'),logos=document.getElementById('logos'),a=document.getElementById('l1'),b=document.getElementById('l2');
+if(v==='i'){face.style.display='none';a.textContent='224';logos.setAttribute('transform','translate(177 320) scale(1.52)')}
+else{face.src='../sources/portrait-'+(v==='h'?'kai':'technovore')+'.png';logos.setAttribute('transform','translate(56 416) scale(1.04)')}
+document.fonts.ready.then(()=>{
+ const place=(e,x,y,fs)=>Object.assign(e.style,{left:x+'px',top:y+'px',fontSize:fs+'px'});
+ if(v==='i'){
+  place(a,45,85,174);place(b,0,118,100);
+  const gap=32,total=a.offsetWidth+b.offsetWidth+gap,x=(1280-total)/2;a.style.left=x+'px';b.style.left=(x+a.offsetWidth+gap)+'px';
+  Object.assign(document.getElementById('score-brand').style,{left:x+'px',top:'20px',fontSize:'46px',height:'50px'});
+ }else{place(a,42,66,260);place(b,54,282,80)}
+ const copy=b.cloneNode(true);copy.removeAttribute('id');copy.className='t echo';const offset=parseFloat(b.style.fontSize)*.055;copy.style.left=(parseFloat(b.style.left)+offset)+'px';copy.style.top=(parseFloat(b.style.top)+offset)+'px';b.before(copy);
+});
+</script><script src="../../../../ressources/miniatures/export.js"></script>
+</body></html>
