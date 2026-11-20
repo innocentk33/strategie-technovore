@@ -5,14 +5,20 @@ Test de [VoiceStudio](https://github.com/debpalash/VoiceStudio) (moteur par déf
 - [`voicestudio.txt`](voicestudio.txt) : 55 lots pour la page **Voice**. Ne colle que le texte sous chaque ligne `LOT …`, sinon l'en-tête sera lu.
 - [`voicestudio-stories.txt`](voicestudio-stories.txt) : le même texte sans en-têtes, pour une première version complète dans l'onglet **Stories / Audiobook**. Une phrase par ligne et une ligne vide entre les lots. Il est généré depuis `voicestudio.txt` : si tu en changes un, refais l'autre.
 
-Seules des balises universelles sont utilisées (`[pause …]`, un `[sigh]`, un `[laughter]`), donc les deux fichiers marchent sur les deux onglets. Vérifié avec `verifier_script.py --mode voice` : seuls restent les sigles voulus.
+Aucune pause n'est balisée (ni `[pause]`, ni `...`) : les silences se règlent au montage. Seules balises restantes : un `[sigh]` et un `[laughter]`, donc les deux fichiers marchent sur les deux onglets. Vérifié avec `verifier_script.py --mode voice` : seuls restent les sigles voulus.
 
 ## Ce qui a changé par rapport au téléprompteur
 
 1. **Tous les nombres en toutes lettres** : prix, dates, gigas, références de cartes. La normalisation automatique lit mal « 5060 », « 31,4 » ou « 262 000 ».
-2. **Pas de majuscules d'emphase** : elles seraient épelées. ASUS, NVIDIA et VRAM sont réécrits (voir le tableau). L'emphase passe par des pauses courtes avant le mot fort, qui reste en fin de phrase comme dans ton texte.
-3. **Les lignes du téléprompteur sont recollées en phrases**. En Stories, chaque ligne est un rendu séparé avec un silence de 250 ms : tes coupures en milieu de phrase auraient haché la voix.
-4. Deux sons non verbaux seulement, à retirer si ça sonne faux :
+2. **Pas de majuscules d'emphase** : elles seraient épelées. ASUS, NVIDIA et VRAM sont réécrits (voir le tableau). L'emphase reste portée par ton texte (mot fort en fin de phrase, phrases courtes) ; les pauses viendront au montage.
+3. **Liaisons et prononciations écrites comme elles se disent (20/11, ta demande)**, pour que le moteur ne les rate pas :
+   - « plus » qui ne se prononce pas : *plu de si millions*, *plu chère*, *plu zépaisses*, *ne compile plu* ; et quand le *s* s'entend : *de pluss*, *en pluss* ;
+   - nombres + euros : *hui cent zeuros*, *quatre-vingt zeuros*, *mille quatre cent quatre-vingt-troi zeuros*, *si cent soixante-di zeuros* ;
+   - chiffres qui changent devant une consonne : *si millions*, *hui gigas*, *hui broches*, *vin novembre*, *cent vingt-hui mille*, *quatre-vingt-di soixante* ;
+   - liaisons obligatoires : *en nun mois*, *un nordinateur*, *on na vu*, *en noccasion*, *du troi zau cinq*, *deu zans*, *les zautres*, *ses zoutils*, *tes zapplis*, *un nachat*, *un nadaptateur*, *en nacceptant*, *en naccepte*, *tou ten bas*, *quatre-vingt-di za aussi*.
+   Les liaisons facultatives sont laissées de côté, pour garder ton ton parlé (*t'as*, *si t'es malin*).
+4. **Les lignes du téléprompteur sont recollées en phrases**. En Stories, chaque ligne est un rendu séparé avec un silence de 250 ms : tes coupures en milieu de phrase auraient haché la voix.
+5. Deux sons non verbaux seulement, à retirer si ça sonne faux :
    - `[sigh]` avant « Bon, la boîte dit trente-deux gigas » (lot 12) ;
    - `[laughter]` après « Noël sans cartes » (lot 20).
 
@@ -58,7 +64,7 @@ Le clonage copie ta **manière de parler**, pas seulement ton timbre. C'est donc
 | `guidance_scale` | 2,0 |
 | `speed` | 1,0 ; 1,05 si c'est plus lent que ta vraie voix |
 | `class_temperature` | essaie le lot 1 à 0, 0,3 et 0,5, choisis à l'oreille, puis ne change plus |
-| `postprocess_output` | actif (les `[pause]` restent) |
+| `postprocess_output` | actif : il coupe les blancs du moteur, tu poses les tiens au montage |
 
 Seed libre pendant les prises. Épingle-la dès qu'une prise sonne vraiment comme toi.
 
@@ -67,7 +73,7 @@ Seed libre pendant les prises. Épingle-la dès qu'une prise sonne vraiment comm
 1. Rends tout `voicestudio-stories.txt` dans Stories pour une base complète et le minutage.
 2. Sur la page Voice, refais **3 à 4 prises** des moments clés : lots 1, 2, 4, 11, 18, 20, 27, 32, 54. Nomme-les `lot11_v1.wav`, `lot11_v2.wav`…
 3. Au montage, garde la meilleure prise par phrase. Tu peux combiner des morceaux de plusieurs prises. Passe ensuite la voix dans `ressources/voix/sm7b.sh` comme d'habitude.
-4. Rappel de ta règle de montage : pas de raté, de souffle ni de blanc. Écoute en particulier les jointures des lots coupés par des `[pause]`.
+4. Ajoute les pauses au montage. Rappel de ta règle : pas de raté, de souffle ni de blanc.
 
 ## Prix à relire le 26-27/11
 
