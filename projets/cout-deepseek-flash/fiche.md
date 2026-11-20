@@ -1,5 +1,7 @@
 # Combien coûte DeepSeek V4.1 Flash chez toi ?
 
+**Publication prévue le lundi 7 décembre 2026 à 18 h (Paris).** [Calendrier du 20 novembre](../../calendrier.md)
+
 > **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > **16/11, ta demande** : la vidéo recule au **jeu. 3 déc., 18 h** (le 30 nov. va à [32 Go de VRAM](../deux-cartes-occasion/fiche.md)). [RAM, VRAM ou mémoire unifiée](../ram-vram-unifiee/fiche.md) ne la suit plus : elle passe au jeu. 31 déc. L'explication « pourquoi la RAM suffit ici » (un MoE ne lit qu'une partie de ses poids) doit donc tenir en quelques phrases dans cette vidéo.
 >

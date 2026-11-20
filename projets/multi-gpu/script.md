@@ -1,6 +1,6 @@
 # Deux cartes pour ton IA : les points à vérifier avant l’achat
 
-Version finale après revue indépendante du 16 novembre 2026. Publication : 7 décembre 2026. Base de durée : 145 mots/minute, voix seule, hors indications. V1 conservée.
+Version finale après revue indépendante du 16 novembre 2026. Publication : 10 décembre 2026. Base de durée : 145 mots/minute, voix seule, hors indications. V1 conservée.
 
 Voix : **1 512 mots** (hors crochets), **10:26 à 145 mots/minute**. Liaisons strictes : **28**, soit **1,85/100 mots**. Question et disclaimer dans les **55 premiers mots**, soit environ **0:23**. Les repères ci-dessous sont calculés sur la voix, sans ajouter de pauses de montage.
 
@@ -91,7 +91,7 @@ Sauf que le contexte voulu peut encore changer la comparaison. Une réponse cour
 
 [CROCHET : ton avis sur le niveau de bricolage que tu accepterais, facultatif.]
 
-Avant l'achat, ta décision tient sur quatre lignes : ce qui manque, ce que les ports permettent, ce que le boîtier accepte et ce que le moteur sait faire. Si les quatre sont cohérentes, la deuxième carte peut rendre service. Sinon, le giga le moins cher du tableau risque de devenir le plus encombrant de ton bureau. Et quand ajouter une carte complique trop la machine, la vidéo Mac mini ou PC gamer du 10 décembre compare une autre route. Allez, salut !
+Avant l'achat, ta décision tient sur quatre lignes : ce qui manque, ce que les ports permettent, ce que le boîtier accepte et ce que le moteur sait faire. Si les quatre sont cohérentes, la deuxième carte peut rendre service. Sinon, le giga le moins cher du tableau risque de devenir le plus encombrant de ton bureau. Et quand ajouter une carte complique trop la machine, la vidéo Mac mini ou PC gamer du 14 décembre compare une autre route. Allez, salut !
 
 ## Hors voix
 

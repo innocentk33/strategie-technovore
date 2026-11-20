@@ -294,10 +294,10 @@ avec un contexte choisi en connaissance de cause.
 
 [CROCHET : ton avis sur le compromis petit modèle rapide ou gros modèle plus lent, sans résultat personnel inventé.]
 
-Le 21 janvier,
+Le 25 janvier,
 on regardera les anciennes cartes de minage pour l’IA locale.
 Puis,
-le 25 janvier,
+le 28 janvier,
 on comparera Ollama,
 LM Studio et llama.cpp.
 Et dans les commentaires,

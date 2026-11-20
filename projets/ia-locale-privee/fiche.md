@@ -1,5 +1,7 @@
 # Ton IA locale est-elle vraiment privée ?
 
+**Publication prévue le jeudi 14 janvier 2027 à 18 h (Paris).** [Calendrier du 20 novembre](../../calendrier.md)
+
 > **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > Fiche du 10/11/2026, d'après la réserve d'[`idees.md`](../../idees.md) et le [radar du 10/11](../../etudes/radar.md) (34/40). Placée au jeu. 26 nov., puis **reculée au lun. 11 janv. 2027, 18 h, le 14/11** (provisoire, à confirmer au radar) : le 26 nov. va au [guide des cartes du Black Friday](../carte-par-budget/fiche.md). Elle est intemporelle. Vidéo **calculée** (sources, rapports de sécurité), sans essai.
 

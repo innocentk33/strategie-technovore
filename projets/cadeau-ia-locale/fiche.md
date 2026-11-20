@@ -1,5 +1,7 @@
 # Le cadeau IA locale : quel budget pour une machine qui tourne sans le cloud ?
 
+**Publication prévue le lundi 28 décembre 2026 à 18 h (Paris).** [Calendrier du 20 novembre](../../calendrier.md)
+
 > **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > Fiche du 10/11/2026, d'après le [2e radar du 10/11](../../etudes/radar.md) (34/40). Placée au **jeu. 24 déc., 18 h** dans le [`calendrier.md`](../../calendrier.md) et le [`README.md`](../../README.md). Vidéo **calculée** : règles du pilier 2 dans [`strategie.md`](../../strategie.md).
 

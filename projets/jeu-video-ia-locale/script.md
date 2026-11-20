@@ -1,6 +1,6 @@
 # Créer un petit jeu avec une IA locale : ce que montrent 16 Go
 
-Version finale après revue indépendante du 16 novembre 2026. Publication : 14 janvier 2027. Base : 145 mots/minute, voix seule, hors indications. V1 conservée.
+Version finale après revue indépendante du 16 novembre 2026. Publication : 18 janvier 2027. Base : 145 mots/minute, voix seule, hors indications. V1 conservée.
 
 Voix : **1 560 mots** (hors crochets), **10:46 à 145 mots/minute**. Liaisons strictes : **27**, soit **1,73/100 mots**. Question et disclaimer dans les **49 premiers mots**, soit environ **0:20**. Les repères ci-dessous sont calculés sur la voix, sans ajouter de pauses de montage.
 
@@ -94,7 +94,7 @@ Si tu veux commercialiser, ajoute les licences au même tableau que la VRAM. Si 
 
 [CROCHET : ton avis de joueur sur le type de petit projet que tu aurais envie de pousser. Facultatif.]
 
-Le casse-briques nous donne un premier palier documenté ; les relances du mini-Minecraft montrent la distance qui peut rester sur un projet plus large. Dans la vidéo du 18 janvier, on revient aux modèles selon ta VRAM pour choisir celui qui accompagnera ce travail. Allez, salut !
+Le casse-briques nous donne un premier palier documenté ; les relances du mini-Minecraft montrent la distance qui peut rester sur un projet plus large. Dans la vidéo du 21 janvier, on revient aux modèles selon ta VRAM pour choisir celui qui accompagnera ce travail. Allez, salut !
 
 ## Hors voix
 

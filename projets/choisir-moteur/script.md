@@ -1,6 +1,6 @@
 # Ollama, LM Studio ou llama.cpp : lequel choisir pour ton usage ?
 
-Version finale documentaire du 16/11/2026, publication provisoire du 25/01/2027. **1507 mots de voix, environ 10:24 à 145 mots/min.** Trois questions de choix appuyées sur les fonctions documentées.
+Version finale documentaire du 16/11/2026, publication provisoire du 28/01/2027. **1507 mots de voix, environ 10:24 à 145 mots/min.** Trois questions de choix appuyées sur les fonctions documentées.
 
 | Partie | Timecodes calculés |
 |---|---|
@@ -96,7 +96,7 @@ Tu cherches un gros modèle à experts avec une autre répartition de mémoire :
 
 [CROCHET : ton avis sur le confort d’usage qui compte le plus pour toi, sans essai personnel inventé.]
 
-Pour les fichiers à associer à ta carte, le guide de 4 à 16 gigas est déjà disponible. Le moteur vient donc rendre ce choix utilisable au quotidien. Et le 28 janvier, on regardera les petits modèles spécialisés et leur intérêt sur nos machines.
+Pour les fichiers à associer à ta carte, le guide de 4 à 16 gigas est déjà disponible. Le moteur vient donc rendre ce choix utilisable au quotidien. Et le 1er février, on regardera les petits modèles spécialisés et leur intérêt sur nos machines.
 
 Allez, salut !
 

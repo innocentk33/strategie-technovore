@@ -1,5 +1,7 @@
 # Ollama, LM Studio ou llama.cpp : lequel choisir pour ton IA locale ?
 
+**Publication prévue le jeudi 28 janvier 2027 à 18 h (Paris).** [Calendrier du 20 novembre](../../calendrier.md)
+
 > **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > Fiche du 15/11/2026, à ta demande (remplir les créneaux radar de janvier). Placée au **lun. 25 janv. 2027, 18 h**, **provisoire, à confirmer au radar**. Vidéo **calculée**. Idée 33 de [`strategie.md`](../../strategie.md), non notée (relevé YouTube du 15/11). Titre provisoire.
 

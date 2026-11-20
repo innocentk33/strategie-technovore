@@ -1,5 +1,7 @@
 # RAM, VRAM ou mémoire unifiée : laquelle fait tourner ton IA le plus vite ?
 
+**Publication prévue le lundi 4 janvier 2027 à 18 h (Paris).** [Calendrier du 20 novembre](../../calendrier.md)
+
 > **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > **16/11, ta demande** : la vidéo recule au **jeu. 31 déc., 18 h** (créneau radar), programmée d'avance. Elle sort donc **après** DeepSeek (3 déc.) et le [Mac mini](../mac-mini-ia/fiche.md) (10 déc.) : elle ne les « prépare » plus, elle y renvoie.
 >

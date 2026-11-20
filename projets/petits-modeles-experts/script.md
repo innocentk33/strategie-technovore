@@ -1,6 +1,6 @@
 # Un petit modèle peut-il remplacer ton IA du cloud ?
 
-Version finale après revue indépendante du 16 novembre 2026. Publication : 28 janvier 2027. Évaluations et fichiers disponibles à la date de recherche ; aucune prédiction de classement futur. Base : 145 mots/minute, voix seule. V1 conservée.
+Version finale après revue indépendante du 16 novembre 2026. Publication : 1er février 2027. Évaluations et fichiers disponibles à la date de recherche ; aucune prédiction de classement futur. Base : 145 mots/minute, voix seule. V1 conservée.
 
 Voix : **1 488 mots** (hors crochets), **10:16 à 145 mots/minute**. Liaisons strictes : **24**, soit **1,61/100 mots**. Question et disclaimer dans les **48 premiers mots**, soit environ **0:20**. Les repères ci-dessous sont calculés sur la voix, sans ajouter de pauses de montage.
 

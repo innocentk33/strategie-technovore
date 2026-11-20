@@ -1,6 +1,6 @@
 # Tableau à l'écran : mémoire, débit mémoire, prix (relevé du 18/11/2026)
 
-Débit mémoire = largeur du bus (bits) × débit par broche (Gbps) ÷ 8 (F20). Prix affichés le 18/11/2026, vendeurs tiers et imports écartés sauf mention ; ils bougeront d'ici le Black Friday (F39). Détails : `sources.md`.
+Débit mémoire = largeur du bus (bits) × débit par broche (Gbps) ÷ 8 (F20). Prix affichés le 18/11/2026, vendeurs tiers et imports écartés sauf mention ; revérifier les offres avant la voix prévue pour la publication du 7 janvier (F39). Détails : `sources.md`.
 
 | Carte | Mémoire | Calcul du débit | Débit mémoire (Go/s) | Prix relevé le 18/11 | État | Marchand |
 |---|---:|---|---:|---:|---|---|

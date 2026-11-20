@@ -251,10 +251,10 @@ le modèle local conserve ses capacités et ses limites.
 
 [CROCHET : ton avis sur le compromis petit assistant local ou agent plus autonome, sans résultat personnel inventé.]
 
-Le 11 janvier,
+Le 14 janvier,
 on regardera ce que le local change pour ta vie privée,
 avec les données qui restent sur la machine et les fonctions connectées.
-Et le 18 janvier,
+Et le 21 janvier,
 le guide de 4 à 16 gigas donnera les candidats
 pour ta carte.
 

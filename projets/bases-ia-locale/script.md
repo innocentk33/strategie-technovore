@@ -2,7 +2,7 @@
 
 **Titre** : *IA en local : comment lire le nom d'un modèle (35B, A3B, Q4_K_M…)* (titre 3 de la fiche, recommandé).
 
-**Version finale du 23/10/2026** (phase 4, après le [grill](grill-v1.md)). L'ancienne version reste dans [`script-v1.md`](script-v1.md). Faits : [`sources.md`](sources.md), colonne « 2e vérif », plus les lignes 55 à 60 ajoutées au grill. Sortie : **lun. 7 déc. 2026, 18 h** (d'abord le 30 nov., puis le 2 nov. ; passée au 7 déc. le 24/10, derrière la vidéo d'installation).
+**Version finale du 23/10/2026** (phase 4, après le [grill](grill-v1.md)). L'ancienne version reste dans [`script-v1.md`](script-v1.md). Faits : [`sources.md`](sources.md), colonne « 2e vérif », plus les lignes 55 à 60 ajoutées au grill. Sortie prévue le jeudi 24 décembre 2026 à 18 h.
 
 ## Changements depuis la V1
 

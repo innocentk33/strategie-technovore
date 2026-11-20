@@ -1,5 +1,7 @@
 # Mac mini ou PC gamer pour l'IA en local ?
 
+**Publication prévue le lundi 14 décembre 2026 à 18 h (Paris).** [Calendrier du 20 novembre](../../calendrier.md)
+
 > **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > **14/11** : [RAM, VRAM ou mémoire unifiée](../ram-vram-unifiee/fiche.md) sortait juste avant, le jeu. 3 déc. ; **depuis le 16/11, elle sort après, le jeu. 31 déc.** : pose donc ici la mémoire unifiée en deux phrases. Elle pose la mémoire unifiée ; ici, on ne la réexplique pas, on y renvoie et on passe au duel.
 >

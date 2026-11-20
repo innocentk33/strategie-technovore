@@ -1,6 +1,6 @@
 # Carte graphique pour l’IA locale : combien coûte la mémoire dont tu as besoin ?
 
-Version 3.1 du 18/11/2026, corrigée après `grill-v3.md` (B1 à B4, I-1 à I-10, détails). Sortie : jeudi 26 novembre 2026. V2 dans `script-v2.md`, V1 dans `script-v1.md`. Seule source de faits : `sources.md` (F1 à F45).
+Version 3.1 du 18/11/2026, corrigée après `grill-v3.md` (B1 à B4, I-1 à I-10, détails). Sortie prévue le jeudi 7 janvier 2027 à 18 h. V2 dans `script-v2.md`, V1 dans `script-v1.md`. Seule source de faits : `sources.md` (F1 à F45).
 
 **Production :** vidéo documentaire, aucun essai de l'auteur ; mesures publiées attribuées, prix « relevés le 18 novembre ».
 
@@ -35,7 +35,7 @@ Version 3.1 du 18/11/2026, corrigée après `grill-v3.md` (B1 à B4, I-1 à I-10
 
 [VISUEL : Deux barres : RTX 3060 12 Go (déduit), 2021 : 41,97 tok/s ; RTX 4060 Ti 16 Go, 2023 : 34,31 tok/s. « Mesures publiées, même testeur, Qwen3 8B 4 bits, contexte 16K, llama.cpp ».]
 
-Tu t'apprêtes à mettre 600 euros dans une carte graphique au Black Friday,
+Tu t'apprêtes à mettre 600 euros dans une carte graphique,
 pour faire tourner une IA chez toi ?
 Regarde : une RTX 3060 de 2021 écrit à 42 tokens par seconde.
 Une RTX 4060 Ti 16 gigas de 2023, à 34.
@@ -299,7 +299,7 @@ comme le Qwen 27B en 4 bits. [F37, F25, F43]
 
 ### Fin
 
-Les prix vont bouger d'ici le Black Friday,
+Ces prix datent de notre dernier relevé de novembre,
 alors refais le calcul avant de payer :
 mémoire d'abord, débit ensuite.
 

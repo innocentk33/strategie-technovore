@@ -120,7 +120,7 @@ Réduire les bits, ça s'appelle la quantification. C'est le JPEG de l'IA : tu �
 
 Et ces noms de fichiers, morceau par morceau, je leur consacre une vidéo entière bientôt.
 
-[VISUEL : carte YouTube vers *IA en local : comment lire le nom d'un modèle*, à ajouter le 7 déc., le jour de sa sortie.]
+[VISUEL : carte YouTube vers *IA en local : comment lire le nom d'un modèle*, à ajouter le 24 déc., le jour de sa sortie.]
 
 Pour vérifier, j'ai pris les fichiers d'antirez. C'est le développeur qui a créé Redis, et il a écrit son propre moteur pour faire tourner ce modèle sur Mac. Sa version en quatre bits fait trois cent seize gigas, celle en deux bits cent soixante-trois. La formule tombe juste. [S5] [S5 bis]
 

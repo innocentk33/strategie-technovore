@@ -1,4 +1,4 @@
-Tu t'apprêtes à mettre 600 euros dans une carte graphique au Black Friday,
+Tu t'apprêtes à mettre 600 euros dans une carte graphique,
 pour faire tourner une IA chez toi ?
 Regarde : une RTX 3060 de 2021 écrit à 42 tokens par seconde.
 Une RTX 4060 Ti 16 gigas de 2023, à 34.
@@ -188,7 +188,7 @@ En fait, tu la prends si tu veux des modèles
 qui ne rentrent pas dans 12,
 comme le Qwen 27B en 4 bits.
 
-Les prix vont bouger d'ici le Black Friday,
+Ces prix datent de notre dernier relevé de novembre,
 alors refais le calcul avant de payer :
 mémoire d'abord, débit ensuite.
 

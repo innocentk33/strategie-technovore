@@ -1,6 +1,6 @@
 # 54 Go pour 35 dollars : à qui cette récupération peut-elle servir ?
 
-Version finale après revue indépendante du 16 novembre 2026. Publication : 21 janvier 2027. Angle documentaire par profils, sans classement d’offres ni tarif reproductible. Base : 145 mots/minute, voix seule. V1 conservée.
+Version finale après revue indépendante du 16 novembre 2026. Publication : 25 janvier 2027. Angle documentaire par profils, sans classement d’offres ni tarif reproductible. Base : 145 mots/minute, voix seule. V1 conservée.
 
 Voix : **1 581 mots** (hors crochets), **10:54 à 145 mots/minute**. Liaisons strictes : **24**, soit **1,52/100 mots**. Question et disclaimer dans les **42 premiers mots**, soit environ **0:17**. Les repères ci-dessous sont calculés sur la voix, sans ajouter de pauses de montage.
 
@@ -97,7 +97,7 @@ Si cette vidéo t'a évité un mauvais achat, abonne-toi.
 
 Si tu as déjà le rig et un modèle MoE adapté, récupérer ces cartes peut ouvrir des possibilités. Si tu veux surtout travailler sans gérer des versions anciennes, une carte plus récente et documentée mérite sa place dans la comparaison. Et si ton budget est très serré, le petit modèle qui tient dans ta machine actuelle reste une option à regarder avant l'achat.
 
-Le 25 janvier, on regarde justement le choix du moteur : celui qui sait utiliser ta machine et ton fichier. Puis on revient aux petits modèles spécialisés le 28. Allez, salut !
+Le 28 janvier, on regarde justement le choix du moteur : celui qui sait utiliser ta machine et ton fichier. Puis on revient aux petits modèles spécialisés le 1er février. Allez, salut !
 
 ## Hors voix
 

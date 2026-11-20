@@ -1,5 +1,7 @@
 # Deux cartes graphiques pour l'IA : à savoir avant d'acheter la deuxième
 
+**Publication prévue le jeudi 10 décembre 2026 à 18 h (Paris).** [Calendrier du 20 novembre](../../calendrier.md)
+
 > **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > Fiche du 14/11/2026, à ta demande. Placée au **lun. 7 déc., 18 h**, à la place de « petits budgets », qui devient [Quel modèle ta carte peut faire tourner ?](../modele-par-vram/fiche.md) (25 janv., provisoire). Elle sort deux semaines après [32 Go de VRAM au moins cher](../deux-cartes-occasion/fiche.md) (23 nov.), dont elle est la suite. Vidéo **calculée**. Idée 26 de [`strategie.md`](../../strategie.md), non notée (ta demande du 14/11). Titre provisoire.
 

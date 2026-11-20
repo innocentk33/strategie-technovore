@@ -1,5 +1,7 @@
 # Créer un jeu vidéo avec une IA locale, sur une carte de 16 Go
 
+**Publication prévue le lundi 18 janvier 2027 à 18 h (Paris).** [Calendrier du 20 novembre](../../calendrier.md)
+
 > **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent. Les archives Strata sont facultatives ; les schémas documentaires prévus permettent de monter sans ces rushes.
 > Fiche du 15/11/2026, ton choix (à la place de JARVIS, qui retourne en réserve). Placée au **jeu. 14 janv. 2027, 18 h**, **provisoire, à confirmer au radar**. Vidéo **calculée**, avec ce que tu as déjà filmé pour Strata. Idée 31 de [`strategie.md`](../../strategie.md), non notée (relevé YouTube du 15/11). Titre provisoire.
 

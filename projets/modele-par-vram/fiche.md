@@ -1,5 +1,7 @@
 # Quel modèle ta carte peut faire tourner ? De 4 à 16 Go de VRAM
 
+**Publication prévue le jeudi 21 janvier 2027 à 18 h (Paris).** [Calendrier du 20 novembre](../../calendrier.md)
+
 > **Version de référence du 16/11/2026 : [script corrigé](script.md), [téléprompteur](teleprompteur.txt), [sources](sources.md) et [roast indépendant](grill-v1.md).** Format documentaire calculé : aucun nouvel essai, achat, enregistrement logiciel ou ouverture de LM Studio à produire. Les pistes ci-dessous restent l’historique ; les faits et limites du script corrigé prévalent.
 > **Fiche du 14/11/2026, à ta demande** (ex-`petit-budget-ia/`, *L'IA locale sans grosse carte graphique*, renommée le 14/11). Les petits budgets sont désormais traités par paliers de VRAM. La thèse « la RAM plutôt que la carte » part dans [RAM, VRAM ou mémoire unifiée](../ram-vram-unifiee/fiche.md) (3 déc.), et le créneau du 7 déc. va au [multi-GPU](../multi-gpu/fiche.md). Placée au lun. 25 janv., puis au **lun. 18 janv. 2027, 18 h** (le 15/11, à la place de DeepSeek, avancé au 30 nov.), **provisoire, à confirmer au radar**. Vidéo **calculée**. Idée 27 de [`strategie.md`](../../strategie.md), non notée (ta demande du 14/11). Titre provisoire. Idée de départ (05/11) : le public sans carte de 16 Go (63 % en Afrique).
 

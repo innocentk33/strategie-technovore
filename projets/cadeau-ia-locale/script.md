@@ -1,6 +1,6 @@
 # Offrir une IA locale : trois budgets, avec leurs limites
 
-Script corrigé du 16/11/2026, créneau du 24 décembre. **1550 mots de voix, environ 10:41 à 145 mots/min.** Relevés et recommandations documentaires, aucun essai personnel.
+Script corrigé du 16/11/2026, créneau du 28 décembre. **1550 mots de voix, environ 10:41 à 145 mots/min.** Relevés et recommandations documentaires, aucun essai personnel.
 
 | Partie | Timecodes calculés |
 |---|---|
@@ -28,7 +28,7 @@ Comme exemple, Qwen 3.5 en 4 milliards de paramètres existe dans un fichier 4 b
 
 Donc, dans une machine avec 32 gigas de RAM, ce petit fichier laisse de la marge sur le papier. Ça ne donne pas la vitesse du processeur. Une petite boîte de bureau peut avoir beaucoup de mémoire et répondre plus lentement qu’une carte graphique qui en a moins. [F8]
 
-Autour de 500 euros, la piste reste à confirmer : une page de Dell OptiPlex reconditionné affiche 493 euros, avec 32 gigas de RAM et un SSD de 128 gigas. Mais sa date de livraison est déjà passée. La TVA n’est pas établie dans ce relevé. Donc ces 493 euros restent hors comparaison TTC validée, avec une disponibilité non confirmée pour Noël. [F1]
+Autour de 500 euros, la piste reste à confirmer : une page de Dell OptiPlex reconditionné affiche 493 euros, avec 32 gigas de RAM et un SSD de 128 gigas. Mais sa date de livraison est déjà passée. La TVA n’est pas établie dans ce relevé. Donc ces 493 euros restent hors comparaison TTC validée, avec une disponibilité à revérifier avant de commander. [F1]
 
 Ce prix est celui d’un exemple affiché. Il ne dit pas que toutes les machines à 500 euros offrent la même chose. Le processeur exact, le stockage et la configuration font partie de la fiche. Un nom de famille de PC ne suffit pas pour comparer deux annonces.
 
@@ -94,7 +94,7 @@ Voilà les trois profils. Autour de 500 euros, un PC reconditionné peut servir 
 
 Avant de choisir, demande-toi surtout quelle tâche la personne fera dès le lendemain. Le budget utile réunit donc la machine, les accessoires manquants et l’usage réellement attendu.
 
-Le 28 décembre, on comparera louer, acheter ou s’abonner pour choisir comment payer ce service. Et pour détailler l’achat d’une carte seule, le comparatif par budget est déjà disponible.
+Le 31 décembre, on comparera louer, acheter ou s’abonner pour choisir comment payer ce service. Et pour détailler l’achat d’une carte seule, le comparatif par budget est prévu le 7 janvier.
 
 Allez, salut !
 

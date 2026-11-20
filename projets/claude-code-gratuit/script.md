@@ -1,6 +1,6 @@
 # Claude Code avec une IA locale : connexion, mémoire et tâches réalistes
 
-Script corrigé du 16/11/2026, créneau du 7 janvier 2027. **1537 mots de voix, environ 10:36 à 145 mots/min.** Relevés et recommandations documentaires, aucun essai personnel.
+Script corrigé du 16/11/2026, créneau du 11 janvier 2027. **1537 mots de voix, environ 10:36 à 145 mots/min.** Relevés et recommandations documentaires, aucun essai personnel.
 
 | Partie | Timecodes calculés |
 |---|---|
@@ -92,7 +92,7 @@ Le moteur déjà utilisé peut aussi simplifier ce choix. Si tes modèles sont d
 
 [CROCHET : ton avis sur le compromis petit assistant local ou agent plus autonome, sans résultat personnel inventé.]
 
-Le 11 janvier, on regardera ce que le local change pour ta vie privée, avec les données qui restent sur la machine et les fonctions connectées. Et le 18 janvier, le guide de 4 à 16 gigas donnera les candidats pour ta carte.
+Le 14 janvier, on regardera ce que le local change pour ta vie privée, avec les données qui restent sur la machine et les fonctions connectées. Et le 21 janvier, le guide de 4 à 16 gigas donnera les candidats pour ta carte.
 
 Allez, salut !
 

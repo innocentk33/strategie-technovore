@@ -1,6 +1,6 @@
 # Mac mini ou PC gamer : quand les 32 Go justifient l’achat
 
-Script corrigé du 16/11/2026, créneau du 10 décembre. **1713 mots de voix, environ 11:49 à 145 mots/min.** Aucun duel PC/Mac à conditions identiques n’est revendiqué. Prix daté, mémoire partagée et hypothèses financières identifiés.
+Script corrigé du 16/11/2026, créneau du 14 décembre. **1713 mots de voix, environ 11:49 à 145 mots/min.** Aucun duel PC/Mac à conditions identiques n’est revendiqué. Prix daté, mémoire partagée et hypothèses financières identifiés.
 
 | Partie | Timecodes calculés |
 |---|---|
@@ -102,7 +102,7 @@ Par contre, si tu as déjà une carte qui fait tenir ton modèle, la première q
 
 [CROCHET : ton avis sur l’usage d’une deuxième machine, sans prétendre avoir testé un Mac.]
 
-Pour les autres routes vers beaucoup de mémoire, le comparatif 32 gigas détaille les options déjà publiées. Et le 14 décembre, on calculera le coût d’un modèle cloud installé chez toi, pour mettre le matériel et l’usage dans le même budget.
+Pour les autres routes vers beaucoup de mémoire, le comparatif 32 gigas détaille les options déjà publiées. Dans la vidéo du 1er décembre, on a calculé le coût d’un modèle cloud installé chez toi, pour mettre le matériel et l’usage dans le même budget.
 
 Allez, salut !
 

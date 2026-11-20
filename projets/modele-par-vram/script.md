@@ -1,6 +1,6 @@
 # De 4 à 16 Go : un modèle utile pour la carte que tu as déjà
 
-Version finale documentaire du 16/11/2026, publication provisoire du 18/01/2027. **1735 mots de voix, environ 11:58 à 145 mots/min.** Candidats par usage et mesures publiées ; aucun essai auteur.
+Version finale documentaire du 16/11/2026, publication provisoire du 21/01/2027. **1735 mots de voix, environ 11:58 à 145 mots/min.** Candidats par usage et mesures publiées ; aucun essai auteur.
 
 | Partie | Timecodes calculés |
 |---|---|
@@ -109,7 +109,7 @@ Le tableau te donne cinq points de départ avec la carte que tu as. 4 gigas : pe
 
 [CROCHET : ton avis sur le compromis petit modèle rapide ou gros modèle plus lent, sans résultat personnel inventé.]
 
-Le 21 janvier, on regardera les anciennes cartes de minage pour l’IA locale. Puis, le 25 janvier, on comparera Ollama, LM Studio et llama.cpp. Et dans les commentaires, donne ta carte, sa mémoire et l’usage qui te manque : ça permet de parler d’un besoin concret.
+Le 25 janvier, on regardera les anciennes cartes de minage pour l’IA locale. Puis, le 28 janvier, on comparera Ollama, LM Studio et llama.cpp. Et dans les commentaires, donne ta carte, sa mémoire et l’usage qui te manque : ça permet de parler d’un besoin concret.
 
 Allez, salut !
 

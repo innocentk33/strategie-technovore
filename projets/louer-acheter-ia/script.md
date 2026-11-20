@@ -2,7 +2,7 @@
 
 **Titre** : *Louer, acheter ou s'abonner : j'ai fait le calcul pour l'IA* (titre mixte recommandé par la [fiche](fiche.md)).
 
-**Sortie** : lun. 4 janv. 2027 à 18 h (bonnes résolutions : « je coupe mes abonnements »). Pilier « IA chez moi », format **calculé**. V2 du 23/10/2026 : corrections du [grill](grill-v1.md) appliquées sur le [script v1](script-v1.md), qui reste tel quel.
+**Sortie** : jeu. 31 déc. 2026 à 18 h (bonnes résolutions : « je coupe mes abonnements »). Pilier « IA chez moi », format **calculé**. V2 du 23/10/2026 : corrections du [grill](grill-v1.md) appliquées sur le [script v1](script-v1.md), qui reste tel quel.
 
 **Mis à jour le 23/10 (soir), à ta demande : plus d'électricité, le seul coût de l'achat est le prix de la carte.** La section « Acheter : l'électricité » sort, et les seuils sont recalculés : Pro 89 mois (plus de 7 ans au lieu de 12), Max 100 $ 18 mois (au lieu de 19), Max 200 $ 9 mois, PC complet 38 mois (au lieu de 41), location médiane 38 mois (au lieu de 45), la moins chère 59 mois (au lieu de 79). Les timecodes après 2:59 reculent d'environ 1:30, à recaler sur la vraie prise.
 
@@ -158,7 +158,7 @@ Et d'occasion ? Pour la 5080, oublie : en ce moment, elle coûte quasiment le m�
 
 [VISUEL : deux étiquettes : « pro : garantie 2 ans, même d'occasion » ; « particulier : vices cachés, à prouver ». Source : `deux-cartes-occasion/sources.md`, conseils 6 et 7 (Code de la consommation L217-3, L217-7, L219-1, L221-18 ; Code civil 1641, 1648).]
 
-[SI LA VIDÉO DES DEUX CARTES D'OCCASION EST SORTIE (21/12) : « Et deux cartes d'occasion pour additionner la mémoire, j'ai fait le calcul dans une vidéo complète : si tu veux le détail, elle est là. » + CARTE YOUTUBE.]
+[SI LA VIDÉO DES DEUX CARTES D'OCCASION EST SORTIE (30/11) : « Et deux cartes d'occasion pour additionner la mémoire, j'ai fait le calcul dans une vidéo complète : si tu veux le détail, elle est là. » + CARTE YOUTUBE.]
 
 [VISUEL : ton PC de 2025 : 2 000 €, dont la 5080 à 1 100 € ; la RAM : 92,95 € en 2025, 560 € sur Amazon. Tes chiffres du 24/10/2026 : revérifie le prix d'Amazon au relevé du 2/01.]
 

@@ -300,8 +300,8 @@ est ton problème.
 
 Pour les autres routes vers beaucoup de mémoire,
 le comparatif 32 gigas détaille les options déjà publiées.
-Et le 14 décembre,
-on calculera le coût d’un modèle cloud installé chez toi,
+Dans la vidéo du 1er décembre,
+on a calculé le coût d’un modèle cloud installé chez toi,
 pour mettre le matériel et l’usage dans le même budget.
 
 Allez,

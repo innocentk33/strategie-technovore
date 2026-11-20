@@ -1,6 +1,6 @@
 # RAM, VRAM ou mémoire unifiée : laquelle aide vraiment ton IA ?
 
-Version corrigée après revue indépendante Astra. Sources au16/11/2026, diffusion prévue31/12. Calculs et mesures publiques distincts ; aucune manipulation requise.
+Version corrigée après revue indépendante Astra. Sources au16/11/2026, diffusion prévue le 4 janvier 2027. Calculs et mesures publiques distincts ; aucune manipulation requise.
 
 <!-- METRICS -->
 **Voix : 1587 mots · 10:57 à 145 mots/min.** Les balises ne sont pas lues.
@@ -106,7 +106,7 @@ Si cette vidéo t’a évité un mauvais achat, abonne-toi.
 
 [CROCHET : ton avis sur le compromis entre vitesse, capacité et simplicité. Facultatif.]
 
-La vidéo prévue le 18 janvier sur les modèles par taille de carte reprendra ce calcul par paliers concrets. Pour aujourd'hui, garde ces trois lignes avant d'acheter : la place du fichier, la place de la conversation et le trajet des données pendant la réponse. C'est là que tes gigas deviennent utiles. Allez, salut !
+La vidéo prévue le 21 janvier sur les modèles par taille de carte reprendra ce calcul par paliers concrets. Pour aujourd'hui, garde ces trois lignes avant d'acheter : la place du fichier, la place de la conversation et le trajet des données pendant la réponse. C'est là que tes gigas deviennent utiles. Allez, salut !
 
 
 ## Crochets et production

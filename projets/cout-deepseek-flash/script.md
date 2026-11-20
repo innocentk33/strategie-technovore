@@ -1,6 +1,6 @@
 # DeepSeek V4 Flash sans carte graphique : les 64 Go valent-ils leur coût ?
 
-Script corrigé du 16/11/2026, publication prévue le 3 décembre. **1529 mots, environ 10:33 à 145 mots/min.** Prix relevés le 16 novembre ; trois exemples de kits de bureau, sans classement du marché. Mesure CPU unique explicitement attribuée.
+Script corrigé du 16/11/2026, publication prévue le 7 décembre. **1529 mots, environ 10:33 à 145 mots/min.** Prix relevés le 16 novembre ; trois exemples de kits de bureau, sans classement du marché. Mesure CPU unique explicitement attribuée.
 
 | Partie | Timecodes calculés |
 |---|---|
@@ -94,7 +94,7 @@ Tu veux exactement le V4.1 du service actuel, ou une qualité proche du modèle 
 
 Donc, si la machine est déjà équipée, le résultat CPU ouvre une possibilité intéressante. Si tu dois acheter beaucoup de mémoire, le coût de cette extension doit répondre à un usage réel. Et si tu veux une autre qualité, le choix du fichier vient avant celui du kit.
 
-Lundi 7 décembre, on regarde une autre route : plusieurs cartes graphiques. Ce sera l’occasion de comparer ce que la mémoire permet et ce que la répartition du travail demande au PC.
+Jeudi 10 décembre, on regarde une autre route : plusieurs cartes graphiques. Ce sera l’occasion de comparer ce que la mémoire permet et ce que la répartition du travail demande au PC.
 
 Allez, salut !
 

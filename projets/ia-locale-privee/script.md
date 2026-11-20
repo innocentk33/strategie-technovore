@@ -1,6 +1,6 @@
 # Ton IA locale est-elle vraiment privée ?
 
-Version finale après revue indépendante du 16 novembre 2026. Publication : 11 janvier 2027. Base : 145 mots/minute, voix seule, hors indications. V1 conservée.
+Version finale après revue indépendante du 16 novembre 2026. Publication : 14 janvier 2027. Base : 145 mots/minute, voix seule, hors indications. V1 conservée.
 
 Voix : **1 596 mots** (hors crochets), **11:00 à 145 mots/minute**. Liaisons strictes : **28**, soit **1,75/100 mots**. Question et disclaimer dans les **55 premiers mots**, soit environ **0:23**. Les repères ci-dessous sont calculés sur la voix, sans ajouter de pauses de montage.
 

@@ -1,5 +1,7 @@
 # Louer, acheter ou s'abonner : qu'est-ce qui coûte le moins cher pour l'IA ?
 
+**Publication prévue le jeudi 31 décembre 2026 à 18 h (Paris).** [Calendrier du 20 novembre](../../calendrier.md)
+
 > Ajoutée le 21/10. Analyse : [`strategie.md`](../../strategie.md), idée 15. Étude source : [`etudes/kai.md`](../../etudes/kai.md), idée 4. Planning : [`calendrier.md`](../../calendrier.md), S9-S11. **Publication : lun. 4 janv. à 18 h, préparée pendant les fêtes.**
 
 | Champ | Détail |

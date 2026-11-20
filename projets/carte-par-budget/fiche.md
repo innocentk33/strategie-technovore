@@ -1,4 +1,6 @@
-# La meilleure carte graphique pour l'IA locale, à chaque budget (Black Friday)
+# Carte graphique pour l’IA locale : combien coûte la mémoire dont tu as besoin ?
+
+> **20/11/2026** — Le créneau du 26 novembre revient au [setup Black Friday pour l’IA locale](../setup-black-friday-ia-locale/fiche.md). Le guide sur la carte seule est prévu le **jeudi 7 janvier 2027 à 18 h**, après la vidéo sur la RAM et la VRAM. Revérifier les offres et dater les prix avant la voix.
 
 > **Angle du 18/11/2026 (ta demande)** : « tu t'apprêtes à mettre 600 € dans une carte graphique au Black Friday pour l'IA locale ». Choisir comme pour le jeu ne marche pas : la mémoire d'abord (ce qui rentre), puis le débit mémoire (la vitesse d'écriture). V3 réécrite et grillée ([grill-v3.md](grill-v3.md)), recherches dans `recherche/`. Les paliers 300/500/800 € ci-dessous sont l'historique.
 > **Titres, ton choix du 19/11/2026** : test A/B entre A, *Carte graphique pour l’IA locale : combien coûte la mémoire dont tu as besoin ?* (titre actuel, gardé dans le README et le calendrier), et B, *N'achète pas une carte graphique pour l'IA locale avant d'avoir vu cette vidéo*.
@@ -20,7 +22,7 @@
 ## À ne pas confondre avec
 
 - [Qwen 4 : quelle carte acheter (ou pas)](../qwen-4-cartes/fiche.md) (publiée le 12/11) : là, on choisissait une carte pour **un** modèle. Ici, on donne la meilleure carte **par budget**, quel que soit le modèle.
-- [32 Go de VRAM au moins cher](../deux-cartes-occasion/fiche.md) (30 nov., décalée le 16/11 : elle sort **après** celle-ci, on l'annonce au lieu d'y renvoyer) : c'est le palier du haut. Ici, on le cite en une phrase et on y renvoie.
+- [32 Go de VRAM au moins cher](../deux-cartes-occasion/fiche.md) (30 novembre, avant ce guide) : c'est le palier du haut. Ici, on le cite en une phrase et on y renvoie.
 - [Le cadeau IA locale](../cadeau-ia-locale/fiche.md) (24 déc.) : c'est une machine entière, en paliers de budget. Il reprendra ces prix, mis à jour.
 
 ## Pistes (à sourcer)
