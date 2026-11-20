@@ -1,0 +1,2 @@
+# Les scripts tiers de la régie sont chargés avec une empreinte SRI : un octet changé (CRLF sous Windows) et le navigateur les bloque.
+ressources/regie/vendor/*.js -text

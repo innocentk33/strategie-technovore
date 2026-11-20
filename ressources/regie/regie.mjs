@@ -184,8 +184,10 @@ function majLigne(src, nom, statut) {
   const lignes = src.split('\n');
   const i = lignes.findIndex(l => l.startsWith('|') && l.includes(`(projets/${nom}/fiche.md)`));
   if (i < 0) return null;
+  // Garde le « \r » des fichiers en CRLF (checkout Windows) pour ne pas mélanger les fins de ligne
+  const cr = lignes[i].endsWith('\r') ? '\r' : '';
   const l = lignes[i].trimEnd(), fin = l.lastIndexOf('|'), debut = l.lastIndexOf('|', fin - 1);
-  lignes[i] = `${l.slice(0, debut + 1)} ${nouvelleCellule(l.slice(debut + 1, fin).trim(), statut)} ${l.slice(fin)}`;
+  lignes[i] = `${l.slice(0, debut + 1)} ${nouvelleCellule(l.slice(debut + 1, fin).trim(), statut)} ${l.slice(fin)}${cr}`;
   return lignes.join('\n');
 }
 
@@ -239,8 +241,10 @@ function envoyerFichier(res, abs) {
 const youtube = createYouTube({ key: readYouTubeKey(ROOT) });
 const youtubeData = force => youtube.get(projets().map(p => p.youtubeVideoId).filter(Boolean), { force });
 const ecoutes = new Set();
-fs.watch(ROOT, { recursive: true }, (_, f) => {
-  if (!f || /(^|\/)(\.|node_modules\/|claude-youtube\/)/.test(f)) return;
+fs.watch(ROOT, { recursive: true }, (_, brut) => {
+  // Sous Windows, fs.watch donne « projets\uber\fiche.md » : la page attend des « / »
+  const f = brut?.split(path.sep).join('/');
+  if (!f ||/(^|\/)(\.|node_modules\/|claude-youtube\/)/.test(f)) return;
   for (const res of ecoutes) res.write(`data: ${JSON.stringify(f)}\n\n`);
 });
 
