@@ -81,10 +81,11 @@ Les lots de prix sont isolés pour pouvoir les regénérer seuls si un prix boug
 
 ## Conventions d'écriture (21/11, ta demande)
 
-Pour ce script et les prochains écrits pour la voix de synthèse :
+Elles sont maintenant dans [`.claude/rules/voix-synthese.md`](../../.claude/rules/voix-synthese.md), lisible par tout agent. Rappel :
 
 - **Ti** → « té i »
 - liaison en **n'un** (« en n'un mois ») ; **d'un** reste tel quel
-- **9060 XT** tout en lettres → « quatre-vingt-dix soixante ix té »
+- **numéros de carte toujours en milliers** : 5060 → « cinq mille soixante », 5090 → « cinq mille quatre-vingt-dix »
+- **9060 XT** → « neuf mille soixante ix té »
 - **R9700** → « èr neuf mille sept cent »
 - **ASUS** → « azus »

@@ -167,7 +167,7 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R1",
      "temps_voix": [
       241.152,
@@ -188,11 +188,11 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R2",
      "temps_voix": [
-      554.725,
-      556.947
+      555.053,
+      557.275
      ],
      "traitement": "×1.1 (atempo), +2.30 demi-ton (PSOLA), +2.6 dB"
     }
@@ -220,7 +220,7 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R14",
      "temps_voix": [
       10.545,
@@ -241,7 +241,7 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R3",
      "temps_voix": [
       170.669,
@@ -250,7 +250,7 @@
      "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +4.0 dB"
     },
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "G1",
      "temps_voix": [
       202.405,
@@ -271,7 +271,7 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R4",
      "temps_voix": [
       194.453,
@@ -292,7 +292,7 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R5",
      "temps_voix": [
       230.4,
@@ -313,11 +313,11 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R6",
      "temps_voix": [
-      339.91,
-      345.771
+      340.073,
+      345.934
      ],
      "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +1.8 dB"
     }
@@ -334,11 +334,11 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R7",
      "temps_voix": [
-      367.146,
-      370.691
+      367.309,
+      370.854
      ],
      "traitement": "×1.1 (atempo), +0.37 demi-ton (PSOLA), -0.1 dB"
     }
@@ -366,11 +366,11 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R8",
      "temps_voix": [
-      406.396,
-      407.691
+      406.559,
+      407.854
      ],
      "traitement": "×1.1 (atempo), +1.53 demi-ton (PSOLA), +4.4 dB"
     }
@@ -398,11 +398,11 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R9",
      "temps_voix": [
-      439.553,
-      448.426
+      439.716,
+      448.589
      ],
      "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +3.5 dB"
     }
@@ -419,11 +419,11 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R10",
      "temps_voix": [
-      448.861,
-      452.91
+      449.024,
+      453.073
      ],
      "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +1.7 dB"
     }
@@ -440,11 +440,11 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R11",
      "temps_voix": [
-      471.231,
-      480.776
+      471.394,
+      480.939
      ],
      "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +0.8 dB"
     }
@@ -461,11 +461,11 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R12",
      "temps_voix": [
-      481.226,
-      485.708
+      481.389,
+      485.871
      ],
      "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +3.9 dB"
     }
@@ -482,11 +482,11 @@
    "verifie": true,
    "a_servi": [
     {
-     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »), temps de la voix v6",
      "id": "R13",
      "temps_voix": [
-      486.158,
-      489.875
+      486.321,
+      490.038
      ],
      "traitement": "×1.2 (atempo), +1.82 demi-ton (PSOLA), +4.0 dB"
     }

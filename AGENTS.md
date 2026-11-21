@@ -34,6 +34,7 @@ Les règles détaillées sont dans `.claude/rules/`. Claude Code les charge seul
 | `projets/**/fiche.md`, `brouillon*.md`, `script*.md`, `grill*.md`, `storyboard.md`, `teleprompteur*` | `.claude/rules/script.md` (15 et 30 premières secondes, liaisons orales, téléprompteur) |
 | `projets/**/miniature/**`, `projets/**/fiche.md`, `ressources/miniatures/**` | `.claude/rules/miniatures.md` (style unique d'OpenCode depuis le 11/11, variantes, logos, outils de rendu) |
 | `ressources/voix/**`, `ressources/regie/**` | `.claude/rules/ressources.md` (chaîne de voix, régie) |
+| `projets/**/voicestudio*`, ou tout texte préparé pour une voix de synthèse | `.claude/rules/voix-synthese.md` (pas de pause, nombres en lettres, liaisons écrites, conventions de prononciation) |
 
 Une `fiche.md` demande donc deux fichiers de règles (script et miniatures). Ces fichiers commencent par un en-tête `paths:` (propre à Claude Code) : ignore-le, la table ci-dessus dit déjà quand les lire.
 
@@ -44,7 +45,7 @@ Les faits comptent : chaque affirmation d'une miniature ou d'un script doit êtr
 - **Sources anonymes** : dans la voix d'un script, on ne nomme jamais une chaîne YouTube ni un créateur (« un utilisateur relève », « une vidéo en espagnol ») ; les noms restent dans `sources.md` et, au besoin, dans la description. Pas d'ouverture égocentrée du type « Cette carte, c'est la mienne ».
 - **Vendeurs anonymes** : une annonce d'occasion se cite par « sur leboncoin » ou « en occasion », avec son prix, jamais la ville ni le pseudo du vendeur (ni dans le téléprompteur, ni dans les `[VISUEL]`). Pas de petit marchand nommé dans le hook. Les villes restent dans `recherche/` et `sources.md`.
 - **Prix** : le meilleur prix du jour, tous marchands confondus (Amazon d'abord), daté ; jamais « même marchand, même jour ». Le marchand se nomme dans la voix.
-- **Voix de synthèse (VoiceStudio)** : aucune pause balisée, liaisons écrites comme elles se disent ; détail et conventions dans `ressources/voix/prononciations.md` et le skill `montage`.
+- **Voix de synthèse (VoiceStudio)** : aucune pause balisée, liaisons écrites comme elles se disent ; règles complètes dans `.claude/rules/voix-synthese.md`, et la façon dont l'auteur dit chaque carte dans `ressources/voix/prononciations.md`.
 
 ## Montage
 
