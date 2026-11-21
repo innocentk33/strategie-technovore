@@ -46,7 +46,7 @@
 | légende qui dit l'inverse de la voix (8 Go v3) | surtitre écrit d'après le script, pas d'après la phrase dite | relire chaque surtitre contre la phrase au même moment |
 | cadre vide pendant les 3 premières secondes (8 Go v3) | éléments de l'accroche ancrés trop tard | légende et visuel de l'accroche dès 0,2 s |
 | pastille recouverte par la barre de lecture | élément à 23 px du bas | rien d'important à moins de ~80 px du bas |
-| texte sur texte pendant 1-2 images entre deux plans de texte | fondu enchaîné de 0,25 s | coupe sèche entre deux plans de texte (point encore ouvert sur le 32 Go) |
+| texte sur texte pendant 1-2 images entre deux plans de texte | fondu enchaîné de 0,25 s | sortie `fade` au lieu du fondu enchaîné (`cut`, le nom trompe) entre deux plans de texte : voir `transitions.md` (point encore ouvert sur le 32 Go) |
 | plan statique de 4 à 7 s | une seule carte qui attend la suivante | faire entrer les éléments suivants en fantôme, ou montrer la capture qui existe |
 | un tampon « VITESSE : NON » (18/11) | `stamp()` | interdit : mème muet ou ligne de texte |
 

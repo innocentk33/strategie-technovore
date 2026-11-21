@@ -8,11 +8,11 @@
 | Titre, date de sortie, statut | `<DEPOT>/calendrier.md` (« Grille des publications » : colonnes `#`, `Date, 18 h`, `Vidéo`, `Pilier`, `Format`, `Charge`, `Statut`) et `README.md` (« Suivi des projets » : `Projet`, `Format`, `Publication`, `Statut`) |
 | Projets de montage (un par vidéo) | `<PREMIUM>/<AAAA-MM-sujet>/` |
 | Style commun de la série | `<PREMIUM>/style/` (`RECETTE.md`, `tokens.css`, `components/`, `fonts/`, `media.json`) ; chaque projet en garde une copie dans son `style/` |
-| Prononciations et reprises de l'auteur | `<DEPOT>/ressources/voix/prononciations.md` et `ressources/voix/reprises/` ; fichiers bruts aussi dans `<PREMIUM>/style/voice-presets/prononciations/` (voir `retouches.md`) |
+| Prononciations et reprises de l'auteur | `<DEPOT>/ressources/voix/prononciations.md` et `ressources/voix/reprises/` ; `scripts/reprises.py` les lit là (variable `DEPOT`) ; une copie locale traîne dans `<PREMIUM>/style/voice-presets/prononciations/`, hors git (voir `retouches.md`) |
 | Projet modèle (voix clonée) | `2026-11-qwen-27b-32go/` (21/11/2026) |
 | Projet modèle (vraie voix) | `2026-11-qwen-27b-8go/` (19/11/2026) ; avant : `2026-11-meme-carte-plus-rapide/`, `2026-11-strata-test/` |
 
-`premium-noir/` n'est pas un dépôt git : **sauvegarde avant d'écraser** (copie dans `retouches/avant/` ou `sources/…-avant-….flac`), rien ne permet de revenir en arrière sinon.
+Chaque projet est un dépôt git privé (`premium-noir--<dossier>` sur GitHub), mais seulement depuis sa livraison, et ses gros fichiers de travail n'y sont pas : **sauvegarde quand même avant d'écraser** (copie dans `retouches/avant/` ou `sources/…-avant-….flac`). Le dossier `premium-noir/` lui-même n'est pas un dépôt.
 
 ## Relier le projet de montage et le dossier du dépôt
 
@@ -43,7 +43,7 @@ Ne copie jamais un projet sur lequel un agent travaille encore (retouches, rendu
   scripts/              tout le code (voir plus bas)
   sources/              voix d'origine, téléprompteur, transcriptions, mots de la voix finale
   edit-plan/            décisions et rapports : voice-*.json, captures.md, timeline.json, audio-timeline.json, verif-*.json
-  assets/audio/         voix.flac (voix finale), music-minimal(-long).flac, music-tension(-long).flac
+  assets/audio/         voix.flac (voix finale), music-minimal(-long).flac, music-tension(-long).flac (les -long : scripts/musique_longue.py, hors git)
   assets/captures/      captures PNG nettes (3840×2160) ; assets/shots/ : les JPEG 2240 px utilisés par le montage
   assets/images/        images de la vidéo ; assets/images/produits/ : photos (+ -detoure.png)
   assets/logos/ memes/ sfx/ fonts/ lib/   (logos, mèmes mp4, bruitages flac, Inter + JetBrains Mono, gsap.min.js)
@@ -72,8 +72,8 @@ Ne copie jamais un projet sur lequel un agent travaille encore (retouches, rendu
    - les miniatures des deux vidéos de l'écran de fin (ex. `miniature-8go.jpg`, `miniature-budget.jpg`, `miniature-meme-carte.jpg` dans le 32 Go), ou les nouvelles ;
    - `monde.json`, `monde-LICENCE-CC-BY-4.0.md` et `scripts/carte_monde.py` si la carte du monde revient (voix qui parle des pays du monde) ; `afrique.json` et `afrique-LICENCE-CC-BY-4.0.md` seulement si la voix parle de l'Afrique elle-même ;
    - pas `placeholder-produit.png` (recréé tout seul par `P()`), pas les photos de produits ni les captures de l'ancienne vidéo.
-   Les logos, mèmes, bruitages, polices, gsap et musiques viennent déjà avec le `rsync`.
-7. **Dépôt git du projet** (chaque vidéo a le sien, privé, comme `2026-11-qwen-4-arrive`). Le `rsync` exclut `.git` mais recopie `.gitignore` et `.gitattributes` du 32 Go : ils écartent les rendus, les caches, les musiques bouclées `music-*-long.flac` (plus de 100 Mo, refusées par GitHub, identiques dans tous les projets : recopie-les d'un autre projet) et les fichiers de travail recréés par les scripts (`retouches/*.wav`, `critique*/**/*.wav`, `*.npy`, `*.raw`, `*.f32`). Initialise seulement, sans commiter :
+   Les logos, mèmes, bruitages, polices, gsap et musiques viennent déjà avec le `rsync` ; si le modèle vient d'un clone, refais d'abord ses musiques longues (`uv run --no-project --with numpy python scripts/musique_longue.py`).
+7. **Dépôt git du projet** (chaque vidéo a le sien, privé, comme `2026-11-qwen-4-arrive`). Le `rsync` exclut `.git` mais recopie `.gitignore` et `.gitattributes` du 32 Go : ils écartent les rendus, les caches, les musiques bouclées `music-*-long.flac` (plus de 100 Mo, refusées par GitHub  ; `uv run --no-project --with numpy python scripts/musique_longue.py` les refait à l'identique si elles manquent) et les fichiers de travail recréés par les scripts (`retouches/*.wav`, `critique*/**/*.wav`, `*.npy`, `*.raw`, `*.f32`). Initialise seulement, sans commiter :
    ```bash
    cd "$PREMIUM/$N" && git init -q -b main && test "$(git rev-parse --show-toplevel)" = "$PWD"
    ```
@@ -157,6 +157,7 @@ Copie d'abord **ceux du projet modèle**. Les génériques ne se modifient que p
 | `verif_voix.py` | deux variantes | celle du 8 Go pour une vraie voix (une source), celle du 32 Go pour deux voix clonées |
 | `verif_sources.py`, `prises.py`, `psola.py`, `strata_psola.py`, `cale_gains.py`, `cale_hauteur.py` | génériques pour une voix clonée en deux versions | voir `voix-clonee.md` (les noms de source `complet` / `strata` y sont écrits en dur) |
 | `reprises.py` | **méthode générique, table `REPL` propre à la vidéo** (32 Go, 21/11) | remplace des phrases de la voix finale par des reprises de l'auteur : préparation, calage sur les mots, pauses, PSOLA, ×1,1, niveau, collage, mastering, réécriture des mots ; part de `retouches/avant/` (voir `retouches.md`). Lancement : `uv run --no-project --with praat-parselmouth --with numpy --with scipy python scripts/reprises.py` |
+| `musique_longue.py` | générique | refait `assets/audio/music-*-long.flac` (hors git) à partir des courtes, à l'identique (voir `son.md`) |
 | `mots.py`, `vue.py` | génériques pour une vraie voix | lecture des mots et des îlots d'énergie de `sources/prise-originale.*` |
 | `test_slice.py` | outil, **dangereux** | essai de briques à temps fixes, sans voix. **Il écrase `index.html` et écrit `compositions/test-*.html`** : ne le lance jamais sur un projet dont le montage n'est pas regénérable, relance `montage.py` juste après, et efface `compositions/test-*.html` |
 | `teleprompteur.py` | à adapter | ajoute à `SPOKEN` les noms, sigles et références de cartes de la vidéo sous la forme entendue par wav2vec2, et mets à jour `SECTIONS` (titres `###` du script) |
@@ -177,7 +178,7 @@ Les documents de `style/` datent du Short « abonnements » (octobre). La pratiq
 | `RECETTE.md` § 8, `CLAUDE.md` du projet | minutage par Whisper large-v3, `transcript.json` | wav2vec2 verbatim (`scripts/w2v_transcrire.py`) et `sources/voix.words.json` | Whisper efface les répétitions et avance les premiers mots (12/11) |
 | `RECETTE.md` § 2, `style/tokens.css` | SF Pro par la police système | Inter et JetBrains Mono embarquées (`assets/fonts/`), déclarées dans `kit.py` comme « Noir Display » et « Noir Mono » | rendu identique sur toute machine ; c'est ce qu'ont rendu toutes les vidéos depuis Strata |
 | `RECETTE.md` § 7 | `powerdown` avant le mot choc, impacts | interdits (`BAN` de `build.py` : impact, impact-doux, riser-court, powerdown, whoosh-long) | « pas de boum, pas de son d'extinction » |
-| `RECETTE.md` § 7 | musique à −19 dB (volume 0,112) | volumes 0,2 à 0,24 sous la voix (0,794), 0,42 sur l'écran de fin ; viser 15 à 22 dB sous la voix | une critique l'a trouvée inaudible sur téléphone (voir `son.md`) |
+| `RECETTE.md` § 7 | musique à −19 dB (volume 0,112) | volumes 0,11 à 0,13 sous la voix (0,794), 0,29 sur l'écran de fin, soit ~18 dB sous la voix | monté à 0,24 après des critiques, puis redescendu le 21/11 : l'auteur la trouvait trop forte (voir `son.md`) |
 | `RECETTE.md` § 7 | crête −2 dBTP | −2,5 dBTP pour la voix | marge sous −2,2 depuis le 15/11 |
 | `RECETTE.md` § 4, 5 | pub-mème avec son, karaoké incrusté | mèmes muets ; pas de sous-titres incrustés dans les vidéos longues (fichiers `.srt` à l'upload) | demande de l'auteur |
 | `RECETTE.md` § 7 | silences ramenés à 0,25-0,45 s | vraie voix : 0,34 s au plus entre deux phrases ; voix clonée : on **ajoute** des micro-pauses (voir `voix-clonee.md`) | retours du 12/11 et du 21/11 |

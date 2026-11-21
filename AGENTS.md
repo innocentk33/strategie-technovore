@@ -49,7 +49,7 @@ Les faits comptent : chaque affirmation d'une miniature ou d'un script doit êtr
 
 ## Montage
 
-Le montage se fait **hors de ce dépôt** (HyperFrames ou Remotion), dans le dossier `premium-noir` de l'auteur, qui n'est pas versionné. Pour faire, reprendre ou retoucher un montage (voix, captures, mèmes, critiques, rendus), suis le skill `montage` : sa section « Sur une autre machine » dit quoi installer et quels chemins définir. `.gitignore` exclut les vidéos et les `.wav` : les fichiers audio versionnés sont les `.m4a`, sauf la banque de reprises de voix de l'auteur, en FLAC (`ressources/voix/reprises/`, guide `ressources/voix/prononciations.md`).
+Le montage se fait **hors de ce dépôt** (HyperFrames ou Remotion), dans le dossier `premium-noir` de l'auteur : un projet par vidéo, chacun dans son dépôt GitHub privé `innocentk33/premium-noir--<dossier>` (rendus et musiques bouclées hors git). Pour faire, reprendre ou retoucher un montage (voix, captures, mèmes, critiques, rendus), suis le skill `montage` : sa section « Sur une autre machine » dit quoi installer et quels chemins définir. `.gitignore` exclut les vidéos et les `.wav` : les fichiers audio versionnés sont les `.m4a`, sauf la banque de reprises de voix de l'auteur, en FLAC (`ressources/voix/reprises/`, guide `ressources/voix/prononciations.md`).
 
 ## Skills
 

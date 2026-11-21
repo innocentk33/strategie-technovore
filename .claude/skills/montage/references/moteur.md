@@ -83,7 +83,7 @@ Règles de composition (critiques et retours de l'auteur) :
 ## L'assemblage (bas de `montage.py`)
 
 - `END = voix + 11 s` (écran de fin ≈ 12 s pour les éléments YouTube).
-- Transitions : fondu à chaque changement de partie (et entrée `zoomin` du plan suivant), plan fouetté (`whip`) un sur quatre, `zoomin` un autre sur quatre, sinon fondu enchaîné de 0,25 s.
+- Caméras (`MOVES`) et transitions : fondu à chaque changement de partie (et entrée `zoomin` du plan suivant), plan fouetté (`whip`) un sur quatre, `zoomin` un autre sur quatre, sinon fondu enchaîné de 0,25 s. Détail, valeurs et exceptions : `transitions.md`.
 - `MEMES = [(fichier, t, durée, (x, y, w, h)), …]` : durée coupée automatiquement avant le plan suivant (−0,15 s). Voir `visuels.md`.
 - `music = [(fichier, début, fin, volume, décalage), …]` et `cuts = [T('…') - .35, …]` (coupures avant les chutes) ; dédoublonnage des bruitages à 0,3 s. Voir `son.md`.
 - `assemble(SC, END, voice=…, memes=…, music=…)` écrit tout, puis le script réécrit `STORYBOARD.md` et `chapitres.txt`.

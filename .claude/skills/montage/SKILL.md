@@ -15,13 +15,23 @@ Ce skill s'écrit avec deux racines, plus un dossier temporaire. Définis-les av
 | `<PREMIUM>` | le dossier `premium-noir` : les projets de montage (un par vidéo) et `style/` | `~/HyperStudio/premium-noir` |
 | `<TMP>` | un dossier de travail temporaire (briefs de sous-agents, fichiers jetables) | à ton choix, par exemple le dossier temporaire de ta session |
 
+Chaque appel du shell d'un agent repart souvent de zéro : **répète ces deux lignes en tête de chaque commande** qui utilise `$DEPOT` ou `$PREMIUM`.
+
 ```bash
 export DEPOT="$HOME/Dev/youtubeSkill"             # adapte : là où tu as cloné le dépôt
 export PREMIUM="$HOME/HyperStudio/premium-noir"   # adapte : là où tu as copié premium-noir
 ```
 
 **Prérequis** :
-- **Le dossier `premium-noir`, qui n'est PAS dans ce dépôt** (ni dans git). Il faut le copier ou le synchroniser à part (disque externe, cloud, `rsync`) : son `style/` (`RECETTE.md`, `tokens.css`, `components/`, `fonts/`, `media.json`, `voice-presets/`) et le **dernier projet fini** (`2026-11-qwen-27b-32go/`, avec ses `scripts/`, `assets/` : polices, musiques, logos, mèmes), qui sert de modèle à copier (`references/demarrage.md`). Sans lui, ce skill décrit une méthode mais on ne peut ni rendre ni reprendre une vidéo existante. Les anciens projets ne sont utiles que pour reprendre ces vidéos-là. Compte environ 310 Mo par projet, hors rendus.
+- **Le dossier `premium-noir`**, hors de ce dépôt : le montage a besoin de `style/` (`RECETTE.md`, `tokens.css`, `components/`, `fonts/`, `media.json`) et du **dernier projet fini**, `2026-11-qwen-27b-32go/`, qui sert de modèle à copier (`references/demarrage.md`) : son moteur (`scripts/kit.py`, `build.py`, `blocs*.py`, `montage.py`), ses polices, logos, mèmes, bruitages et musiques. Sans lui, ce skill décrit une méthode mais on ne peut ni construire ni rendre. Chacun est un dépôt GitHub privé de l'auteur (`gh auth login` avec son compte) :
+  ```bash
+  mkdir -p "$PREMIUM" && cd "$PREMIUM"
+  gh repo clone innocentk33/premium-noir--style style
+  gh repo clone innocentk33/premium-noir--2026-11-qwen-27b-32go 2026-11-qwen-27b-32go
+  gh repo clone innocentk33/premium-noir--2026-11-qwen-27b-8go 2026-11-qwen-27b-8go   # seulement pour une vraie voix (voix.py, verif_voix.py)
+  cd 2026-11-qwen-27b-32go && uv run --no-project --with numpy python scripts/musique_longue.py   # musiques bouclées, hors git (> 100 Mo)
+  ```
+  Testé le 21/11/2026 sur un clone neuf (1,7 Go) : `montage.py` régénère un `index.html` identique à l'original et `check` passe. Pour reprendre une ancienne vidéo, clone son dépôt de la même façon : `premium-noir--2026-11-qwen-27b-8go`, `premium-noir--2026-11-meme-carte-plus-rapide`, `premium-noir--2026-11-strata-test`, `premium-noir--2026-11-qwen-4-arrive`, `premium-noir--2026-10-deepseek-local`, `premium-noir--2026-10-artcraft-premium`. Les rendus (`renders/`) ne sont pas dans git : un clone ne contient aucune vidéo finie.
 - **Node.js** et `npx --yes hyperframes@0.9.47` (la version épinglée, la même pour tous les rendus ; ne la change pas au milieu d'un projet).
 - **ffmpeg** et ffprobe.
 - **Python 3** et **`uv`** : les scripts se lancent par `uv run --no-project --with torch --with transformers --with numpy python scripts/…` (les paquets se téléchargent seuls ; le modèle wav2vec2 français vient de Hugging Face au premier lancement). PSOLA : `--with praat-parselmouth`.
@@ -29,7 +39,7 @@ export PREMIUM="$HOME/HyperStudio/premium-noir"   # adapte : là où tu as copi�
 - Les commandes sont écrites pour **bash** et ont été testées sur macOS : sous Windows, utilise **WSL** ou Git Bash ; `sed -i ''` (BSD) devient `sed -i` (GNU).
 - Pas de sous-agents chez toi (Codex, Gemini CLI…) : fais les étapes toi-même, une par une (`references/sous-agents.md`, encadré en tête). Pas de vidIQ : le kit d'upload se fait alors à partir des relevés datés existants, et tu le dis.
 
-`premium-noir/` n'est pas un dépôt git : sauvegarde avant d'écraser.
+Chaque projet est son propre dépôt git, pas le dossier `premium-noir/` : commit et envoi à la livraison (`references/livraison.md`), et sauvegarde quand même avant d'écraser (les gros fichiers de travail ne sont pas dans git).
 
 Le montage se fait hors de ce dépôt, dans `<PREMIUM>/<AAAA-MM-sujet>/` (un projet HyperFrames par vidéo). Ce dépôt garde le script, les sources, le téléprompteur et le kit d'upload (`projets/<nom>/`). Tout le montage est **généré par du Python** : on ne touche jamais `index.html` ni `compositions/` à la main, on modifie `scripts/montage.py` et on le relance.
 
@@ -77,7 +87,7 @@ En plus, pour Claude sur la machine de l'auteur : la mémoire `~/.claude/project
 3. **Revue de la voix** par un autre sous-agent Opus qui n'a pas monté la voix (`modele-verif-voix.md`), corrections, seconde revue si besoin, et c'est fini : `references/verifications.md`.
    **Voix clonée : contrôle systématique des noms avant toute livraison.** Prends chaque occurrence d'une carte, d'un produit ou d'une marque, transcris-la en verbatim et compare-la à la convention d'écriture et à la banque de l'auteur. Greffe sa prononciation sur les faux : `references/retouches.md`, section « Contrôle systématique des noms ». Le 32 Go a été livré avec trois « èr quatre-vingt-dix-sept cents » pour R9700, et c'est l'auteur qui les a entendus.
 4. **Images** en parallèle de la voix, par un sous-agent Sonnet (`modele-captures.md`) : captures web surlignées, photos de produits, logos, manifeste `edit-plan/captures.md`. Règles : `references/visuels.md`.
-5. **Écrire `scripts/montage.py`** : un plan par phrase forte du script, ancré sur la voix avec `T("…")`, avec les briques de `kit.py` / `blocs*.py` et les aides du haut de `montage.py`. API et conventions : `references/moteur.md`. Mèmes, musique, bruitages : `references/visuels.md` et `references/son.md`.
+5. **Écrire `scripts/montage.py`** : un plan par phrase forte du script, ancré sur la voix avec `T("…")`, avec les briques de `kit.py` / `blocs*.py` et les aides du haut de `montage.py`. API et conventions : `references/moteur.md`. Caméra, transitions, écrans de partie, rythme : `references/transitions.md`. Mèmes, musique, bruitages : `references/visuels.md` et `references/son.md`.
 6. **Boucle courte** à chaque modification : `MC_DRY=1` (ancres), génération, `check`, planches d'images aux moments touchés, et tu regardes les images avant de dire que c'est bon : `references/verifications.md`.
 7. **Rendu 1080p, puis critique indépendante** (sous-agent Opus, `modele-critique.md`), corrections, nouveau rendu. Trois tours au plus.
 8. **Livraison** : chemin du dernier 1080p et ce qui a changé, puis 4K sur accord. Ensuite, kit d'upload et sous-titres (sous-agent Sonnet, `modele-upload.md`, skill `upload`), et mise à jour du README et du calendrier : `references/livraison.md`.
@@ -97,8 +107,9 @@ Avant chaque étape, vérifie qu'aucun sous-agent de l'étape précédente ne to
 | Voix clonée (une ou deux versions) | `references/voix-clonee.md` |
 | Reprises de voix de l'auteur, banque de prononciations | `references/retouches.md` |
 | Écrire ou corriger `montage.py`, une brique, un plan | `references/moteur.md` |
+| Caméra, transitions entre plans, écrans de partie, entrées d'éléments, rythme | `references/transitions.md` |
 | Captures, logos, produits, schémas, carte, mèmes | `references/visuels.md` |
-| Musique, coupures, bruitages, niveaux | `references/son.md` |
+| Musiques (lesquelles, où les trouver, versions longues), coupures, bruitages, niveaux | `references/son.md` |
 | check, planches, revues, critiques, mesures, 1080p et 4K | `references/verifications.md` |
 | 4K, chapitres, upload, sous-titres, README, calendrier | `references/livraison.md` |
 | Un symptôme déjà vu (mème qui cache un titre, ancre qui tombe à côté…) | `references/pieges.md` |
