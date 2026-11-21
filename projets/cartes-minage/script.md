@@ -1,4 +1,4 @@
-# 54 Go pour 35 dollars : à qui cette récupération peut-elle servir ?
+# 54 Go de VRAM pour environ 32 € : que valent ces cartes de minage pour ton IA ?
 
 Version finale après revue indépendante du 16 novembre 2026. Publication : 25 janvier 2027. Angle documentaire par profils, sans classement d’offres ni tarif reproductible. Base : 145 mots/minute, voix seule. V1 conservée.
 
@@ -17,15 +17,15 @@ Voix : **1 581 mots** (hors crochets), **10:54 à 145 mots/minute**. Liaisons st
 
 ## Voix
 
-[VISUEL : neuf rectangles de 6 Go ; « Achat déclaré : 3 000 RUB, environ 35 USD, Russie, octobre 2026 ». F1–F2. Résultat attribué au propriétaire, pas à la chaîne.]
+[VISUEL : neuf rectangles de 6 Go ; « Achat déclaré : 3 000 RUB, ≈ 32 € au cours du 10/10/2026, Russie, octobre 2026 ». F1–F2. Résultat attribué au propriétaire, pas à la chaîne.]
 
-Neuf cartes, 54 gigas et plus de 30 tokens par seconde annoncés, pour 35 dollars selon leur propriétaire en Russie. Donc, à quel profil ce genre de récupération peut-il convenir ?
+Neuf cartes, 54 gigas et plus de 30 tokens par seconde annoncés, pour environ 32 euros d’après le prix payé par leur propriétaire en Russie. Donc, à quel profil ce genre de récupération peut-il convenir ?
 
 On va regarder pourquoi son modèle convient à ce matériel, puis trois routes de récupération : les P106, la Tesla P40 et la BC-250. Et on va compter ce qui manque autour. Parce que le prix de neuf cartes trouvées dans un garage ne donne pas encore le prix d'une machine utilisable chez toi.
 
 [VISUEL : texte du propriétaire, prix et SSD manquant surlignés ; schéma original du rig. F1.]
 
-L'histoire commence par une annonce en Russie. Un propriétaire récupère une ancienne ferme de minage dans un garage. Il négocie le lot à 3 000 roubles, environ 35 dollars selon son récit. Les neuf cartes fonctionnent. Par contre, il manque le SSD : il démarre la machine sur une clé USB.
+L'histoire commence par une annonce en Russie. Un propriétaire récupère une ancienne ferme de minage dans un garage. Il négocie le lot à 3 000 roubles, soit environ 32 euros au cours de la mi-octobre. Les neuf cartes fonctionnent. Par contre, il manque le SSD : il démarre la machine sur une clé USB.
 
 Du coup, on a un achat exceptionnel, situé dans un pays et une négociation précis. Aucun vendeur ne propose automatiquement le même lot à ce tarif. Et le récit ne nous donne ni une facture complète livrée chez toi, ni une garantie sur neuf autres cartes du même âge.
 
@@ -101,4 +101,4 @@ Le 28 janvier, on regarde justement le choix du moteur : celui qui sait utiliser
 
 ## Hors voix
 
-Sources F1–F12. Aucun prix TTC livré établi : limite conservée dans sources.md, sans tableau vide dans la voix ni promesse d’achat à 35 dollars. Budget BCEAO explicitement illustratif. Plus de 30 tok/s : témoignage incomplet du propriétaire ; 4,5 tok/s : estimation sous hypothèses, aucun essai dense. Aucun montage, achat, câblage ou flash demandé. Visuels publics crédités ou schémas originaux.
+Sources F1–F12. Aucun prix TTC livré établi : limite conservée dans sources.md, sans tableau vide dans la voix ni promesse d’achat à 32 euros. Budget BCEAO explicitement illustratif. Plus de 30 tok/s : témoignage incomplet du propriétaire ; 4,5 tok/s : estimation sous hypothèses, aucun essai dense. Aucun montage, achat, câblage ou flash demandé. Visuels publics crédités ou schémas originaux.

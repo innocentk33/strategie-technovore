@@ -1,7 +1,7 @@
-[VISUEL : neuf rectangles de 6 Go ; « Achat déclaré : 3 000 RUB, environ 35 USD, Russie, octobre 2026 ». F1–F2. Résultat attribué au propriétaire, pas à la chaîne.]
+[VISUEL : neuf rectangles de 6 Go ; « Achat déclaré : 3 000 RUB, ≈ 32 € au cours du 10/10/2026, Russie, octobre 2026 ». F1–F2. Résultat attribué au propriétaire, pas à la chaîne.]
 
-9 cartes, 54 gigas et plus de 30 tokens par seconde annoncés, pour 35 dollars selon
-leur propriétaire en Russie.
+9 cartes, 54 gigas et plus de 30 tokens par seconde annoncés, pour environ 32 euros d’après le prix payé
+par leur propriétaire en Russie.
 Donc, à quel profil ce genre de récupération peut-il convenir ?
 
 On va regarder pourquoi son modèle convient à ce matériel, puis 3 routes de
@@ -14,7 +14,7 @@ d'une machine utilisable chez toi.
 
 L'histoire commence par une annonce en Russie.
 Un propriétaire récupère une ancienne ferme de minage dans un garage.
-Il négocie le lot à 3 000 roubles, environ 35 dollars selon son récit.
+Il négocie le lot à 3 000 roubles, soit environ 32 euros au cours de la mi-octobre.
 Les 9 cartes fonctionnent.
 Par contre, il manque le SSD : il démarre la machine sur une clé USB.
 

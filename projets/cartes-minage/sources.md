@@ -1,6 +1,8 @@
 # Cartes de minage — faits et vérification
 
-Recherche et double lecture le **16 novembre 2026**. Vidéo documentaire calculée, prévue le 21 janvier 2027 : les annonces observées aujourd'hui ne constituent pas des prix de janvier. Aucun essai, achat, flash de firmware ou capture personnelle à produire.
+Recherche et double lecture le **16 novembre 2026**. Vidéo documentaire calculée, prévue le 25 janvier 2027 : les annonces observées aujourd'hui ne constituent pas des prix de janvier. Aucun essai, achat, flash de firmware ou capture personnelle à produire.
+
+**Conversion pour le titre et la voix (21/11).** Le propriétaire donne le montant négocié en roubles (F1). Au cours officiel du 10 octobre 2026, proche du récit repris le 12 octobre, 3 000 ÷ 94,9745 = 31,59 €, arrondis à environ 32 €. La date exacte de la transaction reste inconnue. Ce montant concerne son lot en Russie, hors pièces manquantes. [Banque de Russie, cours du 10 octobre](https://www.cbr.ru/eng/currency_base/daily/?UniDbQuery.Posted=True&UniDbQuery.To=10.10.2026)
 
 ## Faits utilisables
 

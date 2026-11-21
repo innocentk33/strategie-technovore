@@ -26,6 +26,20 @@
 
 ---
 
+## 21/11/2026 — Radar evergreen du jeudi 7 janvier
+
+**Décision.** [Un assistant vocal sans Internet : que peut faire ton PC ?](../projets/assistant-vocal-local/fiche.md) prend le créneau de 18 h. La question reste valable quand les modèles changent. L’angle calculé rend possible le sujet « JARVIS » de la réserve, auparavant écarté à cause de la charge du test filmé. Le spectateur pourra choisir entre une commande domestique et une conversation libre.
+
+**Signaux disponibles.** Aucun accès vidIQ dans cette session. Le relevé du 19/11 ci-dessous donne deux vidéos du Lab IA sur un assistant local à 14,7 k vues chacune (×2,43 et ×2,36). Le relevé YouTube du 15/11 donne 75,5 k vues en sept jours pour [l’assistant sur PC de Parlons Cyber](https://www.youtube.com/watch?v=7Y-IU77_ZF0). Sur notre chaîne, Strata avait atteint 348 vues à J+3, avec 47,7 % du public encore là à 30 secondes. D’où le choix d’ouvrir sur une commande et son temps de traitement. Les relevés disponibles ne donnent ni le J+7 de Strata ni les performances de la sortie du 19/11.
+
+| Candidat | Demande | Clic | Production | Niche | Total et arbitrage éditorial |
+|---|---:|---:|---:|---:|---|
+| Assistant vocal hors ligne | 8 | 9 | 9 | 10 | **36/40**. Signal français et comparaison documentée, sans tournage. |
+| Choisir son modèle selon sa VRAM | 9 | 8 | 8 | 10 | **35/40**. Besoin durable déjà couvert le 21 janvier. |
+| Cartes de minage pour l’IA | 7 | 9 | 7 | 9 | **32/40**. Bon clic, mais le prix d’un lot exceptionnel se généralise mal. Épisode au 25 janvier. |
+
+Les scores sont des estimations éditoriales. Les mesures techniques à utiliser pour le sujet retenu sont liées dans sa fiche.
+
 ## 19/11/2026 : sortie de Strata (16/11) à J+3, radar allégé et volet « 32 Go », calendrier inchangé
 
 **Contexte** : « Le meilleur modèle possible pour 16 Go de VRAM » est sortie le lun. 16/11 à 18 h : https://youtu.be/892vB0mRY8U. Le radar du 16/11 n'avait pas été fait ; celui-ci le remplace. Le forfait vidIQ est gratuit : 830 crédits avant, 780 après, **50 dépensés** (1 appel `vidiq_user_videos` + 9 chaînes à 5 crédits ; 55 renouvelables, 725 en bonus). Comme le 12/11, `vidiq_outliers`, `vidiq_channel_analytics` et `vidiq_channel_stats` manquent : les concurrents passent par `vidiq_channel_videos` (vues, vues/h, multiplicateur « breakout » donné par vidIQ). Les vidéos hors liste de surveillance (volet 32 Go) viennent de recherches web et des pages YouTube du 19/11 : leurs multiplicateurs sont **non mesurés**.

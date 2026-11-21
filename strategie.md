@@ -901,10 +901,10 @@ Non notées sur 40 : tu les as choisies parce qu'elles marchent (chiffres relev�
 |---|---|---|---|
 | 26 | [Deux cartes graphiques pour l'IA : à savoir avant d'acheter la deuxième](projets/multi-gpu/fiche.md) | Weights & Wonders, *Watch This Before Building a Multi-GPU Local AI Setup!* : 32,9 K vues en 3 jours, avec 1,74 K abonnés | jeu. 10 déc. |
 | 27 | [Quel modèle ta carte peut faire tourner ? De 4 à 16 Go](projets/modele-par-vram/fiche.md) (absorbe « petits budgets ») | Codacus, *What's the Best AI Model Your GPU Can Actually Run?* : 56,7 K vues en 12 jours, avec 46,8 K abonnés | jeu. 21 janv. |
-| 28 | [La meilleure carte graphique pour l'IA locale, à chaque budget](projets/carte-par-budget/fiche.md) | Locally, *The Best Local AI GPU For Every Budget (November 2026)* : 1,6 K vues en quelques heures (signal à confirmer) | jeu. 7 janv. |
+| 28 | [La meilleure carte graphique pour l'IA locale, à chaque budget](projets/carte-par-budget/fiche.md) | Locally, *The Best Local AI GPU For Every Budget (November 2026)* : 1,6 K vues en quelques heures (signal à confirmer) | jeu. 17 déc. |
 | 30 | [Claude Code gratuit sur ton PC](projets/claude-code-gratuit/fiche.md) | Sharbel A. : 1,18 M de vues en 3 semaines ; Kevin Stratvert : 115 K en 5 jours ; en français, Cedric Oden IA : 65 K en 5 jours (15/11) | lun. 11 janv. |
 | 31 | [Créer un jeu vidéo avec une IA locale](projets/jeu-video-ia-locale/fiche.md) | PΔX (en français) : 33,8 K en 3 jours ; Stefan 3D AI (jeux faits dans le cloud) : 205 K en 2 semaines (15/11) | lun. 18 janv. |
-| 32 | [Les vieilles cartes de minage pour l'IA locale](projets/cartes-minage/fiche.md) | Kai : 22,8 K en 18 h ; DiscoverID (BC-250) : 216 K en 3 semaines (15/11) | lun. 25 janv. |
+| 32 | [54 Go de VRAM pour environ 32 € : que valent ces cartes de minage pour ton IA ?](projets/cartes-minage/fiche.md) | Kai : 22,8 K en 18 h ; DiscoverID (BC-250) : 216 K en 3 semaines (15/11) | lun. 25 janv. |
 | 33 | [Ollama, LM Studio ou llama.cpp](projets/choisir-moteur/fiche.md) | The Dark Factory : 42,9 K en 9 jours (15/11) | jeu. 28 janv. |
 | 34 | [Des petits modèles experts contre les géants](projets/petits-modeles-experts/fiche.md) | Codacus : 12 K en 14 h ; Nerdy Kings (LFM3) : 54 K en 13 jours (15/11) | lun. 1er févr. |
 | 29 | [RAM, VRAM ou mémoire unifiée](projets/ram-vram-unifiee/fiche.md), avec le contre-pied de Strata | Locally, *RAM vs VRAM vs Unified Memory (Local AI)* : 2 K vues en 3 jours | lun. 4 janv. |
@@ -917,6 +917,7 @@ Non notées sur 40 : tu les as choisies parce qu'elles marchent (chiffres relev�
 | Rang | Idée | Titre | Format | Score | Créneau |
 |---|---|---|---|---|---|
 | 1 | 1 | 16 Go de VRAM suffisent-ils pour remplacer Claude ? | IA testé | 36/40 | 16 nov |
+| 1 ex æquo | 36 | [Un assistant vocal sans Internet : que peut faire ton PC ?](projets/assistant-vocal-local/fiche.md) | IA calculé | 36/40 (8 · 9 · 9 · 10) | jeu. 7 janv. 2027 |
 | 2 | 2 | La carte d'Uber est une illusion (et c'est génial) | Génie | 35/40 | 26 oct |
 | 3 | 6 | Comment Waze sait qu'il y a un bouchon avant que tu le voies | Génie | 35/40 | 9 nov |
 | 4 | 3 | Comment 50 ingénieurs faisaient tourner WhatsApp pour 900 millions de personnes | Génie | 35/40 | 11 janv |

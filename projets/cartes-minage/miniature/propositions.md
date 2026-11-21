@@ -8,7 +8,7 @@ Une ferme de minage illustrée à droite, face à un triangle d’alerte. La var
 
 ## Promesse et fidélité
 
-Le script corrigé explique pourquoi un lot russe exceptionnel ne donne pas un tarif reproductible. Il compare trois routes de récupération selon le profil et les pièces manquantes. La question évoque le coût complet, sans promettre 54 Go achetables à 35 dollars.
+Le script corrigé explique pourquoi un lot russe exceptionnel ne donne pas un tarif reproductible. Il compare trois routes de récupération selon le profil et les pièces manquantes. La question évoque le coût complet, sans promettre 54 Go achetables à 32 euros.
 
 Le rig dessiné est générique, avec trois cartes pour la lisibilité. Il ne reconstitue pas les neuf P106 du témoignage. Aucun nombre de Go, prix ou débit n’est affiché.
 

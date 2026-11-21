@@ -1,4 +1,4 @@
-# 54 Go de VRAM pour 35 $ : les vieilles cartes de minage pour l'IA locale
+# 54 Go de VRAM pour environ 32 € : que valent ces cartes de minage pour ton IA ?
 
 **Publication prévue le lundi 25 janvier 2027 à 18 h (Paris).** [Calendrier du 20 novembre](../../calendrier.md)
 
@@ -14,7 +14,7 @@
 | **Pilier** | IA chez moi |
 | **Format** | Longue, 10-12 min. Calculée |
 | **Trafic visé** | Suggestions sous Kai et DiscoverID ; recherche « carte graphique pas chère ia » |
-| **Type de hook** | Résultat chiffré : neuf cartes pour 35 $, 54 Go de VRAM… et la vitesse d'une seule |
+| **Type de hook** | Résultat chiffré : neuf cartes pour environ 32 €, 54 Go de VRAM… et la vitesse d'une seule |
 | **Production** | 1 à 2 jours |
 
 ## Pistes (à sourcer)
