@@ -1,4 +1,4 @@
-Kwen vingt-sept bé, c'est l'un des meilleurs modèles que tu peux faire tourner sur ta machine : plu de si millions de téléchargements en nun mois.
+Kwen vingt-sept bé, c'est l'un des meilleurs modèles que tu peux faire tourner sur ta machine : plu de si millions de téléchargements en n'un mois.
 Sauf que si tu veux faire autre chose que lui demander la météo, il lui faut de la place pour ta conversation.
 
 Pour être à l'aise : trente-deux gigas de vé-ram.
@@ -12,6 +12,7 @@ Dans cette vidéo, on va voir combien de mémoire Kwen vingt-sept bé prend vrai
 Ensuite, trois routes vers trente-deux gigas, avec les meilleurs prix relevés le vin novembre, et le piège de chacune.
 
 La même carte, quatre cent zeuros plu chère selon le site où tu cliques, et un nordinateur entier moins cher qu'une carte de trente-deux gigas en stock.
+
 Et à la fin, la route que je prendrais selon ton PC.
 
 Première réponse, et elle peut déjà t'économiser une carte : pour Kwen vingt-sept bé en quatre bits, avec une conversation courte, vingt-quatre gigas suffisent.
@@ -27,6 +28,7 @@ Avec un cache en seize bits, c'est environ deux gigas pour trente-deux mille tok
 Alors fais l'addition avec moi.
 Le fichier quatre bits, c'est seize gigas et demi sur Hugging Face.
 Mais compté comme ta carte compte, c'est un peu plu de quinze.
+
 Tu ajoutes seize pour la conversation complète.
 
 Ça fait trente et un virgule quatre.
@@ -42,23 +44,28 @@ Là, on parle de ceux qui veulent la place.
 
 Première route, la plus tentante : deux cartes de seize gigas, et hop, trente-deux.
 
-Prends la RTX cinquante soixante Ti de seize gigas, la Dual d'Asus.
+Prends la RTX cinq mille soixante té i de seize gigas, la Dual d'azus.
+
 Le vin novembre, sur Amazon, elle était à hui cent zeuros, en stock.
-Donc mille si cents la paire, sans limite affichée sur la page.
+Donc mille si cent la paire, sans limite affichée sur la page.
 
 Chez LDLC, le même modèle était à mille quatre-vingt zeuros, avec une petite ligne au-dessus du bouton panier : limitée à une par client.
 
 Deux cent quatre-vingt zeuros de pluss pour le même modèle, le même jour.
+
 En gros, le boss de fin, c'est le site où tu cliques.
 
 Et chez AMD ?
-La Radeon RX quatre-vingt-di soixante XT de seize gigas d'Asus était à sept cent zeuros sur Amazon, donc mille quatre cents la paire.
-Moins cher, mais ce jour-là, la livraison était annoncée du troi zau cinq janvier.
 
+La Radeon RX neuf mille soixante ix té de seize gigas d'azus était à sept cent zeuros sur Amazon, donc mille quatre cent la paire.
+
+Moins cher, mais ce jour-là, la livraison était annoncée du troi zau cinq janvier.
 Bref : Noël sans cartes. [laughter]
+
 L'Intel Arc A sept cent soixante-dix ? Quatre cent soixante euros chez LDLC, mais en rupture en ligne.
 
-Et en noccasion, le vin novembre, une cinquante soixante Ti de seize gigas tournait autour de si cents à si cent soixante-di zeuros sur le bon coin.
+Et en noccasion, le vin novembre, une cinq mille soixante té i de seize gigas tournait autour de si cent à si cent soixante-di zeuros sur le bon coin.
+
 Entre particuliers, par contre : garde ça en tête pour tout à l'heure.
 
 Maintenant, le vrai piège de cette route, c'est ta tour.
@@ -69,11 +76,12 @@ Pourtant, il n'a que quatre lignes en PCI Express trois, et il passe par le chip
 Et en pluss, il est tou ten bas.
 
 Du coup, une carte de deux slots dedans dépasse sous la carte mère, et il te faut un boîtier à cinq emplacements.
-Et les cinquante soixante Ti et quatre-vingt-di soixante XT du relevé sont plu zépaisses : deux slots et demi, donc mesure la place sous ta carte mère.
+Et les cinq mille soixante té i et neuf mille soixante ix té du relevé sont plu zépaisses : deux slots et demi, donc mesure la place sous ta carte mère.
 
 Ensuite, l'alimentation.
 La mienne fait mille watts.
-Sauf qu'avec ma RTX cinquante quatre-vingts branchée, il ne me resterait peut-être que deux prises hui broches.
+Sauf qu'avec ma RTX cinq mille quatre-vingt branchée, il ne me resterait peut-être que deux prises hui broches.
+
 Donc avant d'acheter la deuxième carte, tu regardes ton boîtier, et tu comptes tes câbles.
 
 Et le dernier piège, c'est la vitesse.
@@ -89,46 +97,60 @@ Deuxième route : une seule carte de trente-deux gigas.
 Plu de deuxième slot, et d'un coup, le PC redevient simple.
 
 Le vin novembre, la moins chère en stock de mon relevé, c'était l'Intel Arc Pro bé soixante-cinq d'Asrock : mille neuf cent zeuros chez LDLC.
-Sur Amazon, des bé soixante-cinq de vendeurs tiers descendaient à mille quatre cent quatre-vingt-troi zeuros, mais livrées en décembre.
-Sa grande sœur, la bé soixante-diss d'Asus, était à deux mille seize euros sur Amazon, en stock.
 
-Côté AMD, la Radeon AI Pro R quatre-vingt-dix-sept cents de Gigabyte : deux mille quatre cent zeuros sur Amazon.
-Et chez LDLC, exactement la même référence : deux mille hui cents.
+Sur Amazon, des bé soixante-cinq de vendeurs tiers descendaient à mille quatre cent quatre-vingt-troi zeuros, mais livrées en décembre.
+
+Sa grande sœur, la bé soixante-diss d'azus, était à deux mille seize euros sur Amazon, en stock.
+
+Côté AMD, la Radeon AI Pro èr neuf mille sept cent de Gigabyte : deux mille quatre cent zeuros sur Amazon.
+
+Et chez LDLC, exactement la même référence : deux mille hui cent.
 
 Alors, ces quatre cent zeuros de pluss, ils t'achètent quoi ?
+
 Rien.
 C'est la même carte.
 
-Donc le vrai match, c'est Intel à mille neuf cents contre AMD à deux mille quatre cents.
+Donc le vrai match, c'est Intel à mille neuf cent contre AMD à deux mille quatre cent.
+
 Et là, cinq cent zeuros de pluss ne t'achètent pas un giga de pluss.
 
-Côté AMD, j'ai trouvé un guide officiel pour faire tourner ses zoutils d'IA sur la R quatre-vingt-dix-sept cents.
+Côté AMD, j'ai trouvé un guide officiel pour faire tourner ses zoutils d'IA sur la èr neuf mille sept cent.
 Mais trente-deux gigas et un guide ne prouvent pas que chaque moteur la prend en charge.
 Du coup, voilà le vrai piège de cette route : avant de comparer les prix, tu vérifies que ton logiciel gère la carte.
 
 Et chez Nvidia ?
-La RTX cinquante quatre-vingt-di za aussi trente-deux gigas.
+La RTX cinq mille quatre-vingt-di za aussi trente-deux gigas.
+
 Sur Amazon, elle partait à presque sept mille euros, chez un vendeur tiers, livrée fin décembre.
+
 Et chez LDLC, neuf mille quatre cent zeuros, en rupture.
+
 Pour ce prix-là, on change carrément de catégorie.
 
 Reste la Tesla vé cent de trente-deux gigas d'occasion.
 Pas d'offre vérifiable dans ce relevé, donc pas de prix.
-Par contre, son piège, on le connaît : Nvidia a fait du pilote cinq cent quatre-vingts la dernière branche qui la gère, et Couda treize ne compile plu pour elle.
+Par contre, son piège, on le connaît : Nvidia a fait du pilote cinq cent quatre-vingt la dernière branche qui la gère, et couda treize ne compile plu pour elle.
 
 En pluss, comme les zautres cartes de serveur, elle n'a ni ventilateur ni sortie vidéo : tout est à refaire autour.
 En fait, elle peut paraître pas chère, et te coûter tout un week-end.
 
 Troisième route : changer carrément d'ordinateur.
+
 Le Mac mini M six avec trente-deux gigas de mémoire unifiée et cinq cent douze de stockage était affiché mille sept cent neuf euros chez LDLC le vin novembre.
+
 Donc un nordinateur complet coûtait moins cher que n'importe quelle carte de trente-deux gigas en stock de mon relevé.
 
 Premier hic : lui, il n'était pas en stock : plu de quinze jours.
-Et en nacceptant d'attendre, une bé soixante-cinq de vendeur tiers descendait à mille quatre cent quatre-vingt-trois.
+
+Et en nacceptant d'attendre, une bé soixante-cinq de vendeur tiers descendait à mille quatre cent quatre-vingt-troi.
+
 Et surtout, cette mémoire, elle est partagée : le système et tes zapplis se servent dedans.
 
 Côté PC, il y a les mini-PC Ryzen AI Max Plus, avec soixante-quatre ou même cent vingt-hui gigas de mémoire partagée.
+
 Celui que j'ai regardé affichait autour de deux mille euros en soixante-quatre gigas, en précommande.
+
 Seulement, sa page ne dit pas clairement si la TVA est dedans.
 Et sa mémoire est fixe, pour toujours.
 
@@ -142,7 +164,7 @@ Et pour un nachat à distance, tu as quatorze jours après la réception pour te
 Donc ces quatorze jours, c'est ta fenêtre pour tester la carte.
 
 Par contre, entre particuliers, comme sur le bon coin, pas de rétractation, pas de garantie légale : il te reste seulement les vices cachés, et c'est à toi de les prouver.
-Donc ta cinquante soixante Ti d'occasion, tu la vois tourner avant de payer.
+Donc ta cinq mille soixante té i d'occasion, tu la vois tourner avant de payer.
 
 Et si tu regardes depuis Abidjan, Dakar ou Kinshasa : ces prix sont des prix français, et ces garanties, c'est le droit français.
 Donc chez toi, renseigne-toi sur le recours du vendeur avant de payer.
@@ -152,21 +174,27 @@ Alors, quelle route ?
 Ça dépend de ce que tu as déjà.
 Et les prix, c'est ceux du vin novembre.
 
-Si t'as déjà une Nvidia de seize gigas, et la place pour une autre, ajoute une cinquante soixante Ti de seize gigas : hui cent zeuros neuve sur Amazon, ou autour de si cents à si cent soixante-diss d'occasion.
+Si t'as déjà une Nvidia de seize gigas, et la place pour une autre, ajoute une cinq mille soixante té i de seize gigas : hui cent zeuros neuve sur Amazon, ou autour de si cent à si cent soixante-di zeuros d'occasion.
+
 La moitié de tes trente-deux gigas est déjà payée.
 
-Si t'as pas encore de carte, et que ta tour en naccepte deux, la paire de cinquante soixante Ti à mille si cent zeuros était le chemin en stock le moins cher vers trente-deux gigas.
+Si t'as pas encore de carte, et que ta tour en naccepte deux, la paire de cinq mille soixante té i à mille si cent zeuros était le chemin en stock le moins cher vers trente-deux gigas.
+
 Avec tous les pièges de la route : la place, les câbles, et une vitesse qui ne double pas.
-La paire de quatre-vingt-di soixante XT coûtait moins, mais arrivait en janvier.
+La paire de neuf mille soixante ix té coûtait moins, mais arrivait en janvier.
 
 Pour une seule carte, je prendrais la moins chère en stock : la bé soixante-cinq, à mille neuf cent zeuros chez LDLC.
+
 Regarde juste sa prise d'alimentation, une douze V deux fois six : il te faut ce câble, ou un nadaptateur.
+
 Si tu préfères Amazon, sa grande sœur, la bé soixante-diss, était à deux mille seize, en stock.
 
 Et dans tous les cas, tu vérifies que ton logiciel gère la carte.
-S'il ne gère pas Intel, regarde la R quatre-vingt-dix-sept cents de Gigabyte : deux mille quatre cent zeuros sur Amazon, pas deux mille hui cents.
+
+S'il ne gère pas Intel, regarde la èr neuf mille sept cent de Gigabyte : deux mille quatre cent zeuros sur Amazon, pas deux mille hui cent.
 
 Si tu veux remplacer tout l'ordinateur, le Mac mini à mille sept cent neuf euros entre dans la course.
+
 Par contre, souviens-toi de l'addition du début : trente et un virgule quatre gigas pour la conversation complète.
 Sur un Mac de trente-deux gigas, dont le système prend sa part, en cache seize bits, ça ne rentre pas : tu compresses le cache, ou tu raccourcis.
 

@@ -1,0 +1,238 @@
+Ces deux PC étaient au même prix le vingt et un novembre : sept cent quatre-vingt-dix-neuf virgule quatre-vingt-dix-neuf euros.
+
+Sur la fiche du premier, tu lis RTX trois mille cinquante, puis seize gigas.
+Sauf que ces seize gigas, c'est la ram.
+Sa carte graphique n'en avait que six.
+
+Le second, lui, en avait douze sur sa carte.
+Même prix, deux fois plu de mémoire.
+
+Du coup, avec ton budget, quelle carte te laisse de quoi finir la tour ?
+
+Aujourd'hui, on va voir cinq budgets, de cinq cent à deux mille euros, en neuf et en noccasion, avec des prix relevés en France.
+À chaque fois, la carte d'abord, puis ce qu'il reste pour finir la tour.
+
+Tu vas voir le même piège des seize gigas sur une tour à mille trois cent neuf euros, et la trois mille quatre-vingt-dix de vingt-quatre gigas qui ne rentre pas dans tous les boîtiers.
+
+Et reste jusqu'à la fin : je te dis quelle route je prendrais, selon la taille du fichier d'IA que tu veux ouvrir.
+
+À cinq cent zeuros, regarde ce qui se passe si tu commences par la carte.
+
+Une RX si mille si cent de hui gigas, seule, sur le bon coin, était à deux cent huit euros demandés, deux cent neuf virgule quatre-vingt-dix-neuf avec les frais du site.
+
+Du coup, il te reste au mieux deux cent quatre-vingt-di zeuros pour les zautres pièces.
+
+Tu mets quoi là-dedans ?
+Il te faut le processeur avec son refroidissement, une carte mère, de la ram, un SSD, l'alimentation et un boîtier.
+
+Avec deux cent quatre-vingt-di zeuros, c'est très serré.
+
+Alors avant de commander la Radeon, ouvre aussi les annonces de PC entiers.
+Sur le bon coin, il y en avait un avec une RX si mille si cent aussi, un Ryzen sept et trente-deux gigas de ram.
+
+Le vendeur demandait quatre cent cinquante euros pour la tour, quatre cent cinquante et un virgule quatre-vingt-dix-neuf avec les frais.
+
+Donc il te reste au mieux quarante-huit euros, avant la livraison.
+
+Là, tu veux savoir s'il y a un SSD dedans.
+Tu demandes sa capacité, une photo de l'étiquette du bloc d'alimentation, et tu veux voir la machine démarrer.
+
+Si le vendeur reste vague, garde tes cinq cent zeuros.
+
+Entre particuliers, la garantie légale de conformité ne s'applique pas.
+Chez un vendeur pro en France, elle dure deu zans, même en noccasion.
+
+Et si tu veux acheter neuf ?
+
+Chez CSL, une tour revenait à environ quatre cent quatre-vingt-quatorze euros livrée.
+
+Dedans, un Ryzen cinq avec sa puce graphique intégrée, et seize gigas de ram.
+Sauf que la puce graphique partage la ram avec le reste du PC.
+Donc pour commencer, je prendrais le petit Kwen sur le processeur.
+
+Par exemple, sa version à sept milliards de paramètres, compressée en quatre bits, pèse environ quatre virgule sept gigas sur le disque.
+Donne-lui un mail à raccourcir.
+Et regarde si sa réponse te convient.
+
+Par contre, sur la RX si mille si cent d'occasion, vérifie que ton logiciel la gère.
+Tu pourrais alors charger ce même fichier sur ses hui gigas dédiés.
+
+Dans une vidéo précédente, on a vu une mesure où Kwen vingt-sept bé tenait sur hui gigas, avec un fichier très compressé.
+Sauf que ce fichier ratait bien plu de tâches d'agent, et la mesure venait d'une carte Nvidia.
+Alors sur la Radeon, ne compte pas dessus sans vérifier.
+
+Et le Kwen suivant, celui de quatorze milliards en quatre bits, pèse environ neuf gigas.
+Là, tes hui gigas ne suffisent plu.
+
+À hui cent zeuros, tu retrouves les deux PC du début.
+
+Le premier, c'était le kit neuf Cintra de Top Achat.
+Il faut le monter toi-même, mais bon, c'est presque un jeu de Lego.
+Juste sous le titre, tu lis RTX trois mille cinquante, et tout de suite après, seize gigas.
+
+Tu le sais maintenant : c'est la ram du PC.
+Les si gigas de la carte, eux, sont plu bas, dans la fiche technique.
+
+Et le Kwen de neuf gigas, rien que ses poids, ne rentre pas dedans.
+Donc pour tout charger sur la carte, raye ce kit.
+
+Si cette vidéo t'a évité un mauvais achat, abonne-toi.
+
+Le second, c'était une tour déjà montée, sur Amazon.
+
+Sept cent quatre-vingt-dix-neuf virgule quatre-vingt-dix-neuf euros aussi, livraison gratuite.
+
+Comme toutes les tours Amazon de cette vidéo, elle venait d'un vendeur tiers.
+Dedans, une RTX trois mille soixante de douze gigas, sauf que sa fiche disait juste « Core i sept », sans génération ni référence.
+Donc avant de payer, fais préciser le processeur au vendeur.
+
+S'il ne répond pas, la tour CSL avec la même trois mille soixante de douze gigas et un Ryzen cinq revenait à environ huit cent vingt-quatre euros livrée.
+
+Vingt-quatre euros au-dessus du budget, mais tu sais ce que tu achètes.
+
+Et en noccasion, c'est encore mieux.
+
+Sur le bon coin, une tour était à cinq cent cinquante euros demandés, remise en main propre.
+
+Un Ryzen cinq cinq mille six cent, la même trois mille soixante de douze gigas, trente-deux gigas de ram.
+
+Avec les frais, il te reste environ deux cent quarante-huit euros sur tes hui cent zeuros.
+
+Par contre, garde bien le « douze gigas » dans ta recherche.
+Nvidia a aussi vendu une trois mille soixante de hui gigas.
+
+À mille euros, en neuf, tu peux déjà t'arrêter à cette trois mille soixante.
+Surtout si ton logiciel demande couda, la technologie de Nvidia.
+
+Sur Carrefour, une tour avec une Intel Arc bé cinq cent quatre-vingt était à neuf cent quatre-vingt-dix-neuf euros.
+
+Même douze gigas sur la carte, cent soixante-quinze euros plu cher que la tour CSL.
+
+Et ton logiciel doit savoir utiliser l'Intel.
+Sauf qu'avec mille euros, tu peux viser seize gigas dédiés.
+
+Avec seize gigas, tu peux ouvrir un fichier de quatorze virgule quatre gigas, celui d'un Kwen de vingt-sept milliards, toujours compressé.
+Sur une carte de seize, il peut tenir en entier.
+
+Par contre, ce fichier, c'est seulement les poids du modèle.
+Ta conversation prend aussi de la place sur la carte.
+
+Dans LM Studio, tu peux estimer la mémoire selon la longueur de conversation.
+Commence court, puis refais l'estimation avec ton vrai document.
+
+En noccasion, une RTX quatre mille soixante té i de seize gigas était à quatre cent cinquante euros demandés.
+
+Avec les frais, quatre cent cinquante et un virgule quatre-vingt-dix-neuf.
+Ça laisse au mieux cinq cent quarante-huit euros pour la tour.
+
+Une autre était à trois cent vingt-cinq euros, mais son vendeur n'avait aucun avis.
+
+Avec tes cinq cent quarante-huit euros, je chercherais un Ryzen cinq cinq mille six cent d'occasion, une carte mère bé cinq cent cinquante et trente-deux gigas de dé dé èr quatre, puis un SSD d'un téra, un bloc neuf de si cent cinquante watts et un boîtier.
+
+J'ai mis à l'écran le maximum que je mettrais dans chaque pièce.
+
+À mille cinq cent zeuros, en neuf, regarde Amazon.
+
+Une tour avec une Radeon RX neuf mille soixante ix té de seize gigas et trente-deux gigas de ram revenait à environ mille deux cent soixante-di zeuros livrée.
+
+Par contre, livraison en décembre, et Windows dix.
+
+Une autre, avec la même carte et un Ryzen sept, était à mille quatre cent quatre-vingt-neuf virgule quatre-vingt-dix livrée, annoncée avant décembre.
+
+Mais son tableau technique se contredisait : relis la fiche avant de payer.
+Et sinon, tu montes autour de la carte, en restant chez Nvidia.
+
+La RTX cinq mille soixante té i de seize gigas neuve était à sept cent quatre-vingt-dix-neuf virgule quatre-vingt-dix-neuf sur Amazon.
+
+Ça te laisse sept cent zeuros pour la base.
+
+Mais à ce budget, on voit aussi des RTX trois mille quatre-vingt-dix d'occasion.
+Et là, on passe à vingt-quatre gigas.
+
+Sur le même Kwen de vingt-sept milliards, il y a un fichier moins compressé qui pèse environ vingt-deux gigas, mais il laisse peu de place à ta conversation.
+Sinon, tu gardes celui de quatorze virgule quatre, et ton document a de la marge.
+
+Une MSI était à sept cent cinquante euros demandés, en main propre.
+
+Avec les frais, il te reste environ sept cent quarante-huit euros pour la base.
+
+Sauf que ce prix-là était très bas, et le vendeur n'avait qu'un avis.
+
+La plupart des autres étaient entre mille deux cent et mille cinq cent zeuros.
+
+Regarde sa taille à l'écran.
+Elle fait presque trente-quatre centimètres et demande trois prises à hui broches.
+C'est pas une carte graphique, c'est une planche à repasser.
+
+Donc vérifie le dégagement à l'intérieur du boîtier, ventilateurs en place.
+MSI recommande une alimentation de hui cent cinquante watts.
+Dans mon calcul, j'ai réservé un bloc neuf de mille watts.
+
+J'ai aussi trouvé une tour entière d'occasion, avec une trois mille quatre-vingt-dix, un Ryzen sept cinq mille hui cent ix trois dé et trente-deux gigas de ram.
+
+Elle était à mille trois cent zeuros demandés.
+
+Sauf que le vendeur affichait un virgule trois sur cinq, sur seize avis.
+Donc je garde le prix pour comparer, et je passe mon tour.
+
+Et tu vas voir, à deux mille euros, le piège des seize gigas revient.
+
+À deux mille euros, méfie-toi de cette tour à mille trois cent neuf euros sur Amazon.
+
+Son titre disait « RTX cinq mille soixante té i » et « seize gé bé ».
+Tu le sens venir ?
+En fait, les seize, c'est encore la ram.
+
+Dans le tableau de la fiche, la carte avait hui gigas.
+
+Même piège que le kit à hui cent zeuros, juste cinq cent zeuros plu cher.
+
+Côté Nvidia, avec une RTX cinq mille soixante té i de seize gigas, la moins chère vérifiée était chez Memory PC, sur Amazon.
+
+Mille sept cent dix-neuf euros, livraison gratuite.
+
+Moins chère que le claw de Top Achat et le Sparkle de Cybertek.
+
+Sauf que la tour Radeon à mille deux cent soixante-dix euros avait déjà seize gigas.
+
+Ces quatre cent cinquante euros t'achètent Nvidia, un Ryzen sept, Windows onze, une livraison plu tôt.
+
+La mémoire vidéo, elle, reste à seize.
+
+Pour vingt-quatre gigas, regarde cette autre annonce, mille huit cent cinquante euros pour la tour.
+
+Sur le papier, la même config que la tour à mille trois cent zeuros.
+
+Remise en main propre, donc demande la référence du bloc et une démonstration avant de te déplacer.
+
+Et si tu la montes toi-même ?
+
+Si la MSI à sept cent cinquante est partie, compte plutôt mille deux cent, comme cette Palit.
+
+Avec les frais, mille deux cent un virgule quatre-vingt-dix-neuf, donc il te reste au mieux sept cent quatre-vingt-dix-huit euros.
+
+Aux plafonds à l'écran, ton montage pourrait monter jusqu'à mille neuf cent quatre-vingt-sept euros.
+
+Au pire, plu cher que la tour à mille huit cent cinquante, mais tu choisis chaque pièce.
+
+Alors, la route que je prendrais, selon ton fichier.
+Avec le Kwen de quatre virgule sept gigas, commence par ton PC actuel.
+
+Si tu pars de zéro, la tour CSL à quatre cent quatre-vingt-quatorze euros suffit pour démarrer.
+
+Pour le Kwen de neuf gigas, je chercherais la trois mille soixante de douze gigas.
+
+D'occasion à cinq cent cinquante euros, ou la tour neuve à sept cent quatre-vingt-dix-neuf virgule quatre-vingt-dix-neuf, si le vendeur nomme le processeur.
+
+Pour le fichier de quatorze virgule quatre gigas, je prendrais une carte de seize.
+
+Le moins cher, la quatre mille soixante té i d'occasion, si ta base tient dans cinq cent quarante-huit euros.
+
+En neuf, la tour Radeon à mille deux cent soixante-dix, si décembre ne te gêne pas.
+
+Je passerais aux vingt-quatre si l'estimation de mon document le justifie, et seulement si je peux vérifier la trois mille quatre-vingt-dix et son alimentation.
+
+Si tu n'es pas en France, refais le total livré chez toi.
+Et note les prix dès maintenant, tu verras si la promo du Black Friday en est vraiment une.
+
+Allez, salut !

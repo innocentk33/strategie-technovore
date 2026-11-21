@@ -1,12 +1,12 @@
 LOT 1 — hook, direct, énergique
-Kwen vingt-sept bé, c'est l'un des meilleurs modèles que tu peux faire tourner sur ta machine : plu de si millions de téléchargements en nun mois.
+Kwen vingt-sept bé, c'est l'un des meilleurs modèles que tu peux faire tourner sur ta machine : plu de si millions de téléchargements en n'un mois.
 Sauf que si tu veux faire autre chose que lui demander la météo, il lui faut de la place pour ta conversation.
 
 LOT 2 — moment clé, punch
 Pour être à l'aise : trente-deux gigas de vé-ram.
 Et en deux mille vingt-six, la vé-ram, c'est de l'or.
 
-LOT 3 — prix, malin
+LOT 3 — prix, malin (à relire le 26/11)
 Ces trente-deux gigas, tu peux les payer deux mille hui cent zeuros, ou, si t'es malin, beaucoup moins.
 
 LOT 4 — question, curieux
@@ -16,219 +16,275 @@ LOT 5 — plan, posé
 Dans cette vidéo, on va voir combien de mémoire Kwen vingt-sept bé prend vraiment.
 Ensuite, trois routes vers trente-deux gigas, avec les meilleurs prix relevés le vin novembre, et le piège de chacune.
 
-LOT 6 — plan, teasing
+LOT 6 — plan, teasing (à relire le 26/11)
 La même carte, quatre cent zeuros plu chère selon le site où tu cliques, et un nordinateur entier moins cher qu'une carte de trente-deux gigas en stock.
+
+LOT 7 — plan, teasing
 Et à la fin, la route que je prendrais selon ton PC.
 
-LOT 7 — première réponse, rassurant
+LOT 8 — première réponse, rassurant
 Première réponse, et elle peut déjà t'économiser une carte : pour Kwen vingt-sept bé en quatre bits, avec une conversation courte, vingt-quatre gigas suffisent.
 Donc les trente-deux, en fait, c'est pour lui laisser une longue mémoire.
 
-LOT 8 — explication, pédagogue
+LOT 9 — explication, pédagogue
 Parce que pendant que tu discutes, le modèle garde des notes sur tout ce qui a été dit.
 Ton fichier, lui, ne bouge pas.
 Mais ces notes-là, elles grossissent à chaque message.
 
-LOT 9 — chiffres, posé
+LOT 10 — chiffres, posé
 Et on peut les calculer, à partir de la configuration officielle du modèle.
 Avec un cache en seize bits, c'est environ deux gigas pour trente-deux mille tokens, huit pour cent vingt-hui mille, et seize pour la fenêtre complète de deux cent soixante-deux mille.
 
-LOT 10 — l'addition, complice
+LOT 11 — l'addition, complice
 Alors fais l'addition avec moi.
 Le fichier quatre bits, c'est seize gigas et demi sur Hugging Face.
 Mais compté comme ta carte compte, c'est un peu plu de quinze.
+
+LOT 12 — l'addition, complice
 Tu ajoutes seize pour la conversation complète.
 
-LOT 11 — moment clé, révélation
+LOT 13 — moment clé, révélation
 Ça fait trente et un virgule quatre.
 Sur une carte de trente-deux.
 
-LOT 12 — chute, résigné
+LOT 14 — chute, résigné
 Et ça, c'est avant les tampons et tout le reste du moteur.
 [sigh] Bon, la boîte dit trente-deux gigas, mais ta marge, elle est déjà partie.
 
-LOT 13 — solutions, posé
+LOT 15 — solutions, posé
 Du coup, avec trente-deux gigas, le contexte complet, il faut aller le chercher : en compressant le cache, ou en raccourcissant un peu la conversation.
 
-LOT 14 — renvoi, léger
+LOT 16 — renvoi, léger
 Et si t'as qu'une carte de hui gigas, on na vu dans une vidéo précédente comment Kwen vingt-sept bé y tourne quand même, juste en changeant de fichier.
 Là, on parle de ceux qui veulent la place.
 
-LOT 15 — route 1, énergique
+LOT 17 — route 1, énergique
 Première route, la plus tentante : deux cartes de seize gigas, et hop, trente-deux.
 
-LOT 16 — prix route 1 (à relire le 26-27/11)
-Prends la RTX cinquante soixante Ti de seize gigas, la Dual d'Asus.
-Le vin novembre, sur Amazon, elle était à hui cent zeuros, en stock.
-Donc mille si cents la paire, sans limite affichée sur la page.
+LOT 18 — route 1, la carte
+Prends la RTX cinq mille soixante té i de seize gigas, la Dual d'azus.
 
-LOT 17 — prix LDLC (à relire le 26-27/11)
+LOT 19 — prix Amazon (à relire le 26/11)
+Le vin novembre, sur Amazon, elle était à hui cent zeuros, en stock.
+Donc mille si cent la paire, sans limite affichée sur la page.
+
+LOT 20 — prix LDLC (à relire le 26/11)
 Chez LDLC, le même modèle était à mille quatre-vingt zeuros, avec une petite ligne au-dessus du bouton panier : limitée à une par client.
 
-LOT 18 — moment clé, humour gamer
+LOT 21 — écart, moment clé (à relire le 26/11)
 Deux cent quatre-vingt zeuros de pluss pour le même modèle, le même jour.
+
+LOT 22 — humour gamer
 En gros, le boss de fin, c'est le site où tu cliques.
 
-LOT 19 — AMD et Intel (à relire le 26-27/11)
+LOT 23 — AMD, curieux
 Et chez AMD ?
-La Radeon RX quatre-vingt-di soixante XT de seize gigas d'Asus était à sept cent zeuros sur Amazon, donc mille quatre cents la paire.
-Moins cher, mais ce jour-là, la livraison était annoncée du troi zau cinq janvier.
 
-LOT 20 — chute, ironique
+LOT 24 — prix AMD (à relire le 26/11)
+La Radeon RX neuf mille soixante ix té de seize gigas d'azus était à sept cent zeuros sur Amazon, donc mille quatre cent la paire.
+
+LOT 25 — chute, ironique
+Moins cher, mais ce jour-là, la livraison était annoncée du troi zau cinq janvier.
 Bref : Noël sans cartes. [laughter]
+
+LOT 26 — prix Intel A770 (à relire le 26/11)
 L'Intel Arc A sept cent soixante-dix ? Quatre cent soixante euros chez LDLC, mais en rupture en ligne.
 
-LOT 21 — occasion (à relire le 26-27/11)
-Et en noccasion, le vin novembre, une cinquante soixante Ti de seize gigas tournait autour de si cents à si cent soixante-di zeuros sur le bon coin.
+LOT 27 — occasion (à relire le 26/11)
+Et en noccasion, le vin novembre, une cinq mille soixante té i de seize gigas tournait autour de si cent à si cent soixante-di zeuros sur le bon coin.
+
+LOT 28 — occasion, mise en garde
 Entre particuliers, par contre : garde ça en tête pour tout à l'heure.
 
-LOT 22 — piège du slot, enquête
+LOT 29 — piège du slot, enquête
 Maintenant, le vrai piège de cette route, c'est ta tour.
 Prends la mienne : une carte mère micro ATX, comme beaucoup d'autres.
 D'après son manuel, le deuxième slot a la même longueur que le premier.
 
-LOT 23 — piège du slot, la révélation
+LOT 30 — piège du slot, la révélation
 Pourtant, il n'a que quatre lignes en PCI Express trois, et il passe par le chipset.
 Et en pluss, il est tou ten bas.
 
-LOT 24 — piège du slot, concret
+LOT 31 — piège du slot, concret
 Du coup, une carte de deux slots dedans dépasse sous la carte mère, et il te faut un boîtier à cinq emplacements.
-Et les cinquante soixante Ti et quatre-vingt-di soixante XT du relevé sont plu zépaisses : deux slots et demi, donc mesure la place sous ta carte mère.
+Et les cinq mille soixante té i et neuf mille soixante ix té du relevé sont plu zépaisses : deux slots et demi, donc mesure la place sous ta carte mère.
 
-LOT 25 — alimentation, posé
+LOT 32 — alimentation, posé
 Ensuite, l'alimentation.
 La mienne fait mille watts.
-Sauf qu'avec ma RTX cinquante quatre-vingts branchée, il ne me resterait peut-être que deux prises hui broches.
+Sauf qu'avec ma RTX cinq mille quatre-vingt branchée, il ne me resterait peut-être que deux prises hui broches.
+
+LOT 33 — alimentation, conseil
 Donc avant d'acheter la deuxième carte, tu regardes ton boîtier, et tu comptes tes câbles.
 
-LOT 26 — vitesse, pédagogue
+LOT 34 — vitesse, pédagogue
 Et le dernier piège, c'est la vitesse.
 Par défaut, lama CPP coupe le modèle en tranches de couches, une tranche par carte.
 Et pour une seule conversation, elles travaillent chacune leur tour.
 
-LOT 27 — moment clé, chute
+LOT 35 — moment clé, chute
 En fait, la mémoire s'additionne, mais la vitesse, elle, ne double pas.
 Bref, deux cartes, c'est de la place, pas de la vitesse.
 
-LOT 28 — appel à l'abonnement, sourire
+LOT 36 — appel à l'abonnement, sourire
 Si cette vidéo t'a évité un mauvais achat, abonne-toi.
 
-LOT 29 — route 2, soulagement
+LOT 37 — route 2, soulagement
 Deuxième route : une seule carte de trente-deux gigas.
 Plu de deuxième slot, et d'un coup, le PC redevient simple.
 
-LOT 30 — prix Intel (à relire le 26-27/11)
+LOT 38 — prix Intel (à relire le 26/11)
 Le vin novembre, la moins chère en stock de mon relevé, c'était l'Intel Arc Pro bé soixante-cinq d'Asrock : mille neuf cent zeuros chez LDLC.
+
+LOT 39 — prix Intel, Amazon (à relire le 26/11)
 Sur Amazon, des bé soixante-cinq de vendeurs tiers descendaient à mille quatre cent quatre-vingt-troi zeuros, mais livrées en décembre.
-Sa grande sœur, la bé soixante-diss d'Asus, était à deux mille seize euros sur Amazon, en stock.
 
-LOT 31 — prix AMD (à relire le 26-27/11)
-Côté AMD, la Radeon AI Pro R quatre-vingt-dix-sept cents de Gigabyte : deux mille quatre cent zeuros sur Amazon.
-Et chez LDLC, exactement la même référence : deux mille hui cents.
+LOT 40 — prix Intel, B70 (à relire le 26/11)
+Sa grande sœur, la bé soixante-diss d'azus, était à deux mille seize euros sur Amazon, en stock.
 
-LOT 32 — moment clé, tranchant
+LOT 41 — prix AMD (à relire le 26/11)
+Côté AMD, la Radeon AI Pro èr neuf mille sept cent de Gigabyte : deux mille quatre cent zeuros sur Amazon.
+
+LOT 42 — prix AMD, LDLC (à relire le 26/11)
+Et chez LDLC, exactement la même référence : deux mille hui cent.
+
+LOT 43 — question, tranchant (à relire le 26/11)
 Alors, ces quatre cent zeuros de pluss, ils t'achètent quoi ?
+
+LOT 44 — moment clé, tranchant
 Rien.
 C'est la même carte.
 
-LOT 33 — le vrai match, posé
-Donc le vrai match, c'est Intel à mille neuf cents contre AMD à deux mille quatre cents.
+LOT 45 — le vrai match (à relire le 26/11)
+Donc le vrai match, c'est Intel à mille neuf cent contre AMD à deux mille quatre cent.
+
+LOT 46 — le vrai match (à relire le 26/11)
 Et là, cinq cent zeuros de pluss ne t'achètent pas un giga de pluss.
 
-LOT 34 — piège logiciel, sérieux
-Côté AMD, j'ai trouvé un guide officiel pour faire tourner ses zoutils d'IA sur la R quatre-vingt-dix-sept cents.
+LOT 47 — piège logiciel, sérieux
+Côté AMD, j'ai trouvé un guide officiel pour faire tourner ses zoutils d'IA sur la èr neuf mille sept cent.
 Mais trente-deux gigas et un guide ne prouvent pas que chaque moteur la prend en charge.
 Du coup, voilà le vrai piège de cette route : avant de comparer les prix, tu vérifies que ton logiciel gère la carte.
 
-LOT 35 — NVIDIA (à relire le 26-27/11)
+LOT 48 — Nvidia, curieux
 Et chez Nvidia ?
-La RTX cinquante quatre-vingt-di za aussi trente-deux gigas.
+La RTX cinq mille quatre-vingt-di za aussi trente-deux gigas.
+
+LOT 49 — prix Nvidia (à relire le 26/11)
 Sur Amazon, elle partait à presque sept mille euros, chez un vendeur tiers, livrée fin décembre.
+
+LOT 50 — prix Nvidia, LDLC (à relire le 26/11)
 Et chez LDLC, neuf mille quatre cent zeuros, en rupture.
+
+LOT 51 — chute
 Pour ce prix-là, on change carrément de catégorie.
 
-LOT 36 — Tesla V100, mise en garde
+LOT 52 — Tesla V100, mise en garde
 Reste la Tesla vé cent de trente-deux gigas d'occasion.
 Pas d'offre vérifiable dans ce relevé, donc pas de prix.
-Par contre, son piège, on le connaît : Nvidia a fait du pilote cinq cent quatre-vingts la dernière branche qui la gère, et Couda treize ne compile plu pour elle.
+Par contre, son piège, on le connaît : Nvidia a fait du pilote cinq cent quatre-vingt la dernière branche qui la gère, et couda treize ne compile plu pour elle.
 
-LOT 37 — Tesla V100, chute
+LOT 53 — Tesla V100, chute
 En pluss, comme les zautres cartes de serveur, elle n'a ni ventilateur ni sortie vidéo : tout est à refaire autour.
 En fait, elle peut paraître pas chère, et te coûter tout un week-end.
 
-LOT 38 — route 3, surprise (prix à relire le 26-27/11)
+LOT 54 — route 3, surprise
 Troisième route : changer carrément d'ordinateur.
+
+LOT 55 — prix Mac mini (à relire le 26/11)
 Le Mac mini M six avec trente-deux gigas de mémoire unifiée et cinq cent douze de stockage était affiché mille sept cent neuf euros chez LDLC le vin novembre.
+
+LOT 56 — surprise
 Donc un nordinateur complet coûtait moins cher que n'importe quelle carte de trente-deux gigas en stock de mon relevé.
 
-LOT 39 — les hics, posé
+LOT 57 — les hics, posé
 Premier hic : lui, il n'était pas en stock : plu de quinze jours.
-Et en nacceptant d'attendre, une bé soixante-cinq de vendeur tiers descendait à mille quatre cent quatre-vingt-trois.
+
+LOT 58 — prix B65 (à relire le 26/11)
+Et en nacceptant d'attendre, une bé soixante-cinq de vendeur tiers descendait à mille quatre cent quatre-vingt-troi.
+
+LOT 59 — les hics, posé
 Et surtout, cette mémoire, elle est partagée : le système et tes zapplis se servent dedans.
 
-LOT 40 — mini-PC (à relire le 26-27/11)
+LOT 60 — mini-PC, posé
 Côté PC, il y a les mini-PC Ryzen AI Max Plus, avec soixante-quatre ou même cent vingt-hui gigas de mémoire partagée.
+
+LOT 61 — prix mini-PC (à relire le 26/11)
 Celui que j'ai regardé affichait autour de deux mille euros en soixante-quatre gigas, en précommande.
+
+LOT 62 — mini-PC, réserves
 Seulement, sa page ne dit pas clairement si la TVA est dedans.
 Et sa mémoire est fixe, pour toujours.
 
-LOT 41 — piège route 3, chute
+LOT 63 — piège route 3, chute
 Du coup, le piège de cette route, c'est la facture : tu remplaces ton PC entier.
 
-LOT 42 — garanties, sérieux
+LOT 64 — garanties, sérieux
 Et avant de payer, un dernier piège, qui n'est pas technique.
 En France, chez un vendeur professionnel, neuf ou d'occasion, tu as deu zans de garantie légale, et il ne peut pas les réduire.
 Le défaut est présumé exister dès la vente pendant ces deu zans pour du neuf, et douze mois pour de l'occasion.
 
-LOT 43 — rétractation, posé
+LOT 65 — rétractation, posé
 Et pour un nachat à distance, tu as quatorze jours après la réception pour te rétracter.
 Donc ces quatorze jours, c'est ta fenêtre pour tester la carte.
 
-LOT 44 — entre particuliers, mise en garde
+LOT 66 — entre particuliers, mise en garde
 Par contre, entre particuliers, comme sur le bon coin, pas de rétractation, pas de garantie légale : il te reste seulement les vices cachés, et c'est à toi de les prouver.
-Donc ta cinquante soixante Ti d'occasion, tu la vois tourner avant de payer.
+Donc ta cinq mille soixante té i d'occasion, tu la vois tourner avant de payer.
 
-LOT 45 — public africain, chaleureux
+LOT 67 — public africain, chaleureux
 Et si tu regardes depuis Abidjan, Dakar ou Kinshasa : ces prix sont des prix français, et ces garanties, c'est le droit français.
 Donc chez toi, renseigne-toi sur le recours du vendeur avant de payer.
 Par contre, l'addition de la mémoire, les slots et l'alimentation, ça, c'est valable partout.
 
-LOT 46 — verdict, transition
+LOT 68 — verdict, transition
 Alors, quelle route ?
 Ça dépend de ce que tu as déjà.
 Et les prix, c'est ceux du vin novembre.
 
-LOT 47 — verdict 1 (à relire le 26-27/11)
-Si t'as déjà une Nvidia de seize gigas, et la place pour une autre, ajoute une cinquante soixante Ti de seize gigas : hui cent zeuros neuve sur Amazon, ou autour de si cents à si cent soixante-diss d'occasion.
+LOT 69 — verdict 1 (à relire le 26/11)
+Si t'as déjà une Nvidia de seize gigas, et la place pour une autre, ajoute une cinq mille soixante té i de seize gigas : hui cent zeuros neuve sur Amazon, ou autour de si cent à si cent soixante-di zeuros d'occasion.
+
+LOT 70 — verdict 1
 La moitié de tes trente-deux gigas est déjà payée.
 
-LOT 48 — verdict 2 (à relire le 26-27/11)
-Si t'as pas encore de carte, et que ta tour en naccepte deux, la paire de cinquante soixante Ti à mille si cent zeuros était le chemin en stock le moins cher vers trente-deux gigas.
-Avec tous les pièges de la route : la place, les câbles, et une vitesse qui ne double pas.
-La paire de quatre-vingt-di soixante XT coûtait moins, mais arrivait en janvier.
+LOT 71 — verdict 2 (à relire le 26/11)
+Si t'as pas encore de carte, et que ta tour en naccepte deux, la paire de cinq mille soixante té i à mille si cent zeuros était le chemin en stock le moins cher vers trente-deux gigas.
 
-LOT 49 — verdict 3, une carte (à relire le 26-27/11)
+LOT 72 — verdict 2
+Avec tous les pièges de la route : la place, les câbles, et une vitesse qui ne double pas.
+La paire de neuf mille soixante ix té coûtait moins, mais arrivait en janvier.
+
+LOT 73 — verdict 3, une carte (à relire le 26/11)
 Pour une seule carte, je prendrais la moins chère en stock : la bé soixante-cinq, à mille neuf cent zeuros chez LDLC.
+
+LOT 74 — verdict 3, alimentation
 Regarde juste sa prise d'alimentation, une douze V deux fois six : il te faut ce câble, ou un nadaptateur.
+
+LOT 75 — verdict 3, Amazon (à relire le 26/11)
 Si tu préfères Amazon, sa grande sœur, la bé soixante-diss, était à deux mille seize, en stock.
 
-LOT 50 — verdict 3, logiciel (à relire le 26-27/11)
+LOT 76 — verdict 3, logiciel
 Et dans tous les cas, tu vérifies que ton logiciel gère la carte.
-S'il ne gère pas Intel, regarde la R quatre-vingt-dix-sept cents de Gigabyte : deux mille quatre cent zeuros sur Amazon, pas deux mille hui cents.
 
-LOT 51 — verdict 4, Mac (à relire le 26-27/11)
+LOT 77 — verdict 3, AMD (à relire le 26/11)
+S'il ne gère pas Intel, regarde la èr neuf mille sept cent de Gigabyte : deux mille quatre cent zeuros sur Amazon, pas deux mille hui cent.
+
+LOT 78 — verdict 4, Mac (à relire le 26/11)
 Si tu veux remplacer tout l'ordinateur, le Mac mini à mille sept cent neuf euros entre dans la course.
+
+LOT 79 — verdict 4, Mac
 Par contre, souviens-toi de l'addition du début : trente et un virgule quatre gigas pour la conversation complète.
 Sur un Mac de trente-deux gigas, dont le système prend sa part, en cache seize bits, ça ne rentre pas : tu compresses le cache, ou tu raccourcis.
 
-LOT 52 — verdict 4, mini-PC (à relire le 26-27/11)
+LOT 80 — verdict 4, mini-PC (à relire le 26/11)
 Et si c'est vraiment la conversation complète que tu veux, la seule route chiffrée de mon relevé qui dépasse trente-deux gigas, c'est le mini-PC Ryzen AI Max Plus en soixante-quatre, autour de deux mille euros.
 
-LOT 53 — conclusion, complice
+LOT 81 — conclusion, complice
 Et en fait, si tu as déjà vingt-quatre gigas et qu'une conversation courte te suffit, garde ton argent.
 
-LOT 54 — phrase finale, moment clé
+LOT 82 — phrase finale, moment clé
 La meilleure carte, parfois, c'est celle que tu n'achètes pas.
 
-LOT 55 — sortie
+LOT 83 — sortie
 Allez, salut !

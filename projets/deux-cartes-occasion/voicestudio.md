@@ -1,91 +1,62 @@
-# VoiceStudio : notes de génération (20/11)
+# VoiceStudio : notes de génération (refait le 21/11 avec les conventions du jour)
 
-Test de [VoiceStudio](https://github.com/debpalash/VoiceStudio) (moteur par défaut OmniVoice) pour la voix de « 32 Go pour Qwen 27B ». Texte tiré de `teleprompteur.md` (V5, grillé 8/10), **sans changement de fond** : seule l'écriture a été adaptée au moteur.
+Voix de « 32 Go pour Qwen 27B ». Texte tiré de `teleprompteur.md` (V5, grillé 8/10), **sans changement de fond** : seule l'écriture a été adaptée au moteur. Règles : [`.claude/rules/voix-synthese.md`](../../.claude/rules/voix-synthese.md).
 
-- [`voicestudio.txt`](voicestudio.txt) : 55 lots pour la page **Voice**. Ne colle que le texte sous chaque ligne `LOT …`, sinon l'en-tête sera lu.
-- [`voicestudio-stories.txt`](voicestudio-stories.txt) : le même texte sans en-têtes, pour une première version complète dans l'onglet **Stories / Audiobook**. Une phrase par ligne et une ligne vide entre les lots. Il est généré depuis `voicestudio.txt` : si tu en changes un, refais l'autre.
+- [`voicestudio.txt`](voicestudio.txt) : 83 lots pour la page **Voice**. Ne colle que le texte sous chaque ligne `LOT …`, sinon l'en-tête sera lu.
+- [`voicestudio-stories.txt`](voicestudio-stories.txt) : le même texte sans en-têtes, pour une version complète dans **Stories / Audiobook**. Généré depuis `voicestudio.txt` : si tu en changes un, refais l'autre.
 
-Aucune pause n'est balisée (ni `[pause]`, ni `...`) : les silences se règlent au montage. Seules balises restantes : un `[sigh]` et un `[laughter]`, donc les deux fichiers marchent sur les deux onglets. Vérifié avec `verifier_script.py --mode voice` : seuls restent les sigles voulus.
+Aucune pause balisée, aucun point de suspension (le « 2800 euros… » du téléprompteur devient une virgule : les silences se posent au montage). Seules balises : un `[sigh]` (lot 14, avant « Bon, la boîte dit trente-deux gigas ») et un `[laughter]` (lot 25, après « Noël sans cartes »). Retire-les si ça sonne faux.
 
-## Ce qui a changé par rapport au téléprompteur
+## Ce qui change par rapport à la version du 20/11
 
-1. **Tous les nombres en toutes lettres** : prix, dates, gigas, références de cartes. La normalisation automatique lit mal « 5060 », « 31,4 » ou « 262 000 ».
-2. **Pas de majuscules d'emphase** : elles seraient épelées. ASUS, NVIDIA et VRAM sont réécrits (voir le tableau). L'emphase reste portée par ton texte (mot fort en fin de phrase, phrases courtes) ; les pauses viendront au montage.
-3. **Liaisons et prononciations écrites comme elles se disent (20/11, ta demande)**, pour que le moteur ne les rate pas :
-   - « plus » qui ne se prononce pas : *plu de si millions*, *plu chère*, *plu zépaisses*, *ne compile plu* ; et quand le *s* s'entend : *de pluss*, *en pluss* ;
-   - nombres + euros : *hui cent zeuros*, *quatre-vingt zeuros*, *mille quatre cent quatre-vingt-troi zeuros*, *si cent soixante-di zeuros* ;
-   - chiffres qui changent devant une consonne : *si millions*, *hui gigas*, *hui broches*, *vin novembre*, *cent vingt-hui mille*, *quatre-vingt-di soixante* ;
-   - liaisons obligatoires : *en nun mois*, *un nordinateur*, *on na vu*, *en noccasion*, *du troi zau cinq*, *deu zans*, *les zautres*, *ses zoutils*, *tes zapplis*, *un nachat*, *un nadaptateur*, *en nacceptant*, *en naccepte*, *tou ten bas*, *quatre-vingt-di za aussi*.
-   Les liaisons facultatives sont laissées de côté, pour garder ton ton parlé (*t'as*, *si t'es malin*).
-4. **Les lignes du téléprompteur sont recollées en phrases**. En Stories, chaque ligne est un rendu séparé avec un silence de 250 ms : tes coupures en milieu de phrase auraient haché la voix.
-5. Deux sons non verbaux seulement, à retirer si ça sonne faux :
-   - `[sigh]` avant « Bon, la boîte dit trente-deux gigas » (lot 12) ;
-   - `[laughter]` après « Noël sans cartes » (lot 20).
+- **Conventions du 21/11** : Ti → « té i », XT → « ix té », numéros de carte en milliers (5060 → « cinq mille soixante », 5080 → « cinq mille quatre-vingt », 9060 XT → « neuf mille soixante ix té »), R9700 → « èr neuf mille sept cent », ASUS → « azus », « en nun mois » → « en n'un mois ».
+- **Lots refaits** : chaque phrase de prix est dans son propre lot (ou avec ses voisines de prix), marquée « à relire le 26/11 ». L'ancien découpage (55 lots) mélangeait prix et texte.
+- Le lot 6 de l'ancienne version (« la même carte, 400 euros plus chère… ») est maintenant isolé.
 
-## Prononciation : à corriger selon ta façon de dire
+## Prononciations à valider à l'écoute
 
-| Dans le script | Écrit pour le moteur | Si ça sonne mal |
-|---|---|---|
-| Qwen 27B | Kwen vingt-sept bé | « Tchouène », ou le dictionnaire de prononciation de l'app |
-| VRAM | vé-ram | `[[vé ram]]` |
-| RTX 5060 Ti | RTX cinquante soixante Ti | « Ti » peut sortir « ti » ou « taï » : teste |
-| RX 9060 XT | RX quatre-vingt-dix soixante XT | |
-| B65 / B70 | bé soixante-cinq / bé soixante-dix | |
-| R9700 | R quatre-vingt-dix-sept cents | « R quatre-vingt-dix-sept zéro zéro » |
-| A770, V100, M6 | A sept cent soixante-dix, vé cent, M six | |
-| ASUS, ASRock, NVIDIA | Asus, Asrock, Nvidia | « Ènvidia » si le « N » saute |
-| PCIe 3.0 | PCI Express trois | |
-| llama.cpp | lama CPP | |
-| CUDA | Couda | |
-| 12V-2x6 | douze V deux fois six | |
-| Ryzen AI Max+ | Ryzen AI Max Plus | « A I » se lit à la française |
-| leboncoin | le bon coin | |
-| Hugging Face, tokens, slot, chipset, week-end | inchangés | anglicismes : à écouter |
+| Dans le script | Écrit pour le moteur |
+|---|---|
+| Qwen 27B | Kwen vingt-sept bé |
+| VRAM | vé-ram |
+| RTX 5060 Ti | RTX cinq mille soixante té i |
+| RTX 5080 / 5090 | cinq mille quatre-vingt / cinq mille quatre-vingt-di za aussi (liaison écrite) |
+| RX 9060 XT | RX neuf mille soixante ix té |
+| Arc A770 | Arc A sept cent soixante-dix |
+| Arc Pro B65 / B70 | bé soixante-cinq / bé soixante-diss |
+| Radeon AI PRO R9700 | Radeon AI Pro èr neuf mille sept cent |
+| Tesla V100 | Tesla vé cent |
+| Mac mini M6 | Mac mini M six |
+| ASUS, ASRock | azus, Asrock |
+| CUDA 13, pilote 580 | couda treize, cinq cent quatre-vingt |
+| llama.cpp | lama CPP |
+| PCIe 3.0 | PCI Express trois |
+| 12V-2x6 | douze V deux fois six |
+| Ryzen AI Max+ | Ryzen AI Max Plus |
+| leboncoin | le bon coin |
+| NVIDIA | Nvidia |
 
-Sigles gardés en capitales parce qu'ils s'épellent : RTX, RX, XT, AMD, LDLC, ATX, TVA, PC, CPP, AI.
+Sigles gardés en capitales : RTX, RX, AMD, LDLC, ATX, TVA, PC, IA, AI, CPP, PCI (ce dernier hors liste officielle, à confirmer).
 
-Mets les mots récurrents (Kwen, vé-ram, Nvidia, cinquante soixante Ti) dans le **dictionnaire de prononciation** de l'app une fois trouvés : tu gardes la même prononciation d'un bout à l'autre, et dans les prochaines vidéos.
+Garde la même graphie d'un bout à l'autre ; ajoute les mots récurrents au dictionnaire de prononciation de l'app.
 
-## Garder ton ton et ta constance
-
-Le clonage copie ta **manière de parler**, pas seulement ton timbre. C'est donc le clip de référence qui porte ton ton, bien plus que le texte.
-
-- **Clip de référence** : ta propre voix, 3 à 10 s, au SM7B, sec, avec sa transcription exacte. Prends un passage de tes anciennes vidéos où tu es naturel, pas un texte lu à froid.
-- **Deux profils au maximum**, avec le même micro et la même pièce :
-  - « posé » pour les explications et les garanties (lots 8-10, 26, 42-45) ;
-  - « énergique » pour le hook et les chutes (lots 1-4, 11, 18, 20, 27, 32, 54).
-  Vérifie à l'écoute que le timbre reste le même d'un profil à l'autre. Sinon, un seul profil pour toute la vidéo.
-- **Mêmes réglages du début à la fin** : la constance vient de là.
+## Réglages (inchangés)
 
 | Réglage | Valeur |
 |---|---|
-| Moteur | OmniVoice (par défaut) |
+| Moteur | OmniVoice |
 | `num_step` | 32 |
 | `guidance_scale` | 2,0 |
 | `speed` | 1,0 ; 1,05 si c'est plus lent que ta vraie voix |
 | `class_temperature` | essaie le lot 1 à 0, 0,3 et 0,5, choisis à l'oreille, puis ne change plus |
-| `postprocess_output` | actif : il coupe les blancs du moteur, tu poses les tiens au montage |
+| `postprocess_output` | actif |
 
-Seed libre pendant les prises. Épingle-la dès qu'une prise sonne vraiment comme toi.
+Deux profils au maximum (« posé » et « énergique »), même micro et même pièce ; seed épinglée dès qu'une prise sonne comme toi.
 
-## Ordre de travail conseillé
+## Lots à faire en plusieurs prises (3 à 4)
 
-1. Rends tout `voicestudio-stories.txt` dans Stories pour une base complète et le minutage.
-2. Sur la page Voice, refais **3 à 4 prises** des moments clés : lots 1, 2, 4, 11, 18, 20, 27, 32, 54. Nomme-les `lot11_v1.wav`, `lot11_v2.wav`…
-3. Au montage, garde la meilleure prise par phrase. Tu peux combiner des morceaux de plusieurs prises. Passe ensuite la voix dans `ressources/voix/sm7b.sh` comme d'habitude.
-4. Ajoute les pauses au montage. Rappel de ta règle : pas de raté, de souffle ni de blanc.
+1, 2, 4 (hook) ; 13 et 14 (révélation et chute de l'addition) ; 21 et 22 (le boss de fin) ; 25 (« Noël sans cartes ») ; 44 (« Rien. C'est la même carte. ») ; 36 (abonnement) ; 82 (phrase finale).
 
-## Prix à relire le 26-27/11
+## Prix à relire le 26/11
 
-Les lots de prix sont isolés pour pouvoir les regénérer seuls si un prix bouge : 16, 17, 19, 21, 30, 31, 35, 38, 40, 47-52 (marqués « à relire » dans les en-têtes). Les lots 3, 6, 18, 32, 33 et 39 reprennent aussi des montants : vérifie-les s'ils changent.
-
-## Conventions d'écriture (21/11, ta demande)
-
-Elles sont maintenant dans [`.claude/rules/voix-synthese.md`](../../.claude/rules/voix-synthese.md), lisible par tout agent. Rappel :
-
-- **Ti** → « té i »
-- liaison en **n'un** (« en n'un mois ») ; **d'un** reste tel quel
-- **numéros de carte toujours en milliers** : 5060 → « cinq mille soixante », 5090 → « cinq mille quatre-vingt-dix »
-- **9060 XT** → « neuf mille soixante ix té »
-- **R9700** → « èr neuf mille sept cent »
-- **ASUS** → « azus »
+Lots marqués « à relire » : 3, 6, 19, 20, 21, 24, 26, 27, 38, 39, 40, 41, 42, 43, 45, 46, 49, 50, 55, 58, 61, 69, 71, 73, 75, 77, 78, 80. Si un prix bouge, regénère seulement ce lot.
