@@ -1,0 +1,837 @@
+1
+00:00:00,027 --> 00:00:02,720
+Qwen 27B is one of the best
+models you can run
+
+2
+00:00:02,786 --> 00:00:06,110
+on your own machine:
+more than 6 million downloads in a month.
+
+3
+00:00:06,485 --> 00:00:09,491
+Except that if you want to do more
+than ask it about the weather,
+
+4
+00:00:09,612 --> 00:00:11,394
+it needs room for your conversation.
+
+5
+00:00:11,818 --> 00:00:13,845
+To be comfortable: 32 GB of VRAM.
+
+6
+00:00:14,240 --> 00:00:16,574
+And in 2026, VRAM is gold.
+
+7
+00:00:16,949 --> 00:00:19,354
+Those 32 GB can cost you €2,800…
+
+8
+00:00:19,633 --> 00:00:21,155
+or, if you're smart, a lot less.
+
+9
+00:00:21,874 --> 00:00:24,430
+So, which route to 32 GB do you take,
+
+10
+00:00:24,537 --> 00:00:25,926
+and what trap is it hiding?
+
+11
+00:00:26,299 --> 00:00:30,140
+In this video, we'll see how much
+memory Qwen 27B really takes.
+
+12
+00:00:30,578 --> 00:00:32,744
+Then, 3 routes to 32 GB,
+
+13
+00:00:32,852 --> 00:00:36,458
+with the best prices I found
+on November 20, and the trap in each one.
+
+14
+00:00:36,926 --> 00:00:40,291
+The same card, €400 more expensive
+depending on the site you click,
+
+15
+00:00:40,438 --> 00:00:43,898
+and a whole computer cheaper
+than a 32 GB card in stock.
+
+16
+00:00:44,339 --> 00:00:46,812
+And at the end, the route I'd
+take depending on your PC.
+
+17
+00:00:47,393 --> 00:00:50,138
+First answer, and it might
+already save you a card:
+
+18
+00:00:50,392 --> 00:00:52,327
+for Qwen 27B at 4 bits,
+
+19
+00:00:52,347 --> 00:00:55,393
+with a short conversation,
+24 GB is enough.
+
+20
+00:00:55,886 --> 00:00:59,009
+So the 32 is, really,
+to give it a long memory.
+
+21
+00:00:59,357 --> 00:01:00,750
+Because while you're chatting,
+
+22
+00:01:00,803 --> 00:01:02,793
+the model keeps notes
+on everything that's been said.
+
+23
+00:01:03,175 --> 00:01:04,554
+Your file, though, doesn't change.
+
+24
+00:01:05,012 --> 00:01:07,665
+But those notes grow with every message.
+
+25
+00:01:08,093 --> 00:01:09,303
+And we can calculate them,
+
+26
+00:01:09,432 --> 00:01:11,568
+from the model's official configuration.
+
+27
+00:01:11,959 --> 00:01:16,098
+With a 16-bit cache,
+it's about 2 GB for 32,000 tokens,
+
+28
+00:01:16,270 --> 00:01:20,703
+8 for 128,000,
+and 16 for the full window of 262,000.
+
+29
+00:01:21,141 --> 00:01:22,431
+So do the math with me.
+
+30
+00:01:22,858 --> 00:01:26,912
+The 4-bit file is 16.5 GB on Hugging Face.
+
+31
+00:01:27,349 --> 00:01:29,887
+But counted the way your card
+counts it, it's a bit over 15.
+
+32
+00:01:30,317 --> 00:01:32,228
+You add 16 for the full conversation.
+
+33
+00:01:32,666 --> 00:01:34,376
+That makes 31.4.
+
+34
+00:01:34,869 --> 00:01:36,039
+On a 32 GB card.
+
+35
+00:01:36,467 --> 00:01:38,935
+And that's before buffers
+and everything else the engine needs.
+
+36
+00:01:39,336 --> 00:01:42,592
+Well, the box says 32 GB,
+but your margin is already gone.
+
+37
+00:01:43,013 --> 00:01:47,062
+So with 32 GB,
+the full context has to be earned:
+
+38
+00:01:47,296 --> 00:01:50,487
+by compressing the cache,
+or by shortening the conversation a bit.
+
+39
+00:01:50,909 --> 00:01:54,055
+And if you only have an 8 GB card,
+we saw in a previous video
+
+40
+00:01:54,075 --> 00:01:57,499
+how Qwen 27B still runs
+on it, just by changing the file.
+
+41
+00:01:57,902 --> 00:01:59,532
+Here, we're talking about
+people who want the room.
+
+42
+00:02:00,169 --> 00:02:04,620
+First route, the most tempting:
+2 cards of 16 GB, and boom, 32.
+
+43
+00:02:04,937 --> 00:02:08,421
+Take the RTX 5060 Ti 16 GB, the ASUS Dual.
+
+44
+00:02:09,023 --> 00:02:12,364
+On November 20, on Amazon,
+it was €800, in stock.
+
+45
+00:02:12,707 --> 00:02:15,357
+So €1,600 for the pair,
+with no limit shown on the page.
+
+46
+00:02:15,815 --> 00:02:19,929
+At LDLC, the same model was €1,080,
+with a little line
+
+47
+00:02:19,949 --> 00:02:22,640
+above the cart button:
+limited to one per customer.
+
+48
+00:02:23,102 --> 00:02:26,527
+€280 more for the same model,
+the same day.
+
+49
+00:02:26,941 --> 00:02:29,493
+Basically, the final boss
+is the site you click.
+
+50
+00:02:29,898 --> 00:02:30,648
+And at AMD?
+
+51
+00:02:31,216 --> 00:02:35,752
+The ASUS Radeon RX 9060 XT 16 GB was €700
+
+52
+00:02:35,772 --> 00:02:38,068
+on Amazon, so €1,400 for the pair.
+
+53
+00:02:38,441 --> 00:02:39,610
+Cheaper, but that day,
+
+54
+00:02:39,726 --> 00:02:42,100
+delivery was announced for January 3 to 5.
+
+55
+00:02:42,479 --> 00:02:43,950
+In short: Christmas without cards.
+
+56
+00:02:44,386 --> 00:02:46,601
+The Intel Arc A770?
+
+57
+00:02:47,026 --> 00:02:50,305
+€460 at LDLC, but out of stock online.
+
+58
+00:02:50,682 --> 00:02:53,794
+And used, a 5060 Ti 16 GB
+
+59
+00:02:53,814 --> 00:02:56,582
+was going for €600 to €670.
+
+60
+00:02:57,020 --> 00:03:00,067
+Between individuals, though:
+keep that in mind for later.
+
+61
+00:03:00,475 --> 00:03:02,613
+Now, the real trap
+of this route is your tower.
+
+62
+00:03:03,003 --> 00:03:06,356
+Take mine: a micro-ATX motherboard,
+like many others.
+
+63
+00:03:06,702 --> 00:03:09,943
+According to its manual,
+the second slot is as long as the first.
+
+64
+00:03:10,348 --> 00:03:14,125
+Yet it only has 4 lanes of PCIe 3.0,
+and it goes through the chipset.
+
+65
+00:03:14,453 --> 00:03:15,930
+And on top of that, it's all
+the way at the bottom.
+
+66
+00:03:16,207 --> 00:03:19,606
+So a 2-slot card in there
+hangs below the motherboard,
+
+67
+00:03:19,669 --> 00:03:21,899
+and you need a case
+with 5 expansion slots.
+
+68
+00:03:22,206 --> 00:03:26,974
+And the 5060 Ti and 9060 XT
+from my list are thicker:
+
+69
+00:03:27,217 --> 00:03:30,147
+2.5 slots, so measure the space
+under your motherboard.
+
+70
+00:03:30,527 --> 00:03:32,004
+Next, the power supply.
+
+71
+00:03:32,442 --> 00:03:33,445
+Mine is 1,000 watts.
+
+72
+00:03:33,465 --> 00:03:36,035
+Except that with my RTX 5080 plugged in,
+
+73
+00:03:36,117 --> 00:03:38,426
+I might only have 2 8-pin connectors left.
+
+74
+00:03:38,829 --> 00:03:40,507
+So before buying the second card,
+
+75
+00:03:40,572 --> 00:03:42,906
+you check your case,
+and you count your cables.
+
+76
+00:03:43,320 --> 00:03:45,222
+And the last trap is speed.
+
+77
+00:03:45,697 --> 00:03:47,866
+By default, llama.cpp splits
+the model into slices of layers,
+
+78
+00:03:47,886 --> 00:03:50,027
+one slice per card.
+
+79
+00:03:50,404 --> 00:03:53,465
+For a single conversation,
+they work one after the other.
+
+80
+00:03:53,883 --> 00:03:57,555
+In fact, the memory adds up,
+but the speed doesn't double.
+
+81
+00:03:57,944 --> 00:04:00,792
+In short, 2 cards are about room,
+not speed.
+
+82
+00:04:01,161 --> 00:04:03,475
+If this video saved
+you from a bad purchase, subscribe.
+
+83
+00:04:04,285 --> 00:04:06,528
+Second route: a single 32 GB card.
+
+84
+00:04:06,884 --> 00:04:09,717
+No second slot, and suddenly
+the PC is simple again.
+
+85
+00:04:10,165 --> 00:04:12,495
+On November 20,
+the cheapest in stock on my list
+
+86
+00:04:12,658 --> 00:04:17,329
+was the ASRock Intel Arc Pro B65:
+€1,900 at LDLC.
+
+87
+00:04:17,842 --> 00:04:23,008
+On Amazon, B65s from third-party sellers
+went down to €1,483,
+
+88
+00:04:23,101 --> 00:04:24,371
+but delivered in December.
+
+89
+00:04:24,844 --> 00:04:30,051
+Its bigger sister, the ASUS B70,
+was €2,016 on Amazon, in stock.
+
+90
+00:04:30,470 --> 00:04:34,533
+On the AMD side,
+the Gigabyte Radeon AI PRO R9700:
+
+91
+00:04:34,660 --> 00:04:36,410
+€2,400 on Amazon.
+
+92
+00:04:36,888 --> 00:04:40,659
+And at LDLC,
+the exact same reference: €2,800.
+
+93
+00:04:41,057 --> 00:04:43,107
+So, what do those extra €400 buy you?
+
+94
+00:04:43,715 --> 00:04:45,291
+Nothing. It's the same card.
+
+95
+00:04:45,674 --> 00:04:50,127
+So the real match is Intel at €1,900
+against AMD at €2,400.
+
+96
+00:04:50,450 --> 00:04:53,220
+And €500 more doesn't buy
+you one more gigabyte.
+
+97
+00:04:53,618 --> 00:04:55,881
+On the AMD side, I found an official guide
+
+98
+00:04:55,901 --> 00:04:59,560
+to run its AI tools on the R9700.
+
+99
+00:04:59,918 --> 00:05:01,900
+But 32 GB and a guide don't prove
+
+100
+00:05:01,920 --> 00:05:03,649
+that every engine supports it.
+
+101
+00:05:04,013 --> 00:05:06,179
+So here's the real trap of this route:
+
+102
+00:05:06,559 --> 00:05:09,645
+before comparing prices, check
+that your software supports the card.
+
+103
+00:05:09,983 --> 00:05:10,733
+And at NVIDIA?
+
+104
+00:05:11,171 --> 00:05:14,255
+The RTX 5090 also has 32 GB.
+
+105
+00:05:14,655 --> 00:05:16,895
+On Amazon, it was almost €7,000,
+
+106
+00:05:16,915 --> 00:05:19,139
+from a third-party seller,
+delivered late December.
+
+107
+00:05:19,508 --> 00:05:22,577
+And at LDLC, €9,400, out of stock.
+
+108
+00:05:22,970 --> 00:05:25,351
+At that price,
+we're in a different category altogether.
+
+109
+00:05:25,774 --> 00:05:28,781
+That leaves the used
+Tesla V100 with 32 GB.
+
+110
+00:05:29,180 --> 00:05:31,731
+No verifiable offer in my list,
+so no price.
+
+111
+00:05:32,127 --> 00:05:35,913
+But its trap is a known one:
+NVIDIA made the 580 driver
+
+112
+00:05:35,933 --> 00:05:39,549
+the last branch that supports
+it, and CUDA 13 no longer compiles for it.
+
+113
+00:05:39,933 --> 00:05:41,865
+On top of that, like other server cards,
+
+114
+00:05:41,915 --> 00:05:45,682
+it has no fan and no video output:
+everything has to be redone around it.
+
+115
+00:05:46,232 --> 00:05:49,518
+In fact, it can look cheap,
+and cost you a whole weekend.
+
+116
+00:05:50,133 --> 00:05:52,397
+Third route: change computers altogether.
+
+117
+00:05:52,835 --> 00:05:55,748
+The Mac mini M6 with 32 GB
+of unified memory
+
+118
+00:05:55,946 --> 00:06:01,100
+and 512 of storage was listed
+at €1,709 at LDLC on November 20.
+
+119
+00:06:01,517 --> 00:06:04,139
+So a complete computer cost less than any
+
+120
+00:06:04,159 --> 00:06:06,711
+32 GB card in stock on my list.
+
+121
+00:06:07,146 --> 00:06:10,683
+First catch: it wasn't in stock
+for more than 15 days.
+
+122
+00:06:11,127 --> 00:06:12,447
+And if you accept waiting,
+
+123
+00:06:12,585 --> 00:06:16,737
+a B65 from a third-party seller
+went down to €1,483.
+
+124
+00:06:17,115 --> 00:06:18,815
+And above all, this memory is shared:
+
+125
+00:06:18,835 --> 00:06:20,665
+the system and your apps use it too.
+
+126
+00:06:21,052 --> 00:06:24,309
+On the PC side,
+there are the Ryzen AI Max+ mini PCs,
+
+127
+00:06:24,462 --> 00:06:28,019
+with 64 or even 128 GB of shared memory.
+
+128
+00:06:28,502 --> 00:06:30,972
+The one I looked at was around €2,000
+
+129
+00:06:31,015 --> 00:06:33,059
+for 64 GB, on preorder.
+
+130
+00:06:33,476 --> 00:06:36,114
+Only, its page doesn't clearly
+say whether VAT is included.
+
+131
+00:06:36,502 --> 00:06:38,405
+And its memory is fixed, forever.
+
+132
+00:06:38,853 --> 00:06:41,052
+So the trap of this route is the bill:
+
+133
+00:06:41,231 --> 00:06:42,692
+you're replacing your whole PC.
+
+134
+00:06:43,289 --> 00:06:45,959
+And before paying, one last trap,
+and it isn't technical.
+
+135
+00:06:46,396 --> 00:06:49,522
+In France, from a professional
+seller, new or used,
+
+136
+00:06:49,650 --> 00:06:53,001
+you get a 2-year legal guarantee,
+and they can't shorten it.
+
+137
+00:06:53,399 --> 00:06:56,238
+The defect is presumed to have existed
+at the time of sale for those 2 years
+
+138
+00:06:56,258 --> 00:06:58,521
+for new items,
+and 12 months for used ones.
+
+139
+00:06:58,969 --> 00:07:00,179
+And for a distance purchase,
+
+140
+00:07:00,238 --> 00:07:02,806
+you have 14 days after
+receiving it to withdraw.
+
+141
+00:07:03,221 --> 00:07:06,422
+So those 14 days are your window
+to test the card.
+
+142
+00:07:06,778 --> 00:07:09,478
+But between individuals,
+like on leboncoin,
+
+143
+00:07:09,602 --> 00:07:12,072
+no right of withdrawal,
+no legal guarantee:
+
+144
+00:07:12,255 --> 00:07:15,098
+you're left with hidden defects
+only, and it's up to you to prove them.
+
+145
+00:07:15,551 --> 00:07:19,157
+So your used 5060 Ti,
+you see it running before you pay.
+
+146
+00:07:19,552 --> 00:07:23,078
+If you're watching from another country,
+these prices are French prices,
+
+147
+00:07:23,098 --> 00:07:25,622
+and guarantees that apply
+in France and in Europe.
+
+148
+00:07:25,852 --> 00:07:28,448
+Check which ones apply where you are
+before you buy.
+
+149
+00:07:28,860 --> 00:07:30,331
+But the memory math,
+the slots and the power supply,
+
+150
+00:07:30,351 --> 00:07:32,847
+those apply everywhere.
+
+151
+00:07:33,655 --> 00:07:34,528
+So, which route?
+
+152
+00:07:34,548 --> 00:07:35,778
+It depends on what you already have.
+
+153
+00:07:36,246 --> 00:07:37,808
+And the prices are the ones
+from November 20.
+
+154
+00:07:38,259 --> 00:07:39,889
+If you already have a 16 GB NVIDIA card,
+
+155
+00:07:40,066 --> 00:07:43,714
+and room for another, add a 5060 Ti 16 GB:
+
+156
+00:07:43,952 --> 00:07:48,290
+€800 new on Amazon,
+or around €600 to €670 used.
+
+157
+00:07:48,738 --> 00:07:50,868
+Half of your 32 GB is already paid for.
+
+158
+00:07:51,325 --> 00:07:54,348
+If you don't have a card yet,
+and your tower takes 2,
+
+159
+00:07:54,458 --> 00:07:58,236
+the pair of 5060 Ti
+at €1,600 was the cheapest
+
+160
+00:07:58,256 --> 00:08:00,747
+path to 32 GB in stock.
+
+161
+00:08:01,270 --> 00:08:02,811
+With all the traps of the route:
+
+162
+00:08:02,901 --> 00:08:05,693
+the space, the cables,
+and a speed that doesn't double.
+
+163
+00:08:06,178 --> 00:08:09,886
+The pair of 9060 XT cost less,
+but arrived in January.
+
+164
+00:08:10,328 --> 00:08:12,474
+For a single card,
+I'd take the cheapest in stock:
+
+165
+00:08:12,647 --> 00:08:15,788
+the B65, at €1,900 at LDLC.
+
+166
+00:08:16,246 --> 00:08:19,036
+Just look at its power connector,
+a 12V-2x6:
+
+167
+00:08:19,334 --> 00:08:21,392
+you need that cable, or an adapter.
+
+168
+00:08:21,785 --> 00:08:26,312
+If you prefer Amazon, its bigger sister,
+the B70, was €2,016, in stock.
+
+169
+00:08:26,692 --> 00:08:29,477
+And in every case, check
+that your software supports the card.
+
+170
+00:08:29,925 --> 00:08:33,704
+If it doesn't support Intel,
+look at the Gigabyte R9700:
+
+171
+00:08:33,931 --> 00:08:37,058
+€2,400 on Amazon, not €2,800.
+
+172
+00:08:37,481 --> 00:08:39,291
+If you want to replace the whole computer,
+
+173
+00:08:39,389 --> 00:08:42,575
+the Mac mini at €1,709 is in the running.
+
+174
+00:08:42,987 --> 00:08:44,788
+But remember the math from the start:
+
+175
+00:08:45,001 --> 00:08:48,197
+31.4 GB for the full conversation.
+
+176
+00:08:48,685 --> 00:08:52,574
+On a 32 GB Mac, where the system
+takes its share, with a 16-bit cache,
+
+177
+00:08:52,594 --> 00:08:55,417
+it doesn't fit: you compress
+the cache, or you shorten it.
+
+178
+00:08:55,820 --> 00:08:58,438
+And if it's really
+the full conversation you want,
+
+179
+00:08:58,521 --> 00:09:01,752
+the only priced route
+in my list that goes past 32 GB,
+
+180
+00:09:01,772 --> 00:09:06,442
+is the Ryzen AI Max+ mini PC
+with 64, around €2,000.
+
+181
+00:09:06,825 --> 00:09:08,581
+And actually, if you already have 24 GB
+
+182
+00:09:08,601 --> 00:09:11,308
+and a short conversation is enough
+for you, keep your money.
+
+183
+00:09:11,861 --> 00:09:14,240
+The best card, sometimes,
+is the one you don't buy.
+
+184
+00:09:14,742 --> 00:09:16,996
+See you next time, bye!

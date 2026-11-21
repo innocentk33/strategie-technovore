@@ -27,7 +27,7 @@ Les règles détaillées se chargent seules quand tu ouvres ces fichiers : `.cla
 
 Les faits comptent : chaque affirmation d'une miniature ou d'un script doit être tenue par la vidéo et sourcée (voir `ressources/miniatures/propositions.md`, section 5, pour les pièges déjà repérés).
 
-Le montage se fait hors de ce dépôt (HyperFrames ou Remotion). `.gitignore` exclut les vidéos et les `.wav` : les fichiers audio versionnés sont les `.m4a`.
+Le montage se fait hors de ce dépôt (HyperFrames ou Remotion). Pour faire, reprendre ou retoucher un montage (voix, captures, mèmes, critiques, rendus), lance le skill `montage` (`.claude/skills/montage/`). `.gitignore` exclut les vidéos et les `.wav` : les fichiers audio versionnés sont les `.m4a`, sauf la banque de reprises de voix de l'auteur, en FLAC (`ressources/voix/reprises/`, guide `ressources/voix/prononciations.md`).
 
 ## Outils externes
 

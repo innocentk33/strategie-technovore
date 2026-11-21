@@ -78,3 +78,13 @@ Seed libre pendant les prises. Épingle-la dès qu'une prise sonne vraiment comm
 ## Prix à relire le 26-27/11
 
 Les lots de prix sont isolés pour pouvoir les regénérer seuls si un prix bouge : 16, 17, 19, 21, 30, 31, 35, 38, 40, 47-52 (marqués « à relire » dans les en-têtes). Les lots 3, 6, 18, 32, 33 et 39 reprennent aussi des montants : vérifie-les s'ils changent.
+
+## Conventions d'écriture (21/11, ta demande)
+
+Pour ce script et les prochains écrits pour la voix de synthèse :
+
+- **Ti** → « té i »
+- liaison en **n'un** (« en n'un mois ») ; **d'un** reste tel quel
+- **9060 XT** tout en lettres → « quatre-vingt-dix soixante ix té »
+- **R9700** → « èr neuf mille sept cent »
+- **ASUS** → « azus »

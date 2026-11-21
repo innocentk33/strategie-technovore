@@ -1,0 +1,29 @@
+Tu prépares les images (captures web, photos de produits, logos) pour le montage d'une vidéo YouTube française de la chaîne Technovore : « 32 Go pour Qwen 27B : les prix, les routes et leurs pièges ». Réponds en français. Ne commite rien. N'écris que dans le projet `/Users/innocent/HyperStudio/premium-noir/2026-11-qwen-27b-32go/` et dans ton dossier de travail `/private/tmp/claude-501/-Users-innocent-Dev-youtubeSkill/faba7d5d-1ace-458b-9af0-6094e0041d17/scratchpad/cap-32go/`.
+
+## À lire d'abord
+- Le script avec ses indications [VISUEL] : `/Users/innocent/Dev/youtubeSkill/projets/deux-cartes-occasion/script.md`.
+- Les faits et leurs URL : `.../deux-cartes-occasion/sources.md` (F1…F122) et le relevé de prix du 20/11 : `.../deux-cartes-occasion/recherche/prix-20-11.md` (URL exactes des offres).
+- L'outil de capture : `scripts/captures-web.mjs` du projet (lis-le en entier) : Chrome sans interface, 1280×720 à DPR 3 ; pour chaque page il floute pseudos et avatars, puis pour chaque « shot » prend la capture nette et la même avec les phrases surlignées (`-surligne`, ou `-barre` pour `style: 'strike'`), plus le haut de page (`top: true`) et la page entière. `text` = phrase(s) exactes de la page, `near` = ancre. Remplace la liste `JOBS`. Exemples du rendu attendu : `/Users/innocent/HyperStudio/premium-noir/2026-11-qwen-27b-8go/assets/shots/` et son manifeste `edit-plan/captures.md`.
+
+## Règle de l'auteur sur les prix (importante)
+« Pour les prix, n'hésite pas à faire des captures du navigateur **si nécessaire uniquement**. » La voix cite les prix **du 20/11** ; aujourd'hui (21/11) ils ont pu bouger. Donc :
+- une capture d'offre n'est utile que si elle montre **le même prix que le 20/11** (ou le détail cité : « 1 par client » chez LDLC, la livraison « 3-5 janvier », « rupture », « vendeur tiers ») ; si le prix a changé, **ne la mets pas dans `assets/shots/`** : note seulement le prix du jour dans le manifeste (ça servira à l'auteur) ;
+- pas de contournement de CAPTCHA ni de détection de robot : si Amazon ou un autre site bloque le navigateur sans interface, note-le et passe ;
+- bandeaux de cookies : refuser (option la plus discrète) ou masquer ; aucun pop-up sur l'image.
+
+## À produire
+Sortie : PNG dans `assets/captures/`, puis JPEG 2240 px de large, qualité ~90, mêmes noms, dans `assets/shots/` (pages entières `-page` : 1600 px). Manifeste `edit-plan/captures.md` : fichier → URL → ce qui est surligné → prix du jour s'il y en a un → un mot si quelque chose cloche.
+
+1. **W01** Hugging Face `Qwen/Qwen3.8-27B` (F120) : `haut` et `telechargements` = « Downloads last month » avec le nombre (surligné). La voix dit « plus de 6 millions » : vérifie que le nombre du jour le tient.
+2. **W02** la page du fichier 4 bits `Qwen3.8-27B-UD-Q4_K_M` (F109 : 16,56 Go ; trouve le dépôt exact dans sources.md) : `fichier` = la ligne du fichier avec sa taille, surlignée.
+3. **W03** offres (prix-20-11.md) : une page par carte citée, **seulement si le prix ou le détail du 20/11 est encore là** : ASUS Dual RTX 5060 Ti 16 Go (Amazon 799,99 € ; LDLC 1079,95 € avec la ligne « 1 par client »), ASUS Prime RX 9060 XT 16 Go (Amazon 699,99 €, livraison 3-5 janvier), Intel Arc A770 16 Go (LDLC 459,95 €, rupture), Arc Pro B65 ASRock (LDLC 1899,95 €), Arc Pro B70 ASUS (Amazon 2016 €), Radeon AI PRO R9700 Gigabyte GV-R9700AI TOP-32GD (Amazon 2399,99 € ; LDLC 2799,95 €), RTX 5090 (Amazon Inno3D X3 6975,27 € ; LDLC ASUS TUF 9399,95 €, rupture), Mac mini M6 32 Go / 512 Go (LDLC 1709 €, délai), GMKtec EVO-X2 64 Go (≈ 2029,99 €, précommande). Surligne le prix et le détail cité. Floute tout nom de vendeur particulier ou pseudo d'avis.
+4. **W04** pages de faits (surligne la phrase qui porte le fait) : garantie légale de conformité 2 ans et présomption 12 mois pour l'occasion (F74, F75), vente entre particuliers et vices cachés (F76), rétractation 14 jours (F79) — de préférence sur service-public.fr / economie.gouv.fr ; NVIDIA : pilote 580 dernière branche pour Volta / CUDA 13 (F70) ; llama.cpp `--split-mode` layer par défaut (F20 / F33) ; le guide AMD « Radeon AI PRO : ROCm et PyTorch » (F83 : capture de sa couverture ou de son titre) ; le manuel Gigabyte B850M AORUS ELITE WIFI6E ICE (F60 : la page qui décrit les deux slots, ou le schéma de la carte) ; la fiche Corsair RM1000e qui liste les câbles (F61).
+5. **Photos de produits** (fond propre de préférence, PNG ou JPG haute définition, téléchargées depuis le site du fabricant ou la fiche marchand, URL dans le manifeste) dans `assets/images/produits/` : ASUS Dual RTX 5060 Ti 16 Go, ASUS Prime RX 9060 XT 16 Go, Intel Arc A770, ASRock Arc Pro B65, ASUS Arc Pro B70, Gigabyte Radeon AI PRO R9700, une RTX 5090, NVIDIA Tesla V100 32 Go (carte de serveur passive), Mac mini M6, GMKtec EVO-X2, Corsair RM1000e, Gigabyte B850M AORUS ELITE WIFI6E ICE. Si tu peux détourer proprement (fond blanc uni → transparence), fais-en aussi une version `-detoure.png`.
+6. **Logos** (SVG de préférence, sinon PNG) dans `assets/logos/` : amazon, ldlc, leboncoin, intel, asus, gigabyte, asrock, apple, gmktec, corsair, service-public (ou Marianne de la République française si dispo proprement), llama.cpp existe déjà (`ggml-org.jpg`), nvidia, amd, huggingface et qwen existent déjà. Les logos simples peuvent venir de simple-icons (cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/<nom>.svg).
+
+## Règles de l'auteur
+- **Aucun pseudo, nom de chaîne ou nom de personne lisible** sur une image : regarde chaque image ; floute ou recadre sinon. Les noms de marques, de marchands et de logiciels sont permis.
+- Surligne seulement ce que la voix cite.
+
+## Ta réponse finale (courte)
+Le tableau fichier → ce qui est montré / surligné ; les prix du jour qui ont changé depuis le 20/11 (important) ; les pages ratées ou bloquées ; tout nom resté lisible.

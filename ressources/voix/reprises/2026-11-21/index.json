@@ -1,0 +1,496 @@
+{
+ "note": "Reprises de l'auteur enregistrées le 21/11/2026 (44,1 kHz, 16 bits, mono, sa vraie voix, brut). Chaque fichier est coupé dans le fichier source avec 0,15 s de marge prise sur le silence, sans aucune retouche. « verifie » : false = étiquette déduite (wav2vec2 entend mal les noms de cartes), à confirmer à l'oreille. Temps « temps_voix » : dans assets/audio/voix.flac de la vidéo (voix finale). Guide : ../../prononciations.md",
+ "passages": [
+  {
+   "fichier": "carte-5060.flac",
+   "texte": "5060",
+   "etiquette": "RTX 5060",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 0.9,
+   "fin": 2.63,
+   "classe": "nom de carte (prononciation)",
+   "verifie": true,
+   "a_servi": [],
+   "remplace_par": "../2026-11-21-cartes/5060.flac"
+  },
+  {
+   "fichier": "carte-5070.flac",
+   "texte": "5070",
+   "etiquette": "RTX 5070 (probable ; wav2vec2 : « cinquante soixante-dix »)",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 2.67,
+   "fin": 4.27,
+   "classe": "nom de carte (prononciation)",
+   "verifie": false,
+   "a_servi": [],
+   "remplace_par": "../2026-11-21-cartes/5070.flac"
+  },
+  {
+   "fichier": "carte-5070-ti.flac",
+   "texte": "5070 Ti",
+   "etiquette": "RTX 5070 Ti (probable)",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 5.0,
+   "fin": 6.97,
+   "classe": "nom de carte (prononciation)",
+   "verifie": false,
+   "a_servi": [],
+   "remplace_par": "../2026-11-21-cartes/5070-ti.flac"
+  },
+  {
+   "fichier": "carte-5060-ti.flac",
+   "texte": "5060 Ti",
+   "etiquette": "RTX 5060 Ti (probable, mot isolé)",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 7.27,
+   "fin": 8.95,
+   "classe": "nom de carte (prononciation)",
+   "verifie": false,
+   "a_servi": [],
+   "remplace_par": "../2026-11-21-cartes/5060-ti.flac"
+  },
+  {
+   "fichier": "carte-3060.flac",
+   "texte": "3060",
+   "etiquette": "RTX 3060",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 9.57,
+   "fin": 10.81,
+   "classe": "nom de carte (prononciation)",
+   "verifie": true,
+   "a_servi": [],
+   "remplace_par": "../2026-11-21-cartes/rtx-3060.flac (il dit maintenant « trois mille soixante », plus « trente soixante »)"
+  },
+  {
+   "fichier": "carte-3070.flac",
+   "texte": "3070",
+   "etiquette": "RTX 3070 (probable)",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 11.63,
+   "fin": 13.12,
+   "classe": "nom de carte (prononciation)",
+   "verifie": false,
+   "a_servi": [],
+   "remplace_par": "../2026-11-21-cartes/rtx-3070.flac (« trois mille soixante-dix »)"
+  },
+  {
+   "fichier": "carte-3070-ti.flac",
+   "texte": "3070 Ti",
+   "etiquette": "RTX 3070 Ti (probable)",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 13.33,
+   "fin": 15.0,
+   "classe": "nom de carte (prononciation)",
+   "verifie": false,
+   "a_servi": []
+  },
+  {
+   "fichier": "carte-5080.flac",
+   "texte": "5080",
+   "etiquette": "RTX 5080 (probable : plus proche de « 5080 » que de « 5090 » à la comparaison des timbres)",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 20.12,
+   "fin": 21.53,
+   "classe": "nom de carte (prononciation)",
+   "verifie": false,
+   "a_servi": [],
+   "remplace_par": "../2026-11-21-cartes/rtx-5080.flac"
+  },
+  {
+   "fichier": "carte-9060.flac",
+   "texte": "9060",
+   "etiquette": "RX 9060",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 25.38,
+   "fin": 26.88,
+   "classe": "nom de carte (prononciation)",
+   "verifie": true,
+   "a_servi": [],
+   "remplace_par": "../2026-11-21-cartes/9060.flac"
+  },
+  {
+   "fichier": "carte-9060-xt.flac",
+   "texte": "9060 XT",
+   "etiquette": "RX 9060 XT",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 26.89,
+   "fin": 28.77,
+   "classe": "nom de carte (prononciation)",
+   "verifie": true,
+   "a_servi": [],
+   "remplace_par": "../2026-11-21-cartes/9060-xt.flac"
+  },
+  {
+   "fichier": "carte-r9700.flac",
+   "texte": "R9700",
+   "etiquette": "Radeon AI PRO R9700",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 31.29,
+   "fin": 32.78,
+   "classe": "nom de carte (prononciation)",
+   "verifie": true,
+   "a_servi": [],
+   "remplace_par": "../2026-11-21-cartes/r9700.flac"
+  },
+  {
+   "fichier": "carte-rtx-5060-ti.flac",
+   "texte": "RTX 5060 Ti",
+   "etiquette": "RTX 5060 Ti (avec « RTX »)",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 64.52,
+   "fin": 66.66,
+   "classe": "nom de carte (prononciation)",
+   "verifie": true,
+   "a_servi": [],
+   "remplace_par": "../2026-11-21-cartes/rtx-5060-ti.flac"
+  },
+  {
+   "fichier": "carte-rtx-5060-ti-prise2.flac",
+   "texte": "RTX 5060 Ti",
+   "etiquette": "RTX 5060 Ti, 2e prise (probable : une syllabe de 69,05 à 69,55 s suit « soixante », non transcrite par wav2vec2)",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 67.69,
+   "fin": 69.75,
+   "classe": "nom de carte (prononciation)",
+   "verifie": false,
+   "a_servi": [],
+   "remplace_par": "../2026-11-21-cartes/rtx-5060-ti.flac"
+  },
+  {
+   "fichier": "fin-mauvais-achat.flac",
+   "texte": "Si cette vidéo t'a évité un mauvais achat, abonne-toi.",
+   "etiquette": "appel à s’abonner",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 34.39,
+   "fin": 37.33,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R1",
+     "temps_voix": [
+      241.152,
+      243.497
+     ],
+     "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +1.0 dB"
+    }
+   ]
+  },
+  {
+   "fichier": "fin-a-la-prochaine.flac",
+   "texte": "Et on se dit à la prochaine, salut !",
+   "etiquette": "fin de vidéo, prise 1",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 40.74,
+   "fin": 43.41,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R2",
+     "temps_voix": [
+      554.725,
+      556.947
+     ],
+     "traitement": "×1.1 (atempo), +2.30 demi-ton (PSOLA), +2.6 dB"
+    }
+   ]
+  },
+  {
+   "fichier": "fin-abonne-toi-booste.flac",
+   "texte": "(Bon, en gros ?) Surtout, n'oublie pas de t'abonner à la chaîne, booste la vidéo, ça m'aide vraiment, et surtout, on se dit à la prochaine, salut !",
+   "etiquette": "fin de vidéo longue, avec appel à s’abonner (début incertain)",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 47.29,
+   "fin": 55.91,
+   "classe": "non utilisé dans la vidéo",
+   "verifie": false,
+   "a_servi": []
+  },
+  {
+   "fichier": "mot-conversation.flac",
+   "texte": "Conversation… ta conversation.",
+   "etiquette": "prononciation de « conversation »",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 59.84,
+   "fin": 62.19,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R14",
+     "temps_voix": [
+      10.545,
+      11.385
+     ],
+     "traitement": "×1.25 (atempo), +2.50 demi-ton (PSOLA), +1.2 dB"
+    }
+   ]
+  },
+  {
+   "fichier": "phrase-occasion-5060-ti.flac",
+   "texte": "Et en occasion, une 5060 Ti de 16 gigas tournait entre 600 à 670 euros.",
+   "etiquette": "occasion leboncoin",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 71.26,
+   "fin": 78.47,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R3",
+     "temps_voix": [
+      170.669,
+      176.508
+     ],
+     "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +4.0 dB"
+    },
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "G1",
+     "temps_voix": [
+      202.405,
+      203.549
+     ],
+     "traitement": "×1.1 (atempo), +0.47 demi-ton (PSOLA), +6.7 dB"
+    }
+   ]
+  },
+  {
+   "fichier": "phrase-tout-en-bas.flac",
+   "texte": "Et en plus, il est tout en bas.",
+   "etiquette": "deuxième slot",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 79.8,
+   "fin": 81.98,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R4",
+     "temps_voix": [
+      194.453,
+      196.034
+     ],
+     "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +3.5 dB"
+    }
+   ]
+  },
+  {
+   "fichier": "phrase-une-seule-conversation.flac",
+   "texte": "Pour une seule conversation",
+   "etiquette": "vitesse à deux cartes",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 83.55,
+   "fin": 85.55,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R5",
+     "temps_voix": [
+      230.4,
+      231.957
+     ],
+     "traitement": "×1.1 (atempo), +2.50 demi-ton (PSOLA), +5.9 dB"
+    }
+   ]
+  },
+  {
+   "fichier": "phrase-cartes-de-serveur.flac",
+   "texte": "En plus, comme les autres cartes de serveur, elle n'a ni ventilateur ni sortie vidéo : tout est à refaire autour.",
+   "etiquette": "Tesla V100",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 86.76,
+   "fin": 94.34,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R6",
+     "temps_voix": [
+      339.91,
+      345.771
+     ],
+     "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +1.8 dB"
+    }
+   ]
+  },
+  {
+   "fichier": "phrase-premier-hic.flac",
+   "texte": "Premier hic : lui, il n'était pas en stock pendant plus de 15 jours.",
+   "etiquette": "Mac mini",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 95.66,
+   "fin": 100.8,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R7",
+     "temps_voix": [
+      367.146,
+      370.691
+     ],
+     "traitement": "×1.1 (atempo), +0.37 demi-ton (PSOLA), -0.1 dB"
+    }
+   ]
+  },
+  {
+   "fichier": "faux-depart-en-france.flac",
+   "texte": "En France…",
+   "etiquette": "faux départ",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 102.48,
+   "fin": 103.65,
+   "classe": "non utilisé dans la vidéo",
+   "verifie": true,
+   "a_servi": []
+  },
+  {
+   "fichier": "phrase-en-france-vendeur.flac",
+   "texte": "En France, chez un vendeur",
+   "etiquette": "début de la phrase sur la garantie",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 103.56,
+   "fin": 105.27,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R8",
+     "temps_voix": [
+      406.396,
+      407.691
+     ],
+     "traitement": "×1.1 (atempo), +1.53 demi-ton (PSOLA), +4.4 dB"
+    }
+   ]
+  },
+  {
+   "fichier": "phrase-prix-francais-prise1.flac",
+   "texte": "Ces prix sont des prix français, et ces garanties sont des garanties françaises.",
+   "etiquette": "prix et garanties, prise 1",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 106.45,
+   "fin": 110.64,
+   "classe": "non utilisé dans la vidéo",
+   "verifie": true,
+   "a_servi": []
+  },
+  {
+   "fichier": "phrase-autre-pays.flac",
+   "texte": "Et si tu regardes depuis un autre pays, ces prix sont des prix français, et des garanties qui s'appliquent en France et en Europe. Vérifie celles qui s'appliquent chez toi avant de passer à l'achat.",
+   "etiquette": "public hors de France, prise 2",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 111.95,
+   "fin": 123.28,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R9",
+     "temps_voix": [
+      439.553,
+      448.426
+     ],
+     "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +3.5 dB"
+    }
+   ]
+  },
+  {
+   "fichier": "phrase-addition-memoire.flac",
+   "texte": "Par contre, l'addition de la mémoire, les slots et l'alimentation, ça, c'est valable partout.",
+   "etiquette": "valable partout",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 124.71,
+   "fin": 129.74,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R10",
+     "temps_voix": [
+      448.861,
+      452.91
+     ],
+     "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +1.7 dB"
+    }
+   ]
+  },
+  {
+   "fichier": "phrase-pas-encore-de-carte.flac",
+   "texte": "Si t'as pas encore de carte, et que ta tour en accepte 2, la paire de 5060 Ti à 1600 euros était le chemin en stock le moins cher vers 32 gigas.",
+   "etiquette": "conseil final",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 131.57,
+   "fin": 143.53,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R11",
+     "temps_voix": [
+      471.231,
+      480.776
+     ],
+     "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +0.8 dB"
+    }
+   ]
+  },
+  {
+   "fichier": "phrase-pieges-de-la-route.flac",
+   "texte": "Avec tous les pièges de la route : la place, les câbles, et une vitesse qui ne double pas.",
+   "etiquette": "conseil final",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 148.08,
+   "fin": 154.7,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R12",
+     "temps_voix": [
+      481.226,
+      485.708
+     ],
+     "traitement": "×1.1 (atempo), +1.82 demi-ton (PSOLA), +3.9 dB"
+    }
+   ]
+  },
+  {
+   "fichier": "phrase-paire-9060-xt.flac",
+   "texte": "La paire de 9060 XT coûtait moins, mais arrivait en janvier.",
+   "etiquette": "conseil final",
+   "source": "../2026-11-21-reprises-32go.flac",
+   "debut": 159.66,
+   "fin": 164.99,
+   "classe": "phrase dite pour remplacer la voix clonée",
+   "verifie": true,
+   "a_servi": [
+    {
+     "video": "qwen-27b-32go (« 32 Go pour Qwen 27B : les prix, les routes et leurs pièges »)",
+     "id": "R13",
+     "temps_voix": [
+      486.158,
+      489.875
+     ],
+     "traitement": "×1.2 (atempo), +1.82 demi-ton (PSOLA), +4.0 dB"
+    }
+   ]
+  }
+ ]
+}

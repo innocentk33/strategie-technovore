@@ -1,0 +1,862 @@
+1
+00:00:00,027 --> 00:00:02,720
+Qwen 27B, c'est l'un des meilleurs
+modèles que tu peux faire tourner
+
+2
+00:00:02,786 --> 00:00:06,110
+sur ta machine : plus de 6 millions
+de téléchargements en un mois.
+
+3
+00:00:06,485 --> 00:00:09,491
+Sauf que si tu veux faire autre
+chose que lui demander la météo,
+
+4
+00:00:09,612 --> 00:00:11,394
+il lui faut de la place
+pour ta conversation.
+
+5
+00:00:11,818 --> 00:00:13,845
+Pour être à l'aise : 32 gigas de VRAM.
+
+6
+00:00:14,240 --> 00:00:16,574
+Et en 2026, la VRAM, c'est de l'or.
+
+7
+00:00:16,949 --> 00:00:19,354
+Ces 32 gigas, tu peux
+les payer 2800 euros…
+
+8
+00:00:19,633 --> 00:00:21,155
+ou, si t'es malin, beaucoup moins.
+
+9
+00:00:21,874 --> 00:00:24,430
+Du coup, quelle route
+vers 32 gigas tu prends,
+
+10
+00:00:24,537 --> 00:00:25,926
+et quel piège elle te cache ?
+
+11
+00:00:26,299 --> 00:00:30,140
+Dans cette vidéo, on va voir combien
+de mémoire Qwen 27B prend vraiment.
+
+12
+00:00:30,578 --> 00:00:32,744
+Ensuite, 3 routes vers 32 gigas,
+
+13
+00:00:32,852 --> 00:00:36,458
+avec les meilleurs prix relevés
+le 20 novembre, et le piège de chacune.
+
+14
+00:00:36,926 --> 00:00:40,291
+La même carte, 400 euros plus chère
+selon le site où tu cliques,
+
+15
+00:00:40,438 --> 00:00:43,898
+et un ordinateur entier moins cher
+qu'une carte de 32 gigas en stock.
+
+16
+00:00:44,339 --> 00:00:46,812
+Et à la fin, la route
+que je prendrais selon ton PC.
+
+17
+00:00:47,393 --> 00:00:50,138
+Première réponse, et elle peut
+déjà t'économiser une carte :
+
+18
+00:00:50,392 --> 00:00:52,327
+pour Qwen 27B en 4 bits,
+
+19
+00:00:52,347 --> 00:00:55,393
+avec une conversation courte,
+24 gigas suffisent.
+
+20
+00:00:55,886 --> 00:00:59,009
+Donc les 32, en fait,
+c'est pour lui laisser une longue mémoire.
+
+21
+00:00:59,357 --> 00:01:00,750
+Parce que pendant que tu discutes,
+
+22
+00:01:00,803 --> 00:01:02,793
+le modèle garde des notes
+sur tout ce qui a été dit.
+
+23
+00:01:03,175 --> 00:01:04,554
+Ton fichier, lui, ne bouge pas.
+
+24
+00:01:05,012 --> 00:01:07,665
+Mais ces notes-là,
+elles grossissent à chaque message.
+
+25
+00:01:08,093 --> 00:01:09,303
+Et on peut les calculer,
+
+26
+00:01:09,432 --> 00:01:11,568
+à partir de la configuration
+officielle du modèle.
+
+27
+00:01:11,959 --> 00:01:16,098
+Avec un cache en 16 bits,
+c'est environ 2 gigas pour 32 000 tokens,
+
+28
+00:01:16,270 --> 00:01:20,703
+8 pour 128 000,
+et 16 pour la fenêtre complète de 262 000.
+
+29
+00:01:21,141 --> 00:01:22,431
+Alors fais l'addition avec moi.
+
+30
+00:01:22,858 --> 00:01:26,912
+Le fichier 4 bits,
+c'est 16 gigas et demi sur Hugging Face.
+
+31
+00:01:27,349 --> 00:01:29,887
+Mais compté comme ta carte compte,
+c'est un peu plus de 15.
+
+32
+00:01:30,317 --> 00:01:32,228
+Tu ajoutes 16
+pour la conversation complète.
+
+33
+00:01:32,666 --> 00:01:34,376
+Ça fait 31,4.
+
+34
+00:01:34,869 --> 00:01:36,039
+Sur une carte de 32.
+
+35
+00:01:36,467 --> 00:01:38,935
+Et ça, c'est avant les tampons
+et tout le reste du moteur.
+
+36
+00:01:39,336 --> 00:01:42,592
+Bon, la boîte dit 32 gigas,
+mais ta marge, elle est déjà partie.
+
+37
+00:01:43,013 --> 00:01:47,062
+Du coup, avec 32 gigas, le contexte
+complet, il faut aller le chercher :
+
+38
+00:01:47,296 --> 00:01:50,487
+en compressant le cache, ou
+en raccourcissant un peu la conversation.
+
+39
+00:01:50,909 --> 00:01:54,055
+Et si t'as qu'une carte de 8 gigas,
+on a vu dans une vidéo précédente
+
+40
+00:01:54,075 --> 00:01:57,499
+comment Qwen 27B y tourne quand même,
+juste en changeant de fichier.
+
+41
+00:01:57,902 --> 00:01:59,532
+Là, on parle de ceux qui veulent la place.
+
+42
+00:02:00,169 --> 00:02:04,620
+Première route, la plus tentante :
+2 cartes de 16 gigas, et hop, 32.
+
+43
+00:02:04,937 --> 00:02:08,421
+Prends la RTX 5060 Ti de 16 gigas,
+la Dual d'ASUS.
+
+44
+00:02:09,023 --> 00:02:12,364
+Le 20 novembre, sur Amazon,
+elle était à 800 euros, en stock.
+
+45
+00:02:12,707 --> 00:02:15,357
+Donc 1600 la paire,
+sans limite affichée sur la page.
+
+46
+00:02:15,815 --> 00:02:19,929
+Chez LDLC, le même modèle était
+à 1080 euros, avec une petite ligne
+
+47
+00:02:19,949 --> 00:02:22,640
+au-dessus du bouton panier :
+limitée à une par client.
+
+48
+00:02:23,102 --> 00:02:26,527
+280 euros de plus pour le même modèle,
+le même jour.
+
+49
+00:02:26,941 --> 00:02:29,493
+En gros, le boss de fin,
+c'est le site où tu cliques.
+
+50
+00:02:29,898 --> 00:02:30,648
+Et chez AMD ?
+
+51
+00:02:31,216 --> 00:02:35,752
+La Radeon RX 9060 XT de 16 gigas
+d'ASUS était à 700 euros
+
+52
+00:02:35,772 --> 00:02:38,068
+sur Amazon, donc 1400 la paire.
+
+53
+00:02:38,441 --> 00:02:39,610
+Moins cher, mais ce jour-là,
+
+54
+00:02:39,726 --> 00:02:42,100
+la livraison était
+annoncée du 3 au 5 janvier.
+
+55
+00:02:42,479 --> 00:02:43,950
+Bref : Noël sans cartes.
+
+56
+00:02:44,386 --> 00:02:46,601
+L'Intel Arc A770 ?
+
+57
+00:02:47,026 --> 00:02:50,305
+460 euros chez LDLC,
+mais en rupture en ligne.
+
+58
+00:02:50,682 --> 00:02:53,794
+Et en occasion, une 5060 Ti
+de 16 gigas
+
+59
+00:02:53,814 --> 00:02:56,582
+tournait entre 600 à 670 euros.
+
+60
+00:02:57,020 --> 00:03:00,067
+Entre particuliers, par contre :
+garde ça en tête pour tout à l'heure.
+
+61
+00:03:00,475 --> 00:03:02,613
+Maintenant, le vrai piège
+de cette route, c'est ta tour.
+
+62
+00:03:03,003 --> 00:03:06,356
+Prends la mienne : une carte mère
+micro-ATX, comme beaucoup d'autres.
+
+63
+00:03:06,702 --> 00:03:09,943
+D'après son manuel, le deuxième slot
+a la même longueur que le premier.
+
+64
+00:03:10,348 --> 00:03:14,125
+Pourtant, il n'a que 4 lignes en PCIe 3.0,
+et il passe par le chipset.
+
+65
+00:03:14,453 --> 00:03:15,930
+Et en plus, il est tout en bas.
+
+66
+00:03:16,207 --> 00:03:19,606
+Du coup, une carte de 2 slots
+dedans dépasse sous la carte mère,
+
+67
+00:03:19,669 --> 00:03:21,899
+et il te faut un boîtier à 5 emplacements.
+
+68
+00:03:22,206 --> 00:03:26,974
+Et les 5060 Ti et 9060 XT
+du relevé sont plus épaisses :
+
+69
+00:03:27,217 --> 00:03:30,147
+2 slots et demi, donc mesure
+la place sous ta carte mère.
+
+70
+00:03:30,527 --> 00:03:32,004
+Ensuite, l'alimentation.
+
+71
+00:03:32,442 --> 00:03:33,445
+La mienne fait 1000 watts.
+
+72
+00:03:33,465 --> 00:03:36,035
+Sauf qu'avec ma RTX 5080 branchée,
+
+73
+00:03:36,117 --> 00:03:38,426
+il ne me resterait peut-être
+que 2 prises 8 broches.
+
+74
+00:03:38,829 --> 00:03:40,507
+Donc avant d'acheter la deuxième carte,
+
+75
+00:03:40,572 --> 00:03:42,906
+tu regardes ton boîtier,
+et tu comptes tes câbles.
+
+76
+00:03:43,320 --> 00:03:45,222
+Et le dernier piège, c'est la vitesse.
+
+77
+00:03:45,697 --> 00:03:47,866
+Par défaut, llama.cpp coupe le modèle
+
+78
+00:03:47,886 --> 00:03:50,027
+en tranches de couches,
+une tranche par carte.
+
+79
+00:03:50,404 --> 00:03:53,465
+Pour une seule conversation,
+elles travaillent chacune leur tour.
+
+80
+00:03:53,883 --> 00:03:57,555
+En fait, la mémoire s'additionne,
+mais la vitesse, elle, ne double pas.
+
+81
+00:03:57,944 --> 00:04:00,792
+Bref, 2 cartes, c'est de la place,
+pas de la vitesse.
+
+82
+00:04:01,161 --> 00:04:03,475
+Si cette vidéo t'a évité
+un mauvais achat, abonne-toi.
+
+83
+00:04:04,285 --> 00:04:06,528
+Deuxième route :
+une seule carte de 32 gigas.
+
+84
+00:04:06,884 --> 00:04:09,717
+Plus de deuxième slot, et d'un coup,
+le PC redevient simple.
+
+85
+00:04:10,165 --> 00:04:12,495
+Le 20 novembre, la moins chère
+en stock de mon relevé,
+
+86
+00:04:12,658 --> 00:04:17,329
+c'était l'Intel Arc Pro B65 d'ASRock :
+1900 euros chez LDLC.
+
+87
+00:04:17,842 --> 00:04:23,008
+Sur Amazon, des B65 de vendeurs tiers
+descendaient à 1483 euros,
+
+88
+00:04:23,101 --> 00:04:24,371
+mais livrées en décembre.
+
+89
+00:04:24,844 --> 00:04:30,051
+Sa grande sœur, la B70 d'ASUS,
+était à 2016 euros sur Amazon, en stock.
+
+90
+00:04:30,470 --> 00:04:34,533
+Côté AMD,
+la Radeon AI PRO R9700 de Gigabyte :
+
+91
+00:04:34,660 --> 00:04:36,410
+2400 euros sur Amazon.
+
+92
+00:04:36,888 --> 00:04:40,659
+Et chez LDLC, exactement
+la même référence : 2800.
+
+93
+00:04:41,057 --> 00:04:43,107
+Alors, ces 400 euros
+de plus, ils t'achètent quoi ?
+
+94
+00:04:43,715 --> 00:04:45,291
+Rien. C'est la même carte.
+
+95
+00:04:45,674 --> 00:04:50,127
+Donc le vrai match,
+c'est Intel à 1900 contre AMD à 2400.
+
+96
+00:04:50,450 --> 00:04:53,220
+Et là, 500 euros de plus ne t'achètent
+pas un giga de plus.
+
+97
+00:04:53,618 --> 00:04:55,881
+Côté AMD, j'ai trouvé un guide officiel
+
+98
+00:04:55,901 --> 00:04:59,560
+pour faire tourner ses
+outils d'IA sur la R9700.
+
+99
+00:04:59,918 --> 00:05:01,900
+Mais 32 gigas et un guide ne prouvent
+
+100
+00:05:01,920 --> 00:05:03,649
+pas que chaque moteur la prend en charge.
+
+101
+00:05:04,013 --> 00:05:06,179
+Du coup, voilà le vrai piège
+de cette route :
+
+102
+00:05:06,559 --> 00:05:09,645
+avant de comparer les prix, tu vérifies
+que ton logiciel gère la carte.
+
+103
+00:05:09,983 --> 00:05:10,733
+Et chez NVIDIA ?
+
+104
+00:05:11,171 --> 00:05:14,255
+La RTX 5090 a aussi 32 gigas.
+
+105
+00:05:14,655 --> 00:05:16,895
+Sur Amazon, elle partait
+à presque 7000 euros,
+
+106
+00:05:16,915 --> 00:05:19,139
+chez un vendeur tiers,
+livrée fin décembre.
+
+107
+00:05:19,508 --> 00:05:22,577
+Et chez LDLC, 9400 euros, en rupture.
+
+108
+00:05:22,970 --> 00:05:25,351
+Pour ce prix-là,
+on change carrément de catégorie.
+
+109
+00:05:25,774 --> 00:05:28,781
+Reste la Tesla V100
+de 32 gigas d'occasion.
+
+110
+00:05:29,180 --> 00:05:31,731
+Pas d'offre vérifiable dans ce relevé,
+donc pas de prix.
+
+111
+00:05:32,127 --> 00:05:35,913
+Par contre, son piège, on le connaît :
+NVIDIA a fait du pilote 580
+
+112
+00:05:35,933 --> 00:05:39,549
+la dernière branche qui la gère,
+et CUDA 13 ne compile plus pour elle.
+
+113
+00:05:39,933 --> 00:05:41,865
+En plus, comme les autres
+cartes de serveur,
+
+114
+00:05:41,915 --> 00:05:45,682
+elle n'a ni ventilateur ni sortie vidéo :
+tout est à refaire autour.
+
+115
+00:05:46,232 --> 00:05:49,518
+En fait, elle peut paraître pas chère,
+et te coûter tout un week-end.
+
+116
+00:05:50,133 --> 00:05:52,397
+Troisième route :
+changer carrément d'ordinateur.
+
+117
+00:05:52,835 --> 00:05:55,748
+Le Mac mini M6 avec 32 gigas
+de mémoire unifiée
+
+118
+00:05:55,946 --> 00:06:01,100
+et 512 de stockage était affiché
+1709 euros chez LDLC le 20 novembre.
+
+119
+00:06:01,517 --> 00:06:04,139
+Donc un ordinateur complet
+coûtait moins cher que n'importe
+
+120
+00:06:04,159 --> 00:06:06,711
+quelle carte de 32 gigas
+en stock de mon relevé.
+
+121
+00:06:07,146 --> 00:06:10,683
+Premier hic : lui, il n'était pas
+en stock pendant plus de 15 jours.
+
+122
+00:06:11,127 --> 00:06:12,447
+Et en acceptant d'attendre,
+
+123
+00:06:12,585 --> 00:06:16,737
+une B65 de vendeur tiers
+descendait à 1483.
+
+124
+00:06:17,115 --> 00:06:18,815
+Et surtout, cette mémoire,
+elle est partagée :
+
+125
+00:06:18,835 --> 00:06:20,665
+le système et tes applis
+se servent dedans.
+
+126
+00:06:21,052 --> 00:06:24,309
+Côté PC, il y a les mini-PC Ryzen AI Max+,
+
+127
+00:06:24,462 --> 00:06:28,019
+avec 64 ou même 128 gigas
+de mémoire partagée.
+
+128
+00:06:28,502 --> 00:06:30,972
+Celui que j'ai regardé
+affichait autour de 2000 euros
+
+129
+00:06:31,015 --> 00:06:33,059
+en 64 gigas, en précommande.
+
+130
+00:06:33,476 --> 00:06:36,114
+Seulement, sa page ne dit
+pas clairement si la TVA est dedans.
+
+131
+00:06:36,502 --> 00:06:38,405
+Et sa mémoire est fixe, pour toujours.
+
+132
+00:06:38,853 --> 00:06:41,052
+Du coup, le piège de cette route,
+c'est la facture :
+
+133
+00:06:41,231 --> 00:06:42,692
+tu remplaces ton PC entier.
+
+134
+00:06:43,289 --> 00:06:45,959
+Et avant de payer, un dernier piège,
+qui n'est pas technique.
+
+135
+00:06:46,396 --> 00:06:49,522
+En France, chez un vendeur professionnel,
+neuf ou d'occasion,
+
+136
+00:06:49,650 --> 00:06:53,001
+tu as 2 ans de garantie légale,
+et il ne peut pas les réduire.
+
+137
+00:06:53,399 --> 00:06:56,238
+Le défaut est présumé exister
+dès la vente pendant ces 2 ans
+
+138
+00:06:56,258 --> 00:06:58,521
+pour du neuf,
+et 12 mois pour de l'occasion.
+
+139
+00:06:58,969 --> 00:07:00,179
+Et pour un achat à distance,
+
+140
+00:07:00,238 --> 00:07:02,806
+tu as 14 jours après
+la réception pour te rétracter.
+
+141
+00:07:03,221 --> 00:07:06,422
+Donc ces 14 jours,
+c'est ta fenêtre pour tester la carte.
+
+142
+00:07:06,778 --> 00:07:09,478
+Par contre, entre particuliers,
+comme sur leboncoin,
+
+143
+00:07:09,602 --> 00:07:12,072
+pas de rétractation,
+pas de garantie légale :
+
+144
+00:07:12,255 --> 00:07:15,098
+il te reste seulement les vices cachés,
+et c'est à toi de les prouver.
+
+145
+00:07:15,551 --> 00:07:19,157
+Donc ta 5060 Ti d'occasion,
+tu la vois tourner avant de payer.
+
+146
+00:07:19,552 --> 00:07:23,078
+Et si tu regardes depuis un autre pays,
+ces prix sont des prix français,
+
+147
+00:07:23,098 --> 00:07:25,622
+et des garanties qui s'appliquent
+en France et en Europe.
+
+148
+00:07:25,852 --> 00:07:28,448
+Vérifie celles qui s'appliquent chez toi
+avant de passer à l'achat.
+
+149
+00:07:28,860 --> 00:07:30,331
+Par contre, l'addition de la mémoire,
+
+150
+00:07:30,351 --> 00:07:32,847
+les slots et l'alimentation,
+ça, c'est valable partout.
+
+151
+00:07:33,655 --> 00:07:34,528
+Alors, quelle route ?
+
+152
+00:07:34,548 --> 00:07:35,778
+Ça dépend de ce que tu as déjà.
+
+153
+00:07:36,246 --> 00:07:37,808
+Et les prix, c'est ceux du 20 novembre.
+
+154
+00:07:38,259 --> 00:07:39,889
+Si t'as déjà une NVIDIA de 16 gigas,
+
+155
+00:07:40,066 --> 00:07:43,714
+et la place pour une autre,
+ajoute une 5060 Ti de 16 gigas :
+
+156
+00:07:43,952 --> 00:07:48,290
+800 euros neuve sur Amazon,
+ou autour de 600 à 670 d'occasion.
+
+157
+00:07:48,738 --> 00:07:50,868
+La moitié de tes 32 gigas est déjà payée.
+
+158
+00:07:51,325 --> 00:07:54,348
+Si t'as pas encore de carte,
+et que ta tour en accepte 2,
+
+159
+00:07:54,458 --> 00:07:58,236
+la paire de 5060 Ti
+à 1600 euros était le chemin
+
+160
+00:07:58,256 --> 00:08:00,747
+en stock le moins cher vers 32 gigas.
+
+161
+00:08:01,270 --> 00:08:02,811
+Avec tous les pièges de la route :
+
+162
+00:08:02,901 --> 00:08:05,693
+la place, les câbles,
+et une vitesse qui ne double pas.
+
+163
+00:08:06,178 --> 00:08:09,886
+La paire de 9060 XT coûtait moins,
+mais arrivait en janvier.
+
+164
+00:08:10,328 --> 00:08:12,474
+Pour une seule carte,
+je prendrais la moins chère en stock :
+
+165
+00:08:12,647 --> 00:08:15,788
+la B65, à 1900 euros chez LDLC.
+
+166
+00:08:16,246 --> 00:08:19,036
+Regarde juste sa prise d'alimentation,
+une 12V-2x6 :
+
+167
+00:08:19,334 --> 00:08:21,392
+il te faut ce câble, ou un adaptateur.
+
+168
+00:08:21,785 --> 00:08:26,312
+Si tu préfères Amazon, sa grande sœur,
+la B70, était à 2016, en stock.
+
+169
+00:08:26,692 --> 00:08:29,477
+Et dans tous les cas, tu vérifies
+que ton logiciel gère la carte.
+
+170
+00:08:29,925 --> 00:08:33,704
+S'il ne gère pas Intel,
+regarde la R9700 de Gigabyte :
+
+171
+00:08:33,931 --> 00:08:37,058
+2400 euros sur Amazon, pas 2800.
+
+172
+00:08:37,481 --> 00:08:39,291
+Si tu veux remplacer tout l'ordinateur,
+
+173
+00:08:39,389 --> 00:08:42,575
+le Mac mini à 1709 euros
+entre dans la course.
+
+174
+00:08:42,987 --> 00:08:44,788
+Par contre, souviens-toi
+de l'addition du début :
+
+175
+00:08:45,001 --> 00:08:48,197
+31,4 gigas pour la conversation complète.
+
+176
+00:08:48,685 --> 00:08:52,574
+Sur un Mac de 32 gigas, dont le système
+prend sa part, en cache 16 bits,
+
+177
+00:08:52,594 --> 00:08:55,417
+ça ne rentre pas : tu compresses
+le cache, ou tu raccourcis.
+
+178
+00:08:55,820 --> 00:08:58,438
+Et si c'est vraiment
+la conversation complète que tu veux,
+
+179
+00:08:58,521 --> 00:09:01,752
+la seule route chiffrée
+de mon relevé qui dépasse 32 gigas,
+
+180
+00:09:01,772 --> 00:09:06,442
+c'est le mini-PC Ryzen AI Max+ en 64,
+autour de 2000 euros.
+
+181
+00:09:06,825 --> 00:09:08,581
+Et en fait, si tu as déjà 24 gigas
+
+182
+00:09:08,601 --> 00:09:11,308
+et qu'une conversation courte
+te suffit, garde ton argent.
+
+183
+00:09:11,861 --> 00:09:14,240
+La meilleure carte, parfois,
+c'est celle que tu n'achètes pas.
+
+184
+00:09:14,742 --> 00:09:16,996
+Et on se dit à la prochaine, salut !
