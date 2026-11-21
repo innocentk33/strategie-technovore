@@ -24,6 +24,10 @@
 | un nom de carte mal étiqueté dans la banque | wav2vec2 entend « dix », « i », « xt » pour « Ti » | étiqueter d'après la liste des cartes du script, `verifie: false` tant que l'auteur n'a pas confirmé |
 | la reprise reste plus lente que la voix remplacée | mot isolé, plus lent et appuyé | tempo par passage au-delà du ×1,1 (×1,25 au plus), mesuré et noté dans `tempo_note` |
 | plans décalés ou ancres cassées après les reprises | durée de la voix changée, mot reformulé | comparer `edit-plan/dry-starts.json` avant / après, corriger les `T()` |
+| l'auteur entend une référence fausse dans la voix clonée (« èr quatre-vingt-dix-sept cents » pour R9700, trois fois) | texte envoyé au moteur faux (`voicestudio-stories.txt` : « R quatre-vingt-dix-sept cents »), et aucun contrôle des noms avant la livraison | **contrôle systématique des noms** avant toute livraison d'une voix clonée (`retouches.md`) : verbatim wav2vec2 de chaque nom, comparé à la convention et à la banque de l'auteur ; greffer sa prononciation sur les faux |
+| « 9060 XT » classé juste au contrôle des noms, mais l'auteur entend « ix ti » et un autre timbre | wav2vec2 transcrit « xt » pour « té » comme pour « ti » ; le mot était dans un bloc strata, collé à une greffe de la vraie voix | pour chaque XT et Ti en voix clonée : durée de la dernière voyelle comparée à une occurrence validée (20 ms contre 80 ms), distance MFCC aux voisins, sinon demander l'écoute ; remplacer par la source qui laisse un seul changement de voix (`retouches.md`, « Choisir entre plusieurs candidats ») |
+| un texte masqué au départ (`opacity:0` dans le style) puis montré et caché par deux `sc.tw` | `check` : `gsap_cold_seek_hidden_fromto_missing_reveal` (le rendu à froid peut le laisser invisible) | ne pas écrire `opacity:0` dans le style : le premier `sc.tw` (0 → 1) suffit |
+| « 5060 Ti » de l'auteur qui « sonne ti i » dans le clone | convention « té i » mal rendue par le moteur | greffer son « 5060 Ti » partout, pris dans une prise liée (« RTX 5060 Ti »), ×1,2 mesuré |
 
 ## Montage
 | Symptôme | Cause | Correction |

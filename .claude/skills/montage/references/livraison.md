@@ -3,7 +3,8 @@
 ## Ce que tu livres
 1. La vidéo : `renders/<court>-montage-final-4k.mp4` (3840 × 2160, 30 i/s), après accord ou carte blanche (`verifications.md`).
 2. Le kit d'upload et les sous-titres, dans le dépôt : `projets/<nom>/upload.md`, `projets/<nom>/<nom>.fr.srt`, `<nom>.en.srt`. Un sous-agent Sonnet les écrit en suivant le skill `upload` (brief : `briefs/modele-upload.md`), pendant le rendu 4K : la dernière 1080p a les mêmes temps.
-3. Ton message final (voir plus bas).
+3. La sauvegarde du projet sur GitHub, quand l'auteur valide la livraison : `git add -A && git commit` dans le dossier du projet, puis, au premier envoi, `gh repo create innocentk33/premium-noir--<dossier> --private --source=. --remote=origin --push` (ensuite `git push`). Les dépôts existants portent ce nom (`premium-noir--2026-11-qwen-27b-32go`…). Retouches suivantes : un commit par lot.
+4. Ton message final (voir plus bas).
 
 ## Chapitres
 `chapitres.txt` est généré par `montage.py` (un chapitre par `chap=`). Dans la description, ils peuvent être plus parlants, mais chaque temps tombe sur le début d'une phrase de la voix (`voix.words.json`). Règles YouTube : premier à 00:00, au moins 3, chacun d'au moins 10 s.
