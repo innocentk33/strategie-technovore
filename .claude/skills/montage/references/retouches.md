@@ -53,5 +53,36 @@ Le découpage de 2026-11-21 a été fait par `2026-11-qwen-27b-32go/retouches/ba
    - temps de l'écran de fin dans `upload.md`.
 8. **Pas de 4K sans l'accord de l'auteur** : la carte blanche couvrait la première livraison, pas les retouches.
 
+### Contrôle systématique des noms (avant de livrer une voix clonée)
+Le piège du 32 Go : le clone a dit « èr quatre-vingt-dix-sept cents » pour R9700 aux trois occurrences (le texte envoyé au moteur disait « R quatre-vingt-dix-sept cents »), et c'est l'auteur qui l'a entendu, au v5. Ce contrôle se fait **avant la première livraison** d'une voix clonée, puis après chaque lot de reprises :
+1. **Liste chaque occurrence**, dans `sources/voix.words.json`, de chaque nom de carte, de produit ou de marque : RTX, RX, Arc, Radeon, les références (5060 Ti, 9060 XT, A770, B65, B70, R9700, 5090, 5080, V100, M6…), Ryzen AI Max+, NVIDIA, AMD, Intel, ASUS, Gigabyte, ASRock, GMKtec, Hugging Face, llama.cpp, CUDA, ROCm, PCIe, Qwen… Pense aux formes collées (« d'ASUS », « l'Intel »).
+2. **Transcris en verbatim** avec wav2vec2 ±1 s autour de chacune (la transcription de toute la voix suffit), et compare :
+   - à la **forme attendue** : les conventions d'écriture pour VoiceStudio (Ti = « té i », XT = « ix té », R9700 = « èr neuf mille sept cents », ASUS = « azus », B65 = « bé soixante-cinq », 9060 XT = « quatre-vingt-dix soixante ix té ») et le texte réellement envoyé au moteur (`voicestudio-stories.txt` du projet), qui peut lui-même être faux ;
+   - à la **prononciation de l'auteur dans la banque** (`<DEPOT>/ressources/voix/reprises/2026-11-21-cartes/` et sa transcription) : mêmes nombres, durée, nombre de syllabes.
+3. **Classe** chaque occurrence en trois verdicts :
+   - **juste** ;
+   - **faux** : on entend un autre nombre ou un autre mot, par exemple « quatre-vingt-dix » au lieu de « neuf mille » ;
+   - **douteux**.
+
+   wav2vec2 déforme tous les noms (« radion », « jigabait », « hertic ») : seul compte un **nombre ou un mot différent**.
+   **Limite : wav2vec2 ne distingue pas « té » de « ti »** (« XT » transcrit « xt » dans les deux cas). Au 32 Go, le « 9060 XT » de 3:23 a été classé juste au v6 alors que l'auteur entendait « ix ti », avec un autre timbre. Pour chaque « XT » et chaque « Ti » en voix clonée, fais trois mesures :
+   - **la durée de la dernière voyelle**, comparée à une occurrence validée par l'auteur : le fautif durait 20 ms, contre 80 ms pour le validé ;
+   - **le timbre** : distance MFCC (moyenne des coefficients 1 à 19 sur la parole) à la voix qui l'entoure. Le fautif, dans un bloc strata, était à 50 de la greffe de l'auteur juste avant, contre 25 pour sa propre voix ;
+   - **les formants F1/F2 de la voyelle**, qui ne tranchent pas seuls sur une voyelle aussi courte.
+
+   En cas de doute, demande l'écoute à l'auteur plutôt que de conclure « juste ».
+4. **Greffe la version de l'auteur sur tous les « faux »**, tirée du fichier brut de la banque (les réglages sont ceux de `reprises.py`, `LOT=3` du 32 Go). Pour les « douteux », ne greffe que si le raccord est propre : un mot voisin collé à moins de 50 ms (« 5090 a aussi ») donne un mauvais raccord. Dis-le.
+5. **Écris le tableau** dans `edit-plan/verif-noms-vN.json` (temps, nom, attendu, entendu, verdict, action) et mets dans le rapport les faux et les douteux en détail, plus le compte des justes. 32 Go, v5 : 47 occurrences, 3 faux (les trois R9700, greffés), 1 douteux (RTX 5090, non greffé), 37 justes, et 6 occurrences déjà dans la voix de l'auteur.
+
+### Choisir entre plusieurs candidats pour une greffe
+Quand un mot a plusieurs sources possibles, essaie-les toutes avec le même pipeline et mesure-les dans la voix finale. Au 32 Go (lot 4, `LOT=4 CAND=a|b|r13`, résultats dans `retouches/candidats-xt.json`), il y avait trois sources pour un « 9060 XT » :
+- **le clone validé ailleurs** : 47 de distance MFCC à la greffe de l'auteur juste avant, 33 au clone qui suit ;
+- **sa banque de noms**, lue isolée et donc plus lente : 23 et 48 ;
+- **sa reprise de phrase**, en parole liée : 25 et 46, une sonie plus proche des voisins, et la même forme que le reste de la vidéo (« quatre-vingt-dix soixante »).
+
+On a retenu la reprise de phrase : il ne reste ainsi qu'**un seul** changement de voix, juste après le nom. Compare aussi la hauteur à ±1,5 s, la sonie et la durée par rapport au mot remplacé.
+
+Si l'auteur s'excuse d'un raccord, le texte se met à l'écran sans tampon ni son : une petite ligne grise (34 px, `#c7c7cc`) en bas à droite, en fondu, pendant 3 à 4 s (32 Go, v7 : « Désolé pour mon souci de micro »). Pour la masquer, utilise des fondus `sc.tw` sans `opacity:0` écrit dans le style : sinon `check` lève l'erreur `gsap_cold_seek_hidden_fromto_missing_reveal`.
+
 ### Message à l'auteur
-La liste des passages remplacés (temps dans la voix, texte), ce qui a été perdu ou changé par une reformulation, les étiquettes non vérifiées de la banque, les segments non utilisés, le chemin du 1080p, et la question de la 4K.
+La liste des passages remplacés (temps dans la voix, texte), le tableau du contrôle des noms (faux et douteux), ce qui a été perdu ou changé par une reformulation, les étiquettes non vérifiées de la banque, les segments non utilisés, le chemin du 1080p, et la question de la 4K.

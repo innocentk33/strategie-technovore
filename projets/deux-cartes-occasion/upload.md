@@ -1,6 +1,6 @@
 # 32 Go pour Qwen 27B : les prix, les routes et leurs pièges : kit d'upload YouTube
 
-> **Vidéo** : `/Users/innocent/HyperStudio/premium-noir/2026-11-qwen-27b-32go/renders/q32-montage-final-4k.mp4` (**périmée depuis les reprises de voix du 21/11** ; nouvelle version contrôlée : la 1080p `renders/q32-montage-v5.mp4` (2e lot : « 5060 Ti » et « 16 gigas et demi » redits, hook ×1,1, musique −5 dB), la 4K est à refaire après ton accord) : 30 i/s, **568,3 s (9:28)**. Les temps viennent de la voix avec reprises (`sources/voix.words.json`, la voix démarre à 0 : temps de la voix = temps de la vidéo ; elle finit à 556,8 s, la vidéo 11,4 s plus tard).
+> **Vidéo** : `/Users/innocent/HyperStudio/premium-noir/2026-11-qwen-27b-32go/renders/q32-montage-final-4k.mp4` (**périmée depuis les reprises de voix du 21/11** ; nouvelle version contrôlée : la 1080p `renders/q32-montage-v7.mp4` (2e lot : « 5060 Ti » et « 16 gigas et demi » redits, hook ×1,1, musique −5 dB ; 3e lot : les trois « R9700 » redits, carte du monde ; 4e lot : « 9060 XT » de 3:23 redit, mot d'excuse à l'écran), la 4K est à refaire après ton accord) : 30 i/s, **568,4 s (9:28)**. Les temps viennent de la voix avec reprises (`sources/voix.words.json`, la voix démarre à 0 : temps de la voix = temps de la vidéo ; elle finit à 557,0 s, la vidéo 11,4 s plus tard).
 > **Sortie** : **lun. 30 nov. 2026, 18 h** ([`calendrier.md`](../../calendrier.md), ligne 5). Faits : [`sources.md`](sources.md) (F1 à F122) ; prix : [`recherche/prix-20-11.md`](recherche/prix-20-11.md).
 > **vidIQ, 21/11 : 0 crédit dépensé.** Les outils de mots-clés, d'outliers et de recherche YouTube ne sont pas chargés dans cette session (ToolSearch ne trouve que des outils de comptes, de miniatures, de vidéos de chaîne et de réseaux sociaux). Les volumes ci-dessous sont repris de `sources.md` et des kits voisins, datés ; les vidéos hôtes viennent de la page de résultats de YouTube (curl, 21/11), pas de vidIQ.
 
@@ -83,7 +83,7 @@ Vices cachés : https://www.service-public.gouv.fr/particuliers/vosdroits/F11007
 Rétractation : https://www.service-public.gouv.fr/particuliers/vosdroits/F10485
 Qwen 27B sur 8 Go de VRAM : [LIEN À COLLER]
 
-Carte : svg-maps, CC BY 4.0.
+Carte du monde : svg-maps (@svg-maps/world), CC BY 4.0.
 MUSIQUES : « Future Minimal » par kissan4 et « Dark Ambient for Crime and Tension » par megalix (Pixabay).
 
 Dis-moi en commentaire : tu pars sur quelle route, avec quelle carte aujourd'hui ?
@@ -92,20 +92,20 @@ Sur Technovore, j'ouvre le capot de l'IA que tu utilises. Si cette vidéo t'a é
 #IAenLocal #Qwen #VRAM
 ```
 
-- **Taille : 4 072 caractères sur 5 000** (compté par script le 21/11 ; les adresses en font environ la moitié). Corps hors chapitres, prix, liens et sources (deux premiers paragraphes, précisions, crédits, appel) : environ 1 250 caractères.
+- **Taille : 4 100 caractères sur 5 000** (compté par script le 21/11 ; les adresses en font environ la moitié). Corps hors chapitres, prix, liens et sources (deux premiers paragraphes, précisions, crédits, appel) : environ 1 250 caractères.
 - **Chiffres** (voix finale, `sources.md`) : 32 Go (0:12) ; 1 600 € la paire de 5060 Ti Dual sur Amazon (2:12 ; F117, F118) et 2 800 € la R9700 chez LDLC (0:18 ; F100) ; 280 € d'écart (2:23 ; F118) et 400 € (4:41 ; F118) ; 31,4 Go (1:33 ; F109, calcul en Gio) ; prix de chaque ligne : F97 à F122 (voix : « 800 », « 700 », « 460 », « 1900 », « 2016 », « 2400 », « 2800 », « presque 7000 », « 9400 », « 1709 », « autour de 2000 » : la description donne le prix exact de la page, TTC affiché le 20/11).
 - **Ce que la voix arrondit et la description précise** : 799,99 → « 800 » ; 699,99 → « 700 » ; 1 899,95 → « 1900 » ; 2 399,99 → « 2400 » ; 2 029,99 → « autour de 2000 ».
 - **PRÉCISIONS** (3 lignes) : les prix sont ceux du 20/11 et ont pu changer (Black Friday le 27/11) ; l'offre Amazon de la RX 9060 XT (699,99 €) n'était plus en ligne le 21/11 (demande de l'auteur ; je n'ai pas rouvert la page, voir « À vérifier ») ; les 31,4 Go sont un calcul ; occasion, V100, TVA du GMKtec.
 - **Aucune chaîne ni créateur nommé.** Pas de chemin de dossier ni de clé. Deux pseudos de musiciens (kissan4, megalix) : c'est le crédit Pixabay, comme dans les kits précédents. Aucun lien vers une annonce de particulier, aucun lien d'affiliation.
 - **Liens** vérifiés ouverts (code 200, curl, 21/11) : les 13 pages de marchands, les deux dépôts Hugging Face, le README de llama.cpp, le guide AMD, les notes de version de CUDA, les trois fiches service-public. Les pages Amazon ouvrent, mais le prix et le stock affichés le 21/11 n'ont pas été relus. **À coller** : le lien de « Qwen 27B sur 8 Go » (sortie lun. 23/11, pas encore dans `README.md`), à la place de `[LIEN À COLLER]`.
-- **Carte** : la carte d'Afrique vient du paquet `@svg-maps/world` (licence CC BY 4.0, lue dans le registre npm le 21/11) ; le crédit est exigé par la licence ; pas de lien (la page du paquet refuse curl, la page du dépôt contient un nom de personne).
+- **Carte** : la carte du monde (depuis le v6 ; avant, une carte d'Afrique) vient du paquet `@svg-maps/world` (licence CC BY 4.0, lue dans le registre npm le 21/11) ; le crédit est exigé par la licence ; pas de lien (la page du paquet refuse curl, la page du dépôt contient un nom de personne).
 - **Musiques** : `scripts/montage.py` utilise `music-minimal-long` et `music-tension-long` ; `style/media.json` les crédite à kissan4 (« future minimal ») et megalix (« dark ambient for crime and tension »), Pixabay. Même liaison que dans les kits précédents.
 - **Appel à s'abonner** : la voix le dit à 4:02 (« si cette vidéo t'a évité un mauvais achat, abonne-toi ») ; la description reprend la phrase. L'appel à commenter n'est **pas** dans la voix (la fin est « garde ton argent », puis « et on se dit à la prochaine, salut », reprise de l'auteur du 21/11) : il n'est que dans la description et le commentaire épinglé.
 - **Hashtags** : #IAenLocal (le mot-clé du pilier), #Qwen, #VRAM.
 
 ### Chapitres : vérification
 
-Recalculés le 21/11 sur la voix du 2e lot de reprises (v5, `voix.words.json`). 14 chapitres, premier à 0:00, le plus court fait 12 s (0:47 → 0:59) : les trois règles de YouTube sont tenues. Ceux du montage (`chapitres.txt`, 8 chapitres) sont remplacés par des chapitres plus précis. Quand aucune seconde entière ne tombe dans le silence avant la phrase, j'ai pris celle qui empiète le moins (signalé).
+Recalculés le 21/11 sur la voix du 4e lot de reprises (v7, `voix.words.json`). 14 chapitres, premier à 0:00, le plus court fait 12 s (0:47 → 0:59) : les trois règles de YouTube sont tenues. Ceux du montage (`chapitres.txt`, 8 chapitres) sont remplacés par des chapitres plus précis. Quand aucune seconde entière ne tombe dans le silence avant la phrase, j'ai pris celle qui empiète le moins (signalé).
 
 | Début | Titre | Ce qui l'ouvre dans la voix | Vérification |
 |---|---|---|---|
@@ -115,16 +115,16 @@ Recalculés le 21/11 sur la voix du 2e lot de reprises (v5, `voix.words.json`). 
 | 2:00 | Route 1 : deux cartes de 16 Go | « Première route, la plus tentante » | 120,17 s (« place » finit à 119,38) ; le montage dit 2:00 aussi |
 | 2:30 | Route 1 : AMD, Intel et occasion | « Et chez AMD ? » | 149,90 s (« cliques » finit à 149,34) : aucune seconde dans le silence ; 2:30 coupe 0,10 s du début de « Et » |
 | 3:00 | Route 1 : le piège de la place… | « Maintenant, le vrai piège de cette route, c'est ta tour » | 180,47 s (« l'heure » finit à 179,92) |
-| 4:04 | Route 2 : une seule carte de 32 Go | « Deuxième route » | 244,28 s (« abonne-toi » finit à 243,32) ; le montage dit 4:04 aussi |
-| 4:53 | Route 2 : le piège du logiciel | « Côté AMD, j'ai trouvé un guide officiel » | 293,62 s (« plus » finit à 293,07) : 4:53 reprend 0,07 s de la fin de « plus » |
+| 4:04 | Route 2 : une seule carte de 32 Go | « Deuxième route » | 244,12 s (« abonne-toi » finit à 243,16) ; le montage dit 4:03 (plan qui démarre 0,18 s avant la phrase) |
+| 4:53 | Route 2 : le piège du logiciel | « Côté AMD, j'ai trouvé un guide officiel » | 293,66 s (« plus » finit à 293,11) : aucune seconde dans le silence ; 4:53 reprend 0,11 s de la fin de « plus » |
 | 5:10 | Route 2 : RTX 5090 et Tesla V100 | « Et chez NVIDIA ? » | 309,98 s (« carte » finit à 309,50) : 5:10 coupe 0,02 s du début de « Et » |
 | 5:50 | Route 3 : changer d'ordinateur | « Troisième route » | 350,13 s (« week-end » finit à 349,37) |
 | 6:43 | Avant de payer | « Et avant de payer, un dernier piège » | 403,29 s (« entier » finit à 402,54) ; le montage dit 6:43 aussi |
-| 7:33 | La route que je prendrais | « Alors, quelle route ? » | 453,65 s (« partout » finit à 452,70) ; le montage dit 7:33 aussi |
+| 7:33 | La route que je prendrais | « Alors, quelle route ? » | 453,66 s (« partout » finit à 452,70) ; le montage dit 7:33 aussi |
 | 8:10 | Si tu veux une seule carte | « Pour une seule carte, je prendrais la moins chère » | 490,33 s (« janvier » finit à 489,74) |
-| 8:37 | Si tu veux changer d'ordinateur… | « Si tu veux remplacer tout l'ordinateur » | 517,48 s (« 2800 » finit à 516,91) |
+| 8:37 | Si tu veux changer d'ordinateur… | « Si tu veux remplacer tout l'ordinateur » | 517,65 s (« 2800 » finit à 517,07) : 8:37 reprend 0,07 s de la fin de « 2800 » |
 
-« À la prochaine » (9:14 dans le montage) reste hors des chapitres : la phrase « Et on se dit à la prochaine, salut ! » ne dure que 2 s (554,74 à 556,85 s), moins que les 10 s qu'exige YouTube pour un chapitre.
+« À la prochaine » (9:14 dans le montage) reste hors des chapitres : la phrase « Et on se dit à la prochaine, salut ! » ne dure que 2 s (554,91 à 557,01 s), moins que les 10 s qu'exige YouTube pour un chapitre.
 
 ## Tags
 
@@ -144,11 +144,11 @@ La voix ne pose aucune question au public : le commentaire épinglé la pose.
 
 ## Sous-titres
 
-- Français : [`deux-cartes-occasion.fr.srt`](deux-cartes-occasion.fr.srt) (184 sous-titres, 0:00-9:17 ; recalés le 21/11 sur la voix du 2e lot de reprises, 8 blocs réécrits pour les phrases reformulées).
+- Français : [`deux-cartes-occasion.fr.srt`](deux-cartes-occasion.fr.srt) (184 sous-titres, 0:00-9:17 ; recalés le 21/11 sur la voix du 4e lot de reprises, 8 blocs réécrits pour les phrases reformulées).
 - Anglais : [`deux-cartes-occasion.en.srt`](deux-cartes-occasion.en.srt), mêmes numéros et mêmes temps ; « GB », prix à l'anglaise (€1,600 ; €2,016), « legal guarantee », dates « November 20 ».
 - Dans Studio : « Avec synchronisation », langue de la vidéo en français.
 - Le texte est celui de la voix (`voix.phrases.json` : le téléprompteur, sauf les phrases que l'auteur a reformulées dans ses reprises du 21/11, écrites comme il les dit) : « gigas » en français (comme dit), « 31,4 », « 32 000 ». Les segments (≤ 2 lignes de 42 caractères) coupent sur la ponctuation et sur les silences, jamais entre un nombre et son unité (« 5060 / Ti »).
-- Contrôle par script : 184 blocs dans chaque fichier, mêmes numéros et mêmes temps ; temps croissants, aucun chevauchement, tout dans [0 ; 568,3 s] (dernier bloc : 9:17,0) ; durées de 0,75 à 5,21 s ; 2 lignes au plus, ligne la plus longue 42 caractères en français et en anglais (aucune au-dessus de 46) ; chaque bloc commence au premier mot de la voix (écart < 0,02 s) ; **1 715 mots de la voix sur 1 715 couverts** (100 %). Trois blocs d'une seule courte phrase (« Et chez AMD ? », « Et chez NVIDIA ? », « Allez, salut ! », 0,6 s de voix) finissent 0,25 s après leur dernier mot au lieu de 0,15 s pour atteindre 0,85 s.
+- Contrôle par script : 184 blocs dans chaque fichier, mêmes numéros et mêmes temps ; temps croissants, aucun chevauchement, tout dans [0 ; 568,4 s] (dernier bloc : 9:17,2) ; durées de 0,75 à 5,21 s ; 2 lignes au plus, ligne la plus longue 42 caractères en français et en anglais (aucune au-dessus de 46) ; chaque bloc commence au premier mot de la voix (écart < 0,02 s) ; **1 715 mots de la voix sur 1 715 couverts** (100 %). Trois blocs d'une seule courte phrase (« Et chez AMD ? », « Et chez NVIDIA ? », « Allez, salut ! », 0,6 s de voix) finissent 0,25 s après leur dernier mot au lieu de 0,15 s pour atteindre 0,85 s.
 
 ## Suggestions
 
@@ -187,7 +187,7 @@ Les cinq miniatures sont dans [`miniature/hotes/`](miniature/hotes/). `planches.
 
 ### L'enchaînement
 
-- **Écran de fin, de 9:17 à 9:28** (la voix finit à 556,8 s, la vidéo à 568,3 s : environ 11 s ; YouTube demande au moins 5 s et au plus 20 s) : à gauche, « Qwen 27B sur 8 Go : plus rapide, mais à quel prix ? » (sortie lun. 23/11, **URL à remplir** : elle n'est pas encore dans `README.md`) ; à droite, « Le setup par budget » (*Setup Black Friday IA locale*, sortie jeu. 26/11, **URL à remplir** : pas dans `README.md` non plus). Les deux seront publiques le 30/11.
+- **Écran de fin, de 9:17 à 9:28** (la voix finit à 557,0 s, la vidéo à 568,4 s : environ 11 s ; YouTube demande au moins 5 s et au plus 20 s) : à gauche, « Qwen 27B sur 8 Go : plus rapide, mais à quel prix ? » (sortie lun. 23/11, **URL à remplir** : elle n'est pas encore dans `README.md`) ; à droite, « Le setup par budget » (*Setup Black Friday IA locale*, sortie jeu. 26/11, **URL à remplir** : pas dans `README.md` non plus). Les deux seront publiques le 30/11.
 - **Vidéo suivante** : *Combien coûte Claude Fable 5.2 chez toi ?* (mar. 1er déc., 18 h, [`calendrier.md`](../../calendrier.md)). La voix ne l'annonce pas (règle du 26/11).
 - **Fiche pendant le plateau de rétention** : vers **1:51 à 1:57** (la voix dit « si t'as qu'une carte de 8 gigas, on a vu dans une vidéo précédente comment Qwen 27B y tourne quand même », 110,9 à 117,3 s), vers « Qwen 27B sur 8 Go » ; une seconde à **7:33**, vers « Le setup par budget », quand la voix demande « quelle route ? » (la vidéo du 26/11 donne des configurations par budget). Plateau inconnu : recale-les sur la courbe au radar du 30/11.
 

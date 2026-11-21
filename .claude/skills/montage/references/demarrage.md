@@ -70,10 +70,15 @@ Ne copie jamais un projet sur lequel un agent travaille encore (retouches, rendu
 5. **Scripts de voix** : vraie voix → remplace `scripts/voix.py` et `scripts/verif_voix.py` par ceux de `2026-11-qwen-27b-8go/scripts/` (une source, `sources/prise-originale.*`). Deux voix clonées → garde ceux du 32 Go. Les autres scripts communs aux deux projets sont identiques (vérifié le 21/11 : `kit.py`, `blocs2.py`, `blocs3.py`, `build.py`, `verif_raccords.py`, `verif_souffles.py`, `verif_begaiements.py`, `w2v_*.py`, `retouche_voix.py`) ; `teleprompteur.py` du 32 Go est le plus complet (sections).
 6. **Images à recopier** depuis l'ancien projet (le `rsync` exclut `assets/images/`) : seulement ce que ton `montage.py` citera :
    - les miniatures des deux vidéos de l'écran de fin (ex. `miniature-8go.jpg`, `miniature-budget.jpg`, `miniature-meme-carte.jpg` dans le 32 Go), ou les nouvelles ;
-   - `afrique.json` et `afrique-LICENCE-CC-BY-4.0.md` si la carte d'Afrique revient ;
+   - `monde.json`, `monde-LICENCE-CC-BY-4.0.md` et `scripts/carte_monde.py` si la carte du monde revient (voix qui parle des pays du monde) ; `afrique.json` et `afrique-LICENCE-CC-BY-4.0.md` seulement si la voix parle de l'Afrique elle-même ;
    - pas `placeholder-produit.png` (recréé tout seul par `P()`), pas les photos de produits ni les captures de l'ancienne vidéo.
    Les logos, mèmes, bruitages, polices, gsap et musiques viennent déjà avec le `rsync`.
-7. **Réécris `scripts/montage.py`** (section suivante).
+7. **Dépôt git du projet** (chaque vidéo a le sien, privé, comme `2026-11-qwen-4-arrive`). Le `rsync` exclut `.git` mais recopie `.gitignore` et `.gitattributes` du 32 Go : ils écartent les rendus, les caches, les musiques bouclées `music-*-long.flac` (plus de 100 Mo, refusées par GitHub, identiques dans tous les projets : recopie-les d'un autre projet) et les fichiers de travail recréés par les scripts (`retouches/*.wav`, `critique*/**/*.wav`, `*.npy`, `*.raw`, `*.f32`). Initialise seulement, sans commiter :
+   ```bash
+   cd "$PREMIUM/$N" && git init -q -b main && test "$(git rev-parse --show-toplevel)" = "$PWD"
+   ```
+   Commit et envoi à la livraison (`livraison.md`). Avant le premier commit, `git add -A -n` ne doit lister aucun fichier de 100 Mo ou plus : un seul suffit pour que GitHub refuse tout l'envoi.
+8. **Réécris `scripts/montage.py`** (section suivante).
 
 ## Réécrire `montage.py` : la coupe exacte
 
@@ -124,7 +129,7 @@ Le premier plan porte `chap='Introduction'` : YouTube veut un premier chapitre �
 
 ## Tester un projet neuf avant d'avoir la voix
 
-`MC_DRY=1` a besoin de `sources/voix.words.json` (toutes les ancres) et des images que les briques ouvrent (taille des photos, `afrique.json`…). L'assemblage a besoin d'un fichier de voix. Avant de recevoir la voix, fabrique une voix et des mots fictifs (testé le 21/11) :
+`MC_DRY=1` a besoin de `sources/voix.words.json` (toutes les ancres) et des images que les briques ouvrent (taille des photos, `monde.json`, `afrique.json`…). L'assemblage a besoin d'un fichier de voix. Avant de recevoir la voix, fabrique une voix et des mots fictifs (testé le 21/11) :
 
 ```bash
 ffmpeg -v error -y -f lavfi -i anullsrc=r=48000:cl=mono -t 20 -c:a flac assets/audio/voix-fictive.flac

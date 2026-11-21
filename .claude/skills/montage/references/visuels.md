@@ -1,4 +1,4 @@
-# Visuels : captures, produits, logos, schémas, carte, mèmes
+# Visuels : captures, produits, logos, schémas, cartes, mèmes
 
 Un sous-agent Sonnet prépare les images en parallèle de la voix (brief : `briefs/modele-captures.md`). Tu regardes ensuite **chaque image** avant de la monter.
 
@@ -43,9 +43,17 @@ Règles :
 
 Dessinés en HTML par des briques (`gauge`, `bars`, `tiles`, `compare`, schémas propres dans `montage.py`). Ils sont **à l'échelle** : deux jauges se comparent sur la même échelle, un débordement en RAM se dessine à la même échelle que la carte (corrigé le 21/11 : il était 2,2 fois trop grand), les segments arrivent sur les mots qui les nomment. Une illustration le dit dans son surtitre (« (illustration) »).
 
-## Carte d'Afrique
+## Cartes (monde, Afrique)
 
-`assets/images/afrique.json` (pays extraits de `@svg-maps/world@2.0.0`, licence CC BY 4.0, avec leurs centres) et sa licence `afrique-LICENCE-CC-BY-4.0.md` sont dans le projet 32 Go : recopie-les. Le paquet `africa` de svg-maps renvoyait 404. **Crédit obligatoire dans la description** : « Carte : svg-maps, CC BY 4.0 ». Le point d'une ville se place en absolu et son libellé à part (sinon un `row-reverse` décale le point, piège de Dakar).
+**Règle de l'auteur (21/11) : quand la voix parle des pays du monde (« depuis un autre pays », « chez toi »), c'est une carte du monde ou un globe, pas l'Afrique seule**, même si le public est à 63 % africain : on garde des villes africaines dessus.
+- **Carte du monde** (32 Go, depuis le v6) : `scripts/carte_monde.py` lit `world.svg` de `@svg-maps/world@2.0.0` (CC BY 4.0, copie dans `retouches/carte/` du 32 Go) et écrit `assets/images/monde.json`, qui contient les chemins des pays sans l'Antarctique, un cadre de 58° S à 85° N, la liste des pays de l'UE et la position des villes.
+  - **Placement des villes** : la projection d'ensemble (proche de Miller) se trompe de 10 à 25 px. Chaque ville se place donc dans les bornes connues de son propre pays (longitude et latitude min/max), en linéaire pour x et en Miller pour y.
+  - **Choix des bornes** : prends des pays sans îles lointaines. La France, le Japon, le Chili, le Brésil et la Norvège faussent les bornes à cause de leurs territoires d'outre-mer ou de leurs îles.
+  - **Dessin** : la brique `world()` de `montage.py` la dessine. La carte apparaît, la France s'allume en vert (possession) sur « prix français », le reste de l'UE en vert plus pâle sur « France et Europe », puis les villes en jaune sur « chez toi » : Montréal, Casablanca, Dakar, Abidjan, Kinshasa.
+  - **Étiquettes** : elles sont décalées une à une pour ne pas se chevaucher (Abidjan et Kinshasa se touchaient).
+- **Carte d'Afrique** : `assets/images/afrique.json`, extraite du même paquet (le paquet `africa` de svg-maps renvoie 404), avec sa licence `afrique-LICENCE-CC-BY-4.0.md`. Elle ne sert que si la voix parle de l'Afrique elle-même.
+- **Crédit obligatoire dans la description** : « Carte du monde : svg-maps (@svg-maps/world), CC BY 4.0 », et le crédit à l'écran (« Carte : svg-maps (CC BY 4.0) »).
+- **Point de ville** : il se place en absolu et son libellé à part ; sinon un `row-reverse` décale le point (piège de Dakar).
 
 ## Mèmes
 

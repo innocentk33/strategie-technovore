@@ -14,7 +14,7 @@ npx --yes hyperframes@0.9.47 check 2>&1 | grep -E "✗|⚠|error\(s\)|Check (pas
 
 (Sorties réelles relevées le 21/11 sur une copie du projet 8 Go ; `check` y passe avec 0 erreur et des avertissements, qu'on lit : voir `verifications.md`.)
 
-- `MC_DRY=1` construit les plans puis s'arrête avant l'assemblage : il attrape une ancre introuvable (`KeyError: phrase introuvable après …`) ou un plan trop court (`ValueError: plan trop court avant …`). Depuis le 21/11 (32 Go), il écrit aussi les débuts de plans dans `edit-plan/dry-starts.json`, pour comparer avant et après une retouche de voix (`retouches.md`). Il a besoin de `sources/voix.words.json` et des images et fichiers que les briques ouvrent (taille des photos, `afrique.json`…) : ils doivent exister.
+- `MC_DRY=1` construit les plans puis s'arrête avant l'assemblage : il attrape une ancre introuvable (`KeyError: phrase introuvable après …`) ou un plan trop court (`ValueError: plan trop court avant …`). Depuis le 21/11 (32 Go), il écrit aussi les débuts de plans dans `edit-plan/dry-starts.json`, pour comparer avant et après une retouche de voix (`retouches.md`). Il a besoin de `sources/voix.words.json` et des images et fichiers que les briques ouvrent (taille des photos, `monde.json`, `afrique.json`…) : ils doivent exister.
 - Variables : `STRATA_WORDS=<fichier>` remplace `sources/voix.words.json` (mots d'essai, le fichier peut être hors du projet) ; `MC_VOICE=<fichier>` remplace `assets/audio/voix.flac` à l'assemblage (**chemin dans le projet**, sinon `check` échoue en 404). Recette complète pour un projet sans voix : `demarrage.md`, « Tester un projet neuf avant d'avoir la voix ».
 - Quand tu as supprimé ou renuméroté des plans, efface les anciens fichiers avant de régénérer, sinon des plans orphelins restent dans `compositions/` : `rm -f compositions/s-*.html compositions/meme-*.html && python3 scripts/montage.py 2>&1 | tail -1`.
 - Sorties : `compositions/`, `index.html`, `STORYBOARD.md`, `chapitres.txt`, `edit-plan/timeline.json` (début, durée, chapitre et caméra de chaque plan) et `edit-plan/audio-timeline.json`.
@@ -56,7 +56,7 @@ Dans `blocs2.py` : `frame(sc, média, kind='browser'|'app'|'card', url=…, pos=
 
 Dans `blocs3.py` : `speedo` (compteur), `switch`, `keyboard`, `tokens_row`, `linechart`, `checklist`, `logo3`. **`stamp()` est interdit.**
 
-Les schémas propres à une vidéo (carte mère, alimentation, carte d'Afrique, routes…) s'écrivent dans `montage.py`, sous `# ───────────── schémas propres à cette vidéo ─────────────`, sur le modèle de `mobo()`, `psu()`, `layers()`, `cities()` du 32 Go.
+Les schémas propres à une vidéo (carte mère, alimentation, carte du monde, routes…) s'écrivent dans `montage.py`, sous `# ───────────── schémas propres à cette vidéo ─────────────`, sur le modèle de `mobo()`, `psu()`, `layers()`, `world()` du 32 Go (`cities()`, la carte d'Afrique, n'est plus appelée).
 
 ## Écrire les plans
 
