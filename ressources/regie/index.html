@@ -301,6 +301,13 @@ try { const t = localStorage.getItem('regie-theme') || 'systeme'; document.docum
   .carte h3 a:hover, .video-titre:hover { text-decoration:underline; text-underline-offset:3px; }
   .carte .meta { font-size:11px; margin:4px 0; }
   .carte-date { display:flex; justify-content:space-between; gap:8px; color:var(--encre-3); margin:12px 0; font-size:11px; }
+  .carte-date:has(.edition-date) { flex-wrap:wrap; }
+  .bouton-date { border:0; padding:3px 0; color:var(--encre-2); background:transparent; font:inherit; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
+  .bouton-date:hover { color:var(--accent); }
+  .edition-date { display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
+  .edition-date .controle { width:100%; min-width:0; font-size:12px; }
+  .edition-date button { font-size:11px; padding:5px 8px; }
+  .edition-date button[type=submit] { background:var(--accent-doux); color:var(--accent); }
   .carte .suivi { gap:7px; max-width:none; padding:0; }
   .carte select.statut { height:30px; font-size:11px; background-color:var(--fond); border-color:var(--trait); font-weight:500; }
   .carte .piste { display:none; }
@@ -393,6 +400,9 @@ try { const t = localStorage.getItem('regie-theme') || 'systeme'; document.docum
   .drag-en-cours .colonne[data-drop-statut] { border-radius:10px; outline:1px dashed var(--trait-fort); outline-offset:5px; min-height:160px; }
   .drop-survol { background:var(--accent-doux); outline:2px solid var(--accent)!important; outline-offset:4px; }
   .drop-cible.drop-survol { border-color:transparent;color:var(--accent); }
+  .cal-evenement[draggable=true] { cursor:grab; }
+  .cal-evenement[draggable=true]:active { cursor:grabbing; }
+  .drag-date-en-cours .cal-jour.drop-survol { outline-offset:-2px; }
   .statut-en-cours .kanban { cursor:progress; }
   @media(pointer:coarse) { .poignee-drag { display:none; } }
 
@@ -442,7 +452,7 @@ let calendrierDate = new Date(new Intl.DateTimeFormat('sv-SE', {timeZone:'Europe
 let youtube = { configured:false, fetchedAt:null, videos:{} }, youtubeCharge = false;
 let choixMiniatures='auto', graineMiniatures='1';
 try { choixMiniatures=localStorage.getItem('regie-miniatures')||'auto';graineMiniatures=localStorage.getItem('regie-miniatures-seed')||'1'; } catch {}
-let dragProjet=null, statutEnCours=false, refreshDiffere=false;
+let dragProjet=null, suiviEnCours=false, refreshDiffere=false, editionDate=null;
 const ouverts = new Set(['projets']);
 
 const echapper = s => String(s).replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);
@@ -646,12 +656,18 @@ function filtrer(liste, avecStatut=true) {
   return liste.filter(p=>(!q || sansAccents(p.titre+' '+(p.nom||'')).includes(q)) && (!avecStatut || !filtreStatut || cleStatut(p.statut)===filtreStatut) && (!filtrePilier || p.pilier===filtrePilier));
 }
 const videFiltre = () => '<div class="vide-local"><h2>Aucune vidéo dans cette sélection</h2><p>Modifie la recherche ou les filtres pour retrouver tes vidéos.</p></div>';
+const cleDate = p => p.nom ?? `radar:${p.creneau}`;
+const trouverElementDate = cle => projets.find(p=>p.nom===cle) ?? creneaux.find(p=>p.creneau&&cleDate(p)===cle);
+function boutonDate(p) {
+  const date=echapper(dateLisible(p.date));
+  return `<button type="button" class="bouton-date" data-edit-date="${echapper(cleDate(p))}" aria-label="${date}. Modifier la date de ${echapper(p.titre)}" title="Modifier la date">${date}</button>`;
+}
 function carte(p) {
-  return `<article class="carte ligne-studio" data-nom="${echapper(p.nom)}">${miniature(p)}<div class="carte-body"><button class="poignee-drag" type="button" draggable="true" data-drag-nom="${echapper(p.nom)}" title="Glisser vers une étape ; le menu Statut reste disponible au clavier" aria-label="Déplacer ${echapper(p.titre)} en glissant"><svg class="ico" viewBox="0 0 16 16"><path d="M5 3h.01M5 8h.01M5 13h.01M10 3h.01M10 8h.01M10 13h.01"/></svg></button><h3><a href="${lienProjet(p)}">${echapper(p.titre)}</a></h3><p class="meta">${echapper(p.pilier || 'Pilier à définir')}${p.format?' · '+echapper(p.format.replace(/^Longue\s*/,'')):''}</p><div class="carte-date"><span>${echapper(dateLisible(p.date))}</span><span>${echapper(p.heure||'')}</span></div>${suivi(p)}</div></article>`;
+  return `<article class="carte ligne-studio" data-nom="${echapper(p.nom)}">${miniature(p)}<div class="carte-body"><button class="poignee-drag" type="button" draggable="true" data-drag-nom="${echapper(p.nom)}" title="Glisser vers une étape ; le menu Statut reste disponible au clavier" aria-label="Déplacer ${echapper(p.titre)} en glissant"><svg class="ico" viewBox="0 0 16 16"><path d="M5 3h.01M5 8h.01M5 13h.01M10 3h.01M10 8h.01M10 13h.01"/></svg></button><h3><a href="${lienProjet(p)}">${echapper(p.titre)}</a></h3><p class="meta">${echapper(p.pilier || 'Pilier à définir')}${p.format?' · '+echapper(p.format.replace(/^Longue\s*/,'')):''}</p><div class="carte-date">${boutonDate(p)}<span>${echapper(p.heure||'')}</span></div>${suivi(p)}</div></article>`;
 }
 function ligneStudio(p, publie=false) {
   const y=donneesYT(p), nb = n => n===null || n===undefined ? '—' : new Intl.NumberFormat('fr-FR').format(n);
-  return `<tr data-nom="${echapper(p.nom)}"><td><div class="video-cell">${miniature(p)}<div><a class="video-titre" href="${lienProjet(p)}">${echapper(p.titre)}</a><p>${echapper(p.pilier||'Pilier à définir')}${p.format?' · '+echapper(p.format):''}</p>${publie&&p.youtubeVideoId?`<a class="lien-secondaire" href="https://www.youtube.com/watch?v=${encodeURIComponent(p.youtubeVideoId)}" target="_blank" rel="noopener">Voir sur YouTube ↗</a>`:''}</div></div></td><td data-label="Date">${echapper(dateLisible(p.date))}${p.heure?`<p class="meta">${echapper(p.heure)}</p>`:''}${publie&&y?.publishedAt&&dateParis(y.publishedAt)!==p.date?`<p class="meta">YouTube : ${echapper(new Date(y.publishedAt).toLocaleDateString('fr-FR',{timeZone:'Europe/Paris'}))}</p>`:''}</td>${publie?`<td data-label="Vues">${nb(y?.views)}</td><td data-label="J’aime">${nb(y?.likes)}</td><td data-label="Commentaires">${nb(y?.comments)}</td>`:''}<td>${suivi(p)}</td></tr>`;
+  return `<tr data-nom="${echapper(p.nom)}"><td><div class="video-cell">${miniature(p)}<div><a class="video-titre" href="${lienProjet(p)}">${echapper(p.titre)}</a><p>${echapper(p.pilier||'Pilier à définir')}${p.format?' · '+echapper(p.format):''}</p>${publie&&p.youtubeVideoId?`<a class="lien-secondaire" href="https://www.youtube.com/watch?v=${encodeURIComponent(p.youtubeVideoId)}" target="_blank" rel="noopener">Voir sur YouTube ↗</a>`:''}</div></div></td><td data-label="Date">${publie?echapper(dateLisible(p.date)):boutonDate(p)}${p.heure?`<p class="meta">${echapper(p.heure)}</p>`:''}${publie&&y?.publishedAt&&dateParis(y.publishedAt)!==p.date?`<p class="meta">YouTube : ${echapper(new Date(y.publishedAt).toLocaleDateString('fr-FR',{timeZone:'Europe/Paris'}))}</p>`:''}</td>${publie?`<td data-label="Vues">${nb(y?.views)}</td><td data-label="J’aime">${nb(y?.likes)}</td><td data-label="Commentaires">${nb(y?.comments)}</td>`:''}<td>${suivi(p)}</td></tr>`;
 }
 function tableau(liste,publie=false) {
   return `<div class="table-wrap"><table class="table-videos"><thead><tr><th>Vidéo</th><th>${publie?'Publication locale':'Sortie prévue'}</th>${publie?'<th>Vues</th><th>J’aime</th><th>Commentaires</th>':''}<th>Statut local</th></tr></thead><tbody>${liste.map(p=>ligneStudio(p,publie)).join('')}</tbody></table></div>`;
@@ -682,10 +698,14 @@ function afficherDocuments() {
   $('#vue').innerHTML=`<div class="studio"><header class="studio-head"><div><h1>Documents</h1><p>Le dépôt, à portée de lecture. Scripts, fiches et documents de la chaîne.</p></div></header><div class="outils"><label class="recherche-videos">${ICONE_RECHERCHE}<input id="recherche-videos" type="search" placeholder="Rechercher un document" aria-label="Rechercher un document" value="${echapper(rechercheVideos)}"></label><span class="resultats">${fichiers.length} documents</span></div><div class="documents-liste">${fichiers.map(f=>`<a href="#/${echapper(f)}"><svg class="ico" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8ZM14 3v5h5M8 12h8M8 16h6"/></svg><span>${echapper(f.split('/').at(-1).replace(/\.md$/,''))}<small>${echapper(f.split('/').slice(0,-1).join('/')||'Racine du dépôt')}</small></span></a>`).join('')||'<p>Aucun document trouvé.</p>'}</div></div>`;
 }
 let creneaux=[];
-function evenementCalendrier(p, image=false) {
+function evenementCalendrier(p, image=false, grille=true) {
   const src=p.nom&&image?imageProjet(p):null;
   const contenu=`${src?`<img src="${echapper(src)}" alt="" title="${echapper(legendeMiniature(p))}" loading="lazy">`:''}<span><small>${echapper(p.heure||'Heure à préciser')} · ${p.nom?(p.statut==='Publié'?'Publié':'Prévu · '+echapper(p.statut)):'Créneau éditorial'}</small><strong title="${echapper(p.titre)}">${echapper(p.titre)}</strong>${p.nom&&donneesYT(p)?.publishedAt&&dateParis(donneesYT(p).publishedAt)!==p.date?`<small>Publié sur YouTube : ${echapper(new Date(donneesYT(p).publishedAt).toLocaleDateString('fr-FR',{timeZone:'Europe/Paris'}))}</small>`:''}${!p.nom?'<small>Sujet à choisir</small>':''}</span>`;
-  return p.nom?`<a class="cal-evenement${p.statut==='Publié'?' publie':''}" href="${lienProjet(p)}">${contenu}</a>`:`<div class="cal-evenement">${contenu}</div>`;
+  const modifiable=p.nom||p.creneau;
+  const drag=grille&&modifiable?`draggable="true" data-drag-date="${echapper(cleDate(p))}" title="Glisser vers un autre jour"`:'draggable="false"';
+  const classe=`cal-evenement${p.statut==='Publié'?' publie':''}`;
+  const evenement=p.nom?`<a class="${classe}" href="${lienProjet(p)}" ${drag}>${contenu}</a>`:`<div class="${classe}" ${drag}>${contenu}</div>`;
+  return evenement+(!grille&&modifiable?boutonDate(p):'');
 }
 function afficherCalendrier() {
   courant=null; document.title='Calendrier · La régie';
@@ -697,9 +717,9 @@ function afficherCalendrier() {
   const titre=calendrierVue==='semaine'?`${debut.getDate()} – ${dateLisible(isoDate(fin))}`:calendrierDate.toLocaleDateString('fr-FR',{month:'long',year:'numeric'});
   const grilleDebut=new Date(debut);grilleDebut.setDate(grilleDebut.getDate()-((grilleDebut.getDay()+6)%7));
   const total=calendrierVue==='semaine'?7:Math.ceil((((debut.getDay()+6)%7)+fin.getDate())/7)*7;
-  const jours=Array.from({length:total},(_,i)=>{const d=new Date(grilleDebut);d.setDate(d.getDate()+i); const iso=isoDate(d),events=tous.filter(p=>p.date===iso).sort((a,b)=>(a.heure||'').localeCompare(b.heure||'')); return `<div class="cal-jour${iso===aujourdHui()?' aujourdhui':''}${d.getMonth()!==calendrierDate.getMonth()?' hors-mois':''}"><time class="jour-num" datetime="${iso}"${iso===aujourdHui()?' aria-current="date"':''}>${d.getDate()}</time>${events.slice(0,2).map(p=>evenementCalendrier(p,true)).join('')}${events.length>2?`<details class="cal-plus"><summary>${events.length-2} autres vidéos</summary>${events.slice(2).map(p=>evenementCalendrier(p)).join('')}</details>`:''}</div>`;}).join('');
+  const jours=Array.from({length:total},(_,i)=>{const d=new Date(grilleDebut);d.setDate(d.getDate()+i); const iso=isoDate(d),events=tous.filter(p=>p.date===iso).sort((a,b)=>(a.heure||'').localeCompare(b.heure||'')); return `<div data-drop-date="${iso}" class="cal-jour${iso===aujourdHui()?' aujourdhui':''}${d.getMonth()!==calendrierDate.getMonth()?' hors-mois':''}"><time class="jour-num" datetime="${iso}"${iso===aujourdHui()?' aria-current="date"':''}>${d.getDate()}</time>${events.slice(0,2).map(p=>evenementCalendrier(p,true)).join('')}${events.length>2?`<details class="cal-plus"><summary>${events.length-2} autres vidéos</summary>${events.slice(2).map(p=>evenementCalendrier(p)).join('')}</details>`:''}</div>`;}).join('');
   const groupes=Object.groupBy?Object.groupBy(periode,p=>p.date):periode.reduce((a,p)=>((a[p.date]??=[]).push(p),a),{});
-  const agenda=Object.entries(groupes).map(([date,ps])=>`<section class="agenda-jour"><h3>${echapper(dateLisible(date,true))}</h3><div>${ps.map(p=>evenementCalendrier(p,true)).join('')}</div></section>`).join('')||'<div class="vide-local"><h2>Aucune sortie sur cette période</h2><p>Parcours les mois ou consulte les vidéos à planifier ci-dessous.</p></div>';
+  const agenda=Object.entries(groupes).map(([date,ps])=>`<section class="agenda-jour"><h3>${echapper(dateLisible(date,true))}</h3><div>${ps.map(p=>evenementCalendrier(p,true,false)).join('')}</div></section>`).join('')||'<div class="vide-local"><h2>Aucune sortie sur cette période</h2><p>Parcours les mois ou consulte les vidéos à planifier ci-dessous.</p></div>';
   const sansDate=liste.filter(p=>!p.date);
   $('#vue').innerHTML=`<div class="studio"><header class="studio-head"><div><h1>Calendrier de publication</h1><p>Dates locales du dépôt · Europe/Paris · Publications et créneaux éditoriaux</p></div></header>${outils(projets)}<div class="cal-toolbar"><h2>${echapper(titre)}</h2><button class="action" data-cal-nav="-1" aria-label="Période précédente"><svg class="ico" viewBox="0 0 16 16"><path d="m10 3-5 5 5 5"/></svg></button><button class="action" data-cal-nav="1" aria-label="Période suivante"><svg class="ico" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5"/></svg></button><button class="action" data-cal-nav="0">Aujourd’hui</button><input class="controle" id="cal-mois" type="month" aria-label="Choisir un mois" value="${isoDate(calendrierDate).slice(0,7)}"><div class="segmente" role="group" aria-label="Affichage du calendrier">${[['mois','Mois'],['semaine','Semaine'],['agenda','Agenda']].map(([v,t])=>`<button data-cal-vue="${v}" aria-pressed="${calendrierVue===v}">${t}</button>`).join('')}</div></div><p class="cal-mobile-note">Agenda de la période · ${periode.length} sortie${periode.length>1?'s':''}</p>${calendrierVue!=='agenda'?`<div class="cal-mois"><div class="cal-semaine-titres">${['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'].map(t=>`<span>${t}</span>`).join('')}</div><div class="cal-grille${calendrierVue==='semaine'?' semaine':''}">${jours}</div></div>`:''}<div class="cal-agenda${calendrierVue!=='agenda'?' mobile-seulement':''}">${agenda}</div><section class="a-planifier"><h2>À planifier · ${sansDate.length}</h2>${sansDate.length?`<div class="a-planifier-liste">${sansDate.map(p=>`<a href="${lienProjet(p)}">${echapper(p.titre)} · ${echapper(p.statut)}</a>`).join('')}</div>`:'<p class="meta">Toutes les vidéos ont une date dans le dépôt.</p>'}</section></div>`;
 }
@@ -803,6 +823,7 @@ function cleFocus() {
   const el = document.activeElement;
   if(el?.closest('#arbre')&&el.matches('a[href]')) return `#arbre a[href="${CSS.escape(el.getAttribute('href'))}"]`;
   if(el?.closest('#vue')&&el.matches('a[href]')) return `#vue a[href="${CSS.escape(el.getAttribute('href'))}"]`;
+  if (el?.matches('[data-edit-date]')) return `[data-edit-date="${CSS.escape(el.dataset.editDate)}"]`;
   if (el?.matches('select.statut')) return `select.statut[data-nom="${CSS.escape(el.dataset.nom)}"]`;
   if (el?.id && ['recherche-videos','filtre-statut','filtre-pilier','cal-mois'].includes(el.id)) return '#' + el.id;
   if (el?.matches('[data-filtre]')) return `[data-filtre="${CSS.escape(el.dataset.filtre)}"]`;
@@ -828,7 +849,8 @@ function jouerEclair() {
   requestAnimationFrame(() => requestAnimationFrame(() => ticks.forEach((t, i) => { t.className = classe(i, p.etape); })));
 }
 async function route(garder = false) {
-  if(dragProjet || statutEnCours) { refreshDiffere=true;return; }
+  if(dragProjet || suiviEnCours) { refreshDiffere=true;return; }
+  fermerEditionDate();
   const { chemin, ancre } = lireRoute();
   const y = scrollY, arbreY=$('#arbre').scrollTop, focus = cleFocus(), selection = document.activeElement?.id === 'recherche-videos' ? [document.activeElement.selectionStart,document.activeElement.selectionEnd] : null;
   if (chemin === 'publiees') { if (!youtubeCharge) await chargerYoutube(); afficherPubliees(); }
@@ -856,7 +878,7 @@ addEventListener('hashchange', () => {
 });
 
 async function rafraichir(force) {
-  if(dragProjet || statutEnCours) { refreshDiffere=true;return; }
+  if(dragProjet || suiviEnCours || editionDate) { refreshDiffere=true;return; }
   if (document.activeElement?.matches('select.statut')) {
     document.activeElement.addEventListener('blur', () => rafraichir(force), { once: true });
     return;
@@ -866,7 +888,7 @@ async function rafraichir(force) {
   if (!force && !changes.some(f => f.endsWith('.md') || f.startsWith('projets/'))) return;
   const avant = JSON.stringify([arbre, projets, creneaux]);
   try { await charger(); } catch (e) { return annonce(e.message, true); }
-  if(dragProjet || statutEnCours) { refreshDiffere=true;return; }
+  if(dragProjet || suiviEnCours || editionDate) { refreshDiffere=true;return; }
   const pareil = JSON.stringify([arbre, projets, creneaux]) === avant;
   const miniatureModifiee=changes.some(f=>f.startsWith('projets/')&&/\.(?:png|jpe?g|webp|avif)$/i.test(f));
   const { chemin } = lireRoute();
@@ -909,62 +931,118 @@ document.addEventListener('click',async e=>{
 });
 
 function nettoyerDrag() {
-  dragProjet=null;document.body.classList.remove('drag-en-cours');
+  dragProjet=null;document.body.classList.remove('drag-en-cours','drag-date-en-cours');
   document.querySelectorAll('.drag-source,.drop-survol').forEach(el=>el.classList.remove('drag-source','drop-survol'));
 }
-function verrouillerStatuts(occupe) {
-  statutEnCours=occupe;document.body.classList.toggle('statut-en-cours',occupe);
-  document.querySelectorAll('select.statut,.poignee-drag').forEach(el=>el.disabled=occupe);
+function verrouillerSuivi(occupe) {
+  suiviEnCours=occupe;document.body.classList.toggle('statut-en-cours',occupe);
+  document.querySelectorAll('select.statut,.poignee-drag,.bouton-date').forEach(el=>el.disabled=occupe);
 }
 async function reprendreDirect() {
-  if(!dragProjet&&!statutEnCours&&(refreshDiffere||enAttente.size)) { refreshDiffere=false;await rafraichir(true); }
+  if(!dragProjet&&!suiviEnCours&&!editionDate&&(refreshDiffere||enAttente.size)) { refreshDiffere=false;await rafraichir(true); }
 }
-async function changerStatut(nom,nouveauStatut,version) {
-  const p=projets.find(x=>x.nom===nom);
-  if(!p||p.statut===nouveauStatut||statutEnCours)return;
-  verrouillerStatuts(true);
+async function modifierSuivi(url, donnees, succes) {
+  if(suiviEnCours)return;
+  verrouillerSuivi(true);
   try {
-    const r=await api('/api/statut',{nom,statut:nouveauStatut,version:version??p.version});
-    annonce(`${p.titre} : ${p.statut||'À classer'} → ${nouveauStatut} · ${r.fichiers.join(' et ')}`);
-    eclair={nom,avant:p.etape??-1};
+    const r=await api(url,donnees);
+    succes(r);
     await charger();
   } catch(err) {
     annonce(err.message,true);
     if(err.status===409) { try { await charger(); } catch(erreur) { annonce(erreur.message,true); } }
   } finally {
-    verrouillerStatuts(false);await route(true);await reprendreDirect();
+    verrouillerSuivi(false);await route(true);await reprendreDirect();
   }
 }
+async function changerStatut(nom,nouveauStatut,version) {
+  const p=projets.find(x=>x.nom===nom);
+  if(!p||p.statut===nouveauStatut)return;
+  await modifierSuivi('/api/statut',{nom,statut:nouveauStatut,version:version??p.version},r=>{
+    annonce(`${p.titre} : ${p.statut||'À classer'} → ${nouveauStatut} · ${r.fichiers.join(' et ')}`);
+    eclair={nom,avant:p.etape??-1};
+  });
+}
+async function changerDate(p,date) {
+  if(!date||p.date===date) { await reprendreDirect();return; }
+  await modifierSuivi('/api/date',{nom:p.nom,creneau:p.creneau,date,version:p.version},()=>{
+    annonce(`${p.titre} · Date mise à jour au ${dateLisible(date)}`);
+  });
+}
+function fermerEditionDate(focus=false) {
+  if(!editionDate)return;
+  const {bouton,formulaire}=editionDate;
+  editionDate=null;
+  formulaire.remove();bouton.hidden=false;
+  if(focus)bouton.focus({preventScroll:true});
+}
+document.addEventListener('click',e=>{
+  const bouton=e.target.closest('[data-edit-date]');
+  if(bouton&&!suiviEnCours) {
+    const projet=trouverElementDate(bouton.dataset.editDate);
+    if(!projet)return;
+    fermerEditionDate();
+    bouton.insertAdjacentHTML('afterend',`<form class="edition-date"><input class="controle" type="date" aria-label="Nouvelle date de publication" min="2000-01-01" max="2099-12-31" value="${echapper(projet.date||'')}" required><button class="action" type="submit">Enregistrer</button><button class="action" type="button" data-annuler-date>Annuler</button></form>`);
+    const formulaire=bouton.nextElementSibling;
+    editionDate={bouton,formulaire,projet};
+    bouton.hidden=true;formulaire.querySelector('input').focus();
+  }
+  if(e.target.closest('[data-annuler-date]')) { fermerEditionDate(true);reprendreDirect(); }
+});
+document.addEventListener('submit',async e=>{
+  if(e.target!==editionDate?.formulaire)return;
+  e.preventDefault();
+  const {projet}=editionDate, date=e.target.querySelector('input').value;
+  const chemin=lireRoute().chemin;
+  fermerEditionDate(true);
+  await changerDate(projet,date);
+  if(lireRoute().chemin===chemin)rendreFocus(`[data-edit-date="${CSS.escape(cleDate(projet))}"]`);
+});
 document.addEventListener('change',async e=>{
   const select=e.target.closest('select.statut');if(select)await changerStatut(select.dataset.nom,select.value);
 });
 document.addEventListener('dragstart',e=>{
-  const poignee=e.target.closest('.poignee-drag');
-  if(!poignee||statutEnCours){e.preventDefault();return;}
-  const p=projets.find(p=>p.nom===poignee.dataset.dragNom);if(!p){e.preventDefault();return;}
-  dragProjet={nom:p.nom,version:p.version,statut:p.statut};
-  e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('application/x-regie-projet',p.nom);e.dataTransfer.setData('text/plain',p.nom);
-  const carte=poignee.closest('.carte');if(carte)e.dataTransfer.setDragImage(carte,30,20);
-  document.body.classList.add('drag-en-cours');carte?.classList.add('drag-source');
+  const source=e.target.closest('.poignee-drag,[data-drag-date]');
+  if(!source||suiviEnCours||editionDate){e.preventDefault();return;}
+  const cle=source.dataset.dragDate??source.dataset.dragNom;
+  const p=trouverElementDate(cle);
+  if(!p){e.preventDefault();return;}
+  const type=source.dataset.dragDate?'date':'statut';
+  dragProjet={p,type};
+  e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('application/x-regie-projet',cle);e.dataTransfer.setData('text/plain',cle);
+  const carte=source.closest('.carte,.cal-evenement');
+  if(carte)e.dataTransfer.setDragImage(carte,30,20);
+  document.body.classList.add(type==='date'?'drag-date-en-cours':'drag-en-cours');
+  carte?.classList.add('drag-source');
 });
+function cibleDrop(e) {
+  if(!dragProjet)return null;
+  return e.target.closest(dragProjet.type==='date'?'[data-drop-date]':'[data-drop-statut]');
+}
 document.addEventListener('dragover',e=>{
-  const cible=e.target.closest('[data-drop-statut]');if(!dragProjet||!cible||statutEnCours)return;
+  const cible=cibleDrop(e);if(!cible||suiviEnCours)return;
   e.preventDefault();e.dataTransfer.dropEffect='move';
   document.querySelectorAll('.drop-survol').forEach(el=>{if(el!==cible)el.classList.remove('drop-survol');});cible.classList.add('drop-survol');
 });
 document.addEventListener('dragleave',e=>{
-  const cible=e.target.closest('[data-drop-statut]');if(cible&&!cible.contains(e.relatedTarget))cible.classList.remove('drop-survol');
+  const cible=cibleDrop(e);if(cible&&!cible.contains(e.relatedTarget))cible.classList.remove('drop-survol');
 });
 document.addEventListener('drop',async e=>{
-  const cible=e.target.closest('[data-drop-statut]');if(!dragProjet)return;
-  e.preventDefault();const projet=dragProjet,statut=cible?.dataset.dropStatut;nettoyerDrag();
-  if(statut&&STATUTS.includes(statut)&&statut!==projet.statut)await changerStatut(projet.nom,statut,projet.version);
+  if(!dragProjet)return;
+  const cible=cibleDrop(e), {p:projet}=dragProjet, statut=cible?.dataset.dropStatut;
+  e.preventDefault();nettoyerDrag();
+  if(cible?.dataset.dropDate)await changerDate(projet,cible.dataset.dropDate);
+  else if(STATUTS.includes(statut)&&statut!==projet.statut)await changerStatut(projet.nom,statut,projet.version);
   else await reprendreDirect();
 });
 document.addEventListener('dragend',()=>{nettoyerDrag();reprendreDirect();});
 addEventListener('blur',()=>{if(dragProjet){nettoyerDrag();reprendreDirect();}});
 addEventListener('hashchange',()=>{if(dragProjet){nettoyerDrag();reprendreDirect();}});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&dragProjet){nettoyerDrag();reprendreDirect();}});
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Escape')return;
+  if(dragProjet){nettoyerDrag();reprendreDirect();}
+  if(editionDate){fermerEditionDate(true);reprendreDirect();}
+});
 $('#choix-miniatures').addEventListener('change',async e=>{
   choixMiniatures=e.target.value;try{localStorage.setItem('regie-miniatures',choixMiniatures);}catch{}
   await route(true);$('#choix-miniatures').focus({preventScroll:true});

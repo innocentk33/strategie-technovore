@@ -1,5 +1,25 @@
 # Calendrier Technovore : 26 oct. 2026 → 26 avr. 2027
 
+> **Mis à jour le 21/11/2026** — Créneau Radar n° 11 déplacé au jeu. 7 janv. 2027 dans la régie.
+
+> **Mis à jour le 21/11/2026** — Créneau Radar n° 11 déplacé au dim. 3 janv. 2027 dans la régie.
+
+> **Mis à jour le 21/11/2026** — [Carte graphique pour l’IA locale : combien coûte la mémoire dont tu as besoin ?](projets/carte-par-budget/fiche.md) : publication fixée au jeu. 17 déc. 2026 dans la régie.
+
+> **Mis à jour le 21/11/2026** — [Carte graphique pour l’IA locale : combien coûte la mémoire dont tu as besoin ?](projets/carte-par-budget/fiche.md) : publication fixée au mer. 16 déc. 2026 dans la régie.
+
+> **Mis à jour le 21/11/2026** — [Carte graphique pour l’IA locale : combien coûte la mémoire dont tu as besoin ?](projets/carte-par-budget/fiche.md) : publication fixée au mar. 29 déc. 2026 dans la régie.
+
+> **Mis à jour le 21/11/2026** — [Combien coûte Claude Fable 5.2 chez toi ?](projets/cout-claude-local/fiche.md) : publication fixée au jeu. 3 déc. 2026 dans la régie.
+
+> **Mis à jour le 21/11/2026** — [32 Go pour Qwen 27B : les prix, les routes et leurs pièges](projets/deux-cartes-occasion/fiche.md) : publication fixée au sam. 21 nov. 2026 dans la régie.
+
+> **Mis à jour le 21/11/2026** — [32 Go pour Qwen 27B : les prix, les routes et leurs pièges](projets/deux-cartes-occasion/fiche.md) : publication fixée au jeu. 3 déc. 2026 dans la régie.
+
+> **Mis à jour le 21/11/2026** — [Basalt peut-il accélérer Qwen sur ton PC ?](projets/basalt/fiche.md) : publication fixée au lun. 30 nov. 2026 dans la régie.
+
+> **Mis à jour le 21/11/2026** — [32 Go pour Qwen 27B : les prix, les routes et leurs pièges](projets/deux-cartes-occasion/fiche.md) : publication fixée au mer. 2 déc. 2026 dans la régie.
+
 > **20/11** — Setup Black Friday le 26 novembre, Qwen 32 Go le 30 novembre, Fable 5.2 le mardi 1er décembre (sortie supplémentaire), puis Basalt le 3 décembre. Les autres vidéos reculent d’un créneau. Le 17 décembre est disponible pour le radar.
 >
 > **21/11, « Setup Black Friday IA locale » (26 nov.)** : prix rouverts le 21/11. L'ancien hook (deux tours OXIUM à 1 299 et 1 799 €) n'était plus vrai : elles étaient à 1 499 et 2 049 €. Tu as retiré OXIUM du hook : il s'ouvre sur 2 PC à 799,99 € (kit Top Achat avec 6 Go sur la carte, tour Amazon avec 12 Go). Plus aucune ville de vendeur dans la voix ; Amazon passe devant à 800 € (RTX 3060 12 Go à 799,99 €), à 1 500 € (RX 9060 XT 16 Go à environ 1 270 €) et à 2 000 € (RTX 5060 Ti 16 Go à 1 719 €). Script V4, grill V3 appliqué, téléprompteur de 1 754 mots.
@@ -32,19 +52,19 @@
 | 2 | jeu. 19 nov | [Même carte, 2 fois plus rapide](projets/meme-carte-plus-rapide/fiche.md) | IA | Calculé | Légère | **Publiée** (19/11) : V3 après grill indépendant, téléprompteur complet et sans crochet |
 | 3 | lun. 23 nov | [Qwen 27B sur 8 Go : plus rapide, mais à quel prix ?](projets/qwen-27b-8go/fiche.md) | IA (actu) | Calculé | Légère | **Programmé** (19/11) : V3 réécrite et grillée (7/10, corrections appliquées), sans crochet (1 197 mots) |
 | 4 | jeu. 26 nov | [Setup Black Friday IA locale](projets/setup-black-friday-ia-locale/fiche.md) | IA | Calculé | Légère | **Voix** (21/11) : V4 avec les prix rouverts le 21/11, Amazon compris (hook : 2 PC à 799,99 €, l'un avec 6 Go sur la carte, l'autre avec 12 ; aucune ville de vendeur dans la voix) ; [grill V3](projets/setup-black-friday-ia-locale/grill-v3.md) appliqué, « Et reste jusqu'à la fin » dans le plan, sans crochet (1 754 mots) · [téléprompteur](projets/setup-black-friday-ia-locale/teleprompteur.txt) · [relevé du 21/11](projets/setup-black-friday-ia-locale/recherche/prix-21-11.md) · prix à relire le 25-26/11 |
-| 5 | lun. 30 nov | [32 Go pour Qwen 27B : les prix, les routes et leurs pièges](projets/deux-cartes-occasion/fiche.md) | IA | Calculé | Moyenne | **Montage** (21/11) : V4 avec ton hook (6 millions de téléchargements, « la VRAM, c'est de l'or ») et les meilleurs prix relevés le 20/11, Amazon compris ; grills [V4](projets/deux-cartes-occasion/grill-v4.md) et [V5](projets/deux-cartes-occasion/grill-v5.md) appliqués (8/10 sur la version finale), sans crochet (1 755 mots), [téléprompteur](projets/deux-cartes-occasion/teleprompteur.md) prêt, [version VoiceStudio](projets/deux-cartes-occasion/voicestudio.md) pour tester la voix de synthèse ; [prix du 20/11](projets/deux-cartes-occasion/recherche/prix-20-11.md) à relire le 26-27/11 avant la voix |
-| 6 | mar. 1er déc | [Combien coûte Claude Fable 5.2 chez toi ?](projets/cout-claude-local/fiche.md) | IA (actu) | Calculé | Moyenne | **Script** v2 à refaire en v3 (fusion avec Kimi, 15/11) |
-| 7 | jeu. 3 déc | [Basalt peut-il accélérer Qwen sur ton PC ?](projets/basalt/fiche.md) | IA (actu) | Calculé |  | **Voix** (20/11) · deux vidéos de référence |
+| 5 | sam. 21 nov. 2026 | [32 Go pour Qwen 27B : les prix, les routes et leurs pièges](projets/deux-cartes-occasion/fiche.md) | IA | Calculé | Moyenne | **Montage** (21/11) : V4 avec ton hook (6 millions de téléchargements, « la VRAM, c'est de l'or ») et les meilleurs prix relevés le 20/11, Amazon compris ; grills [V4](projets/deux-cartes-occasion/grill-v4.md) et [V5](projets/deux-cartes-occasion/grill-v5.md) appliqués (8/10 sur la version finale), sans crochet (1 755 mots), [téléprompteur](projets/deux-cartes-occasion/teleprompteur.md) prêt, [version VoiceStudio](projets/deux-cartes-occasion/voicestudio.md) pour tester la voix de synthèse ; [prix du 20/11](projets/deux-cartes-occasion/recherche/prix-20-11.md) à relire le 26-27/11 avant la voix |
+| 6 | jeu. 3 déc. 2026 | [Combien coûte Claude Fable 5.2 chez toi ?](projets/cout-claude-local/fiche.md) | IA (actu) | Calculé | Moyenne | **Script** v2 à refaire en v3 (fusion avec Kimi, 15/11) |
+| 7 | lun. 30 nov. 2026 | [Basalt peut-il accélérer Qwen sur ton PC ?](projets/basalt/fiche.md) | IA (actu) | Calculé |  | **Script** (21/11) · deux vidéos de référence |
 | 8 | lun. 7 déc | [DeepSeek V4 Flash sans carte graphique : les 64 Go valent-ils leur coût ?](projets/cout-deepseek-flash/fiche.md) | IA (actu) | Calculé | Légère | **Script** (18/11) : V3 réécrite et grillée (7/10, corrections appliquées), sans crochet (1 197 mots) |
 | 9 | jeu. 10 déc | [Deux cartes pour ton IA : les points à vérifier avant l’achat](projets/multi-gpu/fiche.md) | IA | Calculé | Légère | **Script** (18/11) : V3 réécrite et grillée (7/10, corrections appliquées), sans crochet (1 197 mots) |
 | 10 | lun. 14 déc | [Mac mini ou PC gamer : quand les 32 Go justifient l’achat](projets/mac-mini-ia/fiche.md) | IA | Calculé | Légère | **Script** (18/11) : V3 réécrite et grillée (7/10, corrections appliquées), sans crochet (1 197 mots) |
-| 11 | jeu. 17 déc | *Radar* | IA |  |  |  |
-| 12 | lun. 21 déc | [Deux cartes suivies avant et après le Black Friday : la remise a-t-elle tenu ?](projets/prix-apres-black-friday/fiche.md) | IA | Calculé | Légère | **Brouillon** · préparation corrigée + téléprompteur ; prix BlackFriday/décembre futurs, résultat et validation finale ouverts |
+| 11 | jeu. 7 janv. 2027 | *Radar* | IA |  |  |  |
+| 12 | lun. 21 déc 2026 | [Deux cartes suivies avant et après le Black Friday : la remise a-t-elle tenu ?](projets/prix-apres-black-friday/fiche.md) | IA | Calculé | Légère | **Brouillon** · préparation corrigée + téléprompteur ; prix BlackFriday/décembre futurs, résultat et validation finale ouverts |
 | 13 | jeu. 24 déc | [IA en local : comment lire le nom d'un modèle](projets/bases-ia-locale/fiche.md) | IA | Calculé | Légère | **Script** (23/10) · programmée avant le 24 |
 | 14 | lun. 28 déc | [Offrir une IA locale : trois budgets, avec leurs limites](projets/cadeau-ia-locale/fiche.md) | IA | Calculé | Légère | **Script** (18/11) : V3 réécrite et grillée (7/10, corrections appliquées), sans crochet (1 197 mots) |
 | 15 | jeu. 31 déc | [Louer, acheter ou s'abonner ?](projets/louer-acheter-ia/fiche.md) | IA | Calculé | Légère | **Script** (23/10) · prix à relever le 18/12 · programmée avant le 24 |
 | 16 | lun. 4 janv | [RAM, VRAM ou mémoire unifiée : laquelle aide vraiment ton IA ?](projets/ram-vram-unifiee/fiche.md) | IA | Calculé (archives facultatives) | Légère | **Script** (18/11) : V3 réécrite et grillée (7/10, corrections appliquées), sans crochet (1 197 mots) |
-| 17 | jeu. 7 janv | [Carte graphique pour l’IA locale : combien coûte la mémoire dont tu as besoin ?](projets/carte-par-budget/fiche.md) | IA | Calculé | Légère | **Voix** (20/11) · V3 corrigée, offres à revérifier avant la voix |
+| 17 | jeu. 17 déc. 2026 | [Carte graphique pour l’IA locale : combien coûte la mémoire dont tu as besoin ?](projets/carte-par-budget/fiche.md) | IA | Calculé | Légère | **Voix** (20/11) · V3 corrigée, offres à revérifier avant la voix |
 | 18 | lun. 11 janv | [Claude Code avec une IA locale : connexion, mémoire et tâches réalistes](projets/claude-code-gratuit/fiche.md) | IA | Calculé | Légère | **Script** (18/11) : V3 réécrite et grillée (7/10, corrections appliquées), sans crochet (1 197 mots) |
 | 19 | jeu. 14 janv | [Ton IA locale est-elle vraiment privée ?](projets/ia-locale-privee/fiche.md) | IA | Calculé | Légère | **Script** (18/11) : V3 réécrite et grillée (7/10, corrections appliquées), sans crochet (1 197 mots) |
 | 20 | lun. 18 janv | [Créer un petit jeu avec une IA locale : ce que montrent 16 Go](projets/jeu-video-ia-locale/fiche.md) | IA | Calculé (archives facultatives) | Légère | **Script** (18/11) : V3 réécrite et grillée (7/10, corrections appliquées), sans crochet (1 197 mots) |

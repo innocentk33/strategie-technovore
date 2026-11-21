@@ -72,36 +72,49 @@ const versionSources = sources => createHash('sha256').update(JSON.stringify(sou
 const sourcesSuivi = () => ({ readme: lire('README.md'), calendrier: lire('calendrier.md') });
 const parisYear = () => Number(new Intl.DateTimeFormat('fr', { timeZone: 'Europe/Paris', year: 'numeric' }).format(new Date()));
 
-// Les années viennent de l'en-tête explicite du calendrier ; aucun glissement selon la date du lancement.
-function datesPublication(src, anneeInitiale) {
-  let annee = anneeInitiale, moisPrec;
-  const dates = new Map();
-  for (const ligne of src.split('\n')) {
-    if (!ligne.startsWith('|') || !LIEN_FICHE.test(ligne)) continue;
-    const c = cellules(ligne), nom = ligne.match(LIEN_FICHE)[1];
-    const texte = c.length > 4 ? c[1] : c[2];
-    const d = texte.match(/(\d{1,2})(?:er)?\s+([a-zéû]+)\.?(?:\s+(20\d{2}))?/i);
-    const mois = d ? MOIS.findIndex(m => d[2].toLowerCase().startsWith(m)) : -1;
-    if (mois < 0) continue;
-    if (d[3]) annee = Number(d[3]); else if (moisPrec !== undefined && mois < moisPrec) annee++;
-    moisPrec = mois;
-    const jour = Number(d[1]);
-    if (new Date(Date.UTC(annee, mois, jour)).getUTCDate() !== jour) continue;
-    dates.set(nom, `${annee}-${String(mois + 1).padStart(2, '0')}-${String(jour).padStart(2, '0')}`);
-  }
-  return dates;
+const anneeCalendrier = (src, readme = '') => Number(
+  src.match(/^#.*?\b(20\d{2})\b/m)?.[1] ?? readme.match(/^#.*?\b(20\d{2})\b/m)?.[1] ?? parisYear(),
+);
+const htmlDate = /^20\d{2}-\d{2}-\d{2}$/;
+
+function lireJour(texte, contexte) {
+  const d = texte.match(/(\d{1,2})(?:er)?\s+([a-zéû]+)\.?(?:\s+(20\d{2}))?/i);
+  const mois = d ? MOIS.findIndex(m => d[2].toLowerCase().startsWith(m)) : -1;
+  if (mois < 0) return null;
+  const annee = d[3] ? Number(d[3]) : contexte.annee + Number(mois < contexte.mois);
+  const jour = Number(d[1]);
+  if (jour < 1 || new Date(Date.UTC(annee, mois, jour)).getUTCDate() !== jour) return null;
+  Object.assign(contexte, { annee, mois });
+  return `${annee}-${String(mois + 1).padStart(2, '0')}-${String(jour).padStart(2, '0')}`;
 }
 
+function lignesPublication(src, annee, calendrier) {
+  const contexte = { annee };
+  return src.split('\n').flatMap((ligne, i) => {
+    if (!ligne.startsWith('|')) return [];
+    const c = cellules(ligne), nom = c[calendrier ? 2 : 0]?.match(LIEN_FICHE)?.[1];
+    const indexDate = calendrier ? 1 : 2;
+    if (c.length < (calendrier ? 7 : 4) || (!nom && !(calendrier && /^\d+$/.test(c[0])))) return [];
+    return [{ i, c, nom, date: lireJour(c[indexDate], contexte) }];
+  });
+}
+
+const titreCreneau = c => c[2].replace(/\*/g, '').trim();
+const estRadar = ({ nom, c }) => !nom && titreCreneau(c) === 'Radar';
+
 function creneaux() {
-  const src = lire('calendrier.md');
-  const annee = Number(src.match(/^#.*?\b(20\d{2})\b/m)?.[1] ?? parisYear());
-  const lignes = src.split('\n').filter(l => l.startsWith('|') && /^\d+$/.test(cellules(l)[0]) && !LIEN_FICHE.test(l));
-  const enrichi = src.split('\n').map((l, i) => lignes.includes(l) ? l.replace(/\|([^|]*)\|([^|]*)\|([^|]*)\|/, `|$1|$2| [créneau](projets/creneau-${i}/fiche.md) |`) : l).join('\n');
-  const dates = datesPublication(enrichi, annee);
-  return src.split('\n').flatMap((l, i) => {
-    if (!lignes.includes(l)) return [];
-    const c = cellules(l), date = dates.get(`creneau-${i}`);
-    return date ? [{ date, heure: '18:00', timezone: 'Europe/Paris', titre: c[2].replace(/\*/g, '') === 'Radar' ? 'Radar · sujet à choisir' : c[2].replace(/\*/g, ''), pilier: c[3] || null, note: c[6] || '' }] : [];
+  const sources = sourcesSuivi();
+  const { calendrier, readme } = sources;
+  const version = versionSources(sources);
+  return lignesPublication(calendrier, anneeCalendrier(calendrier, readme), true).flatMap(ligne => {
+    const { c, nom, date } = ligne;
+    if (nom || !date) return [];
+    const radar = estRadar(ligne);
+    return [{
+      date, heure: '18:00', timezone: 'Europe/Paris',
+      titre: radar ? 'Radar · sujet à choisir' : titreCreneau(c), pilier: c[3] || null, note: c[6] || '',
+      ...(radar ? { creneau: c[0], version } : {}),
+    }];
   });
 }
 
@@ -129,9 +142,9 @@ function associationsYouTube() {
 
 function projets() {
   const tous = fichiers(), sources = sourcesSuivi(), version = versionSources(sources), associations = associationsYouTube();
-  const annee = Number(sources.calendrier.match(/^#.*?\b(20\d{2})\b/m)?.[1] ?? sources.readme.match(/^#.*?\b(20\d{2})\b/m)?.[1] ?? parisYear());
-  const dates = datesPublication(sources.calendrier, annee);
-  const datesREADME = datesPublication(sources.readme, annee);
+  const annee = anneeCalendrier(sources.calendrier, sources.readme);
+  const dates = new Map(lignesPublication(sources.calendrier, annee, true).map(l => [l.nom, l.date]));
+  const datesREADME = new Map(lignesPublication(sources.readme, annee, false).map(l => [l.nom, l.date]));
   const piliers = {};
   for (const l of sources.calendrier.split('\n')) {
     const m = l.startsWith('|') && l.match(LIEN_FICHE);
@@ -198,7 +211,94 @@ function changerStatut({ nom, statut, version }) {
   const readme = majLigne(avant.readme, nom, statut);
   if (readme === null) throw erreur(404, `projets/${nom} n'est pas dans le tableau du README`);
   const calendrier = majLigne(avant.calendrier, nom, statut === 'Publié' ? 'Publiée' : statut);
-  const changements = [['README.md', readme, avant.readme], ...(calendrier === null ? [] : [['calendrier.md', calendrier, avant.calendrier]])];
+  return ecrireSuivi(avant, readme, calendrier);
+}
+
+const texteJour = iso => new Intl.DateTimeFormat('fr-FR', {
+  timeZone: 'UTC', weekday: 'short', day: 'numeric', month: 'short', year: 'numeric',
+}).format(new Date(iso + 'T12:00:00Z'));
+
+function remplacerCellule(ligne, index, texte) {
+  const morceaux = ligne.split('|');
+  morceaux[index + 1] = morceaux[index + 1].replace(/\S(?:.*\S)?/, texte);
+  if (!morceaux[index + 1].trim()) morceaux[index + 1] = ` ${texte} `;
+  return morceaux.join('|');
+}
+
+function majDate(src, annee, calendrier, ligneVisee, date) {
+  const lignes = src.split('\n'), index = calendrier ? 1 : 2;
+  const contexte = { annee };
+  for (const l of lignesPublication(src, annee, calendrier)) {
+    let texte = l.c[index];
+    if (l.i === ligneVisee) {
+      const heure = texte.match(/\b\d{1,2}\s*h(?:\s*\d{2})?\b/i)?.[0];
+      texte = texteJour(date) + (heure ? `, ${heure}` : '');
+      lignes[l.i] = remplacerCellule(lignes[l.i], index, texte);
+    }
+    const calculee = lireJour(texte, contexte);
+    // Une date déplacée peut fausser l'année d'une ligne voisine, y compris d'un créneau Radar.
+    if (l.i !== ligneVisee && l.date && calculee !== l.date) {
+      texte = texte.replace(/(\d{1,2}(?:er)?\s+[a-zéû]+\.?)(?=\s|,|$)/i, `$1 ${l.date.slice(0, 4)}`);
+      lignes[l.i] = remplacerCellule(lignes[l.i], index, texte);
+      lireJour(texte, contexte);
+    }
+  }
+  return lignes;
+}
+
+function changerDate({ nom, creneau, date, version }) {
+  const video = typeof nom === 'string' && /^[\w-]+$/.test(nom) && creneau === undefined;
+  const radar = typeof creneau === 'string' && /^\d+$/.test(creneau) && nom === undefined;
+  if ((!video && !radar) || typeof date !== 'string' || !htmlDate.test(date))
+    throw erreur(400, 'Vidéo, créneau ou date inconnus');
+  const jour = new Date(date + 'T00:00:00Z');
+  if (!Number.isFinite(+jour) || jour.toISOString().slice(0, 10) !== date) throw erreur(400, 'Date de publication invalide');
+  const avant = sourcesSuivi();
+  if (version !== versionSources(avant)) throw erreur(409, 'Le suivi a changé. Vérifie la date avant de réessayer.');
+  const annee = anneeCalendrier(avant.calendrier, avant.readme);
+  const grille = lignesPublication(avant.calendrier, annee, true);
+  if (radar) {
+    const matches = grille.filter(l => l.c[0] === creneau);
+    if (matches.length > 1) throw erreur(409, 'Plusieurs lignes portent ce numéro dans le calendrier');
+    const [entree] = matches;
+    if (!entree || !estRadar(entree)) throw erreur(404, 'Créneau Radar introuvable');
+    if (entree.date === date) return { fichiers: [], version };
+    const calendrier = majDate(avant.calendrier, annee, true, entree.i, date);
+    const note = `Créneau Radar n° ${creneau} déplacé au ${texteJour(date)} dans la régie.`;
+    return ecrireSuivi(avant, null, noterDate(calendrier, avant.calendrier, note));
+  }
+  const projet = lignesPublication(avant.readme, annee, false).find(l => l.nom === nom);
+  if (!projet) throw erreur(404, 'Vidéo absente du tableau du README');
+  const entree = grille.find(l => l.nom === nom);
+  if (entree?.date === date && projet.date === date) return { fichiers: [], version };
+  const readme = majDate(avant.readme, annee, false, projet.i, date).join('\n');
+  const calendrier = majDate(avant.calendrier, annee, true, entree?.i, date);
+  if (!entree) {
+    const entete = calendrier.findIndex(l => /^\|\s*#\s*\|[^|]*\|\s*Vidéo\s*\|/i.test(l));
+    if (entete < 0) throw erreur(409, 'Grille des publications introuvable dans le calendrier');
+    let fin = entete + 2;
+    while (calendrier[fin]?.startsWith('|')) fin++;
+    const numero = 1 + Math.max(0, ...grille.map(l => Number(l.c[0]) || 0));
+    const statut = projet.c[3].match(RE_STATUT)?.[2] ?? 'À classer';
+    const cr = avant.calendrier.includes('\r\n') ? '\r' : '';
+    calendrier.splice(fin, 0, `| ${numero} | ${texteJour(date)} | ${projet.c[0]} | — | ${projet.c[1]} | — | ${statut} |${cr}`);
+  }
+  const note = `${projet.c[0]} : publication fixée au ${texteJour(date)} dans la régie.`;
+  return ecrireSuivi(avant, readme, noterDate(calendrier, avant.calendrier, note));
+}
+
+function noterDate(calendrier, source, note) {
+  const cr = source.includes('\r\n') ? '\r' : '';
+  const maj = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris' }).format(new Date());
+  const insertion = calendrier[0].startsWith('#') ? 1 : 0;
+  calendrier.splice(insertion, 0, cr, `> **Mis à jour le ${maj}** — ${note}${cr}`);
+  return calendrier.join('\n');
+}
+
+function ecrireSuivi(avant, readme, calendrier) {
+  const version = versionSources(avant);
+  const changements = [['README.md', readme, avant.readme], ['calendrier.md', calendrier, avant.calendrier]]
+    .filter(([, contenu]) => contenu !== null);
   // Prépare les deux fichiers avant remplacement ; aucune attente entre contrôle et écriture.
   const prepares = [];
   try {
@@ -207,7 +307,7 @@ function changerStatut({ nom, statut, version }) {
       fs.writeFileSync(temporaire, contenu, { flag: 'wx', mode: fs.statSync(chemin(fichier)).mode });
       prepares.push(temporaire);
     }
-    if (version !== versionSources(sourcesSuivi())) throw erreur(409, 'Le suivi a changé : actualise avant de changer le statut');
+    if (version !== versionSources(sourcesSuivi())) throw erreur(409, 'Le suivi a changé. Actualise avant de réessayer.');
     let ecrits = 0;
     try {
       for (let i = 0; i < changements.length; i++) { fs.renameSync(prepares[i], chemin(changements[i][0])); ecrits++; }
@@ -264,6 +364,7 @@ http.createServer(async (req, res) => {
       for await (const morceau of req) corps += morceau;
       if (url.pathname === '/api/youtube/refresh') { JSON.parse(corps); return repondre(200, await youtubeData(true)); }
       if (url.pathname === '/api/statut') return repondre(200, changerStatut(JSON.parse(corps)));
+      if (url.pathname === '/api/date') return repondre(200, changerDate(JSON.parse(corps)));
       if (url.pathname === '/api/case') return repondre(200, cocher(JSON.parse(corps)));
       throw erreur(404, 'Introuvable');
     }
