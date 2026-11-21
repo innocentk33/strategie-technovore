@@ -20,7 +20,7 @@ Ce qui est **dit** (`voix.words.json`), avec l'orthographe du téléprompteur ; 
 
 ## Après la mise en ligne (à rappeler à l'auteur, pas à faire sans lui)
 - Statut dans `README.md` et `calendrier.md` : « Montage » → « Programmé » quand il a programmé la vidéo, puis « Publié » avec le lien. Mets à jour **les deux** fichiers ; si tu changes le format de leurs tableaux, relance `node ressources/regie/verif.mjs`.
-- À la sortie de la vidéo : le skill `radar` avant tout le reste (règle du `CLAUDE.md` du dépôt).
+- À la sortie de la vidéo : le skill `radar` avant tout le reste (règle de l'`AGENTS.md` du dépôt).
 - Relire les prix le jour de l'upload s'ils peuvent bouger (Black Friday…).
 
 ## Message final à l'auteur

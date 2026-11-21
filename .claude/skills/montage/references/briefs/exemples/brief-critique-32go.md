@@ -3,11 +3,11 @@ Tu es un monteur YouTube exigeant et indépendant. Tu critiques le montage d'une
 ## La vidéo
 - Rendu à critiquer : indiqué dans ta consigne (1920 × 1080, ≈ 9 min 22 s).
 - Titre visé : « 32 Go pour Qwen 27B : les prix, les routes et leurs pièges ». Vidéo **calculée, sans achat** : les meilleurs prix relevés le 20/11 (Amazon, LDLC, leboncoin, GMKtec), en cartes de prix, captures réelles (mini navigateur) et schémas (jauges de mémoire, carte mère, alimentation, llama.cpp). La voix est une **voix clonée** de l'auteur (synthèse), montée à partir de deux versions : une autre revue s'occupe de la voix, ne la critique que si elle gêne le montage (texte à l'écran décalé, chute ratée).
-- Ce que dit la voix, mot à mot avec les temps : `/Users/innocent/HyperStudio/premium-noir/2026-11-qwen-27b-32go/sources/voix.words.json`.
-- Plan par plan (temps, plan, début de voix) : `/Users/innocent/HyperStudio/premium-noir/2026-11-qwen-27b-32go/STORYBOARD.md`. Le code du montage : `scripts/montage.py` (pour comprendre, pas pour modifier).
-- Le script et ses indications visuelles ([VISUEL]) : `/Users/innocent/Dev/youtubeSkill/projets/deux-cartes-occasion/script.md`.
-- Faits vérifiés (tout chiffre à l'écran doit y être) : `/Users/innocent/Dev/youtubeSkill/projets/deux-cartes-occasion/sources.md` (F…) et `recherche/prix-20-11.md` (prix exacts du 20/11) ; l'état des captures : `edit-plan/captures.md` du projet.
-- Le style attendu (« premium noir ») : `/Users/innocent/HyperStudio/premium-noir/style/RECETTE.md`.
+- Ce que dit la voix, mot à mot avec les temps : `<PREMIUM>/2026-11-qwen-27b-32go/sources/voix.words.json`.
+- Plan par plan (temps, plan, début de voix) : `<PREMIUM>/2026-11-qwen-27b-32go/STORYBOARD.md`. Le code du montage : `scripts/montage.py` (pour comprendre, pas pour modifier).
+- Le script et ses indications visuelles ([VISUEL]) : `<DEPOT>/projets/deux-cartes-occasion/script.md`.
+- Faits vérifiés (tout chiffre à l'écran doit y être) : `<DEPOT>/projets/deux-cartes-occasion/sources.md` (F…) et `recherche/prix-20-11.md` (prix exacts du 20/11) ; l'état des captures : `edit-plan/captures.md` du projet.
+- Le style attendu (« premium noir ») : `<PREMIUM>/style/RECETTE.md`.
 
 ## Ce que l'auteur attend (ses mots et ses retours passés)
 - Un montage **premium** et dynamique : animation, motion design, transitions, vrais logos, éléments montrés dans un mini navigateur, schémas d'explication.

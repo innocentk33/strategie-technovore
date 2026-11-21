@@ -1,6 +1,8 @@
 # Pipeline de sous-agents
 
-Tu restes le chef d'orchestre : tu écris `montage.py`, tu regardes les planches, tu tranches. Les tâches longues et indépendantes partent chez des sous-agents, chacun avec un brief écrit dans le scratchpad (copie d'un modèle de `briefs/`, variables remplacées), lancé par « Lis et exécute la consigne complète dans <chemin du brief> ».
+> **Pour un agent sans sous-agents** (Codex, Gemini CLI, ou tout autre) : fais toi-même chaque étape du tableau, l'une après l'autre. Pour une revue ou une critique « indépendante », lance une **nouvelle session** (ou un nouvel agent) à qui tu ne donnes que le brief rempli, jamais tes propres rapports. « Opus » veut dire « le modèle le plus fort dont tu disposes », « Sonnet » « un modèle plus léger » (recherche, images, rédaction). Les noms d'outils (« notification », `ListAgents`, scratchpad) sont ceux de Claude Code : cherche leur équivalent chez toi.
+
+Tu restes le chef d'orchestre : tu écris `montage.py`, tu regardes les planches, tu tranches. Les tâches longues et indépendantes partent chez des sous-agents, chacun avec un brief écrit dans un dossier de travail temporaire (<TMP>) (copie d'un modèle de `briefs/`, variables remplacées), lancé par « Lis et exécute la consigne complète dans <chemin du brief> ».
 
 | Étape | Agent | Modèle | Modèle de brief | En parallèle de |
 |---|---|---|---|---|
@@ -17,9 +19,12 @@ Règles :
 - Donne-lui ce qui est déjà décidé (pour qu'il ne le compte pas comme une erreur) et les règles de l'auteur (noms, tampon, bruitages, mèmes muets, rien d'inventé).
 - Il ne commite rien et n'écrit que dans le projet et son dossier de travail.
 - Les commandes longues (transcription, rendu) tournent en arrière-plan ; on attend la notification, on ne relance pas une seconde copie.
-- Le scratchpad est effacé un jour : les modèles durables sont dans `briefs/`. Les briefs réellement envoyés en novembre 2026 sont dans `briefs/exemples/` : pour « 8 Go » et « 32 Go », voix, captures, vérif, critique et upload ; pour « Même carte » (`mc`), seulement vérif, trois critiques (`mc`, `mc-v2`, `mc-v3`) et upload (ses briefs de voix et de captures étaient écrits directement dans l'appel de l'agent et n'ont pas été gardés).
+- Le dossier de travail temporaire peut être effacé : les modèles durables sont dans `briefs/`. Les briefs réellement envoyés en novembre 2026 sont dans `briefs/exemples/` : pour « 8 Go » et « 32 Go », voix, captures, vérif, critique et upload ; pour « Même carte » (`mc`), seulement vérif, trois critiques (`mc`, `mc-v2`, `mc-v3`) et upload (ses briefs de voix et de captures étaient écrits directement dans l'appel de l'agent et n'ont pas été gardés).
 
 ## D'où viennent les variables des briefs
+
+**Chemins dans les briefs** : les modèles de `briefs/` écrivent `<PREMIUM>`, `<DEPOT>` et `<TMP>` (voir `SKILL.md`, « Sur une autre machine »). Un sous-agent ne sait pas les résoudre : **remplace-les par les chemins absolus réels** de la machine en remplissant le brief (`{{PROJET}}`, `{{DEPOT_PROJET}}` sont déjà des chemins absolus).
+
 | Variable | Où la trouver |
 |---|---|
 | `{{TITRE}}`, date de sortie | ligne de la vidéo dans `calendrier.md` / `README.md` |

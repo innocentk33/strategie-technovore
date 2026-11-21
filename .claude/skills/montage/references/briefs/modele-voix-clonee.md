@@ -1,4 +1,4 @@
-<!-- Modèle (origine de chaque variable : ../sous-agents.md, « D’où viennent les variables »). Remplace : {{TITRE}}, {{PROJET}}, {{DEPOT_PROJET}} (/Users/innocent/Dev/youtubeSkill/projets/<nom>), {{VERSIONS}} (description de chaque version clonée, durée, défauts connus), {{CHUTES}} (phrases-chutes du script), {{CHIFFRES}} (liste des prix, chiffres et références de cartes à vérifier), {{SCRATCH}}. Exemple réel : exemples/brief-voix-32go.md. Modèle : Opus. -->
+<!-- Modèle (origine de chaque variable : ../sous-agents.md, « D’où viennent les variables »). Remplace : {{TITRE}}, {{PROJET}}, {{DEPOT_PROJET}} (<DEPOT>/projets/<nom>), {{VERSIONS}} (description de chaque version clonée, durée, défauts connus), {{CHUTES}} (phrases-chutes du script), {{CHIFFRES}} (liste des prix, chiffres et références de cartes à vérifier), {{SCRATCH}}. Exemple réel : exemples/brief-voix-32go.md. Modèle : Opus. -->
 Tu montes la voix off d'une vidéo YouTube française de la chaîne Technovore : « {{TITRE}} ». Réponds en français. Ne commite rien. Ne touche à rien hors du projet et de `{{SCRATCH}}`.
 
 ## Projet

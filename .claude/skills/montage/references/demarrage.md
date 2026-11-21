@@ -4,11 +4,11 @@
 
 | Quoi | Où |
 |---|---|
-| Script, sources, téléprompteur, relevé de prix, kit d'upload | `~/Dev/youtubeSkill/projets/<nom-depot>/` (`fiche.md`, `script.md`, `sources.md`, `teleprompteur.txt`, `voicestudio-stories.txt`, `recherche/…`, `upload.md`) |
-| Titre, date de sortie, statut | `~/Dev/youtubeSkill/calendrier.md` (« Grille des publications » : colonnes `#`, `Date, 18 h`, `Vidéo`, `Pilier`, `Format`, `Charge`, `Statut`) et `README.md` (« Suivi des projets » : `Projet`, `Format`, `Publication`, `Statut`) |
-| Projets de montage (un par vidéo) | `~/HyperStudio/premium-noir/<AAAA-MM-sujet>/` |
-| Style commun de la série | `~/HyperStudio/premium-noir/style/` (`RECETTE.md`, `tokens.css`, `components/`, `fonts/`, `media.json`) ; chaque projet en garde une copie dans son `style/` |
-| Prononciations et reprises de l'auteur | `~/Dev/youtubeSkill/ressources/voix/prononciations.md` et `ressources/voix/reprises/` ; fichiers bruts aussi dans `~/HyperStudio/premium-noir/style/voice-presets/prononciations/` (voir `retouches.md`) |
+| Script, sources, téléprompteur, relevé de prix, kit d'upload | `<DEPOT>/projets/<nom-depot>/` (`fiche.md`, `script.md`, `sources.md`, `teleprompteur.txt`, `voicestudio-stories.txt`, `recherche/…`, `upload.md`) |
+| Titre, date de sortie, statut | `<DEPOT>/calendrier.md` (« Grille des publications » : colonnes `#`, `Date, 18 h`, `Vidéo`, `Pilier`, `Format`, `Charge`, `Statut`) et `README.md` (« Suivi des projets » : `Projet`, `Format`, `Publication`, `Statut`) |
+| Projets de montage (un par vidéo) | `<PREMIUM>/<AAAA-MM-sujet>/` |
+| Style commun de la série | `<PREMIUM>/style/` (`RECETTE.md`, `tokens.css`, `components/`, `fonts/`, `media.json`) ; chaque projet en garde une copie dans son `style/` |
+| Prononciations et reprises de l'auteur | `<DEPOT>/ressources/voix/prononciations.md` et `ressources/voix/reprises/` ; fichiers bruts aussi dans `<PREMIUM>/style/voice-presets/prononciations/` (voir `retouches.md`) |
 | Projet modèle (voix clonée) | `2026-11-qwen-27b-32go/` (21/11/2026) |
 | Projet modèle (vraie voix) | `2026-11-qwen-27b-8go/` (19/11/2026) ; avant : `2026-11-meme-carte-plus-rapide/`, `2026-11-strata-test/` |
 
@@ -57,7 +57,7 @@ Ne copie jamais un projet sur lequel un agent travaille encore (retouches, rendu
 
 1. **Copie** le projet modèle sans ce qui est propre à sa vidéo. Les exclusions sont ancrées par `/` à la racine, sinon `verif*` exclut aussi `scripts/verif_*.py` (piège vérifié le 21/11) :
    ```bash
-   cd /Users/innocent/HyperStudio/premium-noir && N=2026-12-nouveau-sujet && mkdir -p $N && rsync -a --exclude /renders --exclude '/critique*' --exclude '/verif*' --exclude /retouches --exclude '/.hyperframes' --exclude '/.thumbnails' --exclude '/.transcode-cache' --exclude '/.waveform-cache' --exclude /compositions --exclude /assets/shots --exclude /assets/captures --exclude /assets/images --exclude /assets/audio/voix.flac --exclude /sources --exclude /edit-plan --exclude /STORYBOARD.md --exclude /chapitres.txt --exclude /index.html --exclude /.git 2026-11-qwen-27b-32go/ $N/ && mkdir -p $N/{renders,sources,edit-plan,compositions,assets/shots,assets/captures,assets/images/produits}
+   cd "$PREMIUM" && N=2026-12-nouveau-sujet && mkdir -p $N && rsync -a --exclude /renders --exclude '/critique*' --exclude '/verif*' --exclude /retouches --exclude '/.hyperframes' --exclude '/.thumbnails' --exclude '/.transcode-cache' --exclude '/.waveform-cache' --exclude /compositions --exclude /assets/shots --exclude /assets/captures --exclude /assets/images --exclude /assets/audio/voix.flac --exclude /sources --exclude /edit-plan --exclude /STORYBOARD.md --exclude /chapitres.txt --exclude /index.html --exclude /.git 2026-11-qwen-27b-32go/ $N/ && mkdir -p $N/{renders,sources,edit-plan,compositions,assets/shots,assets/captures,assets/images/produits}
    ```
    Vérifié le 21/11 sur une copie : tous les scripts y sont, dont les `verif_*.py` ; environ 310 Mo (surtout les musiques).
 2. **Renomme le projet** dans `package.json` et `meta.json` (ils portent encore « starter-long », le gabarit d'origine), et remplace l'épingle `hyperframes@0.9.75` par `hyperframes@0.9.47` dans les trois scripts de `package.json`. Testé le 21/11 sur une copie :
@@ -65,7 +65,7 @@ Ne copie jamais un projet sur lequel un agent travaille encore (retouches, rendu
    sed -i '' -e 's/hyperframes@0\.9\.75/hyperframes@0.9.47/g' -e 's/"name": "starter-long"/"name": "2026-12-nouveau-sujet"/' package.json && sed -i '' -e 's/"id": "starter-long"/"id": "2026-12-nouveau-sujet"/' -e 's/"name": "starter-long"/"name": "2026-12-nouveau-sujet"/' meta.json
    ```
    Sans ça, chaque `npx --yes hyperframes@0.9.47 check` finit par « This is hyperframes 0.9.47, but this project pins hyperframes@0.9.75 ». Dans les anciens projets (8 Go, 32 Go) cet avertissement est **attendu et sans effet** : tous leurs rendus ont été faits en 0.9.47 et on ne change pas de version au milieu d'un projet ; l'épingle 0.9.75 vient du gabarit et n'a jamais servi.
-3. **Téléprompteur** : `cp ~/Dev/youtubeSkill/projets/<nom-depot>/teleprompteur.txt $N/sources/teleprompteur.txt` (lignes à lire seulement, une ligne vide entre les blocs, nombres en chiffres).
+3. **Téléprompteur** : `cp "$DEPOT"/projets/<nom-depot>/teleprompteur.txt $N/sources/teleprompteur.txt` (lignes à lire seulement, une ligne vide entre les blocs, nombres en chiffres).
 4. **Voix reçue** dans `sources/` : vraie voix → `sources/prise-originale.flac` ; voix clonée → `sources/voix-clone-<version>.wav` (voir `voix-clonee.md` pour les noms).
 5. **Scripts de voix** : vraie voix → remplace `scripts/voix.py` et `scripts/verif_voix.py` par ceux de `2026-11-qwen-27b-8go/scripts/` (une source, `sources/prise-originale.*`). Deux voix clonées → garde ceux du 32 Go. Les autres scripts communs aux deux projets sont identiques (vérifié le 21/11 : `kit.py`, `blocs2.py`, `blocs3.py`, `build.py`, `verif_raccords.py`, `verif_souffles.py`, `verif_begaiements.py`, `w2v_*.py`, `retouche_voix.py`) ; `teleprompteur.py` du 32 Go est le plus complet (sections).
 6. **Images à recopier** depuis l'ancien projet (le `rsync` exclut `assets/images/`) : seulement ce que ton `montage.py` citera :
@@ -178,6 +178,6 @@ Les documents de `style/` datent du Short « abonnements » (octobre). La pratiq
 | `RECETTE.md` § 7 | silences ramenés à 0,25-0,45 s | vraie voix : 0,34 s au plus entre deux phrases ; voix clonée : on **ajoute** des micro-pauses (voir `voix-clonee.md`) | retours du 12/11 et du 21/11 |
 | `package.json`, `meta.json` | « starter-long », `hyperframes@0.9.75` | nom du projet, `hyperframes@0.9.47` | version de tous les rendus depuis Strata ; ne mélange pas deux versions dans un projet |
 | `.claude/rules/script.md` | storyboard calé sur `voix-off-montee.wav` | `STORYBOARD.md` généré par `montage.py`, calé sur `assets/audio/voix.flac` | |
-| mémoire `technovore-montage-style` | générateur dans `2026-11-qwen-4-arrive/scripts/*_v3.py` | scripts du projet le plus récent | ceux de Qwen 4 sont trois générations en arrière |
+| ancienne note de style du 12/11 (mémoire de Claude, voir `SKILL.md`, « Style de montage de l'auteur ») | générateur dans `2026-11-qwen-4-arrive/scripts/*_v3.py` | scripts du projet le plus récent | ceux de Qwen 4 sont trois générations en arrière |
 
 Ce qui reste valable dans `RECETTE.md` : le noir pur, l'encre et les gris, les trois accents (rouge = perte, vert = possession, jaune = voix extérieure ou surlignage), deux accents au plus par plan, les courbes de mouvement, les marges de 96 px, « une idée à la fois ».

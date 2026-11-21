@@ -10,7 +10,7 @@ Méthode appliquée le 21/11/2026 à « 32 Go pour Qwen 27B » : 15 passages de 
 
 ### Où ranger les reprises (la banque)
 Tout ce que l'auteur enregistre resservira (un nom de carte bien dit une fois n'est plus à réenregistrer) :
-- le **fichier entier**, brut, versionné : `~/Dev/youtubeSkill/ressources/voix/reprises/AAAA-MM-JJ-reprises-<video>.flac` (premier : `2026-11-21-reprises-32go.flac`, 165,6 s, 44,1 kHz, 16 bits, mono) ; une copie existe aussi dans `~/HyperStudio/premium-noir/style/voice-presets/prononciations/` ;
+- le **fichier entier**, brut, versionné : `<DEPOT>/ressources/voix/reprises/AAAA-MM-JJ-reprises-<video>.flac` (premier : `2026-11-21-reprises-32go.flac`, 165,6 s, 44,1 kHz, 16 bits, mono) ; une copie existe aussi dans `<PREMIUM>/style/voice-presets/prononciations/` ;
 - **un FLAC brut par passage** dans `ressources/voix/reprises/AAAA-MM-JJ/` : 0,15 s de marge prise sur le silence, **sans tempo ni retouche** (les traitements se font à la vidéo, jamais dans la banque) ; noms `carte-<ref>.flac`, `phrase-<sujet>.flac`, `fin-<…>.flac`, `faux-depart-<…>.flac` ;
 - `index.json` dans ce dossier : pour chaque passage, fichier, texte, étiquette, temps dans le fichier entier, classe (phrase de remplacement, nom de carte, passage non utilisé), `verifie` (vrai ou faux), et `a_servi` (vidéo, temps dans la voix, traitement) ;
 - le guide lisible : `ressources/voix/prononciations.md` (cartes déjà enregistrées et vérifiées, fins réutilisables, conseils d'enregistrement à l'auteur). Mets-le à jour à chaque nouvelle série.

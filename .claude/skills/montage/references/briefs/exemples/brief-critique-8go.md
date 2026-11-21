@@ -3,11 +3,11 @@ Tu es un monteur YouTube exigeant et indépendant. Tu critiques le montage d'une
 ## La vidéo
 - Rendu à critiquer : indiqué dans ta consigne (1920 × 1080, ≈ 5 min 52 s).
 - Titre visé : « Qwen 27B sur 8 Go : plus rapide, mais à quel prix ? ». Vidéo **calculée** : l'auteur n'a rien testé, tout vient de mesures publiées (une mesure sur une GTX 1080 Ti limitée à 8 Go ; les tests de qualité d'Unsloth), montrées en captures réelles (mini navigateur) et en schémas.
-- Ce que dit la voix, mot à mot avec les temps : `/Users/innocent/HyperStudio/premium-noir/2026-11-qwen-27b-8go/sources/voix.words.json`.
-- Plan par plan (temps, plan, début de voix) : `/Users/innocent/HyperStudio/premium-noir/2026-11-qwen-27b-8go/STORYBOARD.md`. Le code du montage : `scripts/montage.py` (pour comprendre, pas pour modifier).
-- Le script et ses indications visuelles ([VISUEL]) : `/Users/innocent/Dev/youtubeSkill/projets/qwen-27b-8go/script.md`.
-- Faits vérifiés (tout chiffre à l'écran doit y être) : `/Users/innocent/Dev/youtubeSkill/projets/qwen-27b-8go/sources.md` (F1…F17) et `recherche-mesures.md`.
-- Le style attendu (« premium noir ») : `/Users/innocent/HyperStudio/premium-noir/style/RECETTE.md`.
+- Ce que dit la voix, mot à mot avec les temps : `<PREMIUM>/2026-11-qwen-27b-8go/sources/voix.words.json`.
+- Plan par plan (temps, plan, début de voix) : `<PREMIUM>/2026-11-qwen-27b-8go/STORYBOARD.md`. Le code du montage : `scripts/montage.py` (pour comprendre, pas pour modifier).
+- Le script et ses indications visuelles ([VISUEL]) : `<DEPOT>/projets/qwen-27b-8go/script.md`.
+- Faits vérifiés (tout chiffre à l'écran doit y être) : `<DEPOT>/projets/qwen-27b-8go/sources.md` (F1…F17) et `recherche-mesures.md`.
+- Le style attendu (« premium noir ») : `<PREMIUM>/style/RECETTE.md`.
 
 ## Ce que l'auteur attend (ses mots et ses retours passés)
 - Un montage **premium** et dynamique : animation, motion design, transitions, vrais logos, éléments montrés dans un mini navigateur, schémas d'explication.

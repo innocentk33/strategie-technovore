@@ -1,4 +1,4 @@
-<!-- Modèle (origine de chaque variable : ../sous-agents.md, « D’où viennent les variables »). Remplace : {{TITRE}} (titre de la vidéo), {{PROJET}} (chemin absolu du projet premium-noir), {{PRECEDENT}} (projet précédent à vraie voix, ex. /Users/innocent/HyperStudio/premium-noir/2026-11-qwen-27b-8go), {{DUREE_PRISE}}, {{DUREE_VISEE}}, {{PRONONCIATIONS}} (sigles et leur prononciation), {{SCRATCH}} (dossier de travail). Exemple réel : exemples/brief-voix-8go.md. Modèle : Opus. -->
+<!-- Modèle (origine de chaque variable : ../sous-agents.md, « D’où viennent les variables »). Remplace : {{TITRE}} (titre de la vidéo), {{PROJET}} (chemin absolu du projet premium-noir), {{PRECEDENT}} (projet précédent à vraie voix, ex. <PREMIUM>/2026-11-qwen-27b-8go), {{DUREE_PRISE}}, {{DUREE_VISEE}}, {{PRONONCIATIONS}} (sigles et leur prononciation), {{SCRATCH}} (dossier de travail). Exemple réel : exemples/brief-voix-8go.md. Modèle : Opus. -->
 Tu nettoies la voix off brute d'une vidéo YouTube française de la chaîne Technovore : « {{TITRE}} ». Réponds en français. Ne commite rien. N'écris que dans le projet et dans `{{SCRATCH}}`.
 
 ## Projet

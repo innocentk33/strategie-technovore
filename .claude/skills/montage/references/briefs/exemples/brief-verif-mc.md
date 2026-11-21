@@ -1,10 +1,10 @@
 Tu es le vérificateur indépendant de la voix off d'une vidéo YouTube française (chaîne Technovore). Réponds en français. Tu ne modifies AUCUN fichier audio : tu écoutes (par mesures), tu transcris, tu compares, tu rends un rapport.
 
 ## Fichiers
-- Voix finale à vérifier : `/Users/innocent/HyperStudio/premium-noir/2026-11-meme-carte-plus-rapide/assets/audio/voix.flac`
-- Texte attendu (téléprompteur) : `/Users/innocent/Dev/youtubeSkill/projets/meme-carte-plus-rapide/teleprompteur.txt` (les [MARQUEURS] et (indications) ne se lisent pas ; les nombres écrits en chiffres sont dits en toutes lettres).
-- Outil de transcription verbatim : `/Users/innocent/HyperStudio/premium-noir/2026-11-meme-carte-plus-rapide/scripts/w2v_transcrire.py` (wav2vec2 français, `python3 w2v_transcrire.py audio.flac sortie.json`). Torch n'est installé dans aucun Python de la machine : lance-le avec `uv run --no-project --with torch --with transformers --with numpy python …`, en arrière-plan (la voix dure 7 min 39 s).
-- Travaille dans ton propre dossier : `/Users/innocent/HyperStudio/premium-noir/2026-11-meme-carte-plus-rapide/verif/` (crée-le). Ne lis PAS les rapports, cartes de coupes ni scripts de l'agent qui a nettoyé la voix (`edit-plan/`, `scripts/voix.py`, `sources/voix.*.json`) : ton avis doit être indépendant.
+- Voix finale à vérifier : `<PREMIUM>/2026-11-meme-carte-plus-rapide/assets/audio/voix.flac`
+- Texte attendu (téléprompteur) : `<DEPOT>/projets/meme-carte-plus-rapide/teleprompteur.txt` (les [MARQUEURS] et (indications) ne se lisent pas ; les nombres écrits en chiffres sont dits en toutes lettres).
+- Outil de transcription verbatim : `<PREMIUM>/2026-11-meme-carte-plus-rapide/scripts/w2v_transcrire.py` (wav2vec2 français, `python3 w2v_transcrire.py audio.flac sortie.json`). Torch n'est installé dans aucun Python de la machine : lance-le avec `uv run --no-project --with torch --with transformers --with numpy python …`, en arrière-plan (la voix dure 7 min 39 s).
+- Travaille dans ton propre dossier : `<PREMIUM>/2026-11-meme-carte-plus-rapide/verif/` (crée-le). Ne lis PAS les rapports, cartes de coupes ni scripts de l'agent qui a nettoyé la voix (`edit-plan/`, `scripts/voix.py`, `sources/voix.*.json`) : ton avis doit être indépendant.
 
 ## Ce que l'auteur refuse (critères)
 Il veut une voix sans aucun raté : pas de mot doublé (« et et », « un un »), pas de faux départ, pas de bégaiement, pas de débris de mot à un raccord (« …ti un »), pas de mot tranché, pas de deux mots superposés, pas de souffle audible, pas de blanc trop long (> 0,6 s hors pause voulue), pas de clic.

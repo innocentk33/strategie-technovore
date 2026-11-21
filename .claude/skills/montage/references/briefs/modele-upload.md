@@ -2,7 +2,7 @@
 Tu prépares le kit d'upload YouTube **et** les sous-titres FR / EN de la vidéo Technovore « {{TITRE}} ». Réponds et écris en français, en tutoyant l'auteur. Ne commite rien. N'écris que les trois fichiers demandés (plus tes fichiers de travail dans `{{SCRATCH}}`).
 
 ## Où et quoi
-- Dépôt : `/Users/innocent/Dev/youtubeSkill` (lis son `CLAUDE.md`, puis `.claude/skills/upload/SKILL.md` : tu le suis).
+- Dépôt : `<DEPOT>` (lis son `AGENTS.md`, puis `.claude/skills/upload/SKILL.md` : tu le suis).
 - Projet : `projets/{{NOM}}/` (`script.md`, `sources.md`, `fiche.md`, `teleprompteur.txt`, `miniature/`, `recherche/`).
 - Modèles de forme les plus récents : les `upload.md` et `.srt` des derniers projets publiés (l'auteur a validé : **description courte et précise**).
 - Vidéo finale : `{{RENDU}}` (la dernière 1080p de `renders/` a les mêmes temps). Sortie : {{SORTIE}}.
@@ -10,7 +10,7 @@ Tu prépares le kit d'upload YouTube **et** les sous-titres FR / EN de la vidéo
 - {{PRECISIONS}}
 
 ## 1. `projets/{{NOM}}/upload.md`
-Mots-clés (vidIQ si les outils sont chargés : forfait gratuit, dépense peu, note les crédits ; sinon relevés datés des kits voisins, et dis-le) ; titres (celui du calendrier + 1 ou 2 variantes que la vidéo tient) ; description prête à coller (< 5 000 caractères comptés par script : 2 premières lignes fortes, CHAPITRES, faits ou prix datés, sources en liens, musiques d'après `/Users/innocent/HyperStudio/premium-noir/style/media.json`, crédits, appel à commenter et abonnement, 3 hashtags, « PRÉCISIONS » en 3 lignes au plus) ; tags (≤ 500 caractères) ; section « Suggestions » du skill (vidéos hôtes, planche, comparaison à 168 px, enchaînement). Écran de fin : {{ECRAN_FIN}} ; URL depuis `README.md`, sinon un emplacement à remplir.
+Mots-clés (vidIQ si les outils sont chargés : forfait gratuit, dépense peu, note les crédits ; sinon relevés datés des kits voisins, et dis-le) ; titres (celui du calendrier + 1 ou 2 variantes que la vidéo tient) ; description prête à coller (< 5 000 caractères comptés par script : 2 premières lignes fortes, CHAPITRES, faits ou prix datés, sources en liens, musiques d'après `<PREMIUM>/style/media.json`, crédits, appel à commenter et abonnement, 3 hashtags, « PRÉCISIONS » en 3 lignes au plus) ; tags (≤ 500 caractères) ; section « Suggestions » du skill (vidéos hôtes, planche, comparaison à 168 px, enchaînement). Écran de fin : {{ECRAN_FIN}} ; URL depuis `README.md`, sinon un emplacement à remplir.
 
 ## 2. Sous-titres
 `projets/{{NOM}}/{{NOM}}.fr.srt` et `.en.srt` (anglais naturel et oral, **mêmes numéros et mêmes temps**). Ce qui est **dit**, avec l'orthographe du téléprompteur ; SRT valide UTF-8 ; ≤ 2 lignes d'environ 42 caractères (jamais > 46) ; blocs de 0,8 à 7 s ; pas de chevauchement. Noms justes : {{NOMS_JUSTES}}. Contrôle par script : mêmes blocs et temps dans les deux fichiers, temps croissants, aucun bloc hors de la vidéo, ≥ 98 % des mots couverts. voix.words.json peut contenir des erreurs de transcription : corrige-les avec le téléprompteur et liste tes doutes.

@@ -4,12 +4,12 @@ Tu es le vérificateur indépendant de la voix off d'une vidéo YouTube françai
 La voix est une **voix clonée** (synthèse OmniVoice à partir de la voix de l'auteur), montée à partir de **deux versions complètes** du même texte : `complet` (la plus fidèle, débit posé et serré) et `strata` (style plus vivant, mais plus lente d'environ 19 % et plus haute d'environ 1,3 demi-ton). La voix finale alterne : 30 changements de source (15 aller-retour), presque tous entre deux phrases. L'auteur a demandé « les meilleures prises » et « certaines micro-pauses ».
 
 ## Fichiers
-- Voix finale : `/Users/innocent/HyperStudio/premium-noir/2026-11-qwen-27b-32go/assets/audio/voix.flac` (9 min 10 s).
+- Voix finale : `<PREMIUM>/2026-11-qwen-27b-32go/assets/audio/voix.flac` (9 min 10 s).
 - Les deux sources (24 kHz) : `.../sources/voix-clone-complet.wav`, `.../sources/voix-clone-strata.wav`.
 - Texte attendu : `.../sources/teleprompteur.txt` (nombres écrits en chiffres, dits en toutes lettres).
 - La liste des morceaux gardés (pour savoir où sont les changements de source, rien d'autre) : `.../edit-plan/voice-map.json`. Ne lis PAS les rapports de l'agent qui a monté la voix (`voice-report.json`, `verif-*.json`, `candidats-*.json`) : ton avis doit être indépendant.
 - Outil : `.../scripts/w2v_transcrire.py` (wav2vec2 français) ; torch n'est dans aucun Python : `uv run --no-project --with torch --with transformers --with numpy python scripts/w2v_transcrire.py audio sortie.json`, en arrière-plan. Tu peux aussi mesurer avec ffmpeg / numpy (énergie, hauteur par autocorrélation, débit en syllabes/s).
-- Travaille dans `/Users/innocent/HyperStudio/premium-noir/2026-11-qwen-27b-32go/verif/` (crée-le).
+- Travaille dans `<PREMIUM>/2026-11-qwen-27b-32go/verif/` (crée-le).
 
 ## Critères de l'auteur
 Aucun raté : pas de mot doublé, sauté, tronqué ou mal prononcé (surtout les **prix, chiffres et noms de cartes**), pas de débris à un raccord, pas de clic, pas de souffle audible, pas de blanc > 0,8 s, pas de bruit robotique ou parasite. Et cette fois : **un changement de source ne doit pas s'entendre** (saut de hauteur, de débit, de timbre ou de niveau d'une phrase à l'autre).
